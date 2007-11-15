@@ -1,0 +1,4 @@
+{
+  MockitoOperations.reportVerifyingMode(VerifyingMode.times(exactNumberOfInvocations));
+  return mock;
+}

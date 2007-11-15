@@ -1,0 +1,4 @@
+{
+  assertEquals(false,mock.booleanReturningMethod(12));
+  control.verify();
+}

@@ -1,0 +1,8 @@
+{
+  if (results.get(invocation) == null) {
+    return ToTypeMappings.emptyReturnValueFor(invocation.getMethod().getReturnType());
+  }
+ else {
+    return results.get(invocation).answer();
+  }
+}

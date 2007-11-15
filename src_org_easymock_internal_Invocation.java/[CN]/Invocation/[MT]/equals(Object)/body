@@ -1,0 +1,5 @@
+{
+  if (o == null || !o.getClass().equals(this.getClass()))   return false;
+  Invocation other=(Invocation)o;
+  return this.mock.equals(other.mock) && this.method.equals(other.method) && this.equalArguments(other.arguments);
+}

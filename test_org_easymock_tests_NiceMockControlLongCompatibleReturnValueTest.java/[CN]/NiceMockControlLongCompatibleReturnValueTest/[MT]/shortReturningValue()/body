@@ -1,0 +1,4 @@
+{
+  assertEquals((short)0,mock.shortReturningMethod(12));
+  control.verify();
+}

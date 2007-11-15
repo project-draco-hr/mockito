@@ -1,0 +1,26 @@
+{
+  mock.oneArg(false);
+  control.setReturnValue("Test");
+  control.setReturnValue("Test2");
+  control.setThrowable(new IndexOutOfBoundsException(),1);
+  control.replay();
+  assertEquals("Test",mock.oneArg(false));
+  assertEquals("Test2",mock.oneArg(false));
+  try {
+    mock.oneArg(false);
+  }
+ catch (  IndexOutOfBoundsException expected) {
+  }
+  boolean failed=true;
+  try {
+    try {
+      mock.oneArg(false);
+    }
+ catch (    IndexOutOfBoundsException expected) {
+    }
+    failed=false;
+  }
+ catch (  AssertionError expected) {
+  }
+  if (!failed)   fail("expected AssertionError");
+}

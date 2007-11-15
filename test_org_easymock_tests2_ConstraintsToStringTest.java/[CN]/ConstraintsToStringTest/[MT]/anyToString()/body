@@ -1,0 +1,4 @@
+{
+  Any.ANY.appendTo(buffer);
+  assertEquals("<any>",buffer.toString());
+}

@@ -1,0 +1,14 @@
+{
+  if (matchers != null) {
+    if (matchers.size() != invocation.getArguments().length) {
+      throw new IllegalStateException("" + invocation.getArguments().length + " matchers expected, "+ matchers.size()+ " recorded.");
+    }
+    ;
+    return matchers;
+  }
+  List<IArgumentMatcher> result=new ArrayList<IArgumentMatcher>();
+  for (  Object argument : invocation.getArguments()) {
+    result.add(new Equals(argument));
+  }
+  return result;
+}

@@ -1,0 +1,11 @@
+{
+  MockitoInvocation lastInvocation=behavior.lastInvocation();
+  Class<?>[] exceptions=lastInvocation.getMethod().getExceptionTypes();
+  Class<?> throwableClass=throwable.getClass();
+  for (  Class<?> exception : exceptions) {
+    if (exception.isAssignableFrom(throwableClass)) {
+      return true;
+    }
+  }
+  return false;
+}

@@ -1,0 +1,43 @@
+{
+  Comparator<A> comparator=new Comparator<A>(){
+    public int compare(    A a1,    A a2){
+      return a1.getValue() - a2.getValue();
+    }
+  }
+;
+  assertTrue(comparator.compare(new A(1),new A(2)) < 0);
+  assertTrue(comparator.compare(new A(2),new A(1)) > 0);
+  assertTrue(comparator.compare(new A(1),new A(1)) == 0);
+  checkOrder(mock,true);
+  expect(mock.oneArg(cmp(new A(5),comparator,LogicalOperator.EQUAL))).andReturn("0");
+  expect(mock.oneArg(cmp(new A(5),comparator,LogicalOperator.GREATER))).andReturn("1");
+  expect(mock.oneArg(cmp(new A(5),comparator,LogicalOperator.GREATER_OR_EQUAL))).andReturn("2");
+  expect(mock.oneArg(cmp(new A(5),comparator,LogicalOperator.GREATER_OR_EQUAL))).andReturn("2");
+  expect(mock.oneArg(cmp(new A(5),comparator,LogicalOperator.LESS_OR_EQUAL))).andReturn("3");
+  expect(mock.oneArg(cmp(new A(5),comparator,LogicalOperator.LESS_OR_EQUAL))).andReturn("3");
+  expect(mock.oneArg(cmp(new A(5),comparator,LogicalOperator.LESS_THAN))).andReturn("4");
+  replay(mock);
+  checkItFails(null);
+  try {
+    mock.oneArg("");
+    fail();
+  }
+ catch (  AssertionError e) {
+  }
+  checkItFails(new A(4));
+  checkItFails(new A(6));
+  assertEquals("0",mock.oneArg(new A(5)));
+  checkItFails(new A(4));
+  checkItFails(new A(5));
+  assertEquals("1",mock.oneArg(new A(6)));
+  checkItFails(new A(4));
+  assertEquals("2",mock.oneArg(new A(6)));
+  assertEquals("2",mock.oneArg(new A(5)));
+  checkItFails(new A(6));
+  assertEquals("3",mock.oneArg(new A(4)));
+  assertEquals("3",mock.oneArg(new A(5)));
+  checkItFails(new A(5));
+  checkItFails(new A(6));
+  assertEquals("4",mock.oneArg(new A(4)));
+  verify(mock);
+}

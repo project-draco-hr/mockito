@@ -1,0 +1,11 @@
+{
+  mock.simpleMethodWithArgument("");
+  control.setMatcher(MockControl.ARRAY_MATCHER);
+  try {
+    control.setMatcher(MockControl.EQUALS_MATCHER);
+    fail();
+  }
+ catch (  IllegalStateException expected) {
+    assertEquals("for method simpleMethodWithArgument(...), a matcher has already been set",expected.getMessage());
+  }
+}

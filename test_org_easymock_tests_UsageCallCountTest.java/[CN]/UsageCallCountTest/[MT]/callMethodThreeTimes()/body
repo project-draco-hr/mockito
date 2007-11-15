@@ -1,0 +1,5 @@
+{
+  mock.method();
+  mock.method();
+  mock.method();
+}

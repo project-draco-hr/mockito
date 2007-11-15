@@ -1,0 +1,18 @@
+{
+  ClassProxyFactory<SomeInterface> factory=new ClassProxyFactory<SomeInterface>();
+  SomeInterface proxy=null;
+  try {
+    proxy=factory.createProxy(SomeInterface.class,new MockAwareInvocationHandler(){
+      public void setMock(      Object mock){
+      }
+      public Object invoke(      Object proxy,      Method method,      Object[] args) throws Throwable {
+        return null;
+      }
+    }
+);
+  }
+ catch (  RuntimeException e) {
+    fail("should not lookup Object methods since they are not available on interfaces");
+  }
+  assertThat(proxy,notNullValue());
+}

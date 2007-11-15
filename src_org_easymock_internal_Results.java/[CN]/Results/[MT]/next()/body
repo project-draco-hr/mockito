@@ -1,0 +1,16 @@
+{
+  int currentPosition=0;
+  for (int i=0; i < ranges.size(); i++) {
+    Range interval=ranges.get(i);
+    if (interval.hasOpenCount()) {
+      callCount+=1;
+      return results.get(i);
+    }
+    currentPosition+=interval.getMaximum();
+    if (currentPosition > callCount) {
+      callCount+=1;
+      return results.get(i);
+    }
+  }
+  return null;
+}

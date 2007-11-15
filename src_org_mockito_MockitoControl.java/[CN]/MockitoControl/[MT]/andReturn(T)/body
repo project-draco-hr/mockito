@@ -1,0 +1,3 @@
+{
+  behavior.addResult(Result.createReturnResult(value));
+}

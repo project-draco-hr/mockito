@@ -1,0 +1,5 @@
+{
+  buffer.append("not(");
+  first.appendTo(buffer);
+  buffer.append(")");
+}

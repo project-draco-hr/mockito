@@ -1,0 +1,8 @@
+{
+  try {
+    return EasyMock.expectLastCall();
+  }
+ catch (  IllegalStateException e) {
+    throw new IllegalStateException(failureMessage);
+  }
+}

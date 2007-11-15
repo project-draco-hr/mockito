@@ -1,0 +1,3 @@
+{
+  expectLastCall("method call on the mock needed before setting return value").andReturn(value).times(times);
+}

@@ -1,0 +1,10 @@
+{
+  Object[] arguments1=new Object[]{""};
+  Object[] arguments2=new Object[]{""};
+  Object[] arguments3=new Object[]{"X"};
+  Method m=Object.class.getMethod("equals",new Class[]{Object.class});
+  Object mock=new Object();
+  call=new Invocation(mock,m,arguments1);
+  equalCall=new Invocation(mock,m,arguments2);
+  nonEqualCall=new Invocation(mock,m,arguments3);
+}

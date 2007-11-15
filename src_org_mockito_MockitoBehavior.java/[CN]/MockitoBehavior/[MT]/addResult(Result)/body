@@ -1,0 +1,3 @@
+{
+  this.results.put(registeredInvocations.remove(registeredInvocations.size() - 1),result);
+}

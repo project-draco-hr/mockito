@@ -1,0 +1,4 @@
+{
+  reportMatcher(new StartsWith(prefix));
+  return null;
+}

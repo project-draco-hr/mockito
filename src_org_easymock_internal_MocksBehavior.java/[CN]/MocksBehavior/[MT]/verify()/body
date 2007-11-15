@@ -1,0 +1,14 @@
+{
+  boolean verified=true;
+  StringBuffer errorMessage=new StringBuffer();
+  for (  UnorderedBehavior behaviorList : behaviorLists.subList(position,behaviorLists.size())) {
+    errorMessage.append(behaviorList.toString());
+    if (!behaviorList.verify()) {
+      verified=false;
+    }
+  }
+  if (verified) {
+    return;
+  }
+  throw new AssertionErrorWrapper(new AssertionError("\n  Expectation failure on verify:" + errorMessage.toString()));
+}

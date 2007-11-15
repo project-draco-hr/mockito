@@ -1,0 +1,4 @@
+{
+  Number actualNumber=(Number)actual;
+  return expected.doubleValue() - delta.doubleValue() <= actualNumber.doubleValue() && actualNumber.doubleValue() <= expected.doubleValue() + delta.doubleValue();
+}

@@ -1,0 +1,3 @@
+{
+  stubResults.add(new ExpectedInvocationAndResult(expected,result));
+}

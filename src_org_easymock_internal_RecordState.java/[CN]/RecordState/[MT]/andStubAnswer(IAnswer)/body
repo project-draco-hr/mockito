@@ -1,0 +1,9 @@
+{
+  requireMethodCall("stub answer");
+  requireValidAnswer(answer);
+  if (lastResult != null) {
+    times(MocksControl.ONCE);
+  }
+  behavior.addStub(lastInvocation,Result.createAnswerResult(answer));
+  lastInvocationUsed=true;
+}

@@ -1,0 +1,3 @@
+{
+  expect(ignored).andThrow(throwable).times(count);
+}

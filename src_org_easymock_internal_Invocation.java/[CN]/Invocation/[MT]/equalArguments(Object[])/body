@@ -1,0 +1,20 @@
+{
+  if (this.arguments.length != arguments.length) {
+    return false;
+  }
+  for (int i=0; i < this.arguments.length; i++) {
+    Object myArgument=this.arguments[i];
+    Object otherArgument=arguments[i];
+    if (isPrimitiveParameter(i)) {
+      if (!myArgument.equals(otherArgument)) {
+        return false;
+      }
+    }
+ else {
+      if (myArgument != otherArgument) {
+        return false;
+      }
+    }
+  }
+  return true;
+}

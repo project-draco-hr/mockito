@@ -1,0 +1,8 @@
+{
+  if (proxy.getClass().getInterfaces().length == 2) {
+    return proxy.getClass().getInterfaces()[0].toString();
+  }
+ else {
+    return proxy.getClass().getSuperclass().toString();
+  }
+}

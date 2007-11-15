@@ -1,0 +1,10 @@
+{
+  mock.booleanReturningMethod(12);
+  control.setReturnValue(true);
+  control.setDefaultReturnValue(false);
+  control.replay();
+  assertFalse(mock.booleanReturningMethod(11));
+  assertTrue(mock.booleanReturningMethod(12));
+  assertFalse(mock.booleanReturningMethod(13));
+  control.verify();
+}

@@ -1,0 +1,3 @@
+{
+  return MATCHER.toString(new Object[]{argument});
+}

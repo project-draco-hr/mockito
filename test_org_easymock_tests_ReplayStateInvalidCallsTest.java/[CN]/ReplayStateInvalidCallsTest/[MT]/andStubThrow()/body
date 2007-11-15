@@ -1,0 +1,3 @@
+{
+  control.andStubThrow(new RuntimeException());
+}

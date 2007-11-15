@@ -1,0 +1,16 @@
+{
+  expect(mock.threeArgumentMethod(1,"2","3")).andReturn("Test").times(2);
+  replay(mock);
+  assertEquals("Test",mock.threeArgumentMethod(1,"2","3"));
+  boolean failed=true;
+  try {
+    verify(mock);
+    failed=false;
+  }
+ catch (  AssertionError expected) {
+    assertEquals("\n  Expectation failure on verify:" + "\n    threeArgumentMethod(1, \"2\", \"3\"): expected: 2, actual: 1",expected.getMessage());
+  }
+  if (!failed) {
+    fail("exception expected");
+  }
+}

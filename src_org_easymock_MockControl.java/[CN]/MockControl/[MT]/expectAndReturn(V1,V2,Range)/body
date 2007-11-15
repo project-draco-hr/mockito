@@ -1,0 +1,4 @@
+{
+  IExpectationSetters expectAndReturn=EasyMock.expectLastCall().andReturn(value);
+  callWithConvertedRange(expectAndReturn,range);
+}

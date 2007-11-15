@@ -1,0 +1,4 @@
+{
+  reportMatcher(Null.NULL);
+  return null;
+}

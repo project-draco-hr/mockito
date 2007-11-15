@@ -1,0 +1,10 @@
+{
+  mock.oneArg(false);
+  try {
+    control.setDefaultReturnValue((long)0);
+    fail("IllegalStateException expected");
+  }
+ catch (  IllegalStateException e) {
+    assertEquals("incompatible return value type",e.getMessage());
+  }
+}

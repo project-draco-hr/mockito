@@ -1,0 +1,3 @@
+{
+  mocksControl.createMock("",IMethods.class);
+}

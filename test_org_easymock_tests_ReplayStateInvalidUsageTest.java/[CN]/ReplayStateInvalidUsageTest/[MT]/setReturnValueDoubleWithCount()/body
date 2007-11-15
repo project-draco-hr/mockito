@@ -1,0 +1,3 @@
+{
+  control.setReturnValue(0.0d,1);
+}

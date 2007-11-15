@@ -1,0 +1,9 @@
+{
+  mock.hasNext();
+  try {
+    control.setReturnValue(true,new Range(2,7));
+  }
+ catch (  IllegalArgumentException e) {
+    assertEquals("Unexpected Range",e.getMessage());
+  }
+}

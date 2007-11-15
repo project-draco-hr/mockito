@@ -1,0 +1,9 @@
+{
+  if (lastInvocationUsed && lastResult == null) {
+    return;
+  }
+  if (!isLastResultOrVoidMethod()) {
+    throw new RuntimeExceptionWrapper(new IllegalStateException("missing behavior definition for the preceeding method call " + lastInvocation.toString()));
+  }
+  this.times(MockControl.ONE);
+}

@@ -1,0 +1,8 @@
+{
+  for (  IArgumentMatcher matcher : matchers) {
+    if (matcher.matches(actual)) {
+      return true;
+    }
+  }
+  return false;
+}

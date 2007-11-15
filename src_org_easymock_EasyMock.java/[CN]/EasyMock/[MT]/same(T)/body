@@ -1,0 +1,4 @@
+{
+  reportMatcher(new Same(value));
+  return null;
+}

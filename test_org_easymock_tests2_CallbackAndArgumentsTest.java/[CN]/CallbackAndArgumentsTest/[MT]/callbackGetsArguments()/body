@@ -1,0 +1,16 @@
+{
+  final StringBuffer buffer=new StringBuffer();
+  mock.simpleMethodWithArgument((String)notNull());
+  expectLastCall().andAnswer(new IAnswer<Object>(){
+    public Object answer(){
+      buffer.append((String)getCurrentArguments()[0]);
+      return null;
+    }
+  }
+).times(2);
+  replay(mock);
+  mock.simpleMethodWithArgument("1");
+  mock.simpleMethodWithArgument("2");
+  verify(mock);
+  assertEquals("12",buffer.toString());
+}

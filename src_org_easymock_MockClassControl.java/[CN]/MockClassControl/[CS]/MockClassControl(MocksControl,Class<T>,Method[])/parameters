@@ -1,0 +1,3 @@
+MocksControl ctrl
+Class<T> classToMock
+Method[] mockedMethods

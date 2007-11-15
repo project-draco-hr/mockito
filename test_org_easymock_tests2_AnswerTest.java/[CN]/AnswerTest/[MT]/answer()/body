@@ -1,0 +1,29 @@
+{
+  IAnswer firstAnswer=new IAnswer(){
+    public Object answer(){
+      assertEquals(new Object[]{1,"2","3"},getCurrentArguments());
+      return "Call answered";
+    }
+  }
+;
+  IAnswer secondAnswer=new IAnswer(){
+    public Object answer(){
+      assertEquals(new Object[]{1,"2","3"},getCurrentArguments());
+      throw new IllegalStateException("Call answered");
+    }
+  }
+;
+  expect(mock.threeArgumentMethod(1,"2","3")).andAnswer(firstAnswer).andReturn("Second call").andAnswer(secondAnswer).andReturn("Fourth call");
+  replay(mock);
+  assertEquals("Call answered",mock.threeArgumentMethod(1,"2","3"));
+  assertEquals("Second call",mock.threeArgumentMethod(1,"2","3"));
+  try {
+    mock.threeArgumentMethod(1,"2","3");
+    fail();
+  }
+ catch (  IllegalStateException expected) {
+    assertEquals("Call answered",expected.getMessage());
+  }
+  assertEquals("Fourth call",mock.threeArgumentMethod(1,"2","3"));
+  verify(mock);
+}

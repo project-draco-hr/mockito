@@ -1,0 +1,4 @@
+{
+  Class returnType=lastInvocation.getMethod().getReturnType();
+  return createNumberObject(o,returnType);
+}

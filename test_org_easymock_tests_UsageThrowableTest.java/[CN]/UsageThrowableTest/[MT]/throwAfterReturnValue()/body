@@ -1,0 +1,16 @@
+{
+  mock.throwsNothing(false);
+  control.setReturnValue("");
+  RuntimeException expectedException=new RuntimeException();
+  control.setThrowable(expectedException);
+  control.replay();
+  assertEquals("",mock.throwsNothing(false));
+  try {
+    mock.throwsNothing(false);
+    fail("RuntimeException expected");
+  }
+ catch (  RuntimeException actualException) {
+    assertSame(expectedException,actualException);
+  }
+  control.verify();
+}

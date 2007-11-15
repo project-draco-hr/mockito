@@ -1,0 +1,10 @@
+{
+  LinkedList list=mock(LinkedList.class);
+  try {
+    stub(list.add("monkey island")).andThrows(null);
+    fail();
+  }
+ catch (  IllegalArgumentException e) {
+    assertEquals("Cannot set null throwable",e.getMessage());
+  }
+}

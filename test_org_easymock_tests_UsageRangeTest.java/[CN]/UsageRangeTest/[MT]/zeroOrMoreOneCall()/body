@@ -1,0 +1,7 @@
+{
+  mock.hasNext();
+  control.setReturnValue(false,MockControl.ZERO_OR_MORE);
+  control.replay();
+  assertFalse(mock.hasNext());
+  control.verify();
+}

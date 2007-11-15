@@ -1,0 +1,20 @@
+{
+  expect(mock.oneArg(false)).andReturn("Test").andReturn("Test2").andThrow(new IndexOutOfBoundsException());
+  replay(mock);
+  assertEquals("Test",mock.oneArg(false));
+  assertEquals("Test2",mock.oneArg(false));
+  try {
+    mock.oneArg(false);
+    fail();
+  }
+ catch (  IndexOutOfBoundsException expected) {
+  }
+  boolean failed=true;
+  try {
+    mock.oneArg(false);
+    failed=false;
+  }
+ catch (  AssertionError expected) {
+  }
+  if (!failed)   fail("expected AssertionError");
+}

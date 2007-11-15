@@ -1,0 +1,12 @@
+{
+  for (  ExpectedInvocationAndResults entry : results) {
+    if (!entry.getExpectedInvocation().matches(actual)) {
+      continue;
+    }
+    Result result=entry.getResults().next();
+    if (result != null) {
+      return result;
+    }
+  }
+  return null;
+}

@@ -1,0 +1,14 @@
+{
+  int actuallyInvoked=numberOfActualInvocations(invocation);
+  if (verifyingMode.numberOfInvocationsMatters()) {
+    int expectedInvoked=verifyingMode.getExactNumberOfInvocations();
+    if (actuallyInvoked != expectedInvoked) {
+      throw new NumberOfInvocationsAssertionError(expectedInvoked,actuallyInvoked);
+    }
+  }
+ else {
+    if (actuallyInvoked == 0) {
+      throw new MockVerificationAssertionError();
+    }
+  }
+}

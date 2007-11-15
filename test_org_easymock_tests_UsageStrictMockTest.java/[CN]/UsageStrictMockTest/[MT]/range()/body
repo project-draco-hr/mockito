@@ -1,0 +1,29 @@
+{
+  control.reset();
+  mock.booleanReturningMethod(0);
+  control.setReturnValue(true);
+  mock.simpleMethod();
+  mock.booleanReturningMethod(1);
+  control.setReturnValue(false,2,3);
+  mock.simpleMethod();
+  control.setVoidCallable(MockControl.ONE_OR_MORE);
+  mock.booleanReturningMethod(1);
+  control.setReturnValue(false);
+  control.replay();
+  mock.booleanReturningMethod(0);
+  mock.simpleMethod();
+  mock.booleanReturningMethod(1);
+  mock.booleanReturningMethod(1);
+  mock.booleanReturningMethod(1);
+  boolean failed=false;
+  try {
+    mock.booleanReturningMethod(1);
+  }
+ catch (  AssertionError expected) {
+    failed=true;
+    assertEquals("\n  Unexpected method call booleanReturningMethod(1):" + "\n    booleanReturningMethod(1): expected: between 2 and 3, actual: 3 (+1)" + "\n    simpleMethod(): expected: at least 1, actual: 0",expected.getMessage());
+  }
+  if (!failed) {
+    fail("too many calls accepted");
+  }
+}

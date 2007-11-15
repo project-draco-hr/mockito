@@ -1,0 +1,15 @@
+{
+  ObjectMethodsFilter<MockitoControl<T>> handler;
+  try {
+    if (Enhancer.isEnhanced(mock.getClass())) {
+      handler=(ObjectMethodsFilter)getInterceptor(mock).getHandler();
+    }
+ else {
+      throw new NotAMockException(mock);
+    }
+    return handler.getDelegate();
+  }
+ catch (  ClassCastException e) {
+    throw new NotAMockException(mock);
+  }
+}

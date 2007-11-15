@@ -1,0 +1,3 @@
+{
+  return ((ObjectMethodsFilter<MockInvocationHandler>)Proxy.getInvocationHandler(mock)).getDelegate().getControl();
+}

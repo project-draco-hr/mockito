@@ -1,0 +1,3 @@
+{
+  return this.mock.equals(actual.mock) && this.method.equals(actual.method) && matcher.matches(this.arguments,actual.arguments);
+}

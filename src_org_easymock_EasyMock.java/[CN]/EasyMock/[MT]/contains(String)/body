@@ -1,0 +1,4 @@
+{
+  reportMatcher(new Contains(substring));
+  return null;
+}

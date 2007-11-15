@@ -1,0 +1,10 @@
+{
+  mock.simpleMethod();
+  try {
+    control.setVoidCallable(4,3);
+    fail();
+  }
+ catch (  IllegalArgumentException expected) {
+    assertEquals("minimum must be <= maximum",expected.getMessage());
+  }
+}

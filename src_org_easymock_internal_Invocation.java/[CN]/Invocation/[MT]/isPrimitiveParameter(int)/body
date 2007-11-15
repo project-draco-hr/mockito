@@ -1,0 +1,7 @@
+{
+  Class<?>[] parameterTypes=method.getParameterTypes();
+  if (method.isVarArgs()) {
+    parameterPosition=Math.min(parameterPosition,parameterTypes.length - 1);
+  }
+  return parameterTypes[parameterPosition].isPrimitive();
+}

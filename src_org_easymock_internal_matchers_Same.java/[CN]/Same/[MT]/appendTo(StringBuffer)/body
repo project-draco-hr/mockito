@@ -1,0 +1,7 @@
+{
+  buffer.append("same(");
+  appendQuoting(buffer);
+  buffer.append(expected);
+  appendQuoting(buffer);
+  buffer.append(")");
+}

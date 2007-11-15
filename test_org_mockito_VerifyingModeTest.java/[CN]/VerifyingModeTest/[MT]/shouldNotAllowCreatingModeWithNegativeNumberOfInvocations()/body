@@ -1,0 +1,9 @@
+{
+  try {
+    VerifyingMode.times(-50);
+    fail();
+  }
+ catch (  IllegalArgumentException e) {
+    assertEquals("Negative value is not allowed here",e.getMessage());
+  }
+}

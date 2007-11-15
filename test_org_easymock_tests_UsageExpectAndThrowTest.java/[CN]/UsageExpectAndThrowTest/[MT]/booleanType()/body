@@ -1,0 +1,12 @@
+{
+  control.expectAndThrow(mock.booleanReturningMethod(4),EXCEPTION);
+  control.replay();
+  try {
+    mock.booleanReturningMethod(4);
+    fail();
+  }
+ catch (  RuntimeException exception) {
+    assertSame(EXCEPTION,exception);
+  }
+  control.verify();
+}

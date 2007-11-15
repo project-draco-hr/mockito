@@ -1,0 +1,3 @@
+{
+  EasyMock.expectLastCall().andReturn(value).once();
+}

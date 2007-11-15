@@ -1,0 +1,10 @@
+{
+  mock.throwsIOException(0);
+  try {
+    control.setDefaultThrowable(new CheckedException());
+    fail("IllegalArgumentException expected");
+  }
+ catch (  IllegalArgumentException expected) {
+    assertEquals("last method called on mock cannot throw " + this.getClass().getName() + "$CheckedException",expected.getMessage());
+  }
+}

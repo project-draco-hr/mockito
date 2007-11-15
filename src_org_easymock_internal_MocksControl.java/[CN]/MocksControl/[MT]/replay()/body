@@ -1,0 +1,10 @@
+{
+  try {
+    state.replay();
+    state=new ReplayState(behavior);
+    LastControl.reportLastControl(null);
+  }
+ catch (  RuntimeExceptionWrapper e) {
+    throw (RuntimeException)e.getRuntimeException().fillInStackTrace();
+  }
+}

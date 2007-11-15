@@ -1,0 +1,4 @@
+{
+  new Same("X").appendTo(buffer);
+  assertEquals("same(\"X\")",buffer.toString());
+}

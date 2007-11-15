@@ -1,0 +1,3 @@
+{
+  test(new GreaterOrEqual<String>("b"),false,true,true,"geq");
+}

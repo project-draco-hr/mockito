@@ -1,0 +1,26 @@
+{
+  expect(mock.oneArg("1")).andReturn("A").andStubReturn("B");
+  expect(mock.oneArg("2")).andThrow(new IllegalArgumentException()).andStubThrow(new IllegalStateException());
+  replay(mock);
+  assertEquals("A",mock.oneArg("1"));
+  assertEquals("B",mock.oneArg("1"));
+  assertEquals("B",mock.oneArg("1"));
+  try {
+    mock.oneArg("2");
+  }
+ catch (  IllegalArgumentException ignored) {
+  }
+  assertEquals("B",mock.oneArg("1"));
+  try {
+    mock.oneArg("2");
+  }
+ catch (  IllegalStateException ignored) {
+  }
+  assertEquals("B",mock.oneArg("1"));
+  try {
+    mock.oneArg("2");
+  }
+ catch (  IllegalStateException ignored) {
+  }
+  verify(mock);
+}

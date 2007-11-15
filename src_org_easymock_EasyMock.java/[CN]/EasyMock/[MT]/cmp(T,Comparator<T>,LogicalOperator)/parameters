@@ -1,0 +1,3 @@
+T value
+Comparator<T> comparator
+LogicalOperator operator

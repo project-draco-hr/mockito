@@ -1,0 +1,8 @@
+{
+  for (  ExpectedInvocationAndResults entry : results) {
+    if (!entry.getResults().hasValidCallCount()) {
+      return false;
+    }
+  }
+  return true;
+}

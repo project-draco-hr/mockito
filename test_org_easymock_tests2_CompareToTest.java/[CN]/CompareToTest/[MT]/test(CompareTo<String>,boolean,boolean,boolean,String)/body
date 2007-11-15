@@ -1,0 +1,8 @@
+{
+  assertEquals(lower,cmpTo.matches("a"));
+  assertEquals(equals,cmpTo.matches("b"));
+  assertEquals(higher,cmpTo.matches("c"));
+  StringBuffer sb=new StringBuffer();
+  cmpTo.appendTo(sb);
+  assertEquals(name + "(b)",sb.toString());
+}

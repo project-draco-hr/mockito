@@ -1,0 +1,4 @@
+{
+  new Equals("X").appendTo(buffer);
+  assertEquals("\"X\"",buffer.toString());
+}

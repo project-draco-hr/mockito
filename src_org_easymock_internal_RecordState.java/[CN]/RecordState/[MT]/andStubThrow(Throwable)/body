@@ -1,0 +1,9 @@
+{
+  requireMethodCall("stub Throwable");
+  requireValidThrowable(throwable);
+  if (lastResult != null) {
+    times(MocksControl.ONCE);
+  }
+  behavior.addStub(lastInvocation,Result.createThrowResult(throwable));
+  lastInvocationUsed=true;
+}

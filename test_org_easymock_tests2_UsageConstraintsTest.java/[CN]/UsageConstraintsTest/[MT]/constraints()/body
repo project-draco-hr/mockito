@@ -1,0 +1,36 @@
+{
+  expect(mock.threeArgumentMethod(and(geq(7),leq(10)),isA(String.class),contains("123"))).andReturn("456").atLeastOnce();
+  replay(mock);
+  boolean failed=false;
+  try {
+    mock.threeArgumentMethod(11,"","01234");
+  }
+ catch (  AssertionError expected) {
+    failed=true;
+  }
+  if (!failed) {
+    fail();
+  }
+  failed=false;
+  try {
+    mock.threeArgumentMethod(8,new Object(),"01234");
+  }
+ catch (  AssertionError expected) {
+    failed=true;
+  }
+  if (!failed) {
+    fail();
+  }
+  failed=false;
+  try {
+    mock.threeArgumentMethod(8,"","no match");
+  }
+ catch (  AssertionError expected) {
+    failed=true;
+  }
+  if (!failed) {
+    fail();
+  }
+  assertEquals("456",mock.threeArgumentMethod(8,"","01234"));
+  verify(mock);
+}

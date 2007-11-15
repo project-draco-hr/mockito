@@ -1,0 +1,6 @@
+{
+  requireMethodCall("stub behavior");
+  requireVoidMethod();
+  behavior.addStub(lastInvocation,Result.createReturnResult(null));
+  lastInvocationUsed=true;
+}

@@ -1,0 +1,12 @@
+{
+  mock.simpleMethodWithArgument("1");
+  control.setVoidCallable(MockControl.ONE_OR_MORE);
+  mock.simpleMethodWithArgument("2");
+  control.replay();
+  mock.simpleMethodWithArgument("1");
+  mock.simpleMethodWithArgument("1");
+  mock.simpleMethodWithArgument("2");
+  mock.simpleMethodWithArgument("1");
+  mock.simpleMethodWithArgument("1");
+  control.verify();
+}

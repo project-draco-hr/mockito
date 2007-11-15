@@ -1,0 +1,3 @@
+{
+  super("stub() requires an argument which has to be a proper method call on a mock object");
+}

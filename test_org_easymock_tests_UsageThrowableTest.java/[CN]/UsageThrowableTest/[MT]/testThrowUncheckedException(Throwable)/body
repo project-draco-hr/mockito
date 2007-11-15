@@ -1,0 +1,15 @@
+{
+  mock.throwsNothing(true);
+  control.setReturnValue("true");
+  mock.throwsNothing(false);
+  control.setThrowable(throwable);
+  control.replay();
+  try {
+    mock.throwsNothing(false);
+    fail("Trowable expected");
+  }
+ catch (  Throwable expected) {
+    assertSame(throwable,expected);
+  }
+  assertEquals("true",mock.throwsNothing(true));
+}

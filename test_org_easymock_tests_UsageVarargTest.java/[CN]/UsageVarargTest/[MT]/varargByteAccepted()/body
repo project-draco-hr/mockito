@@ -1,0 +1,8 @@
+{
+  mock.withVarargsByte(1,(byte)1);
+  mock.withVarargsByte(2,(byte)1,(byte)2);
+  control.replay();
+  mock.withVarargsByte(1,(byte)1);
+  mock.withVarargsByte(2,(byte)1,(byte)2);
+  control.verify();
+}

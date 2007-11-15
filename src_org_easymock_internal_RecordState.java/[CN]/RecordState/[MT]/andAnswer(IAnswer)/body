@@ -1,0 +1,8 @@
+{
+  requireMethodCall("answer");
+  requireValidAnswer(answer);
+  if (lastResult != null) {
+    times(MocksControl.ONCE);
+  }
+  lastResult=Result.createAnswerResult(answer);
+}

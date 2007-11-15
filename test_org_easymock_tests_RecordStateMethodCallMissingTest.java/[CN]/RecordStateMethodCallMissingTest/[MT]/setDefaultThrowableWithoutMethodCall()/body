@@ -1,0 +1,9 @@
+{
+  try {
+    control.setDefaultThrowable(new RuntimeException());
+    fail("IllegalStateException expected");
+  }
+ catch (  IllegalStateException expected) {
+    assertEquals("method call on the mock needed before setting default Throwable",expected.getMessage());
+  }
+}

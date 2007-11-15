@@ -1,0 +1,9 @@
+{
+  Object o=Enhancer.create(ArrayList.class,NoOp.INSTANCE);
+  try {
+    getControl(o);
+    fail();
+  }
+ catch (  NotAMockException e) {
+  }
+}

@@ -1,0 +1,11 @@
+{
+  Reader reader=mock(Reader.class);
+  IOException ioException=new IOException();
+  stub(reader.read()).andThrows(ioException);
+  try {
+    reader.read();
+  }
+ catch (  Exception e) {
+    assertEquals(ioException,e);
+  }
+}

@@ -1,0 +1,6 @@
+{
+  if (this.expected == null) {
+    return actual == null;
+  }
+  return expected.equals(actual);
+}

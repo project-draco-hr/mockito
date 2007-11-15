@@ -1,0 +1,8 @@
+{
+  if (getExpected() != null && getExpected().getClass().isArray()) {
+    appendArray(createObjectArray(getExpected()),buffer);
+  }
+ else {
+    super.appendTo(buffer);
+  }
+}

@@ -1,0 +1,4 @@
+{
+  reportMatcher(new GreaterThan<Double>(value));
+  return 0;
+}

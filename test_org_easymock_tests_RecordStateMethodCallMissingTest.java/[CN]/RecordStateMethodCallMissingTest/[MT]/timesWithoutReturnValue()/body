@@ -1,0 +1,10 @@
+{
+  mock.booleanReturningMethod(1);
+  try {
+    expectLastCall().times(3);
+    fail();
+  }
+ catch (  IllegalStateException expected) {
+    assertEquals("last method called on mock is not a void method",expected.getMessage());
+  }
+}

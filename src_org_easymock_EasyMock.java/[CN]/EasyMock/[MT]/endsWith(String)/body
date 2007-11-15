@@ -1,0 +1,4 @@
+{
+  reportMatcher(new EndsWith(suffix));
+  return null;
+}

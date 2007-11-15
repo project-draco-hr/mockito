@@ -1,0 +1,5 @@
+{
+  if (throwable == null)   throw new RuntimeExceptionWrapper(new NullPointerException("null cannot be thrown"));
+  if (isValidThrowable(throwable))   return;
+  throw new RuntimeExceptionWrapper(new IllegalArgumentException("last method called on mock cannot throw " + throwable.getClass().getName()));
+}

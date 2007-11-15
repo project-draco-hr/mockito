@@ -1,0 +1,4 @@
+{
+  new StartsWith("AB").appendTo(buffer);
+  assertEquals("startsWith(\"AB\")",buffer.toString());
+}

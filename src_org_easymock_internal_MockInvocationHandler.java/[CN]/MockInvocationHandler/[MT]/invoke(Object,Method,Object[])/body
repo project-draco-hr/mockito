@@ -1,0 +1,17 @@
+{
+  try {
+    if (control.getState() instanceof RecordState) {
+      LastControl.reportLastControl(control);
+    }
+    return control.getState().invoke(new Invocation(proxy,method,args));
+  }
+ catch (  RuntimeExceptionWrapper e) {
+    throw e.getRuntimeException().fillInStackTrace();
+  }
+catch (  AssertionErrorWrapper e) {
+    throw e.getAssertionError().fillInStackTrace();
+  }
+catch (  ThrowableWrapper t) {
+    throw t.getThrowable().fillInStackTrace();
+  }
+}

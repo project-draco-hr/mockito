@@ -1,0 +1,9 @@
+{
+  ArticleCalculator mockCalculator=Mockito.mock(ArticleCalculator.class);
+  ArticleDatabase mockDatabase=Mockito.mock(ArticleDatabase.class);
+  ArticleManager articleManager=new ArticleManager(mockCalculator,mockDatabase);
+  articleManager.updateArticleCounters("Guardian");
+  Mockito.verify(mockCalculator).countArticles("Guardian");
+  Mockito.verify(mockCalculator).countArticlesInPolish("Guardian");
+  Mockito.verifyNoMoreInteractions(mockCalculator);
+}

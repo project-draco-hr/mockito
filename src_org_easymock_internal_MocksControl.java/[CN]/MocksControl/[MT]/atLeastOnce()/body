@@ -1,0 +1,9 @@
+{
+  try {
+    state.times(AT_LEAST_ONCE);
+    return this;
+  }
+ catch (  RuntimeExceptionWrapper e) {
+    throw (RuntimeException)e.getRuntimeException().fillInStackTrace();
+  }
+}

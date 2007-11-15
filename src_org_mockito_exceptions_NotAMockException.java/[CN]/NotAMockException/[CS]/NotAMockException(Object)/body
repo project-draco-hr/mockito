@@ -1,0 +1,3 @@
+{
+  super("Not a mock: " + object.getClass().getName());
+}

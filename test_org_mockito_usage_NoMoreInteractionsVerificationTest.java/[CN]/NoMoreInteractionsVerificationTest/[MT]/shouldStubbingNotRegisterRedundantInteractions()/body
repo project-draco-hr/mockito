@@ -1,0 +1,8 @@
+{
+  List mock=mock(List.class);
+  stub(mock.add("one")).andReturn(true);
+  stub(mock.add("two")).andReturn(true);
+  mock.add("one");
+  verify(mock).add("one");
+  verifyNoMoreInteractions(mock);
+}

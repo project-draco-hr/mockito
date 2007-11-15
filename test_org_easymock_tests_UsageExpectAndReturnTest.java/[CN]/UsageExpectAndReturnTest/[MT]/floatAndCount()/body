@@ -1,0 +1,7 @@
+{
+  control.expectAndReturn(mock.floatReturningMethod(4),12f,2);
+  control.replay();
+  assertEquals(12f,mock.floatReturningMethod(4),0f);
+  assertEquals(12f,mock.floatReturningMethod(4),0f);
+  control.verify();
+}

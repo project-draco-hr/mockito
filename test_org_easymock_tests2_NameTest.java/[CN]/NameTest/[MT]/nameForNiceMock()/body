@@ -1,0 +1,13 @@
+{
+  IMethods mock=createNiceMock("mock",IMethods.class);
+  mock.simpleMethod();
+  replay(mock);
+  try {
+    verify(mock);
+  }
+ catch (  AssertionError expected) {
+    String actualMessage=expected.getMessage();
+    String expectedMessage="\n  Expectation failure on verify:\n    mock.simpleMethod(): expected: 1, actual: 0";
+    assertEquals(expectedMessage,actualMessage);
+  }
+}

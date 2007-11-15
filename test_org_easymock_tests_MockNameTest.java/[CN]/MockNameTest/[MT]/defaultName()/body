@@ -1,0 +1,6 @@
+{
+  control=MockControl.createControl(IMethods.class);
+  String expected="EasyMock for " + IMethods.class.toString();
+  String actual=control.getMock().toString();
+  assertEquals(expected,actual);
+}

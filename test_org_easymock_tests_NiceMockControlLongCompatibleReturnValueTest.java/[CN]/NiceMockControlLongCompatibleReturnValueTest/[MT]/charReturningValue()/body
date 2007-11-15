@@ -1,0 +1,4 @@
+{
+  assertEquals((char)0,mock.charReturningMethod(12));
+  control.verify();
+}

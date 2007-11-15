@@ -1,0 +1,4 @@
+{
+  new Not(new Equals(1)).appendTo(buffer);
+  assertEquals("not(1)",buffer.toString());
+}

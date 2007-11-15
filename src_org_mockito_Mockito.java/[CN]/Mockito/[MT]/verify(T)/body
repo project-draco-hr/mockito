@@ -1,0 +1,5 @@
+{
+  MockUtil.validateMock(mock);
+  MockitoOperations.reportVerifyingMode(VerifyingMode.anyTimes());
+  return mock;
+}

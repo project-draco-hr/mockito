@@ -1,0 +1,3 @@
+{
+  return (actual instanceof String) && ((String)actual).matches(regex);
+}

@@ -1,0 +1,10 @@
+{
+  Object o=new Object(){
+    @Override public String toString(){
+      return "X";
+    }
+  }
+;
+  new Equals(o).appendTo(buffer);
+  assertEquals("X",buffer.toString());
+}

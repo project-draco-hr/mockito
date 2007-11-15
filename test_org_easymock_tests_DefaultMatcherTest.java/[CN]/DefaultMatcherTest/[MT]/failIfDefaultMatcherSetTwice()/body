@@ -1,0 +1,10 @@
+{
+  control.setDefaultMatcher(MockControl.ARRAY_MATCHER);
+  try {
+    control.setDefaultMatcher(MockControl.ARRAY_MATCHER);
+    fail();
+  }
+ catch (  IllegalStateException expected) {
+    assertEquals("default matcher can only be set once directly after creation of the MockControl",expected.getMessage());
+  }
+}

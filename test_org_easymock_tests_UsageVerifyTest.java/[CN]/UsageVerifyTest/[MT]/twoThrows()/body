@@ -1,0 +1,48 @@
+{
+  mock.throwsIOException(0);
+  control.setThrowable(new IOException());
+  control.setThrowable(new IOException());
+  mock.throwsIOException(1);
+  control.setThrowable(new IOException());
+  control.replay();
+  try {
+    mock.throwsIOException(0);
+    fail("IOException expected");
+  }
+ catch (  IOException expected) {
+  }
+  try {
+    control.verify();
+    fail("AssertionError expected");
+  }
+ catch (  AssertionError expected) {
+    assertEquals("\n  Expectation failure on verify:" + "\n    throwsIOException(0): expected: 2, actual: 1" + "\n    throwsIOException(1): expected: 1, actual: 0",expected.getMessage());
+  }
+  try {
+    mock.throwsIOException(0);
+    fail("IOException expected");
+  }
+ catch (  IOException expected) {
+  }
+  try {
+    control.verify();
+    fail("AssertionError expected");
+  }
+ catch (  AssertionError expected) {
+    assertEquals("\n  Expectation failure on verify:" + "\n    throwsIOException(1): expected: 1, actual: 0",expected.getMessage());
+  }
+  try {
+    mock.throwsIOException(1);
+    fail("IOException expected");
+  }
+ catch (  IOException expected) {
+  }
+  control.verify();
+  try {
+    mock.throwsIOException(0);
+    fail("AssertionError expected");
+  }
+ catch (  AssertionError expected) {
+    assertEquals("\n  Unexpected method call throwsIOException(0):" + "\n    throwsIOException(0): expected: 2, actual: 2 (+1)",expected.getMessage());
+  }
+}

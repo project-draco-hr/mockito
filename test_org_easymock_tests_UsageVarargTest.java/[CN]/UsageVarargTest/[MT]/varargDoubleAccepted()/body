@@ -1,0 +1,8 @@
+{
+  mock.withVarargsDouble(1,1.0d);
+  mock.withVarargsDouble(1,1.0d,2.0d);
+  control.replay();
+  mock.withVarargsDouble(1,1.0d);
+  mock.withVarargsDouble(1,1.0d,2.0d);
+  control.verify();
+}

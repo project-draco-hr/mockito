@@ -1,0 +1,5 @@
+{
+  testThrowUncheckedException(new RuntimeException(){
+  }
+);
+}

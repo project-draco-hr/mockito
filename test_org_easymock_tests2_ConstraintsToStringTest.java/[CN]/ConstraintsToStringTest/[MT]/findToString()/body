@@ -1,0 +1,4 @@
+{
+  new Find("\\s+").appendTo(buffer);
+  assertEquals("find(\"\\\\s+\")",buffer.toString());
+}

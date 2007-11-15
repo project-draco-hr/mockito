@@ -1,0 +1,6 @@
+{
+  requireMethodCall("default void callable");
+  requireVoidMethod();
+  behavior.addStub(lastInvocation.withMatcher(MockControl.ALWAYS_MATCHER),Result.createReturnResult(null));
+  lastInvocationUsed=true;
+}

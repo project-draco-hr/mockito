@@ -1,0 +1,19 @@
+{
+  control.expectAndThrow(mock.doubleReturningMethod(4),EXCEPTION,2);
+  control.replay();
+  try {
+    mock.doubleReturningMethod(4);
+    fail();
+  }
+ catch (  RuntimeException exception) {
+    assertSame(EXCEPTION,exception);
+  }
+  try {
+    mock.doubleReturningMethod(4);
+    fail();
+  }
+ catch (  RuntimeException exception) {
+    assertSame(EXCEPTION,exception);
+  }
+  control.verify();
+}

@@ -1,0 +1,10 @@
+{
+  mock.floatReturningMethod(0);
+  control.setReturnValue(25.0F);
+  control.setDefaultReturnValue(34.0F);
+  control.replay();
+  assertEquals(25.0F,mock.floatReturningMethod(0),0.0F);
+  assertEquals(34.0F,mock.floatReturningMethod(-4),0.0F);
+  assertEquals(34.0F,mock.floatReturningMethod(12),0.0F);
+  control.verify();
+}

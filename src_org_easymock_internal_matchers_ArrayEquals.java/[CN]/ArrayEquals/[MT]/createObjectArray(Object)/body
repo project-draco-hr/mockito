@@ -1,0 +1,10 @@
+{
+  if (array instanceof Object[]) {
+    return (Object[])array;
+  }
+  Object[] result=new Object[Array.getLength(array)];
+  for (int i=0; i < Array.getLength(array); i++) {
+    result[i]=Array.get(array,i);
+  }
+  return result;
+}

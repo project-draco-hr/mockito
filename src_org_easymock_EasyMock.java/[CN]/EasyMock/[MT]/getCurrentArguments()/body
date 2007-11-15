@@ -1,0 +1,7 @@
+{
+  Object[] result=LastArguments.getCurrentArguments();
+  if (result == null) {
+    throw new IllegalStateException("current arguments are only available when executing callback methods");
+  }
+  return result;
+}

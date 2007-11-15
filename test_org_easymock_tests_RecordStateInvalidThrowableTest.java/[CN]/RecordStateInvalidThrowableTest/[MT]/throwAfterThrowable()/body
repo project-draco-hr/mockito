@@ -1,0 +1,11 @@
+{
+  mock.throwsIOException(0);
+  control.setThrowable(new IOException(),MockControl.ONE_OR_MORE);
+  try {
+    control.setThrowable(new IOException());
+    fail("IllegalStateException expected");
+  }
+ catch (  IllegalStateException expected) {
+    assertEquals("last method called on mock already has a non-fixed count set.",expected.getMessage());
+  }
+}

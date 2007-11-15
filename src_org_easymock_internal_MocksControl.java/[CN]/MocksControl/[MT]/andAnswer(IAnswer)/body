@@ -1,0 +1,9 @@
+{
+  try {
+    state.andAnswer(answer);
+    return this;
+  }
+ catch (  RuntimeExceptionWrapper e) {
+    throw (RuntimeException)e.getRuntimeException().fillInStackTrace();
+  }
+}

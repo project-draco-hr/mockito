@@ -1,0 +1,6 @@
+{
+  Object mock=Mockito.mock(ClassToMockWithOverride.class);
+  assertThat(mock,equalTo(mock));
+  assertThat(mock.hashCode(),not(equalTo(-1)));
+  assertThat(mock.toString(),not(equalTo("super")));
+}

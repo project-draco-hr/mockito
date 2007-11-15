@@ -1,0 +1,10 @@
+{
+  mock.byteReturningMethod(0);
+  control.setReturnValue(25);
+  control.setDefaultReturnValue(34);
+  control.replay();
+  assertEquals((byte)25,mock.byteReturningMethod(0));
+  assertEquals((byte)34,mock.byteReturningMethod(-4));
+  assertEquals((byte)34,mock.byteReturningMethod(12));
+  control.verify();
+}

@@ -1,0 +1,9 @@
+{
+  List mock=mock(List.class);
+  stub(mock.add("test")).andReturn(true);
+  mock.add(2,"test2");
+  Mockito.assertThat(wasInvoked(mock)).add(2,"test2");
+  Mockito.assertThat(wasInvoked(mock,5)).add(2,"test2");
+  Mockito.assertThat(noMoreInteractions(mock));
+  Mockito.assertThat(zeroInteractions(mock));
+}

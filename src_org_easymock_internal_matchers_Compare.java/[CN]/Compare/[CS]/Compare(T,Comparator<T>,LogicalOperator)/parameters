@@ -1,0 +1,3 @@
+T expected
+Comparator<T> comparator
+LogicalOperator result

@@ -1,0 +1,4 @@
+{
+  reportMatcher(new InstanceOf(clazz));
+  return null;
+}

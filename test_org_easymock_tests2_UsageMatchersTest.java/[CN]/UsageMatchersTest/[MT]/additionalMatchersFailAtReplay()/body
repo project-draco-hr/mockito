@@ -1,0 +1,5 @@
+{
+  IMethods mock=createMock(IMethods.class);
+  lt(5);
+  replay(mock);
+}

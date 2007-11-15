@@ -1,0 +1,12 @@
+{
+  boolean failed=false;
+  try {
+    mock.simpleMethodWithArgument("2");
+  }
+ catch (  AssertionError expected) {
+    failed=true;
+  }
+  if (!failed) {
+    fail("unordered calls accepted");
+  }
+}

@@ -1,0 +1,3 @@
+{
+  testThrowUncheckedException(new Error());
+}

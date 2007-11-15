@@ -1,0 +1,3 @@
+{
+  return new MockClassControl<T>((MocksControl)EasyMock.createNiceControl(),classToMock,mockedMethods);
+}

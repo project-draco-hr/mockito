@@ -1,0 +1,3 @@
+{
+  verifyingModeLocal.set(verify);
+}

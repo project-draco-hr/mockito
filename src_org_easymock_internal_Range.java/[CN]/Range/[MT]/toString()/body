@@ -1,0 +1,11 @@
+{
+  if (hasFixedCount()) {
+    return "" + minimum;
+  }
+ else   if (hasOpenCount()) {
+    return "at least " + minimum;
+  }
+ else {
+    return "between " + minimum + " and "+ maximum;
+  }
+}

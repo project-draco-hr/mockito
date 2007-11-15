@@ -1,0 +1,11 @@
+{
+  LinkedList list=mock(LinkedList.class);
+  Exception checkedException=new Exception();
+  try {
+    stub(list.add("monkey island")).andThrows(checkedException);
+    fail();
+  }
+ catch (  IllegalArgumentException e) {
+    assertEquals("Given checked exception is invalid for this method",e.getMessage());
+  }
+}

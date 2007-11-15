@@ -1,0 +1,7 @@
+{
+  List<IArgumentMatcher> matchers=new ArrayList<IArgumentMatcher>();
+  matchers.add(new Equals(1));
+  matchers.add(new Equals(2));
+  new And(matchers).appendTo(buffer);
+  assertEquals("and(1, 2)",buffer.toString());
+}

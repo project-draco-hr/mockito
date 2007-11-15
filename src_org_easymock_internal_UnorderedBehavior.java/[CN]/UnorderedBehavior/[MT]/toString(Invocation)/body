@@ -1,0 +1,16 @@
+{
+  StringBuffer result=new StringBuffer();
+  for (  ExpectedInvocationAndResults entry : results) {
+    boolean unordered=!checkOrder;
+    boolean validCallCount=entry.getResults().hasValidCallCount();
+    boolean match=invocation != null && entry.getExpectedInvocation().matches(invocation);
+    if (unordered && validCallCount && !match) {
+      continue;
+    }
+    result.append("\n    " + entry.toString());
+    if (match) {
+      result.append(" (+1)");
+    }
+  }
+  return result.toString();
+}

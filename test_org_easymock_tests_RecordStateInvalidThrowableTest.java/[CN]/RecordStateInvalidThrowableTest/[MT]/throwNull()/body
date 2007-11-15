@@ -1,0 +1,10 @@
+{
+  mock.throwsNothing(false);
+  try {
+    control.setThrowable(null);
+    fail("NullPointerException expected");
+  }
+ catch (  NullPointerException expected) {
+    assertEquals("null cannot be thrown",expected.getMessage());
+  }
+}

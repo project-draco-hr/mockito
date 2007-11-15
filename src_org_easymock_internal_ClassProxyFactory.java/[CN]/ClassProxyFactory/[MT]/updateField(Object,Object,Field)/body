@@ -1,0 +1,11 @@
+{
+  boolean accessible=field.isAccessible();
+  field.setAccessible(true);
+  try {
+    field.set(instance,value);
+  }
+ catch (  IllegalAccessException e) {
+    throw new InternalError("Should be accessible since we set it ourselves");
+  }
+  field.setAccessible(accessible);
+}

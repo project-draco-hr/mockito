@@ -1,0 +1,24 @@
+{
+  mock.twoArgumentMethod(0,5);
+  control.setMatcher(new ArgumentsMatcher(){
+    public boolean matches(    Object[] expected,    Object[] actual){
+      return false;
+    }
+    public String toString(    Object[] arguments){
+      return "<<" + arguments[0] + ">>";
+    }
+  }
+);
+  control.replay();
+  boolean failed=false;
+  try {
+    mock.twoArgumentMethod(1,5);
+  }
+ catch (  AssertionError expected) {
+    failed=true;
+    assertEquals("\n  Unexpected method call twoArgumentMethod(1, 5):" + "\n    twoArgumentMethod(<<0>>): expected: 1, actual: 0",expected.getMessage());
+  }
+  if (!failed) {
+    fail("exception expected");
+  }
+}

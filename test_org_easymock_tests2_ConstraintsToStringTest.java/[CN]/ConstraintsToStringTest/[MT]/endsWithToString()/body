@@ -1,0 +1,4 @@
+{
+  new EndsWith("AB").appendTo(buffer);
+  assertEquals("endsWith(\"AB\")",buffer.toString());
+}

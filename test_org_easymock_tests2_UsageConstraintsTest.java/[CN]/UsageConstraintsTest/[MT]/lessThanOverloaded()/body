@@ -1,0 +1,18 @@
+{
+  expect(mock.oneArg(lt((byte)1))).andReturn("1");
+  expect(mock.oneArg(lt((double)1))).andReturn("3");
+  expect(mock.oneArg(lt((float)1))).andReturn("4");
+  expect(mock.oneArg(lt((int)1))).andReturn("5");
+  expect(mock.oneArg(lt((long)1))).andReturn("6");
+  expect(mock.oneArg(lt((short)1))).andReturn("7");
+  expect(mock.oneArg(lt(new BigDecimal("1")))).andReturn("8");
+  replay(mock);
+  assertEquals("1",mock.oneArg((byte)0));
+  assertEquals("3",mock.oneArg((double)0));
+  assertEquals("7",mock.oneArg((short)0));
+  assertEquals("4",mock.oneArg((float)-4));
+  assertEquals("5",mock.oneArg((int)-34));
+  assertEquals("6",mock.oneArg((long)-6));
+  assertEquals("8",mock.oneArg(new BigDecimal("0.5")));
+  verify(mock);
+}

@@ -1,0 +1,13 @@
+{
+  CompareTo<Long> cmpTo=new CompareTo<Long>(5L){
+    @Override protected String getName(){
+      return null;
+    }
+    @Override protected boolean matchResult(    int result){
+      fail("Shouldn't be called since the passed argument is not Comparable");
+      return true;
+    }
+  }
+;
+  assertFalse(cmpTo.matches(new Object()));
+}

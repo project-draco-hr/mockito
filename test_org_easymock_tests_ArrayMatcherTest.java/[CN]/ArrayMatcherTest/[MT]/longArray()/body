@@ -1,0 +1,4 @@
+{
+  assertTrue(equals(new long[]{6},new long[]{6}));
+  assertFalse(equals(new long[]{6},new long[]{7}));
+}

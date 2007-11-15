@@ -1,0 +1,14 @@
+{
+  expect(mock.oneArg(false)).andReturn("Test").andReturn("Test2");
+  replay(mock);
+  assertEquals("Test",mock.oneArg(false));
+  assertEquals("Test2",mock.oneArg(false));
+  boolean failed=false;
+  try {
+    mock.oneArg(false);
+  }
+ catch (  AssertionError expected) {
+    failed=true;
+  }
+  if (!failed)   fail("expected AssertionError");
+}

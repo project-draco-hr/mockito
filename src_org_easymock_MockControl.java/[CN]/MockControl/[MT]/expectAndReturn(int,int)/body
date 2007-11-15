@@ -1,0 +1,3 @@
+{
+  this.expectAndReturn((Object)ignored,(Object)value);
+}

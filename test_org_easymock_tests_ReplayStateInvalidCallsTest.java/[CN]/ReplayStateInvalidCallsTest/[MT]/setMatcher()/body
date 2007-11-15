@@ -1,0 +1,3 @@
+{
+  control.setMatcher(null,MockControl.ARRAY_MATCHER);
+}

@@ -1,0 +1,3 @@
+{
+  control.expectAndThrow(0,exception,1);
+}

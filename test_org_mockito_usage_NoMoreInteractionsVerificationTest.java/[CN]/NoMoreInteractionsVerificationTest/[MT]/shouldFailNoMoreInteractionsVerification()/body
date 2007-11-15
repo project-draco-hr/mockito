@@ -1,0 +1,10 @@
+{
+  List mock=mock(List.class);
+  mock.clear();
+  try {
+    verifyNoMoreInteractions(mock);
+    fail();
+  }
+ catch (  MockVerificationAssertionError e) {
+  }
+}

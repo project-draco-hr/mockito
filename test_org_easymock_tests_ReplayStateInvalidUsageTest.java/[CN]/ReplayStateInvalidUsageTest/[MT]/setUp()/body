@@ -1,0 +1,7 @@
+{
+  exception=new Exception();
+  control=MockControl.createControl(IMethods.class);
+  control.replay();
+  mocksControl=EasyMock.createControl();
+  mocksControl.replay();
+}

@@ -1,0 +1,3 @@
+{
+  return (name != null) ? name : "EasyMock for " + mockType(proxy);
+}

@@ -1,0 +1,6 @@
+{
+  if (matchers.containsKey(method) && matchers.get(method) != matcher) {
+    throw new RuntimeExceptionWrapper(new IllegalStateException("for method " + method.getName() + "("+ (method.getParameterTypes().length == 0 ? "" : "...")+ "), a matcher has already been set"));
+  }
+  matchers.put(method,matcher);
+}

@@ -1,0 +1,5 @@
+{
+  StringWriter stackTrace=new StringWriter();
+  throwable.printStackTrace(new PrintWriter(stackTrace));
+  return stackTrace.getBuffer().toString();
+}

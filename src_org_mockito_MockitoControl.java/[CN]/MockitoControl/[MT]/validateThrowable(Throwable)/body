@@ -1,0 +1,11 @@
+{
+  if (throwable == null) {
+    throw new IllegalArgumentException("Cannot set null throwable");
+  }
+  if (throwable instanceof RuntimeException || throwable instanceof Error) {
+    return;
+  }
+  if (!isValidCheckedException(throwable)) {
+    throw new IllegalArgumentException("Given checked exception is invalid for this method");
+  }
+}

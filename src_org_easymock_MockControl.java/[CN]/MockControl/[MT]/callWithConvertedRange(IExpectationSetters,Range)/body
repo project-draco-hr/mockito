@@ -1,0 +1,14 @@
+{
+  if (range == ONE) {
+    setter.once();
+  }
+ else   if (range == ONE_OR_MORE) {
+    setter.atLeastOnce();
+  }
+ else   if (range == ZERO_OR_MORE) {
+    setter.anyTimes();
+  }
+ else {
+    throw new IllegalArgumentException("Unexpected Range");
+  }
+}

@@ -1,0 +1,5 @@
+CompareTo<String> cmpTo
+boolean lower
+boolean higher
+boolean equals
+String name

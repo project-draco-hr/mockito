@@ -1,0 +1,4 @@
+{
+  Null.NULL.appendTo(buffer);
+  assertEquals("isNull()",buffer.toString());
+}

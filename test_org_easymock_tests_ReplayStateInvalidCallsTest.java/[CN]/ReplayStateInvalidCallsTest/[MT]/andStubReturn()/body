@@ -1,0 +1,3 @@
+{
+  control.andStubReturn("7");
+}

@@ -1,0 +1,11 @@
+{
+  LinkedList mock=mock(LinkedList.class);
+  Error error=new Error();
+  stub(mock.add("quake")).andThrows(error);
+  try {
+    mock.add("quake");
+  }
+ catch (  Error e) {
+    assertEquals(error,e);
+  }
+}

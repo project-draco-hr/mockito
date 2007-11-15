@@ -1,0 +1,4 @@
+{
+  new Contains("AB").appendTo(buffer);
+  assertEquals("contains(\"AB\")",buffer.toString());
+}

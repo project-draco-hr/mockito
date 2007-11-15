@@ -1,0 +1,8 @@
+{
+  LinkedList mock=Mockito.mock(LinkedList.class);
+  Mockito.stub(mock.add("test")).andReturn(false);
+  Mockito.stub(mock.add("test")).andReturn(true);
+  mock.add("test");
+  mock.add("test");
+  Mockito.verify(mock,2).add("test");
+}

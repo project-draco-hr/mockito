@@ -1,0 +1,10 @@
+{
+  mock.doubleReturningMethod(0);
+  control.setReturnValue(25.0);
+  control.setDefaultReturnValue(34.0);
+  control.replay();
+  assertEquals(25.0,mock.doubleReturningMethod(0),0.0);
+  assertEquals(34.0,mock.doubleReturningMethod(-4),0.0);
+  assertEquals(34.0,mock.doubleReturningMethod(12),0.0);
+  control.verify();
+}

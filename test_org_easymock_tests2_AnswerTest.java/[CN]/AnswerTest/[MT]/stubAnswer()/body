@@ -1,0 +1,25 @@
+{
+  IAnswer firstAnswer=new IAnswer(){
+    public Object answer(){
+      assertEquals(new Object[]{1,"2","3"},getCurrentArguments());
+      return "Call answered";
+    }
+  }
+;
+  IAnswer secondAnswer=new IAnswer(){
+    public Object answer(){
+      assertEquals(new Object[]{1,"2","4"},getCurrentArguments());
+      return "Call answered";
+    }
+  }
+;
+  expect(mock.threeArgumentMethod(1,"2","3")).andReturn(42).andStubAnswer(firstAnswer);
+  expect(mock.threeArgumentMethod(1,"2","4")).andStubAnswer(secondAnswer);
+  replay(mock);
+  assertEquals(42,mock.threeArgumentMethod(1,"2","3"));
+  assertEquals("Call answered",mock.threeArgumentMethod(1,"2","3"));
+  assertEquals("Call answered",mock.threeArgumentMethod(1,"2","4"));
+  assertEquals("Call answered",mock.threeArgumentMethod(1,"2","3"));
+  assertEquals("Call answered",mock.threeArgumentMethod(1,"2","3"));
+  verify(mock);
+}

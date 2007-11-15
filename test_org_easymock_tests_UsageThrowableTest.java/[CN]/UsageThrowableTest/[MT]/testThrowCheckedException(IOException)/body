@@ -1,0 +1,23 @@
+{
+  try {
+    mock.throwsIOException(0);
+    control.setReturnValue("Value 0");
+    mock.throwsIOException(1);
+    control.setThrowable(expected);
+    mock.throwsIOException(2);
+    control.setReturnValue("Value 2");
+  }
+ catch (  IOException e) {
+    fail("Unexpected Exception");
+  }
+  control.replay();
+  assertEquals("Value 0",mock.throwsIOException(0));
+  assertEquals("Value 2",mock.throwsIOException(2));
+  try {
+    mock.throwsIOException(1);
+    fail("IOException expected");
+  }
+ catch (  IOException expectedException) {
+    assertSame(expectedException,expected);
+  }
+}

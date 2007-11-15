@@ -1,0 +1,6 @@
+{
+  mock.oneArg("Object");
+  controller.setReturnValue(null);
+  controller.replay();
+  assertNull(mock.oneArg("Object"));
+}

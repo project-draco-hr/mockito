@@ -1,0 +1,8 @@
+{
+  Stack<IArgumentMatcher> stack=threadToArgumentMatcherStack.get();
+  if (stack == null) {
+    stack=new Stack<IArgumentMatcher>();
+    threadToArgumentMatcherStack.set(stack);
+  }
+  stack.push(matcher);
+}

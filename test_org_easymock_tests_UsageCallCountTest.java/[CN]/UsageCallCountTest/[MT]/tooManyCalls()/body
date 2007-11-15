@@ -1,0 +1,6 @@
+{
+  callMethodThreeTimes();
+  control.replay();
+  callMethodThreeTimes();
+  assertMethodCallFails();
+}

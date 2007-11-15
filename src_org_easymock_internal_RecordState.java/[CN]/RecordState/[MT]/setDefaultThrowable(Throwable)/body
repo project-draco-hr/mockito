@@ -1,0 +1,9 @@
+{
+  requireMethodCall("default Throwable");
+  requireValidThrowable(throwable);
+  if (lastResult != null) {
+    times(MocksControl.ONCE);
+  }
+  behavior.addStub(lastInvocation.withMatcher(MockControl.ALWAYS_MATCHER),Result.createThrowResult(throwable));
+  lastInvocationUsed=true;
+}

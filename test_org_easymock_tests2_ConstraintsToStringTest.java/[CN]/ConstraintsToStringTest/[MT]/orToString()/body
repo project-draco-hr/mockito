@@ -1,0 +1,7 @@
+{
+  List<IArgumentMatcher> matchers=new ArrayList<IArgumentMatcher>();
+  matchers.add(new Equals(1));
+  matchers.add(new Equals(2));
+  new Or(matchers).appendTo(buffer);
+  assertEquals("or(1, 2)",buffer.toString());
+}

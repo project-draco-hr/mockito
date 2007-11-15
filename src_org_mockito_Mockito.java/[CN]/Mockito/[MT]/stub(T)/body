@@ -1,0 +1,7 @@
+{
+  MockitoExpectation controlToStub=MockitoOperations.controlToBeStubbed();
+  if (controlToStub == null) {
+    throw new NotAMockMethodException();
+  }
+  return controlToStub;
+}

@@ -1,0 +1,4 @@
+{
+  reportMatcher(new LessThan<Short>(value));
+  return 0;
+}

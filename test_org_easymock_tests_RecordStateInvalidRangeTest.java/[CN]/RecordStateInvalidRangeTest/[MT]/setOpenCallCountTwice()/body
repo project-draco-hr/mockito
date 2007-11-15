@@ -1,0 +1,11 @@
+{
+  mock.simpleMethod();
+  control.setVoidCallable(MockControl.ONE_OR_MORE);
+  try {
+    control.setVoidCallable(MockControl.ONE_OR_MORE);
+    fail();
+  }
+ catch (  IllegalStateException expected) {
+    assertEquals("last method called on mock already has a non-fixed count set.",expected.getMessage());
+  }
+}

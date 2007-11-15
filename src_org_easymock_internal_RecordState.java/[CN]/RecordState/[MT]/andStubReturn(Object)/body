@@ -1,0 +1,10 @@
+{
+  requireMethodCall("stub return value");
+  value=convertNumberClassIfNeccessary(value);
+  requireAssignable(value);
+  if (lastResult != null) {
+    times(MocksControl.ONCE);
+  }
+  behavior.addStub(lastInvocation,Result.createReturnResult(value));
+  lastInvocationUsed=true;
+}

@@ -1,0 +1,9 @@
+{
+  control.replay();
+  try {
+    control.setDefaultMatcher(MockControl.ARRAY_MATCHER);
+    fail();
+  }
+ catch (  IllegalStateException expected) {
+  }
+}

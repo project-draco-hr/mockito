@@ -1,0 +1,14 @@
+{
+  LinkedList mock=Mockito.mock(LinkedList.class);
+  mock.clear();
+  mock.clear();
+  mock.clear();
+  Mockito.verify(mock,3).clear();
+  try {
+    Mockito.verify(mock,1).clear();
+    fail();
+  }
+ catch (  AssertionError error) {
+    assertThat(error.getMessage(),equalTo("Expected to be invoked 1 times but was 3"));
+  }
+}

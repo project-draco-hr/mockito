@@ -1,0 +1,6 @@
+{
+  mock=createStrictMock(IMethods.class);
+  mock.simpleMethodWithArgument("1");
+  mock.simpleMethodWithArgument("2");
+  replay(mock);
+}

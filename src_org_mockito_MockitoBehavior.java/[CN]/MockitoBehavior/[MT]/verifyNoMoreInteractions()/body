@@ -1,0 +1,7 @@
+{
+  for (  MockitoInvocation registeredInvocation : registeredInvocations) {
+    if (!registeredInvocation.isVerified()) {
+      throw new MockVerificationAssertionError();
+    }
+  }
+}

@@ -1,0 +1,4 @@
+{
+  control=MockControl.createStrictControl(IVarArgs.class);
+  mock=control.getMock();
+}

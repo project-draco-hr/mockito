@@ -1,0 +1,4 @@
+{
+  assertEquals((long)0,mock.longReturningMethod(12));
+  control.verify();
+}

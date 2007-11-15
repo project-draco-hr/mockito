@@ -1,0 +1,14 @@
+{
+  mock.withVarargsString(1,"1");
+  mock.withVarargsString(2,"1","2");
+  mock.withVarargsString(2,"1","2");
+  mock.withVarargsObject(3,"1");
+  mock.withVarargsObject(4,"1","2");
+  control.replay();
+  mock.withVarargsString(1,"1");
+  mock.withVarargsString(2,"1","2");
+  mock.withVarargsString(2,"1","2");
+  mock.withVarargsObject(3,"1");
+  mock.withVarargsObject(4,"1","2");
+  control.verify();
+}

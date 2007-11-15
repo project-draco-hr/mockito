@@ -1,0 +1,36 @@
+{
+  reset(mock);
+  mock.booleanReturningMethod(0);
+  expectLastCall().andReturn(true);
+  mock.simpleMethod();
+  mock.booleanReturningMethod(1);
+  expectLastCall().andReturn(false).times(2,3);
+  mock.simpleMethod();
+  expectLastCall().atLeastOnce();
+  replay(mock);
+  assertEquals(true,mock.booleanReturningMethod(0));
+  mock.simpleMethod();
+  boolean failed=false;
+  try {
+    verify(mock);
+  }
+ catch (  AssertionError expected) {
+    failed=true;
+    assertEquals("\n  Expectation failure on verify:" + "\n    simpleMethod(): expected: 1, actual: 1" + "\n    booleanReturningMethod(1): expected: between 2 and 3, actual: 0"+ "\n    simpleMethod(): expected: at least 1, actual: 0",expected.getMessage());
+  }
+  if (!failed) {
+    fail("too few calls accepted");
+  }
+  assertEquals(false,mock.booleanReturningMethod(1));
+  failed=false;
+  try {
+    mock.simpleMethod();
+  }
+ catch (  AssertionError expected) {
+    failed=true;
+    assertEquals("\n  Unexpected method call simpleMethod():" + "\n    booleanReturningMethod(1): expected: between 2 and 3, actual: 1",expected.getMessage());
+  }
+  if (!failed) {
+    fail("wrong call accepted");
+  }
+}

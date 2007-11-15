@@ -1,0 +1,3 @@
+{
+  testThrowCheckedException(new IOException());
+}

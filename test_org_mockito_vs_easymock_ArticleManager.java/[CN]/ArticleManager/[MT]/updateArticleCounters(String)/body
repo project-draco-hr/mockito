@@ -1,0 +1,7 @@
+{
+  int articles=calculator.countArticles(newspaper);
+  int polishArticles=calculator.countArticlesInPolish(newspaper);
+  database.updateNumberOfArticles(newspaper,articles);
+  database.updateNumberOfPolishArticles(newspaper,polishArticles);
+  database.updateNumberOfEnglishArticles(newspaper,articles - polishArticles);
+}

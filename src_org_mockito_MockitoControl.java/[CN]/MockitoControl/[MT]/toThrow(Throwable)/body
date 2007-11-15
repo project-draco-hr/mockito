@@ -1,0 +1,4 @@
+{
+  MockitoOperations.reportThrowableToBeSetOnVoidMethod(throwable);
+  return this;
+}

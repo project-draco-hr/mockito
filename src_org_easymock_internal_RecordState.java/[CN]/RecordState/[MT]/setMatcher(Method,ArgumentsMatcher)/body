@@ -1,0 +1,4 @@
+{
+  requireMethodCall("matcher");
+  behavior.setMatcher(lastInvocation.getMethod(),matcher);
+}

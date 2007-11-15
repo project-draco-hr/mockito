@@ -1,0 +1,9 @@
+{
+  try {
+    control.setDefaultReturnValue(null);
+    fail("IllegalStateException expected");
+  }
+ catch (  IllegalStateException expected) {
+    assertEquals("method call on the mock needed before setting default return value",expected.getMessage());
+  }
+}

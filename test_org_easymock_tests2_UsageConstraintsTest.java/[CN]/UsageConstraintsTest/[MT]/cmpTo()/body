@@ -1,0 +1,6 @@
+{
+  expect(mock.oneArg(cmpEq(new BigDecimal("1.5")))).andReturn("0");
+  replay(mock);
+  assertEquals("0",mock.oneArg(new BigDecimal("1.50")));
+  verify(mock);
+}

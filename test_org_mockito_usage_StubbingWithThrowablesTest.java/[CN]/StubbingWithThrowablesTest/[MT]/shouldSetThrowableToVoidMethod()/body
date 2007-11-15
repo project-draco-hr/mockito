@@ -1,0 +1,12 @@
+{
+  LinkedList mock=mock(LinkedList.class);
+  IllegalArgumentException expected=new IllegalArgumentException("thrown by mock");
+  stubVoid(mock).toThrow(expected).on().clear();
+  try {
+    mock.clear();
+    fail();
+  }
+ catch (  Exception e) {
+    assertEquals(expected,e);
+  }
+}

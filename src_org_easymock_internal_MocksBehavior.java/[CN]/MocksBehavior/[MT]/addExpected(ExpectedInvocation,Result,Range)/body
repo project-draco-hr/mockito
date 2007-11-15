@@ -1,0 +1,7 @@
+{
+  if (legacyMatcherProvider != null) {
+    expected=expected.withMatcher(legacyMatcherProvider.getMatcher(expected.getMethod()));
+  }
+  addBehaviorListIfNecessary(expected);
+  lastBehaviorList().addExpected(expected,result,count);
+}

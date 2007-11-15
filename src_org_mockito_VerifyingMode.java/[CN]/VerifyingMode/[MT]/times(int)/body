@@ -1,0 +1,6 @@
+{
+  if (exactNumberOfInvocations < 0) {
+    throw new IllegalArgumentException("Negative value is not allowed here");
+  }
+  return new VerifyingMode(exactNumberOfInvocations);
+}

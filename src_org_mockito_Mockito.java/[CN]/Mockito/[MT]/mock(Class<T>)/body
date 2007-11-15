@@ -1,0 +1,9 @@
+{
+  try {
+    ClassProxyFactory<T> proxyFactory=new ClassProxyFactory<T>();
+    return proxyFactory.createProxy(classToMock,new ObjectMethodsFilter<MockitoControl>(classToMock,new MockitoControl<T>(),null));
+  }
+ catch (  RuntimeExceptionWrapper e) {
+    throw (RuntimeException)e.getRuntimeException().fillInStackTrace();
+  }
+}

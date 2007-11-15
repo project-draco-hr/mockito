@@ -1,0 +1,18 @@
+{
+  List<IArgumentMatcher> lastMatchers=LastArguments.pullMatchers();
+  MockitoInvocation invocation=new MockitoInvocation(proxy,method,args);
+  InvocationWithMatchers invocationWithMatchers=new InvocationWithMatchers(invocation,lastMatchers);
+  if (MockitoOperations.mockVerificationScenario()) {
+    VerifyingMode verifyingMode=MockitoOperations.removeVerifyingMode();
+    behavior.verify(invocationWithMatchers,verifyingMode);
+    return ToTypeMappings.emptyReturnValueFor(method.getReturnType());
+  }
+  MockitoOperations.reportControlForStubbing(this);
+  behavior.addInvocation(invocation);
+  if (MockitoOperations.settingThrowableOnVoidMethodScenario()) {
+    Throwable throwable=MockitoOperations.removeThrowableToBeSetOnVoidMethod();
+    andThrows(throwable);
+    return null;
+  }
+  return behavior.resultFor(invocation);
+}

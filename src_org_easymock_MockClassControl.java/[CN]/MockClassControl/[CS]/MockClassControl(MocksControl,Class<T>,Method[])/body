@@ -1,0 +1,4 @@
+{
+  super(ctrl,classToMock);
+  getInterceptor(getMock()).setMockedMethods(mockedMethods);
+}

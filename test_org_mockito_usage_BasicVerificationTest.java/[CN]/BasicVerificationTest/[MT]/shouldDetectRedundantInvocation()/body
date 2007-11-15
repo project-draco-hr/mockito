@@ -1,0 +1,15 @@
+{
+  List mock=Mockito.mock(List.class);
+  mock.clear();
+  mock.add("foo");
+  mock.add("bar");
+  Mockito.verify(mock).clear();
+  Mockito.verify(mock).add("foo");
+  try {
+    Mockito.verifyNoMoreInteractions(mock);
+    fail();
+  }
+ catch (  AssertionError error) {
+    assertThat(error.getMessage(),equalTo("Mock verification failed"));
+  }
+}

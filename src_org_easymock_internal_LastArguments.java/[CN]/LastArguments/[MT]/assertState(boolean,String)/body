@@ -1,0 +1,6 @@
+{
+  if (!toAssert) {
+    threadToArgumentMatcherStack.remove();
+    throw new IllegalStateException(message);
+  }
+}

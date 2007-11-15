@@ -1,0 +1,3 @@
+{
+  throwableToBeSetOnVoidMethod.set(throwable);
+}

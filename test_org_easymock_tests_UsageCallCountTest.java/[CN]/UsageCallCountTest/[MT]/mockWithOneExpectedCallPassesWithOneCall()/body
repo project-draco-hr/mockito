@@ -1,0 +1,6 @@
+{
+  callMethodOnce();
+  control.replay();
+  callMethodOnce();
+  control.verify();
+}

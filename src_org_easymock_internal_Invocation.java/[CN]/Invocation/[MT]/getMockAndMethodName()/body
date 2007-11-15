@@ -1,0 +1,10 @@
+{
+  String mockName=mock.toString();
+  String methodName=method.getName();
+  if (toStringIsDefined(mock) && isJavaIdentifier(mockName)) {
+    return mockName + "." + methodName;
+  }
+ else {
+    return methodName;
+  }
+}

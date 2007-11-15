@@ -1,0 +1,4 @@
+{
+  reportMatcher(new GreaterOrEqual<Integer>(value));
+  return 0;
+}

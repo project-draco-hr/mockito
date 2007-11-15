@@ -1,0 +1,13 @@
+{
+  mock.oneArg("Object");
+  RuntimeException expected=new RuntimeException();
+  control.setDefaultThrowable(expected);
+  control.replay();
+  try {
+    mock.oneArg("Something else");
+    fail("runtime exception expected");
+  }
+ catch (  RuntimeException expectedException) {
+    assertSame(expected,expectedException);
+  }
+}

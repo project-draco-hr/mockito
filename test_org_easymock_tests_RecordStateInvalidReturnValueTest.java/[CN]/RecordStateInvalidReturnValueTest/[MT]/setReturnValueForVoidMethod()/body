@@ -1,0 +1,10 @@
+{
+  mock.simpleMethod();
+  try {
+    control.setReturnValue(null);
+    fail("IllegalStateException expected");
+  }
+ catch (  IllegalStateException e) {
+    assertEquals("void method cannot return a value",e.getMessage());
+  }
+}

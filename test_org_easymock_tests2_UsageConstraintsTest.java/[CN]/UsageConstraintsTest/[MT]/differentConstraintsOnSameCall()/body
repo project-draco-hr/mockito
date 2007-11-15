@@ -1,0 +1,7 @@
+{
+  mock.simpleMethodWithArgument((String)isNull());
+  mock.simpleMethodWithArgument((String)notNull());
+  replay(mock);
+  mock.simpleMethodWithArgument(null);
+  mock.simpleMethodWithArgument("2");
+}

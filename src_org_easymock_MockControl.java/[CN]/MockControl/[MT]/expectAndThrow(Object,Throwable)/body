@@ -1,0 +1,3 @@
+{
+  EasyMock.expect(ignored).andThrow(throwable).once();
+}

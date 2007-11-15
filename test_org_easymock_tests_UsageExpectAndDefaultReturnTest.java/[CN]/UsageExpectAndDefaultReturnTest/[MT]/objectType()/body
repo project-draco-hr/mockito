@@ -1,0 +1,7 @@
+{
+  control.expectAndDefaultReturn(mock.objectReturningMethod(4),"12");
+  control.replay();
+  assertEquals("12",mock.objectReturningMethod(4));
+  assertEquals("12",mock.objectReturningMethod(4));
+  control.verify();
+}

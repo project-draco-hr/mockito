@@ -1,0 +1,5 @@
+{
+  ObjectMethodsFilter filter=new ObjectMethodsFilter(Object.class,null,null);
+  Method toString=Object.class.getMethod("toString",new Class[0]);
+  assertEquals("EasyMock for " + MockedClass.class.toString(),filter.invoke(new DummyProxy(),toString,new Object[0]));
+}

@@ -1,0 +1,22 @@
+{
+  mock.oneArg("1");
+  expectLastCall().andThrow(new IllegalArgumentException());
+  control.setDefaultThrowable(new IllegalStateException());
+  control.replay();
+  try {
+    mock.oneArg("1");
+  }
+ catch (  IllegalArgumentException ignored) {
+  }
+  try {
+    mock.oneArg("1");
+  }
+ catch (  IllegalStateException ignored) {
+  }
+  try {
+    mock.oneArg("2");
+  }
+ catch (  IllegalStateException ignored) {
+  }
+  control.verify();
+}

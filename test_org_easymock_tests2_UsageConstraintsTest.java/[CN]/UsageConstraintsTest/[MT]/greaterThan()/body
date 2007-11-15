@@ -1,0 +1,11 @@
+{
+  expect(mock.oneArg(gt(7))).andReturn("1").times(3);
+  expect(mock.oneArg(leq(7))).andStubReturn("2");
+  replay(mock);
+  assertEquals("1",mock.oneArg(8));
+  assertEquals("2",mock.oneArg(7));
+  assertEquals("1",mock.oneArg(9));
+  assertEquals("2",mock.oneArg(6));
+  assertEquals("1",mock.oneArg(10));
+  verify(mock);
+}

@@ -1,0 +1,11 @@
+{
+  try {
+    state.verify();
+  }
+ catch (  RuntimeExceptionWrapper e) {
+    throw (RuntimeException)e.getRuntimeException().fillInStackTrace();
+  }
+catch (  AssertionErrorWrapper e) {
+    throw (AssertionError)e.getAssertionError().fillInStackTrace();
+  }
+}

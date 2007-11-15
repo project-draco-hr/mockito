@@ -1,0 +1,24 @@
+{
+  expect(mock.oneArg(or(eq(false),eq(true)))).andReturn("0");
+  expect(mock.oneArg(or(eq((byte)1),eq((byte)2)))).andReturn("1");
+  expect(mock.oneArg(or(eq((char)1),eq((char)2)))).andReturn("2");
+  expect(mock.oneArg(or(eq((double)1),eq((double)2)))).andReturn("3");
+  expect(mock.oneArg(or(eq((float)1),eq((float)2)))).andReturn("4");
+  expect(mock.oneArg(or(eq((int)1),eq((int)2)))).andReturn("5");
+  expect(mock.oneArg(or(eq((long)1),eq((long)2)))).andReturn("6");
+  expect(mock.oneArg(or(eq((short)1),eq((short)2)))).andReturn("7");
+  expect(mock.oneArg(or(eq("asd"),eq("jkl")))).andReturn("8");
+  expect(mock.oneArg(or(eq(this.getClass()),eq(Object.class)))).andReturn("9");
+  replay(mock);
+  assertEquals("9",mock.oneArg(Object.class));
+  assertEquals("0",mock.oneArg(true));
+  assertEquals("1",mock.oneArg((byte)2));
+  assertEquals("2",mock.oneArg((char)1));
+  assertEquals("3",mock.oneArg((double)2));
+  assertEquals("7",mock.oneArg((short)1));
+  assertEquals("8",mock.oneArg("jkl"));
+  assertEquals("4",mock.oneArg((float)1));
+  assertEquals("5",mock.oneArg((int)2));
+  assertEquals("6",mock.oneArg((long)1));
+  verify(mock);
+}

@@ -1,0 +1,5 @@
+{
+  StringBuffer result=new StringBuffer();
+  new ArrayEquals(argument).appendTo(result);
+  return result.toString();
+}

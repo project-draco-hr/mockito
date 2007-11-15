@@ -1,0 +1,3 @@
+{
+  return exactNumberOfInvocations != ANY_NUMBER_OF_TIMES;
+}

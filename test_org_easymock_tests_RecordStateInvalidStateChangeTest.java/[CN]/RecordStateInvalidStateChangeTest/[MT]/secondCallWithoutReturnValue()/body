@@ -1,0 +1,11 @@
+{
+  mock.oneArg(false);
+  try {
+    mock.oneArg(false);
+    fail("IllegalStateException expected");
+  }
+ catch (  IllegalStateException e) {
+    assertEquals("missing behavior definition for the preceeding method call oneArg(false)",e.getMessage());
+    assertTrue("stack trace must be cut",Util.getStackTrace(e).indexOf(RecordState.class.getName()) == -1);
+  }
+}

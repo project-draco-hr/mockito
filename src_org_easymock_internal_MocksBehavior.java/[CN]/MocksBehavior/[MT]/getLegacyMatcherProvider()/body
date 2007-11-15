@@ -1,0 +1,6 @@
+{
+  if (legacyMatcherProvider == null) {
+    legacyMatcherProvider=new LegacyMatcherProvider();
+  }
+  return legacyMatcherProvider;
+}

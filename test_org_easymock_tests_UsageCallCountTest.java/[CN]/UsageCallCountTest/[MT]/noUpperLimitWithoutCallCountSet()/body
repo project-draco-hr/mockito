@@ -1,0 +1,12 @@
+{
+  mock.method();
+  control.setVoidCallable(MockControl.ONE_OR_MORE);
+  control.replay();
+  assertVerifyFails();
+  mock.method();
+  control.verify();
+  mock.method();
+  control.verify();
+  mock.method();
+  control.verify();
+}

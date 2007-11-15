@@ -1,0 +1,12 @@
+{
+  mock.oneArg(new ToStringThrowsException());
+  control.setReturnValue("");
+  control.replay();
+  try {
+    control.verify();
+    fail();
+  }
+ catch (  NullPointerException expected) {
+    assertTrue("stack trace must not be cut",Util.getStackTrace(expected).indexOf(ToStringThrowsException.class.getName()) > 0);
+  }
+}

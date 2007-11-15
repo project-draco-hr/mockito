@@ -1,0 +1,12 @@
+{
+  mock.simpleMethodWithArgument("3");
+  mock.simpleMethodWithArgument("3");
+  control.replay();
+  try {
+    mock.simpleMethodWithArgument("5");
+    fail();
+  }
+ catch (  AssertionError expected) {
+    assertEquals("\n  Unexpected method call simpleMethodWithArgument(\"5\"):" + "\n    simpleMethodWithArgument(\"3\"): expected: 2, actual: 0",expected.getMessage());
+  }
+}

@@ -1,0 +1,14 @@
+{
+  if (throwable instanceof RuntimeException) {
+    return true;
+  }
+  if (throwable instanceof Error) {
+    return true;
+  }
+  Class<?>[] exceptions=lastInvocation.getMethod().getExceptionTypes();
+  Class<?> throwableClass=throwable.getClass();
+  for (  Class<?> exception : exceptions) {
+    if (exception.isAssignableFrom(throwableClass))     return true;
+  }
+  return false;
+}

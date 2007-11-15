@@ -1,0 +1,4 @@
+{
+  this.expectedInvocation=expectedInvocation;
+  this.results=results;
+}

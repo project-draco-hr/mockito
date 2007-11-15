@@ -1,0 +1,8 @@
+{
+  try {
+    mock.oneArg(a);
+    fail();
+  }
+ catch (  AssertionError e) {
+  }
+}
