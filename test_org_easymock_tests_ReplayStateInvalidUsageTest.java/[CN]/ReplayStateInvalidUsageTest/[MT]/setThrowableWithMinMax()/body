@@ -1,3 +1,0 @@
-{
-  control.setThrowable(exception,1,2);
-}

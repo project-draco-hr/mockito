@@ -1,8 +1,0 @@
-{
-  try {
-    mock.method();
-    fail("Expected AssertionError");
-  }
- catch (  AssertionError expected) {
-  }
-}

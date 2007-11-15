@@ -1,9 +1,0 @@
-{
-  try {
-    control.setVoidCallable();
-    fail("IllegalStateException expected");
-  }
- catch (  Exception expected) {
-    assertEquals("method call on the mock needed before setting void callable",expected.getMessage());
-  }
-}

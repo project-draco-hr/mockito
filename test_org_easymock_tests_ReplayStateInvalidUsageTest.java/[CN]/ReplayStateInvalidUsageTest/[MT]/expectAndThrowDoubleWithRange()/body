@@ -1,3 +1,0 @@
-{
-  control.expectAndThrow(0.0d,exception,MockControl.ONE);
-}

@@ -1,3 +1,0 @@
-{
-  control.expectAndReturn(false,false,MockControl.ONE);
-}

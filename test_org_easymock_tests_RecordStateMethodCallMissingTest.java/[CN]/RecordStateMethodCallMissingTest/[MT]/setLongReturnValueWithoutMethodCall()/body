@@ -1,9 +1,0 @@
-{
-  try {
-    control.setReturnValue(0);
-    fail("IllegalStateException expected");
-  }
- catch (  IllegalStateException expected) {
-    assertEquals("method call on the mock needed before setting return value",expected.getMessage());
-  }
-}

@@ -1,9 +1,0 @@
-{
-  try {
-    control.verify();
-    fail("IllegalStateException expected");
-  }
- catch (  IllegalStateException e) {
-    assertEquals("calling verify is not allowed in record state",e.getMessage());
-  }
-}

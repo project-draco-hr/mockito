@@ -1,3 +1,0 @@
-{
-  control.expectAndReturn(0.0f,0.0f,1);
-}

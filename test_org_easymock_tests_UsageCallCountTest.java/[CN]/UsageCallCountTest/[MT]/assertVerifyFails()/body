@@ -1,8 +1,0 @@
-{
-  try {
-    control.verify();
-    fail("Expected AssertionError");
-  }
- catch (  AssertionError expected) {
-  }
-}

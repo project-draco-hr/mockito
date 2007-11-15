@@ -1,6 +1,0 @@
-{
-  callMethodOnce();
-  control.replay();
-  callMethodOnce();
-  assertMethodCallFails();
-}

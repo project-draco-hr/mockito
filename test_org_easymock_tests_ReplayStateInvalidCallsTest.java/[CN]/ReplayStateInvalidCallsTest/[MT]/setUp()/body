@@ -1,4 +1,0 @@
-{
-  exception=new Exception();
-  control=new ReplayState(new MocksBehavior(false));
-}

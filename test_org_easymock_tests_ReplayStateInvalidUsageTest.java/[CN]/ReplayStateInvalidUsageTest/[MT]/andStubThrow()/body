@@ -1,3 +1,0 @@
-{
-  mocksControl.andStubThrow(new RuntimeException());
-}

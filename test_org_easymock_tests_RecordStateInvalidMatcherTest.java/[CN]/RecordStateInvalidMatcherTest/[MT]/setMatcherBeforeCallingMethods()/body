@@ -1,9 +1,0 @@
-{
-  try {
-    control.setMatcher(MockControl.ARRAY_MATCHER);
-    fail();
-  }
- catch (  IllegalStateException expected) {
-    assertEquals("method call on the mock needed before setting matcher",expected.getMessage());
-  }
-}

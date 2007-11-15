@@ -1,6 +1,0 @@
-{
-  callMethodThreeTimes();
-  control.replay();
-  callMethodTwice();
-  assertVerifyFails();
-}

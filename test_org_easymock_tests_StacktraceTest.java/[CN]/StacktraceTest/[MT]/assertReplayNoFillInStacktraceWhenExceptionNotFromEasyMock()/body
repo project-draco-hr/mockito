@@ -1,9 +1,0 @@
-{
-  mock.oneArg(new ToStringThrowsException());
-  try {
-    control.replay();
-  }
- catch (  NullPointerException expected) {
-    assertTrue("stack trace must not be cut",Util.getStackTrace(expected).indexOf(ToStringThrowsException.class.getName()) > 0);
-  }
-}

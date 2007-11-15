@@ -1,3 +1,0 @@
-{
-  mocksControl.andStubReturn("7");
-}
