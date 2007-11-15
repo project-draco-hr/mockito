@@ -1,6 +1,0 @@
-{
-  int hashCodeBeforeActivation=mock.hashCode();
-  control.replay();
-  int hashCodeAfterActivation=mock.hashCode();
-  assertEquals(hashCodeBeforeActivation,hashCodeAfterActivation);
-}

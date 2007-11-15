@@ -1,4 +1,0 @@
-{
-  control=MockControl.createControl(EmptyInterface.class);
-  mock=control.getMock();
-}

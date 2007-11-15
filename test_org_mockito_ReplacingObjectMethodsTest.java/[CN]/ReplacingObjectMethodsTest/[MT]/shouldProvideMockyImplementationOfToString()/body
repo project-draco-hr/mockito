@@ -1,0 +1,4 @@
+{
+  assertEquals("Mock for DummyClass",Mockito.mock(DummyClass.class).toString());
+  assertEquals("Mock for DummyInterface",Mockito.mock(DummyInterface.class).toString());
+}

@@ -1,4 +1,0 @@
-{
-  control.replay();
-  assertEquals("EasyMock for " + EmptyInterface.class.toString(),mock.toString());
-}

@@ -1,5 +1,0 @@
-{
-  control.replay();
-  assertEquals(mock,mock);
-  assertTrue(!mock.equals(null));
-}
