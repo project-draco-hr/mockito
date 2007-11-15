@@ -1,4 +1,0 @@
-{
-  mock=createNiceMock(IMethods.class);
-  replay(mock);
-}

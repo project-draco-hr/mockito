@@ -1,5 +1,0 @@
-{
-  control=MockControl.createNiceControl(IMethods.class);
-  mock=control.getMock();
-  control.replay();
-}

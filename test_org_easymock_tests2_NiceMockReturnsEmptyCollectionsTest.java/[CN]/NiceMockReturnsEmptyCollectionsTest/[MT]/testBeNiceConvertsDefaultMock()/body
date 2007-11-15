@@ -1,9 +1,0 @@
-{
-  CollectionServer mock=EasyMock.createNiceMock(CollectionServer.class);
-  EasyMock.replay(mock);
-  assertTrue(mock.list().isEmpty());
-  assertTrue(mock.linkedList().isEmpty());
-  assertTrue(mock.map().isEmpty());
-  assertTrue(mock.hashSet().isEmpty());
-  EasyMock.verify(mock);
-}

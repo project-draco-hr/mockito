@@ -1,4 +1,0 @@
-{
-  assertEquals(0.0d,mock.doubleReturningMethod(12),0.0d);
-  verify(mock);
-}

@@ -1,4 +1,0 @@
-{
-  assertEquals(0.0f,mock.floatReturningMethod(12),0.0f);
-  control.verify();
-}

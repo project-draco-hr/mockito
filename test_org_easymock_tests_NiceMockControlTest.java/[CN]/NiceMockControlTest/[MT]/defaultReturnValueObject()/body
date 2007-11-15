@@ -1,4 +1,0 @@
-{
-  assertEquals(null,mock.objectReturningMethod(12));
-  control.verify();
-}

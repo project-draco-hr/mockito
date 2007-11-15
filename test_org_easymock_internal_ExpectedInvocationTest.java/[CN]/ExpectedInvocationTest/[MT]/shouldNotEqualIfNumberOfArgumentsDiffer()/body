@@ -1,5 +1,6 @@
 {
   Object mock=new Object();
+  Method dummyMethod=Object.class.getMethod("equals",new Class[]{Object.class});
   ExpectedInvocation invocationWithOneArg=new ExpectedInvocation(new Invocation(mock,dummyMethod,new Object[]{""}),null);
   ExpectedInvocation invocationWithTwoArgs=new ExpectedInvocation(new Invocation(mock,dummyMethod,new Object[]{"",""}),null);
   assertFalse(invocationWithOneArg.equals(null));
