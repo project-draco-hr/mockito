@@ -1,3 +1,0 @@
-{
-  assertFalse(MATCHER.matches(new Object[2],new Object[3]));
-}

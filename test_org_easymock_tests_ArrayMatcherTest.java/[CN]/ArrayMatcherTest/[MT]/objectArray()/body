@@ -1,4 +1,0 @@
-{
-  assertTrue(equals(new String[]{"1","2"},new String[]{"1","2"}));
-  assertFalse(equals(new String[]{"1","2"},new String[]{"2","2"}));
-}

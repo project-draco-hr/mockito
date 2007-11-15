@@ -1,4 +1,0 @@
-{
-  assertTrue(equals(new double[]{6.0},new double[]{6.0}));
-  assertFalse(equals(new double[]{6.0},new double[]{7.0}));
-}

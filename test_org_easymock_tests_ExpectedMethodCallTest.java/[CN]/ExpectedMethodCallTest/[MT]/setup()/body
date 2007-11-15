@@ -1,5 +1,0 @@
-{
-  Object[] arguments1=new Object[]{""};
-  Method m=Object.class.getMethod("equals",new Class[]{Object.class});
-  call=new ExpectedInvocation(new Invocation(null,m,arguments1),null);
-}

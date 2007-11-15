@@ -1,4 +1,0 @@
-{
-  assertTrue(equals(new boolean[]{true},new boolean[]{true}));
-  assertFalse(equals(new boolean[]{true},new boolean[]{false}));
-}

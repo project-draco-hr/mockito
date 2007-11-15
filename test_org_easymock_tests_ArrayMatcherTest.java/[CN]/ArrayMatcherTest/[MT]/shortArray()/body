@@ -1,4 +1,0 @@
-{
-  assertTrue(equals(new short[]{6},new short[]{6}));
-  assertFalse(equals(new short[]{6},new short[]{7}));
-}

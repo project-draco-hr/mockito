@@ -1,4 +1,0 @@
-{
-  control=MockControl.createStrictControl(IMethods.class);
-  mock=control.getMock();
-}

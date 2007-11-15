@@ -1,5 +1,0 @@
-{
-  Object[] expected=new Object[]{o1};
-  Object[] actual=new Object[]{o2};
-  return MATCHER.matches(expected,actual);
-}

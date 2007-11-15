@@ -1,6 +1,0 @@
-{
-  AbstractMatcher matcher=new AbstractMatcher(){
-  }
-;
-  assertEquals("",matcher.toString(null));
-}

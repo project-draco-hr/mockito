@@ -1,4 +1,0 @@
-{
-  assertTrue(equals(new byte[]{6},new byte[]{6}));
-  assertFalse(equals(new byte[]{6},new byte[]{7}));
-}

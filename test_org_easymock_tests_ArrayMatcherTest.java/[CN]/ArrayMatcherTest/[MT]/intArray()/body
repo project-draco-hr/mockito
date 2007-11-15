@@ -1,4 +1,0 @@
-{
-  assertTrue(equals(new int[]{6},new int[]{6}));
-  assertFalse(equals(new int[]{6},new int[]{7}));
-}

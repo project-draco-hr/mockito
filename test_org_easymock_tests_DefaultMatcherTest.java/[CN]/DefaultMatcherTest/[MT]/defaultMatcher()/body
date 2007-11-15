@@ -1,9 +1,0 @@
-{
-  control.setDefaultMatcher(MockControl.ARRAY_MATCHER);
-  mock.methodA(new int[]{1,1});
-  mock.methodB(new int[]{2,2});
-  control.replay();
-  mock.methodA(new int[]{1,1});
-  mock.methodB(new int[]{2,2});
-  control.verify();
-}

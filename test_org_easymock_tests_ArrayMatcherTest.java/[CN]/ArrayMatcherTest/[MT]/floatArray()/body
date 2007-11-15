@@ -1,4 +1,0 @@
-{
-  assertTrue(equals(new float[]{6.0F},new float[]{6.0F}));
-  assertFalse(equals(new float[]{6.0F},new float[]{7.0F}));
-}

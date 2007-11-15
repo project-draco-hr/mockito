@@ -1,4 +1,0 @@
-{
-  assertTrue(equals(new char[]{'x'},new char[]{'x'}));
-  assertFalse(equals(new char[]{'x'},new char[]{'y'}));
-}
