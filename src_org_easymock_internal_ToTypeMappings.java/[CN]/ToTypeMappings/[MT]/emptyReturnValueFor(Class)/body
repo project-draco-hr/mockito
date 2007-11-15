@@ -1,6 +1,3 @@
 {
-  if (type.isPrimitive()) {
-    return emptyReturnValueToPrimitiveType.get(type);
-  }
   return emptyReturnValueToType.get(type);
 }

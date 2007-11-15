@@ -1,8 +1,0 @@
-{
-  Method toPreventNullPointerExceptionm=Object.class.getMethod("toString",new Class[]{});
-  Object mock=new Object();
-  ExpectedInvocation matchableArguments=new ExpectedInvocation(new Invocation(mock,toPreventNullPointerExceptionm,arguments),null);
-  ExpectedInvocation nonEqualMatchableArguments=new ExpectedInvocation(new Invocation(mock,toPreventNullPointerExceptionm,arguments2),null);
-  assertFalse(matchableArguments.equals(null));
-  assertFalse(matchableArguments.equals(nonEqualMatchableArguments));
-}

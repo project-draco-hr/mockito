@@ -1,4 +1,0 @@
-{
-  assertEquals((byte)0,mock.byteReturningMethod(12));
-  control.verify();
-}

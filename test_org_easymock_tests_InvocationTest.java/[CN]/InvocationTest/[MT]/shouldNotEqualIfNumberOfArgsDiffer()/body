@@ -1,0 +1,7 @@
+{
+  Object mock=new Object();
+  ExpectedInvocation invocationWithOneArg=new ExpectedInvocation(new Invocation(mock,dummyMethod,new Object[]{""}),null);
+  ExpectedInvocation invocationWithTwoArgs=new ExpectedInvocation(new Invocation(mock,dummyMethod,new Object[]{"",""}),null);
+  assertFalse(invocationWithOneArg.equals(null));
+  assertFalse(invocationWithOneArg.equals(invocationWithTwoArgs));
+}
