@@ -1,4 +1,4 @@
-CompareTo<String> cmpTo
+CompareTo<String> compareTo
 boolean lower
 boolean higher
 boolean equals

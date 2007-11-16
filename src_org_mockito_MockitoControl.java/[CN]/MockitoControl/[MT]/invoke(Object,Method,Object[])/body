@@ -8,7 +8,7 @@
     return ToTypeMappings.emptyReturnValueFor(method.getReturnType());
   }
   MockitoOperations.reportLastControlForStubbing(this);
-  behavior.addInvocation(invocation);
+  behavior.addInvocation(invocationWithMatchers);
   if (MockitoOperations.settingThrowableOnVoidMethodScenario()) {
     Throwable throwable=MockitoOperations.removeThrowableToBeSetOnVoidMethod();
     andThrows(throwable);

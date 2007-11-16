@@ -1,8 +1,8 @@
 {
-  if (results.get(invocation) == null) {
-    return ToTypeMappings.emptyReturnValueFor(invocation.getMethod().getReturnType());
+  for (  InvocationWithMatchers invocationWithMatchers : results.keySet()) {
+    if (invocationWithMatchers.matches(invocation)) {
+      return results.get(invocationWithMatchers).answer();
+    }
   }
- else {
-    return results.get(invocation).answer();
-  }
+  return ToTypeMappings.emptyReturnValueFor(invocation.getMethod().getReturnType());
 }

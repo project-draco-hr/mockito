@@ -1,9 +1,10 @@
 {
   int verifiedInvocations=0;
-  for (  MockitoInvocation registeredInvocation : registeredInvocations) {
-    if (expectedInvocation.matches(registeredInvocation)) {
+  for (  InvocationWithMatchers registeredInvocation : registeredInvocations) {
+    MockitoInvocation invocation=registeredInvocation.getInvocation();
+    if (expectedInvocation.matches(invocation)) {
       verifiedInvocations+=1;
-      registeredInvocation.markVerified();
+      invocation.markVerified();
     }
  else {
       verifiedInvocations+=0;

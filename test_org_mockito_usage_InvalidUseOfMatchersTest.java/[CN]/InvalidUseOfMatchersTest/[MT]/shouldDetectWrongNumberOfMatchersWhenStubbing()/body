@@ -1,0 +1,9 @@
+{
+  Mockito.stub(mock.threeArgumentMethod(1,"2","3")).andReturn(null);
+  try {
+    Mockito.stub(mock.threeArgumentMethod(1,eq("2"),"3")).andReturn(null);
+    fail();
+  }
+ catch (  InvalidUseOfMatchersException e) {
+  }
+}

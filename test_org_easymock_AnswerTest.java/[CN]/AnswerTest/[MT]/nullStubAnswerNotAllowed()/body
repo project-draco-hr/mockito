@@ -1,9 +1,0 @@
-{
-  try {
-    expect(mock.threeArgumentMethod(1,"2","3")).andStubAnswer(null);
-    fail();
-  }
- catch (  NullPointerException expected) {
-    assertEquals("answer object must not be null",expected.getMessage());
-  }
-}

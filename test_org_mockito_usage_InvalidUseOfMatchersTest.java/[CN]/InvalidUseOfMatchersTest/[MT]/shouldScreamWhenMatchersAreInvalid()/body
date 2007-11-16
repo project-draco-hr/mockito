@@ -1,0 +1,24 @@
+{
+  mock.simpleMethodWithArgument(not(eq("asd")));
+  try {
+    mock.simpleMethodWithArgument(not("jkl"));
+    fail();
+  }
+ catch (  IllegalStateException e) {
+    assertEquals("no matchers found.",e.getMessage());
+  }
+  try {
+    mock.simpleMethodWithArgument(or(eq("jkl"),"asd"));
+    fail();
+  }
+ catch (  IllegalStateException e) {
+    assertEquals("2 matchers expected, 1 recorded.",e.getMessage());
+  }
+  try {
+    mock.threeArgumentMethod(1,"asd",eq("asd"));
+    fail();
+  }
+ catch (  IllegalStateException e) {
+    assertEquals("3 matchers expected, 1 recorded.",e.getMessage());
+  }
+}

@@ -1,0 +1,7 @@
+{
+  stub(mock.oneArg(contains("ell"))).andReturn("1");
+  stub(mock.oneArg(contains("ld"))).andReturn("2");
+  assertEquals("1",mock.oneArg("hello"));
+  assertEquals("2",mock.oneArg("world"));
+  assertEquals(null,mock.oneArg("xlx"));
+}

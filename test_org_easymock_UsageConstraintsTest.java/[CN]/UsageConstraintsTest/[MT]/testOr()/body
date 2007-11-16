@@ -1,9 +1,0 @@
-{
-  expect(mock.oneArg(or(eq(7),eq(9)))).andReturn("1").atLeastOnce();
-  expect(mock.oneArg(anyInt())).andStubReturn("2");
-  replay(mock);
-  assertEquals("1",mock.oneArg(7));
-  assertEquals("1",mock.oneArg(9));
-  assertEquals("2",mock.oneArg(10));
-  verify(mock);
-}

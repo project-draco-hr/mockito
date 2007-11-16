@@ -1,8 +1,0 @@
-{
-  expect(mock.oneArg(startsWith("ab"))).andReturn("1").atLeastOnce();
-  expect(mock.oneArg(startsWith("bc"))).andStubReturn("2");
-  replay(mock);
-  assertEquals("1",mock.oneArg("abcx"));
-  assertEquals("2",mock.oneArg("bcxe"));
-  verify(mock);
-}

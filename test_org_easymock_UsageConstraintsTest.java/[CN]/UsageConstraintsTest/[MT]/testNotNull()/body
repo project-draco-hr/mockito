@@ -1,8 +1,0 @@
-{
-  expect(mock.threeArgumentMethod(eq(1),notNull(),eq(""))).andReturn("1").atLeastOnce();
-  expect(mock.threeArgumentMethod(eq(1),not(notNull()),eq(""))).andStubReturn("2");
-  replay(mock);
-  assertEquals("1",mock.threeArgumentMethod(1,new Object(),""));
-  assertEquals("2",mock.threeArgumentMethod(1,null,""));
-  verify(mock);
-}

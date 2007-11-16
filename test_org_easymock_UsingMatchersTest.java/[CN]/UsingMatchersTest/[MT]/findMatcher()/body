@@ -1,0 +1,5 @@
+{
+  stub(mock.oneArg(find("([a-z]+)\\d"))).andReturn("1");
+  assertEquals("1",mock.oneArg("ab12"));
+  assertEquals(null,mock.oneArg("12345"));
+}
