@@ -1,4 +1,0 @@
-{
-  reportMatcher(new Find(regex));
-  return null;
-}

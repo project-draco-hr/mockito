@@ -2,7 +2,7 @@
   try {
     state.assertRecordState();
     ClassProxyFactory<T> proxyFactory=new ClassProxyFactory<T>();
-    return proxyFactory.createProxy(toMock,new ObjectMethodsFilter(toMock,new MockInvocationHandler(this),null));
+    return proxyFactory.createProxy(toMock,new MockitoObjectMethodsFilter(toMock,new MockInvocationHandler(this),null));
   }
  catch (  RuntimeExceptionWrapper e) {
     throw (RuntimeException)e.getRuntimeException().fillInStackTrace();

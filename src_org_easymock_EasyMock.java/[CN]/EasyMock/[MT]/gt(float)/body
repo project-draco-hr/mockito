@@ -1,4 +1,0 @@
-{
-  reportMatcher(new GreaterThan<Float>(value));
-  return 0;
-}

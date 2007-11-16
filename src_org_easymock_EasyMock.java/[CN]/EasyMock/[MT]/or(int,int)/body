@@ -1,4 +1,0 @@
-{
-  LastArguments.reportOr(2);
-  return first;
-}

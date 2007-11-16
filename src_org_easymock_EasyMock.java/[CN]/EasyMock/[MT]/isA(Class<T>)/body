@@ -1,4 +1,4 @@
 {
-  reportMatcher(new InstanceOf(clazz));
+  LastArguments.reportMatcher(new InstanceOf(clazz));
   return null;
 }

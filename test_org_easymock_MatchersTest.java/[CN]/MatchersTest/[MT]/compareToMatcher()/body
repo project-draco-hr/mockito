@@ -1,0 +1,5 @@
+{
+  stub(mock.oneArg(Matchers.cmpEq(new BigDecimal("1.5")))).andReturn("0");
+  assertEquals("0",mock.oneArg(new BigDecimal("1.50")));
+  assertEquals(null,mock.oneArg(new BigDecimal("1.51")));
+}

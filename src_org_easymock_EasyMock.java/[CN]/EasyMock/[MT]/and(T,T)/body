@@ -1,4 +1,0 @@
-{
-  LastArguments.reportAnd(2);
-  return null;
-}

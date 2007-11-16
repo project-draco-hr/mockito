@@ -1,8 +1,8 @@
 {
-  ObjectMethodsFilter<MockitoControl<T>> handler;
+  MockitoObjectMethodsFilter<MockitoControl<T>> handler;
   try {
     if (Enhancer.isEnhanced(mock.getClass())) {
-      handler=(ObjectMethodsFilter)getInterceptor(mock).getHandler();
+      handler=(MockitoObjectMethodsFilter)getInterceptor(mock).getHandler();
     }
  else {
       throw new NotAMockException(mock);

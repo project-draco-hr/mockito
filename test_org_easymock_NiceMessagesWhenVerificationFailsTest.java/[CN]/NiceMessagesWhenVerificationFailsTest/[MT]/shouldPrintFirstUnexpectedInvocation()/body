@@ -1,0 +1,12 @@
+{
+  mock.oneArg(true);
+  mock.threeArgumentMethod(1,"2","3");
+  try {
+    verifyNoMoreInteractions(mock);
+  }
+ catch (  MockVerificationAssertionError expected) {
+    String actualMessage=expected.getMessage();
+    String expectedMessage="\n  No interactions expected but found: IMethods.oneArg(true)";
+    assertEquals(expectedMessage,actualMessage);
+  }
+}

@@ -1,4 +1,0 @@
-{
-  reportMatcher(new ArrayEquals(value));
-  return null;
-}

@@ -1,7 +1,0 @@
-{
-  stub(mock.oneArg(endsWith("ab"))).andReturn("1");
-  stub(mock.oneArg(endsWith("bc"))).andReturn("2");
-  assertEquals("1",mock.oneArg("xab"));
-  assertEquals("2",mock.oneArg("xbc"));
-  assertEquals(null,mock.oneArg("ac"));
-}

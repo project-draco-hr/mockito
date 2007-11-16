@@ -1,5 +1,0 @@
-{
-  List mock=EasyMock.createMock(List.class);
-  EasyMock.replay(mock);
-  EasyMock.verify(mock);
-}

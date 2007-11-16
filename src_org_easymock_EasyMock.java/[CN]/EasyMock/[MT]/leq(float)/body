@@ -1,4 +1,0 @@
-{
-  reportMatcher(new LessOrEqual<Float>(value));
-  return 0;
-}

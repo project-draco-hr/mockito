@@ -1,0 +1,10 @@
+{
+  try {
+    verify(mock).simpleMethod();
+  }
+ catch (  MockVerificationAssertionError expected) {
+    String actualMessage=expected.getMessage();
+    String expectedMessage="\n  Method not invoked: IMethods.simpleMethod()";
+    assertEquals(expectedMessage,actualMessage);
+  }
+}

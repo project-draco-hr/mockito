@@ -1,5 +1,0 @@
-{
-  for (  Object mock : mocks) {
-    ClassExtensionHelper.getControl(mock).verify();
-  }
-}

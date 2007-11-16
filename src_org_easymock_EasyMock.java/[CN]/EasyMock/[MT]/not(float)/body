@@ -1,4 +1,0 @@
-{
-  LastArguments.reportNot();
-  return first;
-}

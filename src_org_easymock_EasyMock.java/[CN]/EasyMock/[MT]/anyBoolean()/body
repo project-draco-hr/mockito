@@ -1,4 +1,4 @@
 {
-  reportMatcher(Any.ANY);
+  LastArguments.reportMatcher(Any.ANY);
   return false;
 }

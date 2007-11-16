@@ -1,4 +1,4 @@
 {
-  reportMatcher(new Matches(regex));
+  LastArguments.reportMatcher(new Matches(regex));
   return null;
 }

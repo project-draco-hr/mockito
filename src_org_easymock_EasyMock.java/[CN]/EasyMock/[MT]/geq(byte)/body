@@ -1,4 +1,0 @@
-{
-  reportMatcher(new GreaterOrEqual<Byte>(value));
-  return 0;
-}

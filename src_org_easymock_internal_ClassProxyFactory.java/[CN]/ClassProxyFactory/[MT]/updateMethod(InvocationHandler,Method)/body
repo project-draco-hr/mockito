@@ -1,4 +1,4 @@
 {
-  Field methodField=retrieveField(ObjectMethodsFilter.class,correctMethod.getName() + "Method");
+  Field methodField=retrieveField(MockitoObjectMethodsFilter.class,correctMethod.getName() + "Method");
   updateField(objectMethodsFilter,correctMethod,methodField);
 }

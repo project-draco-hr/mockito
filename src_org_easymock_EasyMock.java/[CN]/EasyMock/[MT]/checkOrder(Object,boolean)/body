@@ -1,3 +1,0 @@
-{
-  ClassExtensionHelper.getControl(mock).checkOrder(state);
-}

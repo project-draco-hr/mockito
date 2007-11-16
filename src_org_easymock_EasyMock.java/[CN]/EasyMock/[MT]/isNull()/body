@@ -1,4 +1,4 @@
 {
-  reportMatcher(Null.NULL);
+  LastArguments.reportMatcher(Null.NULL);
   return null;
 }

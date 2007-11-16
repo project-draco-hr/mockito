@@ -1,0 +1,6 @@
+{
+  stub(mock.threeArgumentMethod(eq(1),isNull(),eq(""))).andReturn("1");
+  stub(mock.threeArgumentMethod(eq(1),Matchers.not(isNull()),eq(""))).andReturn("2");
+  assertEquals("1",mock.threeArgumentMethod(1,null,""));
+  assertEquals("2",mock.threeArgumentMethod(1,new Object(),""));
+}

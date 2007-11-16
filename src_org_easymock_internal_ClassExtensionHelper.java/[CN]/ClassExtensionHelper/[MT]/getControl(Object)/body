@@ -1,11 +1,11 @@
 {
-  ObjectMethodsFilter<MockInvocationHandler> handler;
+  MockitoObjectMethodsFilter<MockInvocationHandler> handler;
   try {
     if (Enhancer.isEnhanced(mock.getClass())) {
-      handler=(ObjectMethodsFilter)getInterceptor(mock).getHandler();
+      handler=(MockitoObjectMethodsFilter)getInterceptor(mock).getHandler();
     }
  else     if (Proxy.isProxyClass(mock.getClass())) {
-      handler=(ObjectMethodsFilter)Proxy.getInvocationHandler(mock);
+      handler=(MockitoObjectMethodsFilter)Proxy.getInvocationHandler(mock);
     }
  else {
       throw new RuntimeExceptionWrapper(new IllegalArgumentException("Not a mock: " + mock.getClass().getName()));

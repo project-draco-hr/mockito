@@ -1,14 +1,14 @@
 {
-  mock.simpleMethodWithArgument(not(eq("asd")));
+  mock.simpleMethodWithArgument(Matchers.not(eq("asd")));
   try {
-    mock.simpleMethodWithArgument(not("jkl"));
+    mock.simpleMethodWithArgument(Matchers.not("jkl"));
     fail();
   }
  catch (  IllegalStateException e) {
     assertEquals("no matchers found.",e.getMessage());
   }
   try {
-    mock.simpleMethodWithArgument(or(eq("jkl"),"asd"));
+    mock.simpleMethodWithArgument(Matchers.or(eq("jkl"),"asd"));
     fail();
   }
  catch (  IllegalStateException e) {

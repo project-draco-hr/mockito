@@ -1,4 +1,0 @@
-{
-  reportMatcher(new GreaterOrEqual<Short>(value));
-  return 0;
-}

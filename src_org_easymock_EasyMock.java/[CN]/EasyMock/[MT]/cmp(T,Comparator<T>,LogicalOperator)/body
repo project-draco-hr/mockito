@@ -1,4 +1,0 @@
-{
-  reportMatcher(new Compare<T>(value,comparator,operator));
-  return null;
-}

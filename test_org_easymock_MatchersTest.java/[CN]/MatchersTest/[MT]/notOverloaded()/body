@@ -1,0 +1,24 @@
+{
+  stub(mock.oneArg(Matchers.not(eq(false)))).andReturn("0");
+  stub(mock.oneArg(Matchers.not(eq((byte)1)))).andReturn("1");
+  stub(mock.oneArg(Matchers.not(eq('a')))).andReturn("2");
+  stub(mock.oneArg(Matchers.not(eq((double)1)))).andReturn("3");
+  stub(mock.oneArg(Matchers.not(eq((float)1)))).andReturn("4");
+  stub(mock.oneArg(Matchers.not(eq((int)1)))).andReturn("5");
+  stub(mock.oneArg(Matchers.not(eq((long)1)))).andReturn("6");
+  stub(mock.oneArg(Matchers.not(eq((short)1)))).andReturn("7");
+  stub(mock.oneArg(Matchers.not(contains("a")))).andReturn("8");
+  stub(mock.oneArg(Matchers.not(isA(Class.class)))).andReturn("9");
+  assertEquals("0",mock.oneArg(true));
+  assertEquals(null,mock.oneArg(false));
+  assertEquals("1",mock.oneArg((byte)2));
+  assertEquals("2",mock.oneArg('b'));
+  assertEquals("3",mock.oneArg((double)2));
+  assertEquals("4",mock.oneArg((float)2));
+  assertEquals("5",mock.oneArg((int)2));
+  assertEquals("6",mock.oneArg((long)2));
+  assertEquals("7",mock.oneArg((short)2));
+  assertEquals("8",mock.oneArg("bcde"));
+  assertEquals("9",mock.oneArg(new Object()));
+  assertEquals(null,mock.oneArg(Class.class));
+}
