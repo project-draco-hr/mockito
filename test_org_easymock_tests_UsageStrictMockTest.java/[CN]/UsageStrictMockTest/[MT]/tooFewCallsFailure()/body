@@ -2,7 +2,7 @@
   mock.simpleMethodWithArgument("1");
   boolean failed=false;
   try {
-    control.verify();
+    verify(mock);
   }
  catch (  AssertionError expected) {
     failed=true;

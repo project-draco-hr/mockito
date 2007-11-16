@@ -1,8 +1,0 @@
-{
-  mock.withVarargsChar(1,'a');
-  mock.withVarargsChar(1,'a','b');
-  control.replay();
-  mock.withVarargsChar(1,'a');
-  mock.withVarargsChar(1,'a','b');
-  control.verify();
-}

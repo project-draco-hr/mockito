@@ -1,7 +1,0 @@
-{
-  control.expectAndDefaultReturn(mock.booleanReturningMethod(4),true);
-  control.replay();
-  assertEquals(true,mock.booleanReturningMethod(4));
-  assertEquals(true,mock.booleanReturningMethod(4));
-  control.verify();
-}

@@ -1,4 +1,0 @@
-{
-  control=MockControl.createStrictControl(Iterator.class);
-  mock=control.getMock();
-}

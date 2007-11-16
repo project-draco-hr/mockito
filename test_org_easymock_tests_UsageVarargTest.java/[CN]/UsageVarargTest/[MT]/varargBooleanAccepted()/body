@@ -1,8 +1,0 @@
-{
-  mock.withVarargsBoolean(1,true);
-  mock.withVarargsBoolean(2,true,false);
-  control.replay();
-  mock.withVarargsBoolean(1,true);
-  mock.withVarargsBoolean(2,true,false);
-  control.verify();
-}

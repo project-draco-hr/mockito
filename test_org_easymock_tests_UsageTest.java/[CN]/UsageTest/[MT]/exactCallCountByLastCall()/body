@@ -1,8 +1,6 @@
 {
-  mock.oneArg(false);
-  control.setReturnValue("Test");
-  control.setReturnValue("Test2");
-  control.replay();
+  expect(mock.oneArg(false)).andReturn("Test").andReturn("Test2");
+  replay(mock);
   assertEquals("Test",mock.oneArg(false));
   assertEquals("Test2",mock.oneArg(false));
   boolean failed=false;

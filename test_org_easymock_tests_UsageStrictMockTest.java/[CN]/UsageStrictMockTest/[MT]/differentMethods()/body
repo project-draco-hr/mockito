@@ -1,18 +1,18 @@
 {
-  control.reset();
+  reset(mock);
   mock.booleanReturningMethod(0);
-  control.setReturnValue(true);
+  expectLastCall().andReturn(true);
   mock.simpleMethod();
   mock.booleanReturningMethod(1);
-  control.setReturnValue(false,2,3);
+  expectLastCall().andReturn(false).times(2,3);
   mock.simpleMethod();
-  control.setVoidCallable(MockControl.ONE_OR_MORE);
-  control.replay();
+  expectLastCall().atLeastOnce();
+  replay(mock);
   assertEquals(true,mock.booleanReturningMethod(0));
   mock.simpleMethod();
   boolean failed=false;
   try {
-    control.verify();
+    verify(mock);
   }
  catch (  AssertionError expected) {
     failed=true;

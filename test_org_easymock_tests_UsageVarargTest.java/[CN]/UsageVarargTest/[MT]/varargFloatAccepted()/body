@@ -1,8 +1,0 @@
-{
-  mock.withVarargsFloat(1,1.0f);
-  mock.withVarargsFloat(1,1.0f,2.0f);
-  control.replay();
-  mock.withVarargsFloat(1,1.0f);
-  mock.withVarargsFloat(1,1.0f,2.0f);
-  control.verify();
-}

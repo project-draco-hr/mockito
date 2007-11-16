@@ -1,7 +1,6 @@
 {
-  control=MockControl.createStrictControl(IMethods.class);
-  mock=control.getMock();
+  mock=createStrictMock(IMethods.class);
   mock.simpleMethodWithArgument("1");
   mock.simpleMethodWithArgument("2");
-  control.replay();
+  replay(mock);
 }

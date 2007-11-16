@@ -1,7 +1,0 @@
-{
-  control.expectAndDefaultReturn(mock.longReturningMethod(4),12l);
-  control.replay();
-  assertEquals(12l,mock.longReturningMethod(4));
-  assertEquals(12l,mock.longReturningMethod(4));
-  control.verify();
-}

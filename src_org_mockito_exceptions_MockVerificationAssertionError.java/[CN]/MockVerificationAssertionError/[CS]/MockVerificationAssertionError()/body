@@ -1,6 +1,3 @@
 {
   super("Mock verification failed");
-  List<StackTraceElement> filteredStackTrace=new LinkedList<StackTraceElement>();
-  for (  StackTraceElement trace : getStackTrace()) {
-  }
 }

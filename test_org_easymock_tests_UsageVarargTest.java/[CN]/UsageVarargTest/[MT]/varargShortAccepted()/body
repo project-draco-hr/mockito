@@ -1,8 +1,0 @@
-{
-  mock.withVarargsShort(1,(short)1);
-  mock.withVarargsShort(1,(short)1,(short)2);
-  control.replay();
-  mock.withVarargsShort(1,(short)1);
-  mock.withVarargsShort(1,(short)1,(short)2);
-  control.verify();
-}

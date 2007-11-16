@@ -1,5 +1,0 @@
-{
-  mock.simpleMethodWithArgument("1");
-  mock.simpleMethodWithArgument("2");
-  verify(mock);
-}

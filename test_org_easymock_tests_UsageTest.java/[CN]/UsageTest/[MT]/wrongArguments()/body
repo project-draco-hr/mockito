@@ -1,6 +1,6 @@
 {
   mock.simpleMethodWithArgument("3");
-  control.replay();
+  replay(mock);
   try {
     mock.simpleMethodWithArgument("5");
     fail();

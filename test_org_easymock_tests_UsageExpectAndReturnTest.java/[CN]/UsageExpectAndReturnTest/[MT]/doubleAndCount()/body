@@ -1,7 +1,0 @@
-{
-  control.expectAndReturn(mock.doubleReturningMethod(4),12.0,2);
-  control.replay();
-  assertEquals(12.0,mock.doubleReturningMethod(4),0.0);
-  assertEquals(12.0,mock.doubleReturningMethod(4),0.0);
-  control.verify();
-}

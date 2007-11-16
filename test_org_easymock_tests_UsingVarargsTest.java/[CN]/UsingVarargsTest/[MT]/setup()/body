@@ -1,0 +1,3 @@
+{
+  mock=Mockito.mock(IVarArgs.class);
+}
