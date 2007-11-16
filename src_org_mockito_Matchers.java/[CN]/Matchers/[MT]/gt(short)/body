@@ -1,0 +1,4 @@
+{
+  LastArguments.reportMatcher(new GreaterThan<Short>(value));
+  return 0;
+}

@@ -1,0 +1,4 @@
+{
+  LastArguments.reportMatcher(new CompareEqual<T>(value));
+  return null;
+}

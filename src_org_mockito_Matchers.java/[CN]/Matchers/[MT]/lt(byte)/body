@@ -1,0 +1,4 @@
+{
+  LastArguments.reportMatcher(new LessThan<Byte>(value));
+  return 0;
+}
