@@ -1,4 +1,4 @@
 {
-  LastArguments.reportMatcher(NotNull.NOT_NULL);
+  LastArguments.instance().reportMatcher(NotNull.NOT_NULL);
   return null;
 }

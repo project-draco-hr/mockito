@@ -1,4 +1,4 @@
 {
-  LastArguments.reportMatcher(new Contains(substring));
+  LastArguments.instance().reportMatcher(new Contains(substring));
   return null;
 }

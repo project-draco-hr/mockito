@@ -1,4 +1,4 @@
 {
-  LastArguments.reportMatcher(new GreaterOrEqual<T>(value));
+  LastArguments.instance().reportMatcher(new GreaterOrEqual<T>(value));
   return null;
 }

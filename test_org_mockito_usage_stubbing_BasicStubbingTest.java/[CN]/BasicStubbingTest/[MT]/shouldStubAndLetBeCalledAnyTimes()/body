@@ -1,5 +1,4 @@
 {
-  DummyInterface mock=Mockito.mock(DummyInterface.class);
   Mockito.stub(mock.getInt("14")).andReturn(14);
   assertThat(mock.getInt("14"),equalTo(14));
   assertThat(mock.getInt("14"),equalTo(14));

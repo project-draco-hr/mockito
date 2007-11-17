@@ -1,4 +1,4 @@
 {
-  LastArguments.reportOr(2);
+  LastArguments.instance().reportOr(2);
   return false;
 }

@@ -1,0 +1,4 @@
+{
+  MockitoState.INSTANCE=new MockitoState();
+  LastArguments.INSTANCE=new LastArguments();
+}

@@ -1,4 +1,4 @@
 {
-  LastArguments.reportAnd(2);
+  LastArguments.instance().reportAnd(2);
   return null;
 }

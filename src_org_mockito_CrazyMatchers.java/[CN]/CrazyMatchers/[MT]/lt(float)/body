@@ -1,4 +1,4 @@
 {
-  LastArguments.reportMatcher(new LessThan<Float>(value));
+  LastArguments.instance().reportMatcher(new LessThan<Float>(value));
   return 0;
 }

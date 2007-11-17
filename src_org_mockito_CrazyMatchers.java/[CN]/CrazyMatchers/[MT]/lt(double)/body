@@ -1,4 +1,4 @@
 {
-  LastArguments.reportMatcher(new LessThan<Double>(value));
+  LastArguments.instance().reportMatcher(new LessThan<Double>(value));
   return 0;
 }

@@ -1,7 +1,0 @@
-{
-  Stack<Object[]> stack=threadToCurrentArguments.get();
-  if (stack == null || stack.empty()) {
-    return null;
-  }
-  return stack.lastElement();
-}

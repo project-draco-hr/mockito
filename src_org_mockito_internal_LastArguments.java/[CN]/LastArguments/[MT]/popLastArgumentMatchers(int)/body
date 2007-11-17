@@ -1,6 +1,6 @@
 {
   Stack<IArgumentMatcher> stack=threadToArgumentMatcherStack.get();
-  assertState(stack != null,"no matchers found.");
+  assertState(stack != null,missingMatchers());
   assertState(stack.size() >= count,"" + count + " matchers expected, "+ stack.size()+ " recorded.");
   List<IArgumentMatcher> result=new LinkedList<IArgumentMatcher>();
   result.addAll(stack.subList(stack.size() - count,stack.size()));

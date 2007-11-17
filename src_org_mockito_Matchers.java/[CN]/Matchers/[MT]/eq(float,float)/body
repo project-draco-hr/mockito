@@ -1,4 +1,4 @@
 {
-  LastArguments.reportMatcher(new EqualsWithDelta(value,delta));
+  LastArguments.instance().reportMatcher(new EqualsWithDelta(value,delta));
   return 0;
 }

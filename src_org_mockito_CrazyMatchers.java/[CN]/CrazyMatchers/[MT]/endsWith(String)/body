@@ -1,4 +1,4 @@
 {
-  LastArguments.reportMatcher(new EndsWith(suffix));
+  LastArguments.instance().reportMatcher(new EndsWith(suffix));
   return null;
 }

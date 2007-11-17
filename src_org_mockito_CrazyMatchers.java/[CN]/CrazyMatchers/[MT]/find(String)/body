@@ -1,4 +1,4 @@
 {
-  LastArguments.reportMatcher(new Find(regex));
+  LastArguments.instance().reportMatcher(new Find(regex));
   return null;
 }

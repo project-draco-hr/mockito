@@ -1,4 +1,4 @@
 {
-  LastArguments.reportMatcher(new Same(value));
+  LastArguments.instance().reportMatcher(new Same(value));
   return null;
 }

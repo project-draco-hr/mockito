@@ -1,0 +1,4 @@
+{
+  isA(String.class);
+  return null;
+}

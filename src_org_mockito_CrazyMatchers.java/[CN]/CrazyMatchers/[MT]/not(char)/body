@@ -1,4 +1,4 @@
 {
-  LastArguments.reportNot();
+  LastArguments.instance().reportNot();
   return 0;
 }

@@ -1,0 +1,5 @@
+{
+  if (matchers != null && matchers.size() != invocation.getArguments().length) {
+    throw new InvalidUseOfMatchersException(+invocation.getArguments().length + " matchers expected, " + matchers.size()+ " recorded.");
+  }
+}

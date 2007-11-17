@@ -1,16 +1,21 @@
 {
-  List<IArgumentMatcher> lastMatchers=LastArguments.pullMatchers();
   MockitoInvocation invocation=new MockitoInvocation(proxy,method,args);
-  InvocationWithMatchers invocationWithMatchers=new InvocationWithMatchers(invocation,lastMatchers);
-  if (MockitoOperations.mockVerificationScenario()) {
-    VerifyingMode verifyingMode=MockitoOperations.removeVerifyingMode();
+  List<IArgumentMatcher> lastMatchers=lastArguments.pullMatchers();
+  List<IArgumentMatcher> processedMatchers=createEqualsMatchers(invocation,lastMatchers);
+  InvocationWithMatchers invocationWithMatchers=new InvocationWithMatchers(invocation,processedMatchers);
+  if (mockitoState.mockVerificationScenario()) {
+    VerifyingMode verifyingMode=mockitoState.verifyingCompleted();
+    validateMatchers(invocation,lastMatchers);
     behavior.verify(invocationWithMatchers,verifyingMode);
     return ToTypeMappings.emptyReturnValueFor(method.getReturnType());
   }
-  MockitoOperations.reportLastControlForStubbing(this);
+ else {
+    validateMatchers(invocation,lastMatchers);
+  }
+  mockitoState.reportLastControlForStubbing(this);
   behavior.addInvocation(invocationWithMatchers);
-  if (MockitoOperations.settingThrowableOnVoidMethodScenario()) {
-    Throwable throwable=MockitoOperations.removeThrowableToBeSetOnVoidMethod();
+  if (mockitoState.settingThrowableOnVoidMethodScenario()) {
+    Throwable throwable=mockitoState.removeThrowableToBeSetOnVoidMethod();
     andThrows(throwable);
     return null;
   }
