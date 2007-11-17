@@ -1,0 +1,5 @@
+{
+  if (o == null || !this.getClass().equals(o.getClass()))   return false;
+  ExpectedInvocation other=(ExpectedInvocation)o;
+  return this.invocation.equals(other.invocation) && ((this.matchers == null && other.matchers == null) || (this.matchers != null && this.matchers.equals(other.matchers)));
+}

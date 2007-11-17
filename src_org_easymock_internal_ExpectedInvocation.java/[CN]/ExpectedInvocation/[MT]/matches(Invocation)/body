@@ -1,3 +1,0 @@
-{
-  return matchers != null ? this.invocation.getMock().equals(actual.getMock()) && this.invocation.getMethod().equals(actual.getMethod()) && matches(actual.getArguments()) : this.invocation.matches(actual,matcher);
-}

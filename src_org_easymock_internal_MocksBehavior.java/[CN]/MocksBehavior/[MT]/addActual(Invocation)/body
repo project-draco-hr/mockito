@@ -20,5 +20,5 @@
     position=tempPosition;
     return stubOrNice;
   }
-  throw new AssertionErrorWrapper(new AssertionError("\n  Unexpected method call " + actual.toString(MockControl.EQUALS_MATCHER) + ":"+ errorMessage.toString()));
+  throw new AssertionErrorWrapper(new AssertionError("\n  Unexpected method call " + actual.toString() + ":"+ errorMessage.toString()));
 }

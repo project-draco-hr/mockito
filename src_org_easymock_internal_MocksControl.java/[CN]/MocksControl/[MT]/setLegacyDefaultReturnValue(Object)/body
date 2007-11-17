@@ -1,8 +1,0 @@
-{
-  try {
-    state.setDefaultReturnValue(value);
-  }
- catch (  RuntimeExceptionWrapper e) {
-    throw (RuntimeException)e.getRuntimeException().fillInStackTrace();
-  }
-}

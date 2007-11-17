@@ -1,3 +1,0 @@
-{
-  ((MocksControl)expectLastCall("method call on the mock needed before setting default void callable")).setLegacyDefaultVoidCallable();
-}

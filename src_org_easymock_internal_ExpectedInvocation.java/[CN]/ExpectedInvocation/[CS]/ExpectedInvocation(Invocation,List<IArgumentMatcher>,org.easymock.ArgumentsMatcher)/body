@@ -1,5 +1,0 @@
-{
-  this.invocation=invocation;
-  this.matcher=matcher;
-  this.matchers=(matcher == null) ? createMissingMatchers(invocation,matchers) : null;
-}

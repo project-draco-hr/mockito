@@ -1,3 +1,0 @@
-{
-  return matchers != null ? myToString() : invocation.toString(matcher);
-}

@@ -7,7 +7,7 @@
   }
   Class<?> returnedType=lastInvocation.getMethod().getReturnType();
   if (returnedType.isPrimitive()) {
-    returnedType=ToTypeMappings.primitiveToWrapperType.get(returnedType);
+    returnedType=null;
   }
   if (!returnedType.isAssignableFrom(returnValue.getClass())) {
     throw new RuntimeExceptionWrapper(new IllegalStateException("incompatible return value type"));

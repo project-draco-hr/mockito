@@ -1,3 +1,0 @@
-{
-  return getMockAndMethodName() + "(" + matcher.toString(arguments)+ ")";
-}

@@ -1,3 +1,0 @@
-{
-  ctrl.setLegacyDefaultThrowable(throwable);
-}
