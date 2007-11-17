@@ -1,6 +1,0 @@
-{
-  closeMethod();
-  if (LastArguments.pullMatchers() != null) {
-    throw new IllegalStateException("matcher calls were used outside expectations");
-  }
-}

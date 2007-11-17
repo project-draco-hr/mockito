@@ -1,9 +1,0 @@
-{
-  try {
-    state.times(new Range(min,max));
-    return this;
-  }
- catch (  RuntimeExceptionWrapper e) {
-    throw (RuntimeException)e.getRuntimeException().fillInStackTrace();
-  }
-}

@@ -1,8 +1,0 @@
-{
-  try {
-    state.setMatcher(null,matcher);
-  }
- catch (  RuntimeExceptionWrapper e) {
-    throw (RuntimeException)e.getRuntimeException().fillInStackTrace();
-  }
-}

@@ -1,3 +1,0 @@
-{
-  return expectedInvocation.toString() + ": " + results.toString();
-}

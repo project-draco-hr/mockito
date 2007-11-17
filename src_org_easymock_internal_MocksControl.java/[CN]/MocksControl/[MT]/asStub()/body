@@ -1,8 +1,0 @@
-{
-  try {
-    state.asStub();
-  }
- catch (  RuntimeExceptionWrapper e) {
-    throw (RuntimeException)e.getRuntimeException().fillInStackTrace();
-  }
-}

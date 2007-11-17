@@ -1,8 +1,0 @@
-{
-  for (  ExpectedInvocationAndResult each : stubResults) {
-    if (each.getExpectedInvocation().matches(actual)) {
-      return each.getResult();
-    }
-  }
-  return null;
-}

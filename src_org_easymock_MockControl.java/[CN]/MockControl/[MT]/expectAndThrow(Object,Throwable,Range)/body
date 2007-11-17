@@ -1,4 +1,0 @@
-{
-  IExpectationSetters setter=EasyMock.expect(ignored).andThrow(throwable);
-  callWithConvertedRange(setter,range);
-}

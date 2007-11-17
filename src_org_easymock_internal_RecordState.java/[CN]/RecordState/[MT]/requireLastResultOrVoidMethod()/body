@@ -1,6 +1,0 @@
-{
-  if (isLastResultOrVoidMethod()) {
-    return;
-  }
-  throw new RuntimeExceptionWrapper(new IllegalStateException("last method called on mock is not a void method"));
-}

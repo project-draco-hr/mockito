@@ -10,7 +10,7 @@
   verify(list,2).add("one");
   verify(list,1).add("two");
   verify(list,0).add("three");
-  verify(map,2).put(EasyMock.anyObject(),EasyMock.anyInt());
+  verify(map,2).put(anyObject(),anyInt());
   verifyNoMoreInteractions(list,map);
   verifyZeroInteractions(set);
 }

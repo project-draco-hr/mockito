@@ -5,9 +5,9 @@
   list.add(1,"test two");
   map.put("test",100);
   map.put("test two",200);
-  verify(list).add(EasyMock.anyObject());
-  verify(list).add(EasyMock.anyInt(),EasyMock.eq("test two"));
-  verify(map).put(EasyMock.anyObject(),EasyMock.anyObject());
-  verify(map).put(EasyMock.eq("test two"),EasyMock.eq(200));
+  verify(list).add(anyObject());
+  verify(list).add(anyInt(),eq("test two"));
+  verify(map).put(anyObject(),anyObject());
+  verify(map).put(eq("test two"),eq(200));
   verifyNoMoreInteractions(list,map);
 }

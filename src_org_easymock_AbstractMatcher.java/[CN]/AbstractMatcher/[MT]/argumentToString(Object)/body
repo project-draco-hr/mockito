@@ -1,6 +1,0 @@
-{
-  if (argument instanceof String) {
-    return "\"" + argument + "\"";
-  }
-  return "" + argument;
-}

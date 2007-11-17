@@ -1,8 +1,0 @@
-{
-  try {
-    state.checkOrder(value);
-  }
- catch (  RuntimeExceptionWrapper e) {
-    throw (RuntimeException)e.getRuntimeException().fillInStackTrace();
-  }
-}

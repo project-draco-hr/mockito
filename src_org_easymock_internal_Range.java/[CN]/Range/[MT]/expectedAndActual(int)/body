@@ -1,3 +1,0 @@
-{
-  return "expected: " + this.toString() + ", actual: "+ count;
-}

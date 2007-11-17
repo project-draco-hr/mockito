@@ -1,3 +1,0 @@
-{
-  getLegacyMatcherProvider().setMatcher(method,matcher);
-}

@@ -1,4 +1,0 @@
-{
-  closeMethod();
-  behavior.checkOrder(value);
-}

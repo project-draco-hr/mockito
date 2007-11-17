@@ -1,9 +1,0 @@
-{
-  try {
-    state.times(ONCE);
-    return this;
-  }
- catch (  RuntimeExceptionWrapper e) {
-    throw (RuntimeException)e.getRuntimeException().fillInStackTrace();
-  }
-}

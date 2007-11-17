@@ -1,3 +1,0 @@
-{
-  return getMainInterval().contains(getCallCount());
-}

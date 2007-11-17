@@ -1,7 +1,0 @@
-{
-  MocksControl lastControl=LastControl.lastControl();
-  if (lastControl == null) {
-    throw new IllegalStateException("no last call on a mock available");
-  }
-  return lastControl;
-}

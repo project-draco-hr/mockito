@@ -1,3 +1,0 @@
-{
-  expectLastCall("method call on the mock needed before setting Throwable").andThrow(throwable).times(times);
-}

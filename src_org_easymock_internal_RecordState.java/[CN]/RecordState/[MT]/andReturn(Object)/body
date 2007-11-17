@@ -1,9 +1,0 @@
-{
-  requireMethodCall("return value");
-  value=convertNumberClassIfNeccessary(value);
-  requireAssignable(value);
-  if (lastResult != null) {
-    times(MocksControl.ONCE);
-  }
-  lastResult=Result.createReturnResult(value);
-}

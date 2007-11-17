@@ -1,4 +1,0 @@
-{
-  this.ctrl=ctrl;
-  this.mock=ctrl.createMock(toMock);
-}

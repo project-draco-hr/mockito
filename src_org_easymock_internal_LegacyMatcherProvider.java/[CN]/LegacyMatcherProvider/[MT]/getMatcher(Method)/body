@@ -1,9 +1,0 @@
-{
-  if (!matchers.containsKey(method)) {
-    if (!defaultMatcherSet) {
-      setDefaultMatcher(MockControl.EQUALS_MATCHER);
-    }
-    matchers.put(method,defaultMatcher);
-  }
-  return matchers.get(method);
-}

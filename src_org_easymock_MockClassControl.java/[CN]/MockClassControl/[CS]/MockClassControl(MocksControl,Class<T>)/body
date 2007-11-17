@@ -1,3 +1,0 @@
-{
-  super(ctrl,classToMock);
-}

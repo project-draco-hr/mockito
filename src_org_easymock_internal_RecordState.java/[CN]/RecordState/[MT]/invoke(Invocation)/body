@@ -1,7 +1,0 @@
-{
-  closeMethod();
-  List<IArgumentMatcher> lastMatchers=LastArguments.pullMatchers();
-  lastInvocation=new ExpectedInvocation(invocation,lastMatchers);
-  lastInvocationUsed=false;
-  return ToTypeMappings.emptyReturnValueFor(invocation.getMethod().getReturnType());
-}

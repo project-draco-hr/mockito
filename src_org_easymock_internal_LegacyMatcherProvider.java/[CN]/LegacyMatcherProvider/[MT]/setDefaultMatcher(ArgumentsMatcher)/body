@@ -1,7 +1,0 @@
-{
-  if (defaultMatcherSet) {
-    throw new RuntimeExceptionWrapper(new IllegalStateException("default matcher can only be set once directly after creation of the MockControl"));
-  }
-  defaultMatcher=matcher;
-  defaultMatcherSet=true;
-}

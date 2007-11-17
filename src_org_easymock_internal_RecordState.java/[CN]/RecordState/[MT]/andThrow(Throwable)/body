@@ -1,8 +1,0 @@
-{
-  requireMethodCall("Throwable");
-  requireValidThrowable(throwable);
-  if (lastResult != null) {
-    times(MocksControl.ONCE);
-  }
-  lastResult=Result.createThrowResult(throwable);
-}

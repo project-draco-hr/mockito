@@ -1,3 +1,0 @@
-{
-  return new MocksControl(MocksControl.MockType.DEFAULT);
-}

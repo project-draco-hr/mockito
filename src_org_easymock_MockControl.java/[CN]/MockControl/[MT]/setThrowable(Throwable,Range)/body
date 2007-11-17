@@ -1,4 +1,0 @@
-{
-  IExpectationSetters setter=expectLastCall("method call on the mock needed before setting Throwable").andThrow(throwable);
-  callWithConvertedRange(setter,range);
-}

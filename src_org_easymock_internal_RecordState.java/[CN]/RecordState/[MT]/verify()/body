@@ -1,3 +1,0 @@
-{
-  throw new RuntimeExceptionWrapper(new IllegalStateException("calling verify is not allowed in record state"));
-}

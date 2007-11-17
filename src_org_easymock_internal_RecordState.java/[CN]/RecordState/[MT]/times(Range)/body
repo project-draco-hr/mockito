@@ -1,7 +1,0 @@
-{
-  requireMethodCall("times");
-  requireLastResultOrVoidMethod();
-  behavior.addExpected(lastInvocation,lastResult != null ? lastResult : Result.createReturnResult(null),range);
-  lastInvocationUsed=true;
-  lastResult=null;
-}

@@ -1,5 +1,0 @@
-{
-  if (behaviorLists.isEmpty() || !lastBehaviorList().allowsExpectedInvocation(expected,checkOrder)) {
-    behaviorLists.add(new UnorderedBehavior(checkOrder));
-  }
-}

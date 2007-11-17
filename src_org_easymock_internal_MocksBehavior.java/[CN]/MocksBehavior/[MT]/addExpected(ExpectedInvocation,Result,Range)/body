@@ -1,4 +1,0 @@
-{
-  addBehaviorListIfNecessary(expected);
-  lastBehaviorList().addExpected(expected,result,count);
-}

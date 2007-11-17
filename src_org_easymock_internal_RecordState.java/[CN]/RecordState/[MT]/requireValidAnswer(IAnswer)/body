@@ -1,3 +1,0 @@
-{
-  if (answer == null)   throw new RuntimeExceptionWrapper(new NullPointerException("answer object must not be null"));
-}

@@ -1,4 +1,0 @@
-Class<T> classToMock
-Class[] constructorTypes
-Object[] constructorArgs
-Method[] mockedMethods

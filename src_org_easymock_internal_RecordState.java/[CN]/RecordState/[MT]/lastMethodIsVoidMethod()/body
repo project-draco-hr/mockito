@@ -1,4 +1,0 @@
-{
-  Class returnType=lastInvocation.getMethod().getReturnType();
-  return returnType.equals(Void.TYPE);
-}

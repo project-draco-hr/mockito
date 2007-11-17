@@ -1,5 +1,0 @@
-{
-  if (lastInvocation == null) {
-    throw new RuntimeExceptionWrapper(new IllegalStateException("method call on the mock needed before setting " + failMessage));
-  }
-}

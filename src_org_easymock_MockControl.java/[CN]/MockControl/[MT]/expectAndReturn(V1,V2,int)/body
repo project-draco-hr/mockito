@@ -1,3 +1,0 @@
-{
-  EasyMock.expectLastCall().andReturn(value).times(count);
-}

@@ -1,9 +1,0 @@
-{
-  try {
-    state.andThrow(throwable);
-    return this;
-  }
- catch (  RuntimeExceptionWrapper e) {
-    throw (RuntimeException)e.getRuntimeException().fillInStackTrace();
-  }
-}

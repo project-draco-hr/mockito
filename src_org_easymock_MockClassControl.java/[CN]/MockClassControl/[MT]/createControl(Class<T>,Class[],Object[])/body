@@ -1,3 +1,0 @@
-{
-  return (MockClassControl<T>)createControl(classToMock);
-}

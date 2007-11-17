@@ -1,8 +1,0 @@
-{
-  if (control != null) {
-    threadToControl.set(control);
-  }
- else {
-    threadToControl.remove();
-  }
-}
