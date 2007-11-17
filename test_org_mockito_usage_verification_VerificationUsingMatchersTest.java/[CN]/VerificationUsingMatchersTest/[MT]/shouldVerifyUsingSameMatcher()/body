@@ -7,10 +7,10 @@
   assertEquals(two,three);
   mock.oneArg(one);
   mock.oneArg(two);
-  verify(mock).oneArg(Matchers.same(one));
+  verify(mock).oneArg(CrazyMatchers.same(one));
   verify(mock).oneArg(two);
   try {
-    verify(mock).oneArg(Matchers.same(three));
+    verify(mock).oneArg(CrazyMatchers.same(three));
     fail();
   }
  catch (  MockVerificationAssertionError e) {
