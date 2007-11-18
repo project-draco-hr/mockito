@@ -2,8 +2,8 @@
   List mock=mock(List.class);
   stub(mock.add("test")).andReturn(true);
   mock.add(2,"test2");
-  Mockito.verify(mock).add(2,"test2");
-  Mockito.verify(mock,5).add(2,"test2");
-  Mockito.verifyNoMoreInteractions(mock);
-  Mockito.verifyZeroInteractions(mock);
+  verify(mock).add(2,"test2");
+  verify(mock,5).add(2,"test2");
+  verifyNoMoreInteractions(mock);
+  verifyZeroInteractions(mock);
 }

@@ -1,0 +1,9 @@
+{
+  mockitoState.verifyingStarted(VerifyingMode.anyTimes());
+  try {
+    mockitoState.verifyingStarted(VerifyingMode.anyTimes());
+    fail();
+  }
+ catch (  UnfinishedVerificationException e) {
+  }
+}

@@ -3,7 +3,7 @@
   List<IArgumentMatcher> lastMatchers=lastArguments.pullMatchers();
   List<IArgumentMatcher> processedMatchers=createEqualsMatchers(invocation,lastMatchers);
   InvocationWithMatchers invocationWithMatchers=new InvocationWithMatchers(invocation,processedMatchers);
-  if (mockitoState.mockVerificationScenario()) {
+  if (mockitoState.verificationScenario()) {
     VerifyingMode verifyingMode=mockitoState.verifyingCompleted();
     validateMatchers(invocation,lastMatchers);
     behavior.verify(invocationWithMatchers,verifyingMode);
@@ -12,7 +12,7 @@
  else {
     validateMatchers(invocation,lastMatchers);
   }
-  mockitoState.reportLastControlForStubbing(this);
+  mockitoState.reportLastControl(this);
   behavior.addInvocation(invocationWithMatchers);
   if (mockitoState.settingThrowableOnVoidMethodScenario()) {
     Throwable throwable=mockitoState.removeThrowableToBeSetOnVoidMethod();

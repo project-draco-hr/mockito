@@ -1,0 +1,9 @@
+{
+  verify(mock);
+  try {
+    verifyNoMoreInteractions(mock);
+    fail();
+  }
+ catch (  UnfinishedVerificationException e) {
+  }
+}
