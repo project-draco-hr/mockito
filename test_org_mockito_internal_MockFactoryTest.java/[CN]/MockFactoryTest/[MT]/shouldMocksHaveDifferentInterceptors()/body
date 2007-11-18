@@ -1,0 +1,8 @@
+{
+  MockFactory<SomeClass> factory=new MockFactory<SomeClass>();
+  SomeClass mockOne=factory.createMock(SomeClass.class,new MockAwareStub());
+  SomeClass mockTwo=factory.createMock(SomeClass.class,new MockAwareStub());
+  Factory cglibFactoryOne=(Factory)mockOne;
+  Factory cglibFactoryTwo=(Factory)mockTwo;
+  assertNotSame(cglibFactoryOne.getCallback(0),cglibFactoryTwo.getCallback(0));
+}

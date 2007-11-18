@@ -1,16 +1,13 @@
 {
-  MockitoInvocation invocation=new MockitoInvocation(proxy,method,args);
+  VerifyingMode verifyingMode=mockitoState.removeVerifyingMode();
+  Invocation invocation=new Invocation(proxy,method,args);
   List<IArgumentMatcher> lastMatchers=lastArguments.pullMatchers();
+  validateMatchers(invocation,lastMatchers);
   List<IArgumentMatcher> processedMatchers=createEqualsMatchers(invocation,lastMatchers);
   InvocationWithMatchers invocationWithMatchers=new InvocationWithMatchers(invocation,processedMatchers);
-  if (mockitoState.verificationScenario()) {
-    VerifyingMode verifyingMode=mockitoState.verifyingCompleted();
-    validateMatchers(invocation,lastMatchers);
+  if (verifyingMode != null) {
     behavior.verify(invocationWithMatchers,verifyingMode);
     return ToTypeMappings.emptyReturnValueFor(method.getReturnType());
-  }
- else {
-    validateMatchers(invocation,lastMatchers);
   }
   mockitoState.reportLastControl(this);
   behavior.addInvocation(invocationWithMatchers);

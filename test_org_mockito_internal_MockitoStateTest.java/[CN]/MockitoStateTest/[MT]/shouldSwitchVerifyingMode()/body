@@ -3,5 +3,5 @@
   VerifyingMode mode=VerifyingMode.times(19);
   mockitoState.verifyingStarted(mode);
   assertTrue(mockitoState.verificationScenario());
-  assertSame(mode,mockitoState.verifyingCompleted());
+  assertSame(mode,mockitoState.removeVerifyingMode());
 }

@@ -1,5 +1,5 @@
 {
-  MockitoInvocation lastInvocation=behavior.lastInvocation();
+  Invocation lastInvocation=behavior.lastInvocation();
   Class<?>[] exceptions=lastInvocation.getMethod().getExceptionTypes();
   Class<?> throwableClass=throwable.getClass();
   for (  Class<?> exception : exceptions) {

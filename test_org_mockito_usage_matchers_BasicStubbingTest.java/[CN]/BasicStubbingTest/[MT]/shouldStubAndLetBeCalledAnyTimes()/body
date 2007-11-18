@@ -4,8 +4,8 @@
   assertThat(mock.getInt("14"),equalTo(14));
   assertThat(mock.getInt("14"),equalTo(14));
   Mockito.stub(mock.getList()).andReturn(Arrays.asList("elementOne","elementTwo"));
-  assertThat(mock.getList(),contains("elementOne","elementTwo"));
-  assertThat(mock.getList(),contains("elementOne","elementTwo"));
+  assertThat(mock.getList(),collectionContaining("elementOne","elementTwo"));
+  assertThat(mock.getList(),collectionContaining("elementOne","elementTwo"));
   Mockito.stub(mock.getString(10,"test")).andReturn("test");
   assertThat(mock.getString(10,"test"),equalTo("test"));
   assertThat(mock.getString(10,"test"),equalTo("test"));

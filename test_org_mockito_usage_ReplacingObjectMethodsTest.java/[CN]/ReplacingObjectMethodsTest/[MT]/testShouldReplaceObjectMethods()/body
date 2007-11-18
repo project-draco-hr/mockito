@@ -1,6 +1,8 @@
 {
-  Object mock=Mockito.mock(ClassToMockWithOverride.class);
+  Object mock=Mockito.mock(ObjectMethodsOverridden.class);
+  Object otherMock=Mockito.mock(ObjectMethodsOverridden.class);
   assertThat(mock,equalTo(mock));
-  assertThat(mock.hashCode(),not(equalTo(-1)));
-  assertThat(mock.toString(),not(equalTo("super")));
+  assertThat(mock,not(equalTo(otherMock)));
+  assertThat(mock.hashCode(),not(equalTo(otherMock.hashCode())));
+  assertThat(mock.toString(),equalTo("Mock for ObjectMethodsOverridden"));
 }

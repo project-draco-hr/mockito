@@ -1,8 +1,0 @@
-{
-  try {
-    return clazz.getDeclaredField(field);
-  }
- catch (  NoSuchFieldException e) {
-    throw new InternalError("There must be some refactoring because the " + field + " field was there...");
-  }
-}

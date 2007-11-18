@@ -2,10 +2,10 @@
   if (mock == null) {
     throw new IllegalArgumentException("Mock cannot be null");
   }
-  MockitoObjectMethodsFilter<MockitoControl<T>> handler;
+  ObjectMethodsFilter<MockitoControl<T>> handler;
   try {
     if (Enhancer.isEnhanced(mock.getClass())) {
-      handler=(MockitoObjectMethodsFilter)getInterceptor(mock).getHandler();
+      handler=(ObjectMethodsFilter)getInterceptor(mock).getHandler();
     }
  else {
       throw new NotAMockException(mock);
