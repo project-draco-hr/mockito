@@ -1,8 +1,7 @@
 {
-  List mock=mock(List.class);
   stub(mock.add("test"));
   try {
-    mock.clear();
+    verifyZeroInteractions(mock);
     fail();
   }
  catch (  UnfinishedStubbingException e) {

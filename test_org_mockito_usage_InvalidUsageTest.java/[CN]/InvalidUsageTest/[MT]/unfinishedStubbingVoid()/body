@@ -1,0 +1,9 @@
+{
+  stubVoid(mock);
+  try {
+    mock.clear();
+    fail();
+  }
+ catch (  UnfinishedStubbingException e) {
+  }
+}

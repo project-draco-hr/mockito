@@ -1,5 +1,5 @@
 {
-  VerifyingMode verifyingMode=mockitoState.removeVerifyingMode();
+  VerifyingMode verifyingMode=mockitoState.pullVerifyingMode();
   Invocation invocation=new Invocation(proxy,method,args);
   List<IArgumentMatcher> lastMatchers=lastArguments.pullMatchers();
   validateMatchers(invocation,lastMatchers);
@@ -11,8 +11,8 @@
   }
   mockitoState.reportLastControl(this);
   behavior.addInvocation(invocationWithMatchers);
-  if (mockitoState.settingThrowableOnVoidMethodScenario()) {
-    Throwable throwable=mockitoState.removeThrowableToBeSetOnVoidMethod();
+  Throwable throwable=mockitoState.pullThrowableToBeSetOnVoidMethod();
+  if (throwable != null) {
     andThrows(throwable);
     return null;
   }

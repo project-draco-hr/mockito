@@ -1,5 +1,5 @@
 {
-  MockitoExpectation controlToStub=MockitoState.instance().removeControlToBeStubbed();
+  MockitoExpectation controlToStub=MockitoState.instance().pullControlToBeStubbed();
   if (controlToStub == null) {
     throw new MissingMethodInvocationException();
   }
