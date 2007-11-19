@@ -9,7 +9,7 @@
     Mockito.verifyNoMoreInteractions(mock);
     fail();
   }
- catch (  AssertionError error) {
-    assertThat(error.getMessage(),equalTo("Mock verification failed"));
+ catch (  MockVerificationAssertionError expected) {
   }
+  ;
 }

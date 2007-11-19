@@ -1,7 +1,3 @@
 {
-  for (  InvocationWithMatchers registeredInvocation : registeredInvocations) {
-    if (!registeredInvocation.getInvocation().isVerified()) {
-      throw new MockVerificationAssertionError();
-    }
-  }
+  verifyNoMoreInteractions("No more interactions expected");
 }

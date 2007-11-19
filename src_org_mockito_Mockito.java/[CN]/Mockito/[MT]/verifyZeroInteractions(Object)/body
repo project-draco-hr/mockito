@@ -1,3 +1,6 @@
 {
-  verifyNoMoreInteractions(mocks);
+  MockitoState.instance().checkForUnfinishedVerification();
+  for (  Object mock : mocks) {
+    MockUtil.getControl(mock).verifyZeroInteractions();
+  }
 }

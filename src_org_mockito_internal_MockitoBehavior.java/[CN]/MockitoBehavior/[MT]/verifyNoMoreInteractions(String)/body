@@ -1,0 +1,8 @@
+{
+  for (  InvocationWithMatchers registeredInvocation : registeredInvocations) {
+    if (!registeredInvocation.getInvocation().isVerified()) {
+      String mockName=ObjectMethodsFilter.simpleName(mock);
+      throw new MockVerificationAssertionError("\n" + verificationErrorMessage + " on "+ mockName+ " but found: "+ mockName+ "."+ registeredInvocation.toString());
+    }
+  }
+}

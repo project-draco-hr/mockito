@@ -1,5 +1,5 @@
 {
-  MockitoControl control=lastControl.get();
+  MockControl control=lastControl.get();
   lastControl.set(null);
   return control;
 }

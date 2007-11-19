@@ -1,4 +1,3 @@
 {
-  validateState();
   this.registeredInvocations.add(invocation);
 }
