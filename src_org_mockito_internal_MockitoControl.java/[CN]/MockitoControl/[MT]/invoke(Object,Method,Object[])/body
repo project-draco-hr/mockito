@@ -11,9 +11,9 @@
   }
   mockitoState.reportLastControl(this);
   behavior.addInvocation(invocationWithMatchers);
-  Throwable throwable=mockitoState.pullThrowableToBeSetOnVoidMethod();
-  if (throwable != null) {
-    andThrows(throwable);
+  if (throwableToBeSetOnVoidMethod != null) {
+    andThrows(throwableToBeSetOnVoidMethod);
+    throwableToBeSetOnVoidMethod=null;
     return null;
   }
   return behavior.resultFor(invocation);

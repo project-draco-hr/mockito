@@ -1,5 +1,0 @@
-{
-  Throwable throwable=throwableToBeSetOnVoidMethod.get();
-  throwableToBeSetOnVoidMethod.set(null);
-  return throwable;
-}

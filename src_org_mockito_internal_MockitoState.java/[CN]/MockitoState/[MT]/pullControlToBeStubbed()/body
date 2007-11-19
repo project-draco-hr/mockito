@@ -1,5 +1,5 @@
 {
-  MockitoControl control=controlForStubbing.get();
-  controlForStubbing.set(null);
+  MockitoControl control=lastControl.get();
+  lastControl.set(null);
   return control;
 }

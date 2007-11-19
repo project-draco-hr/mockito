@@ -1,4 +1,4 @@
 {
-  mockitoState.reportThrowableToBeSetOnVoidMethod(throwable);
+  throwableToBeSetOnVoidMethod=throwable;
   return this;
 }
