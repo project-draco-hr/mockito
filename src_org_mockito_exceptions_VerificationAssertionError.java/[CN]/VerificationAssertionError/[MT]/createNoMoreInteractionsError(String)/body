@@ -1,0 +1,3 @@
+{
+  return new VerificationAssertionError(message,new LastClassIsMockitoFilter());
+}

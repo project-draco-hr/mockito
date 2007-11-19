@@ -5,6 +5,6 @@
     verifyZeroInteractions(mock);
     fail();
   }
- catch (  MockVerificationAssertionError e) {
+ catch (  VerificationAssertionError e) {
   }
 }

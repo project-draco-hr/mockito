@@ -1,10 +1,5 @@
 {
-  try {
-    MockFactory<T> proxyFactory=new MockFactory<T>();
-    MockControl<T> mockControl=new MockControl<T>(MockitoState.instance(),LastArguments.instance());
-    return proxyFactory.createMock(classToMock,new ObjectMethodsFilter<MockControl>(classToMock,mockControl));
-  }
- catch (  RuntimeExceptionWrapper e) {
-    throw (RuntimeException)e.getRuntimeException().fillInStackTrace();
-  }
+  MockFactory<T> proxyFactory=new MockFactory<T>();
+  MockControl<T> mockControl=new MockControl<T>(MockitoState.instance(),LastArguments.instance());
+  return proxyFactory.createMock(classToMock,new ObjectMethodsFilter<MockControl>(classToMock,mockControl));
 }

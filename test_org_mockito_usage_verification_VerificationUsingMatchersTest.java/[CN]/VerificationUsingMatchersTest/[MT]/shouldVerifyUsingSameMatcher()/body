@@ -13,6 +13,6 @@
     verify(mock).oneArg(CrazyMatchers.same(three));
     fail();
   }
- catch (  MockVerificationAssertionError e) {
+ catch (  VerificationAssertionError e) {
   }
 }

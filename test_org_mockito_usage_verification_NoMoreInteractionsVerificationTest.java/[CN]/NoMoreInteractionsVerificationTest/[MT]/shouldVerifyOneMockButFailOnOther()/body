@@ -10,6 +10,6 @@
     verifyZeroInteractions(map);
     fail();
   }
- catch (  MockVerificationAssertionError e) {
+ catch (  VerificationAssertionError e) {
   }
 }

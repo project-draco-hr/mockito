@@ -2,7 +2,7 @@
   try {
     verify(mock).simpleMethod();
   }
- catch (  MockVerificationAssertionError expected) {
+ catch (  VerificationAssertionError expected) {
     String actualMessage=expected.getMessage();
     String expectedMessage="\n" + "Not invoked: IMethods.simpleMethod()";
     assertEquals(expectedMessage,actualMessage);

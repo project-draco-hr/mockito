@@ -1,0 +1,10 @@
+{
+  try {
+    verify(mock).simpleMethod();
+  }
+ catch (  VerificationAssertionError expected) {
+    assertThat(expected,firstMethodOnStackEqualsTo("shouldFilterStackTraceOnVerify"));
+    StackTraceElement[] unfilteredStackTrace=expected.getUnfilteredStackTrace();
+    assertEquals("createNotInvokedError",unfilteredStackTrace[0].getMethodName());
+  }
+}

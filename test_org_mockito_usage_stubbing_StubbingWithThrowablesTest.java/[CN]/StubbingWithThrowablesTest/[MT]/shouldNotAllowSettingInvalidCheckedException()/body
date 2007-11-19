@@ -5,7 +5,7 @@
     stub(list.add("monkey island")).andThrows(checkedException);
     fail();
   }
- catch (  IllegalArgumentException e) {
+ catch (  MockitoException e) {
     assertEquals("Given checked exception is invalid for this method",e.getMessage());
   }
 }

@@ -1,0 +1,11 @@
+{
+  mock.oneArg(true);
+  try {
+    verifyZeroInteractions(mock);
+  }
+ catch (  VerificationAssertionError expected) {
+    assertThat(expected,firstMethodOnStackEqualsTo("shouldFilterStackTraceOnVerifyZeroInteractions"));
+    StackTraceElement[] unfilteredStackTrace=expected.getUnfilteredStackTrace();
+    assertEquals("createNoMoreInteractionsError",unfilteredStackTrace[0].getMethodName());
+  }
+}

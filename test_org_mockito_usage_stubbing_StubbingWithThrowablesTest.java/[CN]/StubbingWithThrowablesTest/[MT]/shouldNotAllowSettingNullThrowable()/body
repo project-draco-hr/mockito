@@ -4,7 +4,7 @@
     stub(list.add("monkey island")).andThrows(null);
     fail();
   }
- catch (  IllegalArgumentException e) {
+ catch (  MockitoException e) {
     assertEquals("Cannot set null throwable",e.getMessage());
   }
 }

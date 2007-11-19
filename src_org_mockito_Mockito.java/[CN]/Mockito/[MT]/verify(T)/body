@@ -1,5 +1,13 @@
 {
-  MockUtil.validateMock(mock);
-  MockitoState.instance().verifyingStarted(VerifyingMode.anyTimes());
-  return mock;
+  try {
+    MockUtil.validateMock(mock);
+    MockitoState.instance().verifyingStarted(VerifyingMode.anyTimes());
+    return mock;
+  }
+ catch (  RuntimeException e) {
+    throw filterStackTrace(e);
+  }
+catch (  Error e) {
+    throw filterStackTrace(e);
+  }
 }

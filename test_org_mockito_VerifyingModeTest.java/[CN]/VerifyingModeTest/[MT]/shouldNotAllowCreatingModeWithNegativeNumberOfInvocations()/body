@@ -3,7 +3,7 @@
     VerifyingMode.times(-50);
     fail();
   }
- catch (  IllegalArgumentException e) {
+ catch (  MockitoException e) {
     assertEquals("Negative value is not allowed here",e.getMessage());
   }
 }

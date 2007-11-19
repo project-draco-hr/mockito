@@ -2,7 +2,7 @@
   try {
     verify(mock).threeArgumentMethod(12,new SomeClass(),"some string");
   }
- catch (  MockVerificationAssertionError expected) {
+ catch (  VerificationAssertionError expected) {
     String actualMessage=expected.getMessage();
     String expectedMessage="\n" + "Not invoked: IMethods.threeArgumentMethod(12, SomeClass instance, \"some string\")";
     assertEquals(expectedMessage,actualMessage);

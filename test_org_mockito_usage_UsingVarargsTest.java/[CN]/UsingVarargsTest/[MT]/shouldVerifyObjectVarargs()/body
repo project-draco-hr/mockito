@@ -8,6 +8,6 @@
     verifyNoMoreInteractions(mock);
     fail();
   }
- catch (  MockVerificationAssertionError e) {
+ catch (  VerificationAssertionError e) {
   }
 }

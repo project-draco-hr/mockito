@@ -1,6 +1,6 @@
 {
   if (mock == null) {
-    throw new IllegalArgumentException("Mock cannot be null");
+    throw new MockitoException("Mock cannot be null");
   }
   ObjectMethodsFilter<MockControl<T>> handler;
   try {

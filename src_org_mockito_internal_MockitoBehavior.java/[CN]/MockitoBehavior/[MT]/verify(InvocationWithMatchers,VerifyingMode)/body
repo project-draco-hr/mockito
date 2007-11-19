@@ -8,7 +8,7 @@
   }
  else {
     if (actuallyInvoked == 0) {
-      throw new MockVerificationAssertionError("\n" + "Not invoked: " + ObjectMethodsFilter.simpleName(mock) + "."+ invocation.toString());
+      throw VerificationAssertionError.createNotInvokedError("\n" + "Not invoked: " + invocation.toString());
     }
   }
 }

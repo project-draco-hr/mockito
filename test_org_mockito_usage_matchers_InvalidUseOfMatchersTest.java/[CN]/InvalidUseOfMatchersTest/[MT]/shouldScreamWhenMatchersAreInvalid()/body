@@ -11,14 +11,14 @@
     mock.simpleMethodWithArgument(CrazyMatchers.or(eq("jkl"),"asd"));
     fail();
   }
- catch (  IllegalStateException e) {
+ catch (  InvalidUseOfMatchersException e) {
     assertEquals("\n" + "2 matchers expected, 1 recorded." + "\n"+ "Read about matchers: http://code.google.com/p/mockito/matchers",e.getMessage());
   }
   try {
     mock.threeArgumentMethod(1,"asd",eq("asd"));
     fail();
   }
- catch (  IllegalStateException e) {
+ catch (  InvalidUseOfMatchersException e) {
     assertEquals("\n" + "3 matchers expected, 1 recorded." + "\n"+ "Read about matchers: http://code.google.com/p/mockito/matchers",e.getMessage());
   }
 }

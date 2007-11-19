@@ -7,7 +7,7 @@
     Mockito.verify(mock).add("bar");
     fail();
   }
- catch (  MockVerificationAssertionError expected) {
+ catch (  VerificationAssertionError expected) {
   }
   ;
 }
