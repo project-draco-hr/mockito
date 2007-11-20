@@ -1,0 +1,7 @@
+{
+  Mockito.verifyInOrder(list).add("one");
+  Mockito.verifyInOrder(map).put("one","two");
+  Mockito.verifyInOrder(list).add("three and four");
+  Mockito.verifyInOrder(map).put("five","five");
+  Mockito.verifyInOrder(set).add("six");
+}

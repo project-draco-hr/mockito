@@ -1,0 +1,11 @@
+{
+  list=mock(LinkedList.class);
+  map=mock(HashMap.class);
+  set=mock(HashSet.class);
+  list.add("one");
+  map.put("two","two");
+  list.add("three and four");
+  list.add("three and four");
+  map.put("five","five");
+  set.add("six");
+}
