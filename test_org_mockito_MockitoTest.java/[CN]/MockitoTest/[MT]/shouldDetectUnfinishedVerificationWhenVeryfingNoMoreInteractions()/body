@@ -4,6 +4,6 @@
     verifyNoMoreInteractions(mock);
     fail();
   }
- catch (  UnfinishedVerificationException e) {
+ catch (  MockitoException e) {
   }
 }

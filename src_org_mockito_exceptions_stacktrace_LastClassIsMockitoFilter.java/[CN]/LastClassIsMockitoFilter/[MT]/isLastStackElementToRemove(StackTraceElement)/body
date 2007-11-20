@@ -1,3 +1,0 @@
-{
-  return e.getClassName().equals("org.mockito.Mockito");
-}

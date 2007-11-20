@@ -1,0 +1,5 @@
+{
+  boolean firstOnStackIsMockitoClass=e.getClassName().equals("org.mockito.Mockito");
+  boolean firstOnStackIsMockObject=e.getClassName().contains("$$EnhancerByCGLIB$$");
+  return firstOnStackIsMockitoClass || firstOnStackIsMockObject;
+}

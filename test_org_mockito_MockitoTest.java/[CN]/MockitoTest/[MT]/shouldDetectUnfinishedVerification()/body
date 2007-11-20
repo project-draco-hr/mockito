@@ -4,6 +4,6 @@
     verify(mock).get(0);
     fail();
   }
- catch (  UnfinishedVerificationException e) {
+ catch (  MockitoException e) {
   }
 }

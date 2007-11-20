@@ -2,7 +2,7 @@
   for (  InvocationWithMatchers registeredInvocation : registeredInvocations) {
     if (!registeredInvocation.getInvocation().isVerified()) {
       String mockName=Namer.nameForMock(mock);
-      throw VerificationAssertionError.createNoMoreInteractionsError("\n" + verificationErrorMessage + " on "+ mockName+ " but found: "+ registeredInvocation.toString());
+      throw new VerificationAssertionError("\n" + verificationErrorMessage + " on "+ mockName+ " but found: "+ registeredInvocation.toString());
     }
   }
 }

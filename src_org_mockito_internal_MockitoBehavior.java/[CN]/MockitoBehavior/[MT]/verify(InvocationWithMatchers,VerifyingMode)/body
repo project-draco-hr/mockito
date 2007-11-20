@@ -8,7 +8,7 @@
   }
  else {
     if (actuallyInvoked == 0) {
-      throw VerificationAssertionError.createNotInvokedError("\n" + "Not invoked: " + invocation.toString());
+      throw new VerificationAssertionError("\n" + "Not invoked: " + invocation.toString());
     }
   }
 }

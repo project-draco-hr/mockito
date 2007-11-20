@@ -1,0 +1,12 @@
+{
+  verify(mock);
+  try {
+    verify(mock).oneArg(true);
+    fail();
+  }
+ catch (  MockitoException expected) {
+    assertThat(expected,firstMethodOnStackEqualsTo("shouldFilterStacktraceOnUnfinishedVerification"));
+    StackTraceElement[] unfilteredStackTrace=expected.getUnfilteredStackTrace();
+    assertEquals("checkForUnfinishedVerification",unfilteredStackTrace[0].getMethodName());
+  }
+}
