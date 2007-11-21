@@ -1,0 +1,5 @@
+{
+  Message message=new Message();
+  print(message);
+  Mockito.verify(mock).print(message);
+}
