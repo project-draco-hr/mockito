@@ -1,8 +1,3 @@
 {
-  try {
-    stub("blah".contains("blah"));
-    fail();
-  }
- catch (  MissingMethodInvocationException e) {
-  }
+  stub("blah".contains("blah"));
 }
