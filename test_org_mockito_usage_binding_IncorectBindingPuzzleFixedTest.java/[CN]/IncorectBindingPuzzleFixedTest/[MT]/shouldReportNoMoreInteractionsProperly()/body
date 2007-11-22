@@ -4,10 +4,10 @@
   Message message=new Message();
   print(message);
   try {
-    Mockito.verify(derivedMock).print(message);
+    Mockito.verifyNoMoreInteractions(derivedMock);
   }
  catch (  VerificationAssertionError error) {
-    String expected="\n" + "Not invoked: DerivedInterface.print(Message)" + "But found: DerivedInterface.print(BaseMessage)";
+    String expected="\n" + "No more interactions expected on DerivedInterface but found: DerivedInterface.print(BaseMessage)";
     assertEquals(expected,error.getMessage());
   }
 }
