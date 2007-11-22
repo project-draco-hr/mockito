@@ -1,5 +1,7 @@
 {
+  DerivedInterface derivedMock=Mockito.mock(DerivedInterface.class);
+  setMock(derivedMock);
   Message message=new Message();
   print(message);
-  Mockito.verify(mock).print(message);
+  Mockito.verify(derivedMock).print(message);
 }
