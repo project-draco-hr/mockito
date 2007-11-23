@@ -1,15 +1,14 @@
 {
   mock.oneArg(true);
-  mock.oneArg(false);
-  mock.threeArgumentMethod(1,"2","3");
+  mock.simpleMethod();
   verify(mock).oneArg(true);
   try {
-    verifyNoMoreInteractions(mock);
+    verify(mock).twoArgumentMethod(1,2);
     fail();
   }
  catch (  VerificationAssertionError expected) {
     String actualMessage=expected.getMessage();
-    String expectedMessage="\n" + "No more interactions expected on IMethods" + "\n"+ "Unexpected: IMethods.oneArg(false)";
+    String expectedMessage="\n" + "Expected but not invoked:" + "\n"+ "IMethods.twoArgumentMethod(1, 2)";
     assertEquals(expectedMessage,actualMessage);
   }
 }

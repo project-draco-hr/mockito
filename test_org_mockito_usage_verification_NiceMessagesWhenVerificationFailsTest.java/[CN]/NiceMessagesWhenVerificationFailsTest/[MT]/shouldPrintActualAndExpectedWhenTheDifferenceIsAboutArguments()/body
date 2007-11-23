@@ -1,0 +1,14 @@
+{
+  mock.oneArg(true);
+  mock.twoArgumentMethod(1,2);
+  verify(mock).oneArg(true);
+  try {
+    verify(mock).twoArgumentMethod(1,1000);
+    fail();
+  }
+ catch (  VerificationAssertionError expected) {
+    String actualMessage=expected.getMessage();
+    String expectedMessage="\n" + "Invocation differs from actual:" + "\n"+ "Expected: IMethods.twoArgumentMethod(1, 1000)"+ "\n"+ "Actual:   IMethods.twoArgumentMethod(1, 2)";
+    assertEquals(expectedMessage,actualMessage);
+  }
+}

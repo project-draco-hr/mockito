@@ -1,10 +1,11 @@
 {
   try {
     verify(mock).simpleMethod();
+    fail();
   }
  catch (  VerificationAssertionError expected) {
     String actualMessage=expected.getMessage();
-    String expectedMessage="\n" + "Failure on verify:" + "\n"+ "Expected: IMethods.simpleMethod()"+ "\n"+ "Actual: none";
+    String expectedMessage="\n" + "Expected but not invoked:" + "\n"+ "IMethods.simpleMethod()";
     assertEquals(expectedMessage,actualMessage);
   }
 }

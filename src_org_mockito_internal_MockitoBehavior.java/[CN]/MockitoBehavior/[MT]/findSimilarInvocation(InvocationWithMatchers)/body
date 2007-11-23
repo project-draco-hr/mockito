@@ -2,9 +2,9 @@
   for (  InvocationWithMatchers registeredInvocation : registeredInvocations) {
     String expectedMethodName=expectedInvocation.getMethod().getName();
     String registeredInvocationName=registeredInvocation.getMethod().getName();
-    if (expectedMethodName.equals(registeredInvocationName)) {
+    if (expectedMethodName.equals(registeredInvocationName) && !registeredInvocation.getInvocation().isVerified()) {
       return registeredInvocation;
     }
   }
-  return registeredInvocations.size() > 0 ? registeredInvocations.get(0) : null;
+  return null;
 }
