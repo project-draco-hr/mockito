@@ -4,7 +4,7 @@
   }
  catch (  VerificationAssertionError expected) {
     String actualMessage=expected.getMessage();
-    String expectedMessage="\n" + "Not invoked: IMethods.simpleMethod()";
+    String expectedMessage="\n" + "Failure on verify:" + "\n"+ "Not invoked: IMethods.simpleMethod()";
     assertEquals(expectedMessage,actualMessage);
   }
 }

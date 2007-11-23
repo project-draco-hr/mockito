@@ -7,7 +7,7 @@
     Mockito.verify(derivedMock).print(message);
   }
  catch (  VerificationAssertionError error) {
-    String expected="\n" + "Failure on verify:" + "\n"+ "Expected: DerivedInterface.print(Message)"+ "\n"+ "Actual: DerivedInterface.print(BaseMessage)";
+    String expected="\n" + "Failure on verify:" + "\n"+ "Expected: DerivedInterface.print(class org.mockito.usage.binding.IncorectBindingPuzzleFixedTest$Message)"+ "\n"+ "Actual: DerivedInterface.print(class org.mockito.usage.binding.IncorectBindingPuzzleFixedTest$BaseMessage)";
     assertEquals(expected,error.getMessage());
   }
 }

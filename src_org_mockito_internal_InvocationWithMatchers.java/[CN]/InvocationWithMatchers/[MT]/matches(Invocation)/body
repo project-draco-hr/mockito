@@ -1,3 +1,4 @@
 {
-  return this.invocation.getMock().equals(actual.getMock()) && this.invocation.getMethod().equals(actual.getMethod()) && matches(actual.getArguments());
+  boolean methodsAreEqual=areMethodsEqual(actual.getMethod());
+  return this.invocation.getMock().equals(actual.getMock()) && methodsAreEqual && matches(actual.getArguments());
 }
