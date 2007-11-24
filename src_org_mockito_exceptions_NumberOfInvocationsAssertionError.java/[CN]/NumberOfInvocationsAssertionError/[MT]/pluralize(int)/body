@@ -1,0 +1,3 @@
+{
+  return expectedInvoked == 1 ? "1 time" : expectedInvoked + " times";
+}

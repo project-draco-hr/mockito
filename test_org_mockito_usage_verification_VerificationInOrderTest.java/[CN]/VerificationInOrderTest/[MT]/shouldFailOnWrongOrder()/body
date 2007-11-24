@@ -1,0 +1,10 @@
+{
+  strictly.verify(list,1).add("one");
+  strictly.verify(map).put("two","two");
+  try {
+    strictly.verify(map,1).put("five","five");
+    fail();
+  }
+ catch (  StrictVerificationError e) {
+  }
+}

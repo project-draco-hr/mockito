@@ -1,0 +1,6 @@
+{
+  for (  Object mock : mocks) {
+    MockUtil.validateMock(mock);
+  }
+  return new StrictOrderVerifier();
+}

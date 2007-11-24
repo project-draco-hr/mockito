@@ -1,5 +1,4 @@
 {
-  LinkedList mock=Mockito.mock(LinkedList.class);
   mock.clear();
   mock.clear();
   mock.clear();
@@ -8,7 +7,8 @@
     Mockito.verify(mock,100).clear();
     fail();
   }
- catch (  AssertionError error) {
-    assertThat(error.getMessage(),equalTo("Expected to be invoked 100 times but was 3"));
+ catch (  NumberOfInvocationsAssertionError e) {
+    String expected="\n" + "LinkedList.clear()" + "\n"+ "Expected 100 times but was 3";
+    assertEquals(expected,e.getMessage());
   }
 }

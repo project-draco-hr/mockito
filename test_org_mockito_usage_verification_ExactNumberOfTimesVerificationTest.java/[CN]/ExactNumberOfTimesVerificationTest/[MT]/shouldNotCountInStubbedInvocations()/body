@@ -1,5 +1,4 @@
 {
-  LinkedList mock=Mockito.mock(LinkedList.class);
   Mockito.stub(mock.add("test")).andReturn(false);
   Mockito.stub(mock.add("test")).andReturn(true);
   mock.add("test");

@@ -1,7 +1,8 @@
 {
-  Mockito.verifyInOrder(list).add("one");
-  Mockito.verifyInOrder(map).put("one","two");
-  Mockito.verifyInOrder(list).add("three and four");
-  Mockito.verifyInOrder(map).put("five","five");
-  Mockito.verifyInOrder(set).add("six");
+  strictly.verify(list).add("one");
+  strictly.verify(map).put("two","two");
+  strictly.verify(list).add("three and four");
+  strictly.verify(map).put("five","five");
+  strictly.verify(set).add("six");
+  strictly.verifyNoMoreInteractions();
 }

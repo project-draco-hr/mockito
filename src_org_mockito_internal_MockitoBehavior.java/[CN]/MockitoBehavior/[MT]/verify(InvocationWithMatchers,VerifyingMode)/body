@@ -3,13 +3,13 @@
   if (verifyingMode.numberOfInvocationsMatters()) {
     int expectedInvoked=verifyingMode.getExactNumberOfInvocations();
     if (actuallyInvoked != expectedInvoked) {
-      throw new NumberOfInvocationsAssertionError(expectedInvoked,actuallyInvoked);
+      throw new NumberOfInvocationsAssertionError(expectedInvoked,actuallyInvoked,invocation);
     }
   }
  else {
     if (actuallyInvoked == 0) {
       InvocationWithMatchers similarInvocation=findSimilarInvocation(invocation);
-      String message="\n" + "Invocation differs from actual:" + "\n";
+      String message="\n" + "Invocation differs from actual" + "\n";
       String expected=invocation.toString();
       if (similarInvocation != null) {
         String actual=similarInvocation.toString();

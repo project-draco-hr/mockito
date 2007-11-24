@@ -6,7 +6,7 @@
   }
  catch (  VerificationAssertionError expected) {
     String actualMessage=expected.getMessage();
-    String expectedMessage="\n" + "Invocation differs from actual:" + "\n"+ "Expected: IMethods.simpleMethod(\"test\")"+ "\n"+ "Actual:   IMethods.simpleMethod()";
+    String expectedMessage="\n" + "Invocation differs from actual" + "\n"+ "Expected: IMethods.simpleMethod(\"test\")"+ "\n"+ "Actual:   IMethods.simpleMethod()";
     assertEquals(expectedMessage,actualMessage);
   }
 }
