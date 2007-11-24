@@ -1,8 +1,7 @@
 {
-  List mock=Mockito.mock(List.class);
   mock.clear();
-  Mockito.verify(mock).clear();
+  verify(mock).clear();
   mock.add("test");
-  Mockito.verify(mock).add("test");
-  Mockito.verifyNoMoreInteractions(mock);
+  verify(mock).add("test");
+  verifyNoMoreInteractions(mock);
 }

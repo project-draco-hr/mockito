@@ -1,0 +1,10 @@
+{
+  mock=Mockito.mock(DummyInterface.class);
+  stub(mock.getInt("blah"));
+  try {
+    verifyNoMoreInteractions(mock);
+    fail();
+  }
+ catch (  VerificationAssertionError e) {
+  }
+}

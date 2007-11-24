@@ -1,3 +1,3 @@
 {
-  return verify(mock,VerifyingMode.times(exactNumberOfInvocations));
+  return verify(mock,VerifyingMode.times(expectedNumberOfInvocations));
 }

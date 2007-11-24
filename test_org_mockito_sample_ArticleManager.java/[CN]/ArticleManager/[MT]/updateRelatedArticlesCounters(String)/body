@@ -1,0 +1,8 @@
+{
+  List<Article> articles=database.getArticlesFor("Guardian");
+  for (  Article article : articles) {
+    int numberOfRelatedArticles=calculator.countNumberOfRelatedArticles(article);
+    article.setNumberOfRelatedArticles(numberOfRelatedArticles);
+    database.save(article);
+  }
+}

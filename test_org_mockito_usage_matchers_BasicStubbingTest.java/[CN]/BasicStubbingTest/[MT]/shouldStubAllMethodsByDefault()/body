@@ -1,5 +1,4 @@
 {
-  DummyInterface mock=Mockito.mock(DummyInterface.class);
   assertEquals(0,mock.getInt("test"));
   assertEquals(0,mock.getInt("testTwo"));
   assertNull(mock.getString(0,null));

@@ -1,7 +1,12 @@
 {
-  List mock=Mockito.mock(List.class);
   mock.clear();
-  Mockito.verify(mock).clear();
-  Mockito.verify(mock).clear();
-  Mockito.verify(mock).clear();
+  mock.clear();
+  mockTwo.add("add");
+  verify(mock,anyTimes).clear();
+  verify(mockTwo,anyTimes).add("add");
+  try {
+    verify(mockTwo,anyTimes).add("foo");
+  }
+ catch (  VerificationAssertionError e) {
+  }
 }

@@ -1,0 +1,13 @@
+{
+  mockTwo.add("foo");
+  mock.clear();
+  mock.clear();
+  verify(mockTwo,anyTimes).add("foo");
+  try {
+    verify(mock).clear();
+    fail();
+  }
+ catch (  NumberOfInvocationsAssertionError e) {
+  }
+  ;
+}

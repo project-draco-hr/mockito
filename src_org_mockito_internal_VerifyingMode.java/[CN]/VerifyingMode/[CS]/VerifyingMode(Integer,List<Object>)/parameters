@@ -1,2 +1,2 @@
-Integer exactNumberOfInvocations
+Integer expectedNumberOfInvocations
 List<Object> mocksToBeVerifiedInSequence

@@ -1,10 +1,9 @@
 {
-  List mock=Mockito.mock(List.class);
   mock.clear();
   mock.add("foo");
-  Mockito.verify(mock).clear();
+  verify(mock).clear();
   try {
-    Mockito.verify(mock).add("bar");
+    verify(mock).add("bar");
     fail();
   }
  catch (  VerificationAssertionError expected) {

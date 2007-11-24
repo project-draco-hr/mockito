@@ -1,0 +1,3 @@
+{
+  Mockito.verify(mock,0).clear();
+}
