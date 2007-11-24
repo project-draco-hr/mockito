@@ -25,4 +25,7 @@
       throw new VerificationAssertionError(message);
     }
   }
+  if (verifyingMode.orderOfInvocationsMatters()) {
+    checkOrderOfInvocations(invocation,verifyingMode);
+  }
 }

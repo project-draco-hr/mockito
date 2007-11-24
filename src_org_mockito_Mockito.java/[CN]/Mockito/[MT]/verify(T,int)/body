@@ -1,5 +1,3 @@
 {
-  MockUtil.validateMock(mock);
-  MockitoState.instance().verifyingStarted(VerifyingMode.times(exactNumberOfInvocations));
-  return mock;
+  return verify(mock,VerifyingMode.times(exactNumberOfInvocations));
 }

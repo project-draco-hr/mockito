@@ -1,6 +1,3 @@
 {
-  if (exactNumberOfInvocations < 0) {
-    throw new MockitoException("Negative value is not allowed here");
-  }
-  return new VerifyingMode(exactNumberOfInvocations);
+  return new VerifyingMode(exactNumberOfInvocations,Collections.emptyList());
 }

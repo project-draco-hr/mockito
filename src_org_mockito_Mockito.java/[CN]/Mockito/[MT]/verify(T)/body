@@ -1,5 +1,3 @@
 {
-  MockUtil.validateMock(mock);
-  MockitoState.instance().verifyingStarted(VerifyingMode.anyTimes());
-  return mock;
+  return verify(mock,VerifyingMode.anyTimes());
 }

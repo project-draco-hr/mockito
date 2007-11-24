@@ -5,7 +5,6 @@
   for (  StackTraceElement trace : unfilteredStackTrace) {
     if (this.isLastStackElementToRemove(trace)) {
       lastToRemove=i;
-      break;
     }
     i++;
   }
