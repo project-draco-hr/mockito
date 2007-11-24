@@ -4,6 +4,7 @@
   stub(mock.add("quake")).andThrows(error);
   try {
     mock.add("quake");
+    fail();
   }
  catch (  Error e) {
     assertEquals(error,e);

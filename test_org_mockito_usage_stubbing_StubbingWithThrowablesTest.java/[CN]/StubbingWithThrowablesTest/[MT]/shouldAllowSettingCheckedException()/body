@@ -4,6 +4,7 @@
   stub(reader.read()).andThrows(ioException);
   try {
     reader.read();
+    fail();
   }
  catch (  Exception e) {
     assertEquals(ioException,e);
