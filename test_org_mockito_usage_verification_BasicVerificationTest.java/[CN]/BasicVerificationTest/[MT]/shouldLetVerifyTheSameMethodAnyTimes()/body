@@ -6,6 +6,7 @@
   verify(mockTwo,atLeastOnce()).add("add");
   try {
     verify(mockTwo,atLeastOnce()).add("foo");
+    fail();
   }
  catch (  VerificationAssertionError e) {
   }

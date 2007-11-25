@@ -2,6 +2,7 @@
   mock.oneArg(true);
   try {
     verifyNoMoreInteractions(mock);
+    fail();
   }
  catch (  VerificationAssertionError expected) {
     assertThat(expected,firstMethodOnStackEqualsTo("shouldFilterStackTraceOnVerifyNoMoreInteractions"));

@@ -1,6 +1,7 @@
 {
   try {
     verify(mock).simpleMethod();
+    fail();
   }
  catch (  VerificationAssertionError expected) {
     assertThat(expected,firstMethodOnStackEqualsTo("shouldFilterStackTraceOnVerify"));
