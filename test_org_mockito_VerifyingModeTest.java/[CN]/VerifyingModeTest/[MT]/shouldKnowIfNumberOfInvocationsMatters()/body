@@ -1,6 +1,0 @@
-{
-  VerifyingMode mode=VerifyingMode.anyTimes();
-  assertFalse(mode.numberOfInvocationsMatters());
-  mode=VerifyingMode.times(50);
-  assertTrue(mode.numberOfInvocationsMatters());
-}

@@ -2,7 +2,7 @@
   StrictOrderVerifier strictOrderVerifier=new StrictOrderVerifier();
   for (  Object mock : mocks) {
     MockUtil.validateMock(mock);
-    strictOrderVerifier.addMock(mock);
+    strictOrderVerifier.addMockToBeVerifiedInOrder(mock);
   }
   return strictOrderVerifier;
 }

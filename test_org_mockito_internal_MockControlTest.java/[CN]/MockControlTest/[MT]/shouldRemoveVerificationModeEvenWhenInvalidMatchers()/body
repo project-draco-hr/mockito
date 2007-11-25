@@ -2,7 +2,7 @@
   MockitoState state=MockitoState.instance();
   LastArguments lastArguments=LastArguments.instance();
   lastArguments.reportMatcher(new Equals("test"));
-  state.verifyingStarted(VerifyingMode.anyTimes());
+  state.verifyingStarted(VerifyingMode.atLeastOnce());
   MockControl control=new MockControl(state,lastArguments);
   try {
     control.invoke(null,String.class.getDeclaredMethod("toString"),new Object[]{});

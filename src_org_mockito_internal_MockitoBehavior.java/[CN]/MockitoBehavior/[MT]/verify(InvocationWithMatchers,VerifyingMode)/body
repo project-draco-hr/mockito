@@ -1,7 +1,8 @@
 {
   int actuallyInvoked=numberOfActualInvocations(invocation);
-  int expectedInvoked=verifyingMode.getExpectedNumberOfInvocations();
-  if (expectedInvoked == 1 && actuallyInvoked == 0) {
+  Integer expectedInvoked=verifyingMode.getExpectedNumberOfInvocations();
+  boolean atLeasOnce=verifyingMode.invokedAtLeastOnce();
+  if ((atLeasOnce || expectedInvoked == 1) && actuallyInvoked == 0) {
     InvocationWithMatchers similarInvocation=findSimilarInvocation(invocation);
     String message="\n" + "Invocation differs from actual" + "\n";
     String expected=invocation.toString();
@@ -18,7 +19,7 @@
     }
     throw new VerificationAssertionError(message);
   }
-  if (actuallyInvoked != expectedInvoked) {
+  if (!atLeasOnce && actuallyInvoked != expectedInvoked) {
     throw new NumberOfInvocationsAssertionError(expectedInvoked,actuallyInvoked,invocation);
   }
   if (verifyingMode.orderOfInvocationsMatters()) {
