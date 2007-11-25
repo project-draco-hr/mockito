@@ -1,0 +1,10 @@
+{
+  try {
+    verifyNoMoreInteractions();
+    fail();
+  }
+ catch (  MockitoException e) {
+    String expected="\n" + "verifyNoMoreInteractions() requires arguments." + "\n"+ "Pass mocks that should be verified.";
+    assertEquals(expected,e.getMessage());
+  }
+}

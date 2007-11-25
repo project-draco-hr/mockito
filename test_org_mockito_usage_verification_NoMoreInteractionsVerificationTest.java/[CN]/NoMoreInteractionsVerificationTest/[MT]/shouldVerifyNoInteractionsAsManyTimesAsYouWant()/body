@@ -1,5 +1,7 @@
 {
   List mock=mock(List.class);
   verifyNoMoreInteractions(mock);
+  verifyNoMoreInteractions(mock);
+  verifyZeroInteractions(mock);
   verifyZeroInteractions(mock);
 }

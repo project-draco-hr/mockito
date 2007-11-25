@@ -1,0 +1,5 @@
+{
+  if (mocks.length == 0) {
+    throw Exceptions.mocksHaveToBePassedAsArguments();
+  }
+}

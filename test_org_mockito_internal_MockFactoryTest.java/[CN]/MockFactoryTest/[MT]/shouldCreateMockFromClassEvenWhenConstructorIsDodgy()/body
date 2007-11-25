@@ -1,5 +1,5 @@
 {
   MockFactory<ClassWithDodgyConstructor> factory=new MockFactory<ClassWithDodgyConstructor>();
   ClassWithDodgyConstructor mock=factory.createMock(ClassWithDodgyConstructor.class,new MockAwareStub());
-  assertThat(mock,notNullValue());
+  assertNotNull(mock);
 }
