@@ -4,7 +4,7 @@
     fail();
   }
  catch (  MockitoException e) {
-    String expected="\n" + "verifyNoMoreInteractions() requires arguments." + "\n"+ "Pass mocks that should be verified.";
+    String expected="\n" + "Method requires arguments." + "\n"+ "Pass mocks that should be verified.";
     assertEquals(expected,e.getMessage());
   }
 }
