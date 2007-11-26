@@ -1,0 +1,8 @@
+{
+  int actuallyInvoked=numberOfActualInvocations(expected);
+  Integer expectedInvoked=verifyingMode.getExpectedNumberOfInvocations();
+  boolean atLeastOnce=verifyingMode.atLeastOnceMode();
+  if ((atLeastOnce || expectedInvoked == 1) && actuallyInvoked == 0) {
+    reportMissingInvocationError(expected);
+  }
+}

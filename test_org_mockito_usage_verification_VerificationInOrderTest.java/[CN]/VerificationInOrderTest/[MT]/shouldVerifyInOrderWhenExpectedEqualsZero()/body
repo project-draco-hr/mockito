@@ -1,8 +1,10 @@
 {
+  verify(mockOne,0).oneArg(false);
   verify(mockOne).simpleMethod(1);
   verify(mockTwo,2).simpleMethod(2);
   verify(mockThree).simpleMethod(3);
   verify(mockTwo).simpleMethod(2);
   verify(mockOne).simpleMethod(4);
+  verify(mockThree,0).oneArg(false);
   verifyNoMoreInteractions(mockOne,mockTwo,mockThree);
 }

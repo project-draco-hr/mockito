@@ -1,0 +1,3 @@
+{
+  strictly.verify(mockTwo,2).simpleMethod(2);
+}

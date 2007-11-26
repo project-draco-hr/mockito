@@ -1,0 +1,8 @@
+{
+  verify(mockOne,atLeastOnce()).simpleMethod(1);
+  verify(mockTwo,atLeastOnce()).simpleMethod(2);
+  verify(mockThree).simpleMethod(3);
+  verify(mockTwo).simpleMethod(2);
+  verify(mockOne,atLeastOnce()).simpleMethod(4);
+  verifyNoMoreInteractions(mockOne,mockTwo,mockThree);
+}

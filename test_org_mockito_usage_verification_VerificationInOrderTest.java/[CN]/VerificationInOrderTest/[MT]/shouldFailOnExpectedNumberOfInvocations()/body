@@ -1,3 +1,0 @@
-{
-  strictly.verify(list,2).add("xxx");
-}

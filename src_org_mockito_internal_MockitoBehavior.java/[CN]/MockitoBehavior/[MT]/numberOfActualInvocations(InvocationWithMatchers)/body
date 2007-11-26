@@ -3,11 +3,7 @@
   for (  InvocationWithMatchers registeredInvocation : registeredInvocations) {
     Invocation invocation=registeredInvocation.getInvocation();
     if (expectedInvocation.matches(invocation)) {
-      verifiedInvocations+=1;
-      invocation.markVerified();
-    }
- else {
-      verifiedInvocations+=0;
+      verifiedInvocations++;
     }
   }
   return verifiedInvocations;
