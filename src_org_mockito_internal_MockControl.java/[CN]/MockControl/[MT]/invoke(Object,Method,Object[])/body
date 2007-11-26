@@ -4,14 +4,14 @@
   List<IArgumentMatcher> lastMatchers=lastArguments.pullMatchers();
   validateMatchers(invocation,lastMatchers);
   List<IArgumentMatcher> processedMatchers=createEqualsMatchers(invocation,lastMatchers);
-  InvocationWithMatchers invocationWithMatchers=new InvocationWithMatchers(invocation,processedMatchers);
+  ExpectedInvocation expectedInvocation=new ExpectedInvocation(invocation,processedMatchers);
   if (verifyingMode != null) {
-    behavior.verify(invocationWithMatchers,verifyingMode);
+    behavior.verify(expectedInvocation,verifyingMode);
     return ToTypeMappings.emptyReturnValueFor(method.getReturnType());
   }
   mockitoState.reportLastControl(this);
   invocation.setSequenceNumber(mockitoState.nextSequenceNumber());
-  behavior.addInvocation(invocationWithMatchers);
+  behavior.addInvocation(expectedInvocation);
   if (throwableToBeSetOnVoidMethod != null) {
     andThrows(throwableToBeSetOnVoidMethod);
     throwableToBeSetOnVoidMethod=null;
