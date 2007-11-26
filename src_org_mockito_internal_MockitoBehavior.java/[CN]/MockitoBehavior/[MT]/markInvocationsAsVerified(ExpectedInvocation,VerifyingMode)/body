@@ -1,7 +1,7 @@
 {
   int verifiedSoFar=0;
   for (  Invocation invocation : registeredInvocations) {
-    boolean shouldMarkAsVerified=verifyingMode.atLeastOnceMode() || verifyingMode.getExpectedNumberOfInvocations() >= verifiedSoFar;
+    boolean shouldMarkAsVerified=verifyingMode.atLeastOnceMode() || verifyingMode.getExpectedNumberOfInvocations() > verifiedSoFar;
     if (expected.matches(invocation) && shouldMarkAsVerified) {
       invocation.markVerified();
       verifiedSoFar++;
