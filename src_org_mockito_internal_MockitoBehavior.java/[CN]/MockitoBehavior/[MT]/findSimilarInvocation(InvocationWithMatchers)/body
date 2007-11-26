@@ -1,8 +1,8 @@
 {
-  for (  InvocationWithMatchers registeredInvocation : registeredInvocations) {
+  for (  Invocation registeredInvocation : registeredInvocations) {
     String expectedMethodName=expectedInvocation.getMethod().getName();
     String registeredInvocationName=registeredInvocation.getMethod().getName();
-    if (expectedMethodName.equals(registeredInvocationName) && !registeredInvocation.getInvocation().isVerified()) {
+    if (expectedMethodName.equals(registeredInvocationName) && !registeredInvocation.isVerified()) {
       return registeredInvocation;
     }
   }

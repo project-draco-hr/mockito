@@ -10,7 +10,7 @@
     return ToTypeMappings.emptyReturnValueFor(method.getReturnType());
   }
   mockitoState.reportLastControl(this);
-  invocationWithMatchers.setSequenceNumber(mockitoState.nextSequenceNumber());
+  invocation.setSequenceNumber(mockitoState.nextSequenceNumber());
   behavior.addInvocation(invocationWithMatchers);
   if (throwableToBeSetOnVoidMethod != null) {
     andThrows(throwableToBeSetOnVoidMethod);

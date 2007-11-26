@@ -1,8 +1,7 @@
 {
   int verifiedInvocations=0;
-  for (  InvocationWithMatchers registeredInvocation : registeredInvocations) {
-    Invocation invocation=registeredInvocation.getInvocation();
-    if (expectedInvocation.matches(invocation)) {
+  for (  Invocation registeredInvocation : registeredInvocations) {
+    if (expectedInvocation.matches(registeredInvocation)) {
       verifiedInvocations++;
     }
   }

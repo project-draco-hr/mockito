@@ -8,5 +8,4 @@
   list.add("three and four");
   map.put("five","five");
   set.add("six");
-  strictly=strictOrderVerifier(list,map,set);
 }

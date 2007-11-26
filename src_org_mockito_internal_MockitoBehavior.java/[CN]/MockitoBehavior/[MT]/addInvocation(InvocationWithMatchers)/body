@@ -1,3 +1,4 @@
 {
-  this.registeredInvocations.add(invocation);
+  this.registeredInvocations.add(invocation.getInvocation());
+  this.invocationForStubbing=invocation;
 }

@@ -1,0 +1,10 @@
+{
+  StringBuffer result=new StringBuffer();
+  result.append(getMockAndMethodName());
+  result.append("(");
+  for (  Object arg : this.arguments) {
+    new Equals(arg).appendTo(result);
+    result.append(", ");
+  }
+  return result.toString().replaceFirst(", $","").concat(")");
+}

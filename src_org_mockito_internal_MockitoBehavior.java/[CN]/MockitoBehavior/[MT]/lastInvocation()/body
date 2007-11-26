@@ -1,3 +1,0 @@
-{
-  return registeredInvocations.get(registeredInvocations.size() - 1).getInvocation();
-}

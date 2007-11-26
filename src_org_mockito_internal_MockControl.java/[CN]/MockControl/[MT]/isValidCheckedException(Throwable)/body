@@ -1,5 +1,5 @@
 {
-  Invocation lastInvocation=behavior.lastInvocation();
+  Invocation lastInvocation=behavior.getInvocationForStubbing().getInvocation();
   Class<?>[] exceptions=lastInvocation.getMethod().getExceptionTypes();
   Class<?> throwableClass=throwable.getClass();
   for (  Class<?> exception : exceptions) {
