@@ -1,0 +1,5 @@
+{
+  toLowerCase=String.class.getMethod("toLowerCase",new Class[]{});
+  toUpperCase=String.class.getMethod("toUpperCase",new Class[]{});
+  behavior=new MockitoBehavior();
+}
