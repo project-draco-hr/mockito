@@ -6,6 +6,7 @@
   strictly.verify(mockOne).simpleMethod(4);
   try {
     strictly.verify(mockOne).simpleMethod(4);
+    fail();
   }
  catch (  StrictVerificationError e) {
   }
