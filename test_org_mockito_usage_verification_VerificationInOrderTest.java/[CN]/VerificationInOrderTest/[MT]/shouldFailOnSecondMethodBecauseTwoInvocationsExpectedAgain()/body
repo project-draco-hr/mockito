@@ -1,0 +1,9 @@
+{
+  strictly.verify(mockOne,1).simpleMethod(1);
+  try {
+    strictly.verify(mockTwo,0).simpleMethod(2);
+    fail();
+  }
+ catch (  NumberOfInvocationsAssertionError e) {
+  }
+}

@@ -1,8 +1,0 @@
-{
-  behavior.markInvocationsAsVerified(toLowerCaseInvocation,VerifyingMode.times(3));
-  List<Invocation> invocations=behavior.getRegisteredInvocations();
-  assertEquals(true,invocations.get(0).isVerified());
-  assertEquals(true,invocations.get(1).isVerified());
-  assertEquals(false,invocations.get(2).isVerified());
-  assertEquals(true,invocations.get(3).isVerified());
-}

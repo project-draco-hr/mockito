@@ -1,0 +1,8 @@
+{
+  strictly.verify(mockOne).simpleMethod(1);
+  try {
+    strictly.verify(mockOne).simpleMethod(1);
+  }
+ catch (  StrictVerificationError e) {
+  }
+}

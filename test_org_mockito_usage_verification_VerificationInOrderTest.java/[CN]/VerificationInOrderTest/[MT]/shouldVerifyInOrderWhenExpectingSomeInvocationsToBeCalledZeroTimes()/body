@@ -1,0 +1,10 @@
+{
+  strictly.verify(mockOne,0).oneArg(false);
+  strictly.verify(mockOne).simpleMethod(1);
+  strictly.verify(mockTwo,2).simpleMethod(2);
+  strictly.verify(mockThree).simpleMethod(3);
+  strictly.verify(mockTwo).simpleMethod(2);
+  strictly.verify(mockOne).simpleMethod(4);
+  strictly.verify(mockThree,0).oneArg(false);
+  verifyNoMoreInteractions(mockOne,mockTwo,mockThree);
+}

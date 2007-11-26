@@ -2,6 +2,6 @@
   if (expectedNumberOfInvocations != null && expectedNumberOfInvocations.intValue() < 0) {
     throw new MockitoException("Negative value is not allowed here");
   }
-  this.expectedNumberOfInvocations=expectedNumberOfInvocations;
+  this.expectedInvocationCount=expectedNumberOfInvocations;
   this.mocksToBeVerifiedInSequence=mocksToBeVerifiedInSequence;
 }

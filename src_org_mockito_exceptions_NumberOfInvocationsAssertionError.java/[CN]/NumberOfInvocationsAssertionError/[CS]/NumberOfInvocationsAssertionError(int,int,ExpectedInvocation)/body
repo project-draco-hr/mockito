@@ -1,3 +1,3 @@
 {
-  super("\n" + invocation.toString() + "\n"+ "Expected "+ pluralize(expectedInvoked)+ " but was "+ actuallyInvoked);
+  super("\n" + expected.toString() + "\n"+ "Expected "+ pluralize(expectedCount)+ " but was "+ actualCount);
 }

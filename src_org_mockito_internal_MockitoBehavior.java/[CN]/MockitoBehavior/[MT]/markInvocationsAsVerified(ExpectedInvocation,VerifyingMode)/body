@@ -1,10 +1,16 @@
 {
-  int verifiedSoFar=0;
-  for (  Invocation invocation : registeredInvocations) {
-    boolean shouldMarkAsVerified=verifyingMode.atLeastOnceMode() || verifyingMode.getExpectedNumberOfInvocations() > verifiedSoFar;
-    if (expected.matches(invocation) && shouldMarkAsVerified) {
-      invocation.markVerified();
-      verifiedSoFar++;
+  if (mode.expectedCountIsZero()) {
+    return;
+  }
+  if (mode.orderOfInvocationsMatters()) {
+    List<InvocationChunk> chunks=getUnverifiedInvocationChunks(mode);
+    chunks.get(0).markAllInvocationsAsVerified();
+  }
+ else {
+    for (    Invocation invocation : registeredInvocations) {
+      if (expected.matches(invocation)) {
+        invocation.markVerified();
+      }
     }
   }
 }

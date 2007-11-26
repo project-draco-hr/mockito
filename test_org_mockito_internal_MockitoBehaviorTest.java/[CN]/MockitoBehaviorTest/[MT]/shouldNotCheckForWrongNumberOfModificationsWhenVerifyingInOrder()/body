@@ -1,0 +1,8 @@
+{
+  try {
+    behavior.checkForWrongNumberOfInvocations(toLowerCaseInvocation,VerifyingMode.inOrder(1,Arrays.asList(new Object())));
+  }
+ catch (  NumberOfInvocationsAssertionError e) {
+    fail();
+  }
+}

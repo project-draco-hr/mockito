@@ -1,6 +1,9 @@
 {
+  if (verifyingMode.orderOfInvocationsMatters()) {
+    return;
+  }
   int actuallyInvoked=numberOfActualInvocations(expected);
-  Integer expectedInvoked=verifyingMode.getExpectedNumberOfInvocations();
+  Integer expectedInvoked=verifyingMode.expectedCount();
   boolean atLeastOnce=verifyingMode.atLeastOnceMode();
   if (!atLeastOnce && actuallyInvoked != expectedInvoked) {
     throw new NumberOfInvocationsAssertionError(expectedInvoked,actuallyInvoked,expected);

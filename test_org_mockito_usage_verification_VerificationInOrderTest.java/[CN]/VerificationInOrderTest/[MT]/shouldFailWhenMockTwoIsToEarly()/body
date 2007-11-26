@@ -1,0 +1,10 @@
+{
+  strictly.verify(mockOne).simpleMethod(1);
+  strictly.verify(mockTwo,2).simpleMethod(2);
+  try {
+    strictly.verify(mockTwo,1).simpleMethod(2);
+    fail();
+  }
+ catch (  StrictVerificationError e) {
+  }
+}
