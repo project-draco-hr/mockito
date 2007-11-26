@@ -1,9 +1,9 @@
 {
-  for (  Invocation registeredInvocation : registeredInvocations) {
+  for (  Invocation registered : registeredInvocations) {
     String expectedMethodName=expectedInvocation.getMethod().getName();
-    String registeredInvocationName=registeredInvocation.getMethod().getName();
-    if (expectedMethodName.equals(registeredInvocationName) && !registeredInvocation.isVerified()) {
-      return registeredInvocation;
+    String registeredInvocationName=registered.getMethod().getName();
+    if (expectedMethodName.equals(registeredInvocationName) && !registered.isVerified()) {
+      return registered;
     }
   }
   return null;

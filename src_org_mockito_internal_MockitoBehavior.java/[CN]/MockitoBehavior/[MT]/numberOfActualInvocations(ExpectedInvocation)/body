@@ -1,9 +1,9 @@
 {
-  int verifiedInvocations=0;
+  int actual=0;
   for (  Invocation registeredInvocation : registeredInvocations) {
     if (expectedInvocation.matches(registeredInvocation)) {
-      verifiedInvocations++;
+      actual++;
     }
   }
-  return verifiedInvocations;
+  return actual;
 }
