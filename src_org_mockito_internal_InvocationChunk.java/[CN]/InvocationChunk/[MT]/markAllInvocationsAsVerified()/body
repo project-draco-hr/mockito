@@ -1,5 +1,6 @@
 {
   for (  Invocation invocation : invocations) {
+    invocation.markVerifiedInOrder();
     invocation.markVerified();
   }
 }

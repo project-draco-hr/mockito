@@ -1,6 +1,6 @@
 {
   Invocation similarInvocation=registeredInvocations.findSimilarInvocation(invocation);
-  String message="\n" + "Invocation differs from actual" + "\n";
+  String message=null;
   String expected=invocation.toString();
   if (similarInvocation != null) {
     String actual=similarInvocation.toString();
@@ -8,7 +8,7 @@
       expected=invocation.getInvocation().toStringWithArgumentTypes();
       actual=similarInvocation.toStringWithArgumentTypes();
     }
-    message+="Expected: " + expected + "\n"+ "Actual:   "+ actual;
+    message="\n" + "Invocation differs from actual" + "\n"+ "Expected: " + expected + "\n"+ "Actual:   "+ actual;
   }
  else {
     message="\n" + "Expected but not invoked:" + "\n"+ expected;

@@ -4,7 +4,9 @@
   registered.markInvocationsAsVerified(new ExpectedInvocation(null,EMPTY_LIST),mode);
   List<Invocation> invocations=registered.all();
   assertEquals(true,invocations.get(0).isVerified());
+  assertEquals(true,invocations.get(0).isVerifiedInOrder());
   assertEquals(true,invocations.get(1).isVerified());
+  assertEquals(true,invocations.get(1).isVerifiedInOrder());
   assertEquals(false,invocations.get(2).isVerified());
   assertEquals(false,invocations.get(3).isVerified());
 }

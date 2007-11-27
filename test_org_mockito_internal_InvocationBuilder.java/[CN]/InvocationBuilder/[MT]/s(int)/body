@@ -1,0 +1,4 @@
+{
+  this.sequenceNumber=sequenceNumber;
+  return this;
+}

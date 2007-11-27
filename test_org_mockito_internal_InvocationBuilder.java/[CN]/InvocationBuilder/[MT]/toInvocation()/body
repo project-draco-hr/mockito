@@ -1,0 +1,11 @@
+{
+  Method method;
+  try {
+    method=IMethods.class.getMethod(methodName,new Class[]{});
+  }
+ catch (  Exception e) {
+    throw new RuntimeException(e);
+  }
+  Invocation i=new Invocation("mock",method,new Object[]{},sequenceNumber);
+  return i;
+}
