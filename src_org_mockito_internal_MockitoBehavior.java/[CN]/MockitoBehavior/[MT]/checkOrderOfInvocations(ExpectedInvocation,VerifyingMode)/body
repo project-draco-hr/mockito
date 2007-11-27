@@ -2,7 +2,7 @@
   if (!mode.orderOfInvocationsMatters()) {
     return;
   }
-  List<InvocationChunk> chunks=getUnverifiedInvocationChunks(mode);
+  List<InvocationChunk> chunks=registeredInvocations.unverifiedInvocationChunks(mode);
   if (mode.expectedCountIsZero() && !chunks.isEmpty() && expected.matches(chunks.get(0).getInvocation())) {
     throw new NumberOfInvocationsAssertionError(0,chunks.get(0).getCount(),expected);
   }

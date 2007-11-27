@@ -1,6 +1,6 @@
 {
   VerifyingMode verifyingMode=mockitoState.pullVerifyingMode();
-  Invocation invocation=new Invocation(proxy,method,args);
+  Invocation invocation=new Invocation(proxy,method,args,mockitoState.nextSequenceNumber());
   List<IArgumentMatcher> lastMatchers=lastArguments.pullMatchers();
   validateMatchers(invocation,lastMatchers);
   List<IArgumentMatcher> processedMatchers=createEqualsMatchers(invocation,lastMatchers);
@@ -10,7 +10,6 @@
     return ToTypeMappings.emptyReturnValueFor(method.getReturnType());
   }
   mockitoState.reportLastControl(this);
-  invocation.setSequenceNumber(mockitoState.nextSequenceNumber());
   behavior.addInvocation(expectedInvocation);
   if (throwableToBeSetOnVoidMethod != null) {
     andThrows(throwableToBeSetOnVoidMethod);

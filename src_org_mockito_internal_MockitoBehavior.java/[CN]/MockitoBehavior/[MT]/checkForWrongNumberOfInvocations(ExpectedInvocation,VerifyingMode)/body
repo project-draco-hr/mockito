@@ -2,7 +2,7 @@
   if (verifyingMode.orderOfInvocationsMatters()) {
     return;
   }
-  int actuallyInvoked=numberOfActualInvocations(expected);
+  int actuallyInvoked=registeredInvocations.countActual(expected);
   Integer expectedInvoked=verifyingMode.expectedCount();
   boolean atLeastOnce=verifyingMode.atLeastOnceMode();
   if (!atLeastOnce && actuallyInvoked != expectedInvoked) {

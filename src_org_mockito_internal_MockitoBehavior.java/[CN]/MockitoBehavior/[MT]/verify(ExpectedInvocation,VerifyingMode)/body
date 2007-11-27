@@ -2,5 +2,5 @@
   checkForMissingInvocation(expected,verifyingMode);
   checkOrderOfInvocations(expected,verifyingMode);
   checkForWrongNumberOfInvocations(expected,verifyingMode);
-  markInvocationsAsVerified(expected,verifyingMode);
+  registeredInvocations.markInvocationsAsVerified(expected,verifyingMode);
 }

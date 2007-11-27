@@ -1,3 +1,5 @@
 {
-  behavior.checkForWrongNumberOfInvocations(toLowerCaseInvocation,VerifyingMode.inOrder(1,Arrays.asList(new Object())));
+  VerifyingMode inOrder=VerifyingMode.inOrder(1,Arrays.asList(new Object()));
+  assertTrue(inOrder.orderOfInvocationsMatters());
+  behavior.checkForWrongNumberOfInvocations(toLowerCaseInvocation,inOrder);
 }

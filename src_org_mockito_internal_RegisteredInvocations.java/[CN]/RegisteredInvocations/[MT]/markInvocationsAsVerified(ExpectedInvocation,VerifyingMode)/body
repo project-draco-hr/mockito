@@ -1,0 +1,16 @@
+{
+  if (mode.expectedCountIsZero()) {
+    return;
+  }
+  if (mode.orderOfInvocationsMatters()) {
+    List<InvocationChunk> chunks=unverifiedInvocationChunks(mode);
+    chunks.get(0).markAllInvocationsAsVerified();
+  }
+ else {
+    for (    Invocation invocation : registeredInvocations) {
+      if (expected.matches(invocation)) {
+        invocation.markVerified();
+      }
+    }
+  }
+}

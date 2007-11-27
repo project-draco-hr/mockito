@@ -1,13 +1,5 @@
 {
   Method toLowerCase=String.class.getMethod("toLowerCase",new Class[]{});
-  Method toUpperCase=String.class.getMethod("toUpperCase",new Class[]{});
-  toLowerCaseInvocation=new ExpectedInvocation(new Invocation("mock",toLowerCase,new Object[]{}),Collections.EMPTY_LIST);
-  toLowerCaseInvocationTwo=new ExpectedInvocation(new Invocation("mock",toLowerCase,new Object[]{}),Collections.EMPTY_LIST);
-  toLowerCaseInvocationThree=new ExpectedInvocation(new Invocation("mock",toLowerCase,new Object[]{}),Collections.EMPTY_LIST);
-  toUpperCaseInvocation=new ExpectedInvocation(new Invocation("mock",toUpperCase,new Object[]{}),Collections.EMPTY_LIST);
+  toLowerCaseInvocation=new ExpectedInvocation(new Invocation("mock",toLowerCase,new Object[]{},0),Collections.EMPTY_LIST);
   behavior=new MockitoBehavior();
-  behavior.addInvocation(toLowerCaseInvocation);
-  behavior.addInvocation(toLowerCaseInvocationTwo);
-  behavior.addInvocation(toUpperCaseInvocation);
-  behavior.addInvocation(toLowerCaseInvocationThree);
 }

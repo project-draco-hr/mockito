@@ -1,5 +1,5 @@
 {
-  for (  Invocation registeredInvocation : registeredInvocations) {
+  for (  Invocation registeredInvocation : registeredInvocations.all()) {
     if (!registeredInvocation.isVerified()) {
       String mockName=Namer.nameForMock(mock);
       throw new VerificationAssertionError("\n" + verificationErrorMessage + " on "+ mockName+ "\n"+ "Unexpected: "+ registeredInvocation.toString());

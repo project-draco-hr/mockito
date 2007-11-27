@@ -1,5 +1,5 @@
 {
-  int actualCount=numberOfActualInvocations(expected);
+  int actualCount=registeredInvocations.countActual(expected);
   Integer expectedCount=verifyingMode.expectedCount();
   boolean atLeastOnce=verifyingMode.atLeastOnceMode();
   if ((atLeastOnce || expectedCount == 1) && actualCount == 0) {

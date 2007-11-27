@@ -1,0 +1,6 @@
+{
+  this.mock=mock;
+  this.method=method;
+  this.arguments=expandVarArgs(method.isVarArgs(),args);
+  this.sequenceNumber=sequenceNumber;
+}

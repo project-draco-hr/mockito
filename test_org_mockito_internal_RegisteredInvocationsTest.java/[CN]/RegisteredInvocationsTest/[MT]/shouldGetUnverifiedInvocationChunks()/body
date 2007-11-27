@@ -1,0 +1,15 @@
+{
+  Object mock=new Object();
+  List<InvocationChunk> chunks=registered.unverifiedInvocationChunks(VerifyingMode.inOrder(null,asList(mock)));
+  assertEquals(3,chunks.size());
+  InvocationChunk firstChunk=chunks.get(0);
+  assertEquals(2,firstChunk.getCount());
+  assertEquals(toLowerCaseInvocation,firstChunk.getInvocation());
+  assertEquals(toLowerCaseInvocationTwo,firstChunk.getInvocation());
+  InvocationChunk secondChunk=chunks.get(1);
+  assertEquals(1,secondChunk.getCount());
+  assertEquals(toUpperCaseInvocation,secondChunk.getInvocation());
+  InvocationChunk thirdChunk=chunks.get(2);
+  assertEquals(1,thirdChunk.getCount());
+  assertEquals(toLowerCaseInvocationThree,thirdChunk.getInvocation());
+}

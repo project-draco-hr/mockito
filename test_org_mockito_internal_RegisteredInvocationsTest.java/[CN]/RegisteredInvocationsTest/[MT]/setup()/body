@@ -1,0 +1,18 @@
+{
+  Method toLowerCase=String.class.getMethod("toLowerCase",new Class[]{});
+  Method toUpperCase=String.class.getMethod("toUpperCase",new Class[]{});
+  toLowerCaseInvocation=new Invocation("mock",toLowerCase,new Object[]{},1);
+  toLowerCaseInvocationTwo=new Invocation("mock",toLowerCase,new Object[]{},2);
+  toUpperCaseInvocation=new Invocation("mock",toUpperCase,new Object[]{},3);
+  toLowerCaseInvocationThree=new Invocation("mock",toLowerCase,new Object[]{},4);
+  registered=new RegisteredInvocations(new InvocationsFinder(){
+    public List<Invocation> allInvocationsInOrder(    List<Object> mocks){
+      return Arrays.asList(toLowerCaseInvocation,toLowerCaseInvocationTwo,toUpperCaseInvocation,toLowerCaseInvocationThree);
+    }
+  }
+);
+  registered.add(toLowerCaseInvocation);
+  registered.add(toLowerCaseInvocationTwo);
+  registered.add(toUpperCaseInvocation);
+  registered.add(toLowerCaseInvocationThree);
+}

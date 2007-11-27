@@ -1,5 +1,5 @@
 {
-  Invocation similarInvocation=findSimilarInvocation(invocation);
+  Invocation similarInvocation=registeredInvocations.findSimilarInvocation(invocation);
   String message="\n" + "Invocation differs from actual" + "\n";
   String expected=invocation.toString();
   if (similarInvocation != null) {
