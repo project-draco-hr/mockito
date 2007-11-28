@@ -1,5 +1,7 @@
 {
+  ExpectedInvocation invocation=new ExpectedInvocation(new InvocationBuilder().toInvocation(),Collections.EMPTY_LIST);
+  MockitoBehavior behavior=new MockitoBehavior();
   VerifyingMode inOrder=VerifyingMode.inOrder(1,Arrays.asList(new Object()));
   assertTrue(inOrder.orderOfInvocationsMatters());
-  behavior.checkForWrongNumberOfInvocations(toLowerCaseInvocation,inOrder);
+  behavior.checkForWrongNumberOfInvocations(invocation,inOrder);
 }

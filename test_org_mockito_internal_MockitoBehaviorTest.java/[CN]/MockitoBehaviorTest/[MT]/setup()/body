@@ -1,5 +1,0 @@
-{
-  Method toLowerCase=String.class.getMethod("toLowerCase",new Class[]{});
-  toLowerCaseInvocation=new ExpectedInvocation(new Invocation("mock",toLowerCase,new Object[]{},0),Collections.EMPTY_LIST);
-  behavior=new MockitoBehavior();
-}
