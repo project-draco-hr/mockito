@@ -1,8 +1,8 @@
 {
   Object mock=new Object();
-  registered.markInvocationsAsVerified(new ExpectedInvocation(simpleMethodInvocation,EMPTY_LIST),VerifyingMode.inOrder(null,asList(mock)));
-  registered.markInvocationsAsVerified(new ExpectedInvocation(differentMethodInvocation,EMPTY_LIST),VerifyingMode.inOrder(null,asList(mock)));
-  registered.markInvocationsAsVerified(new ExpectedInvocation(simpleMethodInvocation,EMPTY_LIST),VerifyingMode.inOrder(null,asList(mock)));
-  List<InvocationChunk> chunks=registered.unverifiedInvocationChunks(VerifyingMode.inOrder(null,asList(mock)));
+  registered.markInvocationsAsVerified(new ExpectedInvocation(simpleMethodInvocation),inOrder(null,asList(mock)));
+  registered.markInvocationsAsVerified(new ExpectedInvocation(differentMethodInvocation),inOrder(null,asList(mock)));
+  registered.markInvocationsAsVerified(new ExpectedInvocation(simpleMethodInvocation),inOrder(null,asList(mock)));
+  List<InvocationChunk> chunks=registered.unverifiedInvocationChunks(inOrder(null,asList(mock)));
   assertEquals(0,chunks.size());
 }

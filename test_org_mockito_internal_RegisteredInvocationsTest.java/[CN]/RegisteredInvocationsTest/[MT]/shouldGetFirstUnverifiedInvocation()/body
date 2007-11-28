@@ -1,7 +1,7 @@
 {
   assertSame(simpleMethodInvocation,registered.getFirstUnverified());
-  registered.markInvocationsAsVerified(new ExpectedInvocation(simpleMethodInvocation,EMPTY_LIST),VerifyingMode.atLeastOnce());
+  registered.markInvocationsAsVerified(new ExpectedInvocation(simpleMethodInvocation),atLeastOnce());
   assertSame(differentMethodInvocation,registered.getFirstUnverified());
-  registered.markInvocationsAsVerified(new ExpectedInvocation(differentMethodInvocation,EMPTY_LIST),VerifyingMode.atLeastOnce());
+  registered.markInvocationsAsVerified(new ExpectedInvocation(differentMethodInvocation),atLeastOnce());
   assertNull(registered.getFirstUnverified());
 }

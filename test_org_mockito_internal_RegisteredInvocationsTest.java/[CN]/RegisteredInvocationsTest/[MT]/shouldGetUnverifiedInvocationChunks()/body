@@ -1,6 +1,6 @@
 {
   Object mock=new Object();
-  List<InvocationChunk> chunks=registered.unverifiedInvocationChunks(VerifyingMode.inOrder(null,asList(mock)));
+  List<InvocationChunk> chunks=registered.unverifiedInvocationChunks(inOrder(null,asList(mock)));
   assertEquals(3,chunks.size());
   InvocationChunk firstChunk=chunks.get(0);
   assertEquals(2,firstChunk.getCount());

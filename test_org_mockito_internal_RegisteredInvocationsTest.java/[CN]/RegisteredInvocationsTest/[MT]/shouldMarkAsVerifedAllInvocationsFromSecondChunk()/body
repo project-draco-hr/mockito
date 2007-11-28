@@ -1,9 +1,9 @@
 {
-  VerifyingMode mode=VerifyingMode.inOrder(null,Arrays.asList(new Object()));
+  VerifyingMode mode=inOrder(null,Arrays.asList(new Object()));
   assertTrue(mode.orderOfInvocationsMatters());
   Invocation doesntMatter=null;
-  registered.markInvocationsAsVerified(new ExpectedInvocation(doesntMatter,EMPTY_LIST),mode);
-  registered.markInvocationsAsVerified(new ExpectedInvocation(doesntMatter,EMPTY_LIST),mode);
+  registered.markInvocationsAsVerified(new ExpectedInvocation(doesntMatter),mode);
+  registered.markInvocationsAsVerified(new ExpectedInvocation(doesntMatter),mode);
   List<Invocation> invocations=registered.all();
   assertEquals(true,invocations.get(2).isVerified());
   assertEquals(true,invocations.get(2).isVerifiedInOrder());

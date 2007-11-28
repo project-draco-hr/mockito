@@ -9,6 +9,6 @@
     }
   }
 );
-  registered.unverifiedInvocationChunks(VerifyingMode.inOrder(null,dummyMocks));
+  registered.unverifiedInvocationChunks(inOrder(null,dummyMocks));
   assertEquals("InvocationsFinder was asked",s.toString());
 }
