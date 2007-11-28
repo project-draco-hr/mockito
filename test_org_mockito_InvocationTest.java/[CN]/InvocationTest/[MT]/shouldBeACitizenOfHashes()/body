@@ -1,0 +1,6 @@
+{
+  Map map=new HashMap();
+  map.put(call,"one");
+  map.put(nonEqualCall,"two");
+  assertEquals(2,map.size());
+}

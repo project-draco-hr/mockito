@@ -8,8 +8,8 @@
     method=IMethods.class.getMethod(methodName,argTypes.toArray(new Class[argTypes.size()]));
   }
  catch (  Exception e) {
-    throw new RuntimeException(e);
+    throw new RuntimeException("builder only creates invocations of IMethods interface",e);
   }
-  Invocation i=new Invocation("mock",method,args,sequenceNumber);
+  Invocation i=new Invocation(mock,method,args,sequenceNumber);
   return i;
 }

@@ -1,0 +1,8 @@
+{
+  Invocation invocation=new InvocationBuilder().toInvocation();
+  Invocation invocationTwo=new InvocationBuilder().args("blah").toInvocation();
+  Map map=new HashMap();
+  map.put(invocation,"one");
+  map.put(invocationTwo,"two");
+  assertEquals(2,map.size());
+}

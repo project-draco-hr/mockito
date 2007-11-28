@@ -1,5 +1,5 @@
 {
-  call=new InvocationBuilder().args("").seq(1).toInvocation();
-  equalCall=new InvocationBuilder().args("").seq(2).toInvocation();
-  nonEqualCall=new InvocationBuilder().args("X").seq(3).toInvocation();
+  call=new InvocationBuilder().args(" ").mock("mock").seq(1).toInvocation();
+  equalCall=new InvocationBuilder().args(" ").mock("mock").seq(2).toInvocation();
+  nonEqualCall=new InvocationBuilder().args("X").mock("mock").seq(3).toInvocation();
 }

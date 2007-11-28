@@ -1,0 +1,9 @@
+{
+  IArgumentMatcher m=new Equals(1);
+  IArgumentMatcher mTwo=new Equals(2);
+  ExpectedInvocation withMatchers=new ExpectedInvocation(new InvocationBuilder().toInvocation(),Arrays.asList(m));
+  ExpectedInvocation withEqualMatchers=new ExpectedInvocation(new InvocationBuilder().toInvocation(),Arrays.asList(m));
+  ExpectedInvocation withoutEqualMatchers=new ExpectedInvocation(new InvocationBuilder().toInvocation(),Arrays.asList(mTwo));
+  assertTrue(withMatchers.equals(withEqualMatchers));
+  assertFalse(withMatchers.equals(withoutEqualMatchers));
+}
