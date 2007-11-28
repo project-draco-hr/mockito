@@ -1,0 +1,9 @@
+{
+  try {
+    createStrictOrderVerifier();
+    fail();
+  }
+ catch (  MockitoException expected) {
+    assertThat(expected,firstMethodOnStackEqualsTo("shouldFilterStacktraceWhenStrictlyThrowsMockitoException"));
+  }
+}

@@ -1,5 +1,4 @@
 {
-  LinkedList mock=mock(LinkedList.class);
   Error error=new Error();
   stub(mock.add("quake")).andThrows(error);
   try {

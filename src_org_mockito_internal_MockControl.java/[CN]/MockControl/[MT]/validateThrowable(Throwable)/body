@@ -1,11 +1,11 @@
 {
   if (throwable == null) {
-    throw new MockitoException("Cannot set null throwable");
+    Exceptions.cannotStubWithNullThrowable();
   }
   if (throwable instanceof RuntimeException || throwable instanceof Error) {
     return;
   }
   if (!isValidCheckedException(throwable)) {
-    throw new MockitoException("Given checked exception is invalid for this method");
+    Exceptions.checkedExceptionInvalid(throwable);
   }
 }

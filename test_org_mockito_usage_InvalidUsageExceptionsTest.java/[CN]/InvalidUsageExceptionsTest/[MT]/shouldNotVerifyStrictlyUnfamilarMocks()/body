@@ -1,0 +1,4 @@
+{
+  Strictly strictly=createStrictOrderVerifier(mock);
+  strictly.verify(mockTwo).clear();
+}

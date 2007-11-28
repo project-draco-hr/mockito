@@ -1,0 +1,10 @@
+{
+  try {
+    Strictly strictly=createStrictOrderVerifier(mock);
+    strictly.verify(null);
+    fail();
+  }
+ catch (  MockitoException expected) {
+    assertThat(expected,firstMethodOnStackEqualsTo("shouldFilterStacktraceWhenStrictlyVerifies"));
+  }
+}

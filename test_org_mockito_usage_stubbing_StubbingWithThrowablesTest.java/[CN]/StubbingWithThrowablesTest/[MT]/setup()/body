@@ -1,0 +1,3 @@
+{
+  mock=mock(LinkedList.class);
+}

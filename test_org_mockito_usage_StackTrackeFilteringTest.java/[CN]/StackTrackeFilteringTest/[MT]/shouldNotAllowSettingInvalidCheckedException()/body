@@ -1,0 +1,9 @@
+{
+  try {
+    stub(mock.oneArg(true)).andThrows(new Exception());
+    fail();
+  }
+ catch (  MockitoException expected) {
+    assertThat(expected,firstMethodOnStackEqualsTo("shouldNotAllowSettingInvalidCheckedException"));
+  }
+}

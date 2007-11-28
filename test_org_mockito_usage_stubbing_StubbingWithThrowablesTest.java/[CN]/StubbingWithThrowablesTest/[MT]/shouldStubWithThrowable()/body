@@ -1,5 +1,4 @@
 {
-  LinkedList mock=mock(LinkedList.class);
   IllegalArgumentException expected=new IllegalArgumentException("thrown by mock");
   stub(mock.add("throw")).andThrows(expected);
   try {
