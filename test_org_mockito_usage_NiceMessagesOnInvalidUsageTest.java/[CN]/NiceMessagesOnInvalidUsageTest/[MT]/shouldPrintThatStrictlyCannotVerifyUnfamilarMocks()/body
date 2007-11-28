@@ -1,0 +1,11 @@
+{
+  List mockOne=mock(List.class);
+  List mockTwo=mock(List.class);
+  Strictly strictly=createStrictOrderVerifier(mockOne);
+  try {
+    strictly.verify(mockTwo).clear();
+    fail();
+  }
+ catch (  MockitoException e) {
+  }
+}

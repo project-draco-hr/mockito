@@ -1,0 +1,10 @@
+{
+  try {
+    createStrictOrderVerifier();
+    fail();
+  }
+ catch (  MockitoException e) {
+    String expected="\n" + "Method requires arguments." + "\n"+ "Pass mocks that require strict order verification.";
+    assertEquals(expected,e.getMessage());
+  }
+}

@@ -1,0 +1,14 @@
+{
+  Strictly strictly=createStrictOrderVerifier(mock);
+  mock.oneArg(true);
+  mock.oneArg(false);
+  try {
+    strictly.verify(mock).oneArg(false);
+    fail();
+  }
+ catch (  StrictVerificationError expected) {
+    assertThat(expected,firstMethodOnStackEqualsTo("shouldFilterStacktraceWhenStrictlyVerifying"));
+    StackTraceElement[] unfilteredStackTrace=expected.getUnfilteredStackTrace();
+    assertEquals("checkOrderOfInvocations",unfilteredStackTrace[0].getMethodName());
+  }
+}

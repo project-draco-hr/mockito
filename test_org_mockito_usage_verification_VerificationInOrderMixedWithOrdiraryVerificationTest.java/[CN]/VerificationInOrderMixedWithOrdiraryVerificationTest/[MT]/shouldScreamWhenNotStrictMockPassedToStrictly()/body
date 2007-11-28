@@ -1,10 +1,3 @@
 {
-  try {
-    strictly.verify(mockTwo,atLeastOnce()).simpleMethod(1);
-    fail();
-  }
- catch (  MockitoException e) {
-    String expected="some meaningful message";
-    assertEquals(expected,e.getMessage());
-  }
+  strictly.verify(mockTwo,atLeastOnce()).simpleMethod(1);
 }

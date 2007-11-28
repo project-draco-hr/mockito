@@ -7,5 +7,5 @@
   mockTwo.simpleMethod(2);
   mockThree.simpleMethod(3);
   mockThree.simpleMethod(4);
-  strictly=strictOrderVerifier(mockOne,mockThree);
+  strictly=createStrictOrderVerifier(mockOne,mockThree);
 }

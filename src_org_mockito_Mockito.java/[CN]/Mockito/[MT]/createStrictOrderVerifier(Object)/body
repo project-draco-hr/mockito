@@ -1,4 +1,7 @@
 {
+  if (mocks.length == 0) {
+    Exceptions.mocksHaveToBePassedWhenCreatingStrictly();
+  }
   StrictOrderVerifier strictOrderVerifier=new StrictOrderVerifier();
   for (  Object mock : mocks) {
     MockUtil.validateMock(mock);
