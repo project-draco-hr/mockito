@@ -1,11 +1,15 @@
 {
   Method method;
+  List<Class> argTypes=new LinkedList<Class>();
+  for (  Object arg : args) {
+    argTypes.add(arg.getClass());
+  }
   try {
-    method=IMethods.class.getMethod(methodName,new Class[]{});
+    method=IMethods.class.getMethod(methodName,argTypes.toArray(new Class[argTypes.size()]));
   }
  catch (  Exception e) {
     throw new RuntimeException(e);
   }
-  Invocation i=new Invocation("mock",method,new Object[]{},sequenceNumber);
+  Invocation i=new Invocation("mock",method,args,sequenceNumber);
   return i;
 }

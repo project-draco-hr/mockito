@@ -1,0 +1,10 @@
+{
+  StringBuffer result=new StringBuffer();
+  result.append(getMockAndMethodName());
+  result.append("(");
+  for (  IArgumentMatcher matcher : matchers) {
+    matcher.appendTo(result);
+    result.append(", ");
+  }
+  return result.toString().replaceFirst(", $","").concat(")");
+}

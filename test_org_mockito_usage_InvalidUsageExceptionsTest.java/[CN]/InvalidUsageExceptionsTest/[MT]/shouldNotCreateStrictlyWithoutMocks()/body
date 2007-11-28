@@ -1,0 +1,8 @@
+{
+  try {
+    createStrictOrderVerifier();
+    fail();
+  }
+ catch (  MockitoException e) {
+  }
+}

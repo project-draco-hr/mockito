@@ -1,0 +1,4 @@
+{
+  assertTrue(call.getSequenceNumber() != equalCall.getSequenceNumber());
+  assertTrue(call.equals(equalCall));
+}
