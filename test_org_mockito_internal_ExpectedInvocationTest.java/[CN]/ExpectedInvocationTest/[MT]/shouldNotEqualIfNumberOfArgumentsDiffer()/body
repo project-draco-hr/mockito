@@ -1,6 +1,6 @@
 {
-  ExpectedInvocation withOneArg=new ExpectedInvocation(new InvocationBuilder().args("test").toInvocation(),null);
-  ExpectedInvocation withTwoArgs=new ExpectedInvocation(new InvocationBuilder().args("test",100).toInvocation(),null);
+  ExpectedInvocation withOneArg=new ExpectedInvocation(new InvocationBuilder().args("test").toInvocation(),Collections.EMPTY_LIST);
+  ExpectedInvocation withTwoArgs=new ExpectedInvocation(new InvocationBuilder().args("test",100).toInvocation(),Collections.EMPTY_LIST);
   assertFalse(withOneArg.equals(null));
   assertFalse(withOneArg.equals(withTwoArgs));
 }

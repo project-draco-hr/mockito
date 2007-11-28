@@ -1,0 +1,3 @@
+{
+  new ExpectedInvocation(new InvocationBuilder().toInvocation(),null);
+}

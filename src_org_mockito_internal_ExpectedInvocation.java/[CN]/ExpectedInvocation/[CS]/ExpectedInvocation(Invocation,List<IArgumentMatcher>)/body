@@ -1,4 +1,7 @@
 {
+  if (matchers == null) {
+    throw new IllegalArgumentException("matchers cannot be null");
+  }
   this.invocation=invocation;
   this.matchers=matchers;
 }
