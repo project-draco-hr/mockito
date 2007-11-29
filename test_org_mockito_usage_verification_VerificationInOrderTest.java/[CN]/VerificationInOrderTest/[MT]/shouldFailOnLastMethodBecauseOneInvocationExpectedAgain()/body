@@ -7,6 +7,6 @@
     strictly.verify(mockOne,2).simpleMethod(4);
     fail();
   }
- catch (  NumberOfInvocationsAssertionError e) {
+ catch (  NumberOfInvocationsError e) {
   }
 }

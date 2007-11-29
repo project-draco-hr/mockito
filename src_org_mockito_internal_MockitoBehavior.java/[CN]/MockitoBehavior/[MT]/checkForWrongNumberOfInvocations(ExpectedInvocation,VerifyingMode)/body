@@ -6,6 +6,6 @@
   Integer expectedInvoked=verifyingMode.expectedCount();
   boolean atLeastOnce=verifyingMode.atLeastOnceMode();
   if (!atLeastOnce && actuallyInvoked != expectedInvoked) {
-    throw new NumberOfInvocationsAssertionError(expectedInvoked,actuallyInvoked,expected.toString());
+    Exceptions.numberOfInvocationsDiffers(expectedInvoked,actuallyInvoked,expected.toString());
   }
 }

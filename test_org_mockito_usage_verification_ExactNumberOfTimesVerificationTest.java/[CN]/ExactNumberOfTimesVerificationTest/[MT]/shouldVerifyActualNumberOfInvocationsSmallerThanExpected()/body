@@ -7,7 +7,7 @@
     Mockito.verify(mock,100).clear();
     fail();
   }
- catch (  NumberOfInvocationsAssertionError e) {
+ catch (  NumberOfInvocationsError e) {
     String expected="\n" + "LinkedList.clear()" + "\n"+ "Expected 100 times but was 3";
     assertEquals(expected,e.getMessage());
   }

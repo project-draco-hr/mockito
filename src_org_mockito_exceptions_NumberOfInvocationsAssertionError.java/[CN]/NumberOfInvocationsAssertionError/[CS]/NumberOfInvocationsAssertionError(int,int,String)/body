@@ -1,3 +1,0 @@
-{
-  super("\n" + wanted + "\n"+ "Expected "+ pluralize(expectedCount)+ " but was "+ actualCount);
-}

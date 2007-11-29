@@ -4,7 +4,7 @@
     Mockito.verify(mock,15).clear();
     fail();
   }
- catch (  NumberOfInvocationsAssertionError e) {
+ catch (  NumberOfInvocationsError e) {
     assertTrue(e.getMessage().endsWith("Expected 15 times but was 0"));
   }
 }
