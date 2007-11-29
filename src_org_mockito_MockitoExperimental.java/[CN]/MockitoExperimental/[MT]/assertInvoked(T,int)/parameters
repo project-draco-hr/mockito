@@ -1,2 +1,2 @@
 T mock
-int expectedNumberOfInvocations
+int wantedNumberOfInvocations

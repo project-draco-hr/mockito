@@ -3,10 +3,10 @@
     return;
   }
   List<InvocationChunk> chunks=registeredInvocations.unverifiedInvocationChunks(mode);
-  if (mode.expectedCountIsZero() && !chunks.isEmpty() && wanted.matches(chunks.get(0).getInvocation())) {
+  if (mode.wantedCountIsZero() && !chunks.isEmpty() && wanted.matches(chunks.get(0).getInvocation())) {
     Exceptions.numberOfInvocationsDiffers(0,chunks.get(0).getCount(),wanted.toString());
   }
- else   if (mode.expectedCountIsZero()) {
+ else   if (mode.wantedCountIsZero()) {
     return;
   }
   if (chunks.isEmpty()) {
@@ -15,7 +15,7 @@
   if (!wanted.matches(chunks.get(0).getInvocation())) {
     reportDiscrepancy(wanted,chunks.get(0).getInvocation(),Exceptions.STRICT_DISCREPANCY);
   }
-  if (!mode.atLeastOnceMode() && chunks.get(0).getCount() != mode.expectedCount()) {
-    Exceptions.numberOfInvocationsDiffers(mode.expectedCount(),chunks.get(0).getCount(),wanted.toString());
+  if (!mode.atLeastOnceMode() && chunks.get(0).getCount() != mode.wantedCount()) {
+    Exceptions.numberOfInvocationsDiffers(mode.wantedCount(),chunks.get(0).getCount(),wanted.toString());
   }
 }

@@ -1,4 +1,4 @@
 {
-  this.expected=value;
+  this.wanted=value;
   this.delta=delta;
 }

@@ -2,5 +2,5 @@
   if (actual == null) {
     return false;
   }
-  return operator.matchResult(comparator.compare((T)actual,expected));
+  return operator.matchResult(comparator.compare((T)actual,wanted));
 }

@@ -1,3 +1,3 @@
 {
-  buffer.append(comparator + "(" + expected+ ") "+ operator.getSymbol()+ " 0");
+  buffer.append(comparator + "(" + wanted+ ") "+ operator.getSymbol()+ " 0");
 }

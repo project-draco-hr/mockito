@@ -1,8 +1,8 @@
 {
-  if (expected instanceof String) {
+  if (wanted instanceof String) {
     buffer.append("\"");
   }
- else   if (expected instanceof Character) {
+ else   if (wanted instanceof Character) {
     buffer.append("'");
   }
 }

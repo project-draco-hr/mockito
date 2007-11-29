@@ -8,7 +8,7 @@
     fail();
   }
  catch (  NumberOfInvocationsError e) {
-    String expected="\n" + "LinkedList.clear()" + "\n"+ "Expected 1 time but was 3";
+    String expected="\n" + "LinkedList.clear()" + "\n"+ "Wanted 1 time but was 3";
     assertEquals(expected,e.getMessage());
   }
 }

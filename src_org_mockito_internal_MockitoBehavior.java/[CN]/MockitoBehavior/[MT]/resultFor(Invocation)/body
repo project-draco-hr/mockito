@@ -1,8 +1,8 @@
 {
-  for (  ExpectedInvocation expectedInvocation : results.keySet()) {
-    if (expectedInvocation.matches(invocation)) {
-      return results.get(expectedInvocation).answer();
+  for (  ExpectedInvocation i : results.keySet()) {
+    if (i.matches(wanted)) {
+      return results.get(i).answer();
     }
   }
-  return ToTypeMappings.emptyReturnValueFor(invocation.getMethod().getReturnType());
+  return ToTypeMappings.emptyReturnValueFor(wanted.getMethod().getReturnType());
 }

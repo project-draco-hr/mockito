@@ -5,6 +5,6 @@
     fail();
   }
  catch (  NumberOfInvocationsError e) {
-    assertTrue(e.getMessage().endsWith("Expected 15 times but was 0"));
+    assertTrue(e.getMessage().endsWith("Wanted 15 times but was 0"));
   }
 }

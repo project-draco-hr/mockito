@@ -1,4 +1,4 @@
 {
   this.mock=mock;
-  this.expectedNumberOfInvocations=expectedNumberOfInvocations;
+  this.wantedNumberOfInvocations=wantedNumberOfInvocations;
 }

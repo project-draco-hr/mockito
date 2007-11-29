@@ -1,7 +1,7 @@
 {
   int actual=0;
   for (  Invocation registeredInvocation : registeredInvocations) {
-    if (expectedInvocation.matches(registeredInvocation)) {
+    if (wanted.matches(registeredInvocation)) {
       actual++;
     }
   }

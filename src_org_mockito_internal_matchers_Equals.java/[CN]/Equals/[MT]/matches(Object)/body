@@ -1,6 +1,6 @@
 {
-  if (this.expected == null) {
+  if (this.wanted == null) {
     return actual == null;
   }
-  return expected.equals(actual);
+  return wanted.equals(actual);
 }

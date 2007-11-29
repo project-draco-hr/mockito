@@ -1,11 +1,11 @@
 {
-  if (verifyingMode.orderOfInvocationsMatters()) {
+  if (mode.orderOfInvocationsMatters()) {
     return;
   }
-  int actuallyInvoked=registeredInvocations.countActual(expected);
-  Integer expectedInvoked=verifyingMode.expectedCount();
-  boolean atLeastOnce=verifyingMode.atLeastOnceMode();
-  if (!atLeastOnce && actuallyInvoked != expectedInvoked) {
-    Exceptions.numberOfInvocationsDiffers(expectedInvoked,actuallyInvoked,expected.toString());
+  int actualCount=registeredInvocations.countActual(wanted);
+  Integer wantedCount=mode.wantedCount();
+  boolean atLeastOnce=mode.atLeastOnceMode();
+  if (!atLeastOnce && actualCount != wantedCount) {
+    Exceptions.numberOfInvocationsDiffers(wantedCount,actualCount,wanted.toString());
   }
 }
