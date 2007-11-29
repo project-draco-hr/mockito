@@ -7,6 +7,6 @@
     verifyNoMoreInteractions(mockOne,mockTwo,mockThree);
     fail();
   }
- catch (  VerificationAssertionError e) {
+ catch (  VerificationError e) {
   }
 }

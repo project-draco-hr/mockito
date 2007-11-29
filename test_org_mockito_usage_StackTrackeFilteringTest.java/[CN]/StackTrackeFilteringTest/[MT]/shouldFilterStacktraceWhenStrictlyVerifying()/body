@@ -6,7 +6,7 @@
     strictly.verify(mock).oneArg(false);
     fail();
   }
- catch (  StrictVerificationError expected) {
+ catch (  VerificationError expected) {
     assertThat(expected,firstMethodOnStackEqualsTo("shouldFilterStacktraceWhenStrictlyVerifying"));
   }
 }

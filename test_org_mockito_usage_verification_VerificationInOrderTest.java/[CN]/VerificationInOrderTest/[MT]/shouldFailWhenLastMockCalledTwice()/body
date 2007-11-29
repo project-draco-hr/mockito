@@ -8,6 +8,6 @@
     strictly.verify(mockOne).simpleMethod(4);
     fail();
   }
- catch (  StrictVerificationError e) {
+ catch (  VerificationError e) {
   }
 }

@@ -5,7 +5,7 @@
     verifyZeroInteractions(mock);
     fail();
   }
- catch (  VerificationAssertionError expected) {
+ catch (  VerificationError expected) {
     String actualMessage=expected.getMessage();
     String expectedMessage="\n" + "Zero interactions expected on IMethods" + "\n"+ "Unexpected: IMethods.twoArgumentMethod(1, 2)";
     assertEquals(expectedMessage,actualMessage);

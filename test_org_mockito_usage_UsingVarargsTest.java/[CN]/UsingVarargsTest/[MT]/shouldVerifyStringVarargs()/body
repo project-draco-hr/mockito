@@ -8,6 +8,6 @@
     verify(mock).withStringVarargs(2,"1","2","79","4");
     fail();
   }
- catch (  VerificationAssertionError e) {
+ catch (  VerificationError e) {
   }
 }

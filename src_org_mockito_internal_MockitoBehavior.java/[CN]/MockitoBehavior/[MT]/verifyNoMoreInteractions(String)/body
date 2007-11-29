@@ -2,6 +2,6 @@
   Invocation unverified=registeredInvocations.getFirstUnverified();
   if (unverified != null) {
     String mockName=Namer.nameForMock(mock);
-    throw new VerificationAssertionError("\n" + verificationErrorMessage + " on "+ mockName+ "\n"+ "Unexpected: "+ unverified.toString());
+    throw new VerificationError("\n" + verificationErrorMessage + " on "+ mockName+ "\n"+ "Unexpected: "+ unverified.toString());
   }
 }

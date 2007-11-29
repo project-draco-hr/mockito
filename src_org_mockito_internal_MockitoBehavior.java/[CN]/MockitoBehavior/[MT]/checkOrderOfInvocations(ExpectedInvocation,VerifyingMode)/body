@@ -3,19 +3,19 @@
     return;
   }
   List<InvocationChunk> chunks=registeredInvocations.unverifiedInvocationChunks(mode);
-  if (mode.expectedCountIsZero() && !chunks.isEmpty() && expected.matches(chunks.get(0).getInvocation())) {
-    throw new NumberOfInvocationsAssertionError(0,chunks.get(0).getCount(),expected);
+  if (mode.expectedCountIsZero() && !chunks.isEmpty() && wanted.matches(chunks.get(0).getInvocation())) {
+    throw new NumberOfInvocationsAssertionError(0,chunks.get(0).getCount(),wanted.toString());
   }
  else   if (mode.expectedCountIsZero()) {
     return;
   }
   if (chunks.isEmpty()) {
-    throw new StrictVerificationError("everything was already verified");
+    Exceptions.wantedButNotInvoked(wanted.toString());
   }
-  if (!expected.matches(chunks.get(0).getInvocation())) {
-    throw new StrictVerificationError("this is not expected here");
+  if (!wanted.matches(chunks.get(0).getInvocation())) {
+    reportDiscrepancy(wanted,chunks.get(0).getInvocation(),"Strict order verification failed");
   }
   if (!mode.atLeastOnceMode() && chunks.get(0).getCount() != mode.expectedCount()) {
-    throw new NumberOfInvocationsAssertionError(mode.expectedCount(),chunks.get(0).getCount(),expected);
+    throw new NumberOfInvocationsAssertionError(mode.expectedCount(),chunks.get(0).getCount(),wanted.toString());
   }
 }

@@ -1,0 +1,9 @@
+{
+  String wanted=wantedInvocation.toString();
+  String actual=actualInvocation.toString();
+  if (wanted.equals(actual)) {
+    wanted=wantedInvocation.getInvocation().toStringWithArgumentTypes();
+    actual=actualInvocation.toStringWithArgumentTypes();
+  }
+  Exceptions.wantedInvocationDiffersFromActual(wanted,actual,message);
+}

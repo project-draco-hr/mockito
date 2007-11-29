@@ -3,9 +3,9 @@
     verify(mock).threeArgumentMethod(12,new SomeClass(),"some string");
     fail();
   }
- catch (  VerificationAssertionError expected) {
+ catch (  VerificationError expected) {
     String actualMessage=expected.getMessage();
-    String expectedMessage="\n" + "Expected but not invoked:" + "\n"+ "IMethods.threeArgumentMethod(12, SomeClass instance, \"some string\")";
+    String expectedMessage="\n" + "Wanted but not invoked:" + "\n"+ "IMethods.threeArgumentMethod(12, SomeClass instance, \"some string\")";
     assertEquals(expectedMessage,actualMessage);
   }
 }

@@ -1,3 +1,0 @@
-{
-  super("\n" + expected.toString() + "\n"+ "Expected "+ pluralize(expectedCount)+ " but was "+ actualCount);
-}

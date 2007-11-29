@@ -1,0 +1,11 @@
+{
+  try {
+    strictly.verify(one).simpleMethod(999);
+    fail();
+  }
+ catch (  VerificationError expected) {
+    String actualMessage=expected.getMessage();
+    String expectedMessage="\n" + "Strict order verification failed" + "\n"+ "Wanted: IMethods.simpleMethod(999)"+ "\n"+ "Actual: IMethods.simpleMethod(1)";
+    assertEquals(expectedMessage,actualMessage);
+  }
+}

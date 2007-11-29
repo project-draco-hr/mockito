@@ -5,6 +5,6 @@
     strictly.verify(mockThree).simpleMethod(4);
     fail();
   }
- catch (  StrictVerificationError e) {
+ catch (  VerificationError e) {
   }
 }

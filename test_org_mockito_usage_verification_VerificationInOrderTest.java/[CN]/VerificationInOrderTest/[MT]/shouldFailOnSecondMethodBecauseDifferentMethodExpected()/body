@@ -4,6 +4,6 @@
     strictly.verify(mockTwo,2).oneArg(true);
     fail();
   }
- catch (  StrictVerificationError e) {
+ catch (  VerificationError e) {
   }
 }

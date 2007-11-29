@@ -8,6 +8,6 @@
     verify(mockTwo,atLeastOnce()).add("foo");
     fail();
   }
- catch (  VerificationAssertionError e) {
+ catch (  VerificationError e) {
   }
 }

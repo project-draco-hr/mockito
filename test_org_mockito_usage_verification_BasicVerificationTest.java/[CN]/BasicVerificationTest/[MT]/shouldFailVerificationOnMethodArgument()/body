@@ -6,7 +6,7 @@
     verify(mock).add("bar");
     fail();
   }
- catch (  VerificationAssertionError expected) {
+ catch (  VerificationError expected) {
   }
   ;
 }

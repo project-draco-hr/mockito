@@ -8,7 +8,7 @@
     verifyNoMoreInteractions(mock);
     fail();
   }
- catch (  VerificationAssertionError expected) {
+ catch (  VerificationError expected) {
   }
   ;
 }

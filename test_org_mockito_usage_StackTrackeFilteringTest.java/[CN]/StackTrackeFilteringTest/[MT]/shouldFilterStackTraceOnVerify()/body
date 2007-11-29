@@ -3,7 +3,7 @@
     verify(mock).simpleMethod();
     fail();
   }
- catch (  VerificationAssertionError expected) {
+ catch (  VerificationError expected) {
     assertThat(expected,firstMethodOnStackEqualsTo("shouldFilterStackTraceOnVerify"));
   }
 }

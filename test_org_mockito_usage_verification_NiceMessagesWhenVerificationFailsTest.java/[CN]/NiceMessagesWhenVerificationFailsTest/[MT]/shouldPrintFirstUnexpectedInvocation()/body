@@ -7,7 +7,7 @@
     verifyNoMoreInteractions(mock);
     fail();
   }
- catch (  VerificationAssertionError expected) {
+ catch (  VerificationError expected) {
     String actualMessage=expected.getMessage();
     String expectedMessage="\n" + "No more interactions expected on IMethods" + "\n"+ "Unexpected: IMethods.oneArg(false)";
     assertEquals(expectedMessage,actualMessage);

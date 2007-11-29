@@ -6,9 +6,9 @@
     verify(mock).twoArgumentMethod(1,1000);
     fail();
   }
- catch (  VerificationAssertionError expected) {
+ catch (  VerificationError expected) {
     String actualMessage=expected.getMessage();
-    String expectedMessage="\n" + "Invocation differs from actual" + "\n"+ "Expected: IMethods.twoArgumentMethod(1, 1000)"+ "\n"+ "Actual:   IMethods.twoArgumentMethod(1, 2)";
+    String expectedMessage="\n" + "Invocation differs from actual" + "\n"+ "Wanted: IMethods.twoArgumentMethod(1, 1000)"+ "\n"+ "Actual: IMethods.twoArgumentMethod(1, 2)";
     assertEquals(expectedMessage,actualMessage);
   }
 }

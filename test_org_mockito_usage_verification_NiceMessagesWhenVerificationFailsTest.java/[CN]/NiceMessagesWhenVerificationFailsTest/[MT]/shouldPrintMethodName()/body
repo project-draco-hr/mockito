@@ -3,9 +3,9 @@
     verify(mock).simpleMethod();
     fail();
   }
- catch (  VerificationAssertionError expected) {
+ catch (  VerificationError expected) {
     String actualMessage=expected.getMessage();
-    String expectedMessage="\n" + "Expected but not invoked:" + "\n"+ "IMethods.simpleMethod()";
+    String expectedMessage="\n" + "Wanted but not invoked:" + "\n"+ "IMethods.simpleMethod()";
     assertEquals(expectedMessage,actualMessage);
   }
 }

@@ -7,8 +7,8 @@
     Mockito.verify(derivedMock).print(message);
     fail();
   }
- catch (  VerificationAssertionError error) {
-    String expected="\n" + "Invocation differs from actual" + "\n"+ "Expected: DerivedInterface.print(class org.mockito.usage.binding.IncorectBindingPuzzleFixedTest$Message)"+ "\n"+ "Actual:   DerivedInterface.print(class org.mockito.usage.binding.IncorectBindingPuzzleFixedTest$BaseMessage)";
+ catch (  VerificationError error) {
+    String expected="\n" + "Invocation differs from actual" + "\n"+ "Wanted: DerivedInterface.print(class org.mockito.usage.binding.IncorectBindingPuzzleFixedTest$Message)"+ "\n"+ "Actual: DerivedInterface.print(class org.mockito.usage.binding.IncorectBindingPuzzleFixedTest$BaseMessage)";
     assertEquals(expected,error.getMessage());
   }
 }
