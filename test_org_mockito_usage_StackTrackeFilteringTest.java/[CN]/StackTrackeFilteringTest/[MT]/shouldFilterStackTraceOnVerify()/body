@@ -5,7 +5,5 @@
   }
  catch (  VerificationAssertionError expected) {
     assertThat(expected,firstMethodOnStackEqualsTo("shouldFilterStackTraceOnVerify"));
-    StackTraceElement[] unfilteredStackTrace=expected.getUnfilteredStackTrace();
-    assertEquals("reportMissingInvocationError",unfilteredStackTrace[0].getMethodName());
   }
 }

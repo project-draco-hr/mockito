@@ -8,7 +8,5 @@
   }
  catch (  StrictVerificationError expected) {
     assertThat(expected,firstMethodOnStackEqualsTo("shouldFilterStacktraceWhenStrictlyVerifying"));
-    StackTraceElement[] unfilteredStackTrace=expected.getUnfilteredStackTrace();
-    assertEquals("checkOrderOfInvocations",unfilteredStackTrace[0].getMethodName());
   }
 }

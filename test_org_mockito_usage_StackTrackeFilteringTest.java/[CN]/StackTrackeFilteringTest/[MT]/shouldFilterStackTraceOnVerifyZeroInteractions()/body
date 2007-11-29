@@ -6,7 +6,5 @@
   }
  catch (  VerificationAssertionError expected) {
     assertThat(expected,firstMethodOnStackEqualsTo("shouldFilterStackTraceOnVerifyZeroInteractions"));
-    StackTraceElement[] unfilteredStackTrace=expected.getUnfilteredStackTrace();
-    assertEquals("verifyNoMoreInteractions",unfilteredStackTrace[0].getMethodName());
   }
 }
