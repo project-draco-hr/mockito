@@ -1,4 +1,0 @@
-{
-  Stack<Object[]> stack=threadToCurrentArguments.get();
-  stack.pop();
-}
