@@ -1,0 +1,11 @@
+{
+  try {
+    verify(mock,atLeastOnce()).twoArgumentMethod(anyInt(),eq(100));
+    fail();
+  }
+ catch (  VerificationAssertionError expected) {
+    String actualMessage=expected.getMessage();
+    String expectedMessage="\n" + "Expected but not invoked:" + "\n"+ "IMethods.twoArgumentMethod(<any>, 100)";
+    assertEquals(expectedMessage,actualMessage);
+  }
+}
