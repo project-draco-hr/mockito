@@ -1,4 +1,5 @@
 {
   StateResetter.reset();
-  mock=mock(List.class);
+  mock=mock(LinkedList.class);
+  mockTwo=mock(LinkedList.class);
 }

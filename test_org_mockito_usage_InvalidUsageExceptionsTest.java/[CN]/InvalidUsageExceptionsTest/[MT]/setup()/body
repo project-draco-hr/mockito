@@ -1,4 +1,0 @@
-{
-  mock=mock(LinkedList.class);
-  mockTwo=mock(LinkedList.class);
-}
