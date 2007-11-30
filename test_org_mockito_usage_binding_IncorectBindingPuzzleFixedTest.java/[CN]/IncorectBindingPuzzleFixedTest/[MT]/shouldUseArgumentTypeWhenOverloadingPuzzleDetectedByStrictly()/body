@@ -8,7 +8,7 @@
     fail();
   }
  catch (  VerificationError error) {
-    String expected="\n" + "Strict order verification failed" + "\n"+ "Wanted: Sub.print(class java.lang.String)"+ "\n"+ "Actual: Sub.print(class java.lang.Object)";
+    String expected="\n" + "Strict order verification failed" + "\n"+ "Wanted: Sub.say(class java.lang.String)"+ "\n"+ "Actual: Sub.say(class java.lang.Object)";
     assertEquals(expected,error.getMessage());
   }
 }

@@ -7,7 +7,7 @@
     fail();
   }
  catch (  VerificationError error) {
-    String expected="\n" + "Invocation differs from actual" + "\n"+ "Wanted: Sub.print(class java.lang.String)"+ "\n"+ "Actual: Sub.print(class java.lang.Object)";
+    String expected="\n" + "Invocation differs from actual" + "\n"+ "Wanted: Sub.say(class java.lang.String)"+ "\n"+ "Actual: Sub.say(class java.lang.Object)";
     assertEquals(expected,error.getMessage());
   }
 }
