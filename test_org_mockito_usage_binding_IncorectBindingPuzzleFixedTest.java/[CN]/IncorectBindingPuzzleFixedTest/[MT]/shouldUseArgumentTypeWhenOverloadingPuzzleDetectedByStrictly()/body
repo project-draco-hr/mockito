@@ -1,10 +1,10 @@
 {
   Sub sub=mock(Sub.class);
   setMockWithDowncast(sub);
-  print("Hello");
+  say("Hello");
   Strictly strictly=createStrictOrderVerifier(mock);
   try {
-    strictly.verify(sub).print("Hello");
+    strictly.verify(sub).say("Hello");
     fail();
   }
  catch (  VerificationError error) {

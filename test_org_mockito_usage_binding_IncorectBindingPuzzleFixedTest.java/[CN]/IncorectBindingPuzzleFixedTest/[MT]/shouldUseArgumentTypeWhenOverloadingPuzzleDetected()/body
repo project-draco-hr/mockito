@@ -1,9 +1,9 @@
 {
   Sub sub=mock(Sub.class);
   setMockWithDowncast(sub);
-  print("Hello");
+  say("Hello");
   try {
-    verify(sub).print("Hello");
+    verify(sub).say("Hello");
     fail();
   }
  catch (  VerificationError error) {
