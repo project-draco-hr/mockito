@@ -1,0 +1,5 @@
+{
+  Sub s=mock(Sub.class);
+  s.say("Hello");
+  verify(s).say("Hello");
+}
