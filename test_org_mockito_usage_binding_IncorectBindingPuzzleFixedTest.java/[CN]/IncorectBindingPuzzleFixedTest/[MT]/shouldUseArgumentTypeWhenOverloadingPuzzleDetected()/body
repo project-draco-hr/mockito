@@ -1,10 +1,10 @@
 {
-  DerivedInterface derivedMock=Mockito.mock(DerivedInterface.class);
-  setMock(derivedMock);
+  DerivedInterface derivedMock=mock(DerivedInterface.class);
+  mock=derivedMock;
   Message message=new Message();
   print(message);
   try {
-    Mockito.verify(derivedMock).print(message);
+    verify(derivedMock).print(message);
     fail();
   }
  catch (  VerificationError error) {
