@@ -1,7 +1,7 @@
 {
   Invocation actual=registeredInvocations.findSimilarInvocation(wanted);
   if (actual != null) {
-    reportDiscrepancy(wanted,actual,Exceptions.REGULAR_DISCREPANCY);
+    reportDiscrepancy(wanted,actual);
   }
  else {
     Exceptions.wantedButNotInvoked(wanted.toString());

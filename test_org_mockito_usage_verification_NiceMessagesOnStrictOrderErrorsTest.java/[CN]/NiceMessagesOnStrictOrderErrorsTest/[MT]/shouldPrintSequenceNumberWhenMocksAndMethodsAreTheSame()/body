@@ -1,0 +1,17 @@
+{
+  StateResetter.reset();
+  one=mock(IMethods.class);
+  two=mock(IMethods.class);
+  one.simpleMethod();
+  two.simpleMethod();
+  strictly=createStrictOrderVerifier(one,two);
+  try {
+    strictly.verify(two).simpleMethod();
+    fail();
+  }
+ catch (  VerificationError expected) {
+    String actualMessage=expected.getMessage();
+    String expectedMessage="\n" + "Strict order verification failed" + "\n"+ "Wanted: IMethods#3.simpleMethod()"+ "\n"+ "Actual: IMethods#1.simpleMethod()";
+    assertEquals(expectedMessage,actualMessage);
+  }
+}

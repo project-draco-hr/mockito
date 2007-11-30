@@ -1,3 +1,2 @@
 ExpectedInvocation wantedInvocation
 Invocation actualInvocation
-String message

@@ -13,7 +13,7 @@
     Exceptions.wantedButNotInvoked(wanted.toString());
   }
   if (!wanted.matches(chunks.get(0).getInvocation())) {
-    reportDiscrepancy(wanted,chunks.get(0).getInvocation(),Exceptions.STRICT_DISCREPANCY);
+    reportStrictOrderDiscrepancy(wanted,chunks.get(0).getInvocation());
   }
   if (!mode.atLeastOnceMode() && chunks.get(0).getCount() != mode.wantedCount()) {
     Exceptions.numberOfInvocationsDiffers(mode.wantedCount(),chunks.get(0).getCount(),wanted.toString());

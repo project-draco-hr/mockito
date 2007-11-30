@@ -1,0 +1,3 @@
+{
+  return Namer.nameForMock(mock) + "#" + sequenceNumber+ "."+ method.getName();
+}

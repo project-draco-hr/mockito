@@ -5,5 +5,5 @@
     wanted=wantedInvocation.getInvocation().toStringWithArgumentTypes();
     actual=actualInvocation.toStringWithArgumentTypes();
   }
-  Exceptions.wantedInvocationDiffersFromActual(wanted,actual,message);
+  Exceptions.wantedInvocationDiffersFromActual(wanted,actual);
 }

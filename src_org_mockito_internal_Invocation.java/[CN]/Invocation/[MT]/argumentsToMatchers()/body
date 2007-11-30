@@ -1,0 +1,7 @@
+{
+  List<IArgumentMatcher> matchers=new LinkedList<IArgumentMatcher>();
+  for (  Object arg : this.arguments) {
+    matchers.add(new Equals(arg));
+  }
+  return matchers;
+}
