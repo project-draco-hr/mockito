@@ -1,14 +1,13 @@
 {
-  DerivedInterface derivedMock=mock(DerivedInterface.class);
-  mock=derivedMock;
-  Message message=new Message();
-  print(message);
+  Sub sub=mock(Sub.class);
+  setMockWithDowncast(sub);
+  print("Hello");
   try {
-    verify(derivedMock).print(message);
+    verify(sub).print("Hello");
     fail();
   }
  catch (  VerificationError error) {
-    String expected="\n" + "Invocation differs from actual" + "\n"+ "Wanted: DerivedInterface.print(class org.mockito.usage.binding.IncorectBindingPuzzleFixedTest$Message)"+ "\n"+ "Actual: DerivedInterface.print(class org.mockito.usage.binding.IncorectBindingPuzzleFixedTest$BaseMessage)";
+    String expected="\n" + "Invocation differs from actual" + "\n"+ "Wanted: Sub.print(class java.lang.String)"+ "\n"+ "Actual: Sub.print(class java.lang.Object)";
     assertEquals(expected,error.getMessage());
   }
 }

@@ -1,15 +1,14 @@
 {
-  DerivedInterface derivedMock=mock(DerivedInterface.class);
-  mock=derivedMock;
-  Message message=new Message();
-  print(message);
+  Sub sub=mock(Sub.class);
+  setMockWithDowncast(sub);
+  print("Hello");
   Strictly strictly=createStrictOrderVerifier(mock);
   try {
-    strictly.verify(derivedMock).print(message);
+    strictly.verify(sub).print("Hello");
     fail();
   }
  catch (  VerificationError error) {
-    String expected="\n" + "Strict order verification failed" + "\n"+ "Wanted: DerivedInterface.print(class org.mockito.usage.binding.IncorectBindingPuzzleFixedTest$Message)"+ "\n"+ "Actual: DerivedInterface.print(class org.mockito.usage.binding.IncorectBindingPuzzleFixedTest$BaseMessage)";
+    String expected="\n" + "Strict order verification failed" + "\n"+ "Wanted: Sub.print(class java.lang.String)"+ "\n"+ "Actual: Sub.print(class java.lang.Object)";
     assertEquals(expected,error.getMessage());
   }
 }
