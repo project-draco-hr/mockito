@@ -1,5 +1,0 @@
-{
-  if (verifyingModeLocal.get() != null) {
-    throw new UnfinishedVerificationException();
-  }
-}

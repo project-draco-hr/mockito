@@ -1,3 +1,4 @@
 {
+  MockitoState.instance().stubbingStarted();
   return MockUtil.getControl(mock);
 }

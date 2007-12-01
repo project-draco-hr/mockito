@@ -1,5 +1,7 @@
 {
-  checkForUnfinishedVerification();
+  if (verifyingModeLocal.get() != null) {
+    Exceptions.unfinishedVerificationException();
+  }
   if (stubbingModeLocal.get() != null) {
     Exceptions.unfinishedStubbing();
   }
