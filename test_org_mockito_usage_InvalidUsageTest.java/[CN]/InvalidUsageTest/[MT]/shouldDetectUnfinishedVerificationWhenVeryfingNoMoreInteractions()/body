@@ -1,9 +1,0 @@
-{
-  verify(mock);
-  try {
-    verifyNoMoreInteractions(mock);
-    fail();
-  }
- catch (  MockitoException e) {
-  }
-}

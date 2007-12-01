@@ -1,0 +1,9 @@
+{
+  stub(mock.simpleMethod());
+  detects(new OnMethodCallOnMock(),mock,UnfinishedStubbingException.class);
+  detects(new OnStub(),mock,UnfinishedStubbingException.class);
+  detects(new OnVerify(),mock,UnfinishedStubbingException.class);
+  detects(new OnStrictVerify(),mock,UnfinishedStubbingException.class);
+  detects(new OnVerifyZeroInteractions(),mock,UnfinishedStubbingException.class);
+  detects(new OnVerifyNoMoreInteractions(),mock,UnfinishedStubbingException.class);
+}

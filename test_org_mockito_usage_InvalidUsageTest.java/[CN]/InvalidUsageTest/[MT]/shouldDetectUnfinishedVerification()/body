@@ -1,9 +1,0 @@
-{
-  verify(mock);
-  try {
-    verify(mock).simpleMethod();
-    fail();
-  }
- catch (  MockitoException e) {
-  }
-}

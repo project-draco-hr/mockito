@@ -1,0 +1,4 @@
+{
+  StateResetter.reset();
+  mock=mock(IMethods.class);
+}

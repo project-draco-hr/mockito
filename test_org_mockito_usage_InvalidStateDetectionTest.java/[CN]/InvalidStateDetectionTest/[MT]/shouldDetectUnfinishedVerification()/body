@@ -1,0 +1,8 @@
+{
+  verify(mock);
+  detects(new OnStub(),mock,UnfinishedVerificationException.class);
+  detects(new OnVerify(),mock,UnfinishedVerificationException.class);
+  detects(new OnStrictVerify(),mock,UnfinishedVerificationException.class);
+  detects(new OnVerifyZeroInteractions(),mock,UnfinishedVerificationException.class);
+  detects(new OnVerifyNoMoreInteractions(),mock,UnfinishedVerificationException.class);
+}
