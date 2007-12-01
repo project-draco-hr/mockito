@@ -1,0 +1,9 @@
+{
+  stub(mock.get(1)).andThrows(new ExceptionOne());
+  try {
+    stub(mock.get(1)).andThrows(new ExceptionTwo());
+    fail();
+  }
+ catch (  ExceptionOne e) {
+  }
+}

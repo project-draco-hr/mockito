@@ -1,4 +1,5 @@
 {
+  Invocation invocation=new Invocation(proxy,method,args,mockitoState.nextSequenceNumber());
   List<IArgumentMatcher> lastMatchers=lastArguments.pullMatchers();
   validateMatchers(invocation,lastMatchers);
   List<IArgumentMatcher> processedMatchers=createEqualsMatchers(invocation,lastMatchers);

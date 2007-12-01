@@ -1,0 +1,10 @@
+{
+  stubVoid(mock).toThrow(new ExceptionOne()).on().clear();
+  stubVoid(mock).toThrow(new ExceptionTwo()).on().clear();
+  try {
+    mock.clear();
+    fail();
+  }
+ catch (  ExceptionTwo e) {
+  }
+}

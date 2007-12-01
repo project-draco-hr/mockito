@@ -1,3 +1,4 @@
 {
   mock=mock(LinkedList.class);
+  mockTwo=mock(HashMap.class);
 }

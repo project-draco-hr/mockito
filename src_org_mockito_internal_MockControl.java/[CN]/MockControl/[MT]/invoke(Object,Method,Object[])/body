@@ -1,7 +1,6 @@
 {
   if (throwableToBeSetOnVoidMethod != null) {
-    Invocation invocation=new Invocation(proxy,method,args,mockitoState.nextSequenceNumber());
-    ExpectedInvocation invocationWithMatchers=expectedInvocation(invocation);
+    ExpectedInvocation invocationWithMatchers=expectedInvocation(proxy,method,args);
     behavior.addInvocation(invocationWithMatchers);
     andThrows(throwableToBeSetOnVoidMethod);
     throwableToBeSetOnVoidMethod=null;
@@ -9,18 +8,12 @@
   }
   VerifyingMode verifyingMode=mockitoState.pullVerifyingMode();
   mockitoState.validateState();
-  Invocation invocation=new Invocation(proxy,method,args,mockitoState.nextSequenceNumber());
-  ExpectedInvocation invocationWithMatchers=expectedInvocation(invocation);
+  ExpectedInvocation invocationWithMatchers=expectedInvocation(proxy,method,args);
   if (verifyingMode != null) {
     behavior.verify(invocationWithMatchers,verifyingMode);
     return ToTypeMappings.emptyReturnValueFor(method.getReturnType());
   }
-  mockitoState.reportControlForStubbing(this);
   behavior.addInvocation(invocationWithMatchers);
-  if (throwableToBeSetOnVoidMethod != null) {
-    andThrows(throwableToBeSetOnVoidMethod);
-    throwableToBeSetOnVoidMethod=null;
-    return null;
-  }
-  return behavior.resultFor(invocation);
+  mockitoState.reportControlForStubbing(this);
+  return behavior.resultFor(invocationWithMatchers.getInvocation());
 }
