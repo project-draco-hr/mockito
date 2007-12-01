@@ -1,0 +1,10 @@
+{
+  stub(mock.simpleMethod()).andThrows(new RuntimeException());
+  try {
+    mock.simpleMethod();
+    fail();
+  }
+ catch (  RuntimeException e) {
+    assertThat(e,firstMethodOnStackEqualsTo("shouldShowProperExceptionStackTrace"));
+  }
+}

@@ -4,6 +4,6 @@
     fail();
   }
  catch (  MockitoException expected) {
-    assertThat(expected,firstMethodOnStackEqualsTo("shouldFilterStackTraceOnThrowingExceptionFromControl"));
+    assertThat(expected,firstMethodOnStackEqualsTo("shouldFilterStackTraceWhenThrowingExceptionFromControl"));
   }
 }
