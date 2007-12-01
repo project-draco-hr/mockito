@@ -1,9 +1,0 @@
-{
-  stub(mock.add("test"));
-  try {
-    mock.clear();
-    fail();
-  }
- catch (  UnfinishedStubbingException e) {
-  }
-}

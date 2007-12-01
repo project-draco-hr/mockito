@@ -1,4 +1,5 @@
 {
+  mockitoState.stubbingCompleted();
   validateThrowable(throwable);
   behavior.addResult(Result.createThrowResult(throwable));
 }

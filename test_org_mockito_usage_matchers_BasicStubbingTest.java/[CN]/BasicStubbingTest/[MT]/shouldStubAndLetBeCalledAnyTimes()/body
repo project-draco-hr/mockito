@@ -1,11 +1,11 @@
 {
-  stub(mock.getInt("14")).andReturn(14);
-  assertThat(mock.getInt("14"),equalTo(14));
-  assertThat(mock.getInt("14"),equalTo(14));
-  stub(mock.getList()).andReturn(Arrays.asList("elementOne","elementTwo"));
-  assertThat(mock.getList(),collectionContaining("elementOne","elementTwo"));
-  assertThat(mock.getList(),collectionContaining("elementOne","elementTwo"));
-  stub(mock.getString(10,"test")).andReturn("test");
-  assertThat(mock.getString(10,"test"),equalTo("test"));
-  assertThat(mock.getString(10,"test"),equalTo("test"));
+  stub(mock.intReturningMethod(14)).andReturn(14);
+  assertEquals(14,mock.intReturningMethod(14));
+  assertEquals(14,mock.intReturningMethod(14));
+  stub(mock.listReturningMethod("x")).andReturn(Arrays.asList("elementOne","elementTwo"));
+  assertThat(mock.listReturningMethod("x"),collectionContaining("elementOne","elementTwo"));
+  assertThat(mock.listReturningMethod("x"),collectionContaining("elementOne","elementTwo"));
+  stub(mock.objectReturningMethod(100)).andReturn("hundred");
+  assertEquals("hundred",mock.objectReturningMethod(100));
+  assertEquals("hundred",mock.objectReturningMethod(100));
 }

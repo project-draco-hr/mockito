@@ -1,0 +1,8 @@
+{
+  detects(new OnMethodCallOnMock(),mock,expected);
+  detects(new OnStub(),mock,expected);
+  detects(new OnVerify(),mock,expected);
+  detects(new OnStrictVerify(),mock,expected);
+  detects(new OnVerifyZeroInteractions(),mock,expected);
+  detects(new OnVerifyNoMoreInteractions(),mock,expected);
+}

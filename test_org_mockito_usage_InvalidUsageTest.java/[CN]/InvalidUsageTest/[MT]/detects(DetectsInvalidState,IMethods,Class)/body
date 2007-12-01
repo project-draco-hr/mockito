@@ -1,0 +1,9 @@
+{
+  try {
+    detector.detect(mock);
+    fail("Should throw an exception");
+  }
+ catch (  Exception e) {
+    assertEquals(expected,e.getClass());
+  }
+}

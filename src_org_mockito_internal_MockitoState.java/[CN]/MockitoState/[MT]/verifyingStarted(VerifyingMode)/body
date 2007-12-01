@@ -1,4 +1,4 @@
 {
-  checkForUnfinishedVerification();
+  validateState();
   verifyingModeLocal.set(verify);
 }

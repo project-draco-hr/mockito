@@ -1,6 +1,6 @@
 {
-  mock=Mockito.mock(DummyInterface.class);
-  stub(mock.getInt("blah"));
+  stub(mock.booleanReturningMethod(1)).andReturn(true);
+  mock.booleanReturningMethod(1);
   try {
     verifyNoMoreInteractions(mock);
     fail();

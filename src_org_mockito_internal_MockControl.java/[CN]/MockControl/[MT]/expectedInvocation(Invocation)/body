@@ -1,0 +1,7 @@
+{
+  List<IArgumentMatcher> lastMatchers=lastArguments.pullMatchers();
+  validateMatchers(invocation,lastMatchers);
+  List<IArgumentMatcher> processedMatchers=createEqualsMatchers(invocation,lastMatchers);
+  ExpectedInvocation invocationWithMatchers=new ExpectedInvocation(invocation,processedMatchers);
+  return invocationWithMatchers;
+}

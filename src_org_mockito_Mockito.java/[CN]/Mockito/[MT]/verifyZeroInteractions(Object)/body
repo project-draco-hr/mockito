@@ -1,6 +1,6 @@
 {
   assertMocksNotEmpty(mocks);
-  MockitoState.instance().checkForUnfinishedVerification();
+  MockitoState.instance().validateState();
   for (  Object mock : mocks) {
     MockUtil.getControl(mock).verifyZeroInteractions();
   }

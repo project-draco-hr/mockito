@@ -1,3 +1,0 @@
-{
-  throw new VerificationError(join(message,"Unexpected: " + unexpected.toString()));
-}

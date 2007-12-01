@@ -1,3 +1,4 @@
 {
+  mockitoState.stubbingCompleted();
   behavior.addResult(Result.createReturnResult(value));
 }

@@ -1,5 +1,4 @@
 {
-  mock=mock(List.class);
-  notMock="i'm not a notMock";
   StateResetter.reset();
+  notMock="i'm not a notMock";
 }

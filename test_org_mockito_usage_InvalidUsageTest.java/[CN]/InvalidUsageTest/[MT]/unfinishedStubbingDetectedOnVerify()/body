@@ -1,9 +1,0 @@
-{
-  stub(mock.add("test"));
-  try {
-    verifyZeroInteractions(mock);
-    fail();
-  }
- catch (  UnfinishedStubbingException e) {
-  }
-}

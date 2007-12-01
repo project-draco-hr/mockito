@@ -1,0 +1,4 @@
+{
+  validateState();
+  stubbingModeLocal.set(new Object());
+}

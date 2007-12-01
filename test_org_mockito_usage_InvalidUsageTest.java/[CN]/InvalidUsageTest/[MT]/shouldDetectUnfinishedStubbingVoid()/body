@@ -1,0 +1,4 @@
+{
+  stubVoid(mock);
+  assertInvalidStateDetected(mock,UnfinishedStubbingException.class);
+}

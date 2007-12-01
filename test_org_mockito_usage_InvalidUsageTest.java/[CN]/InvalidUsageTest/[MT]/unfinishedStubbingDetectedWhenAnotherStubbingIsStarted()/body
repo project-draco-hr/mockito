@@ -1,9 +1,0 @@
-{
-  stub(mock.add("test"));
-  try {
-    stub(mock.add("test")).andThrows(new Exception("ssdf"));
-    fail();
-  }
- catch (  UnfinishedStubbingException e) {
-  }
-}

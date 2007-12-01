@@ -1,0 +1,4 @@
+{
+  stub(mock.simpleMethod());
+  assertInvalidStateDetected(mock,UnfinishedStubbingException.class);
+}
