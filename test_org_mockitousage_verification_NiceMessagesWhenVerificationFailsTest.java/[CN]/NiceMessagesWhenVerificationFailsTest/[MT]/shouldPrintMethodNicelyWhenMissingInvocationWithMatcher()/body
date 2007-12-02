@@ -1,0 +1,11 @@
+{
+  mock.simpleMethod("foo");
+  try {
+    verify(mock).simpleMethod(matches("burrito"));
+    fail();
+  }
+ catch (  VerificationError e) {
+    String expected="\n" + "Invocation differs from actual" + "\n"+ "Wanted: IMethods.simpleMethod(matches(\"burrito\"))"+ "\n"+ "Actual: IMethods.simpleMethod(\"foo\")";
+    assertEquals(expected,e.getMessage());
+  }
+}

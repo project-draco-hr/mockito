@@ -1,14 +1,14 @@
 {
-  stub(mock.oneArg(CrazyMatchers.not(eq(false)))).andReturn("0");
-  stub(mock.oneArg(CrazyMatchers.not(eq((byte)1)))).andReturn("1");
-  stub(mock.oneArg(CrazyMatchers.not(eq('a')))).andReturn("2");
-  stub(mock.oneArg(CrazyMatchers.not(eq((double)1)))).andReturn("3");
-  stub(mock.oneArg(CrazyMatchers.not(eq((float)1)))).andReturn("4");
-  stub(mock.oneArg(CrazyMatchers.not(eq((int)1)))).andReturn("5");
-  stub(mock.oneArg(CrazyMatchers.not(eq((long)1)))).andReturn("6");
-  stub(mock.oneArg(CrazyMatchers.not(eq((short)1)))).andReturn("7");
-  stub(mock.oneArg(CrazyMatchers.not(contains("a")))).andReturn("8");
-  stub(mock.oneArg(CrazyMatchers.not(isA(Class.class)))).andReturn("9");
+  stub(mock.oneArg(not(eq(false)))).andReturn("0");
+  stub(mock.oneArg(not(eq((byte)1)))).andReturn("1");
+  stub(mock.oneArg(not(eq('a')))).andReturn("2");
+  stub(mock.oneArg(not(eq((double)1)))).andReturn("3");
+  stub(mock.oneArg(not(eq((float)1)))).andReturn("4");
+  stub(mock.oneArg(not(eq((int)1)))).andReturn("5");
+  stub(mock.oneArg(not(eq((long)1)))).andReturn("6");
+  stub(mock.oneArg(not(eq((short)1)))).andReturn("7");
+  stub(mock.oneArg(not(contains("a")))).andReturn("8");
+  stub(mock.oneArg(not(isA(Class.class)))).andReturn("9");
   assertEquals("0",mock.oneArg(true));
   assertEquals(null,mock.oneArg(false));
   assertEquals("1",mock.oneArg((byte)2));

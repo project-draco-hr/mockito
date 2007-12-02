@@ -1,7 +1,12 @@
 {
   List<IArgumentMatcher> matchers=new LinkedList<IArgumentMatcher>();
   for (  Object arg : this.arguments) {
-    matchers.add(new Equals(arg));
+    if (arg.getClass().isArray()) {
+      matchers.add(new ArrayEquals(arg));
+    }
+ else {
+      matchers.add(new Equals(arg));
+    }
   }
   return matchers;
 }

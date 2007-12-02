@@ -1,14 +1,14 @@
 {
   stub(mock.oneArg(or(eq(false),eq(true)))).andReturn("0");
-  stub(mock.oneArg(CrazyMatchers.or(eq((byte)1),eq((byte)2)))).andReturn("1");
-  stub(mock.oneArg(CrazyMatchers.or(eq((char)1),eq((char)2)))).andReturn("2");
-  stub(mock.oneArg(CrazyMatchers.or(eq((double)1),eq((double)2)))).andReturn("3");
-  stub(mock.oneArg(CrazyMatchers.or(eq((float)1),eq((float)2)))).andReturn("4");
-  stub(mock.oneArg(CrazyMatchers.or(eq((int)1),eq((int)2)))).andReturn("5");
-  stub(mock.oneArg(CrazyMatchers.or(eq((long)1),eq((long)2)))).andReturn("6");
-  stub(mock.oneArg(CrazyMatchers.or(eq((short)1),eq((short)2)))).andReturn("7");
-  stub(mock.oneArg(CrazyMatchers.or(eq("asd"),eq("jkl")))).andReturn("8");
-  stub(mock.oneArg(CrazyMatchers.or(eq(this.getClass()),eq(Object.class)))).andReturn("9");
+  stub(mock.oneArg(or(eq((byte)1),eq((byte)2)))).andReturn("1");
+  stub(mock.oneArg(or(eq((char)1),eq((char)2)))).andReturn("2");
+  stub(mock.oneArg(or(eq((double)1),eq((double)2)))).andReturn("3");
+  stub(mock.oneArg(or(eq((float)1),eq((float)2)))).andReturn("4");
+  stub(mock.oneArg(or(eq((int)1),eq((int)2)))).andReturn("5");
+  stub(mock.oneArg(or(eq((long)1),eq((long)2)))).andReturn("6");
+  stub(mock.oneArg(or(eq((short)1),eq((short)2)))).andReturn("7");
+  stub(mock.oneArg(or(eq("asd"),eq("jkl")))).andReturn("8");
+  stub(mock.oneArg(or(eq(this.getClass()),eq(Object.class)))).andReturn("9");
   assertEquals("0",mock.oneArg(true));
   assertEquals("0",mock.oneArg(false));
   assertEquals("1",mock.oneArg((byte)2));
