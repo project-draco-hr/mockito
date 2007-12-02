@@ -1,0 +1,5 @@
+{
+  one=mock(IMethods.class);
+  two=mock(IMethods.class);
+  three=mock(IMethods.class);
+}
