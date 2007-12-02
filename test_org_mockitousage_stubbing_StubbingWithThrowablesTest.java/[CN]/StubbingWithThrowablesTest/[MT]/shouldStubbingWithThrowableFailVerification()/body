@@ -1,0 +1,24 @@
+{
+  stub(mock.size()).andThrows(new RuntimeException());
+  stubVoid(mock).toThrow(new RuntimeException()).on().clone();
+  verifyZeroInteractions(mock);
+  mock.add("test");
+  try {
+    verify(mock).size();
+    fail();
+  }
+ catch (  VerificationError e) {
+  }
+  try {
+    verify(mock).clone();
+    fail();
+  }
+ catch (  VerificationError e) {
+  }
+  try {
+    verifyNoMoreInteractions(mock);
+    fail();
+  }
+ catch (  VerificationError e) {
+  }
+}

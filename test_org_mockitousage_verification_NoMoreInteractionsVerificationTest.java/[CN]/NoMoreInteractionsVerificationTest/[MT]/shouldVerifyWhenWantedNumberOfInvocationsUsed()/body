@@ -1,5 +1,4 @@
 {
-  List mock=mock(List.class);
   mock.add("one");
   mock.add("one");
   mock.add("one");

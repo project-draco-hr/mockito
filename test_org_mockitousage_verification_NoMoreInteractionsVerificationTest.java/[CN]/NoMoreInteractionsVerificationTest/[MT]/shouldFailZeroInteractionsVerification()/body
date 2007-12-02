@@ -1,5 +1,4 @@
 {
-  List mock=mock(List.class);
   mock.clear();
   try {
     verifyZeroInteractions(mock);
