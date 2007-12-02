@@ -1,8 +1,0 @@
-{
-  assertEquals(0,mock.intReturningMethod(1));
-  assertEquals(0,mock.intReturningMethod(100));
-  assertNull(mock.objectReturningMethod(1));
-  assertNull(mock.objectReturningMethod(100));
-  assertTrue(mock.listReturningMethod(1,100).isEmpty());
-  assertTrue(mock.listReturningMethod().isEmpty());
-}
