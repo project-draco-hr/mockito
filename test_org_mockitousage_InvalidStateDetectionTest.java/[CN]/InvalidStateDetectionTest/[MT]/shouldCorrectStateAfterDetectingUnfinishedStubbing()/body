@@ -1,0 +1,16 @@
+{
+  stubVoid(mock).toThrow(new RuntimeException());
+  try {
+    stubVoid(mock).toThrow(new RuntimeException()).on().oneArg(true);
+    fail();
+  }
+ catch (  UnfinishedStubbingException e) {
+  }
+  stubVoid(mock).toThrow(new RuntimeException()).on().oneArg(true);
+  try {
+    mock.oneArg(true);
+    fail();
+  }
+ catch (  RuntimeException e) {
+  }
+}

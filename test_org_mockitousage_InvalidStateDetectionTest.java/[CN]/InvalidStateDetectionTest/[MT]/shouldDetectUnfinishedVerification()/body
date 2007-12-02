@@ -1,9 +1,14 @@
 {
   verify(mock);
-  detects(new OnStub(),mock,UnfinishedVerificationException.class);
-  detects(new OnStubVoid(),mock,UnfinishedVerificationException.class);
-  detects(new OnVerify(),mock,UnfinishedVerificationException.class);
-  detects(new OnStrictVerify(),mock,UnfinishedVerificationException.class);
-  detects(new OnVerifyZeroInteractions(),mock,UnfinishedVerificationException.class);
-  detects(new OnVerifyNoMoreInteractions(),mock,UnfinishedVerificationException.class);
+  detects(new OnStub(),UnfinishedVerificationException.class);
+  verify(mock);
+  detects(new OnStubVoid(),UnfinishedVerificationException.class);
+  verify(mock);
+  detects(new OnVerify(),UnfinishedVerificationException.class);
+  verify(mock);
+  detects(new OnStrictVerify(),UnfinishedVerificationException.class);
+  verify(mock);
+  detects(new OnVerifyZeroInteractions(),UnfinishedVerificationException.class);
+  verify(mock);
+  detects(new OnVerifyNoMoreInteractions(),UnfinishedVerificationException.class);
 }

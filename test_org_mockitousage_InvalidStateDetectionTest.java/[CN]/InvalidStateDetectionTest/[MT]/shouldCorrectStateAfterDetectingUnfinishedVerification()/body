@@ -1,0 +1,11 @@
+{
+  mock.simpleMethod();
+  verify(mock);
+  try {
+    verify(mock).simpleMethod();
+    fail();
+  }
+ catch (  UnfinishedVerificationException e) {
+  }
+  verify(mock).simpleMethod();
+}
