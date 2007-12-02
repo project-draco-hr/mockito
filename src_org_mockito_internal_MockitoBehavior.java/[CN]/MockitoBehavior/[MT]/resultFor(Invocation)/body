@@ -1,7 +1,7 @@
 {
-  for (  ExpectedInvocation i : results.keySet()) {
-    if (i.matches(wanted)) {
-      return results.get(i).answer();
+  for (  StubbedInvocation s : stubbed) {
+    if (s.matches(wanted)) {
+      return s.getResult().answer();
     }
   }
   return ToTypeMappings.emptyReturnValueFor(wanted.getMethod().getReturnType());
