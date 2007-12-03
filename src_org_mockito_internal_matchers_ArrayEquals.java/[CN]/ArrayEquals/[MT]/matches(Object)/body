@@ -1,6 +1,9 @@
 {
   Object wanted=getWanted();
-  if (wanted instanceof boolean[] && (actual == null || actual instanceof boolean[])) {
+  if (wanted == null) {
+    return super.matches(actual);
+  }
+ else   if (wanted instanceof boolean[] && (actual == null || actual instanceof boolean[])) {
     return Arrays.equals((boolean[])wanted,(boolean[])actual);
   }
  else   if (wanted instanceof byte[] && (actual == null || actual instanceof byte[])) {
@@ -28,6 +31,6 @@
     return Arrays.equals((Object[])wanted,(Object[])actual);
   }
  else {
-    return super.matches(actual);
+    throw new IllegalStateException("Something went really wrong. Arguments passed to ArrayEquals have to be an array!");
   }
 }

@@ -1,0 +1,13 @@
+{
+  Object[] nullArray=null;
+  stub(mock.oneArray(aryEq(nullArray))).andReturn("null");
+  assertEquals("null",mock.oneArray(nullArray));
+  mock=mock(IMethods.class);
+  try {
+    verify(mock).oneArray(nullArray);
+  }
+ catch (  VerificationError e) {
+    String expected="\n" + "Wanted but not invoked:" + "\n"+ "IMethods.oneArray(null)";
+    assertEquals(expected,e.getMessage());
+  }
+}
