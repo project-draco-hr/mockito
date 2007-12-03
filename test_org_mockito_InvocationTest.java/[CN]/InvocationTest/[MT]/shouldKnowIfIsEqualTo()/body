@@ -3,4 +3,5 @@
   assertFalse(call.equals(""));
   assertTrue(call.equals(equalCall));
   assertFalse(call.equals(nonEqualCall));
+  assertFalse(call.equals(newStringObjectShouldNotBeEqual));
 }
