@@ -1,6 +1,6 @@
 {
   if (!toAssert) {
-    threadToArgumentMatcherStack.remove();
+    if (threadToArgumentMatcherStack.get() != null)     threadToArgumentMatcherStack.get().clear();
     throw new InvalidUseOfMatchersException(message);
   }
 }

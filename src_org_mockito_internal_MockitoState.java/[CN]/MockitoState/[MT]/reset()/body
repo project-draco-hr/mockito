@@ -1,0 +1,5 @@
+{
+  stubbingModeLocal.set(null);
+  verifyingModeLocal.set(null);
+  invocationSequenceNumber.set(null);
+}

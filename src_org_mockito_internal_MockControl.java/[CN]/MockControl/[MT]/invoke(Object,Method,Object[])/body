@@ -6,14 +6,14 @@
     throwableToBeSetOnVoidMethod=null;
     return null;
   }
-  VerifyingMode verifyingMode=mockitoState.pullVerifyingMode();
-  mockitoState.validateState();
+  VerifyingMode verifyingMode=MockitoState.instance().pullVerifyingMode();
+  MockitoState.instance().validateState();
   ExpectedInvocation invocationWithMatchers=expectedInvocation(proxy,method,args);
   if (verifyingMode != null) {
     behavior.verify(invocationWithMatchers,verifyingMode);
     return ToTypeMappings.emptyReturnValueFor(method.getReturnType());
   }
   behavior.addInvocation(invocationWithMatchers);
-  mockitoState.reportControlForStubbing(this);
+  MockitoState.instance().reportControlForStubbing(this);
   return behavior.resultFor(invocationWithMatchers.getInvocation());
 }

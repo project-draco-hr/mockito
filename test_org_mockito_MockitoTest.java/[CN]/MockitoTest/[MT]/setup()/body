@@ -1,4 +1,3 @@
 {
   StateResetter.reset();
-  notMock="i'm not a notMock";
 }

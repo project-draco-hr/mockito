@@ -1,4 +1,0 @@
-{
-  this.mockitoState=mockitoState;
-  this.lastArguments=lastArguments;
-}

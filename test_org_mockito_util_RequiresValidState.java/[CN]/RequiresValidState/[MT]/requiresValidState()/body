@@ -1,3 +1,4 @@
 {
   MockitoState.instance().validateState();
+  LastArguments.instance().validateState();
 }

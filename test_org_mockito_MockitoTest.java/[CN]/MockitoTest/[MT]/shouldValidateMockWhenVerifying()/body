@@ -1,3 +1,3 @@
 {
-  Mockito.verify(notMock);
+  Mockito.verify("notMock");
 }
