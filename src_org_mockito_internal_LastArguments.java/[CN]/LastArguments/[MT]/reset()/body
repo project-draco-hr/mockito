@@ -1,5 +1,3 @@
 {
-  if (threadToArgumentMatcherStack.get() != null) {
-    threadToArgumentMatcherStack.get().clear();
-  }
+  matcherStack.clear();
 }

@@ -1,3 +1,6 @@
 {
-  return INSTANCE;
+  if (INSTANCE.get() == null) {
+    INSTANCE.set(new LastArguments());
+  }
+  return INSTANCE.get();
 }

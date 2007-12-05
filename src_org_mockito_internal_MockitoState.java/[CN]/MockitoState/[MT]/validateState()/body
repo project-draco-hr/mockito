@@ -1,10 +1,10 @@
 {
-  if (verifyingModeLocal != null) {
-    verifyingModeLocal=null;
+  if (verifyingMode != null) {
+    verifyingMode=null;
     Exceptions.unfinishedVerificationException();
   }
-  if (stubbingModeLocal) {
-    stubbingModeLocal=false;
+  if (stubbingInProgress) {
+    stubbingInProgress=false;
     Exceptions.unfinishedStubbing();
   }
 }

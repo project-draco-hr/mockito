@@ -1,5 +1,5 @@
 {
-  stubbingModeLocal=false;
-  verifyingModeLocal=null;
+  stubbingInProgress=false;
+  verifyingMode=null;
   invocationSequenceNumber=1;
 }

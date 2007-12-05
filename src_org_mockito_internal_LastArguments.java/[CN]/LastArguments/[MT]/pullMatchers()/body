@@ -1,8 +1,8 @@
 {
-  Stack<IArgumentMatcher> stack=threadToArgumentMatcherStack.get();
-  if (stack == null) {
+  if (matcherStack.isEmpty()) {
     return null;
   }
-  threadToArgumentMatcherStack.remove();
-  return new ArrayList<IArgumentMatcher>(stack);
+  ArrayList<IArgumentMatcher> matchers=new ArrayList<IArgumentMatcher>(matcherStack);
+  matcherStack.clear();
+  return matchers;
 }

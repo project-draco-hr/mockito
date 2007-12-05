@@ -1,5 +1,4 @@
 {
-  Stack<IArgumentMatcher> stack=threadToArgumentMatcherStack.get();
-  assertState(stack != null,missingMatchers());
-  stack.push(new And(popLastArgumentMatchers(count)));
+  assertState(!matcherStack.isEmpty(),"No matchers found for And(?).");
+  matcherStack.push(new And(popLastArgumentMatchers(count)));
 }

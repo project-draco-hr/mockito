@@ -1,6 +1,6 @@
 {
-  if (threadToArgumentMatcherStack.get() != null && !threadToArgumentMatcherStack.get().isEmpty()) {
-    threadToArgumentMatcherStack.get().clear();
-    throw new MockitoException("invalid arguments state");
+  if (!matcherStack.isEmpty()) {
+    reset();
+    throw new InvalidUseOfMatchersException("The way matchers were used is inapropriate!");
   }
 }
