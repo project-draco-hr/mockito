@@ -1,5 +1,5 @@
 {
-  stubbingModeLocal.set(null);
-  verifyingModeLocal.set(null);
-  invocationSequenceNumber.set(null);
+  stubbingModeLocal=false;
+  verifyingModeLocal=null;
+  invocationSequenceNumber=1;
 }

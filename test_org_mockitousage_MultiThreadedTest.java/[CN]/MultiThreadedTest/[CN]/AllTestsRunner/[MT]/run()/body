@@ -6,6 +6,7 @@
     System.err.println(failures.size());
     for (    Failure failure : failures) {
       System.err.println(failure.getTrace());
+      failed=true;
     }
   }
 }

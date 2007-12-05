@@ -1,4 +1,4 @@
 {
   validateState();
-  stubbingModeLocal.set(new Object());
+  stubbingModeLocal=true;
 }

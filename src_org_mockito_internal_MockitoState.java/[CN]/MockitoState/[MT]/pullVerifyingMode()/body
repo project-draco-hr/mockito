@@ -1,5 +1,5 @@
 {
-  VerifyingMode verifyingMode=verifyingModeLocal.get();
-  verifyingModeLocal.set(null);
-  return verifyingMode;
+  VerifyingMode temp=verifyingModeLocal;
+  verifyingModeLocal=null;
+  return temp;
 }

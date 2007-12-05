@@ -1,0 +1,5 @@
+{
+  int numberOfThreads=100;
+  runInMultipleThreads(numberOfThreads);
+  System.out.println("Finished running tests in " + numberOfThreads + " threads");
+}

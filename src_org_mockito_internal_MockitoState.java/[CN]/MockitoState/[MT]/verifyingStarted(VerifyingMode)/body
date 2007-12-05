@@ -1,4 +1,4 @@
 {
   validateState();
-  verifyingModeLocal.set(verify);
+  verifyingModeLocal=verify;
 }

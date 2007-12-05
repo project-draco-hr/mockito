@@ -1,3 +1,3 @@
 {
-  return "lastControl: " + lastControl.get() + ", verifyingMode: "+ verifyingModeLocal.get()+ ", invocationSequenceNumber: "+ invocationSequenceNumber.get()+ ", stubbingModeLocal: "+ stubbingModeLocal.get();
+  return "lastControl: " + lastControl + ", verifyingMode: "+ verifyingModeLocal+ ", invocationSequenceNumber: "+ invocationSequenceNumber+ ", stubbingModeLocal: "+ stubbingModeLocal;
 }
