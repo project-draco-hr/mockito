@@ -1,4 +1,5 @@
 {
-  assertTrue(call.getSequenceNumber() != equalCall.getSequenceNumber());
-  assertTrue(call.equals(equalCall));
+  Invocation equal=new InvocationBuilder().args(" ").mock("mock").seq(2).toInvocation();
+  assertTrue(invocation.equals(equal));
+  assertTrue(invocation.getSequenceNumber() != equal.getSequenceNumber());
 }

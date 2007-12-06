@@ -1,7 +1,7 @@
 {
   Map map=new HashMap();
   try {
-    map.put(call,"one");
+    map.put(invocation,"one");
     fail();
   }
  catch (  RuntimeException e) {
