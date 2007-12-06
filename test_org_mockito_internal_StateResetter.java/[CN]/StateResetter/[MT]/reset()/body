@@ -1,4 +1,3 @@
 {
   MockitoState.instance().reset();
-  LastArguments.instance().reset();
 }
