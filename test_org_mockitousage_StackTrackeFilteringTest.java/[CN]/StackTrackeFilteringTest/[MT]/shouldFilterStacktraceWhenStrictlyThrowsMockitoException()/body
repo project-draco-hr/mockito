@@ -4,6 +4,6 @@
     fail();
   }
  catch (  MockitoException expected) {
-    assertThat(expected,firstMethodOnStackEqualsTo("shouldFilterStacktraceWhenStrictlyThrowsMockitoException"));
+    assertThat(expected,hasFirstMethodInStackTrace("shouldFilterStacktraceWhenStrictlyThrowsMockitoException"));
   }
 }

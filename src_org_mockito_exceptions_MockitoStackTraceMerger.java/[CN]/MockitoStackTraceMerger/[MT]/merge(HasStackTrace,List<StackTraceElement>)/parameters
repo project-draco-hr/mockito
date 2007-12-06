@@ -1,0 +1,2 @@
+HasStackTrace hasStackTrace
+List<StackTraceElement> invocationStackTrace

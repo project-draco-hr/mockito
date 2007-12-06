@@ -1,0 +1,5 @@
+{
+  MockitoStackTraceMerger merger=new MockitoStackTraceMerger();
+  SomeException exception=new SomeException();
+  merger.merge(exception,actualInvocationStackTrace);
+}

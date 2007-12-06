@@ -1,5 +1,5 @@
 {
-  List<StackTraceElement> unfilteredStackTrace=Arrays.asList(hasFilterableStackTrace.getStackTrace());
+  List<StackTraceElement> unfilteredStackTrace=Arrays.asList(hasStackTrace.getStackTrace());
   int lastToRemove=-1;
   int i=0;
   for (  StackTraceElement trace : unfilteredStackTrace) {
@@ -9,5 +9,5 @@
     i++;
   }
   List<StackTraceElement> filtered=unfilteredStackTrace.subList(lastToRemove + 1,unfilteredStackTrace.size() - 1);
-  hasFilterableStackTrace.setStackTrace(filtered.toArray(new StackTraceElement[]{}));
+  hasStackTrace.setStackTrace(filtered.toArray(new StackTraceElement[]{}));
 }

@@ -1,0 +1,7 @@
+{
+  StackTraceElement[] trace=new StackTraceElement[methods.length];
+  for (int i=0; i < methods.length; i++) {
+    trace[i]=new StackTraceElement("DummyClass",methods[i],"DummyClass.java",100);
+  }
+  return trace;
+}

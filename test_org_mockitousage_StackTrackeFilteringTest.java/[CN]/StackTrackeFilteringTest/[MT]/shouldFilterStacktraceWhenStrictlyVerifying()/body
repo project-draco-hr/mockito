@@ -7,6 +7,6 @@
     fail();
   }
  catch (  VerificationError expected) {
-    assertThat(expected,firstMethodOnStackEqualsTo("shouldFilterStacktraceWhenStrictlyVerifying"));
+    assertThat(expected,hasFirstMethodInStackTrace("shouldFilterStacktraceWhenStrictlyVerifying"));
   }
 }

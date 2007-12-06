@@ -5,6 +5,6 @@
     fail();
   }
  catch (  VerificationError expected) {
-    assertThat(expected,firstMethodOnStackEqualsTo("shouldFilterStackTraceOnVerifyZeroInteractions"));
+    assertThat(expected,hasFirstMethodInStackTrace("shouldFilterStackTraceOnVerifyZeroInteractions"));
   }
 }

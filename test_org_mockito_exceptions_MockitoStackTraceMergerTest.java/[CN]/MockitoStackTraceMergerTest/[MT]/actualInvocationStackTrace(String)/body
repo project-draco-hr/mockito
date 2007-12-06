@@ -1,0 +1,3 @@
+{
+  actualInvocationStackTrace=new StackTraceBuilder().methods(methods).toStackTraceList();
+}

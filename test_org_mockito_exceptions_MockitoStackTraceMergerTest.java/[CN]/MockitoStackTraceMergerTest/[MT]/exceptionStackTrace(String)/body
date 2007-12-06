@@ -1,0 +1,3 @@
+{
+  exceptionStackTrace=new StackTraceBuilder().methods(methods).toStackTrace();
+}

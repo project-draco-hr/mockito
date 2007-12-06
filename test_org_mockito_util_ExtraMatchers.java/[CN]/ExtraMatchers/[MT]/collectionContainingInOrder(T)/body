@@ -1,0 +1,18 @@
+{
+  return new BaseMatcher<Collection>(){
+    public boolean matches(    Object collection){
+      Collection actual=(Collection)collection;
+      if (actual.size() != elements.length) {
+        return false;
+      }
+      if (Collections.indexOfSubList((List<?>)actual,Arrays.asList(elements)) == -1) {
+        return false;
+      }
+      return true;
+    }
+    public void describeTo(    Description desc){
+      desc.appendText("collection doesn't contain following elements in order: " + Arrays.toString(elements));
+    }
+  }
+;
+}

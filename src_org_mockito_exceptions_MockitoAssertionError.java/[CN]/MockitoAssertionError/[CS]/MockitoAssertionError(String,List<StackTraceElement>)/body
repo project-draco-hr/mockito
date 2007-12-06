@@ -1,0 +1,5 @@
+{
+  this(message);
+  MockitoStackTraceMerger merger=new MockitoStackTraceMerger();
+  merger.merge(this,invocationStackTrace);
+}
