@@ -1,0 +1,10 @@
+{
+  mock.simpleMethod(null,null);
+  try {
+    verify(mock).simpleMethod("test");
+    fail();
+  }
+ catch (  VerificationError e) {
+    assertTrue(e.getMessage().contains("simpleMethod(null, null)"));
+  }
+}

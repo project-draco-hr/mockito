@@ -10,6 +10,7 @@
   assertEquals(null,three.simpleMethod("three again"));
   try {
     three.simpleMethod("test three again");
+    fail();
   }
  catch (  RuntimeException e) {
   }
