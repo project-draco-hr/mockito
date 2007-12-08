@@ -5,7 +5,7 @@
     fail();
   }
  catch (  VerificationError e) {
-    assertThat(e.getMessage(),contains("IMethods.oneArray([false, false, false])"));
-    assertThat(e.getCause().getMessage(),contains("IMethods.oneArray([true, false, false])"));
+    assertThat(e,messageContains("IMethods.oneArray([false, false, false])"));
+    assertThat(e,causeMessageContains("IMethods.oneArray([true, false, false])"));
   }
 }

@@ -9,7 +9,7 @@
     fail();
   }
  catch (  VerificationError e) {
-    assertThat(e.getMessage(),contains("IMethods.twoArgumentMethod(3, 1000)"));
-    assertThat(e.getCause().getMessage(),contains("IMethods.twoArgumentMethod(3, 3)"));
+    assertThat(e,messageContains("IMethods.twoArgumentMethod(3, 1000)"));
+    assertThat(e,causeMessageContains("IMethods.twoArgumentMethod(3, 3)"));
   }
 }

@@ -1,10 +1,11 @@
 {
+  Invocation actualbyName=null;
   for (  Invocation registered : registeredInvocations) {
     String wantedMethodName=wanted.getMethod().getName();
     String registeredInvocationName=registered.getMethod().getName();
     if (wantedMethodName.equals(registeredInvocationName) && !registered.isVerified()) {
-      return registered;
+      actualbyName=registered;
     }
   }
-  return null;
+  return actualbyName != null ? actualbyName : getFirstUnverified();
 }

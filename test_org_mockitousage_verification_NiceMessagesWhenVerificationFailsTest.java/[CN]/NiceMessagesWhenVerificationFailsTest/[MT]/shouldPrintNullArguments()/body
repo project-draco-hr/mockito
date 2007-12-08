@@ -5,6 +5,6 @@
     fail();
   }
  catch (  VerificationError e) {
-    assertThat(e.getCause().getMessage(),contains("simpleMethod(null, null)"));
+    assertThat(e,causeMessageContains("simpleMethod(null, null)"));
   }
 }

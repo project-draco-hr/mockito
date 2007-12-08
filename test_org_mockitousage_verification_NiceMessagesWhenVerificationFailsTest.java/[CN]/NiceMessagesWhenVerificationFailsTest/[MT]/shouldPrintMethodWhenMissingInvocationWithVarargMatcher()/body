@@ -1,0 +1,11 @@
+{
+  mock.varargsString(10,"one","two");
+  try {
+    verify(mock).varargsString(10,"two","one");
+    fail();
+  }
+ catch (  VerificationError e) {
+    assertThat(e,messageContains("IMethods.varargsString(10, \"two\", \"one\")"));
+    assertThat(e,causeMessageContains("IMethods.varargsString(10, \"one\", \"two\")"));
+  }
+}

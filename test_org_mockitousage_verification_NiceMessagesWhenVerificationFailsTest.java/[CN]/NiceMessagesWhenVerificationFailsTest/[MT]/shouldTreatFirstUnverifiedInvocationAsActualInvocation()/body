@@ -1,0 +1,16 @@
+{
+  mock.oneArg(true);
+  mock.simpleMethod();
+  mock.differentMethod();
+  mock.twoArgumentMethod(1,2);
+  try {
+    verify(mock).oneArg(true);
+    verify(mock).differentMethod();
+    verify(mock).threeArgumentMethod(1,"2","3");
+    fail();
+  }
+ catch (  VerificationError e) {
+    assertThat(e,messageContains("IMethods.threeArgumentMethod(1, \"2\", \"3\")"));
+    assertThat(e,causeMessageContains("IMethods.simpleMethod()"));
+  }
+}

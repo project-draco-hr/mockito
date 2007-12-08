@@ -1,5 +1,5 @@
 {
-  Invocation actual=registeredInvocations.findSimilarInvocation(wanted);
+  Invocation actual=registeredInvocations.findActualInvocation(wanted);
   if (actual != null) {
     reportDiscrepancy(wanted,actual);
   }

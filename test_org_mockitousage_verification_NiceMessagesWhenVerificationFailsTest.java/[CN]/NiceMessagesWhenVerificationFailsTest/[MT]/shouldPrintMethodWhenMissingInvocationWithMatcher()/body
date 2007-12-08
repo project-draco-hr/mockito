@@ -1,0 +1,11 @@
+{
+  mock.simpleMethod("foo");
+  try {
+    verify(mock).simpleMethod(matches("burrito"));
+    fail();
+  }
+ catch (  VerificationError e) {
+    assertThat(e,messageContains("IMethods.simpleMethod(matches(\"burrito\"))"));
+    assertThat(e,causeMessageContains("IMethods.simpleMethod(\"foo\")"));
+  }
+}
