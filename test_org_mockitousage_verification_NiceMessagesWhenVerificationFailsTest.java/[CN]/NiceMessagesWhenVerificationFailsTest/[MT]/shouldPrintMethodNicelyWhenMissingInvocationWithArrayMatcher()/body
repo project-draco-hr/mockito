@@ -5,7 +5,7 @@
     fail();
   }
  catch (  VerificationError e) {
-    String expected="\n" + "Invocation differs from actual" + "\n"+ "Wanted: IMethods.oneArray([false, false, false])"+ "\n"+ "Actual: IMethods.oneArray([true, false, false])";
-    assertEquals(expected,e.getMessage());
+    assertThat(e.getMessage(),contains("IMethods.oneArray([false, false, false])"));
+    assertThat(e.getCause().getMessage(),contains("IMethods.oneArray([true, false, false])"));
   }
 }

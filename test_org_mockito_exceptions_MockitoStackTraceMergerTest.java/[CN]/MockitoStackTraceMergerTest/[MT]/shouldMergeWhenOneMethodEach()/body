@@ -1,6 +1,0 @@
-{
-  exceptionStackTrace("one","commonOne");
-  actualInvocationStackTrace("two","commonOne");
-  merge();
-  assertThat(methodsOnTraceAfterMerging,collectionContainingInOrder("one","_below_is_actual_invocation_stack_trace_","two","commonOne"));
-}

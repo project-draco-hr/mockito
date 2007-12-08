@@ -1,3 +1,0 @@
-{
-  return new VerificationError(join("Invocation differs from actual","Wanted: " + wanted,"Actual: " + actual),invocationStackTrace);
-}

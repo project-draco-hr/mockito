@@ -1,6 +1,0 @@
-{
-  methodsOnTraceAfterMerging=new LinkedList<String>();
-  for (  StackTraceElement e : stackTrace) {
-    methodsOnTraceAfterMerging.add(e.getMethodName());
-  }
-}

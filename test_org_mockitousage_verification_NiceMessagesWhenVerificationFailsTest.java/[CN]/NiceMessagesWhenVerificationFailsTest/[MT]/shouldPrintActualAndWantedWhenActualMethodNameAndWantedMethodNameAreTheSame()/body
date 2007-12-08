@@ -4,9 +4,8 @@
     verify(mock).simpleMethod("test");
     fail();
   }
- catch (  VerificationError expected) {
-    String actualMessage=expected.getMessage();
-    String expectedMessage="\n" + "Invocation differs from actual" + "\n"+ "Wanted: IMethods.simpleMethod(\"test\")"+ "\n"+ "Actual: IMethods.simpleMethod()";
-    assertEquals(expectedMessage,actualMessage);
+ catch (  VerificationError e) {
+    assertThat(e.getMessage(),contains("IMethods.simpleMethod(\"test\")"));
+    assertThat(e.getCause().getMessage(),contains("IMethods.simpleMethod()"));
   }
 }

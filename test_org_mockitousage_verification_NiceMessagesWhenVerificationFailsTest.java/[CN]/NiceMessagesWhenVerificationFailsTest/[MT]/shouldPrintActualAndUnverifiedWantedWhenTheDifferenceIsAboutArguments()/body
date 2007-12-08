@@ -8,9 +8,8 @@
     verify(mock).twoArgumentMethod(3,1000);
     fail();
   }
- catch (  VerificationError expected) {
-    String actualMessage=expected.getMessage();
-    String expectedMessage="\n" + "Invocation differs from actual" + "\n"+ "Wanted: IMethods.twoArgumentMethod(3, 1000)"+ "\n"+ "Actual: IMethods.twoArgumentMethod(3, 3)";
-    assertEquals(expectedMessage,actualMessage);
+ catch (  VerificationError e) {
+    assertThat(e.getMessage(),contains("IMethods.twoArgumentMethod(3, 1000)"));
+    assertThat(e.getCause().getMessage(),contains("IMethods.twoArgumentMethod(3, 3)"));
   }
 }
