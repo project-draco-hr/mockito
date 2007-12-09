@@ -5,7 +5,7 @@
     Mockito.verify(mock,15).clear();
     fail();
   }
- catch (  NumberOfInvocationsError e) {
+ catch (  TooLittleActualInvocationsError e) {
     assertThat(e,messageContains("Wanted 15 times but was 1"));
   }
 }

@@ -4,5 +4,5 @@
     cause=new TooLittleInvocations(join("Too little invocations:"));
     cause.setStackTrace(lastActualInvocationStackTrace.getStackTrace());
   }
-  throw new NumberOfInvocationsError(join(wanted,"Wanted " + pluralize(wantedCount) + " but was "+ actualCount),cause);
+  throw new TooLittleActualInvocationsError(join(wanted,"Wanted " + pluralize(wantedCount) + " but was "+ actualCount),cause);
 }
