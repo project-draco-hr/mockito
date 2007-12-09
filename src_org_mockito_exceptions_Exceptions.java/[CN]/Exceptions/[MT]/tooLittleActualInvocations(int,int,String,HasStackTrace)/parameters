@@ -1,0 +1,4 @@
+int wantedCount
+int actualCount
+String wanted
+HasStackTrace lastActualInvocationStackTrace

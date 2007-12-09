@@ -10,5 +10,8 @@
  catch (  NumberOfInvocationsError e) {
     String expected="\n" + "LinkedList.clear()" + "\n"+ "Wanted 100 times but was 3";
     assertEquals(expected,e.getMessage());
+    assertEquals(TooLittleInvocations.class,e.getCause().getClass());
+    String expectedCause="\n" + "Too little invocations:";
+    assertEquals(expectedCause,e.getCause().getMessage());
   }
 }

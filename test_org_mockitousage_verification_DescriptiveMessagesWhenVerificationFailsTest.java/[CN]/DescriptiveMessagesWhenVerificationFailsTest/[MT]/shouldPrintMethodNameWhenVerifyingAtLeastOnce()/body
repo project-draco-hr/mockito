@@ -1,0 +1,9 @@
+{
+  try {
+    verify(mock,atLeastOnce()).twoArgumentMethod(1,2);
+    fail();
+  }
+ catch (  VerificationError e) {
+    assertThat(e,messageContains("IMethods.twoArgumentMethod(1, 2)"));
+  }
+}

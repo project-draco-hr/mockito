@@ -1,0 +1,6 @@
+{
+  ExpectedInvocation invocation=new ExpectedInvocation(new InvocationBuilder().toInvocation());
+  MockitoBehavior behavior=new MockitoBehavior();
+  VerifyingMode inOrder=VerifyingMode.atLeastOnce();
+  behavior.checkForWrongNumberOfInvocations(invocation,inOrder);
+}

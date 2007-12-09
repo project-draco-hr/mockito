@@ -6,6 +6,6 @@
     fail();
   }
  catch (  NumberOfInvocationsError e) {
-    assertTrue(e.getMessage().endsWith("Wanted 15 times but was 1"));
+    assertThat(e,messageContains("Wanted 15 times but was 1"));
   }
 }
