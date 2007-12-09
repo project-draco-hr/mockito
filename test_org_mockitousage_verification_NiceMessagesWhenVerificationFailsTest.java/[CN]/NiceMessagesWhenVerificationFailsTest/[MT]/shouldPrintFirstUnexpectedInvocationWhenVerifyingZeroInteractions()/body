@@ -5,9 +5,10 @@
     verifyZeroInteractions(mock);
     fail();
   }
- catch (  VerificationError expected) {
-    String actualMessage=expected.getMessage();
-    String expectedMessage="\n" + "Zero interactions wanted" + "\n"+ "Unexpected: IMethods.twoArgumentMethod(1, 2)";
-    assertEquals(expectedMessage,actualMessage);
+ catch (  VerificationError e) {
+    String expected="\n" + "Zero interactions wanted";
+    assertEquals(e.getMessage(),expected);
+    String expectedCause="\n" + "Undesired invocation:" + "\n"+ "IMethods.twoArgumentMethod(1, 2)";
+    assertEquals(e.getCause().getMessage(),expectedCause);
   }
 }

@@ -7,9 +7,11 @@
     verifyNoMoreInteractions(mock);
     fail();
   }
- catch (  VerificationError expected) {
-    String actualMessage=expected.getMessage();
-    String expectedMessage="\n" + "No more interactions wanted" + "\n"+ "Unexpected: IMethods.oneArg(false)";
-    assertEquals(expectedMessage,actualMessage);
+ catch (  VerificationError e) {
+    String expectedMessage="\n" + "No more interactions wanted";
+    assertEquals(expectedMessage,e.getMessage());
+    assertEquals(e.getCause().getClass(),UndesiredInvocation.class);
+    String expectedCause="\n" + "Undesired invocation:" + "\n"+ "IMethods.oneArg(false)";
+    assertEquals(expectedCause,e.getCause().getMessage());
   }
 }

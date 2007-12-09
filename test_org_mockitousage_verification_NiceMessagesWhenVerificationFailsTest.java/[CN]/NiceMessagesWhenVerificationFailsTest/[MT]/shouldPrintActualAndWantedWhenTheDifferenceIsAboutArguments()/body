@@ -9,6 +9,7 @@
  catch (  VerificationError e) {
     String expected="\n" + "Invocation differs from actual" + "\n"+ "Wanted invocation:"+ "\n"+ "IMethods.twoArgumentMethod(1, 1000)";
     assertEquals(expected,e.getMessage());
+    assertEquals(e.getCause().getClass(),WantedDiffersFromActual.class);
     String expectedCause="\n" + "Actual invocation:" + "\n"+ "IMethods.twoArgumentMethod(1, 2)";
     assertEquals(expectedCause,e.getCause().getMessage());
   }

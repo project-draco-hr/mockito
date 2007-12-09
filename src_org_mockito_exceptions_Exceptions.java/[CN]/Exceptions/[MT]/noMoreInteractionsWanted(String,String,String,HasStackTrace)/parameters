@@ -1,0 +1,4 @@
+String message
+String undesired
+String actual
+HasStackTrace actualInvocationStackTrace
