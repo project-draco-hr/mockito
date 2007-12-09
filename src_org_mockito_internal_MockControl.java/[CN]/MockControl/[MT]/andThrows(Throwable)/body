@@ -1,5 +1,5 @@
 {
   MockitoState.instance().stubbingCompleted();
-  validateThrowable(throwable);
-  behavior.addResult(Result.createThrowResult(throwable));
+  behavior.lastInvocationWasStubbed();
+  stubber.addThrowable(throwable);
 }

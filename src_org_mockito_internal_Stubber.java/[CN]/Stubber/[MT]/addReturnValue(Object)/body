@@ -1,0 +1,3 @@
+{
+  addResult(Result.createReturnResult(value));
+}

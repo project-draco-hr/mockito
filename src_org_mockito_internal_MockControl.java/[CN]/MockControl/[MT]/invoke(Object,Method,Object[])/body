@@ -2,6 +2,7 @@
   if (throwableToBeSetOnVoidMethod != null) {
     ExpectedInvocation invocationWithMatchers=expectedInvocation(proxy,method,args);
     behavior.addInvocation(invocationWithMatchers);
+    stubber.setInvocationForPotentialStubbing(invocationWithMatchers);
     andThrows(throwableToBeSetOnVoidMethod);
     throwableToBeSetOnVoidMethod=null;
     return null;
@@ -13,7 +14,8 @@
     behavior.verify(invocationWithMatchers,verifyingMode);
     return ToTypeMappings.emptyReturnValueFor(method.getReturnType());
   }
+  stubber.setInvocationForPotentialStubbing(invocationWithMatchers);
   behavior.addInvocation(invocationWithMatchers);
   MockitoState.instance().reportControlForStubbing(this);
-  return behavior.resultFor(invocationWithMatchers.getInvocation());
+  return stubber.resultFor(invocationWithMatchers.getInvocation());
 }

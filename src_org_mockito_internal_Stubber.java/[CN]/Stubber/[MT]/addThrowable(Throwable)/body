@@ -1,0 +1,4 @@
+{
+  validateThrowable(throwable);
+  addResult(Result.createThrowResult(throwable));
+}
