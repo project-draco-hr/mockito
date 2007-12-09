@@ -1,3 +1,6 @@
 {
-  verifyNoMoreInteractions("Zero interactions wanted");
+  Invocation unverified=registeredInvocations.getFirstUnverified();
+  if (unverified != null) {
+    Exceptions.zeroInteractionsWanted(unverified.toString(),unverified.getStackTrace());
+  }
 }

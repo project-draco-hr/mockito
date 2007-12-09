@@ -1,0 +1,4 @@
+{
+  UndesiredInvocation cause=buildCause(actualInvocationStackTrace,"Undesired invocation:",undesired);
+  throw new VerificationError(join("No more interactions wanted"),cause);
+}
