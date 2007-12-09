@@ -10,8 +10,7 @@
     fail();
   }
  catch (  VerificationError expected) {
-    String actualMessage=expected.getMessage();
-    String expectedMessage="\n" + "Strict order verification failed" + "\n"+ "Wanted: IMethods#3.simpleMethod()"+ "\n"+ "Actual: IMethods#1.simpleMethod()";
-    assertEquals(expectedMessage,actualMessage);
+    assertThat(expected,messageContains("IMethods#3.simpleMethod()"));
+    assertThat(expected,causeMessageContains("IMethods#1.simpleMethod()"));
   }
 }

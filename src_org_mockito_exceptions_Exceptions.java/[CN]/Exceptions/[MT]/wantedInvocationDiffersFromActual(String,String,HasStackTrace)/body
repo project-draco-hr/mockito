@@ -1,5 +1,3 @@
 {
-  WantedDiffersFromActual cause=new WantedDiffersFromActual(join("Actual invocation:",actual));
-  cause.setStackTrace(actualInvocationStackTrace.getStackTrace());
-  throw new VerificationError(join("Invocation differs from actual","Wanted invocation:",wanted),cause);
+  wantedDiffersFromActual("Invocation differs from actual",wanted,actual,actualInvocationStackTrace);
 }

@@ -3,9 +3,11 @@
     strictly.verify(one).simpleMethod(999);
     fail();
   }
- catch (  VerificationError expected) {
-    String actualMessage=expected.getMessage();
-    String expectedMessage="\n" + "Strict order verification failed" + "\n"+ "Wanted: IMethods.simpleMethod(999)"+ "\n"+ "Actual: IMethods.simpleMethod(1)";
-    assertEquals(expectedMessage,actualMessage);
+ catch (  VerificationError e) {
+    String expected="\n" + "Strict order verification failed" + "\n"+ "Wanted invocation:"+ "\n"+ "IMethods.simpleMethod(999)";
+    assertEquals(expected,e.getMessage());
+    assertEquals(e.getCause().getClass(),WantedDiffersFromActual.class);
+    String expectedCause="\n" + "Actual invocation:" + "\n"+ "IMethods.simpleMethod(1)";
+    assertEquals(expectedCause,e.getCause().getMessage());
   }
 }

@@ -11,5 +11,5 @@
     wanted=wantedInvocation.getInvocation().toStringWithArgumentTypes();
     actual=actualInvocation.toStringWithArgumentTypes();
   }
-  Exceptions.strictlyWantedInvocationDiffersFromActual(wanted,actual);
+  Exceptions.strictlyWantedInvocationDiffersFromActual(wanted,actual,actualInvocation.getStackTrace());
 }
