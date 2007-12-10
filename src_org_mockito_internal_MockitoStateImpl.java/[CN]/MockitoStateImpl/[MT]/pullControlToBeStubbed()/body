@@ -1,0 +1,5 @@
+{
+  MockControl temp=lastControl;
+  lastControl=null;
+  return temp;
+}

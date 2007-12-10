@@ -4,8 +4,8 @@
     stubber.addVoidMethodForThrowable(invocationMatcher);
     return null;
   }
-  VerifyingMode verifyingMode=MockitoState.instance().pullVerifyingMode();
-  MockitoState.instance().validateState();
+  VerifyingMode verifyingMode=mockitoState.pullVerifyingMode();
+  mockitoState.validateState();
   InvocationMatcher invocationWithMatchers=invocationMatcherFactory.create(proxy,method,args);
   if (verifyingMode != null) {
     behavior.verify(invocationWithMatchers,verifyingMode);
@@ -13,6 +13,6 @@
   }
   stubber.setInvocationForPotentialStubbing(invocationWithMatchers);
   behavior.addInvocation(invocationWithMatchers);
-  MockitoState.instance().reportControlForStubbing(this);
+  mockitoState.reportControlForStubbing(this);
   return stubber.resultFor(invocationWithMatchers.getInvocation());
 }

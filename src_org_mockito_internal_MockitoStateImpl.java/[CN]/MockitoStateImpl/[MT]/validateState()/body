@@ -1,0 +1,10 @@
+{
+  if (verifyingMode != null) {
+    verifyingMode=null;
+    Exceptions.unfinishedVerificationException();
+  }
+  if (stubbingInProgress) {
+    stubbingInProgress=false;
+    Exceptions.unfinishedStubbing();
+  }
+}

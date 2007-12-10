@@ -1,9 +1,9 @@
 {
   try {
-    s.addThrowable(new Exception());
+    stubber.addThrowable(new Exception());
     fail();
   }
  catch (  MockitoException e) {
-    MockitoState.instance().validateState();
+    state.validateState();
   }
 }

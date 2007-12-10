@@ -1,4 +1,4 @@
 {
-  MockitoState.instance().stubbingCompleted();
+  mockitoState.stubbingCompleted();
   addResult(Result.createReturnResult(value));
 }

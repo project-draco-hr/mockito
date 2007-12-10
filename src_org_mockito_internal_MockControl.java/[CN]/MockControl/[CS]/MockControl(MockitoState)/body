@@ -1,0 +1,5 @@
+{
+  this.mockitoState=mockitoState;
+  invocationMatcherFactory=new InvocationMatcherFactory(mockitoState);
+  stubber=new Stubber(mockitoState);
+}

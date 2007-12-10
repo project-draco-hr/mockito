@@ -1,4 +1,4 @@
 {
-  s.addReturnValue("test");
-  MockitoState.instance().validateState();
+  stubber.addReturnValue("test");
+  state.validateState();
 }

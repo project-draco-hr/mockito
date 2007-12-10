@@ -1,12 +1,13 @@
 {
   LastArguments.instance().reportMatcher(new Equals("test"));
-  MockitoState.instance().verifyingStarted(VerifyingMode.atLeastOnce());
-  MockControl control=new MockControl();
+  MockitoStateImpl state=new MockitoStateImpl();
+  state.verifyingStarted(VerifyingMode.atLeastOnce());
+  MockControl control=new MockControl(state);
   try {
     control.invoke(null,String.class.getDeclaredMethod("toString"),new Object[]{});
     fail();
   }
  catch (  InvalidUseOfMatchersException e) {
   }
-  assertNull(MockitoState.instance().pullVerifyingMode());
+  assertNull(state.pullVerifyingMode());
 }

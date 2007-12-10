@@ -1,5 +1,6 @@
 {
-  s=new Stubber();
-  s.setInvocationForPotentialStubbing(new InvocationBuilder().toInvocationMatcher());
-  MockitoState.instance().stubbingStarted();
+  state=new MockitoStateImpl();
+  state.stubbingStarted();
+  stubber=new Stubber(state);
+  stubber.setInvocationForPotentialStubbing(new InvocationBuilder().toInvocationMatcher());
 }

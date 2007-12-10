@@ -1,7 +1,7 @@
 {
   Invocation simpleMethod=new InvocationBuilder().method("simpleMethod").toInvocation();
-  s.setInvocationForPotentialStubbing(new InvocationMatcher(simpleMethod));
-  s.addReturnValue("simpleMethod");
+  stubber.setInvocationForPotentialStubbing(new InvocationMatcher(simpleMethod));
+  stubber.addReturnValue("simpleMethod");
   Invocation differentMethod=new InvocationBuilder().method("differentMethod").toInvocation();
-  assertEquals(null,s.resultFor(differentMethod));
+  assertEquals(null,stubber.resultFor(differentMethod));
 }
