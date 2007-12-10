@@ -1,0 +1,12 @@
+{
+  Stubber s=new Stubber();
+  s.setInvocationForPotentialStubbing(new InvocationBuilder().toExpecteInvocation());
+  MockitoState.instance().stubbingStarted();
+  try {
+    s.addThrowable(new Exception());
+    fail();
+  }
+ catch (  MockitoException e) {
+    MockitoState.instance().validateState();
+  }
+}

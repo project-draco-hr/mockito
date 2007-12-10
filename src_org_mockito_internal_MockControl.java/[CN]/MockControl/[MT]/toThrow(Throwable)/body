@@ -1,4 +1,4 @@
 {
-  throwableToBeSetOnVoidMethod=throwable;
+  stubber.addThrowableForVoidMethod(throwable);
   return this;
 }

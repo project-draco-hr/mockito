@@ -1,10 +1,7 @@
 {
-  if (throwableToBeSetOnVoidMethod != null) {
+  if (stubber.hasThrowableForVoidMethod()) {
     ExpectedInvocation invocationWithMatchers=expectedInvocation(proxy,method,args);
-    behavior.addInvocation(invocationWithMatchers);
-    stubber.setInvocationForPotentialStubbing(invocationWithMatchers);
-    andThrows(throwableToBeSetOnVoidMethod);
-    throwableToBeSetOnVoidMethod=null;
+    stubber.addVoidMethodForThrowable(invocationWithMatchers);
     return null;
   }
   VerifyingMode verifyingMode=MockitoState.instance().pullVerifyingMode();

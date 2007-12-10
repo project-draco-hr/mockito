@@ -1,4 +1,5 @@
 {
+  MockitoState.instance().stubbingCompleted();
   validateThrowable(throwable);
   addResult(Result.createThrowResult(throwable));
 }
