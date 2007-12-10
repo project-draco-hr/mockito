@@ -1,6 +1,0 @@
-{
-  if (INSTANCE.get() == null) {
-    INSTANCE.set(new MockitoState());
-  }
-  return INSTANCE.get();
-}
