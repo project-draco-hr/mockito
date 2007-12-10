@@ -1,8 +1,8 @@
 {
-  for (  StubbedInvocation s : stubbed) {
+  for (  StubbedInvocationMatcher s : stubbed) {
     if (s.matches(wanted)) {
       return s.getResult().answer();
     }
   }
-  return ToTypeMappings.emptyReturnValueFor(wanted.getMethod().getReturnType());
+  return EmptyReturnValues.emptyValueFor(wanted.getMethod().getReturnType());
 }

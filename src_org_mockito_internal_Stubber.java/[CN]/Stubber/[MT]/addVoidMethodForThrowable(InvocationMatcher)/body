@@ -1,5 +1,5 @@
 {
-  this.invocationForStubbing=invocationWithMatchers;
-  this.addThrowable(throwableForVoidMethod);
+  invocationForStubbing=voidMethodInvocationMatcher;
+  addThrowable(throwableForVoidMethod);
   throwableForVoidMethod=null;
 }
