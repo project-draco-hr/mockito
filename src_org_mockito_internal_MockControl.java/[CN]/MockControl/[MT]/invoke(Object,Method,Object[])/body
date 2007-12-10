@@ -1,12 +1,14 @@
 {
   if (stubber.hasThrowableForVoidMethod()) {
-    InvocationMatcher invocationMatcher=invocationMatcherFactory.create(proxy,method,args);
+    Invocation invocation=new Invocation(proxy,method,args,mockitoState.nextSequenceNumber());
+    InvocationMatcher invocationMatcher=matchersBinder.bindMatchers(invocation);
     stubber.addVoidMethodForThrowable(invocationMatcher);
     return null;
   }
   VerifyingMode verifyingMode=mockitoState.pullVerifyingMode();
   mockitoState.validateState();
-  InvocationMatcher invocationWithMatchers=invocationMatcherFactory.create(proxy,method,args);
+  Invocation invocation=new Invocation(proxy,method,args,mockitoState.nextSequenceNumber());
+  InvocationMatcher invocationWithMatchers=matchersBinder.bindMatchers(invocation);
   if (verifyingMode != null) {
     behavior.verify(invocationWithMatchers,verifyingMode);
     return EmptyReturnValues.emptyValueFor(method.getReturnType());

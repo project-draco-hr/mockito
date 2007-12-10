@@ -1,5 +1,5 @@
 {
   this.mockitoState=mockitoState;
-  invocationMatcherFactory=new InvocationMatcherFactory(mockitoState);
+  this.matchersBinder=matchersBinder;
   stubber=new Stubber(mockitoState);
 }

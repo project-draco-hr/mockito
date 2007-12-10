@@ -1,8 +1,7 @@
 {
-  LastArguments.instance().reportMatcher(new Equals("test"));
   MockitoStateImpl state=new MockitoStateImpl();
   state.verifyingStarted(VerifyingMode.atLeastOnce());
-  MockControl control=new MockControl(state);
+  MockControl control=new MockControl(state,new ExceptionThrowingBinder());
   try {
     control.invoke(null,String.class.getDeclaredMethod("toString"),new Object[]{});
     fail();
