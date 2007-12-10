@@ -1,8 +1,0 @@
-{
-  IArgumentMatcher m=NotNull.NOT_NULL;
-  ExpectedInvocation notNull=new ExpectedInvocation(new InvocationBuilder().toInvocation(),asList(m));
-  IArgumentMatcher mTwo=new Equals('x');
-  ExpectedInvocation equals=new ExpectedInvocation(new InvocationBuilder().toInvocation(),asList(mTwo));
-  assertEquals("Object.simpleMethod(notNull())",notNull.toString());
-  assertEquals("Object.simpleMethod('x')",equals.toString());
-}

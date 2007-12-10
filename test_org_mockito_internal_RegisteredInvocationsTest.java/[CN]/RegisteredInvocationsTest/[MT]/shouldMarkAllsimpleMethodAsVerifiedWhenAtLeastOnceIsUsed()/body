@@ -1,5 +1,5 @@
 {
-  registered.markInvocationsAsVerified(new ExpectedInvocation(simpleMethodInvocation),atLeastOnce());
+  registered.markInvocationsAsVerified(new InvocationMatcher(simpleMethodInvocation),atLeastOnce());
   List<Invocation> invocations=registered.all();
   assertEquals(true,invocations.get(0).isVerified());
   assertEquals(true,invocations.get(1).isVerified());
