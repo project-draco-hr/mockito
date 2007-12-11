@@ -8,13 +8,13 @@
   VerifyingMode verifyingMode=mockitoState.pullVerifyingMode();
   mockitoState.validateState();
   Invocation invocation=new Invocation(proxy,method,args,mockitoState.nextSequenceNumber());
-  InvocationMatcher invocationWithMatchers=matchersBinder.bindMatchers(invocation);
+  InvocationMatcher invocationMatcher=matchersBinder.bindMatchers(invocation);
   if (verifyingMode != null) {
-    behavior.verify(invocationWithMatchers,verifyingMode);
+    verifyingRecorder.verify(invocationMatcher,verifyingMode);
     return EmptyReturnValues.emptyValueFor(method.getReturnType());
   }
-  stubber.setInvocationForPotentialStubbing(invocationWithMatchers);
-  behavior.addInvocation(invocationWithMatchers);
+  stubber.setInvocationForPotentialStubbing(invocationMatcher);
+  verifyingRecorder.recordInvocation(invocationMatcher);
   mockitoState.reportControlForStubbing(this);
-  return stubber.resultFor(invocationWithMatchers.getInvocation());
+  return stubber.resultFor(invocationMatcher.getInvocation());
 }

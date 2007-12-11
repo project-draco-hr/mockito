@@ -1,6 +1,6 @@
 {
   InvocationMatcher invocation=new InvocationMatcher(new InvocationBuilder().toInvocation());
-  MockitoBehavior behavior=new MockitoBehavior();
+  VerifyingRecorder behavior=new VerifyingRecorder();
   VerifyingMode inOrder=VerifyingMode.inOrder(1,Arrays.asList(new Object()));
   assertTrue(inOrder.orderOfInvocationsMatters());
   behavior.checkForWrongNumberOfInvocations(invocation,inOrder);
