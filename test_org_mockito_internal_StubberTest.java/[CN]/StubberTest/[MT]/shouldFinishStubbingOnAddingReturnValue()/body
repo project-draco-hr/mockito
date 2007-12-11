@@ -1,4 +1,5 @@
 {
+  state.stubbingStarted();
   stubber.addReturnValue("test");
   state.validateState();
 }

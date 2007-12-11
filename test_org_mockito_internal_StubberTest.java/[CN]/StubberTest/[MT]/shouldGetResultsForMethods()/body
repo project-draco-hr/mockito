@@ -1,15 +1,14 @@
 {
-  Invocation simpleMethod=new InvocationBuilder().method("simpleMethod").toInvocation();
   stubber.setInvocationForPotentialStubbing(new InvocationMatcher(simpleMethod));
   stubber.addReturnValue("simpleMethod");
   Invocation differentMethod=new InvocationBuilder().method("differentMethod").toInvocation();
   stubber.setInvocationForPotentialStubbing(new InvocationMatcher(differentMethod));
-  stubber.addThrowable(new IllegalStateException());
+  stubber.addThrowable(new MyException());
   assertEquals("simpleMethod",stubber.resultFor(simpleMethod));
   try {
     stubber.resultFor(differentMethod);
     fail();
   }
- catch (  IllegalStateException e) {
+ catch (  MyException e) {
   }
 }

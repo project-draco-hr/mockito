@@ -1,5 +1,4 @@
 {
-  Invocation simpleMethod=new InvocationBuilder().method("simpleMethod").toInvocation();
   stubber.setInvocationForPotentialStubbing(new InvocationMatcher(simpleMethod));
   stubber.addReturnValue("simpleMethod");
   Invocation differentMethod=new InvocationBuilder().method("differentMethod").toInvocation();

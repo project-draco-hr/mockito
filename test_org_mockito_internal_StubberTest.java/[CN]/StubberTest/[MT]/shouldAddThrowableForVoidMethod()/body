@@ -1,0 +1,11 @@
+{
+  stubber.addThrowableForVoidMethod(new MyException());
+  stubber.addVoidMethodForThrowable(new InvocationMatcher(simpleMethod));
+  try {
+    stubber.resultFor(simpleMethod);
+    fail();
+  }
+ catch (  MyException e) {
+  }
+  ;
+}

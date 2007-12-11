@@ -1,0 +1,9 @@
+{
+  try {
+    stubber.addThrowable(null);
+    fail();
+  }
+ catch (  MockitoException e) {
+  }
+  ;
+}

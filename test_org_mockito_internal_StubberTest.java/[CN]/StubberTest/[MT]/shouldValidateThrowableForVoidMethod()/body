@@ -1,0 +1,10 @@
+{
+  stubber.addThrowableForVoidMethod(new Exception());
+  try {
+    stubber.addVoidMethodForThrowable(new InvocationMatcher(simpleMethod));
+    fail();
+  }
+ catch (  MockitoException e) {
+  }
+  ;
+}

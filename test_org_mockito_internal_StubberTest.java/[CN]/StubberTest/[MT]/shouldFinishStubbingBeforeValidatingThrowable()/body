@@ -1,4 +1,5 @@
 {
+  state.stubbingStarted();
   try {
     stubber.addThrowable(new Exception());
     fail();

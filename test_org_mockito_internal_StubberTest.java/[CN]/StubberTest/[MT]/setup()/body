@@ -1,6 +1,6 @@
 {
   state=new MockitoStateImpl();
-  state.stubbingStarted();
   stubber=new Stubber(state);
   stubber.setInvocationForPotentialStubbing(new InvocationBuilder().toInvocationMatcher());
+  simpleMethod=new InvocationBuilder().method("simpleMethod").toInvocation();
 }
