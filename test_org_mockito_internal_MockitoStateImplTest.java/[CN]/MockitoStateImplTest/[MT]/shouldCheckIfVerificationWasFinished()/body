@@ -1,9 +1,0 @@
-{
-  mockitoState.verifyingStarted(VerifyingMode.atLeastOnce());
-  try {
-    mockitoState.verifyingStarted(VerifyingMode.atLeastOnce());
-    fail();
-  }
- catch (  MockitoException e) {
-  }
-}

@@ -1,6 +1,6 @@
 {
   MockitoStateImpl state=new MockitoStateImpl();
-  state.verifyingStarted(VerifyingMode.atLeastOnce());
+  state.verifyingStarted(OngoingVerifyingMode.atLeastOnce());
   MockControl control=new MockControl(state,new ExceptionThrowingBinder());
   try {
     control.invoke(null,String.class.getDeclaredMethod("toString"),new Object[]{});

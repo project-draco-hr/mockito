@@ -1,6 +1,6 @@
 {
   try {
-    stub(mock.oneArg(true)).andThrows(new Exception());
+    stub(mock.oneArg(true)).andThrow(new Exception());
     fail();
   }
  catch (  MockitoException expected) {

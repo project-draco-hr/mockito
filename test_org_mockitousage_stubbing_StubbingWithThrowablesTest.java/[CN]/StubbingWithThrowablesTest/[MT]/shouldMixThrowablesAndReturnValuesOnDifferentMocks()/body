@@ -1,9 +1,9 @@
 {
-  stub(mock.add("ExceptionOne")).andThrows(new ExceptionOne());
+  stub(mock.add("ExceptionOne")).andThrow(new ExceptionOne());
   stub(mock.getLast()).andReturn("last");
   stubVoid(mock).toThrow(new ExceptionTwo()).on().clear();
   stubVoid(mockTwo).toThrow(new ExceptionThree()).on().clear();
-  stub(mockTwo.containsValue("ExceptionFour")).andThrows(new ExceptionFour());
+  stub(mockTwo.containsValue("ExceptionFour")).andThrow(new ExceptionFour());
   stub(mockTwo.get("Are you there?")).andReturn("Yes!");
   assertNull(mockTwo.get("foo"));
   assertTrue(mockTwo.keySet().isEmpty());

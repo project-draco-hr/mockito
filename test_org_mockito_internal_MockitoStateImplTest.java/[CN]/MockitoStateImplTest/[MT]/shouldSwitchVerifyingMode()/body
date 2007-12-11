@@ -1,6 +1,0 @@
-{
-  assertNull(mockitoState.pullVerifyingMode());
-  VerifyingMode mode=VerifyingMode.times(19);
-  mockitoState.verifyingStarted(mode);
-  assertSame(mode,mockitoState.pullVerifyingMode());
-}

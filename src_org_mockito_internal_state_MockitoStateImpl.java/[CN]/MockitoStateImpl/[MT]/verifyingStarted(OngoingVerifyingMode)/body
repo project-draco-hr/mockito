@@ -1,0 +1,4 @@
+{
+  validateState();
+  ongoingVerifyingMode=verify;
+}

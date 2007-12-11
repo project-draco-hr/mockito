@@ -1,3 +1,0 @@
-{
-  return "lastControl: " + lastControl + ", verifyingMode: "+ verifyingMode+ ", invocationSequenceNumber: "+ invocationSequenceNumber+ ", stubbingInProgress: "+ stubbingInProgress;
-}

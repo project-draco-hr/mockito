@@ -1,0 +1,5 @@
+{
+  OngoingStubbing temp=ongoingStubbing;
+  ongoingStubbing=null;
+  return temp;
+}

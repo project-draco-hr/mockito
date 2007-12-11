@@ -1,4 +1,0 @@
-{
-  super(invocation.invocation,invocation.matchers);
-  this.result=result;
-}

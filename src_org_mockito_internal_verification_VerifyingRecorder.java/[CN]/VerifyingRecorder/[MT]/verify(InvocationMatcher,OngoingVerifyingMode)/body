@@ -1,0 +1,6 @@
+{
+  new OrderOfInvocationsVerifier().verify(registeredInvocations,wanted,mode);
+  new MissingInvocationVerifier().verify(registeredInvocations,wanted,mode);
+  new NumberOfInvocationsVerifier().verify(registeredInvocations,wanted,mode);
+  registeredInvocations.markInvocationsAsVerified(wanted,mode);
+}

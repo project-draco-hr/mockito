@@ -1,0 +1,5 @@
+{
+  OngoingVerifyingMode temp=ongoingVerifyingMode;
+  ongoingVerifyingMode=null;
+  return temp;
+}

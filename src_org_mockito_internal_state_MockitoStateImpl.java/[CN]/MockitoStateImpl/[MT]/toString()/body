@@ -1,0 +1,3 @@
+{
+  return "ongoingStubbing: " + ongoingStubbing + ", ongoingVerifyingMode: "+ ongoingVerifyingMode+ ", invocationSequenceNumber: "+ invocationSequenceNumber+ ", stubbingInProgress: "+ stubbingInProgress;
+}

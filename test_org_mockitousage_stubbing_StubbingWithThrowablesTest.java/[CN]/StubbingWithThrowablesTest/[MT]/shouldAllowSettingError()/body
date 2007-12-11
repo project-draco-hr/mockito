@@ -1,6 +1,6 @@
 {
   Error error=new Error();
-  stub(mock.add("quake")).andThrows(error);
+  stub(mock.add("quake")).andThrow(error);
   try {
     mock.add("quake");
     fail();

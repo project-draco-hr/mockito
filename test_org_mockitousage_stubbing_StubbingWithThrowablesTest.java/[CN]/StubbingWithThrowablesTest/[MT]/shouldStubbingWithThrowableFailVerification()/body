@@ -1,5 +1,5 @@
 {
-  stub(mock.size()).andThrows(new RuntimeException());
+  stub(mock.size()).andThrow(new RuntimeException());
   stubVoid(mock).toThrow(new RuntimeException()).on().clone();
   verifyZeroInteractions(mock);
   mock.add("test");

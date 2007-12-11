@@ -1,0 +1,3 @@
+{
+  return "Mock for " + MockNamer.nameForMock(mock);
+}
