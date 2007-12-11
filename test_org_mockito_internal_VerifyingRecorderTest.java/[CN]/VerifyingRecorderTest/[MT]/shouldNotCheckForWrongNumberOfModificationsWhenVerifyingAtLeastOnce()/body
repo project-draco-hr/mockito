@@ -1,6 +1,0 @@
-{
-  InvocationMatcher invocation=new InvocationMatcher(new InvocationBuilder().toInvocation());
-  VerifyingRecorder behavior=new VerifyingRecorder();
-  VerifyingMode inOrder=VerifyingMode.atLeastOnce();
-  behavior.checkForWrongNumberOfInvocations(invocation,inOrder);
-}
