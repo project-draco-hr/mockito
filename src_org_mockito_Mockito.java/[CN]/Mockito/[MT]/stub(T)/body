@@ -1,6 +1,6 @@
 {
-  mockitoState.stubbingStarted();
-  OngoingStubbing controlToStub=mockitoState.pullStubable();
+  mockingProgress.stubbingStarted();
+  OngoingStubbing controlToStub=mockingProgress.pullStubable();
   if (controlToStub == null) {
     Exceptions.missingMethodInvocation();
   }

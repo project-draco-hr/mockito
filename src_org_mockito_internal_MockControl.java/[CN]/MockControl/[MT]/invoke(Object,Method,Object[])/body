@@ -1,13 +1,13 @@
 {
   if (stubber.hasThrowableForVoidMethod()) {
-    Invocation invocation=new Invocation(proxy,method,args,mockitoState.nextSequenceNumber());
+    Invocation invocation=new Invocation(proxy,method,args,mockingProgress.nextSequenceNumber());
     InvocationMatcher invocationMatcher=matchersBinder.bindMatchers(invocation);
     stubber.addVoidMethodForThrowable(invocationMatcher);
     return null;
   }
-  OngoingVerifyingMode ongoingVerifyingMode=mockitoState.pullVerifyingMode();
-  mockitoState.validateState();
-  Invocation invocation=new Invocation(proxy,method,args,mockitoState.nextSequenceNumber());
+  OngoingVerifyingMode ongoingVerifyingMode=mockingProgress.pullVerifyingMode();
+  mockingProgress.validateState();
+  Invocation invocation=new Invocation(proxy,method,args,mockingProgress.nextSequenceNumber());
   InvocationMatcher invocationMatcher=matchersBinder.bindMatchers(invocation);
   if (ongoingVerifyingMode != null) {
     verifyingRecorder.verify(invocationMatcher,ongoingVerifyingMode);
@@ -15,6 +15,6 @@
   }
   stubber.setInvocationForPotentialStubbing(invocationMatcher);
   verifyingRecorder.recordInvocation(invocationMatcher);
-  mockitoState.reportStubable(this);
+  mockingProgress.reportStubable(this);
   return stubber.resultFor(invocationMatcher.getInvocation());
 }

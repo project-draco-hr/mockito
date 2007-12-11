@@ -1,5 +1,5 @@
 {
-  mockitoState.stubbingCompleted();
+  mockingProgress.stubbingCompleted();
   validateThrowable(throwable);
   addResult(Result.createThrowResult(throwable));
 }

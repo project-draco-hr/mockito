@@ -1,5 +1,5 @@
 {
-  MockitoStateImpl state=new MockitoStateImpl();
+  MockingProgressImpl state=new MockingProgressImpl();
   state.verifyingStarted(OngoingVerifyingMode.atLeastOnce());
   MockControl control=new MockControl(state,new ExceptionThrowingBinder());
   try {

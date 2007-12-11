@@ -1,5 +1,5 @@
 {
   MockControl<T> control=MockUtil.getControl(mock);
-  mockitoState.stubbingStarted();
+  mockingProgress.stubbingStarted();
   return control;
 }

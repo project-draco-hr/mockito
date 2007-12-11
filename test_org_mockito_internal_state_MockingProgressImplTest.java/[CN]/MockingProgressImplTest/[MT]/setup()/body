@@ -1,0 +1,3 @@
+{
+  mockingProgress=new MockingProgressImpl();
+}

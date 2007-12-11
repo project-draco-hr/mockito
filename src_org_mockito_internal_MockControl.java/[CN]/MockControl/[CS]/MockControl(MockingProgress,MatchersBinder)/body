@@ -1,6 +1,6 @@
 {
-  this.mockitoState=mockitoState;
+  this.mockingProgress=mockingProgress;
   this.matchersBinder=matchersBinder;
-  stubber=new Stubber(mockitoState);
+  stubber=new Stubber(mockingProgress);
   verifyingRecorder=new VerifyingRecorder<T>(new AllInvocationsFinder());
 }

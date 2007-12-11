@@ -1,0 +1,6 @@
+{
+  if (mockingProgress.get() == null) {
+    mockingProgress.set(new MockingProgressImpl());
+  }
+  return mockingProgress.get();
+}

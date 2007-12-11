@@ -1,6 +1,0 @@
-{
-  if (mockitoState.get() == null) {
-    mockitoState.set(new MockitoStateImpl());
-  }
-  return mockitoState.get();
-}
