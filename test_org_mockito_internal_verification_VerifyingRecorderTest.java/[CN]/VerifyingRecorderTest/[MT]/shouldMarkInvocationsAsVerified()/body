@@ -1,8 +1,8 @@
 {
-  VerifyingRecorder<Object> recorder=new VerifyingRecorder<Object>(new InvocationsMarkerExtension(),Collections.<Verifier>emptyList());
-  Invocation recorded=new InvocationBuilder().method("simpleMethod").toInvocation();
-  recorder.recordInvocation(recorded);
-  InvocationMatcher wanted=new InvocationBuilder().method("differentMethod").toInvocationMatcher();
-  recorder.verify(wanted,OngoingVerifyingMode.atLeastOnce());
-  assertThat(invocationsMarkedAsVerified,collectionHasExactlyInOrder(recorded));
+  recorder.recordInvocation(simpleMethod);
+  OngoingVerifyingMode mode=OngoingVerifyingMode.atLeastOnce();
+  recorder.verify(differentMethod,mode);
+  assertThat(marker.invocations,collectionHasExactlyInOrder(simpleMethod));
+  assertEquals(marker.mode,mode);
+  assertEquals(marker.wanted,differentMethod);
 }

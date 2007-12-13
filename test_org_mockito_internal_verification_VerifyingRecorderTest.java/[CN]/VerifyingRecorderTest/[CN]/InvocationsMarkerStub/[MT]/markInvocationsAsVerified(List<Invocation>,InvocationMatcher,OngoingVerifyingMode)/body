@@ -1,0 +1,6 @@
+{
+  this.invocations=invocations;
+  this.wanted=wanted;
+  this.mode=mode;
+  assertNotNull("marking should happen after verification",verifier.calculator);
+}

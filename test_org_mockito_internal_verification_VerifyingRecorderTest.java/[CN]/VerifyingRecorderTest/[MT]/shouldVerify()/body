@@ -1,0 +1,8 @@
+{
+  recorder.recordInvocation(simpleMethod);
+  OngoingVerifyingMode mode=OngoingVerifyingMode.atLeastOnce();
+  recorder.verify(differentMethod,mode);
+  assertEquals(verifier.mode,mode);
+  assertSame(verifier.wanted,differentMethod);
+  assertThat(verifier.calculator.getInvocations(),collectionHasExactlyInOrder(simpleMethod));
+}

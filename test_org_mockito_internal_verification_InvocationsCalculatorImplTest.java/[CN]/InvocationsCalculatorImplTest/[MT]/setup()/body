@@ -1,6 +1,0 @@
-{
-  simpleMethodInvocation=new InvocationBuilder().method("simpleMethod").seq(1).toInvocation();
-  simpleMethodInvocationTwo=new InvocationBuilder().method("simpleMethod").seq(2).toInvocation();
-  differentMethodInvocation=new InvocationBuilder().method("differentMethod").seq(3).toInvocation();
-  calculator=new InvocationsCalculatorImpl(Arrays.asList(simpleMethodInvocation,simpleMethodInvocationTwo,differentMethodInvocation));
-}

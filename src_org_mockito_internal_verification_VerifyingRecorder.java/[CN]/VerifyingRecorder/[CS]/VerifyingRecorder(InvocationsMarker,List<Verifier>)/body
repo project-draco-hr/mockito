@@ -1,4 +1,0 @@
-{
-  this.marker=marker;
-  this.verifiers=verifiers;
-}

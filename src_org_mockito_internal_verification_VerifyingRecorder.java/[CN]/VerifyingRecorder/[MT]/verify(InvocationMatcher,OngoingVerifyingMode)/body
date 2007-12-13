@@ -1,6 +1,6 @@
 {
   List<Invocation> invocations=getInvocationsForEvaluation(mode);
-  InvocationsCalculator calculator=new InvocationsCalculatorImpl(invocations);
+  InvocationsCalculator calculator=new InvocationsCalculator(invocations);
   for (  Verifier verifier : verifiers) {
     verifier.verify(calculator,wanted,mode);
   }

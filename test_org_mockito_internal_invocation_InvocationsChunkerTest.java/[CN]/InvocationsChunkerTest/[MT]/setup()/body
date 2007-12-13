@@ -4,7 +4,7 @@
   differentMethodInvocation=new InvocationBuilder().method("differentMethod").seq(3).toInvocation();
   simpleMethodInvocationThree=new InvocationBuilder().method("simpleMethod").seq(4).toInvocation();
   chunker=new InvocationsChunker(new InvocationsFinder(){
-    public List<Invocation> allInvocationsInOrder(){
+    public List<Invocation> allInvocationsInOrder(    List<Object> mocks){
       return Arrays.asList(simpleMethodInvocation,simpleMethodInvocationTwo,differentMethodInvocation,simpleMethodInvocationThree);
     }
   }

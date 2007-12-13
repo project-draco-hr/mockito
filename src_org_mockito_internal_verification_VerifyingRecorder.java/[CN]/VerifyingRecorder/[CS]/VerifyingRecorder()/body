@@ -1,3 +1,0 @@
-{
-  this(new InvocationsMarker(),Arrays.asList(new MissingInvocationVerifier(),new NumberOfInvocationsVerifier()));
-}
