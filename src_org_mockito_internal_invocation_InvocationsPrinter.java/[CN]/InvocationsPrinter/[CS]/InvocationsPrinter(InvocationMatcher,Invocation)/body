@@ -1,0 +1,14 @@
+{
+  if (wantedInvocation.matchesButNotMethodDeclaredClass(actualInvocation)) {
+    wanted=wantedInvocation.toStringWithArgumentTypes();
+    actual=actualInvocation.toStringWithArgumentTypes();
+  }
+ else   if (wantedInvocation.matchesButMocksAreDifferent(actualInvocation)) {
+    wanted=wantedInvocation.toStringWithSequenceNumber();
+    actual=actualInvocation.toStringWithSequenceNumber();
+  }
+ else {
+    wanted=wantedInvocation.toString();
+    actual=actualInvocation.toString();
+  }
+}

@@ -1,4 +1,3 @@
 {
-  List<IArgumentMatcher> matchers=argumentsToMatchers();
-  return toString(matchers);
+  return toString(argumentsToMatchers());
 }
