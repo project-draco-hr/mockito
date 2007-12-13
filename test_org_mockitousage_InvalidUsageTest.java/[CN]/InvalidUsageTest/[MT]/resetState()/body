@@ -1,5 +1,3 @@
 {
   StateResetter.reset();
-  mock=mock(IMethods.class);
-  mockTwo=mock(IMethods.class);
 }
