@@ -1,9 +1,0 @@
-{
-  Invocation lastMatching=null;
-  for (  Invocation registered : registeredInvocations) {
-    if (wanted.matches(registered)) {
-      lastMatching=registered;
-    }
-  }
-  return lastMatching != null ? lastMatching.getStackTrace() : null;
-}

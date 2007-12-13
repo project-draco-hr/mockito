@@ -1,0 +1,9 @@
+{
+  List<Object> mocks=mode.getAllMocksToBeVerifiedInSequence();
+  List<Invocation> allInvocations=new LinkedList<Invocation>();
+  for (  Object mock : mocks) {
+    List<Invocation> invocationsOfSingleMock=MockUtil.getControl(mock).getRegisteredInvocations();
+    allInvocations.addAll(invocationsOfSingleMock);
+  }
+  return allInvocations;
+}

@@ -1,3 +1,0 @@
-{
-  this.registeredInvocations.add(invocation.getInvocation());
-}

@@ -1,0 +1,11 @@
+{
+  List<Invocation> invocations;
+  if (mode.orderOfInvocationsMatters()) {
+    InvocationsChunker chunker=new InvocationsChunker(new AllInvocationsFinder(mode));
+    invocations=chunker.getFirstUnverifiedInvocationChunk();
+  }
+ else {
+    invocations=registeredInvocations;
+  }
+  return invocations;
+}

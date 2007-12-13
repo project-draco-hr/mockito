@@ -1,6 +1,8 @@
 {
-  new OrderOfInvocationsVerifier().verify(registeredInvocations,wanted,mode);
-  new MissingInvocationVerifier().verify(registeredInvocations,wanted,mode);
-  new NumberOfInvocationsVerifier().verify(registeredInvocations,wanted,mode);
-  registeredInvocations.markInvocationsAsVerified(wanted,mode);
+  List<Invocation> invocations=getInvocationsForEvaluation(mode);
+  InvocationsCalculator calculator=new InvocationsCalculatorImpl(invocations);
+  for (  Verifier verifier : verifiers) {
+    verifier.verify(calculator,wanted,mode);
+  }
+  marker.markInvocationsAsVerified(invocations,wanted,mode);
 }

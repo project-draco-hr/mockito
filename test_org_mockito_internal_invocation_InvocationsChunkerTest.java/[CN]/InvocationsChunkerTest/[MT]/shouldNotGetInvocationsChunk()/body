@@ -1,0 +1,8 @@
+{
+  simpleMethodInvocation.markVerifiedInOrder();
+  simpleMethodInvocationTwo.markVerifiedInOrder();
+  differentMethodInvocation.markVerifiedInOrder();
+  simpleMethodInvocationThree.markVerifiedInOrder();
+  List<Invocation> chunk=chunker.getFirstUnverifiedInvocationChunk();
+  assertTrue(chunk.isEmpty());
+}

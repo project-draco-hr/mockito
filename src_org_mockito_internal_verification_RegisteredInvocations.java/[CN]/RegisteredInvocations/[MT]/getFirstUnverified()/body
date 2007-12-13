@@ -1,8 +1,0 @@
-{
-  for (  Invocation registered : registeredInvocations) {
-    if (!registered.isVerified()) {
-      return registered;
-    }
-  }
-  return null;
-}

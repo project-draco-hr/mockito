@@ -4,7 +4,7 @@
     fail();
   }
  catch (  VerificationError e) {
-    String expected="\n" + "Strict order verification failed" + "\n"+ "Wanted invocation:"+ "\n"+ "IMethods.simpleMethod(999)";
+    String expected="\n" + "Invocation differs from actual" + "\n"+ "Wanted invocation:"+ "\n"+ "IMethods.simpleMethod(999)";
     assertEquals(expected,e.getMessage());
     assertEquals(e.getCause().getClass(),WantedDiffersFromActual.class);
     String expectedCause="\n" + "Actual invocation:" + "\n"+ "IMethods.simpleMethod(1)";

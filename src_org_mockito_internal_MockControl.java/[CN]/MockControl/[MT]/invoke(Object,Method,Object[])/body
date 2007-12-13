@@ -14,7 +14,7 @@
     return EmptyReturnValues.emptyValueFor(method.getReturnType());
   }
   stubber.setInvocationForPotentialStubbing(invocationMatcher);
-  verifyingRecorder.recordInvocation(invocationMatcher);
+  verifyingRecorder.recordInvocation(invocationMatcher.getInvocation());
   mockingProgress.reportStubable(this);
   return stubber.resultFor(invocationMatcher.getInvocation());
 }

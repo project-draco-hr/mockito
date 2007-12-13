@@ -1,8 +1,0 @@
-{
-  int actualCount=registeredInvocations.countActual(wanted);
-  Integer wantedCount=mode.wantedCount();
-  boolean atLeastOnce=mode.atLeastOnceMode();
-  if ((atLeastOnce || wantedCount == 1) && actualCount == 0) {
-    reportMissingInvocationError(registeredInvocations,wanted);
-  }
-}

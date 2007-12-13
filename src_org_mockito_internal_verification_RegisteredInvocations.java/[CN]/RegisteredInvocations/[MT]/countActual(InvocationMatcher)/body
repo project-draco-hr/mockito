@@ -1,9 +1,0 @@
-{
-  int actual=0;
-  for (  Invocation registeredInvocation : registeredInvocations) {
-    if (wanted.matches(registeredInvocation)) {
-      actual++;
-    }
-  }
-  return actual;
-}

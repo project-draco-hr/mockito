@@ -1,8 +1,0 @@
-{
-  registered.markInvocationsAsVerified(new InvocationMatcher(simpleMethodInvocation),times(2));
-  List<Invocation> invocations=registered.all();
-  assertEquals(true,invocations.get(0).isVerified());
-  assertEquals(true,invocations.get(1).isVerified());
-  assertEquals(false,invocations.get(2).isVerified());
-  assertEquals(true,invocations.get(3).isVerified());
-}

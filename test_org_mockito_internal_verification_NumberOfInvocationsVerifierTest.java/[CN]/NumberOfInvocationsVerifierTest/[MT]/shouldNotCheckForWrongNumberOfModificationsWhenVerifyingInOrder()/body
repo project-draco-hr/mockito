@@ -1,5 +1,0 @@
-{
-  OngoingVerifyingMode inOrder=OngoingVerifyingMode.inOrder(1,Arrays.asList(new Object()));
-  assertTrue(inOrder.orderOfInvocationsMatters());
-  verifier.verify(null,null,inOrder);
-}

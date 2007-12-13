@@ -1,3 +1,0 @@
-{
-  this.registeredInvocations=new RegisteredInvocations(invocationsFinder);
-}

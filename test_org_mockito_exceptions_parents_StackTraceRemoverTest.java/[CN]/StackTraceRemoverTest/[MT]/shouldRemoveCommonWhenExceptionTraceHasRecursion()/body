@@ -2,5 +2,5 @@
   setStackTrace("methodOne","commonMethodOne","commonMethodTwo","commonMethodOne","commonMethodTwo");
   setCauseStackTrace("actualOne","commonMethodOne","commonMethodTwo");
   remove();
-  assertThat(methodsOnTraceAfterRemoving,collectionIsExactlyInOrder("methodOne","commonMethodOne","commonMethodTwo"));
+  assertThat(methodsOnTraceAfterRemoving,collectionHasExactlyInOrder("methodOne","commonMethodOne","commonMethodTwo"));
 }

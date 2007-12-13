@@ -1,9 +1,0 @@
-{
-  Invocation actual=registeredInvocations.findActualInvocation(wanted);
-  if (actual != null) {
-    reportDiscrepancy(wanted,actual);
-  }
- else {
-    Exceptions.wantedButNotInvoked(wanted.toString());
-  }
-}

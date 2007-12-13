@@ -1,0 +1,8 @@
+{
+  for (  Invocation i : invocations) {
+    if (!i.isVerified()) {
+      return i;
+    }
+  }
+  return null;
+}

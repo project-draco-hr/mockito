@@ -1,0 +1,7 @@
+{
+  marker.markInvocationsAsVerified(invocations,new InvocationMatcher(simpleMethodInvocation),times(0));
+  assertEquals(false,simpleMethodInvocation.isVerified());
+  assertEquals(false,simpleMethodInvocationTwo.isVerified());
+  assertEquals(false,differentMethodInvocation.isVerified());
+  assertEquals(false,simpleMethodInvocationThree.isVerified());
+}

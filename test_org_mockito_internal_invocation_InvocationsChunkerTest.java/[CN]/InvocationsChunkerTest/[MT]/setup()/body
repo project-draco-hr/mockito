@@ -1,0 +1,12 @@
+{
+  simpleMethodInvocation=new InvocationBuilder().method("simpleMethod").seq(1).toInvocation();
+  simpleMethodInvocationTwo=new InvocationBuilder().method("simpleMethod").seq(2).toInvocation();
+  differentMethodInvocation=new InvocationBuilder().method("differentMethod").seq(3).toInvocation();
+  simpleMethodInvocationThree=new InvocationBuilder().method("simpleMethod").seq(4).toInvocation();
+  chunker=new InvocationsChunker(new InvocationsFinder(){
+    public List<Invocation> allInvocationsInOrder(){
+      return Arrays.asList(simpleMethodInvocation,simpleMethodInvocationTwo,differentMethodInvocation,simpleMethodInvocationThree);
+    }
+  }
+);
+}

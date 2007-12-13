@@ -5,5 +5,9 @@
     wanted=wantedInvocation.getInvocation().toStringWithArgumentTypes();
     actual=actualInvocation.toStringWithArgumentTypes();
   }
+  if (wanted.equals(actual)) {
+    wanted=wantedInvocation.toStringWithSequenceNumber();
+    actual=actualInvocation.toStringWithSequenceNumber();
+  }
   Exceptions.wantedInvocationDiffersFromActual(wanted,actual,actualInvocation.getStackTrace());
 }

@@ -1,4 +1,0 @@
-String messageTopic
-String wanted
-String actual
-HasStackTrace actualInvocationStackTrace

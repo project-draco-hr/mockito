@@ -1,0 +1,7 @@
+{
+  simpleMethodInvocation.markVerifiedInOrder();
+  simpleMethodInvocationTwo.markVerifiedInOrder();
+  differentMethodInvocation.markVerifiedInOrder();
+  List<Invocation> chunk=chunker.getFirstUnverifiedInvocationChunk();
+  assertThat(chunk,collectionHasExactlyInOrder(simpleMethodInvocationThree));
+}

@@ -1,4 +1,0 @@
-{
-  registered.removeLast();
-  assertEquals(3,registered.all().size());
-}
