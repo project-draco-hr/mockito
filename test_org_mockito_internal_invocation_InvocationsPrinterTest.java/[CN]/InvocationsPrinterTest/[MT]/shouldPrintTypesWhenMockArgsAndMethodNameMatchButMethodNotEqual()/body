@@ -1,0 +1,10 @@
+{
+  Method methodOne=Dummy.class.getDeclaredMethod("test",new Object[]{}.getClass());
+  Method methodTwo=Dummy.class.getDeclaredMethod("test",new String[]{}.getClass());
+  InvocationMatcher invocationOne=new InvocationBuilder().method(methodOne).arg(new Object[]{}).toInvocationMatcher();
+  Invocation invocationTwo=new InvocationBuilder().method(methodTwo).arg(new String[]{}).toInvocation();
+  InvocationsPrinter printer=new InvocationsPrinter(invocationOne,invocationTwo);
+  assertEquals(invocationOne.toString(),invocationTwo.toString());
+  assertEquals("Object.test(class [Ljava.lang.Object;)",printer.printWanted());
+  assertEquals("Object.test(class [Ljava.lang.String;)",printer.printActual());
+}

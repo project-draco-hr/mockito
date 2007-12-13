@@ -2,5 +2,5 @@
   state=new MockingProgressImpl();
   stubber=new Stubber(state);
   stubber.setInvocationForPotentialStubbing(new InvocationBuilder().toInvocationMatcher());
-  simpleMethod=new InvocationBuilder().method("simpleMethod").toInvocation();
+  simpleMethod=new InvocationBuilder().simpleMethod().toInvocation();
 }

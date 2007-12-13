@@ -1,0 +1,10 @@
+{
+  Method methodOne=Super.class.getDeclaredMethod("test",Object.class);
+  Method methodTwo=Sub.class.getDeclaredMethod("test",String.class);
+  InvocationMatcher invocationOne=new InvocationBuilder().method(methodOne).toInvocationMatcher();
+  Invocation invocationTwo=new InvocationBuilder().method(methodTwo).toInvocation();
+  InvocationsPrinter printer=new InvocationsPrinter(invocationOne,invocationTwo);
+  assertEquals(invocationOne.toString(),invocationTwo.toString());
+  assertEquals("Object.test(class java.lang.Object)",printer.printWanted());
+  assertEquals("Object.test(class java.lang.String)",printer.printActual());
+}

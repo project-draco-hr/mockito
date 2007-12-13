@@ -1,0 +1,11 @@
+{
+  mock.varargs((Object[])new Object[]{});
+  try {
+    verify(mock).varargs((String[])new String[]{});
+    fail();
+  }
+ catch (  VerificationError e) {
+    assertThat(e,messageContains("IMethods.varargs(class [Ljava.lang.String;)"));
+    assertThat(e,causeMessageContains("IMethods.varargs(class [Ljava.lang.Object;)"));
+  }
+}

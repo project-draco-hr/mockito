@@ -1,0 +1,4 @@
+{
+  this.args=new Object[]{o};
+  return this;
+}

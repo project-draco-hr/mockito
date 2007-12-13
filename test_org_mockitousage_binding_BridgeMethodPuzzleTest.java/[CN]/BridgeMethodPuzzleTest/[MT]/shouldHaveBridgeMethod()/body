@@ -1,6 +1,6 @@
 {
   Super s=new Sub();
-  assertEquals("Sub says: Hello",s.say("Hello"));
+  assertEquals("Dummy says: Hello",s.say("Hello"));
   assertThat(Sub.class,hasBridgeMethod("say"));
   assertThat(s,hasBridgeMethod("say"));
 }

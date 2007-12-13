@@ -1,6 +1,6 @@
 {
   stubber.setInvocationForPotentialStubbing(new InvocationMatcher(simpleMethod));
   stubber.addReturnValue("simpleMethod");
-  Invocation differentMethod=new InvocationBuilder().method("differentMethod").toInvocation();
+  Invocation differentMethod=new InvocationBuilder().differentMethod().toInvocation();
   assertEquals(null,stubber.resultFor(differentMethod));
 }
