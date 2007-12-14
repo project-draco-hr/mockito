@@ -1,4 +1,4 @@
 {
-  this.wanted=wanted;
+  this.wantedForCountingActual=wanted;
   return 5;
 }

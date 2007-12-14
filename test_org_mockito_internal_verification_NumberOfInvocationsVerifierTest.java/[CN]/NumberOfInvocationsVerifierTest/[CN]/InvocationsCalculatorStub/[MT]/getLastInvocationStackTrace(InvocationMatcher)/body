@@ -1,0 +1,4 @@
+{
+  wantedForGettingTrace=wanted;
+  return lastInvocation;
+}
