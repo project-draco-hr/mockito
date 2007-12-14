@@ -1,0 +1,10 @@
+{
+  return new Result(new IAnswer<Object>(){
+    public Object answer() throws Throwable {
+      Throwable filtered=throwable.fillInStackTrace();
+      filter.filterStackTrace(new HasStackTraceThrowableWrapper(filtered));
+      throw filtered;
+    }
+  }
+);
+}

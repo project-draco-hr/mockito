@@ -1,0 +1,3 @@
+{
+  throwable.setStackTrace(stackTrace);
+}
