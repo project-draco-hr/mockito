@@ -1,5 +1,5 @@
 {
-  if (mode.orderOfInvocationsMatters()) {
+  if (mode.isStrict()) {
     return chunker.getFirstUnverifiedInvocationChunk(mode.getAllMocksToBeVerifiedInSequence());
   }
  else {

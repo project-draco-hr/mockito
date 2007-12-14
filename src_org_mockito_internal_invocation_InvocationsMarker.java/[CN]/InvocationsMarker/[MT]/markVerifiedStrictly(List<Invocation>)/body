@@ -1,5 +1,5 @@
 {
   for (  Invocation i : invocations) {
-    i.markVerifiedInOrder();
+    i.markVerifiedStrictly();
   }
 }

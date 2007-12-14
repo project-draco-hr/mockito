@@ -2,8 +2,8 @@
   if (mode.wantedCountIsZero()) {
     return;
   }
-  if (mode.orderOfInvocationsMatters()) {
-    markVerifiedInOrder(invocations);
+  if (mode.isStrict()) {
+    markVerifiedStrictly(invocations);
   }
  else {
     markVerified(wanted,invocations);

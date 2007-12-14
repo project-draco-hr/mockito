@@ -1,4 +1,4 @@
 {
   marker.markInvocationsAsVerified(invocations,new InvocationMatcher(simpleMethodInvocation),atLeastOnce());
-  assertEquals(false,simpleMethodInvocation.isVerifiedInOrder());
+  assertEquals(false,simpleMethodInvocation.isVerifiedStrictly());
 }

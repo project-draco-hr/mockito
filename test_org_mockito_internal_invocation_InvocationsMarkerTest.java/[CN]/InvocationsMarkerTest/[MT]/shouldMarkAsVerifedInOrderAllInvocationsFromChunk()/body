@@ -1,9 +1,0 @@
-{
-  VerificationMode mode=inOrder(null,Arrays.asList(new Object()));
-  Invocation doesntMatter=null;
-  marker.markInvocationsAsVerified(invocations,new InvocationMatcher(doesntMatter),mode);
-  assertEquals(true,simpleMethodInvocation.isVerifiedInOrder());
-  assertEquals(true,simpleMethodInvocationTwo.isVerifiedInOrder());
-  assertEquals(true,differentMethodInvocation.isVerifiedInOrder());
-  assertEquals(true,simpleMethodInvocationThree.isVerifiedInOrder());
-}

@@ -1,6 +1,6 @@
 {
-  if (!mocksToBeVerifiedInOrder.contains(mock)) {
+  if (!mocksToBeVerifiedSrictly.contains(mock)) {
     Exceptions.strictlyRequiresFamiliarMock();
   }
-  return Mockito.verify(mock,VerificationMode.inOrder(verificationMode.wantedCount(),mocksToBeVerifiedInOrder));
+  return Mockito.verify(mock,VerificationMode.strict(verificationMode.wantedCount(),mocksToBeVerifiedSrictly));
 }

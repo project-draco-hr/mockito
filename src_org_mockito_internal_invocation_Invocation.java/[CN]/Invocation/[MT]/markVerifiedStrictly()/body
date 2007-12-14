@@ -1,0 +1,4 @@
+{
+  this.markVerified();
+  this.verifiedStrictly=true;
+}

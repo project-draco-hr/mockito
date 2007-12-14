@@ -1,4 +1,3 @@
 {
-  VerificationMode inOrder=VerificationMode.atLeastOnce();
-  verifier.verify(null,null,inOrder);
+  verifier.verify(null,null,VerificationMode.atLeastOnce());
 }
