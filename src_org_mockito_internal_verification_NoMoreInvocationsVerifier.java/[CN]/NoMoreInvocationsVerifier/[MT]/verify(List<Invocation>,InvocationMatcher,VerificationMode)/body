@@ -1,5 +1,5 @@
 {
-  if (mode.isExplicit()) {
+  if (mode.explicitMode()) {
     return;
   }
   Invocation unverified=calculator.getFirstUnverified(invocations);

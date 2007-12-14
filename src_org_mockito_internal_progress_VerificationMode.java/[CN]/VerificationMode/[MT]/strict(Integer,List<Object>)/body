@@ -1,3 +1,2 @@
 {
-  return new VerificationMode(wantedNumberOfInvocations,mocksToBeVerifiedStrictly,Verification.EXPLICIT);
 }

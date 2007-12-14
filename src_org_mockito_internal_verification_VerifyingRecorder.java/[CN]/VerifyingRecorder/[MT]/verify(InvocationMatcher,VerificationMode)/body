@@ -3,7 +3,7 @@
   for (  Verifier verifier : verifiers) {
     verifier.verify(invocations,wanted,mode);
   }
-  if (mode.isExplicit()) {
+  if (mode.explicitMode()) {
     marker.markInvocationsAsVerified(invocations,wanted,mode);
   }
 }

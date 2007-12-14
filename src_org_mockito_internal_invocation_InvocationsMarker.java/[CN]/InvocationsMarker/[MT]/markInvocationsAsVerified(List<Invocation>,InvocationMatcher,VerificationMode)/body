@@ -2,7 +2,7 @@
   if (mode.wantedCountIsZero()) {
     return;
   }
-  if (mode.isStrict()) {
+  if (mode.strictMode()) {
     markVerifiedStrictly(invocations);
   }
  else {
