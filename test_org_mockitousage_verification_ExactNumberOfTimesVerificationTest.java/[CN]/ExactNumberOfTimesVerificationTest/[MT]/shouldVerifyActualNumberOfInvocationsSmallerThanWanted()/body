@@ -2,9 +2,9 @@
   mock.clear();
   mock.clear();
   mock.clear();
-  Mockito.verify(mock,3).clear();
+  Mockito.verify(mock,times(3)).clear();
   try {
-    Mockito.verify(mock,100).clear();
+    Mockito.verify(mock,times(100)).clear();
     fail();
   }
  catch (  TooLittleActualInvocationsError e) {

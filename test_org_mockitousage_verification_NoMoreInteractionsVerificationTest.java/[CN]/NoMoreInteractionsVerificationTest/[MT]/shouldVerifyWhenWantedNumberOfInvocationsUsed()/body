@@ -2,6 +2,6 @@
   mock.add("one");
   mock.add("one");
   mock.add("one");
-  verify(mock,3).add("one");
+  verify(mock,times(3)).add("one");
   verifyNoMoreInteractions(mock);
 }

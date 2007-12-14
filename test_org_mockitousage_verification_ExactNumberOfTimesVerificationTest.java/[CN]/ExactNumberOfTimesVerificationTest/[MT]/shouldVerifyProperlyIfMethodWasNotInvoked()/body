@@ -1,7 +1,7 @@
 {
-  Mockito.verify(mock,0).clear();
+  Mockito.verify(mock,times(0)).clear();
   try {
-    Mockito.verify(mock,15).clear();
+    Mockito.verify(mock,times(15)).clear();
     fail();
   }
  catch (  TooLittleActualInvocationsError e) {

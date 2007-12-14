@@ -7,10 +7,10 @@
   list.add("two");
   map.put("one",1);
   map.put("one",1);
-  verify(list,2).add("one");
-  verify(list,1).add("two");
-  verify(list,0).add("three");
-  verify(map,2).put(anyObject(),anyInt());
+  verify(list,times(2)).add("one");
+  verify(list,times(1)).add("two");
+  verify(list,times(0)).add("three");
+  verify(map,times(2)).put(anyObject(),anyInt());
   verifyNoMoreInteractions(list,map);
   verifyZeroInteractions(set);
 }

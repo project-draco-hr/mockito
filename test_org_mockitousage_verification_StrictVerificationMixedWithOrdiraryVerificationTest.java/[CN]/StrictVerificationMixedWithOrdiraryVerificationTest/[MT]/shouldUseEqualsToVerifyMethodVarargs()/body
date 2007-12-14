@@ -6,7 +6,7 @@
   assertNotSame(textOne,textTwo);
   mockOne.varargsObject(1,textOne,textOne);
   mockOne.varargsObject(1,textTwo,textTwo);
-  verify(mockOne,2).varargsObject(1,textOne,textOne);
+  verify(mockOne,times(2)).varargsObject(1,textOne,textOne);
   strictly=createStrictOrderVerifier(mockOne);
   strictly.verify(mockOne,times(2)).varargsObject(1,textOne,textOne);
 }

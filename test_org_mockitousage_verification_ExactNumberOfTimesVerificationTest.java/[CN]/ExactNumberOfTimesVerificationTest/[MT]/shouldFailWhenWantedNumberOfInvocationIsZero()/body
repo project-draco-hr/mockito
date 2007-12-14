@@ -1,7 +1,7 @@
 {
   mock.clear();
   try {
-    Mockito.verify(mock,0).clear();
+    Mockito.verify(mock,times(0)).clear();
     fail();
   }
  catch (  TooManyActualInvocationsError e) {

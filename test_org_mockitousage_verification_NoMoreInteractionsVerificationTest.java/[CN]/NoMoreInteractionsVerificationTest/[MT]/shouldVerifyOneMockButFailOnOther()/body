@@ -4,7 +4,7 @@
   list.add("one");
   list.add("one");
   map.put("one",1);
-  verify(list,2).add("one");
+  verify(list,times(2)).add("one");
   verifyNoMoreInteractions(list);
   try {
     verifyZeroInteractions(map);

@@ -3,5 +3,5 @@
   Mockito.stub(mock.add("test")).andReturn(true);
   mock.add("test");
   mock.add("test");
-  Mockito.verify(mock,2).add("test");
+  Mockito.verify(mock,times(2)).add("test");
 }
