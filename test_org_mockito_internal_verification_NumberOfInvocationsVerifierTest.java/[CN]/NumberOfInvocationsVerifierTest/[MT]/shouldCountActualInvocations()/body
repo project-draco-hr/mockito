@@ -1,5 +1,4 @@
 {
-  InvocationMatcher wanted=new InvocationBuilder().toInvocationMatcher();
-  verifier.verify(asList(wanted.getInvocation()),wanted,times(4));
-  assertSame(wanted,calculatorStub.wantedForCountingActual);
+  verifier.verify(invocations,wanted,times(4));
+  assertSame(wanted,calculatorStub.wanted);
 }

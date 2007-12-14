@@ -1,4 +1,4 @@
 {
   this.invocations=invocations;
-  return returnedByCalculator;
+  return invocationToReturn;
 }

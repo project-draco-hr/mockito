@@ -1,4 +1,0 @@
-{
-  MissingInvocationVerifier verifier=new MissingInvocationVerifier();
-  verifier.verify(null,null,VerificationMode.noMoreInteractions());
-}

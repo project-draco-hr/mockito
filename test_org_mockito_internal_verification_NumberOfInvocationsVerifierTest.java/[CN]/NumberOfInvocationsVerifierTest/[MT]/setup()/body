@@ -2,4 +2,6 @@
   reporterStub=new ReporterStub();
   calculatorStub=new InvocationsCalculatorStub();
   verifier=new NumberOfInvocationsVerifier(reporterStub,calculatorStub);
+  wanted=new InvocationBuilder().toInvocationMatcher();
+  invocations=asList(new InvocationBuilder().toInvocation());
 }

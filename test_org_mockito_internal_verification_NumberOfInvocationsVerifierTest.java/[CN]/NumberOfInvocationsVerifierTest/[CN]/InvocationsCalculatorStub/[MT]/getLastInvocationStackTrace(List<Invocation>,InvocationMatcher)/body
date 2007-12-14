@@ -1,4 +1,4 @@
 {
-  wantedForGettingTrace=wanted;
-  return lastInvocation;
+  this.wanted=wanted;
+  return invocationTraceToReturn;
 }

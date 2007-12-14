@@ -1,5 +1,5 @@
 {
-  wantedForGettingTrace=wanted;
+  this.wanted=wanted;
   this.mode=mode;
-  return firstUndesired;
+  return invocationTraceToReturn;
 }

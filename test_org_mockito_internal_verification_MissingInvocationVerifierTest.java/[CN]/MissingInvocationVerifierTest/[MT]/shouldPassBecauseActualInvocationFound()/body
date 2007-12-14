@@ -1,0 +1,4 @@
+{
+  calculatorStub.actualCountToReturn=1;
+  verifier.verify(invocations,wanted,atLeastOnce());
+}

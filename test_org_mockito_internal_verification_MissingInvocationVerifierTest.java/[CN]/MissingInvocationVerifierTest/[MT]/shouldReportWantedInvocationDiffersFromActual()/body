@@ -1,0 +1,9 @@
+{
+  calculatorStub.actualCountToReturn=0;
+  Invocation actualInvocation=new InvocationBuilder().toInvocation();
+  calculatorStub.actualInvocationToReturn=actualInvocation;
+  verifier.verify(invocations,wanted,VerificationMode.atLeastOnce());
+  assertEquals(wanted.toString(),reporterStub.wanted);
+  assertEquals(actualInvocation.toString(),reporterStub.actual);
+  assertSame(actualInvocation.getStackTrace(),reporterStub.actualInvocationStackTrace);
+}

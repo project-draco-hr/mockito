@@ -1,6 +1,6 @@
 {
   try {
-    VerificationMode.times(-50);
+    times(-50);
     fail();
   }
  catch (  MockitoException e) {

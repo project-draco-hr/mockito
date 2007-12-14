@@ -1,0 +1,6 @@
+{
+  calculatorStub.actualCountToReturn=1;
+  verifier.verify(invocations,wanted,atLeastOnce());
+  assertSame(invocations,calculatorStub.invocations);
+  assertSame(wanted,calculatorStub.wanted);
+}

@@ -1,8 +1,9 @@
 {
+  Invocation firstUnverified=new InvocationBuilder().toInvocation();
+  calculator.invocationToReturn=firstUnverified;
   List<Invocation> invocations=asList(new InvocationBuilder().toInvocation());
-  returnedByCalculator=new InvocationBuilder().toInvocation();
   verifier.verify(invocations,null,VerificationMode.noMoreInteractions());
   assertSame(invocations,calculator.invocations);
-  assertEquals(returnedByCalculator.toString(),reporterStub.undesired);
-  assertSame(returnedByCalculator.getStackTrace(),reporterStub.actualInvocationStackTrace);
+  assertEquals(firstUnverified.toString(),reporterStub.undesired);
+  assertSame(firstUnverified.getStackTrace(),reporterStub.actualInvocationStackTrace);
 }

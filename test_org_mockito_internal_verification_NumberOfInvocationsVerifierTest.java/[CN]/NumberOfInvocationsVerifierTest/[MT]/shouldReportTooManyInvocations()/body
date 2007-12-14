@@ -1,12 +1,14 @@
 {
-  InvocationMatcher wanted=new InvocationBuilder().toInvocationMatcher();
   VerificationMode mode=times(0);
-  verifier.verify(asList(wanted.getInvocation()),wanted,mode);
-  assertSame(wanted,calculatorStub.wantedForGettingTrace);
+  calculatorStub.actualCountToReturn=5;
+  MockitoException firstUndesiredInvocation=new MockitoException("");
+  calculatorStub.invocationTraceToReturn=firstUndesiredInvocation;
+  verifier.verify(invocations,wanted,mode);
+  assertSame(invocations,calculatorStub.invocations);
+  assertSame(wanted,calculatorStub.wanted);
   assertSame(mode,calculatorStub.mode);
   assertEquals(5,reporterStub.actualCount);
   assertEquals(0,reporterStub.wantedCount);
   assertEquals(wanted.toString(),reporterStub.wanted);
-  HasStackTrace fromCalculator=calculatorStub.firstUndesired;
-  assertSame(fromCalculator,reporterStub.stackTrace);
+  assertSame(firstUndesiredInvocation,reporterStub.stackTrace);
 }
