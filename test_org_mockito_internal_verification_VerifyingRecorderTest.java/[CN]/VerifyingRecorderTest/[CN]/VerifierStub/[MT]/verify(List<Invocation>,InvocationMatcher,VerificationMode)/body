@@ -1,0 +1,5 @@
+{
+  this.invocations=invocations;
+  this.wanted=wanted;
+  this.mode=mode;
+}

@@ -1,0 +1,10 @@
+{
+  Invocation actual=calculator.findActualInvocation(invocations,wanted);
+  if (actual != null) {
+    InvocationsPrinter printer=new InvocationsPrinter(wanted,actual);
+    reporter.wantedInvocationDiffersFromActual(printer.printWanted(),printer.printActual(),actual.getStackTrace());
+  }
+ else {
+    reporter.wantedButNotInvoked(wanted.toString());
+  }
+}

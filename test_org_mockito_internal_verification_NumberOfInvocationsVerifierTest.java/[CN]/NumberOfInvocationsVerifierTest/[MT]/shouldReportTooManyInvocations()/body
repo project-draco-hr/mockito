@@ -1,7 +1,7 @@
 {
   InvocationMatcher wanted=new InvocationBuilder().toInvocationMatcher();
   VerificationMode mode=times(0);
-  verifier.verify(calculatorStub,wanted,mode);
+  verifier.verify(asList(wanted.getInvocation()),wanted,mode);
   assertSame(wanted,calculatorStub.wantedForGettingTrace);
   assertSame(mode,calculatorStub.mode);
   assertEquals(5,reporterStub.actualCount);

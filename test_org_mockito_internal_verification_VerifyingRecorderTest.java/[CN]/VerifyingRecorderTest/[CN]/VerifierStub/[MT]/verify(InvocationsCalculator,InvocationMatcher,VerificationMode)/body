@@ -1,5 +1,0 @@
-{
-  this.calculator=calculator;
-  this.wanted=wanted;
-  this.mode=mode;
-}

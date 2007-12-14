@@ -1,0 +1,15 @@
+{
+  if (mode.atLeastOnceMode() || !mode.isExplicit()) {
+    return;
+  }
+  int actualCount=calculator.countActual(invocations,wanted);
+  Integer wantedCount=mode.wantedCount();
+  if (actualCount < wantedCount) {
+    HasStackTrace lastInvocation=calculator.getLastInvocationStackTrace(invocations,wanted);
+    reporter.tooLittleActualInvocations(wantedCount,actualCount,wanted.toString(),lastInvocation);
+  }
+ else   if (actualCount > wantedCount) {
+    HasStackTrace firstUndesired=calculator.getFirstUndesiredInvocationStackTrace(invocations,wanted,mode);
+    reporter.tooManyActualInvocations(wantedCount,actualCount,wanted.toString(),firstUndesired);
+  }
+}

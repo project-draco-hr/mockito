@@ -1,0 +1,11 @@
+{
+  if (!mode.isExplicit()) {
+    return;
+  }
+  int actualCount=calculator.countActual(invocations,wanted);
+  Integer wantedCount=mode.wantedCount();
+  boolean atLeastOnce=mode.atLeastOnceMode();
+  if ((atLeastOnce || wantedCount == 1) && actualCount == 0) {
+    reportMissingInvocationError(invocations,wanted);
+  }
+}
