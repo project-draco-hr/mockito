@@ -1,6 +1,6 @@
 {
   strictly.verify(mockOne).simpleMethod(1);
-  strictly.verify(mockTwo,2).simpleMethod(2);
+  strictly.verify(mockTwo,times(2)).simpleMethod(2);
   try {
     strictly.verify(mockOne).simpleMethod(4);
     fail();

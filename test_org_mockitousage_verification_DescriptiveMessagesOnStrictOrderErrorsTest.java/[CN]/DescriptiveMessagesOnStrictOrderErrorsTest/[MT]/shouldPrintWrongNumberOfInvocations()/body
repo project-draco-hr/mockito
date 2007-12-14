@@ -2,7 +2,7 @@
   strictly.verify(one).simpleMethod(1);
   strictly.verify(one).simpleMethod(11);
   try {
-    strictly.verify(two,1).simpleMethod(2);
+    strictly.verify(two,times(1)).simpleMethod(2);
     fail();
   }
  catch (  TooManyActualInvocationsError e) {

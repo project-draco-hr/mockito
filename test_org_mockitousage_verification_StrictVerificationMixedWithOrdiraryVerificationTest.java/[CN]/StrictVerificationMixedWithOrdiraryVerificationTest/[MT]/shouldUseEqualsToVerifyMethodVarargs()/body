@@ -8,5 +8,5 @@
   mockOne.varargsObject(1,textTwo,textTwo);
   verify(mockOne,2).varargsObject(1,textOne,textOne);
   strictly=createStrictOrderVerifier(mockOne);
-  strictly.verify(mockOne,2).varargsObject(1,textOne,textOne);
+  strictly.verify(mockOne,times(2)).varargsObject(1,textOne,textOne);
 }

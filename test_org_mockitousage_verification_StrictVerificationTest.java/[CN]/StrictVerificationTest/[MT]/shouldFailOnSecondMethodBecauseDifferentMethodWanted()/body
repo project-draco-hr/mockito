@@ -1,7 +1,7 @@
 {
-  strictly.verify(mockOne,1).simpleMethod(1);
+  strictly.verify(mockOne,times(1)).simpleMethod(1);
   try {
-    strictly.verify(mockTwo,2).oneArg(true);
+    strictly.verify(mockTwo,times(2)).oneArg(true);
     fail();
   }
  catch (  TooLittleActualInvocationsError e) {
