@@ -6,7 +6,7 @@
     fail();
   }
  catch (  VerificationError e) {
-    String expected="\n" + "Zero interactions wanted";
+    String expected="\n" + "No interactions wanted";
     assertEquals(e.getMessage(),expected);
     String expectedCause="\n" + "Undesired invocation:" + "\n"+ "IMethods.twoArgumentMethod(1, 2)";
     assertEquals(e.getCause().getMessage(),expectedCause);

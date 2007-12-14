@@ -1,8 +1,0 @@
-{
-  InvocationsCalculator calculator1=new InvocationsCalculator(getInvocationsForEvaluation(times(0)));
-  InvocationsCalculator calculator=calculator1;
-  Invocation unverified=calculator.getFirstUnverified();
-  if (unverified != null) {
-    reporter.zeroInteractionsWanted(unverified.toString(),unverified.getStackTrace());
-  }
-}

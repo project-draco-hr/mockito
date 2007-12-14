@@ -8,7 +8,7 @@
     fail();
   }
  catch (  VerificationError e) {
-    String expectedMessage="\n" + "No more interactions wanted";
+    String expectedMessage="\n" + "No interactions wanted";
     assertEquals(expectedMessage,e.getMessage());
     assertEquals(e.getCause().getClass(),UndesiredInvocation.class);
     String expectedCause="\n" + "Undesired invocation:" + "\n"+ "IMethods.oneArg(false)";
