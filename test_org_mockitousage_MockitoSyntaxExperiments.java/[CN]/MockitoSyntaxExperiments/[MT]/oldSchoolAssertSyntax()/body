@@ -1,9 +1,0 @@
-{
-  List mock=mock(List.class);
-  stub(mock.add("test")).andReturn(true);
-  mock.add(2,"test2");
-  assertInvoked(mock).add(2,"test2");
-  assertInvoked(mock,5).add(2,"test2");
-  assertNoMoreInteractions(mock);
-  assertZeroInteractions(mock);
-}

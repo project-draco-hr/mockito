@@ -1,3 +1,0 @@
-{
-  return verify(matcher.getMock());
-}
