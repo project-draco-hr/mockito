@@ -1,6 +1,6 @@
 {
   recorder.recordInvocation(simpleMethod);
-  OngoingVerifyingMode mode=OngoingVerifyingMode.atLeastOnce();
+  VerificationMode mode=VerificationMode.atLeastOnce();
   recorder.verify(differentMethod,mode);
   assertThat(marker.invocations,collectionHasExactlyInOrder(simpleMethod));
   assertEquals(marker.mode,mode);

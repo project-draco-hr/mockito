@@ -1,5 +1,5 @@
 {
   stubbingInProgress=false;
-  ongoingVerifyingMode=null;
+  verificationMode=null;
   invocationSequenceNumber=1;
 }

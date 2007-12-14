@@ -1,0 +1,9 @@
+{
+  try {
+    VerificationMode.times(-50);
+    fail();
+  }
+ catch (  MockitoException e) {
+    assertEquals("Negative value is not allowed here",e.getMessage());
+  }
+}

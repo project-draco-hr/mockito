@@ -1,6 +1,6 @@
 {
   MockingProgressImpl state=new MockingProgressImpl();
-  state.verifyingStarted(OngoingVerifyingMode.atLeastOnce());
+  state.verificationStarted(VerificationMode.atLeastOnce());
   MockControl control=new MockControl(state,new ExceptionThrowingBinder());
   try {
     control.invoke(null,String.class.getDeclaredMethod("toString"),new Object[]{});
@@ -8,5 +8,5 @@
   }
  catch (  InvalidUseOfMatchersException e) {
   }
-  assertNull(state.pullVerifyingMode());
+  assertNull(state.pullVerificationMode());
 }

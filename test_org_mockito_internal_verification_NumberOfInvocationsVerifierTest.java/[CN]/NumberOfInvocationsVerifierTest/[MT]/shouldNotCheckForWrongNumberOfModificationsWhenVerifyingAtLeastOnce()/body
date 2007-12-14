@@ -1,4 +1,0 @@
-{
-  OngoingVerifyingMode inOrder=OngoingVerifyingMode.atLeastOnce();
-  verifier.verify(null,null,inOrder);
-}

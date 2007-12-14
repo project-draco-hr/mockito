@@ -1,6 +1,6 @@
 {
-  if (ongoingVerifyingMode != null) {
-    ongoingVerifyingMode=null;
+  if (verificationMode != null) {
+    verificationMode=null;
     Exceptions.unfinishedVerificationException();
   }
   if (stubbingInProgress) {

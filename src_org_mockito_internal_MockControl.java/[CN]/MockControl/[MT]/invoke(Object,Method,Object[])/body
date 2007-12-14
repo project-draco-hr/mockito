@@ -5,12 +5,12 @@
     stubber.addVoidMethodForThrowable(invocationMatcher);
     return null;
   }
-  OngoingVerifyingMode ongoingVerifyingMode=mockingProgress.pullVerifyingMode();
+  VerificationMode verificationMode=mockingProgress.pullVerificationMode();
   mockingProgress.validateState();
   Invocation invocation=new Invocation(proxy,method,args,mockingProgress.nextSequenceNumber());
   InvocationMatcher invocationMatcher=matchersBinder.bindMatchers(invocation);
-  if (ongoingVerifyingMode != null) {
-    verifyingRecorder.verify(invocationMatcher,ongoingVerifyingMode);
+  if (verificationMode != null) {
+    verifyingRecorder.verify(invocationMatcher,verificationMode);
     return EmptyReturnValues.emptyValueFor(method.getReturnType());
   }
   stubber.setInvocationForPotentialStubbing(invocationMatcher);
