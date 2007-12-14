@@ -1,0 +1,4 @@
+{
+  this.wanted=wanted;
+  return 5;
+}

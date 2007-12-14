@@ -2,7 +2,7 @@
   mockingProgress.stubbingStarted();
   OngoingStubbing stubable=mockingProgress.pullStubable();
   if (stubable == null) {
-    Exceptions.missingMethodInvocation();
+    reporter.missingMethodInvocation();
   }
   return stubable;
 }

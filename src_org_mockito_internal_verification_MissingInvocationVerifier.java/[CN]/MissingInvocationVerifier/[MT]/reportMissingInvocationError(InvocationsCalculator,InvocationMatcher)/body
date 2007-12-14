@@ -2,9 +2,9 @@
   Invocation actual=calculator.findActualInvocation(wanted);
   if (actual != null) {
     InvocationsPrinter printer=new InvocationsPrinter(wanted,actual);
-    Exceptions.wantedInvocationDiffersFromActual(printer.printWanted(),printer.printActual(),actual.getStackTrace());
+    reporter.wantedInvocationDiffersFromActual(printer.printWanted(),printer.printActual(),actual.getStackTrace());
   }
  else {
-    Exceptions.wantedButNotInvoked(wanted.toString());
+    reporter.wantedButNotInvoked(wanted.toString());
   }
 }

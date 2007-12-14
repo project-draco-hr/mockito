@@ -3,6 +3,6 @@
   InvocationsCalculator calculator=calculator1;
   Invocation unverified=calculator.getFirstUnverified();
   if (unverified != null) {
-    Exceptions.zeroInteractionsWanted(unverified.toString(),unverified.getStackTrace());
+    reporter.zeroInteractionsWanted(unverified.toString(),unverified.getStackTrace());
   }
 }

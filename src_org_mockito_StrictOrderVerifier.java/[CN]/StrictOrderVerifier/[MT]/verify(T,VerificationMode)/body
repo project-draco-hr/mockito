@@ -1,6 +1,6 @@
 {
   if (!mocksToBeVerifiedSrictly.contains(mock)) {
-    Exceptions.strictlyRequiresFamiliarMock();
+    reporter.strictlyRequiresFamiliarMock();
   }
   return Mockito.verify(mock,VerificationMode.strict(verificationMode.wantedCount(),mocksToBeVerifiedSrictly));
 }

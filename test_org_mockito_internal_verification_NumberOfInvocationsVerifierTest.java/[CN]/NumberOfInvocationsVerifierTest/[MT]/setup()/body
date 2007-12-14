@@ -1,3 +1,5 @@
 {
-  verifier=new NumberOfInvocationsVerifier();
+  verifier=new NumberOfInvocationsVerifier(new Reporter());
+  calculatorStub=new InvocationsCalculatorStub();
+  wanted=new InvocationBuilder().toInvocationMatcher();
 }

@@ -1,11 +1,11 @@
 {
   if (throwable == null) {
-    Exceptions.cannotStubWithNullThrowable();
+    reporter.cannotStubWithNullThrowable();
   }
   if (throwable instanceof RuntimeException || throwable instanceof Error) {
     return;
   }
   if (!isValidCheckedException(throwable)) {
-    Exceptions.checkedExceptionInvalid(throwable);
+    reporter.checkedExceptionInvalid(throwable);
   }
 }
