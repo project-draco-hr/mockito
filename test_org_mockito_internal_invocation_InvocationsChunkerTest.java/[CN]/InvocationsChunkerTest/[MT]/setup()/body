@@ -1,11 +1,11 @@
 {
-  simpleMethodInvocation=new InvocationBuilder().simpleMethod().seq(1).toInvocation();
-  simpleMethodInvocationTwo=new InvocationBuilder().simpleMethod().seq(2).toInvocation();
-  differentMethodInvocation=new InvocationBuilder().differentMethod().seq(3).toInvocation();
-  simpleMethodInvocationThree=new InvocationBuilder().simpleMethod().seq(4).toInvocation();
+  invocationOneChunkOne=new InvocationBuilder().simpleMethod().seq(1).toInvocation();
+  invocationTwoChunkOne=new InvocationBuilder().simpleMethod().seq(2).toInvocation();
+  differentInvocationChunkTwo=new InvocationBuilder().differentMethod().seq(3).toInvocation();
+  invocationThreeChunkThree=new InvocationBuilder().simpleMethod().seq(4).toInvocation();
   chunker=new InvocationsChunker(new InvocationsFinder(){
     public List<Invocation> allInvocationsInOrder(    List<Object> mocks){
-      return Arrays.asList(simpleMethodInvocation,simpleMethodInvocationTwo,differentMethodInvocation,simpleMethodInvocationThree);
+      return Arrays.asList(invocationOneChunkOne,invocationTwoChunkOne,differentInvocationChunkTwo,invocationThreeChunkThree);
     }
   }
 );

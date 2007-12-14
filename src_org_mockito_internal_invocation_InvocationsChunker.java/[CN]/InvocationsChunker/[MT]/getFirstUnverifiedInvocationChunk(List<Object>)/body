@@ -1,2 +1,6 @@
 {
+  Set<Invocation> allInvocationsInOrder=new TreeSet<Invocation>(new SequenceNumberComparator());
+  List<Invocation> allInvocations=finder.allInvocationsInOrder(mocks);
+  allInvocationsInOrder.addAll(allInvocations);
+  return firstUnverifiedChunk(allInvocationsInOrder);
 }

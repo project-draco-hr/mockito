@@ -1,0 +1,18 @@
+{
+  LinkedList<Invocation> chunk=new LinkedList<Invocation>();
+  for (  Invocation i : allInvocationsInOrder) {
+    if (i.isVerifiedStrictly()) {
+      continue;
+    }
+    if (chunk.isEmpty()) {
+      chunk.add(i);
+    }
+ else     if (chunk.getLast().equals(i)) {
+      chunk.add(i);
+    }
+ else {
+      break;
+    }
+  }
+  return chunk;
+}
