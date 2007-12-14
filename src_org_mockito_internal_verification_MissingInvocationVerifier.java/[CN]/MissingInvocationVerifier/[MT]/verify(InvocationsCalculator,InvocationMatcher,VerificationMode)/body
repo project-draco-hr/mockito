@@ -1,4 +1,7 @@
 {
+  if (!mode.isExplicit()) {
+    return;
+  }
   int actualCount=calculator.countActual(wanted);
   Integer wantedCount=mode.wantedCount();
   boolean atLeastOnce=mode.atLeastOnceMode();

@@ -1,8 +1,8 @@
 {
-  verifier=new VerifierStub();
-  marker=new InvocationsMarkerStub();
-  chunker=new InvocationsChunkerStub();
-  recorder=new VerifyingRecorder(chunker,marker,Arrays.<Verifier>asList(verifier));
+  verifierStub=new VerifierStub();
+  markerStub=new InvocationsMarkerStub();
+  chunkerStub=new InvocationsChunkerStub();
+  recorder=new VerifyingRecorder(chunkerStub,markerStub,Arrays.<Verifier>asList(verifierStub));
   simpleMethod=new InvocationBuilder().simpleMethod().toInvocation();
   differentMethod=new InvocationBuilder().differentMethod().toInvocationMatcher();
 }

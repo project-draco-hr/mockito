@@ -1,5 +1,5 @@
 {
-  if (mode.atLeastOnceMode()) {
+  if (mode.atLeastOnceMode() || !mode.isExplicit()) {
     return;
   }
   int actualCount=calculator.countActual(wanted);

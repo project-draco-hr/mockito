@@ -1,0 +1,4 @@
+{
+  NoMoreInvocationsVerifier verifier=new NoMoreInvocationsVerifier();
+  verifier.verify(null,null,VerificationMode.atLeastOnce());
+}

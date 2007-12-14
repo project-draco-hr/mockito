@@ -4,5 +4,7 @@
   for (  Verifier verifier : verifiers) {
     verifier.verify(calculator,wanted,mode);
   }
-  marker.markInvocationsAsVerified(invocations,wanted,mode);
+  if (mode.isExplicit()) {
+    marker.markInvocationsAsVerified(invocations,wanted,mode);
+  }
 }

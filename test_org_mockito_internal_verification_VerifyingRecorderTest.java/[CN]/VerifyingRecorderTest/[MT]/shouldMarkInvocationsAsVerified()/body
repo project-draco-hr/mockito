@@ -2,7 +2,7 @@
   recorder.recordInvocation(simpleMethod);
   VerificationMode mode=VerificationMode.atLeastOnce();
   recorder.verify(differentMethod,mode);
-  assertThat(marker.invocations,collectionHasExactlyInOrder(simpleMethod));
-  assertEquals(marker.mode,mode);
-  assertEquals(marker.wanted,differentMethod);
+  assertThat(markerStub.invocations,collectionHasExactlyInOrder(simpleMethod));
+  assertEquals(markerStub.mode,mode);
+  assertEquals(markerStub.wanted,differentMethod);
 }

@@ -1,5 +1,7 @@
 {
-  InvocationsCalculator calculator=new InvocationsCalculator(registeredInvocations);
+  if (mode.isExplicit()) {
+    return;
+  }
   Invocation unverified=calculator.getFirstUnverified();
   if (unverified != null) {
     reporter.noMoreInteractionsWanted(unverified.toString(),unverified.getStackTrace());
