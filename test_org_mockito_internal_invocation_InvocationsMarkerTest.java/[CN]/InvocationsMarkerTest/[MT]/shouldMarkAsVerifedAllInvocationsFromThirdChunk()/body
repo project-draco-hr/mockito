@@ -1,5 +1,5 @@
 {
-  VerificationMode mode=strict(null,Arrays.asList(new Object()));
+  VerificationMode mode=new VerificationModeBuilder().strict();
   Invocation doesntMatter=null;
   marker.markInvocationsAsVerified(invocations,new InvocationMatcher(doesntMatter),mode);
   marker.markInvocationsAsVerified(invocations,new InvocationMatcher(doesntMatter),mode);

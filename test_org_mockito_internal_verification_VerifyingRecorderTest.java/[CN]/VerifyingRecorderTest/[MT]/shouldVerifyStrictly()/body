@@ -1,6 +1,6 @@
 {
   recorder.recordInvocation(simpleMethod);
-  VerificationMode mode=VerificationMode.strict(10,Arrays.<Object>asList("mock"));
+  VerificationMode mode=new VerificationModeBuilder().strict();
   recorder.verify(differentMethod,mode);
   assertEquals(verifier.mode,mode);
   assertEquals(verifier.wanted,differentMethod);
