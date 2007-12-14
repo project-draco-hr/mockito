@@ -1,5 +1,5 @@
 {
-  if (mode.numberOfInvocationsMode()) {
+  if (!mode.exactNumberOfInvocationsMode()) {
     return;
   }
   int actualCount=calculator.countActual(invocations,wanted);

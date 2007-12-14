@@ -1,3 +1,0 @@
-{
-  verifier.verify(null,null,VerificationMode.noMoreInteractions());
-}
