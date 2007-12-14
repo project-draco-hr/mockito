@@ -6,5 +6,6 @@
   assertEquals(5,reporterStub.actualCount);
   assertEquals(10,reporterStub.wantedCount);
   assertEquals(wanted.toString(),reporterStub.wanted);
-  assertSame(calculatorStub.lastInvocation,reporterStub.stackTrace);
+  HasStackTrace fromCalculator=calculatorStub.lastInvocation;
+  assertSame(fromCalculator,reporterStub.stackTrace);
 }

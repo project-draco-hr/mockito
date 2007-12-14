@@ -1,0 +1,8 @@
+{
+  List<Invocation> invocations=asList(new InvocationBuilder().toInvocation());
+  returnedByCalculator=new InvocationBuilder().toInvocation();
+  verifier.verify(invocations,null,VerificationMode.noMoreInteractions());
+  assertSame(invocations,calculator.invocations);
+  assertEquals(returnedByCalculator.toString(),reporterStub.undesired);
+  assertSame(returnedByCalculator.getStackTrace(),reporterStub.actualInvocationStackTrace);
+}

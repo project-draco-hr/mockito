@@ -1,0 +1,4 @@
+{
+  returnedByCalculator=null;
+  verifier.verify(null,null,VerificationMode.noMoreInteractions());
+}
