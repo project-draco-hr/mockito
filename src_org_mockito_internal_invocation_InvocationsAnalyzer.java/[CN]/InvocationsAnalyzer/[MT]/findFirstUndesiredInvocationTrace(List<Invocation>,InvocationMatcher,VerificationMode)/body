@@ -1,10 +1,10 @@
 {
   int counter=0;
-  for (  Invocation registered : invocations) {
-    if (wanted.matches(registered)) {
+  for (  Invocation invocation : invocations) {
+    if (wanted.matches(invocation)) {
       counter++;
       if (counter > mode.wantedCount()) {
-        return registered.getStackTrace();
+        return invocation.getStackTrace();
       }
     }
   }

@@ -1,0 +1,7 @@
+{
+  simpleMethodInvocation.markVerified();
+  simpleMethodInvocationTwo.markVerified();
+  differentMethodInvocation.markVerified();
+  Invocation found=analyzer.findActualInvocation(invocations,new InvocationMatcher(simpleMethodInvocation));
+  assertNull(found);
+}

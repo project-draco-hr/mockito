@@ -1,5 +1,5 @@
 {
-  HasStackTrace firstUndesired=analyzer.findFirstUndesiredInvocationStackTrace(invocations,new InvocationMatcher(simpleMethodInvocation),VerificationMode.times(1));
+  HasStackTrace firstUndesired=analyzer.findFirstUndesiredInvocationTrace(invocations,new InvocationMatcher(simpleMethodInvocation),VerificationMode.times(1));
   HasStackTrace expected=simpleMethodInvocationTwo.getStackTrace();
   assertSame(firstUndesired,expected);
 }

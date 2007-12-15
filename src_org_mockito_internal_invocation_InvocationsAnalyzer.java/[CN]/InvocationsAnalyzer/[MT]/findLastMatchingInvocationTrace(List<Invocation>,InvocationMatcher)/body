@@ -1,0 +1,9 @@
+{
+  Invocation lastMatching=null;
+  for (  Invocation invocation : invocations) {
+    if (wanted.matches(invocation)) {
+      lastMatching=invocation;
+    }
+  }
+  return lastMatching != null ? lastMatching.getStackTrace() : null;
+}

@@ -1,0 +1,5 @@
+{
+  InvocationMatcher doesntMatch=new InvocationBuilder().otherMethod().toInvocationMatcher();
+  HasStackTrace found=analyzer.findLastMatchingInvocationTrace(invocations,doesntMatch);
+  assertNull(found);
+}

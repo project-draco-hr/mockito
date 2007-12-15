@@ -1,0 +1,4 @@
+{
+  Invocation found=analyzer.findActualInvocation(invocations,new InvocationMatcher(simpleMethodInvocation));
+  assertSame(found,simpleMethodInvocation);
+}
