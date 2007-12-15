@@ -1,3 +1,0 @@
-{
-  throw new NumberOfInvocationsError(join(wanted,"Wanted " + pluralize(wantedCount) + " but was "+ actualCount));
-}
