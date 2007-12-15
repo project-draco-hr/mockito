@@ -6,6 +6,6 @@
     verifyNoMoreInteractions(mockOne,mockTwo,mockThree);
     fail();
   }
- catch (  VerificationError e) {
+ catch (  NoInteractionsWantedError e) {
   }
 }

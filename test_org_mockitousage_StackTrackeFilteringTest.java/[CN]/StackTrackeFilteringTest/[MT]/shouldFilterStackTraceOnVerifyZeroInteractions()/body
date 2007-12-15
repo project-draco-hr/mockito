@@ -4,7 +4,7 @@
     verifyZeroInteractions(mock);
     fail();
   }
- catch (  VerificationError expected) {
-    assertThat(expected,hasFirstMethodInStackTrace("shouldFilterStackTraceOnVerifyZeroInteractions"));
+ catch (  NoInteractionsWantedError e) {
+    assertThat(e,hasFirstMethodInStackTrace("shouldFilterStackTraceOnVerifyZeroInteractions"));
   }
 }

@@ -1,4 +1,4 @@
 {
   UndesiredInvocation cause=buildUndesiredInvocationCause(actualInvocationStackTrace,"Undesired invocation:",undesired);
-  throw new VerificationError(join("No interactions wanted"),cause);
+  throw new NoInteractionsWantedError(join("No interactions wanted"),cause);
 }

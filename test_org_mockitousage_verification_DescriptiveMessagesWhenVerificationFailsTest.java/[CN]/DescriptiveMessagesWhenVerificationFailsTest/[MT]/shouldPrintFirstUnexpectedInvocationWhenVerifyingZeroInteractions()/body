@@ -5,7 +5,7 @@
     verifyZeroInteractions(mock);
     fail();
   }
- catch (  VerificationError e) {
+ catch (  NoInteractionsWantedError e) {
     String expected="\n" + "No interactions wanted";
     assertEquals(e.getMessage(),expected);
     String expectedCause="\n" + "Undesired invocation:" + "\n"+ "IMethods.twoArgumentMethod(1, 2)";

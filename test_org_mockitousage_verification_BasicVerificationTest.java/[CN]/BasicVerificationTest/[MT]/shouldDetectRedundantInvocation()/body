@@ -8,6 +8,6 @@
     verifyNoMoreInteractions(mock);
     fail();
   }
- catch (  VerificationError expected) {
+ catch (  NoInteractionsWantedError e) {
   }
 }

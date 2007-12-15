@@ -10,6 +10,6 @@
     verifyZeroInteractions(map);
     fail();
   }
- catch (  VerificationError e) {
+ catch (  NoInteractionsWantedError e) {
   }
 }
