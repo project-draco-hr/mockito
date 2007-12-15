@@ -1,3 +1,6 @@
 {
-  return getMockAndMethodName() + getArgumentsString(matchers);
+  String mockName=MockNamer.nameForMock(mock);
+  String methodName=method.getName();
+  String arguments=getArgumentsString(matchers);
+  return mockName + "." + methodName+ arguments;
 }

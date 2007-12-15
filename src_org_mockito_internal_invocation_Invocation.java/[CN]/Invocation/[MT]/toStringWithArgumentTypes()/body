@@ -1,6 +1,6 @@
 {
   StringBuilder result=new StringBuilder();
-  result.append(getMockAndMethodName());
+  result.append((MockNamer.nameForMock(mock) + "." + method.getName()));
   result.append("(");
   for (  Class<?> paramType : getMethod().getParameterTypes()) {
     result.append(paramType);
