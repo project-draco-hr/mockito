@@ -1,4 +1,0 @@
-{
-  this.calculator=calculator;
-  this.reporter=reporter;
-}

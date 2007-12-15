@@ -1,11 +1,11 @@
 {
   VerificationMode mode=times(10);
-  calculatorStub.actualCountToReturn=5;
+  analyzerStub.actualCountToReturn=5;
   MockitoException lastInvocation=new MockitoException("");
-  calculatorStub.invocationTraceToReturn=lastInvocation;
+  analyzerStub.invocationTraceToReturn=lastInvocation;
   verifier.verify(invocations,wanted,mode);
-  assertSame(invocations,calculatorStub.invocations);
-  assertSame(wanted,calculatorStub.wanted);
+  assertSame(invocations,analyzerStub.invocations);
+  assertSame(wanted,analyzerStub.wanted);
   assertEquals(5,reporterStub.actualCount);
   assertEquals(10,reporterStub.wantedCount);
   assertEquals(wanted.toString(),reporterStub.wanted);

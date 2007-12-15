@@ -2,7 +2,7 @@
   if (!mode.missingMethodMode()) {
     return;
   }
-  int actualCount=calculator.countActual(invocations,wanted);
+  int actualCount=analyzer.countActual(invocations,wanted);
   if (actualCount == 0) {
     reportMissingInvocationError(invocations,wanted);
   }

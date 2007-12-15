@@ -1,5 +1,5 @@
 {
-  calculator=new InvocationsCalculatorStub();
+  analyzer=new InvocationsAnalyzerStub();
   reporterStub=new ReporterStub();
-  verifier=new NoMoreInvocationsVerifier(calculator,reporterStub);
+  verifier=new NoMoreInvocationsVerifier(analyzer,reporterStub);
 }

@@ -1,7 +1,7 @@
 {
-  calculatorStub=new InvocationsCalculatorStub();
+  analyzerStub=new InvocationsAnalyzerStub();
   reporterStub=new ReporterStub();
-  verifier=new MissingInvocationVerifier(calculatorStub,reporterStub);
+  verifier=new MissingInvocationVerifier(analyzerStub,reporterStub);
   wanted=new InvocationBuilder().toInvocationMatcher();
   invocations=asList(new InvocationBuilder().toInvocation());
 }

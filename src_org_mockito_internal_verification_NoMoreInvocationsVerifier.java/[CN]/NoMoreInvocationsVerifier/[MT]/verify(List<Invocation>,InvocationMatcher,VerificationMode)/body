@@ -2,7 +2,7 @@
   if (mode.explicitMode()) {
     return;
   }
-  Invocation unverified=calculator.getFirstUnverified(invocations);
+  Invocation unverified=analyzer.getFirstUnverified(invocations);
   if (unverified != null) {
     reporter.noMoreInteractionsWanted(unverified.toString(),unverified.getStackTrace());
   }

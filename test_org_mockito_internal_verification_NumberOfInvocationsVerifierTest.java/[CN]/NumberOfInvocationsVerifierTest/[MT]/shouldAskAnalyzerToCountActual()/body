@@ -1,0 +1,7 @@
+{
+  VerificationMode mode=times(1);
+  analyzerStub.actualCountToReturn=1;
+  verifier.verify(invocations,wanted,mode);
+  assertSame(invocations,analyzerStub.invocations);
+  assertSame(wanted,analyzerStub.wanted);
+}

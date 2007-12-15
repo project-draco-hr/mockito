@@ -1,4 +1,4 @@
 {
-  calculator.invocationToReturn=null;
+  analyzer.invocationToReturn=null;
   verifier.verify(null,null,VerificationMode.noMoreInteractions());
 }

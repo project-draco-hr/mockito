@@ -1,4 +1,4 @@
 {
   verifier.verify(invocations,wanted,times(4));
-  assertSame(wanted,calculatorStub.wanted);
+  assertSame(wanted,analyzerStub.wanted);
 }

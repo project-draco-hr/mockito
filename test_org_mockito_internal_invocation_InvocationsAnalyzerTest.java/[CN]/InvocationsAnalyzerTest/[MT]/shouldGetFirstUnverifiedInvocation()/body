@@ -1,0 +1,8 @@
+{
+  assertSame(simpleMethodInvocation,analyzer.getFirstUnverified(invocations));
+  simpleMethodInvocationTwo.markVerified();
+  simpleMethodInvocation.markVerified();
+  assertSame(differentMethodInvocation,analyzer.getFirstUnverified(invocations));
+  differentMethodInvocation.markVerified();
+  assertNull(analyzer.getFirstUnverified(invocations));
+}

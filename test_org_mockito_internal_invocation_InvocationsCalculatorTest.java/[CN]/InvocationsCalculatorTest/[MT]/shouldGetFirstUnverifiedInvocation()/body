@@ -1,8 +1,0 @@
-{
-  assertSame(simpleMethodInvocation,calculator.getFirstUnverified(invocations));
-  simpleMethodInvocationTwo.markVerified();
-  simpleMethodInvocation.markVerified();
-  assertSame(differentMethodInvocation,calculator.getFirstUnverified(invocations));
-  differentMethodInvocation.markVerified();
-  assertNull(calculator.getFirstUnverified(invocations));
-}

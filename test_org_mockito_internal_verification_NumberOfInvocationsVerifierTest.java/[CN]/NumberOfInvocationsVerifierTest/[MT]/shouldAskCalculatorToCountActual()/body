@@ -1,7 +1,0 @@
-{
-  VerificationMode mode=times(1);
-  calculatorStub.actualCountToReturn=1;
-  verifier.verify(invocations,wanted,mode);
-  assertSame(invocations,calculatorStub.invocations);
-  assertSame(wanted,calculatorStub.wanted);
-}

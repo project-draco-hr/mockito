@@ -1,3 +1,0 @@
-{
-  calculator.getFirstUndesiredInvocationStackTrace(invocations,new InvocationMatcher(simpleMethodInvocation),VerificationMode.times(100));
-}
