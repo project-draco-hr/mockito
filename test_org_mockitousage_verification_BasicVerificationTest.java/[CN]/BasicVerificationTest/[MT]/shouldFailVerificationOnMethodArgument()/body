@@ -8,5 +8,4 @@
   }
  catch (  VerificationError expected) {
   }
-  ;
 }

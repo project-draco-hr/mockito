@@ -1,5 +1,5 @@
 {
   MockUtil.validateMock(mock);
-  mockingProgress.verificationStarted(mode);
+  MOCKING_PROGRESS.verificationStarted(mode);
   return mock;
 }

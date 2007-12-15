@@ -1,5 +1,5 @@
 {
   MockFactory<T> proxyFactory=new MockFactory<T>();
-  MockControl<T> mockControl=new MockControl<T>(mockingProgress,new MatchersBinder());
+  MockControl<T> mockControl=new MockControl<T>(MOCKING_PROGRESS,new MatchersBinder());
   return proxyFactory.createMock(classToMock,new ObjectMethodsFilter<MockControl>(classToMock,mockControl));
 }
