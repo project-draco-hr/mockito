@@ -1,5 +1,3 @@
 {
-  MockFactory<T> proxyFactory=new MockFactory<T>();
-  MockHandler<T> mockHandler=new MockHandler<T>(MOCKING_PROGRESS,new MatchersBinder());
-  return proxyFactory.createMock(classToMock,new ObjectMethodsFilter<MockHandler>(classToMock,mockHandler));
+  return MockUtil.createMock(classToMock,MOCKING_PROGRESS);
 }

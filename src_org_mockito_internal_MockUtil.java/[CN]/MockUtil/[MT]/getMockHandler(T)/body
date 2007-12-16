@@ -2,15 +2,13 @@
   if (mock == null) {
     throw new MockitoException("Mock cannot be null");
   }
-  ObjectMethodsFilter<MockHandler<T>> handler;
   try {
     if (Enhancer.isEnhanced(mock.getClass())) {
-      handler=(ObjectMethodsFilter)getInterceptor(mock).getHandler();
+      return ((MethodInterceptorFilter<MockHandler<T>>)getInterceptor(mock)).getDelegate();
     }
  else {
       throw new NotAMockException(mock);
     }
-    return handler.getDelegate();
   }
  catch (  ClassCastException e) {
     throw new NotAMockException(mock);

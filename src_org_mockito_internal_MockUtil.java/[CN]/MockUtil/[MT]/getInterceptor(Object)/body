@@ -1,4 +1,0 @@
-{
-  Factory factory=(Factory)mock;
-  return (MockMethodInterceptor)factory.getCallback(0);
-}

@@ -1,0 +1,15 @@
+{
+  Enhancer enhancer=new Enhancer(){
+    @SuppressWarnings("unchecked") protected void filterConstructors(    Class sc,    List constructors){
+      CollectionUtils.filter(constructors,new VisibilityPredicate(sc,true));
+    }
+  }
+;
+  if (toMock.isInterface()) {
+    enhancer.setInterfaces(new Class[]{toMock});
+  }
+ else {
+    enhancer.setSuperclass(toMock);
+  }
+  return enhancer;
+}

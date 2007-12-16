@@ -1,0 +1,9 @@
+{
+  Enhancer enhancer=createEnhancer(toMock);
+  enhancer.setCallbackType(filter.getClass());
+  Class mockClass=enhancer.createClass();
+  Enhancer.registerCallbacks(mockClass,new Callback[]{filter});
+  Factory mock=createMock(mockClass);
+  filter.setMock(mock);
+  return (T)mock;
+}
