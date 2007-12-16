@@ -1,8 +1,8 @@
 {
   MOCKING_PROGRESS.stubbingStarted();
-  OngoingStubbing stubable=MOCKING_PROGRESS.pullStubable();
-  if (stubable == null) {
+  OngoingStubbing stubbable=MOCKING_PROGRESS.pullStubbable();
+  if (stubbable == null) {
     REPORTER.missingMethodInvocation();
   }
-  return stubable;
+  return stubbable;
 }
