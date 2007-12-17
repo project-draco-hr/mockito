@@ -1,3 +1,0 @@
-{
-  return explicitMode() && (atLeastOnceMode() || wantedInvocationCount == 1);
-}

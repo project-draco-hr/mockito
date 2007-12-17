@@ -1,3 +1,0 @@
-{
-  return new VerificationMode(null,Collections.emptyList(),Verification.NO_MORE_WANTED);
-}
