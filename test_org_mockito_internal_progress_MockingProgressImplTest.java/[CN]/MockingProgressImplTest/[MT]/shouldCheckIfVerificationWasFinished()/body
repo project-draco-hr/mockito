@@ -1,7 +1,7 @@
 {
-  mockingProgress.verificationStarted(VerificationMode.atLeastOnce());
+  mockingProgress.verificationStarted(VerificationModeImpl.atLeastOnce());
   try {
-    mockingProgress.verificationStarted(VerificationMode.atLeastOnce());
+    mockingProgress.verificationStarted(VerificationModeImpl.atLeastOnce());
     fail();
   }
  catch (  MockitoException e) {

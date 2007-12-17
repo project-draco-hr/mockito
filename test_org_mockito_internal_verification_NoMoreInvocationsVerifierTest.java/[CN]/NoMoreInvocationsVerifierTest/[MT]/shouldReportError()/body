@@ -2,7 +2,7 @@
   Invocation firstUnverified=new InvocationBuilder().toInvocation();
   analyzer.invocationToReturn=firstUnverified;
   List<Invocation> invocations=asList(new InvocationBuilder().toInvocation());
-  verifier.verify(invocations,null,VerificationMode.noMoreInteractions());
+  verifier.verify(invocations,null,VerificationModeImpl.noMoreInteractions());
   assertSame(invocations,analyzer.invocations);
   assertEquals(firstUnverified.toString(),reporterStub.undesired);
   assertSame(firstUnverified.getStackTrace(),reporterStub.actualInvocationStackTrace);

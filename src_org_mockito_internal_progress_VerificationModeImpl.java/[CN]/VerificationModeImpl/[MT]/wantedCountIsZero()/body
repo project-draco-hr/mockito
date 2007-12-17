@@ -1,0 +1,3 @@
+{
+  return wantedInvocationCount != null && wantedInvocationCount == 0;
+}

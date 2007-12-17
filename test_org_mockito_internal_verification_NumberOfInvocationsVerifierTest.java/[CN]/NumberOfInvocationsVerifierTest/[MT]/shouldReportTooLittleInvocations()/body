@@ -1,5 +1,5 @@
 {
-  VerificationMode mode=times(10);
+  VerificationModeImpl mode=times(10);
   analyzerStub.actualCountToReturn=5;
   MockitoException lastInvocation=new MockitoException("");
   analyzerStub.invocationTraceToReturn=lastInvocation;

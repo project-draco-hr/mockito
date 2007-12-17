@@ -1,3 +1,3 @@
 {
-  return VerificationMode.strict(null,Arrays.asList(new Object()));
+  return VerificationModeImpl.strict(null,Arrays.asList(new Object()));
 }

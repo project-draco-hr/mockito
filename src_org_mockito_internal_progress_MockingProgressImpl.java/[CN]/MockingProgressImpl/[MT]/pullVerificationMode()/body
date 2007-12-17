@@ -1,5 +1,5 @@
 {
-  VerificationMode temp=verificationMode;
+  VerificationModeImpl temp=verificationMode;
   verificationMode=null;
   return temp;
 }

@@ -1,0 +1,3 @@
+Integer wantedNumberOfInvocations
+List<Object> mocksToBeVerifiedStrictly
+Verification verification

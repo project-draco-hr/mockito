@@ -1,6 +1,6 @@
 {
   assertNull(mockingProgress.pullVerificationMode());
-  VerificationMode mode=VerificationMode.times(19);
+  VerificationModeImpl mode=VerificationModeImpl.times(19);
   mockingProgress.verificationStarted(mode);
   assertSame(mode,mockingProgress.pullVerificationMode());
   assertNull(mockingProgress.pullVerificationMode());

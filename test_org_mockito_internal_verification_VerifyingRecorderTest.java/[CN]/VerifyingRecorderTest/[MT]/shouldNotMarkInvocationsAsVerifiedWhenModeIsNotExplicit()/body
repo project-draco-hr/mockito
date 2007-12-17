@@ -1,5 +1,5 @@
 {
-  VerificationMode mode=VerificationMode.noMoreInteractions();
+  VerificationModeImpl mode=VerificationModeImpl.noMoreInteractions();
   recorder.verify(mode);
   assertNull(markerStub.mode);
 }

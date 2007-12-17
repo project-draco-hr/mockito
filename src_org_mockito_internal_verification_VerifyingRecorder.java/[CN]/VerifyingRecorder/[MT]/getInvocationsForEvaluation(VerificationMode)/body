@@ -1,8 +1,0 @@
-{
-  if (mode.strictMode()) {
-    return chunker.getFirstUnverifiedInvocationChunk(mode.getAllMocksToBeVerifiedInSequence());
-  }
- else {
-    return registeredInvocations;
-  }
-}

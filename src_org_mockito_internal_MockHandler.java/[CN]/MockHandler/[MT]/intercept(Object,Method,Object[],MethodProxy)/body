@@ -5,7 +5,7 @@
     stubber.addVoidMethodForThrowable(invocationMatcher);
     return null;
   }
-  VerificationMode verificationMode=mockingProgress.pullVerificationMode();
+  VerificationModeImpl verificationMode=mockingProgress.pullVerificationMode();
   mockingProgress.validateState();
   Invocation invocation=new Invocation(proxy,method,args,mockingProgress.nextSequenceNumber());
   InvocationMatcher invocationMatcher=matchersBinder.bindMatchers(invocation);
