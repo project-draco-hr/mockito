@@ -1,0 +1,14 @@
+{
+  Set<Invocation> allInvocationsInOrder=new TreeSet<Invocation>(new SequenceNumberComparator());
+  List<Invocation> allInvocations=finder.allInvocationsInOrder(mocks);
+  allInvocationsInOrder.addAll(allInvocations);
+  LinkedList<Invocation> chunk=new LinkedList<Invocation>();
+  for (  Invocation i : allInvocationsInOrder) {
+    if (i.isVerifiedStrictly()) {
+      chunk.clear();
+      continue;
+    }
+    chunk.add(i);
+  }
+  return chunk;
+}

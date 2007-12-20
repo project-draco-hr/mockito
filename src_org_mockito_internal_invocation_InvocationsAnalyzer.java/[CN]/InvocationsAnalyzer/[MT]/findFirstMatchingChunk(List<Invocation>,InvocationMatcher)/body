@@ -1,0 +1,12 @@
+{
+  List<Invocation> chunk=new LinkedList<Invocation>();
+  for (  Invocation i : invocations) {
+    if (wanted.matches(i)) {
+      chunk.add(i);
+    }
+ else     if (!chunk.isEmpty()) {
+      break;
+    }
+  }
+  return chunk;
+}
