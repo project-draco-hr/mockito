@@ -1,7 +1,7 @@
 {
-  Mockito.stub(mock.add("test")).andReturn(false);
-  Mockito.stub(mock.add("test")).andReturn(true);
+  stub(mock.add("test")).andReturn(false);
+  stub(mock.add("test")).andReturn(true);
   mock.add("test");
   mock.add("test");
-  Mockito.verify(mock,times(2)).add("test");
+  verify(mock,times(2)).add("test");
 }

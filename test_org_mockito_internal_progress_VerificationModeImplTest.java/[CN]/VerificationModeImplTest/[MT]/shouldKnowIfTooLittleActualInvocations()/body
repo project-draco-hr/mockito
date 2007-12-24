@@ -1,0 +1,7 @@
+{
+  assertTrue(times(1).tooLittleActualInvocations(0));
+  assertTrue(times(100).tooLittleActualInvocations(99));
+  assertFalse(times(0).tooLittleActualInvocations(0));
+  assertFalse(times(1).tooLittleActualInvocations(1));
+  assertFalse(times(1).tooLittleActualInvocations(2));
+}

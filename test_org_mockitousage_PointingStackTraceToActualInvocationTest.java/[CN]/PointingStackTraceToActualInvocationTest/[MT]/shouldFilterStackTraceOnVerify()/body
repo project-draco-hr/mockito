@@ -1,0 +1,10 @@
+{
+  verify(mock,atLeastOnce()).simpleMethod(anyInt());
+  try {
+    verify(mockTwo).simpleMethod(999);
+    fail();
+  }
+ catch (  VerificationError e) {
+    assertThat(e.getCause(),hasFirstMethodInStackTrace("secondChunk"));
+  }
+}

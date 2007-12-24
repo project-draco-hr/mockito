@@ -1,10 +1,10 @@
 {
-  Mockito.verify(mock,times(0)).clear();
+  verify(mock,times(0)).clear();
   try {
-    Mockito.verify(mock,times(15)).clear();
+    verify(mock,times(15)).clear();
     fail();
   }
- catch (  TooLittleActualInvocationsError e) {
-    assertThat(e,messageContains("Wanted 15 times but was 0"));
+ catch (  VerificationError e) {
+    assertThat(e,messageContains("Wanted but not invoked"));
   }
 }

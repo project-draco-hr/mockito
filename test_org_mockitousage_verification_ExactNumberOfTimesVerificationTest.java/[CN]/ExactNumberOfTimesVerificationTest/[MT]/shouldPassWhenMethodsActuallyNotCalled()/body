@@ -1,4 +1,4 @@
 {
-  Mockito.verify(mock,times(0)).clear();
-  Mockito.verify(mock,times(0)).add("yes, I wasn't called");
+  verify(mock,times(0)).clear();
+  verify(mock,times(0)).add("yes, I wasn't called");
 }

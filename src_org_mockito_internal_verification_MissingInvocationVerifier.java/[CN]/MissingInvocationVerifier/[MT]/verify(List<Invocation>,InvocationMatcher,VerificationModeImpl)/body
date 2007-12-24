@@ -7,10 +7,4 @@
     Invocation similar=analyzer.findSimilarInvocation(invocations,wanted,mode);
     reportMissingInvocationError(wanted,similar);
   }
-  for (  Invocation invocation : actualInvocations) {
-    invocation.markVerified();
-    if (mode.strictMode() && mode.atLeastOnceMode()) {
-      invocation.markVerifiedStrictly();
-    }
-  }
 }

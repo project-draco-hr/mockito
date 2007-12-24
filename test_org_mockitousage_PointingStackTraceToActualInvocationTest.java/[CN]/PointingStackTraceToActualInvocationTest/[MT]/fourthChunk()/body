@@ -1,0 +1,4 @@
+{
+  mockTwo.simpleMethod(4);
+  mockTwo.simpleMethod(4);
+}
