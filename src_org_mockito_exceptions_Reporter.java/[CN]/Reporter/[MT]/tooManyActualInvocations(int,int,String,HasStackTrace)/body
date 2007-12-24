@@ -1,5 +1,5 @@
 {
   UndesiredInvocation cause=new UndesiredInvocation(join("Undesired invocation:"));
   cause.setStackTrace(firstUndesired.getStackTrace());
-  throw new TooManyActualInvocationsError(join(wanted,"Wanted " + pluralize(wantedCount) + " but was "+ actualCount),cause);
+  throw new TooManyActualInvocations(join(wanted,"Wanted " + pluralize(wantedCount) + " but was "+ actualCount),cause);
 }

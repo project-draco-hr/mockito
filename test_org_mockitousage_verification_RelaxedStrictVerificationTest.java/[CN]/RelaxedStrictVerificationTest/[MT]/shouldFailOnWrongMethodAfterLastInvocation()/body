@@ -4,6 +4,6 @@
     strictly.verify(mockOne).simpleMethod(999);
     fail();
   }
- catch (  VerificationError e) {
+ catch (  WantedButNotInvoked e) {
   }
 }

@@ -7,18 +7,18 @@
     verify(mock).simpleMethod("one");
     fail();
   }
- catch (  VerificationError e) {
+ catch (  InvocationDiffersFromActual e) {
   }
   try {
     verify(mock).simpleMethod("two");
     fail();
   }
- catch (  VerificationError e) {
+ catch (  InvocationDiffersFromActual e) {
   }
   try {
     verifyNoMoreInteractions(mock);
     fail();
   }
- catch (  NoInteractionsWantedError e) {
+ catch (  NoInteractionsWanted e) {
   }
 }

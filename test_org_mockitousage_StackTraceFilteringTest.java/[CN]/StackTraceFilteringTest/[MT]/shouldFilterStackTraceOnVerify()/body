@@ -3,7 +3,7 @@
     verify(mock).simpleMethod();
     fail();
   }
- catch (  VerificationError expected) {
-    assertThat(expected,hasFirstMethodInStackTrace("shouldFilterStackTraceOnVerify"));
+ catch (  WantedButNotInvoked e) {
+    assertThat(e,hasFirstMethodInStackTrace("shouldFilterStackTraceOnVerify"));
   }
 }

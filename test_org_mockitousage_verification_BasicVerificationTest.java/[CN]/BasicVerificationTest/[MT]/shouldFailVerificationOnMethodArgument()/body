@@ -6,6 +6,6 @@
     verify(mock).add("bar");
     fail();
   }
- catch (  VerificationError expected) {
+ catch (  InvocationDiffersFromActual expected) {
   }
 }

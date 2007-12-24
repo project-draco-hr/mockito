@@ -1,5 +1,5 @@
 {
-  if (wantedInvocation.matchesMockArgsAndMethodNameButMethodNotEqual(actualInvocation)) {
+  if (wantedInvocation.differsWithArgumentTypes(actualInvocation)) {
     wanted=wantedInvocation.toStringWithArgumentTypes();
     actual=actualInvocation.toStringWithArgumentTypes();
   }

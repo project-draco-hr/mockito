@@ -3,7 +3,7 @@
     verify(mock).threeArgumentMethod(12,new SomeClass(),"xx");
     fail();
   }
- catch (  VerificationError e) {
+ catch (  WantedButNotInvoked e) {
     assertThat(e,messageContains("IMethods.threeArgumentMethod(12, SomeClass instance, \"xx\")"));
   }
 }

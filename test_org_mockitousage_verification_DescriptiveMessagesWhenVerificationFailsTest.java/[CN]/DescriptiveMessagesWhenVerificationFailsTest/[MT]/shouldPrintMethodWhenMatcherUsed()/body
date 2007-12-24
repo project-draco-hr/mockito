@@ -3,8 +3,8 @@
     verify(mock,atLeastOnce()).twoArgumentMethod(anyInt(),eq(100));
     fail();
   }
- catch (  VerificationError expected) {
-    String actualMessage=expected.getMessage();
+ catch (  WantedButNotInvoked e) {
+    String actualMessage=e.getMessage();
     String expectedMessage="\n" + "Wanted but not invoked:" + "\n"+ "IMethods.twoArgumentMethod(<any>, 100)";
     assertEquals(expectedMessage,actualMessage);
   }

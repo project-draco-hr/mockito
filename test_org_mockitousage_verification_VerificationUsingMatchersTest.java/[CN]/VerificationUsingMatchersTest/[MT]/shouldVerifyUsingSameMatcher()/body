@@ -13,6 +13,6 @@
     verify(mock).oneArg(same(three));
     fail();
   }
- catch (  VerificationError e) {
+ catch (  WantedButNotInvoked e) {
   }
 }

@@ -7,6 +7,6 @@
     strictly.verify(mockOne).oneArg(false);
     fail();
   }
- catch (  VerificationError e) {
+ catch (  InvocationDiffersFromActual e) {
   }
 }

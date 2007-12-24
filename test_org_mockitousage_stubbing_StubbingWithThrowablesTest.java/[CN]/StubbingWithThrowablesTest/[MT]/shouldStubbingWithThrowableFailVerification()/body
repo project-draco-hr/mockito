@@ -7,18 +7,18 @@
     verify(mock).size();
     fail();
   }
- catch (  VerificationError e) {
+ catch (  InvocationDiffersFromActual e) {
   }
   try {
     verify(mock).clone();
     fail();
   }
- catch (  VerificationError e) {
+ catch (  InvocationDiffersFromActual e) {
   }
   try {
     verifyNoMoreInteractions(mock);
     fail();
   }
- catch (  NoInteractionsWantedError e) {
+ catch (  NoInteractionsWanted e) {
   }
 }

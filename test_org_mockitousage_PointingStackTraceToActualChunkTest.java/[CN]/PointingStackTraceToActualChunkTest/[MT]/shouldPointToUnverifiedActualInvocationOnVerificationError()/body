@@ -1,0 +1,10 @@
+{
+  verify(mock,atLeastOnce()).simpleMethod(1);
+  try {
+    verify(mock,atLeastOnce()).simpleMethod(999);
+    fail();
+  }
+ catch (  InvocationDiffersFromActual e) {
+    assertThat(e.getCause(),hasFirstMethodInStackTrace("thirdChunk"));
+  }
+}

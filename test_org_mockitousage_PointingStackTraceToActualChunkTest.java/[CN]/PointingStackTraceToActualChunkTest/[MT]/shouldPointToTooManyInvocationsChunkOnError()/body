@@ -1,0 +1,9 @@
+{
+  try {
+    verify(mock).simpleMethod(1);
+    fail();
+  }
+ catch (  TooManyActualInvocations e) {
+    assertThat(e.getCause(),hasFirstMethodInStackTrace("firstChunk"));
+  }
+}

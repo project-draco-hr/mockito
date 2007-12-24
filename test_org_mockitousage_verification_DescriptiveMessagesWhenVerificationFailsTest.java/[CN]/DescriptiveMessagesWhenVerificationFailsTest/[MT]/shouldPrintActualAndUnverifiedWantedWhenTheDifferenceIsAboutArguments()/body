@@ -8,7 +8,7 @@
     verify(mock).twoArgumentMethod(3,1000);
     fail();
   }
- catch (  VerificationError e) {
+ catch (  InvocationDiffersFromActual e) {
     assertThat(e,messageContains("IMethods.twoArgumentMethod(3, 1000)"));
     assertThat(e,causeMessageContains("IMethods.twoArgumentMethod(3, 3)"));
   }

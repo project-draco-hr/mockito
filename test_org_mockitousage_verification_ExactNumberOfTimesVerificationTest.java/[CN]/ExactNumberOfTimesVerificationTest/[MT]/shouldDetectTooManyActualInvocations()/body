@@ -6,7 +6,7 @@
     verify(mock,times(1)).clear();
     fail();
   }
- catch (  TooManyActualInvocationsError e) {
+ catch (  TooManyActualInvocations e) {
     assertThat(e,messageContains("Wanted 1 time but was 2"));
   }
 }

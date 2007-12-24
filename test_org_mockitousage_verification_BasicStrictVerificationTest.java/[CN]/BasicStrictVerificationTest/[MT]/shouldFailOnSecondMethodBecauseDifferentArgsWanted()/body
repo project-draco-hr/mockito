@@ -4,6 +4,6 @@
     strictly.verify(mockTwo,times(2)).simpleMethod(-999);
     fail();
   }
- catch (  VerificationError e) {
+ catch (  InvocationDiffersFromActual e) {
   }
 }

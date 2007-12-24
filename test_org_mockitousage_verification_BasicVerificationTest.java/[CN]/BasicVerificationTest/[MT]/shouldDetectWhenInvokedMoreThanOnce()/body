@@ -7,6 +7,6 @@
     verify(mock).clear();
     fail();
   }
- catch (  TooManyActualInvocationsError e) {
+ catch (  TooManyActualInvocations e) {
   }
 }

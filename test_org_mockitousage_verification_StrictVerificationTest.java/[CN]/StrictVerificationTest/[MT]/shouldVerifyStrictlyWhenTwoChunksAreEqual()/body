@@ -10,6 +10,6 @@
     strictly.verify(mockOne,atLeastOnce()).simpleMethod();
     fail();
   }
- catch (  VerificationError e) {
+ catch (  WantedButNotInvoked e) {
   }
 }

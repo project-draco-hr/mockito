@@ -6,7 +6,7 @@
     verify(mock,times(100)).clear();
     fail();
   }
- catch (  TooLittleActualInvocationsError e) {
+ catch (  TooLittleActualInvocations e) {
     assertThat(e,messageContains("Wanted 100 times but was 2"));
   }
 }

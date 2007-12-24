@@ -7,7 +7,7 @@
     strictly.verify(three).simpleMethod(999);
     fail();
   }
- catch (  VerificationError e) {
+ catch (  WantedButNotInvoked e) {
     String actualMessage=e.getMessage();
     String expectedMessage="\n" + "Wanted but not invoked:" + "\n"+ "IMethods.simpleMethod(999)";
     assertEquals(expectedMessage,actualMessage);

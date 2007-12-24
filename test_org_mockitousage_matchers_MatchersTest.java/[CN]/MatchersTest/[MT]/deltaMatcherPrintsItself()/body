@@ -1,0 +1,9 @@
+{
+  try {
+    verify(mock).oneArg(eq(1.0D,0.1D));
+    fail();
+  }
+ catch (  WantedButNotInvoked e) {
+    assertThat(e,messageContains("eq(1.0, 0.1)"));
+  }
+}

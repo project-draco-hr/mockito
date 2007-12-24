@@ -3,8 +3,8 @@
     verify(mock).simpleMethod();
     fail();
   }
- catch (  VerificationError expected) {
-    String actualMessage=expected.getMessage();
+ catch (  WantedButNotInvoked e) {
+    String actualMessage=e.getMessage();
     String expectedMessage="\n" + "Wanted but not invoked:" + "\n"+ "IMethods.simpleMethod()";
     assertEquals(expectedMessage,actualMessage);
   }

@@ -6,7 +6,7 @@
     verify(sub).say("Hello");
     fail();
   }
- catch (  VerificationError error) {
+ catch (  InvocationDiffersFromActual error) {
     String expected="\n" + "Invocation differs from actual" + "\n"+ "Wanted invocation:"+ "\n"+ "Sub.say(class java.lang.String)";
     assertEquals(expected,error.getMessage());
     String expectedCause="\n" + "Actual invocation:" + "\n"+ "Sub.say(class java.lang.Object)";

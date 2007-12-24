@@ -4,6 +4,6 @@
     strictly.verify(mockTwo).simpleMethod(2);
     fail();
   }
- catch (  VerificationError e) {
+ catch (  WantedButNotInvoked e) {
   }
 }

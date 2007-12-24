@@ -11,6 +11,6 @@
     strictly.verify(mockOne,times(3)).simpleMethod(anyInt());
     fail();
   }
- catch (  VerificationError e) {
+ catch (  WantedButNotInvoked e) {
   }
 }

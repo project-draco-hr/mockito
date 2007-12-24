@@ -7,7 +7,7 @@
     strictly.verify(two,times(2)).simpleMethod(2);
     fail();
   }
- catch (  TooManyActualInvocationsError e) {
+ catch (  TooManyActualInvocations e) {
     String actualMessage=e.getMessage();
     String expectedMessage="\n" + "IMethods.simpleMethod(2)" + "\n"+ "Wanted 2 times but was 3";
     assertEquals(expectedMessage,actualMessage);

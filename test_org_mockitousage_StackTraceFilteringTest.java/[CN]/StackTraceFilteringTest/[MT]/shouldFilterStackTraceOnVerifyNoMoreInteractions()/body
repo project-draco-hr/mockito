@@ -4,7 +4,7 @@
     verifyNoMoreInteractions(mock);
     fail();
   }
- catch (  NoInteractionsWantedError e) {
+ catch (  NoInteractionsWanted e) {
     assertThat(e,hasFirstMethodInStackTrace("shouldFilterStackTraceOnVerifyNoMoreInteractions"));
   }
 }

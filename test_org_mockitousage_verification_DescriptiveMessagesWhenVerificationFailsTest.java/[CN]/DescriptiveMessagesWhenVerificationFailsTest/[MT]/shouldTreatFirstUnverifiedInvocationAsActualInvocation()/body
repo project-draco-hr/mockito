@@ -9,7 +9,7 @@
     verify(mock).threeArgumentMethod(1,"2","3");
     fail();
   }
- catch (  VerificationError e) {
+ catch (  InvocationDiffersFromActual e) {
     assertThat(e,messageContains("IMethods.threeArgumentMethod(1, \"2\", \"3\")"));
     assertThat(e,causeMessageContains("IMethods.simpleMethod()"));
   }

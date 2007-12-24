@@ -7,7 +7,7 @@
     verifyNoMoreInteractions(mock);
     fail();
   }
- catch (  NoInteractionsWantedError e) {
+ catch (  NoInteractionsWanted e) {
     String expectedMessage="\n" + "No interactions wanted";
     assertEquals(expectedMessage,e.getMessage());
     assertEquals(e.getCause().getClass(),UndesiredInvocation.class);

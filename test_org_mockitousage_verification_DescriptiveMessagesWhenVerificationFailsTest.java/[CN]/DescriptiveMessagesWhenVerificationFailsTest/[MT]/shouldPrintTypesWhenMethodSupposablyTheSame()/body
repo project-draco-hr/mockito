@@ -4,7 +4,7 @@
     verify(mock).varargs((String[])new String[]{});
     fail();
   }
- catch (  VerificationError e) {
+ catch (  InvocationDiffersFromActual e) {
     assertThat(e,messageContains("IMethods.varargs(class [Ljava.lang.String;)"));
     assertThat(e,causeMessageContains("IMethods.varargs(class [Ljava.lang.Object;)"));
   }

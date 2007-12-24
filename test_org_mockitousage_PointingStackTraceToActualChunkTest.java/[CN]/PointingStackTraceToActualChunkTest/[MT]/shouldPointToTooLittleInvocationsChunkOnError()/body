@@ -1,0 +1,10 @@
+{
+  verify(mock,atLeastOnce()).simpleMethod(1);
+  try {
+    verify(mock,times(3)).simpleMethod(3);
+    fail();
+  }
+ catch (  TooLittleActualInvocations e) {
+    assertThat(e.getCause(),hasFirstMethodInStackTrace("thirdChunk"));
+  }
+}

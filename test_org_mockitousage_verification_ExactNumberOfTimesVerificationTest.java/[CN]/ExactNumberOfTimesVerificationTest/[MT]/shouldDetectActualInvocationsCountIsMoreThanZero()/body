@@ -4,7 +4,6 @@
     verify(mock,times(15)).clear();
     fail();
   }
- catch (  VerificationError e) {
-    assertThat(e,messageContains("Wanted but not invoked"));
+ catch (  WantedButNotInvoked e) {
   }
 }

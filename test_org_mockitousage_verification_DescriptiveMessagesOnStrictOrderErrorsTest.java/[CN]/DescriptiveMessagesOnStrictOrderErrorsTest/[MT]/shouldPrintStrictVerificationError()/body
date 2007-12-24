@@ -4,7 +4,7 @@
     strictly.verify(one).simpleMethod(999);
     fail();
   }
- catch (  VerificationError e) {
+ catch (  InvocationDiffersFromActual e) {
     String expected="\n" + "Invocation differs from actual" + "\n"+ "Wanted invocation:"+ "\n"+ "IMethods.simpleMethod(999)";
     assertEquals(expected,e.getMessage());
     assertEquals(e.getCause().getClass(),WantedDiffersFromActual.class);

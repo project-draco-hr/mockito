@@ -1,0 +1,10 @@
+{
+  Strictly strictly=createStrictOrderVerifier(mock,mockTwo);
+  try {
+    strictly.verify(mockTwo).simpleMethod(anyInt());
+    fail();
+  }
+ catch (  TooManyActualInvocations e) {
+    assertThat(e.getCause(),hasFirstMethodInStackTrace("secondChunk"));
+  }
+}

@@ -7,7 +7,7 @@
     strictly.verify(mock).oneArg(true);
     fail();
   }
- catch (  VerificationError expected) {
-    assertThat(expected,hasFirstMethodInStackTrace("shouldFilterStacktraceWhenStrictlyVerifying"));
+ catch (  WantedButNotInvoked e) {
+    assertThat(e,hasFirstMethodInStackTrace("shouldFilterStacktraceWhenStrictlyVerifying"));
   }
 }

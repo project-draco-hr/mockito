@@ -7,7 +7,7 @@
     verify(mock).oneArray(aryEq(nullArray));
     fail();
   }
- catch (  VerificationError e) {
+ catch (  WantedButNotInvoked e) {
     String expected="\n" + "Wanted but not invoked:" + "\n"+ "IMethods.oneArray(null)";
     assertEquals(expected,e.getMessage());
   }

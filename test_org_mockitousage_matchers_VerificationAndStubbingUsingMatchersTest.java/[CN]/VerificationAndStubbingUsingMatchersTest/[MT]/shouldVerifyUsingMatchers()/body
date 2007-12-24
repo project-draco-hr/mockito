@@ -21,6 +21,6 @@
     verify(three).varargsObject(eq(10),eq("first arg"),startsWith("third"));
     fail();
   }
- catch (  VerificationError e) {
+ catch (  WantedButNotInvoked e) {
   }
 }

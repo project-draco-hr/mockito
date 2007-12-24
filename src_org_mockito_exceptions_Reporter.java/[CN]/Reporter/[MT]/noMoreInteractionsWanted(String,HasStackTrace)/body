@@ -1,5 +1,5 @@
 {
   UndesiredInvocation cause=new UndesiredInvocation(join("Undesired invocation:",undesired));
   cause.setStackTrace(actualInvocationStackTrace.getStackTrace());
-  throw new NoInteractionsWantedError(join("No interactions wanted"),cause);
+  throw new NoInteractionsWanted(join("No interactions wanted"),cause);
 }

@@ -7,7 +7,7 @@
     Mockito.verify(mock,times(100)).clear();
     fail();
   }
- catch (  TooLittleActualInvocationsError e) {
+ catch (  TooLittleActualInvocations e) {
     String expected="\n" + "LinkedList.clear()" + "\n"+ "Wanted 100 times but was 3";
     assertEquals(expected,e.getMessage());
     assertEquals(TooLittleInvocations.class,e.getCause().getClass());
