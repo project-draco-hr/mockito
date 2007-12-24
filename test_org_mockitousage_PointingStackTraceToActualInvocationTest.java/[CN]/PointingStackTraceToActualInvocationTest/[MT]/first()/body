@@ -1,4 +1,3 @@
 {
   mock.simpleMethod(1);
-  mock.simpleMethod(1);
 }

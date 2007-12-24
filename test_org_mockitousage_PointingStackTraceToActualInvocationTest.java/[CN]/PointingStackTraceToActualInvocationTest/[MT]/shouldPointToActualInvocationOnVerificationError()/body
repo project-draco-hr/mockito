@@ -1,0 +1,9 @@
+{
+  try {
+    verify(mock).simpleMethod(999);
+    fail();
+  }
+ catch (  InvocationDiffersFromActual e) {
+    assertThat(e.getCause(),hasFirstMethodInStackTrace("first"));
+  }
+}

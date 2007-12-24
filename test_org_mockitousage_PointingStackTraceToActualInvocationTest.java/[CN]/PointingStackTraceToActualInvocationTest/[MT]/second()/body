@@ -1,4 +1,3 @@
 {
   mockTwo.simpleMethod(2);
-  mockTwo.simpleMethod(2);
 }

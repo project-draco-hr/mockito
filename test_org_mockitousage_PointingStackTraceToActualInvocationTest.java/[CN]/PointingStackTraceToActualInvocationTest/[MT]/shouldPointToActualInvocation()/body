@@ -4,7 +4,7 @@
     strictly.verify(mockTwo).simpleMethod(999);
     fail();
   }
- catch (  VerificationError e) {
-    assertThat(e.getCause(),hasFirstMethodInStackTrace("secondChunk"));
+ catch (  InvocationDiffersFromActual e) {
+    assertThat(e.getCause(),hasFirstMethodInStackTrace("second"));
   }
 }
