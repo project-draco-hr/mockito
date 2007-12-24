@@ -1,9 +1,5 @@
 {
-  if (wantedInvocation.matchesButMocksAreDifferent(actualInvocation)) {
-    wanted=wantedInvocation.toStringWithSequenceNumber();
-    actual=actualInvocation.toStringWithSequenceNumber();
-  }
- else   if (wantedInvocation.matchesMockArgsAndMethodNameButMethodNotEqual(actualInvocation)) {
+  if (wantedInvocation.matchesMockArgsAndMethodNameButMethodNotEqual(actualInvocation)) {
     wanted=wantedInvocation.toStringWithArgumentTypes();
     actual=actualInvocation.toStringWithArgumentTypes();
   }

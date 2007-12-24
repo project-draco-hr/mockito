@@ -1,0 +1,9 @@
+{
+  Strictly strictly=createStrictOrderVerifier(mockOne,mockTwo,mockThree);
+  strictly.verify(mockOne).simpleMethod(1);
+  strictly.verify(mockTwo,times(2)).simpleMethod(2);
+  strictly.verify(mockThree).simpleMethod(3);
+  strictly.verify(mockTwo).simpleMethod(2);
+  strictly.verify(mockOne).simpleMethod(4);
+  verifyNoMoreInteractions(mockOne,mockTwo,mockThree);
+}

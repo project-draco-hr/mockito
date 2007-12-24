@@ -1,5 +1,0 @@
-{
-  this.invocations=invocations;
-  this.wanted=wanted;
-  return actualInvocationToReturn;
-}

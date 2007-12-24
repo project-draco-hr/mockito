@@ -1,0 +1,3 @@
+{
+  return wanted.matches(previous) && wanted.matches(current);
+}

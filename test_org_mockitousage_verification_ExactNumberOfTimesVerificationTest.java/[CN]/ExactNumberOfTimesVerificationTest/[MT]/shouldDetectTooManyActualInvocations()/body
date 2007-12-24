@@ -1,0 +1,12 @@
+{
+  mock.clear();
+  mock.clear();
+  Mockito.verify(mock,times(2)).clear();
+  try {
+    Mockito.verify(mock,times(1)).clear();
+    fail();
+  }
+ catch (  TooManyActualInvocationsError e) {
+    assertThat(e,messageContains("Wanted 1 time but was 2"));
+  }
+}

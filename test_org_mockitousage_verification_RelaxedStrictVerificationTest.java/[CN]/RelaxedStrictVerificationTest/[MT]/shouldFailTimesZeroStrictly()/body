@@ -1,0 +1,9 @@
+{
+  strictly.verify(mockTwo,atLeastOnce()).simpleMethod(2);
+  try {
+    strictly.verify(mockThree,times(0)).simpleMethod(3);
+    fail();
+  }
+ catch (  TooManyActualInvocationsError e) {
+  }
+}

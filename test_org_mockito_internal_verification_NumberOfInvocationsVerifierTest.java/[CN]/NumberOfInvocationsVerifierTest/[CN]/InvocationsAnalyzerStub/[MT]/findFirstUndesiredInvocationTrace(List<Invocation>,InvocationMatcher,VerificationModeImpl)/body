@@ -1,5 +1,4 @@
 {
-  this.wanted=wanted;
-  this.mode=mode;
+  this.invocations=invocations;
   return invocationTraceToReturn;
 }

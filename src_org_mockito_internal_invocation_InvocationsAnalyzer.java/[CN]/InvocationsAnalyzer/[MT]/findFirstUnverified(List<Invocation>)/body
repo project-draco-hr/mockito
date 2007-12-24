@@ -1,8 +1,3 @@
 {
-  for (  Invocation i : invocations) {
-    if (!i.isVerified()) {
-      return i;
-    }
-  }
-  return null;
+  return findFirstUnverified(invocations,null);
 }

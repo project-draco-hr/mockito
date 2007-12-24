@@ -1,0 +1,12 @@
+{
+  mockTwo.differentMethod();
+  mockOne.simpleMethod();
+  try {
+    strictly.verify(mockOne,atLeastOnce()).differentMethod();
+    fail();
+  }
+ catch (  VerificationError e) {
+    assertThat(e,messageContains("IMethods.differentMethod()"));
+    assertThat(e,causeMessageContains("IMethods.simpleMethod()"));
+  }
+}

@@ -1,0 +1,10 @@
+{
+  Strictly strictly=createStrictOrderVerifier(mockTwo,mockThree);
+  strictly.verify(mockTwo).simpleMethod(2);
+  try {
+    verifyNoMoreInteractions(mockTwo);
+    fail();
+  }
+ catch (  NoInteractionsWantedError e) {
+  }
+}

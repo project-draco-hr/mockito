@@ -1,6 +1,4 @@
 {
-  InvocationsChunker chunker=new InvocationsChunker(new AllInvocationsFinder());
-  InvocationsMarker marker=new InvocationsMarker();
-  List<Verifier> verifiers=Arrays.asList(new MissingInvocationVerifier(),new WrongOrderOfInvocationsVerifier(),new NumberOfInvocationsVerifier(),new NoMoreInvocationsVerifier());
-  return new VerifyingRecorder(chunker,marker,verifiers);
+  List<Verifier> verifiers=Arrays.asList(new MissingInvocationVerifier(),new NumberOfInvocationsVerifier(),new NoMoreInvocationsVerifier());
+  return new VerifyingRecorder(new AllInvocationsFinder(),verifiers);
 }

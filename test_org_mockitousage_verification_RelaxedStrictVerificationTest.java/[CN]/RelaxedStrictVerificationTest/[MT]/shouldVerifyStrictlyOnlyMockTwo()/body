@@ -1,0 +1,5 @@
+{
+  strictly.verify(mockTwo,times(2)).simpleMethod(2);
+  strictly.verify(mockTwo).simpleMethod(2);
+  verifyNoMoreInteractions(mockTwo);
+}

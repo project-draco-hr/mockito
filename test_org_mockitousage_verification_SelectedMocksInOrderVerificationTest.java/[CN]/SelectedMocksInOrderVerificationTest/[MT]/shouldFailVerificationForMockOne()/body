@@ -1,0 +1,10 @@
+{
+  Strictly strictly=createStrictOrderVerifier(mockOne);
+  strictly.verify(mockOne).simpleMethod(1);
+  try {
+    strictly.verify(mockOne).differentMethod();
+    fail();
+  }
+ catch (  VerificationError e) {
+  }
+}

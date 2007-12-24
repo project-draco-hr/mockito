@@ -1,0 +1,7 @@
+{
+  VerificationModeImpl mode=times(100);
+  MockitoException lastInvocation=new MockitoException("");
+  analyzerStub.invocationTraceToReturn=lastInvocation;
+  verifier.verify(invocations,wanted,mode);
+  assertSame(lastInvocation,reporterStub.stackTrace);
+}

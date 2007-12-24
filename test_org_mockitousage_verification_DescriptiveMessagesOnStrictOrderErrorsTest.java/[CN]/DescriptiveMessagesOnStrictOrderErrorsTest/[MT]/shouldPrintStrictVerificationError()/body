@@ -1,4 +1,5 @@
 {
+  strictly.verify(one,atLeastOnce()).simpleMethod(1);
   try {
     strictly.verify(one).simpleMethod(999);
     fail();
@@ -7,7 +8,7 @@
     String expected="\n" + "Invocation differs from actual" + "\n"+ "Wanted invocation:"+ "\n"+ "IMethods.simpleMethod(999)";
     assertEquals(expected,e.getMessage());
     assertEquals(e.getCause().getClass(),WantedDiffersFromActual.class);
-    String expectedCause="\n" + "Actual invocation:" + "\n"+ "IMethods.simpleMethod(1)";
+    String expectedCause="\n" + "Actual invocation:" + "\n"+ "IMethods.simpleMethod(11)";
     assertEquals(expectedCause,e.getCause().getMessage());
   }
 }

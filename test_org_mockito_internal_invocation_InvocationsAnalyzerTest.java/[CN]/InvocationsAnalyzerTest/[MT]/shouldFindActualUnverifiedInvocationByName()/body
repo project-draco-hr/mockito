@@ -1,5 +1,0 @@
-{
-  simpleMethodInvocation.markVerified();
-  Invocation found=analyzer.findActualInvocation(invocations,new InvocationMatcher(simpleMethodInvocation));
-  assertSame(found,simpleMethodInvocationTwo);
-}

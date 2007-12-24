@@ -1,8 +1,0 @@
-{
-  VerificationModeImpl mode=new VerificationModeBuilder().strict();
-  Invocation doesntMatter=null;
-  marker.markInvocationsAsVerified(invocations,new InvocationMatcher(doesntMatter),mode);
-  marker.markInvocationsAsVerified(invocations,new InvocationMatcher(doesntMatter),mode);
-  marker.markInvocationsAsVerified(invocations,new InvocationMatcher(doesntMatter),mode);
-  assertEquals(true,simpleMethodInvocationThree.isVerifiedStrictly());
-}

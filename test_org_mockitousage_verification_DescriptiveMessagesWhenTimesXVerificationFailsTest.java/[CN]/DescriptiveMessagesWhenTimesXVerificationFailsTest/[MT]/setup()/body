@@ -1,0 +1,3 @@
+{
+  mock=Mockito.mock(LinkedList.class);
+}

@@ -1,0 +1,15 @@
+{
+  mockOne.simpleMethod();
+  mockOne.simpleMethod();
+  mockTwo.differentMethod();
+  mockOne.simpleMethod();
+  mockOne.simpleMethod();
+  strictly.verify(mockOne,atLeastOnce()).simpleMethod();
+  strictly.verify(mockOne,times(2)).simpleMethod();
+  try {
+    strictly.verify(mockOne,atLeastOnce()).simpleMethod();
+    fail();
+  }
+ catch (  VerificationError e) {
+  }
+}

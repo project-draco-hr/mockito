@@ -1,7 +1,0 @@
-{
-  for (  Invocation i : invocations) {
-    if (expected.matches(i)) {
-      i.markVerified();
-    }
-  }
-}

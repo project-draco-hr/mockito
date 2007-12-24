@@ -1,0 +1,4 @@
+{
+  verifier.verify(invocations,wanted,VerificationModeImpl.atLeastOnce());
+  assertSame(invocations,analyzerStub.invocations);
+}

@@ -1,0 +1,11 @@
+{
+  mockOne=mock(IMethods.class);
+  mockTwo=mock(IMethods.class);
+  mockThree=mock(IMethods.class);
+  mockOne.simpleMethod(1);
+  mockTwo.simpleMethod(2);
+  mockTwo.simpleMethod(2);
+  mockThree.simpleMethod(3);
+  mockTwo.simpleMethod(2);
+  mockOne.simpleMethod(4);
+}

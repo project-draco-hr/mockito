@@ -1,6 +1,0 @@
-{
-  int simpleInvocationCount=2;
-  assertEquals(simpleInvocationCount,analyzer.countActual(invocations,new InvocationMatcher(simpleMethodInvocation)));
-  int differentInvocationCount=1;
-  assertEquals(differentInvocationCount,analyzer.countActual(invocations,new InvocationMatcher(differentMethodInvocation)));
-}

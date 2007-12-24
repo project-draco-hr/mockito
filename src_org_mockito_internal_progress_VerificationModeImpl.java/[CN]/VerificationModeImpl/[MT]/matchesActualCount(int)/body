@@ -1,0 +1,5 @@
+{
+  boolean atLeastOnce=atLeastOnceMode() && actualCount > 0;
+  boolean actualMatchesWanted=!atLeastOnceMode() && wantedInvocationCount == actualCount;
+  return atLeastOnce || actualMatchesWanted;
+}

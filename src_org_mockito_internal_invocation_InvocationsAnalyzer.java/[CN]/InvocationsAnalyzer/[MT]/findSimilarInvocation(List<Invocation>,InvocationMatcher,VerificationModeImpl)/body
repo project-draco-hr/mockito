@@ -1,0 +1,14 @@
+{
+  List<Invocation> unverified=removeUntilLastStrictlyVerified(invocations);
+  for (  Invocation invocation : unverified) {
+    String wantedMethodName=wanted.getMethod().getName();
+    String currentMethodName=invocation.getMethod().getName();
+    boolean methodNameEquals=wantedMethodName.equals(currentMethodName);
+    boolean isUnverified=!invocation.isVerified();
+    boolean mockIsTheSame=wanted.getInvocation().getMock() == invocation.getMock();
+    if (methodNameEquals && isUnverified && mockIsTheSame) {
+      return invocation;
+    }
+  }
+  return findFirstUnverified(unverified,wanted.getInvocation().getMock());
+}

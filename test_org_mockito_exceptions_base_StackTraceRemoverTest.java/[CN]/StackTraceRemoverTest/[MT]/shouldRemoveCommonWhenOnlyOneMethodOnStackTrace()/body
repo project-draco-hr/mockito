@@ -2,5 +2,5 @@
   setStackTrace("commonOne");
   setCauseStackTrace("commonOne");
   remove();
-  assertThat(methodsOnTraceAfterRemoving,collectionHasExactlyInOrder());
+  assertTrue(methodsOnTraceAfterRemoving.isEmpty());
 }

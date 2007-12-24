@@ -1,0 +1,9 @@
+{
+  List<Invocation> actual=new LinkedList<Invocation>();
+  for (  Invocation i : invocations) {
+    if (wanted.matches(i)) {
+      actual.add(i);
+    }
+  }
+  return actual;
+}

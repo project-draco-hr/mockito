@@ -1,0 +1,9 @@
+{
+  Strictly strictly=createStrictOrderVerifier(mockTwo);
+  try {
+    strictly.verify(mockTwo).simpleMethod(2);
+    fail();
+  }
+ catch (  TooManyActualInvocationsError e) {
+  }
+}

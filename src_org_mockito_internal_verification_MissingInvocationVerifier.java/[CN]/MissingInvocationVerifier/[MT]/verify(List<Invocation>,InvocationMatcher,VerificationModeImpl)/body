@@ -2,8 +2,21 @@
   if (!mode.missingMethodMode()) {
     return;
   }
-  int actualCount=analyzer.countActual(invocations,wanted);
-  if (actualCount == 0) {
-    reportMissingInvocationError(invocations,wanted);
+  List<Invocation> actualInvocations;
+  if (mode.strictMode()) {
+    actualInvocations=finder.findStrictlyUnverifiedInvocations(invocations,wanted,mode);
+  }
+ else {
+    actualInvocations=finder.findInvocations(invocations,wanted,mode);
+  }
+  if (actualInvocations.size() == 0) {
+    Invocation similar=analyzer.findSimilarInvocation(invocations,wanted,mode);
+    reportMissingInvocationError(wanted,similar);
+  }
+  for (  Invocation invocation : actualInvocations) {
+    invocation.markVerified();
+    if (mode.strictMode() && mode.atLeastOnceMode()) {
+      invocation.markVerifiedStrictly();
+    }
   }
 }

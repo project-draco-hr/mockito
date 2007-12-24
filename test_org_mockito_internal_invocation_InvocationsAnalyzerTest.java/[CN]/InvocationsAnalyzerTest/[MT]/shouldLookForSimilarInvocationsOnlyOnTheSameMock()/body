@@ -1,0 +1,6 @@
+{
+  Invocation onDifferentMock=new InvocationBuilder().simpleMethod().mock("different mock").toInvocation();
+  invocations.addFirst(onDifferentMock);
+  Invocation found=analyzer.findSimilarInvocation(invocations,new InvocationMatcher(simpleMethodInvocation),atLeastOnce());
+  assertNotSame(onDifferentMock,found);
+}

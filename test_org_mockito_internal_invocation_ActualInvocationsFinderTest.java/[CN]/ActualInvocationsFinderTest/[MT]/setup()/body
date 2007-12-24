@@ -1,0 +1,7 @@
+{
+  simpleMethodInvocation=new InvocationBuilder().simpleMethod().seq(1).toInvocation();
+  simpleMethodInvocationTwo=new InvocationBuilder().simpleMethod().seq(2).toInvocation();
+  differentMethodInvocation=new InvocationBuilder().differentMethod().seq(3).toInvocation();
+  invocations.addAll(Arrays.asList(simpleMethodInvocation,simpleMethodInvocationTwo,differentMethodInvocation));
+  finder=new ActualInvocationsFinder();
+}

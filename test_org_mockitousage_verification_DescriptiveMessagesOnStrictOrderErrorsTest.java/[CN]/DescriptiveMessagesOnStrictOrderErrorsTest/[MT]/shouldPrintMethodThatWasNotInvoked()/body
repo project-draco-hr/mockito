@@ -1,0 +1,15 @@
+{
+  strictly.verify(one).simpleMethod(1);
+  strictly.verify(one).simpleMethod(11);
+  strictly.verify(two,times(2)).simpleMethod(2);
+  strictly.verify(three).simpleMethod(3);
+  try {
+    strictly.verify(three).simpleMethod(999);
+    fail();
+  }
+ catch (  VerificationError e) {
+    String actualMessage=e.getMessage();
+    String expectedMessage="\n" + "Wanted but not invoked:" + "\n"+ "IMethods.simpleMethod(999)";
+    assertEquals(expectedMessage,actualMessage);
+  }
+}

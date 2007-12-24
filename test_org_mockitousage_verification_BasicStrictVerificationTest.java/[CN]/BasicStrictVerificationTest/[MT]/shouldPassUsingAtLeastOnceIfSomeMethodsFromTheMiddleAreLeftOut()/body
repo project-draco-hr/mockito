@@ -1,0 +1,5 @@
+{
+  strictly.verify(mockOne).simpleMethod(1);
+  strictly.verify(mockTwo,atLeastOnce()).simpleMethod(2);
+  strictly.verify(mockTwo,atLeastOnce()).simpleMethod(2);
+}

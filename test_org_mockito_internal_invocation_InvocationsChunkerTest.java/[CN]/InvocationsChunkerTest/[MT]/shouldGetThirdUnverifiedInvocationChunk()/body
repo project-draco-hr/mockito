@@ -1,7 +1,0 @@
-{
-  invocationOneChunkOne.markVerifiedStrictly();
-  invocationTwoChunkOne.markVerifiedStrictly();
-  differentInvocationChunkTwo.markVerifiedStrictly();
-  List<Invocation> chunk=chunker.getFirstUnverifiedInvocationChunk(null);
-  assertThat(chunk,collectionHasExactlyInOrder(invocationThreeChunkThree));
-}

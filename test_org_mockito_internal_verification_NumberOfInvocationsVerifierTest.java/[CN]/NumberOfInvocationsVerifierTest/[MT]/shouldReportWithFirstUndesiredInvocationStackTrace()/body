@@ -1,0 +1,8 @@
+{
+  VerificationModeImpl mode=times(0);
+  finderStub.actualToReturn.add(new InvocationBuilder().toInvocation());
+  MockitoException firstUndesiredInvocation=new MockitoException("");
+  analyzerStub.invocationTraceToReturn=firstUndesiredInvocation;
+  verifier.verify(invocations,wanted,mode);
+  assertSame(firstUndesiredInvocation,reporterStub.stackTrace);
+}

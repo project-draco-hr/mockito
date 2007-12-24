@@ -1,5 +1,0 @@
-{
-  this.chunker=chunker;
-  this.marker=marker;
-  this.verifiers=verifiers;
-}

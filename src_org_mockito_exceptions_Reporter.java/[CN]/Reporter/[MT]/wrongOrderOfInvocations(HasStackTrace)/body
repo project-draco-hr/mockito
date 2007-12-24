@@ -1,5 +1,0 @@
-{
-  RuntimeException cause=new RuntimeException();
-  cause.setStackTrace(actual.getStackTrace());
-  throw new WrongOrderVerificationError(join("Wrong order."),cause);
-}

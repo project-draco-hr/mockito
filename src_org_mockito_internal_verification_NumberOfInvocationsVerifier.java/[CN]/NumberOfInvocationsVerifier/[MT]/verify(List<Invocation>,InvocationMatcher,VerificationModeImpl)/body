@@ -2,14 +2,24 @@
   if (!mode.exactNumberOfInvocationsMode()) {
     return;
   }
-  int actualCount=analyzer.countActual(invocations,wanted);
+  List<Invocation> actualInvocations=finder.findInvocations(invocations,wanted,mode);
+  if (mode.strictMode()) {
+    actualInvocations=finder.findStrictlyUnverifiedInvocations(invocations,wanted,mode);
+  }
+  int actualCount=actualInvocations.size();
   int wantedCount=mode.wantedCount();
   if (actualCount < wantedCount) {
-    HasStackTrace lastInvocation=analyzer.findLastMatchingInvocationTrace(invocations,wanted);
+    HasStackTrace lastInvocation=analyzer.findLastMatchingInvocationTrace(actualInvocations,wanted);
     reporter.tooLittleActualInvocations(wantedCount,actualCount,wanted.toString(),lastInvocation);
   }
  else   if (actualCount > wantedCount) {
-    HasStackTrace firstUndesired=analyzer.findFirstUndesiredInvocationTrace(invocations,wanted,mode);
+    HasStackTrace firstUndesired=analyzer.findFirstUndesiredInvocationTrace(actualInvocations,wanted,mode);
     reporter.tooManyActualInvocations(wantedCount,actualCount,wanted.toString(),firstUndesired);
+  }
+  for (  Invocation invocation : actualInvocations) {
+    invocation.markVerified();
+    if (mode.strictMode()) {
+      invocation.markVerifiedStrictly();
+    }
   }
 }

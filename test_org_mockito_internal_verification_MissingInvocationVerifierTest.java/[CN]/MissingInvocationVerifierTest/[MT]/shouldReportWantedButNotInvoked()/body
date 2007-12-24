@@ -1,0 +1,6 @@
+{
+  assertTrue(finderStub.actualToReturn.isEmpty());
+  analyzerStub.similarToReturn=null;
+  verifier.verify(invocations,wanted,VerificationModeImpl.atLeastOnce());
+  assertEquals(wanted.toString(),reporterStub.wanted);
+}

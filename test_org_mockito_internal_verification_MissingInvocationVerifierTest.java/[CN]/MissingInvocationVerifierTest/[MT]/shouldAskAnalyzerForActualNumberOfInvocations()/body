@@ -1,6 +1,0 @@
-{
-  analyzerStub.actualCountToReturn=1;
-  verifier.verify(invocations,wanted,atLeastOnce());
-  assertSame(invocations,analyzerStub.invocations);
-  assertSame(wanted,analyzerStub.wanted);
-}

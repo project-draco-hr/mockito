@@ -1,5 +1,0 @@
-{
-  for (  Invocation i : invocations) {
-    i.markVerifiedStrictly();
-  }
-}

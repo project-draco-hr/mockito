@@ -1,8 +1,0 @@
-{
-  invocationOneChunkOne.markVerifiedStrictly();
-  invocationTwoChunkOne.markVerifiedStrictly();
-  differentInvocationChunkTwo.markVerifiedStrictly();
-  invocationThreeChunkThree.markVerifiedStrictly();
-  List<Invocation> chunk=chunker.getFirstUnverifiedInvocationChunk(null);
-  assertTrue(chunk.isEmpty());
-}

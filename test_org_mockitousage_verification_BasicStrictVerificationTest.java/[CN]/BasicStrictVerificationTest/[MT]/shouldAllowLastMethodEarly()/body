@@ -1,0 +1,4 @@
+{
+  strictly.verify(mockOne).simpleMethod(1);
+  strictly.verify(mockOne).simpleMethod(4);
+}

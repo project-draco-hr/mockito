@@ -1,0 +1,9 @@
+{
+  if (similar != null) {
+    InvocationsPrinter printer=new InvocationsPrinter(wanted,similar);
+    reporter.wantedInvocationDiffersFromActual(printer.printWanted(),printer.printActual(),similar.getStackTrace());
+  }
+ else {
+    reporter.wantedButNotInvoked(wanted.toString());
+  }
+}

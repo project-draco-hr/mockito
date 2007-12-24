@@ -1,4 +1,4 @@
 {
-  analyzerStub.actualCountToReturn=1;
+  finderStub.actualToReturn.add(new InvocationBuilder().toInvocation());
   verifier.verify(invocations,wanted,atLeastOnce());
 }

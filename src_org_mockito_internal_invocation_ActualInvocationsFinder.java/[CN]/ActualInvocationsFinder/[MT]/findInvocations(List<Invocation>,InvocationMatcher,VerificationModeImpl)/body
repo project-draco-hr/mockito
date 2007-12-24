@@ -1,0 +1,8 @@
+{
+  if (mode.strictMode()) {
+    return strictlyMatching(invocations,wanted,mode);
+  }
+ else {
+    return nonStrictlyMatching(invocations,wanted);
+  }
+}

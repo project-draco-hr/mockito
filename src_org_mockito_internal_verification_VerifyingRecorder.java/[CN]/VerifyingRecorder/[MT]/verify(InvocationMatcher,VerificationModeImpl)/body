@@ -1,9 +1,12 @@
 {
-  List<Invocation> invocations=getInvocationsForEvaluation(mode);
+  List<Invocation> invocations;
+  if (mode.strictMode()) {
+    invocations=invocationsFinder.getAllInvocations(mode.getMocksToBeVerifiedStrictly());
+  }
+ else {
+    invocations=registeredInvocations;
+  }
   for (  Verifier verifier : verifiers) {
     verifier.verify(invocations,wanted,mode);
-  }
-  if (mode.explicitMode()) {
-    marker.markInvocationsAsVerified(invocations,wanted,mode);
   }
 }

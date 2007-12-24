@@ -6,6 +6,6 @@
   one.simpleMethod(11);
   two.simpleMethod(2);
   two.simpleMethod(2);
-  three.simpleMethod();
+  three.simpleMethod(3);
   strictly=createStrictOrderVerifier(one,two,three);
 }

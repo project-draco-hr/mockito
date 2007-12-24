@@ -1,8 +1,5 @@
 {
-  recorder.recordInvocation(simpleMethod);
-  VerificationModeImpl mode=new VerificationModeBuilder().strict();
-  recorder.verify(differentMethod,mode);
-  assertEquals(verifierStub.mode,mode);
-  assertEquals(verifierStub.wanted,differentMethod);
-  assertThat(verifierStub.invocations,collectionHasExactlyInOrder(differentMethod.getInvocation()));
+  VerificationModeImpl strictMode=new VerificationModeBuilder().strict();
+  recorder.verify(differentMethod,strictMode);
+  assertThat(verifierStub.invocations,collectionHasExactlyInOrder(simpleMethod,differentMethod.getInvocation()));
 }

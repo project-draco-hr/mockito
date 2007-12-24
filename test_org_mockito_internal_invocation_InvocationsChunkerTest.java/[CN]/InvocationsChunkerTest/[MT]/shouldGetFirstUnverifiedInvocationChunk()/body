@@ -1,4 +1,0 @@
-{
-  List<Invocation> chunk=chunker.getFirstUnverifiedInvocationChunk(null);
-  assertThat(chunk,collectionHasExactlyInOrder(invocationOneChunkOne,invocationTwoChunkOne));
-}

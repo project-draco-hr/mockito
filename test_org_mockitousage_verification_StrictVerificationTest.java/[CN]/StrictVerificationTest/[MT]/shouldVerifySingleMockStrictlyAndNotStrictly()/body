@@ -1,0 +1,15 @@
+{
+  mockOne=mock(IMethods.class);
+  strictly=createStrictOrderVerifier(mockOne);
+  mockOne.simpleMethod(1);
+  mockOne.simpleMethod(2);
+  verify(mockOne).simpleMethod(2);
+  verify(mockOne).simpleMethod(1);
+  strictly.verify(mockOne).simpleMethod(2);
+  try {
+    strictly.verify(mockOne).simpleMethod(1);
+    fail();
+  }
+ catch (  VerificationError e) {
+  }
+}

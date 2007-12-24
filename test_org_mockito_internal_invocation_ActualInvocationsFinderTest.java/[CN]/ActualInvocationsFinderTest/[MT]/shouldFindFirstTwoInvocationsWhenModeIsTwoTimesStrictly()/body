@@ -1,0 +1,6 @@
+{
+  Invocation lastSimpleMethodInvocation=new InvocationBuilder().toInvocation();
+  invocations.add(lastSimpleMethodInvocation);
+  List<Invocation> actual=finder.findInvocations(invocations,new InvocationMatcher(simpleMethodInvocation),new VerificationModeBuilder().times(2).strict());
+  assertThat(actual,collectionHasExactlyInOrder(simpleMethodInvocation,simpleMethodInvocationTwo));
+}
