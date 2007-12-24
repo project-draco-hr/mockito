@@ -1,4 +1,0 @@
-{
-  List<Invocation> unverified=new InvocationsAnalyzer().removeUntilLastStrictlyVerified(invocations);
-  return this.findInvocations(unverified,wanted,mode);
-}

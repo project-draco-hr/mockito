@@ -1,0 +1,3 @@
+{
+  return "Chunk size: " + getSize() + ", objects: "+ objects;
+}

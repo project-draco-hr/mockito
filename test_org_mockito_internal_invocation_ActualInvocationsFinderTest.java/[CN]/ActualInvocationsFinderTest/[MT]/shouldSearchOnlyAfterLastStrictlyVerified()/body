@@ -1,0 +1,6 @@
+{
+  simpleMethodInvocation.markVerifiedStrictly();
+  simpleMethodInvocationTwo.markVerifiedStrictly();
+  List<Invocation> actual=finder.findInvocations(invocations,new InvocationMatcher(simpleMethodInvocation),new VerificationModeBuilder().strict());
+  assertTrue(actual.isEmpty());
+}

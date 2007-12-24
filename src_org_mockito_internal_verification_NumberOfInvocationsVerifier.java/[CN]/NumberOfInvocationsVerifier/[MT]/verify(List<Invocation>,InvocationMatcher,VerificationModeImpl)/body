@@ -3,9 +3,6 @@
     return;
   }
   List<Invocation> actualInvocations=finder.findInvocations(invocations,wanted,mode);
-  if (mode.strictMode()) {
-    actualInvocations=finder.findStrictlyUnverifiedInvocations(invocations,wanted,mode);
-  }
   int actualCount=actualInvocations.size();
   int wantedCount=mode.wantedCount();
   if (actualCount < wantedCount) {

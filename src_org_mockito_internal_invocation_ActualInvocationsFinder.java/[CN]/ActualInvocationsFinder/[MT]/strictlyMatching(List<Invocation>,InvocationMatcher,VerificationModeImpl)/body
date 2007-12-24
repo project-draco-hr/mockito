@@ -2,7 +2,8 @@
   List<ObjectsChunk<Invocation>> chunks=chunker.chunk(invocations,new MatchesWantedSeer(wanted));
   List<Invocation> firstMatching=new LinkedList<Invocation>();
   for (  ObjectsChunk<Invocation> chunk : chunks) {
-    if (!wanted.matches(chunk.getObject())) {
+    boolean wantedMatchesActual=wanted.matches(chunk.getObject());
+    if (!wantedMatchesActual) {
       continue;
     }
     if (firstMatching.isEmpty()) {
