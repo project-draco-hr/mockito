@@ -1,0 +1,4 @@
+{
+  this.globalInvocationsFinder=globalInvocationsFinder;
+  this.verifiers=verifiers;
+}

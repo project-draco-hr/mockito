@@ -1,4 +1,0 @@
-{
-  this.invocationsFinder=invocationsFinder;
-  this.verifiers=verifiers;
-}

@@ -1,7 +1,7 @@
 {
   List<Invocation> invocations;
   if (mode.strictMode()) {
-    invocations=invocationsFinder.getAllInvocations(mode.getMocksToBeVerifiedStrictly());
+    invocations=globalInvocationsFinder.getAllInvocations(mode.getMocksToBeVerifiedStrictly());
   }
  else {
     invocations=registeredInvocations;

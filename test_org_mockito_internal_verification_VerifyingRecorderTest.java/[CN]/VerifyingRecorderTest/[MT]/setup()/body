@@ -1,6 +1,6 @@
 {
   verifierStub=new VerifierStub();
-  recorder=new VerifyingRecorder(new InvocationsFinder(){
+  recorder=new VerifyingRecorder(new GlobalInvocationsFinder(){
     public List<Invocation> getAllInvocations(    List<? extends Object> mocks){
       return asList(simpleMethod,differentMethod.getInvocation());
     }
