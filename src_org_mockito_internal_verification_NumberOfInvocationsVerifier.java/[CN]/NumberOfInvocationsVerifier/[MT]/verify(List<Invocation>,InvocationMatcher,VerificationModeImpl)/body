@@ -1,15 +1,15 @@
 {
-  if (mode.strictMode() || !mode.explicitMode()) {
+  if (!mode.exactNumberOfInvocationsMode()) {
     return;
   }
   List<Invocation> actualInvocations=finder.findInvocations(invocations,wanted,mode);
   int actualCount=actualInvocations.size();
   if (mode.tooLittleActualInvocations(actualCount)) {
-    HasStackTrace lastInvocation=analyzer.findLastMatchingInvocationTrace(actualInvocations,wanted);
+    HasStackTrace lastInvocation=getLastSafely(actualInvocations);
     reporter.tooLittleActualInvocations(mode.wantedCount(),actualCount,wanted.toString(),lastInvocation);
   }
  else   if (mode.tooManyActualInvocations(actualCount)) {
-    HasStackTrace firstUndesired=analyzer.findFirstUndesiredInvocationTrace(actualInvocations,wanted,mode);
+    HasStackTrace firstUndesired=actualInvocations.get(mode.wantedCount()).getStackTrace();
     reporter.tooManyActualInvocations(mode.wantedCount(),actualCount,wanted.toString(),firstUndesired);
   }
   for (  Invocation i : actualInvocations) {

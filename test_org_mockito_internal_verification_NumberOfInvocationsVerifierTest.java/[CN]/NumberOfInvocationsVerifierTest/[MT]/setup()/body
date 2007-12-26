@@ -1,8 +1,7 @@
 {
   reporterStub=new ReporterStub();
-  analyzerStub=new InvocationsAnalyzerStub();
   finderStub=new ActualInvocationsFinderStub();
-  verifier=new NumberOfInvocationsVerifier(reporterStub,analyzerStub,finderStub);
+  verifier=new NumberOfInvocationsVerifier(reporterStub,finderStub);
   wanted=new InvocationBuilder().toInvocationMatcher();
-  invocations=asList(new InvocationBuilder().toInvocation());
+  invocations=new LinkedList<Invocation>(asList(new InvocationBuilder().toInvocation()));
 }

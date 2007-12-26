@@ -1,6 +1,0 @@
-{
-  HasStackTrace found=analyzer.findLastMatchingInvocationTrace(invocations,new InvocationMatcher(simpleMethodInvocation));
-  assertSame(simpleMethodInvocationTwo.getStackTrace(),found);
-  found=analyzer.findLastMatchingInvocationTrace(invocations,new InvocationMatcher(differentMethodInvocation));
-  assertSame(differentMethodInvocation.getStackTrace(),found);
-}

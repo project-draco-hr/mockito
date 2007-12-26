@@ -1,8 +1,9 @@
 {
-  VerificationModeImpl mode=times(0);
-  finderStub.actualToReturn.add(new InvocationBuilder().toInvocation());
-  MockitoException firstUndesiredInvocation=new MockitoException("");
-  analyzerStub.invocationTraceToReturn=firstUndesiredInvocation;
+  VerificationModeImpl mode=times(2);
+  Invocation first=new InvocationBuilder().toInvocation();
+  Invocation second=new InvocationBuilder().toInvocation();
+  Invocation third=new InvocationBuilder().toInvocation();
+  finderStub.actualToReturn.addAll(asList(first,second,third));
   verifier.verify(invocations,wanted,mode);
-  assertSame(firstUndesiredInvocation,reporterStub.stackTrace);
+  assertSame(third.getStackTrace(),reporterStub.stackTrace);
 }

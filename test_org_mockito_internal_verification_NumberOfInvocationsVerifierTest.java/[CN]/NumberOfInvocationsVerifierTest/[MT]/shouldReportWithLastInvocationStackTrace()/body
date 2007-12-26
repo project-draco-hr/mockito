@@ -1,7 +1,8 @@
 {
   VerificationModeImpl mode=times(100);
-  MockitoException lastInvocation=new MockitoException("");
-  analyzerStub.invocationTraceToReturn=lastInvocation;
+  Invocation first=new InvocationBuilder().toInvocation();
+  Invocation second=new InvocationBuilder().toInvocation();
+  finderStub.actualToReturn.addAll(asList(first,second));
   verifier.verify(invocations,wanted,mode);
-  assertSame(lastInvocation,reporterStub.stackTrace);
+  assertSame(second.getStackTrace(),reporterStub.stackTrace);
 }

@@ -18,11 +18,11 @@
   }
   int actualCount=chunk.size();
   if (mode.tooLittleActualInvocations(actualCount)) {
-    HasStackTrace lastInvocation=analyzer.findLastMatchingInvocationTrace(chunk,wanted);
+    HasStackTrace lastInvocation=getLastSafely(chunk);
     reporter.strictlyTooLittleActualInvocations(mode.wantedCount(),actualCount,wanted.toString(),lastInvocation);
   }
  else   if (mode.tooManyActualInvocations(actualCount)) {
-    HasStackTrace firstUndesired=analyzer.findFirstUndesiredInvocationTrace(chunk,wanted,mode);
+    HasStackTrace firstUndesired=chunk.get(mode.wantedCount()).getStackTrace();
     reporter.strictlyTooManyActualInvocations(mode.wantedCount(),actualCount,wanted.toString(),firstUndesired);
   }
   for (  Invocation i : chunk) {

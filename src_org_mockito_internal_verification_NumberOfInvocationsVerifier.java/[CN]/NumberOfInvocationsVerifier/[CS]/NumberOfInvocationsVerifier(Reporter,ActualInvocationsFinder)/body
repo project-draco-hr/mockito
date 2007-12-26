@@ -1,5 +1,4 @@
 {
   this.reporter=reporter;
-  this.analyzer=analyzer;
   this.finder=finder;
 }

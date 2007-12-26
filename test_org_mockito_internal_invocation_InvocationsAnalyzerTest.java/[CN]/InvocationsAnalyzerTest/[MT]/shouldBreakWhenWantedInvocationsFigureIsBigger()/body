@@ -1,3 +1,0 @@
-{
-  analyzer.findFirstUndesiredInvocationTrace(invocations,new InvocationMatcher(simpleMethodInvocation),times(100));
-}

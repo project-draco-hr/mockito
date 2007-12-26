@@ -1,0 +1,6 @@
+{
+  VerificationModeImpl mode=times(100);
+  assertTrue(finderStub.actualToReturn.isEmpty());
+  verifier.verify(invocations,wanted,mode);
+  assertNull(reporterStub.stackTrace);
+}

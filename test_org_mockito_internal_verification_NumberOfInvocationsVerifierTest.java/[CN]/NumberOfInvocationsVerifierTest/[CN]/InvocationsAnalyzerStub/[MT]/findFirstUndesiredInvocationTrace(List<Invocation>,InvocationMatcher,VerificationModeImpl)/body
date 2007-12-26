@@ -1,4 +1,0 @@
-{
-  this.invocations=invocations;
-  return invocationTraceToReturn;
-}
