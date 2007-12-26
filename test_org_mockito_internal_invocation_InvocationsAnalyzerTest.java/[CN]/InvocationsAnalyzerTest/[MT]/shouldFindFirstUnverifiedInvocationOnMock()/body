@@ -1,4 +1,0 @@
-{
-  assertSame(simpleMethodInvocation,analyzer.findFirstUnverified(invocations,simpleMethodInvocation.getMock()));
-  assertNull(analyzer.findFirstUnverified(invocations,"different mock"));
-}

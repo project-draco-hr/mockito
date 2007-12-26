@@ -1,0 +1,7 @@
+{
+  simpleMethodInvocation.markVerified();
+  simpleMethodInvocationTwo.markVerified();
+  differentMethodInvocation.markVerified();
+  Invocation found=finder.findSimilarInvocation(invocations,new InvocationMatcher(simpleMethodInvocation),atLeastOnce());
+  assertNull(found);
+}

@@ -1,0 +1,4 @@
+{
+  List<Invocation> unverified=finder.findFirstUnverifiedChunk(asList(simpleMethodInvocation,simpleMethodInvocationTwo),new InvocationMatcher(simpleMethodInvocation));
+  assertThat(unverified,collectionHasExactlyInOrder(simpleMethodInvocation,simpleMethodInvocationTwo));
+}

@@ -1,7 +1,0 @@
-{
-  simpleMethodInvocation.markVerifiedStrictly();
-  simpleMethodInvocationTwo.markVerifiedStrictly();
-  differentMethodInvocation.markVerifiedStrictly();
-  List<Invocation> unverified=finder.findFirstStrictlyUnverified(invocations,new InvocationMatcher(simpleMethodInvocation));
-  assertTrue(unverified.isEmpty());
-}

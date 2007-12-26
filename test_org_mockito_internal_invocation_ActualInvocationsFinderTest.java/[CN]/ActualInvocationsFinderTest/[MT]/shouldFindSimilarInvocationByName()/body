@@ -1,0 +1,4 @@
+{
+  Invocation found=finder.findSimilarInvocation(invocations,new InvocationMatcher(simpleMethodInvocation),atLeastOnce());
+  assertSame(found,simpleMethodInvocation);
+}

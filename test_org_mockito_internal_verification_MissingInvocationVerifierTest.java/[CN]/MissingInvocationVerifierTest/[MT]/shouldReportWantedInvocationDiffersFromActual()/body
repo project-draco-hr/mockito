@@ -1,7 +1,7 @@
 {
   assertTrue(finderStub.actualToReturn.isEmpty());
   Invocation actualInvocation=new InvocationBuilder().toInvocation();
-  analyzerStub.similarToReturn=actualInvocation;
+  finderStub.similarToReturn=actualInvocation;
   verifier.verify(invocations,wanted,VerificationModeImpl.atLeastOnce());
   assertEquals(wanted.toString(),reporterStub.wanted);
   assertEquals(actualInvocation.toString(),reporterStub.actual);

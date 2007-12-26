@@ -1,4 +1,4 @@
 {
-  analyzer.invocationToReturn=null;
+  finder.firstUnverifiedToReturn=null;
   verifier.verify(null,null,VerificationModeImpl.noMoreInteractions());
 }

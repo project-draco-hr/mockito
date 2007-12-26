@@ -1,5 +1,0 @@
-{
-  this.analyzer=analyzer;
-  this.finder=finder;
-  this.reporter=reporter;
-}

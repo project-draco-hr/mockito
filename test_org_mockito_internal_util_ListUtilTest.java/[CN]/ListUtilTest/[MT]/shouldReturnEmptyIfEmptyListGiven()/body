@@ -1,0 +1,5 @@
+{
+  List list=new LinkedList();
+  List filtered=ListUtil.filter(list,null);
+  assertTrue(filtered.isEmpty());
+}

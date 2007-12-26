@@ -1,5 +1,5 @@
 {
-  analyzer=new InvocationsAnalyzerStub();
+  finder=new ActualInvocationsFinderStub();
   reporterStub=new ReporterStub();
-  verifier=new NoMoreInvocationsVerifier(analyzer,reporterStub);
+  verifier=new NoMoreInvocationsVerifier(finder,reporterStub);
 }

@@ -1,0 +1,10 @@
+{
+  List list=asList("one","x","two","x","three");
+  List filtered=ListUtil.filter(list,new Filter(){
+    public boolean isOut(    Object object){
+      return object == "x";
+    }
+  }
+);
+  assertThat(filtered,collectionHasExactlyInOrder("one","two","three"));
+}
