@@ -1,0 +1,19 @@
+{
+  LinkedList<ObjectsChunk<T>> chunks=new LinkedList<ObjectsChunk<T>>();
+  T previous=null;
+  for (  T current : objects) {
+    if (previous == null) {
+      chunks.add(new ObjectsChunk<T>(current));
+      previous=current;
+      continue;
+    }
+    if (distributor.isSameChunk(previous,current)) {
+      chunks.getLast().addObject(current);
+    }
+ else {
+      chunks.add(new ObjectsChunk<T>(current));
+    }
+    previous=current;
+  }
+  return chunks;
+}

@@ -1,4 +1,0 @@
-{
-  verifier=new MarkingVerifier(null);
-  verifier.verify(null,null,noMoreInteractions());
-}

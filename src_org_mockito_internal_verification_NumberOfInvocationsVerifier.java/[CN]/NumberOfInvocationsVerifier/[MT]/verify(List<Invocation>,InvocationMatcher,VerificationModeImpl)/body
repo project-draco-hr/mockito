@@ -1,5 +1,5 @@
 {
-  if (!mode.exactNumberOfInvocationsMode()) {
+  if (mode.strictMode() || !mode.explicitMode()) {
     return;
   }
   List<Invocation> actualInvocations=finder.findInvocations(invocations,wanted,mode);
@@ -11,5 +11,8 @@
  else   if (mode.tooManyActualInvocations(actualCount)) {
     HasStackTrace firstUndesired=analyzer.findFirstUndesiredInvocationTrace(actualInvocations,wanted,mode);
     reporter.tooManyActualInvocations(mode.wantedCount(),actualCount,wanted.toString(),firstUndesired);
+  }
+  for (  Invocation i : actualInvocations) {
+    i.markVerified();
   }
 }

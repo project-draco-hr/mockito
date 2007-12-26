@@ -6,11 +6,12 @@
   mockOne.simpleMethod(4);
   verify(mockOne,times(4)).simpleMethod(anyInt());
   strictly.verify(mockOne,times(2)).simpleMethod(anyInt());
+  strictly.verify(mockTwo).differentMethod();
   strictly.verify(mockOne,times(2)).simpleMethod(anyInt());
   try {
     strictly.verify(mockOne,times(3)).simpleMethod(anyInt());
     fail();
   }
- catch (  WantedButNotInvoked e) {
+ catch (  StrictVerificationFailure e) {
   }
 }

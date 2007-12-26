@@ -7,6 +7,6 @@
     strictly.verify(mockOne).simpleMethod(-666);
     fail();
   }
- catch (  InvocationDiffersFromActual e) {
+ catch (  StrictVerificationFailure e) {
   }
 }

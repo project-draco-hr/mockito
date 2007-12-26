@@ -1,0 +1,8 @@
+{
+  TooLittleInvocations cause=null;
+  if (lastActualInvocationStackTrace != null) {
+    cause=new TooLittleInvocations(join("Too little invocations:"));
+    cause.setStackTrace(lastActualInvocationStackTrace.getStackTrace());
+  }
+  throw new StrictVerificationFailure(join("Strict verification failure",wanted,"Wanted " + pluralize(wantedCount) + " but was "+ actualCount),cause);
+}

@@ -1,0 +1,5 @@
+{
+  UndesiredInvocation cause=new UndesiredInvocation(join("Undesired invocation:"));
+  cause.setStackTrace(firstUndesired.getStackTrace());
+  throw new StrictVerificationFailure(join("Strict verification failure",wanted,"Wanted " + pluralize(wantedCount) + " but was "+ actualCount),cause);
+}

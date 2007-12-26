@@ -1,9 +1,0 @@
-{
-  strictly.verify(two,atLeastOnce()).simpleMethod(2);
-  try {
-    strictly.verify(one).simpleMethod(1);
-    fail();
-  }
- catch (  WantedButNotInvoked e) {
-  }
-}

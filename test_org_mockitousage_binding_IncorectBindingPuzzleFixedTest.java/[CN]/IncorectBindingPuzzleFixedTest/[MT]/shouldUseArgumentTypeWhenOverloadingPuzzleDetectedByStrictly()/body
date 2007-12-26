@@ -7,7 +7,7 @@
     strictly.verify(sub).say("Hello");
     fail();
   }
- catch (  InvocationDiffersFromActual e) {
+ catch (  StrictVerificationFailure e) {
     assertThat(e,messageContains("Sub.say(class java.lang.String)"));
     assertThat(e,causeMessageContains("Sub.say(class java.lang.Object)"));
   }

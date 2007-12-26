@@ -5,6 +5,6 @@
     strictly.verify(mockOne).differentMethod();
     fail();
   }
- catch (  InvocationDiffersFromActual e) {
+ catch (  StrictVerificationFailure e) {
   }
 }

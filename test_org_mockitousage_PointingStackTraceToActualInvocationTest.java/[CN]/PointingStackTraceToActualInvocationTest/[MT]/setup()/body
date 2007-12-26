@@ -1,6 +1,7 @@
 {
   mock=Mockito.mock(IMethods.class);
   mockTwo=Mockito.mock(IMethods.class);
+  strictly=createStrictOrderVerifier(mock,mockTwo);
   first();
   second();
   third();

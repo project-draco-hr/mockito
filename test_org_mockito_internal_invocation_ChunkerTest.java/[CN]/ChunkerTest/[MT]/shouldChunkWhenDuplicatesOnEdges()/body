@@ -1,5 +1,5 @@
 {
-  List<ObjectsChunk<Integer>> chunked=chunker.chunk(asList(1,1,2,3,3),new EqualitySeer());
+  List<ObjectsChunk<Integer>> chunked=chunker.chunk(asList(1,1,2,3,3),new EqualityBasedDistributor());
   assertEquals(3,chunked.size());
   assertThat(chunked.get(0).getObjects(),collectionHasExactlyInOrder(1,1));
   assertThat(chunked.get(1).getObjects(),collectionHasExactlyInOrder(2));

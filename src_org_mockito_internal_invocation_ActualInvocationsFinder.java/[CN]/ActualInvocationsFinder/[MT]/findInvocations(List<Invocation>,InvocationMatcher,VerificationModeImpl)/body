@@ -1,9 +1,9 @@
 {
-  if (mode.strictMode()) {
-    List<Invocation> unverified=new InvocationsAnalyzer().removeUntilLastStrictlyVerified(invocations);
-    return strictlyMatching(unverified,wanted,mode);
+  List<Invocation> actual=new LinkedList<Invocation>();
+  for (  Invocation i : invocations) {
+    if (wanted.matches(i)) {
+      actual.add(i);
+    }
   }
- else {
-    return nonStrictlyMatching(invocations,wanted);
-  }
+  return actual;
 }

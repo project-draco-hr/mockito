@@ -5,11 +5,10 @@
   mockOne.simpleMethod(2);
   verify(mockOne).simpleMethod(2);
   verify(mockOne).simpleMethod(1);
-  strictly.verify(mockOne).simpleMethod(2);
   try {
-    strictly.verify(mockOne).simpleMethod(1);
+    strictly.verify(mockOne).simpleMethod(2);
     fail();
   }
- catch (  WantedButNotInvoked e) {
+ catch (  StrictVerificationFailure e) {
   }
 }

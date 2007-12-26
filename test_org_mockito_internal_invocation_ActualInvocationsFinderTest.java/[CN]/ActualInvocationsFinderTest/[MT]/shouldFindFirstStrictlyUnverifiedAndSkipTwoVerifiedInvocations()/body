@@ -1,0 +1,6 @@
+{
+  simpleMethodInvocation.markVerifiedStrictly();
+  simpleMethodInvocationTwo.markVerifiedStrictly();
+  List<Invocation> unverified=finder.findFirstStrictlyUnverified(invocations,new InvocationMatcher(simpleMethodInvocation));
+  assertThat(unverified,collectionHasExactlyInOrder(differentMethodInvocation));
+}

@@ -1,0 +1,14 @@
+{
+  ArticleCalculator mockCalculator=Mockito.mock(ArticleCalculator.class);
+  ArticleDatabase mockDatabase=Mockito.mock(ArticleDatabase.class);
+  ArticleManager articleManager=new ArticleManager(mockCalculator,mockDatabase);
+  Article articleOne=new Article();
+  Article articleTwo=new Article();
+  stub(mockCalculator.countNumberOfRelatedArticles(articleOne)).andReturn(1);
+  stub(mockCalculator.countNumberOfRelatedArticles(articleOne)).andReturn(12);
+  stub(mockDatabase.getArticlesFor("Guardian")).andReturn(Arrays.asList(articleOne,articleTwo));
+  articleManager.updateRelatedArticlesCounters("Guardian");
+  Strictly strictly=createStrictOrderVerifier(mockDatabase);
+  strictly.verify(mockDatabase,atLeastOnce()).getArticlesFor(anyString());
+  strictly.verify(mockDatabase,atLeastOnce()).save((Article)anyObject());
+}

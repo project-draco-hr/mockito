@@ -1,7 +1,0 @@
-{
-  assertTrue(times(0).exactNumberOfInvocationsMode());
-  assertTrue(times(1).exactNumberOfInvocationsMode());
-  assertTrue(times(2).exactNumberOfInvocationsMode());
-  assertFalse(noMoreInteractions().exactNumberOfInvocationsMode());
-  assertFalse(atLeastOnce().exactNumberOfInvocationsMode());
-}

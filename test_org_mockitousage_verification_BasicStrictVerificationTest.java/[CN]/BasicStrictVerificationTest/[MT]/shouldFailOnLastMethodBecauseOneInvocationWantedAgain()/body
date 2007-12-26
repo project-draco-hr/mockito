@@ -7,6 +7,6 @@
     strictly.verify(mockOne,times(2)).simpleMethod(4);
     fail();
   }
- catch (  TooLittleActualInvocations e) {
+ catch (  StrictVerificationFailure e) {
   }
 }

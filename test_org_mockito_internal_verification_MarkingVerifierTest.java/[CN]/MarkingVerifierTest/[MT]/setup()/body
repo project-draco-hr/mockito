@@ -1,4 +1,0 @@
-{
-  finderStub=new ActualInvocationsFinderStub();
-  verifier=new MarkingVerifier(finderStub);
-}

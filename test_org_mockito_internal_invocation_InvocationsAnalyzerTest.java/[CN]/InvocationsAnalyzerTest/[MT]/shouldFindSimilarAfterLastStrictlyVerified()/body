@@ -1,8 +1,0 @@
-{
-  VerificationModeImpl mode=new VerificationModeBuilder().strict();
-  Invocation lastInvocation=new InvocationBuilder().simpleMethod().toInvocation();
-  invocations.add(lastInvocation);
-  simpleMethodInvocationTwo.markVerifiedStrictly();
-  Invocation found=analyzer.findSimilarInvocation(invocations,new InvocationMatcher(simpleMethodInvocation),mode);
-  assertSame(found,lastInvocation);
-}

@@ -2,12 +2,11 @@
   Strictly strictly=createStrictOrderVerifier(mock);
   mock.oneArg(true);
   mock.oneArg(false);
-  strictly.verify(mock).oneArg(false);
   try {
-    strictly.verify(mock).oneArg(true);
+    strictly.verify(mock).oneArg(false);
     fail();
   }
- catch (  WantedButNotInvoked e) {
+ catch (  StrictVerificationFailure e) {
     assertThat(e,hasFirstMethodInStackTrace("shouldFilterStacktraceWhenStrictlyVerifying"));
   }
 }
