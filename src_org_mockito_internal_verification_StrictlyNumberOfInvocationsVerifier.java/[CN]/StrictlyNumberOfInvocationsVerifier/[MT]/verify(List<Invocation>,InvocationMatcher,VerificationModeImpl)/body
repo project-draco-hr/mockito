@@ -3,25 +3,16 @@
     return;
   }
   List<Invocation> chunk=finder.findFirstStrictlyUnverified(invocations,wanted);
-  if (mode.wantedCountIsZero() && (chunk.size() == 0 || !wanted.matches(chunk.get(0)))) {
+  boolean noMatchFound=chunk.size() == 0 || !wanted.matches(chunk.get(0));
+  if (mode.wantedCountIsZero() && noMatchFound) {
     return;
-  }
-  if (chunk.size() == 0 || !wanted.matches(chunk.get(0))) {
-    if (chunk.size() != 0) {
-      Invocation actual=chunk.get(0);
-      InvocationsPrinter printer=new InvocationsPrinter(wanted,actual);
-      reporter.strictVerificationFailed(printer.printWanted(),printer.printActual(),actual.getStackTrace());
-    }
- else {
-      reporter.strictlyWantedButNotInvoked(wanted.toString());
-    }
   }
   int actualCount=chunk.size();
   if (mode.tooLittleActualInvocations(actualCount)) {
     HasStackTrace lastInvocation=getLastSafely(chunk);
     reporter.strictlyTooLittleActualInvocations(mode.wantedCount(),actualCount,wanted.toString(),lastInvocation);
   }
- else   if (mode.tooManyActualInvocations(actualCount)) {
+  if (mode.tooManyActualInvocations(actualCount)) {
     HasStackTrace firstUndesired=chunk.get(mode.wantedCount()).getStackTrace();
     reporter.strictlyTooManyActualInvocations(mode.wantedCount(),actualCount,wanted.toString(),firstUndesired);
   }
