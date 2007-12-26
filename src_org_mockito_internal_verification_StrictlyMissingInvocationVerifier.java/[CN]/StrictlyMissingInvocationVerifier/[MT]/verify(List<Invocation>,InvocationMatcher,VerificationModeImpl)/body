@@ -1,5 +1,5 @@
 {
-  if (!mode.strictMode() || mode.wantedCountIsZero()) {
+  if (!mode.strictlyMissingMethodMode()) {
     return;
   }
   List<Invocation> chunk=finder.findFirstUnverifiedChunk(invocations,wanted);
