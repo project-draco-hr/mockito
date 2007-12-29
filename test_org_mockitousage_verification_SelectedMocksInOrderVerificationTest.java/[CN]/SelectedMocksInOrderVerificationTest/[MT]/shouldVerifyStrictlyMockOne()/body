@@ -1,5 +1,5 @@
 {
-  Strictly strictly=createStrictOrderVerifier(mockOne);
+  Strictly strictly=strictly(mockOne);
   strictly.verify(mockOne).simpleMethod(1);
   strictly.verify(mockOne).simpleMethod(4);
   verifyNoMoreInteractions(mockOne);

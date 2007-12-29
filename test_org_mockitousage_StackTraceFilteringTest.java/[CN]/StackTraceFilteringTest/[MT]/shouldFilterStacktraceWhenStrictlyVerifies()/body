@@ -1,6 +1,6 @@
 {
   try {
-    Strictly strictly=createStrictOrderVerifier(mock);
+    Strictly strictly=strictly(mock);
     strictly.verify(null);
     fail();
   }

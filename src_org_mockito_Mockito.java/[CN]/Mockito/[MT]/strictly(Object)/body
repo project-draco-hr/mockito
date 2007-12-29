@@ -2,10 +2,9 @@
   if (mocks.length == 0) {
     REPORTER.mocksHaveToBePassedWhenCreatingStrictly();
   }
-  StrictOrderVerifier strictOrderVerifier=new StrictOrderVerifier();
   for (  Object mock : mocks) {
     MockUtil.validateMock(mock);
-    strictOrderVerifier.addMockToBeVerifiedStrictly(mock);
   }
+  Strictly strictOrderVerifier=new StrictOrderVerifier(Arrays.asList(mocks));
   return strictOrderVerifier;
 }

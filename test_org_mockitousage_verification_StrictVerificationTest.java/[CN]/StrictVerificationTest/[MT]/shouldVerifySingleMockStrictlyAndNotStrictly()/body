@@ -1,6 +1,6 @@
 {
   mockOne=mock(IMethods.class);
-  strictly=createStrictOrderVerifier(mockOne);
+  strictly=strictly(mockOne);
   mockOne.simpleMethod(1);
   mockOne.simpleMethod(2);
   verify(mockOne).simpleMethod(2);

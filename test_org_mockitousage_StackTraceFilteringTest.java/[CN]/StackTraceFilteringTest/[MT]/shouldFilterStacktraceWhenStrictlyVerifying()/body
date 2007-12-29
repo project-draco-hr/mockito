@@ -1,5 +1,5 @@
 {
-  Strictly strictly=createStrictOrderVerifier(mock);
+  Strictly strictly=strictly(mock);
   mock.oneArg(true);
   mock.oneArg(false);
   try {

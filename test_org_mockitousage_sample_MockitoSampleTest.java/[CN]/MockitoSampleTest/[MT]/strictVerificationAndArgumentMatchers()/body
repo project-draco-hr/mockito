@@ -8,7 +8,7 @@
   stub(mockCalculator.countNumberOfRelatedArticles(articleOne)).toReturn(12);
   stub(mockDatabase.getArticlesFor("Guardian")).toReturn(Arrays.asList(articleOne,articleTwo));
   articleManager.updateRelatedArticlesCounters("Guardian");
-  Strictly strictly=createStrictOrderVerifier(mockDatabase);
+  Strictly strictly=strictly(mockDatabase);
   strictly.verify(mockDatabase,atLeastOnce()).getArticlesFor(anyString());
   strictly.verify(mockDatabase,atLeastOnce()).save((Article)anyObject());
 }

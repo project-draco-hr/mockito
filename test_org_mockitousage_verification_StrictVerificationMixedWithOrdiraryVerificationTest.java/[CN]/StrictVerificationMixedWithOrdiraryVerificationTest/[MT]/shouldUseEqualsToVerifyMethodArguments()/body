@@ -7,6 +7,6 @@
   mockOne.simpleMethod(textOne);
   mockOne.simpleMethod(textTwo);
   verify(mockOne,times(2)).simpleMethod(textOne);
-  strictly=createStrictOrderVerifier(mockOne);
+  strictly=strictly(mockOne);
   strictly.verify(mockOne,times(2)).simpleMethod(textOne);
 }

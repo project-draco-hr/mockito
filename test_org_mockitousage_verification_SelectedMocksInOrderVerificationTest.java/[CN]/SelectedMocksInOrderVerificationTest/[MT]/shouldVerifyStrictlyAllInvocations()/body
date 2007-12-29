@@ -1,5 +1,5 @@
 {
-  Strictly strictly=createStrictOrderVerifier(mockOne,mockTwo,mockThree);
+  Strictly strictly=strictly(mockOne,mockTwo,mockThree);
   strictly.verify(mockOne).simpleMethod(1);
   strictly.verify(mockTwo,times(2)).simpleMethod(2);
   strictly.verify(mockThree).simpleMethod(3);
