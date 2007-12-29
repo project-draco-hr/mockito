@@ -1,0 +1,5 @@
+{
+  HasStackTrace last=finder.getLastStackTrace(invocations);
+  assertSame(differentMethodInvocation.getStackTrace(),last);
+  assertNull(finder.getLastStackTrace(Collections.<Invocation>emptyList()));
+}

@@ -1,9 +1,0 @@
-{
-  if (actualInvocations.isEmpty()) {
-    return null;
-  }
- else {
-    Invocation last=actualInvocations.get(actualInvocations.size() - 1);
-    return last.getStackTrace();
-  }
-}

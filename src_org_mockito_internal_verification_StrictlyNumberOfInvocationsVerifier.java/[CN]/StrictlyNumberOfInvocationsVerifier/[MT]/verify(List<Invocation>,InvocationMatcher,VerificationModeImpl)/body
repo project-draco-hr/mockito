@@ -9,7 +9,7 @@
   }
   int actualCount=chunk.size();
   if (mode.tooLittleActualInvocations(actualCount)) {
-    HasStackTrace lastInvocation=getLastSafely(chunk);
+    HasStackTrace lastInvocation=finder.getLastStackTrace(chunk);
     reporter.strictlyTooLittleActualInvocations(mode.wantedCount(),actualCount,wanted.toString(),lastInvocation);
   }
   if (mode.tooManyActualInvocations(actualCount)) {

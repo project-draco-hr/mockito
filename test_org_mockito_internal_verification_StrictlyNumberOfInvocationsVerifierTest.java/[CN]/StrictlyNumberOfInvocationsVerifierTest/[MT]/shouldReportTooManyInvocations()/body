@@ -1,0 +1,10 @@
+{
+  Invocation first=new InvocationBuilder().toInvocation();
+  Invocation second=new InvocationBuilder().toInvocation();
+  finderStub.firstUnverifiedChunkToReturn.addAll(asList(first,second));
+  verifier.verify(invocations,wanted,new VerificationModeBuilder().times(1).strict());
+  assertEquals(1,reporterStub.wantedCount);
+  assertEquals(2,reporterStub.actualCount);
+  assertSame(second.getStackTrace(),reporterStub.firstUndesired);
+  assertEquals(wanted.toString(),reporterStub.wanted);
+}

@@ -5,7 +5,7 @@
   List<Invocation> actualInvocations=finder.findInvocations(invocations,wanted,mode);
   int actualCount=actualInvocations.size();
   if (mode.tooLittleActualInvocations(actualCount)) {
-    HasStackTrace lastInvocation=getLastSafely(actualInvocations);
+    HasStackTrace lastInvocation=finder.getLastStackTrace(actualInvocations);
     reporter.tooLittleActualInvocations(mode.wantedCount(),actualCount,wanted.toString(),lastInvocation);
   }
  else   if (mode.tooManyActualInvocations(actualCount)) {
