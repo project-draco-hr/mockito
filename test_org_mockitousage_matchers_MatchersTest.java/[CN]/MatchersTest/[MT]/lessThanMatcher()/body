@@ -1,6 +1,6 @@
 {
-  stub(mock.oneArg(lt(7))).andReturn("< 7");
-  stub(mock.oneArg(geq(7))).andReturn(">= 7");
+  stub(mock.oneArg(lt(7))).toReturn("< 7");
+  stub(mock.oneArg(geq(7))).toReturn(">= 7");
   assertEquals("< 7",mock.oneArg(5));
   assertEquals("< 7",mock.oneArg(6));
   assertEquals("< 7",mock.oneArg(4));

@@ -1,5 +1,5 @@
 {
-  stub(mock.add("test")).andReturn(Boolean.FALSE);
+  stub(mock.add("test")).toReturn(Boolean.FALSE);
   mock.add("test");
   verify(mock).add("test");
 }

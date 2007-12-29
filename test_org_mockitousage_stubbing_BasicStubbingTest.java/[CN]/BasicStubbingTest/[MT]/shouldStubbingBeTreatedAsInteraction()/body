@@ -1,5 +1,5 @@
 {
-  stub(mock.booleanReturningMethod(1)).andReturn(true);
+  stub(mock.booleanReturningMethod(1)).toReturn(true);
   mock.booleanReturningMethod(1);
   try {
     verifyNoMoreInteractions(mock);

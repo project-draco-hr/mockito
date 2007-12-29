@@ -15,6 +15,6 @@
   }
   stubber.setInvocationForPotentialStubbing(invocationMatcher);
   verifyingRecorder.recordInvocation(invocationMatcher.getInvocation());
-  mockingProgress.reportStubbable(this);
+  mockingProgress.reportOngoingStubbing(new OngoingStubbingImpl());
   return stubber.resultFor(invocationMatcher.getInvocation());
 }

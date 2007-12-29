@@ -1,0 +1,9 @@
+{
+  stubber.addThrowableForVoidMethod(throwable);
+  return new StubbedMethodSelector<T>(){
+    public T on(){
+      return mock;
+    }
+  }
+;
+}

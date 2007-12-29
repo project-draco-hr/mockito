@@ -1,6 +1,6 @@
 {
-  stub(mock.oneArg(startsWith("ab"))).andReturn("1");
-  stub(mock.oneArg(startsWith("bc"))).andReturn("2");
+  stub(mock.oneArg(startsWith("ab"))).toReturn("1");
+  stub(mock.oneArg(startsWith("bc"))).toReturn("2");
   assertEquals("1",mock.oneArg("ab quake"));
   assertEquals("2",mock.oneArg("bc quake"));
   assertEquals(null,mock.oneArg("ba quake"));

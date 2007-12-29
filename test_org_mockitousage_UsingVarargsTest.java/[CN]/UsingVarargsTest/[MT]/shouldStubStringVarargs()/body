@@ -1,6 +1,6 @@
 {
-  stub(mock.withStringVarargsReturningString(1)).andReturn("1");
-  stub(mock.withStringVarargsReturningString(2,"1","2","3")).andReturn("2");
+  stub(mock.withStringVarargsReturningString(1)).toReturn("1");
+  stub(mock.withStringVarargsReturningString(2,"1","2","3")).toReturn("2");
   RuntimeException expected=new RuntimeException();
   stubVoid(mock).toThrow(expected).on().withStringVarargs(3,"1","2","3","4");
   assertEquals("1",mock.withStringVarargsReturningString(1));

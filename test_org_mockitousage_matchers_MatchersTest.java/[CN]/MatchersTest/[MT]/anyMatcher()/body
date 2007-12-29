@@ -1,14 +1,14 @@
 {
-  stub(mock.oneArg(anyBoolean())).andReturn("0");
-  stub(mock.oneArg(anyByte())).andReturn("1");
-  stub(mock.oneArg(anyChar())).andReturn("2");
-  stub(mock.oneArg(anyDouble())).andReturn("3");
-  stub(mock.oneArg(anyFloat())).andReturn("4");
-  stub(mock.oneArg(anyInt())).andReturn("5");
-  stub(mock.oneArg(anyLong())).andReturn("6");
-  stub(mock.oneArg(anyShort())).andReturn("7");
-  stub(mock.oneArg((String)anyObject())).andReturn("8");
-  stub(mock.oneArg(anyObject())).andReturn("9");
+  stub(mock.oneArg(anyBoolean())).toReturn("0");
+  stub(mock.oneArg(anyByte())).toReturn("1");
+  stub(mock.oneArg(anyChar())).toReturn("2");
+  stub(mock.oneArg(anyDouble())).toReturn("3");
+  stub(mock.oneArg(anyFloat())).toReturn("4");
+  stub(mock.oneArg(anyInt())).toReturn("5");
+  stub(mock.oneArg(anyLong())).toReturn("6");
+  stub(mock.oneArg(anyShort())).toReturn("7");
+  stub(mock.oneArg((String)anyObject())).toReturn("8");
+  stub(mock.oneArg(anyObject())).toReturn("9");
   assertEquals("0",mock.oneArg(true));
   assertEquals("0",mock.oneArg(false));
   assertEquals("1",mock.oneArg((byte)1));

@@ -1,9 +1,9 @@
 {
-  stub(mock.oneArg(eq(1.0D,0.1D))).andReturn("1");
-  stub(mock.oneArg(eq(2.0D,0.1D))).andReturn("2");
-  stub(mock.oneArg(eq(1.0F,0.1F))).andReturn("3");
-  stub(mock.oneArg(eq(2.0F,0.1F))).andReturn("4");
-  stub(mock.oneArg(eq(2.0F,0.1F))).andReturn("4");
+  stub(mock.oneArg(eq(1.0D,0.1D))).toReturn("1");
+  stub(mock.oneArg(eq(2.0D,0.1D))).toReturn("2");
+  stub(mock.oneArg(eq(1.0F,0.1F))).toReturn("3");
+  stub(mock.oneArg(eq(2.0F,0.1F))).toReturn("4");
+  stub(mock.oneArg(eq(2.0F,0.1F))).toReturn("4");
   assertEquals("1",mock.oneArg(1.0));
   assertEquals("1",mock.oneArg(0.91));
   assertEquals("1",mock.oneArg(1.09));

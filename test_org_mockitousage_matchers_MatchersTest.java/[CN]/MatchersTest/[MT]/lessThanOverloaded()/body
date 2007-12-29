@@ -1,11 +1,11 @@
 {
-  stub(mock.oneArg(lt((byte)1))).andReturn("1");
-  stub(mock.oneArg(lt((double)1))).andReturn("3");
-  stub(mock.oneArg(lt((float)1))).andReturn("4");
-  stub(mock.oneArg(lt((int)1))).andReturn("5");
-  stub(mock.oneArg(lt((long)1))).andReturn("6");
-  stub(mock.oneArg(lt((short)1))).andReturn("7");
-  stub(mock.oneArg(lt(new BigDecimal("1")))).andReturn("8");
+  stub(mock.oneArg(lt((byte)1))).toReturn("1");
+  stub(mock.oneArg(lt((double)1))).toReturn("3");
+  stub(mock.oneArg(lt((float)1))).toReturn("4");
+  stub(mock.oneArg(lt((int)1))).toReturn("5");
+  stub(mock.oneArg(lt((long)1))).toReturn("6");
+  stub(mock.oneArg(lt((short)1))).toReturn("7");
+  stub(mock.oneArg(lt(new BigDecimal("1")))).toReturn("8");
   assertEquals("1",mock.oneArg((byte)0));
   assertEquals(null,mock.oneArg((byte)1));
   assertEquals("3",mock.oneArg((double)0));

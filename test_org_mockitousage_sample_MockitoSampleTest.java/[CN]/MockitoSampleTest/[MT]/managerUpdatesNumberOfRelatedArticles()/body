@@ -5,10 +5,10 @@
   Article articleOne=new Article();
   Article articleTwo=new Article();
   Article articleThree=new Article();
-  stub(mockCalculator.countNumberOfRelatedArticles(articleOne)).andReturn(1);
-  stub(mockCalculator.countNumberOfRelatedArticles(articleOne)).andReturn(12);
-  stub(mockCalculator.countNumberOfRelatedArticles(articleOne)).andReturn(0);
-  stub(mockDatabase.getArticlesFor("Guardian")).andReturn(Arrays.asList(articleOne,articleTwo,articleThree));
+  stub(mockCalculator.countNumberOfRelatedArticles(articleOne)).toReturn(1);
+  stub(mockCalculator.countNumberOfRelatedArticles(articleOne)).toReturn(12);
+  stub(mockCalculator.countNumberOfRelatedArticles(articleOne)).toReturn(0);
+  stub(mockDatabase.getArticlesFor("Guardian")).toReturn(Arrays.asList(articleOne,articleTwo,articleThree));
   articleManager.updateRelatedArticlesCounters("Guardian");
   verify(mockDatabase).save(articleOne);
   verify(mockDatabase).save(articleTwo);
