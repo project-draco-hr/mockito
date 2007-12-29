@@ -1,8 +1,4 @@
 {
-  TooLittleInvocations cause=null;
-  if (lastActualInvocationStackTrace != null) {
-    cause=new TooLittleInvocations(join("Too little invocations:"));
-    cause.setStackTrace(lastActualInvocationStackTrace.getStackTrace());
-  }
+  TooLittleInvocations cause=createTooLittleInvocationsCause(lastActualInvocationStackTrace);
   throw new TooLittleActualInvocations(join(wanted,"Wanted " + pluralize(wantedCount) + " but was "+ actualCount),cause);
 }

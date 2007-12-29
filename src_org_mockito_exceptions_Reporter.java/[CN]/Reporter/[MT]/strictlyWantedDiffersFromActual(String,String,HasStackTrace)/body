@@ -1,5 +1,4 @@
 {
-  WantedDiffersFromActual cause=new WantedDiffersFromActual(join("Actual invocation:",actual));
-  cause.setStackTrace(actualInvocationStackTrace.getStackTrace());
+  WantedDiffersFromActual cause=createDiscrepancyCause(actual,actualInvocationStackTrace);
   throw new StrictVerificationFailure(join("Strict verification failure","Wanted invocation:",wanted),cause);
 }

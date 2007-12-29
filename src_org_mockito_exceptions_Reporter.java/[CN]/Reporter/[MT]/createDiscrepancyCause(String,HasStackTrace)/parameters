@@ -1,4 +1,2 @@
-String message
-String wanted
 String actual
 HasStackTrace actualInvocationStackTrace
