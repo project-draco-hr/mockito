@@ -1,4 +1,0 @@
-{
-  List<ObjectsChunk<Integer>> chunked=chunker.chunk(Collections.<Integer>emptyList(),new EqualityBasedDistributor());
-  assertEquals(0,chunked.size());
-}
