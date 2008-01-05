@@ -1,7 +1,7 @@
 {
   StringBuilder result=new StringBuilder();
   result.append("(");
-  for (  IArgumentMatcher matcher : matchers) {
+  for (  ArgumentMatcher matcher : matchers) {
     matcher.appendTo(result);
     result.append(", ");
   }

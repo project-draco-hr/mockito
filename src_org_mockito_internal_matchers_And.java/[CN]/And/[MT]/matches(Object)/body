@@ -1,5 +1,5 @@
 {
-  for (  IArgumentMatcher matcher : matchers) {
+  for (  ArgumentMatcher matcher : matchers) {
     if (!matcher.matches(actual)) {
       return false;
     }

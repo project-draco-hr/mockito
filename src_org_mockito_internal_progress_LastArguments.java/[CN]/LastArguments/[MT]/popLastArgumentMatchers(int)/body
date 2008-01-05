@@ -1,7 +1,7 @@
 {
   assertState(!matcherStack.isEmpty(),"No matchers found.");
   assertState(matcherStack.size() >= count,"" + count + " matchers expected, "+ matcherStack.size()+ " recorded.");
-  List<IArgumentMatcher> result=new LinkedList<IArgumentMatcher>();
+  List<ArgumentMatcher> result=new LinkedList<ArgumentMatcher>();
   result.addAll(matcherStack.subList(matcherStack.size() - count,matcherStack.size()));
   for (int i=0; i < count; i++) {
     matcherStack.pop();

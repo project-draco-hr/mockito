@@ -1,5 +1,5 @@
 {
-  List<IArgumentMatcher> matchers=new ArrayList<IArgumentMatcher>();
+  List<ArgumentMatcher> matchers=new ArrayList<ArgumentMatcher>();
   matchers.add(new Equals(1));
   matchers.add(new Equals(2));
   new Or(matchers).appendTo(buffer);

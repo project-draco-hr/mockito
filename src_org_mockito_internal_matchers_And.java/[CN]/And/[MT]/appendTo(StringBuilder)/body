@@ -1,6 +1,6 @@
 {
   buffer.append("and(");
-  for (Iterator<IArgumentMatcher> it=matchers.iterator(); it.hasNext(); ) {
+  for (Iterator<ArgumentMatcher> it=matchers.iterator(); it.hasNext(); ) {
     it.next().appendTo(buffer);
     if (it.hasNext()) {
       buffer.append(", ");

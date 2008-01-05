@@ -2,7 +2,7 @@
   if (matchers != null) {
     return matchers;
   }
-  List<IArgumentMatcher> result=new ArrayList<IArgumentMatcher>();
+  List<ArgumentMatcher> result=new ArrayList<ArgumentMatcher>();
   for (  Object argument : invocation.getArguments()) {
     result.add(new Equals(argument));
   }
