@@ -1,3 +1,0 @@
-{
-  return (actual instanceof String) && Pattern.compile(regex).matcher((String)actual).find();
-}

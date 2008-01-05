@@ -1,3 +1,0 @@
-{
-  return (actual instanceof String) && ((String)actual).indexOf(substring) >= 0;
-}

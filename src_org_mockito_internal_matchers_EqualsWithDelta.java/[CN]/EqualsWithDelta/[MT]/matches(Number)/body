@@ -1,0 +1,3 @@
+{
+  return wanted.doubleValue() - delta.doubleValue() <= actual.doubleValue() && actual.doubleValue() <= wanted.doubleValue() + delta.doubleValue();
+}

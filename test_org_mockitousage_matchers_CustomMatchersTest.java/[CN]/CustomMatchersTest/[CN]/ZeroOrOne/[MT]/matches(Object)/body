@@ -1,6 +1,0 @@
-{
-  if (((Integer)argument) == 0 || ((Integer)argument) == 1) {
-    return true;
-  }
-  return false;
-}
