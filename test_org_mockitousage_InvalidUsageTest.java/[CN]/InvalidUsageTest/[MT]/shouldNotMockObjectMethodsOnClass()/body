@@ -1,0 +1,7 @@
+{
+  Object clazz=mock(ObjectLikeInterface.class);
+  clazz.equals(null);
+  clazz.toString();
+  clazz.hashCode();
+  verifyZeroInteractions(clazz);
+}

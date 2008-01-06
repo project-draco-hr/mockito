@@ -1,0 +1,7 @@
+{
+  ObjectLikeInterface inter=mock(ObjectLikeInterface.class);
+  inter.equals(null);
+  inter.toString();
+  inter.hashCode();
+  verifyZeroInteractions(inter);
+}
