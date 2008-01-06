@@ -1,4 +1,5 @@
 {
+  validateClass(toMock);
   Enhancer enhancer=createEnhancer(toMock);
   enhancer.setCallbackType(filter.getClass());
   Class mockClass=enhancer.createClass();

@@ -1,0 +1,5 @@
+{
+  if (Modifier.isFinal(toMock.getModifiers())) {
+    new Reporter().cannotMockFinalClass(toMock);
+  }
+}
