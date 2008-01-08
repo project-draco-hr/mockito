@@ -1,11 +1,5 @@
 {
-  stub(mock.oneArg(booleanThatIs(new AnyBoolean()))).toReturn("any boolean");
-  assertEquals("any boolean",mock.oneArg(true));
-  assertEquals("any boolean",mock.oneArg(false));
-  try {
-    verify(mock).oneArg(booleanThatIs(new AnyBoolean()));
-    fail();
-  }
- catch (  TooManyActualInvocations e) {
-  }
+  stub(mock.oneArg(booleanThat(new IsAnyBoolean()))).toReturn("foo");
+  assertEquals("foo",mock.oneArg(true));
+  assertEquals("foo",mock.oneArg(false));
 }

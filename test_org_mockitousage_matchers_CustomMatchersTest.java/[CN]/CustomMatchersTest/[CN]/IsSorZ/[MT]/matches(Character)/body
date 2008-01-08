@@ -1,0 +1,3 @@
+{
+  return argument.equals('s') || argument.equals('z');
+}

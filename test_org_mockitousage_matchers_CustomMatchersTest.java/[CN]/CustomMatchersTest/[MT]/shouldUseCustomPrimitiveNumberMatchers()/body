@@ -1,0 +1,15 @@
+{
+  stub(mock.oneArg(byteThat(new IsZeroOrOne<Byte>()))).toReturn("byte");
+  stub(mock.oneArg(shortThat(new IsZeroOrOne<Short>()))).toReturn("short");
+  stub(mock.oneArg(intThat(new IsZeroOrOne<Integer>()))).toReturn("int");
+  stub(mock.oneArg(longThat(new IsZeroOrOne<Long>()))).toReturn("long");
+  stub(mock.oneArg(floatThat(new IsZeroOrOne<Float>()))).toReturn("float");
+  stub(mock.oneArg(doubleThat(new IsZeroOrOne<Double>()))).toReturn("double");
+  assertEquals("byte",mock.oneArg((byte)0));
+  assertEquals("short",mock.oneArg((short)1));
+  assertEquals("int",mock.oneArg(0));
+  assertEquals("long",mock.oneArg(1L));
+  assertEquals("float",mock.oneArg(0F));
+  assertEquals("double",mock.oneArg(1.0));
+  assertEquals(null,mock.oneArg(2));
+}

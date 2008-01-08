@@ -1,0 +1,5 @@
+{
+  stub(mock.oneArg(argThat(new ContainsFoo()))).toReturn("foo");
+  assertEquals("foo",mock.oneArg("foo"));
+  assertEquals(null,mock.oneArg("bar"));
+}

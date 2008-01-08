@@ -1,3 +1,4 @@
 {
   matcherStack.push(matcher);
+  return new ReturnValues();
 }

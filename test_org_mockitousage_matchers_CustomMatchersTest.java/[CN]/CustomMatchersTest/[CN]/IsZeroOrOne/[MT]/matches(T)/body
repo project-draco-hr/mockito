@@ -1,0 +1,6 @@
+{
+  if (argument.intValue() == 0 || argument.intValue() == 1) {
+    return true;
+  }
+  return false;
+}
