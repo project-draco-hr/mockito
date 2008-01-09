@@ -1,4 +1,3 @@
 {
-  LastArguments.instance().reportMatcher(new LessOrEqual<Byte>(value));
-  return 0;
+  return reportMatcher(new LessOrEqual<Byte>(value)).returnZero();
 }

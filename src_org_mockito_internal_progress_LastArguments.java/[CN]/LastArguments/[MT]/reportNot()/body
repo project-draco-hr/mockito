@@ -1,4 +1,5 @@
 {
   assertState(!matcherStack.isEmpty(),"No matchers found for Not(?).");
   matcherStack.push(new Not(popLastArgumentMatchers(1).get(0)));
+  return new ReturnValues();
 }

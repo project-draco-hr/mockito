@@ -1,4 +1,3 @@
 {
-  LastArguments.instance().reportMatcher(new LessOrEqual<T>(value));
-  return null;
+  return reportMatcher(new LessOrEqual<T>(value)).<T>returnNull();
 }

@@ -1,3 +1,3 @@
 {
-  return reportMatcher(Any.ANY).nullValue();
+  return reportMatcher(Any.ANY).returnNull();
 }

@@ -1,3 +1,3 @@
 {
-  return reportMatcher(new InstanceOf(clazz)).nullValue();
+  return reportMatcher(new InstanceOf(clazz)).returnNull();
 }

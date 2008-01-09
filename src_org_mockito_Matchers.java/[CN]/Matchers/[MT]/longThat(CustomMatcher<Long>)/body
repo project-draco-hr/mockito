@@ -1,3 +1,3 @@
 {
-  return reportMatcher(matcher).longValue();
+  return reportMatcher(matcher).returnZero();
 }
