@@ -7,13 +7,13 @@
     verify(mock).size();
     fail();
   }
- catch (  InvocationDiffersFromActual e) {
+ catch (  WantedButNotInvoked e) {
   }
   try {
     verify(mock).clone();
     fail();
   }
- catch (  InvocationDiffersFromActual e) {
+ catch (  WantedButNotInvoked e) {
   }
   try {
     verifyNoMoreInteractions(mock);

@@ -9,5 +9,5 @@
       return invocation;
     }
   }
-  return findFirstUnverified(invocations,wanted.getInvocation().getMock());
+  return null;
 }
