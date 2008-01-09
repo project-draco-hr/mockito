@@ -1,3 +1,3 @@
 {
-  return reportMatcher(new Equals(value)).returnNull();
+  return reportMatcher(new Equals(value)).<T>returnNull();
 }
