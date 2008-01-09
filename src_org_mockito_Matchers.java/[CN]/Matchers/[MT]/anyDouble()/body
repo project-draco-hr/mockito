@@ -1,4 +1,3 @@
 {
-  LastArguments.instance().reportMatcher(Any.ANY);
-  return 0;
+  return reportMatcher(Any.ANY).doubleValue();
 }

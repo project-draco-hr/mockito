@@ -1,4 +1,3 @@
 {
-  isA(String.class);
-  return null;
+  return isA(String.class);
 }

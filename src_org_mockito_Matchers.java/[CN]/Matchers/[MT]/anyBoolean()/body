@@ -1,4 +1,3 @@
 {
-  LastArguments.instance().reportMatcher(Any.ANY);
-  return false;
+  return reportMatcher(Any.ANY).booleanValue();
 }

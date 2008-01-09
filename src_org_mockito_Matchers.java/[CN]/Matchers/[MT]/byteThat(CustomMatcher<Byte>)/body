@@ -1,3 +1,3 @@
 {
-  return LastArguments.instance().reportMatcher(matcher).byteValue();
+  return reportMatcher(matcher).byteValue();
 }

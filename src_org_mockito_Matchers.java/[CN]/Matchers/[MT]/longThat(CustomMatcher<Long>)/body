@@ -1,3 +1,3 @@
 {
-  return LastArguments.instance().reportMatcher(matcher).longValue();
+  return reportMatcher(matcher).longValue();
 }
