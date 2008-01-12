@@ -1,3 +1,0 @@
-{
-  strictly.verify(mockOne).oneArg(true);
-}

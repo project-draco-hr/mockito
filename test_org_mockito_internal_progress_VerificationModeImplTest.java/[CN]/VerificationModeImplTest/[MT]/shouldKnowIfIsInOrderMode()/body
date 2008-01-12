@@ -1,0 +1,7 @@
+{
+  assertTrue(inOrder(1,asList(new Object())).inOrderMode());
+  assertFalse(times(0).inOrderMode());
+  assertFalse(times(2).inOrderMode());
+  assertFalse(atLeastOnce().inOrderMode());
+  assertFalse(noMoreInteractions().inOrderMode());
+}

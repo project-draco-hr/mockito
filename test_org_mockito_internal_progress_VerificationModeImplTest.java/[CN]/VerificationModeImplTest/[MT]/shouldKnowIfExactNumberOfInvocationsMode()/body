@@ -3,5 +3,5 @@
   assertTrue(times(1).exactNumberOfInvocationsMode());
   assertTrue(atLeastOnce().exactNumberOfInvocationsMode());
   assertFalse(noMoreInteractions().exactNumberOfInvocationsMode());
-  assertFalse(strict(1,asList(new Object())).exactNumberOfInvocationsMode());
+  assertFalse(inOrder(1,asList(new Object())).exactNumberOfInvocationsMode());
 }

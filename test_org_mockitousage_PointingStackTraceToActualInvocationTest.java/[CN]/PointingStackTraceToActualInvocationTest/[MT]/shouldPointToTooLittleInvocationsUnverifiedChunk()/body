@@ -1,12 +1,12 @@
 {
-  strictly.verify(mock).simpleMethod(anyInt());
-  strictly.verify(mockTwo).simpleMethod(anyInt());
-  strictly.verify(mock).simpleMethod(anyInt());
+  inOrder.verify(mock).simpleMethod(anyInt());
+  inOrder.verify(mockTwo).simpleMethod(anyInt());
+  inOrder.verify(mock).simpleMethod(anyInt());
   try {
-    strictly.verify(mockTwo,times(3)).simpleMethod(anyInt());
+    inOrder.verify(mockTwo,times(3)).simpleMethod(anyInt());
     fail();
   }
- catch (  StrictVerificationFailure e) {
+ catch (  VerifcationInOrderFailed e) {
     assertThat(e.getCause(),hasFirstMethodInStackTrace("fourth"));
   }
 }

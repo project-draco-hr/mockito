@@ -1,0 +1,9 @@
+{
+  try {
+    inOrder();
+    fail();
+  }
+ catch (  MockitoException expected) {
+    assertThat(expected,hasFirstMethodInStackTrace("shouldFilterStacktraceWhenInOrderThrowsMockitoException"));
+  }
+}

@@ -1,7 +1,7 @@
 {
-  simpleMethodInvocation.markVerifiedStrictly();
-  simpleMethodInvocationTwo.markVerifiedStrictly();
-  differentMethodInvocation.markVerifiedStrictly();
+  simpleMethodInvocation.markVerifiedInOrder();
+  simpleMethodInvocationTwo.markVerifiedInOrder();
+  differentMethodInvocation.markVerifiedInOrder();
   List<Invocation> unverified=finder.findFirstUnverifiedChunk(invocations,new InvocationMatcher(simpleMethodInvocation));
   assertTrue(unverified.isEmpty());
 }

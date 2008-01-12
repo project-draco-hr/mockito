@@ -1,7 +1,0 @@
-{
-  assertTrue(strict(1,asList(new Object())).strictMode());
-  assertFalse(times(0).strictMode());
-  assertFalse(times(2).strictMode());
-  assertFalse(atLeastOnce().strictMode());
-  assertFalse(noMoreInteractions().strictMode());
-}

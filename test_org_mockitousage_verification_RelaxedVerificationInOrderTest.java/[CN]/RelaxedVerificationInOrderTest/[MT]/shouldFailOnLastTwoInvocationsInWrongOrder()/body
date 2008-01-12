@@ -1,0 +1,9 @@
+{
+  inOrder.verify(mockOne).simpleMethod(4);
+  try {
+    inOrder.verify(mockTwo).simpleMethod(2);
+    fail();
+  }
+ catch (  WantedButNotInvoked e) {
+  }
+}

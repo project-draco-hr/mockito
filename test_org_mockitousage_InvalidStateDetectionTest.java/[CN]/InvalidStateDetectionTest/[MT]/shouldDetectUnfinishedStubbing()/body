@@ -8,7 +8,7 @@
   stub(mock.simpleMethod());
   detects(new OnVerify(),UnfinishedStubbingException.class);
   stub(mock.simpleMethod());
-  detects(new OnStrictVerify(),UnfinishedStubbingException.class);
+  detects(new OnVerifyInOrder(),UnfinishedStubbingException.class);
   stub(mock.simpleMethod());
   detects(new OnVerifyZeroInteractions(),UnfinishedStubbingException.class);
   stub(mock.simpleMethod());

@@ -1,9 +1,0 @@
-{
-  try {
-    strictly();
-    fail();
-  }
- catch (  MockitoException expected) {
-    assertThat(expected,hasFirstMethodInStackTrace("shouldFilterStacktraceWhenStrictlyThrowsMockitoException"));
-  }
-}

@@ -1,0 +1,12 @@
+{
+  InOrder inOrder=inOrder(mock);
+  mock.oneArg(true);
+  mock.oneArg(false);
+  try {
+    inOrder.verify(mock).oneArg(false);
+    fail();
+  }
+ catch (  VerifcationInOrderFailed e) {
+    assertThat(e,hasFirstMethodInStackTrace("shouldFilterStacktraceWhenVerifyingInOrder"));
+  }
+}

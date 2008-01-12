@@ -1,6 +1,6 @@
 {
-  Strictly strictly=strictly(mockTwo,mockThree);
-  strictly.verify(mockTwo,times(2)).simpleMethod(2);
+  InOrder inOrder=inOrder(mockTwo,mockThree);
+  inOrder.verify(mockTwo,times(2)).simpleMethod(2);
   try {
     verifyNoMoreInteractions(mockTwo);
     fail();

@@ -1,0 +1,9 @@
+{
+  inOrder.verify(mockTwo,atLeastOnce()).simpleMethod(2);
+  try {
+    verifyNoMoreInteractions(mockTwo);
+    fail();
+  }
+ catch (  NoInteractionsWanted e) {
+  }
+}

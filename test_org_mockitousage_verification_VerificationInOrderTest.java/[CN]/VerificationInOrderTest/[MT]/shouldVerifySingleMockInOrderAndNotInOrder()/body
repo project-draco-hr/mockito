@@ -1,0 +1,14 @@
+{
+  mockOne=mock(IMethods.class);
+  inOrder=inOrder(mockOne);
+  mockOne.simpleMethod(1);
+  mockOne.simpleMethod(2);
+  verify(mockOne).simpleMethod(2);
+  verify(mockOne).simpleMethod(1);
+  try {
+    inOrder.verify(mockOne).simpleMethod(2);
+    fail();
+  }
+ catch (  VerifcationInOrderFailed e) {
+  }
+}

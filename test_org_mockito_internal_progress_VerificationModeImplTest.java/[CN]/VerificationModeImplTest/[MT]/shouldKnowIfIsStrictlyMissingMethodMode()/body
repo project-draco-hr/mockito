@@ -1,8 +1,0 @@
-{
-  assertTrue(strict(null,asList("mock")).strictlyMissingMethodMode());
-  assertTrue(strict(1,asList("mock")).strictlyMissingMethodMode());
-  assertTrue(strict(10,asList("mock")).strictlyMissingMethodMode());
-  assertFalse(times(10).strictlyMissingMethodMode());
-  assertFalse(noMoreInteractions().strictlyMissingMethodMode());
-  assertFalse(times(0).strictlyMissingMethodMode());
-}

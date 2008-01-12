@@ -1,0 +1,14 @@
+{
+  if (!mode.missingMethodInOrderMode()) {
+    return;
+  }
+  List<Invocation> chunk=finder.findFirstUnverifiedChunk(invocations,wanted);
+  if (chunk.size() == 0) {
+    reporter.wantedButNotInvokedInOrder(wanted.toString());
+  }
+ else   if (!wanted.matches(chunk.get(0))) {
+    Invocation actual=chunk.get(0);
+    InvocationsPrinter printer=new InvocationsPrinter(wanted,actual);
+    reporter.wantedDiffersFromActualInOrder(printer.printWanted(),printer.printActual(),actual.getStackTrace());
+  }
+}

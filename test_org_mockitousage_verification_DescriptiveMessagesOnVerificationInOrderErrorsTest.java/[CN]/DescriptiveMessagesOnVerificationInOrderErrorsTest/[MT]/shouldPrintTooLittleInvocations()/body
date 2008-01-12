@@ -1,0 +1,18 @@
+{
+  two.simpleMethod(2);
+  inOrder.verify(one,atLeastOnce()).simpleMethod(anyInt());
+  inOrder.verify(two,times(2)).simpleMethod(2);
+  inOrder.verify(three,atLeastOnce()).simpleMethod(3);
+  try {
+    inOrder.verify(two,times(2)).simpleMethod(2);
+    fail();
+  }
+ catch (  VerifcationInOrderFailed e) {
+    String actualMessage=e.getMessage();
+    String expectedMessage="\n" + "Verification in order failed" + "\n"+ "IMethods.simpleMethod(2)"+ "\n"+ "Wanted 2 times but was 1";
+    assertEquals(expectedMessage,actualMessage);
+    assertEquals(e.getCause().getClass(),TooLittleInvocations.class);
+    String expectedCause="\n" + "Too little invocations:";
+    assertEquals(expectedCause,e.getCause().getMessage());
+  }
+}

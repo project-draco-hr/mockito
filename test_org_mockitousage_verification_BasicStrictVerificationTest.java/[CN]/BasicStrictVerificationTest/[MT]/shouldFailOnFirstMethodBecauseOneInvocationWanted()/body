@@ -1,3 +1,0 @@
-{
-  strictly.verify(mockOne,times(0)).simpleMethod(1);
-}

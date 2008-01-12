@@ -1,10 +1,10 @@
 {
-  Strictly strictly=strictly(mockOne);
-  strictly.verify(mockOne).simpleMethod(1);
+  InOrder inOrder=inOrder(mockOne);
+  inOrder.verify(mockOne).simpleMethod(1);
   try {
-    strictly.verify(mockOne).differentMethod();
+    inOrder.verify(mockOne).differentMethod();
     fail();
   }
- catch (  StrictVerificationFailure e) {
+ catch (  VerifcationInOrderFailed e) {
   }
 }

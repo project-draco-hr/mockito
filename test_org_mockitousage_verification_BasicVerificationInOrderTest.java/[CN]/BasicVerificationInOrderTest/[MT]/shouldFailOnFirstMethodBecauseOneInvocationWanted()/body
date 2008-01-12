@@ -1,0 +1,3 @@
+{
+  inOrder.verify(mockOne,times(0)).simpleMethod(1);
+}

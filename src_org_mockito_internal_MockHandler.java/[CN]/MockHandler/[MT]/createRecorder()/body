@@ -1,4 +1,4 @@
 {
-  List<Verifier> verifiers=Arrays.asList(new StrictlyMissingInvocationVerifier(),new StrictlyNumberOfInvocationsVerifier(),new MissingInvocationVerifier(),new NumberOfInvocationsVerifier(),new NoMoreInvocationsVerifier());
+  List<Verifier> verifiers=Arrays.asList(new MissingInvocationInOrderVerifier(),new NumberOfInvocationsInOrderVerifier(),new MissingInvocationVerifier(),new NumberOfInvocationsVerifier(),new NoMoreInvocationsVerifier());
   return new VerifyingRecorder(new AllInvocationsFinder(),verifiers);
 }

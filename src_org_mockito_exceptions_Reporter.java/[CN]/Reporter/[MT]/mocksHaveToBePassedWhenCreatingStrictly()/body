@@ -1,3 +1,0 @@
-{
-  throw new MockitoException(join("Method requires arguments.","Pass mocks that require strict order verification, e.g:","strictly(mockOne, mockTwo)"));
-}

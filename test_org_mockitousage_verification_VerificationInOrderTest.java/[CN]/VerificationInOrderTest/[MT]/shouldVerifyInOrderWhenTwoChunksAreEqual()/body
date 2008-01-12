@@ -1,0 +1,16 @@
+{
+  mockOne.simpleMethod();
+  mockOne.simpleMethod();
+  mockTwo.differentMethod();
+  mockOne.simpleMethod();
+  mockOne.simpleMethod();
+  inOrder.verify(mockOne,atLeastOnce()).simpleMethod();
+  inOrder.verify(mockTwo).differentMethod();
+  inOrder.verify(mockOne,times(2)).simpleMethod();
+  try {
+    inOrder.verify(mockOne,atLeastOnce()).simpleMethod();
+    fail();
+  }
+ catch (  VerifcationInOrderFailed e) {
+  }
+}

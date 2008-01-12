@@ -8,7 +8,7 @@
   stubVoid(mock);
   detects(new OnVerify(),UnfinishedStubbingException.class);
   stubVoid(mock);
-  detects(new OnStrictVerify(),UnfinishedStubbingException.class);
+  detects(new OnVerifyInOrder(),UnfinishedStubbingException.class);
   stubVoid(mock);
   detects(new OnVerifyZeroInteractions(),UnfinishedStubbingException.class);
   stubVoid(mock);

@@ -1,7 +1,0 @@
-{
-  assertFalse(invocation.isVerified());
-  assertFalse(invocation.isVerifiedStrictly());
-  invocation.markVerifiedStrictly();
-  assertTrue(invocation.isVerified());
-  assertTrue(invocation.isVerifiedStrictly());
-}

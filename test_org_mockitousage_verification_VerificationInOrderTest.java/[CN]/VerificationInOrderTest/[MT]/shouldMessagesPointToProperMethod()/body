@@ -1,0 +1,12 @@
+{
+  mockTwo.differentMethod();
+  mockOne.simpleMethod();
+  try {
+    inOrder.verify(mockOne,atLeastOnce()).differentMethod();
+    fail();
+  }
+ catch (  VerifcationInOrderFailed e) {
+    assertThat(e,messageContains("IMethods.differentMethod()"));
+    assertThat(e,causeMessageContains("IMethods.differentMethod()"));
+  }
+}

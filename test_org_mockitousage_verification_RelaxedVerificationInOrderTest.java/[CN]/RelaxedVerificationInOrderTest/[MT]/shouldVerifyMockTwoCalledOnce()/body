@@ -1,0 +1,3 @@
+{
+  inOrder.verify(mockTwo).simpleMethod(2);
+}

@@ -1,3 +1,0 @@
-{
-  return VerificationModeImpl.strict(times,Arrays.asList(new Object()));
-}

@@ -1,5 +1,5 @@
 {
-  List<Invocation> unverified=ListUtil.filter(invocations,new RemoveVerifiedStrictly());
+  List<Invocation> unverified=ListUtil.filter(invocations,new RemoveVerifiedInOrder());
   List<Invocation> firstChunk=new LinkedList<Invocation>();
   for (  Invocation invocation : unverified) {
     if (wanted.matches(invocation)) {

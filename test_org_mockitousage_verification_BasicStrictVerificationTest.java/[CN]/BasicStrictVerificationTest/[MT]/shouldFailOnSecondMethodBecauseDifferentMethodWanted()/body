@@ -1,9 +1,0 @@
-{
-  strictly.verify(mockOne,times(1)).simpleMethod(1);
-  try {
-    strictly.verify(mockTwo,times(2)).oneArg(true);
-    fail();
-  }
- catch (  StrictVerificationFailure e) {
-  }
-}

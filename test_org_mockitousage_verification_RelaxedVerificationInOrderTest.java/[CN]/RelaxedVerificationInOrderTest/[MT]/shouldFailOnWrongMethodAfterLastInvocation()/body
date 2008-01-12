@@ -1,0 +1,9 @@
+{
+  inOrder.verify(mockOne).simpleMethod(4);
+  try {
+    inOrder.verify(mockOne).simpleMethod(999);
+    fail();
+  }
+ catch (  WantedButNotInvoked e) {
+  }
+}

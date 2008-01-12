@@ -1,7 +1,7 @@
 {
   mock=Mockito.mock(IMethods.class);
   mockTwo=Mockito.mock(IMethods.class);
-  strictly=strictly(mock,mockTwo);
+  inOrder=inOrder(mock,mockTwo);
   firstChunk();
   secondChunk();
   thirdChunk();

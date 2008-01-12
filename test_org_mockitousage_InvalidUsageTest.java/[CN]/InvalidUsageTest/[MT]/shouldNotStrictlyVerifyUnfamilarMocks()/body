@@ -1,4 +1,0 @@
-{
-  Strictly strictly=strictly(mock);
-  strictly.verify(mockTwo).simpleMethod();
-}

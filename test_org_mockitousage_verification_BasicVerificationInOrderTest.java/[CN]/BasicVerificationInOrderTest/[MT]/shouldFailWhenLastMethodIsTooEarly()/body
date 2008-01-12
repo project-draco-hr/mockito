@@ -1,0 +1,4 @@
+{
+  inOrder.verify(mockOne).simpleMethod(1);
+  inOrder.verify(mockOne).simpleMethod(4);
+}

@@ -1,0 +1,9 @@
+{
+  inOrder.verify(mockOne).simpleMethod(1);
+  try {
+    inOrder.verify(mockOne).simpleMethod(1);
+    fail();
+  }
+ catch (  VerifcationInOrderFailed e) {
+  }
+}

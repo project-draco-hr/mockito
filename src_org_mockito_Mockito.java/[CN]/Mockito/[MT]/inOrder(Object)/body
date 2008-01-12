@@ -1,0 +1,10 @@
+{
+  if (mocks.length == 0) {
+    REPORTER.mocksHaveToBePassedWhenCreatingInOrder();
+  }
+  for (  Object mock : mocks) {
+    MockUtil.validateMock(mock);
+  }
+  InOrder inOrderVerifier=new InOrderVerifier(Arrays.asList(mocks));
+  return inOrderVerifier;
+}

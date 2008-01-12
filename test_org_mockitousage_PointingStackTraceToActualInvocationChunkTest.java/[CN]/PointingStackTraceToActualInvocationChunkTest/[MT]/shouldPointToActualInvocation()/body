@@ -1,10 +1,10 @@
 {
-  strictly.verify(mock,atLeastOnce()).simpleMethod(anyInt());
+  inOrder.verify(mock,atLeastOnce()).simpleMethod(anyInt());
   try {
-    strictly.verify(mockTwo).simpleMethod(999);
+    inOrder.verify(mockTwo).simpleMethod(999);
     fail();
   }
- catch (  StrictVerificationFailure e) {
+ catch (  VerifcationInOrderFailed e) {
     assertThat(e.getCause(),hasFirstMethodInStackTrace("secondChunk"));
   }
 }

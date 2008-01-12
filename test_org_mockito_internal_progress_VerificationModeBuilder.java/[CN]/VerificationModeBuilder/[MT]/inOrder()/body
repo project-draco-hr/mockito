@@ -1,0 +1,3 @@
+{
+  return VerificationModeImpl.inOrder(times,Arrays.asList(new Object()));
+}

@@ -1,4 +1,0 @@
-{
-  WantedDiffersFromActual cause=createDiscrepancyCause(actual,actualInvocationStackTrace);
-  throw new StrictVerificationFailure(join("Strict verification failure","Wanted invocation:",wanted),cause);
-}

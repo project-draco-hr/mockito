@@ -6,7 +6,7 @@
   verify(mock);
   detects(new OnVerify(),UnfinishedVerificationException.class);
   verify(mock);
-  detects(new OnStrictVerify(),UnfinishedVerificationException.class);
+  detects(new OnVerifyInOrder(),UnfinishedVerificationException.class);
   verify(mock);
   detects(new OnVerifyZeroInteractions(),UnfinishedVerificationException.class);
   verify(mock);

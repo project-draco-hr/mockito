@@ -1,0 +1,7 @@
+{
+  assertFalse(invocation.isVerified());
+  assertFalse(invocation.isVerifiedInOrder());
+  invocation.markVerifiedInOrder();
+  assertTrue(invocation.isVerified());
+  assertTrue(invocation.isVerifiedInOrder());
+}

@@ -1,3 +1,0 @@
-{
-  throw new MockitoException(join("Strictly can only verify mocks that were passed in during creation of Strictly. E.g:","Strictly strictly = strictly(mockOne)","strictly.verify(mockOne).doStuff()"));
-}

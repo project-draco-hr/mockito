@@ -1,0 +1,14 @@
+{
+  Sub sub=mock(Sub.class);
+  setMockWithDowncast(sub);
+  say("Hello");
+  InOrder inOrder=inOrder(mock);
+  try {
+    inOrder.verify(sub).say("Hello");
+    fail();
+  }
+ catch (  VerifcationInOrderFailed e) {
+    assertThat(e,messageContains("Sub.say(class java.lang.String)"));
+    assertThat(e,causeMessageContains("Sub.say(class java.lang.Object)"));
+  }
+}

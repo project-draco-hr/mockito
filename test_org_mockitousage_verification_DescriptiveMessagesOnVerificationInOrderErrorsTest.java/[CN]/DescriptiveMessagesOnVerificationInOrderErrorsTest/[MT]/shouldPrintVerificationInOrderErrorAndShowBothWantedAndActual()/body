@@ -1,0 +1,14 @@
+{
+  inOrder.verify(one,atLeastOnce()).simpleMethod(1);
+  try {
+    inOrder.verify(one).simpleMethod(999);
+    fail();
+  }
+ catch (  VerifcationInOrderFailed e) {
+    String expected="\n" + "Verification in order failed" + "\n"+ "Wanted invocation:"+ "\n"+ "IMethods.simpleMethod(999)";
+    assertEquals(expected,e.getMessage());
+    assertEquals(e.getCause().getClass(),WantedDiffersFromActual.class);
+    String expectedCause="\n" + "Actual invocation:" + "\n"+ "IMethods.simpleMethod(11)";
+    assertEquals(expectedCause,e.getCause().getMessage());
+  }
+}

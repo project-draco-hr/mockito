@@ -1,5 +1,0 @@
-{
-  VerificationModeImpl strictMode=new VerificationModeBuilder().strict();
-  recorder.verify(differentMethod,strictMode);
-  assertThat(verifierStub.invocations,collectionHasExactlyInOrder(simpleMethod,differentMethod.getInvocation()));
-}

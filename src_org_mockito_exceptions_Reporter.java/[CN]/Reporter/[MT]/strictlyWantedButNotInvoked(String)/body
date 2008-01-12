@@ -1,3 +1,0 @@
-{
-  throw new StrictVerificationFailure(join("Strict verification failure","Wanted but not invoked:",wanted));
-}

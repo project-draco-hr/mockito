@@ -1,8 +1,0 @@
-{
-  try {
-    strictly.verify(mockTwo,times(3)).simpleMethod(2);
-    fail();
-  }
- catch (  TooLittleActualInvocations e) {
-  }
-}

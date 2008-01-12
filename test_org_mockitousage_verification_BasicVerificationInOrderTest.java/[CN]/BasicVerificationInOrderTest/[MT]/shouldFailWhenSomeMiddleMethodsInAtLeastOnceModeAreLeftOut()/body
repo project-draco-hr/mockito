@@ -1,0 +1,5 @@
+{
+  inOrder.verify(mockOne).simpleMethod(1);
+  inOrder.verify(mockTwo,atLeastOnce()).simpleMethod(2);
+  inOrder.verify(mockTwo,atLeastOnce()).simpleMethod(2);
+}

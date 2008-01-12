@@ -1,7 +1,0 @@
-{
-  if (!mocksToBeVerifiedSrictly.contains(mock)) {
-    reporter.strictlyRequiresFamiliarMock();
-  }
-  Integer wantedCount=((VerificationModeImpl)mode).wantedCount();
-  return Mockito.verify(mock,VerificationModeImpl.strict(wantedCount,mocksToBeVerifiedSrictly));
-}
