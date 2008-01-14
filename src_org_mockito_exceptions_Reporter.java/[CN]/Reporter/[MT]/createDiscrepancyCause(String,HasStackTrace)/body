@@ -1,5 +1,0 @@
-{
-  WantedDiffersFromActual cause=new WantedDiffersFromActual(join("Actual invocation:",actual));
-  cause.setStackTrace(actualInvocationStackTrace.getStackTrace());
-  return cause;
-}

@@ -8,7 +8,7 @@
     String expected="\n" + "Verification in order failed" + "\n"+ "Wanted invocation:"+ "\n"+ "IMethods.simpleMethod(999)";
     assertEquals(expected,e.getMessage());
     assertEquals(e.getCause().getClass(),WantedDiffersFromActual.class);
-    String expectedCause="\n" + "Actual invocation:" + "\n"+ "IMethods.simpleMethod(11)";
+    String expectedCause="\n" + "Actual invocation in order:" + "\n"+ "IMethods.simpleMethod(11)";
     assertEquals(expectedCause,e.getCause().getMessage());
   }
 }
