@@ -1,0 +1,17 @@
+{
+  if (testClass == null) {
+    throw new MockitoException("testClass cannot be null. For info how to use @Mock annotations see examples in javadoc for MockitoAnnotations");
+  }
+  Field[] fields=testClass.getClass().getDeclaredFields();
+  for (  Field f : fields) {
+    if (f.isAnnotationPresent(Mock.class)) {
+      f.setAccessible(true);
+      try {
+        f.set(testClass,Mockito.mock(f.getType()));
+      }
+ catch (      IllegalAccessException e) {
+        throw new MockitoException("Problems initiating mocks annotated with @Mock",e);
+      }
+    }
+  }
+}

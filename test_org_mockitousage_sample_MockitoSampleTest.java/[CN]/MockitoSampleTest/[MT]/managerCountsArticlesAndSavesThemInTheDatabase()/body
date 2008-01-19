@@ -1,7 +1,4 @@
 {
-  ArticleCalculator mockCalculator=Mockito.mock(ArticleCalculator.class);
-  ArticleDatabase mockDatabase=Mockito.mock(ArticleDatabase.class);
-  ArticleManager articleManager=new ArticleManager(mockCalculator,mockDatabase);
   stub(mockCalculator.countArticles("Guardian")).toReturn(12);
   stub(mockCalculator.countArticlesInPolish("Guardian")).toReturn(5);
   articleManager.updateArticleCounters("Guardian");

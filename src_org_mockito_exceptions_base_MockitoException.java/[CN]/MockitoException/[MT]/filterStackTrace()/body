@@ -1,0 +1,5 @@
+{
+  unfilteredStackTrace=getStackTrace();
+  StackTraceFilter filter=new StackTraceFilter();
+  filter.filterStackTrace(this);
+}

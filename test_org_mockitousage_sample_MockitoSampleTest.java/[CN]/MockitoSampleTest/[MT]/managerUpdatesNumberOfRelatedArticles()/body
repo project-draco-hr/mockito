@@ -1,13 +1,10 @@
 {
-  ArticleCalculator mockCalculator=Mockito.mock(ArticleCalculator.class);
-  ArticleDatabase mockDatabase=Mockito.mock(ArticleDatabase.class);
-  ArticleManager articleManager=new ArticleManager(mockCalculator,mockDatabase);
   Article articleOne=new Article();
   Article articleTwo=new Article();
   Article articleThree=new Article();
   stub(mockCalculator.countNumberOfRelatedArticles(articleOne)).toReturn(1);
-  stub(mockCalculator.countNumberOfRelatedArticles(articleOne)).toReturn(12);
-  stub(mockCalculator.countNumberOfRelatedArticles(articleOne)).toReturn(0);
+  stub(mockCalculator.countNumberOfRelatedArticles(articleTwo)).toReturn(12);
+  stub(mockCalculator.countNumberOfRelatedArticles(articleThree)).toReturn(0);
   stub(mockDatabase.getArticlesFor("Guardian")).toReturn(Arrays.asList(articleOne,articleTwo,articleThree));
   articleManager.updateRelatedArticlesCounters("Guardian");
   verify(mockDatabase).save(articleOne);
