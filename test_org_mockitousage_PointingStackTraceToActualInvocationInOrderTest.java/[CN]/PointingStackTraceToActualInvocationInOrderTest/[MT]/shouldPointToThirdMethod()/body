@@ -5,6 +5,6 @@
     fail();
   }
  catch (  VerifcationInOrderFailed e) {
-    assertThat(e.getCause(),hasFirstMethodInStackTrace("second"));
+    assertThat(e.getCause(),hasFirstMethodInStackTrace("third"));
   }
 }

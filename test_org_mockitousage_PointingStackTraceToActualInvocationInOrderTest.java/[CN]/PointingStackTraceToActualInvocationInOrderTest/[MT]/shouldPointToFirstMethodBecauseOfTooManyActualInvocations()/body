@@ -1,0 +1,9 @@
+{
+  try {
+    inOrder.verify(mock,times(0)).simpleMethod(anyInt());
+    fail();
+  }
+ catch (  VerifcationInOrderFailed e) {
+    assertThat(e.getCause(),hasFirstMethodInStackTrace("first"));
+  }
+}

@@ -1,12 +1,11 @@
 {
   inOrder.verify(mock).simpleMethod(anyInt());
   inOrder.verify(mockTwo).simpleMethod(anyInt());
-  inOrder.verify(mock).simpleMethod(anyInt());
   try {
     inOrder.verify(mockTwo,times(3)).simpleMethod(999);
     fail();
   }
  catch (  VerifcationInOrderFailed e) {
-    assertThat(e.getCause(),hasFirstMethodInStackTrace("fourth"));
+    assertThat(e.getCause(),hasFirstMethodInStackTrace("second"));
   }
 }
