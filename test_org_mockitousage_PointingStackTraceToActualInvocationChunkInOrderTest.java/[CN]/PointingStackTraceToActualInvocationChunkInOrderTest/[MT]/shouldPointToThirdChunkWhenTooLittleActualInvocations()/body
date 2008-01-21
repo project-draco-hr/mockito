@@ -1,5 +1,5 @@
 {
-  inOrder.verify(mock,atLeastOnce()).simpleMethod(anyInt());
+  inOrder.verify(mock,times(2)).simpleMethod(anyInt());
   inOrder.verify(mockTwo,times(2)).simpleMethod(anyInt());
   inOrder.verify(mock,atLeastOnce()).simpleMethod(anyInt());
   try {
@@ -7,6 +7,6 @@
     fail();
   }
  catch (  VerifcationInOrderFailed e) {
-    assertThat(e.getCause(),hasFirstMethodInStackTrace("fourthChunk"));
+    assertThat(e.getCause(),hasFirstMethodInStackTrace("thirdChunk"));
   }
 }
