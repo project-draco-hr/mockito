@@ -1,0 +1,10 @@
+{
+  List<Invocation> unverified=removeVerifiedInOrder(invocations);
+  List<Invocation> allChunks=new LinkedList<Invocation>();
+  for (  Invocation invocation : unverified) {
+    if (wanted.matches(invocation)) {
+      allChunks.add(invocation);
+    }
+  }
+  return allChunks;
+}

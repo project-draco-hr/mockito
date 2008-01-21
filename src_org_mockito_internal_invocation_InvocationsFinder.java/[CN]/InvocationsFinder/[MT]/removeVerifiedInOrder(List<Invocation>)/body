@@ -1,0 +1,12 @@
+{
+  List<Invocation> unverified=new LinkedList<Invocation>();
+  for (  Invocation i : invocations) {
+    if (i.isVerifiedInOrder()) {
+      unverified.clear();
+    }
+ else {
+      unverified.add(i);
+    }
+  }
+  return unverified;
+}

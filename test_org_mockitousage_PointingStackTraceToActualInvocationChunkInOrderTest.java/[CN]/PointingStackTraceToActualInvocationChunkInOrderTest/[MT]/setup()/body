@@ -1,0 +1,9 @@
+{
+  mock=Mockito.mock(IMethods.class);
+  mockTwo=Mockito.mock(IMethods.class);
+  inOrder=inOrder(mock,mockTwo);
+  firstChunk();
+  secondChunk();
+  thirdChunk();
+  fourthChunk();
+}

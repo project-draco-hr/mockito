@@ -4,7 +4,7 @@
   mockTwo.differentMethod();
   mockOne.simpleMethod();
   mockOne.simpleMethod();
-  inOrder.verify(mockOne,atLeastOnce()).simpleMethod();
+  inOrder.verify(mockOne,times(2)).simpleMethod();
   inOrder.verify(mockTwo).differentMethod();
   inOrder.verify(mockOne,times(2)).simpleMethod();
   try {
