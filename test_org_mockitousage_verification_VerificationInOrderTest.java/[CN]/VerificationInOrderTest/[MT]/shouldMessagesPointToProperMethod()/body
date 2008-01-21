@@ -7,6 +7,5 @@
   }
  catch (  VerifcationInOrderFailed e) {
     assertThat(e,messageContains("IMethods.differentMethod()"));
-    assertThat(e,causeMessageContains("IMethods.differentMethod()"));
   }
 }
