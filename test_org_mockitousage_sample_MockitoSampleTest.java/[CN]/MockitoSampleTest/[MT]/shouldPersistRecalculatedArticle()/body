@@ -5,7 +5,7 @@
   stub(mockCalculator.countNumberOfRelatedArticles(articleTwo)).toReturn(12);
   stub(mockDatabase.getArticlesFor("Guardian")).toReturn(Arrays.asList(articleOne,articleTwo));
   articleManager.updateRelatedArticlesCounters("Guardian");
-  InOrder inOrder=inOrder(mockDatabase);
-  inOrder.verify(mockDatabase,atLeastOnce()).getArticlesFor(anyString());
+  InOrder inOrder=inOrder(mockDatabase,mockCalculator);
+  inOrder.verify(mockCalculator).countNumberOfRelatedArticles((Article)anyObject());
   inOrder.verify(mockDatabase,atLeastOnce()).save((Article)anyObject());
 }

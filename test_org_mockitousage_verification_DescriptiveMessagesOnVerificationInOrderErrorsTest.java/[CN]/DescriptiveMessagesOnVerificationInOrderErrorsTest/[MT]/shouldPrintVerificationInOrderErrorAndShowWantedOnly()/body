@@ -1,0 +1,11 @@
+{
+  try {
+    inOrder.verify(one).simpleMethod(999);
+    fail();
+  }
+ catch (  VerifcationInOrderFailed e) {
+    String expected="\n" + "Verification in order failed" + "\n"+ "Wanted but not invoked:"+ "\n"+ "IMethods.simpleMethod(999)";
+    assertEquals(expected,e.getMessage());
+    assertEquals(null,e.getCause());
+  }
+}

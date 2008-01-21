@@ -1,5 +1,5 @@
 {
-  List<T> filtered=new LinkedList<T>();
+  LinkedList<T> filtered=new LinkedList<T>();
   for (  T t : list) {
     if (!filter.isOut(t)) {
       filtered.add(t);

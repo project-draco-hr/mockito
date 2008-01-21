@@ -1,0 +1,15 @@
+{
+  inOrder.verify(one).simpleMethod(1);
+  inOrder.verify(two,atLeastOnce()).simpleMethod(2);
+  try {
+    inOrder.verify(one,atLeastOnce()).simpleMethod(11);
+    fail();
+  }
+ catch (  VerifcationInOrderFailed e) {
+    String expected="\n" + "Verification in order failed" + "\n"+ "Wanted but not invoked:"+ "\n"+ "IMethods.simpleMethod(11)";
+    assertEquals(expected,e.getMessage());
+    assertEquals(e.getCause().getClass(),WantedAnywhereAfterFollowingInteraction.class);
+    String expectedCause="\n" + "Wanted anywhere AFTER following interaction:" + "\n"+ "IMethods.simpleMethod(2)";
+    assertEquals(expectedCause,e.getCause().getMessage());
+  }
+}

@@ -1,3 +1,0 @@
-{
-  throw new VerifcationInOrderFailed(join("Verification in order failed","Wanted but not invoked:",wanted));
-}
