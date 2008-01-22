@@ -1,4 +1,0 @@
-{
-  TooLittleInvocations cause=createTooLittleInvocationsCause(lastActualInvocationStackTrace);
-  throw new TooLittleActualInvocations(join(wanted,"Wanted " + pluralize(wantedCount) + " but was "+ actualCount),cause);
-}

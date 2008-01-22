@@ -4,5 +4,5 @@
   verifier.verify(invocations,wanted,mode);
   assertEquals(1,reporterStub.actualCount);
   assertEquals(100,reporterStub.wantedCount);
-  assertEquals(wanted.toString(),reporterStub.wanted);
+  assertEquals(wanted,reporterStub.wanted);
 }

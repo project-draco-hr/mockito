@@ -1,4 +1,4 @@
 int wantedCount
 int actualCount
-String wanted
+Printable wanted
 HasStackTrace firstUndesired

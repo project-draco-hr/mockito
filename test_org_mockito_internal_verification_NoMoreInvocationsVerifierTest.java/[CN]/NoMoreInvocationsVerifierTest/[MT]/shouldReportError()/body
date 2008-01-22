@@ -4,6 +4,6 @@
   List<Invocation> invocations=asList(new InvocationBuilder().toInvocation());
   verifier.verify(invocations,null,VerificationModeImpl.noMoreInteractions());
   assertSame(invocations,finder.invocations);
-  assertEquals(firstUnverified.toString(),reporterStub.undesired);
+  assertEquals(firstUnverified,reporterStub.undesired);
   assertSame(firstUnverified.getStackTrace(),reporterStub.actualInvocationStackTrace);
 }

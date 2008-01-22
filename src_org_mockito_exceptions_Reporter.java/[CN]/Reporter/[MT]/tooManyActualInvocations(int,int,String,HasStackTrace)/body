@@ -1,4 +1,0 @@
-{
-  UndesiredInvocation cause=createUndesiredInvocationCause(firstUndesired);
-  throw new TooManyActualInvocations(join(wanted,"Wanted " + pluralize(wantedCount) + " but was "+ actualCount),cause);
-}

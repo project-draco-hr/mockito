@@ -1,6 +1,0 @@
-{
-  WantedDiffersFromActual cause1=new WantedDiffersFromActual(join("Actual invocation in order:",actual));
-  cause1.setStackTrace(actualInvocationStackTrace.getStackTrace());
-  WantedDiffersFromActual cause=cause1;
-  throw new VerifcationInOrderFailed(join("Verification in order failed","Wanted invocation:",wanted),cause);
-}
