@@ -1,6 +1,0 @@
-{
-  this.wantedCount=wantedCount;
-  this.actualCount=actualCount;
-  this.wanted=wanted;
-  this.firstUndesired=firstUndesired;
-}

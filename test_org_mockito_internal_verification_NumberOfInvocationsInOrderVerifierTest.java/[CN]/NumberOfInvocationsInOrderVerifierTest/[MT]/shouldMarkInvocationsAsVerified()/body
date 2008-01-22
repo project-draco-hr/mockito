@@ -1,7 +1,0 @@
-{
-  Invocation invocation=new InvocationBuilder().toInvocation();
-  finderStub.allMatchingUnverifiedChunksToReturn.add(invocation);
-  assertFalse(invocation.isVerifiedInOrder());
-  verifier.verify(invocations,wanted,new VerificationModeBuilder().times(1).inOrder());
-  assertTrue(invocation.isVerifiedInOrder());
-}

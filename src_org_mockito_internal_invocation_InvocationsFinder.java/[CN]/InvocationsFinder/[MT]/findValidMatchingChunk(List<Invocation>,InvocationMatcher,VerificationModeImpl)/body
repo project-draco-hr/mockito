@@ -9,5 +9,10 @@
       break;
     }
   }
-  return firstChunk;
+  if (mode.atLeastOnceMode() || !mode.matchesActualCount(firstChunk.size())) {
+    return this.findAllMatchingUnverifiedChunks(invocations,wanted);
+  }
+ else {
+    return firstChunk;
+  }
 }

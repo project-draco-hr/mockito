@@ -1,6 +1,0 @@
-{
-  Invocation differentMethod=new InvocationBuilder().differentMethod().toInvocation();
-  finderStub.allMatchingUnverifiedChunksToReturn.add(differentMethod);
-  assertFalse(wanted.matches(differentMethod));
-  verifier.verify(invocations,wanted,new VerificationModeBuilder().times(0).inOrder());
-}

@@ -1,0 +1,4 @@
+{
+  finderStub.validMatchingChunkToReturn.add(wanted.getInvocation());
+  verifier.verify(invocations,wanted,new VerificationModeBuilder().times(1).inOrder());
+}
