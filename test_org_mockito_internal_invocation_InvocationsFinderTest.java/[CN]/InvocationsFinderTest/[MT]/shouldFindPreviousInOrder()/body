@@ -1,0 +1,8 @@
+{
+  Invocation previous=finder.findPreviousVerifiedInOrder(invocations);
+  assertNull(previous);
+  simpleMethodInvocation.markVerifiedInOrder();
+  simpleMethodInvocationTwo.markVerifiedInOrder();
+  previous=finder.findPreviousVerifiedInOrder(invocations);
+  assertSame(simpleMethodInvocationTwo,previous);
+}
