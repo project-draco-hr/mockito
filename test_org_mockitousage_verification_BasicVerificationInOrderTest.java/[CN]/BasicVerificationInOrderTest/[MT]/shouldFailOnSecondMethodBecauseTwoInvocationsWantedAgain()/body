@@ -4,6 +4,6 @@
     inOrder.verify(mockTwo,times(0)).simpleMethod(2);
     fail();
   }
- catch (  VerifcationInOrderFailed e) {
+ catch (  VerifcationInOrderFailure e) {
   }
 }

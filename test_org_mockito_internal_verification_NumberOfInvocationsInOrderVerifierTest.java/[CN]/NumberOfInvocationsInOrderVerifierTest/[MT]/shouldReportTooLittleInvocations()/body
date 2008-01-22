@@ -6,7 +6,7 @@
     verifier.verify(invocations,wanted,new VerificationModeBuilder().times(4).inOrder());
     fail();
   }
- catch (  VerifcationInOrderFailed e) {
+ catch (  VerifcationInOrderFailure e) {
     assertThat(e,messageContains("Wanted 4 times but was 2"));
   }
 }

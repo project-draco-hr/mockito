@@ -7,9 +7,9 @@
     inOrder.verify(three).simpleMethod(999);
     fail();
   }
- catch (  VerifcationInOrderFailed e) {
+ catch (  VerifcationInOrderFailure e) {
     String actualMessage=e.getMessage();
-    String expectedMessage="\n" + "Verification in order failed" + "\n"+ "Wanted but not invoked:"+ "\n"+ "IMethods.simpleMethod(999)";
+    String expectedMessage="\n" + "Verification in order failure" + "\n"+ "Wanted but not invoked:"+ "\n"+ "IMethods.simpleMethod(999)";
     assertEquals(expectedMessage,actualMessage);
   }
 }

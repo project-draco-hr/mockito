@@ -5,6 +5,6 @@
     inOrder.verify(mockOne).differentMethod();
     fail();
   }
- catch (  VerifcationInOrderFailed e) {
+ catch (  VerifcationInOrderFailure e) {
   }
 }

@@ -4,7 +4,7 @@
     inOrder.verify(mockTwo).simpleMethod(999);
     fail();
   }
- catch (  VerifcationInOrderFailed e) {
+ catch (  VerifcationInOrderFailure e) {
     assertThat(e.getCause(),hasFirstMethodInStackTrace("third"));
   }
 }

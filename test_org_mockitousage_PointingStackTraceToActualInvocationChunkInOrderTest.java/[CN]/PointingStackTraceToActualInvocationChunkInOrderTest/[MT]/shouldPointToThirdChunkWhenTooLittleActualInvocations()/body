@@ -6,7 +6,7 @@
     inOrder.verify(mockTwo,times(3)).simpleMethod(999);
     fail();
   }
- catch (  VerifcationInOrderFailed e) {
+ catch (  VerifcationInOrderFailure e) {
     assertThat(e.getCause(),hasFirstMethodInStackTrace("thirdChunk"));
   }
 }

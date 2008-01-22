@@ -12,6 +12,6 @@
     inOrder.verify(mockOne,times(3)).simpleMethod(anyInt());
     fail();
   }
- catch (  VerifcationInOrderFailed e) {
+ catch (  VerifcationInOrderFailure e) {
   }
 }

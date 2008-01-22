@@ -7,9 +7,9 @@
     inOrder.verify(two,times(2)).simpleMethod(2);
     fail();
   }
- catch (  VerifcationInOrderFailed e) {
+ catch (  VerifcationInOrderFailure e) {
     String actualMessage=e.getMessage();
-    String expectedMessage="\n" + "Verification in order failed" + "\n"+ "IMethods.simpleMethod(2)"+ "\n"+ "Wanted 2 times but was 1";
+    String expectedMessage="\n" + "Verification in order failure" + "\n"+ "IMethods.simpleMethod(2)"+ "\n"+ "Wanted 2 times but was 1";
     assertEquals(expectedMessage,actualMessage);
     assertEquals(e.getCause().getClass(),TooLittleInvocations.class);
     String expectedCause="\n" + "Too little invocations:";
