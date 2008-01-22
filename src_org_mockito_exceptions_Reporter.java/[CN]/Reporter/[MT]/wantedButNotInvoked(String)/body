@@ -1,3 +1,0 @@
-{
-  throw new WantedButNotInvoked(join("Wanted but not invoked:",wanted));
-}

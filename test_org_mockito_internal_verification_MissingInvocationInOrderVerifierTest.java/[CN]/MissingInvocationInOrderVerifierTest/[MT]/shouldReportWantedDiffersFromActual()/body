@@ -1,8 +1,8 @@
 {
-  Invocation different=new InvocationBuilder().differentMethod().toInvocation();
-  finderStub.firstUnverifiedChunkToReturn.add(different);
+  Invocation previous=new InvocationBuilder().toInvocation();
+  finderStub.previousInOrderToReturn=previous;
   verifier.verify(invocations,wanted,new VerificationModeBuilder().inOrder());
-  assertEquals(wanted.toString(),reporterStub.wanted);
-  assertEquals(different.toString(),reporterStub.actual);
-  assertSame(different.getStackTrace(),reporterStub.actualInvocationStackTrace);
+  assertEquals(wanted,reporterStub.wanted);
+  assertEquals(previous,reporterStub.previous);
+  assertSame(previous.getStackTrace(),reporterStub.previousStackTrace);
 }

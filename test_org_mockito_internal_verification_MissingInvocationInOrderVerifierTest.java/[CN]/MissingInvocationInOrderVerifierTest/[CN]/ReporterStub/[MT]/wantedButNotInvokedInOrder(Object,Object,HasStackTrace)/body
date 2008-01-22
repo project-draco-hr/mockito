@@ -1,3 +1,5 @@
 {
-  this.wanted=wanted.toString();
+  this.wanted=wanted;
+  this.previous=previous;
+  this.previousStackTrace=previousStackTrace;
 }

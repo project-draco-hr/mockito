@@ -5,7 +5,7 @@
     inOrder.verify(mockOne,atLeastOnce()).differentMethod();
     fail();
   }
- catch (  VerifcationInOrderFailed e) {
+ catch (  WantedButNotInvoked e) {
     assertThat(e,messageContains("IMethods.differentMethod()"));
   }
 }

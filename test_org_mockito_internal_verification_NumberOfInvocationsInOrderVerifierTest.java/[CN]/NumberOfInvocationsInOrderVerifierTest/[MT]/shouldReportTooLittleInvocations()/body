@@ -1,7 +1,7 @@
 {
   Invocation first=new InvocationBuilder().toInvocation();
   Invocation second=new InvocationBuilder().toInvocation();
-  finderStub.firstUnverifiedChunkToReturn.addAll(asList(first,second));
+  finderStub.allMatchingUnverifiedChunksToReturn.addAll(asList(first,second));
   verifier.verify(invocations,wanted,new VerificationModeBuilder().times(4).inOrder());
   assertEquals(4,reporterStub.wantedCount);
   assertEquals(2,reporterStub.actualCount);

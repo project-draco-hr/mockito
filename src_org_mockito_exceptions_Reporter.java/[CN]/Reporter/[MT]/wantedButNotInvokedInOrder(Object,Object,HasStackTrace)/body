@@ -1,5 +1,5 @@
 {
   WantedAnywhereAfterFollowingInteraction cause=new WantedAnywhereAfterFollowingInteraction(join("Wanted anywhere AFTER following interaction:",previous.toString()));
-  cause.setStackTrace(previousInOrder.getStackTrace());
+  cause.setStackTrace(previousStackTrace.getStackTrace());
   throw new VerifcationInOrderFailed(join("Verification in order failed","Wanted but not invoked:",wanted.toString()),cause);
 }
