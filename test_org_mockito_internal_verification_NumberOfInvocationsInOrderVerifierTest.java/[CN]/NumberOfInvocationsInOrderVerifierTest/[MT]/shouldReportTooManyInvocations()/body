@@ -1,0 +1,13 @@
+{
+  Invocation first=new InvocationBuilder().toInvocation();
+  Invocation second=new InvocationBuilder().toInvocation();
+  finderStub.validMatchingChunkToReturn.addAll(asList(first,second));
+  try {
+    verifier.verify(invocations,wanted,new VerificationModeBuilder().times(1).inOrder());
+    fail();
+  }
+ catch (  VerifcationInOrderFailed e) {
+    assertThat(e,messageContains("Wanted 1 time but was 2"));
+  }
+  ;
+}
