@@ -1,14 +1,6 @@
 {
   List<Invocation> unverified=removeVerifiedInOrder(invocations);
-  List<Invocation> firstChunk=new LinkedList<Invocation>();
-  for (  Invocation invocation : unverified) {
-    if (wanted.matches(invocation)) {
-      firstChunk.add(invocation);
-    }
- else     if (!firstChunk.isEmpty()) {
-      break;
-    }
-  }
+  List<Invocation> firstChunk=getFirstMatchingChunk(wanted,unverified);
   if (mode.atLeastOnceMode() || !mode.matchesActualCount(firstChunk.size())) {
     return this.findAllMatchingUnverifiedChunks(invocations,wanted);
   }

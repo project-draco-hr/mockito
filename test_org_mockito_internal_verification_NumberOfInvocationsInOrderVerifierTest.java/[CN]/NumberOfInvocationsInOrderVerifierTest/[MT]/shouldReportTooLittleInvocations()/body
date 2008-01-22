@@ -9,5 +9,4 @@
  catch (  VerifcationInOrderFailed e) {
     assertThat(e,messageContains("Wanted 4 times but was 2"));
   }
-  ;
 }

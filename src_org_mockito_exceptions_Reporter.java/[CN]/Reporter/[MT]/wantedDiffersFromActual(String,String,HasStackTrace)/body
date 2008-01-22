@@ -1,6 +1,6 @@
 {
-  WantedDiffersFromActual cause1=new WantedDiffersFromActual(join("Actual invocation:",actual));
+  WantedDiffersFromActual cause1=new WantedDiffersFromActual(join("Actual invocation:",actual.toString()));
   cause1.setStackTrace(actualInvocationStackTrace.getStackTrace());
   WantedDiffersFromActual cause=cause1;
-  throw new InvocationDiffersFromActual(join("Invocation differs from actual","Wanted invocation:",wanted),cause);
+  throw new InvocationDiffersFromActual(join("Invocation differs from actual","Wanted invocation:",wanted.toString()),cause);
 }

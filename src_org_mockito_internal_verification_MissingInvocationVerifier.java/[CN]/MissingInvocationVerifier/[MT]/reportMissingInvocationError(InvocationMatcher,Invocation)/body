@@ -4,6 +4,6 @@
     reporter.wantedDiffersFromActual(printer.printWanted(),printer.printActual(),similar.getStackTrace());
   }
  else {
-    reporter.wantedButNotInvoked(wanted.toString());
+    reporter.wantedButNotInvoked(wanted);
   }
 }
