@@ -2,6 +2,6 @@
   InvocationMatcher simpleMethod=new InvocationBuilder().simpleMethod().toInvocationMatcher();
   Invocation differentMethod=new InvocationBuilder().differentMethod().toInvocation();
   InvocationsPrinter printer=new InvocationsPrinter(simpleMethod,differentMethod);
-  assertEquals("Object.simpleMethod()",printer.printWanted());
-  assertEquals("Object.differentMethod()",printer.printActual());
+  assertEquals("Object.simpleMethod()",printer.getWanted().toString());
+  assertEquals("Object.differentMethod()",printer.getActual().toString());
 }

@@ -5,6 +5,6 @@
   Invocation invocationTwo=new InvocationBuilder().method(methodTwo).toInvocation();
   InvocationsPrinter printer=new InvocationsPrinter(invocationOne,invocationTwo);
   assertEquals(invocationOne.toString(),invocationTwo.toString());
-  assertEquals("Object.test(class java.lang.Object)",printer.printWanted());
-  assertEquals("Object.test(class java.lang.String)",printer.printActual());
+  assertEquals("Object.test(class java.lang.Object)",printer.getWanted().toString());
+  assertEquals("Object.test(class java.lang.String)",printer.getActual().toString());
 }
