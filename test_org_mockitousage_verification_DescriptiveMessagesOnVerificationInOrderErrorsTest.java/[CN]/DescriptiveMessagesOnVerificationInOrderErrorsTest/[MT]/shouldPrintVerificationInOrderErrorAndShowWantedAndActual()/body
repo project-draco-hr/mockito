@@ -1,10 +1,10 @@
 {
   try {
-    inOrder.verify(one).differentMethod();
+    inOrder.verify(one).simpleMethod(999);
     fail();
   }
  catch (  WantedButNotInvoked e) {
-    String expected="\n" + "Wanted but not invoked:" + "\n"+ "IMethods.differentMethod()";
+    String expected="\n" + "Invocation differs from actual:" + "\n"+ "IMethods.simpleMethod(999)";
     assertEquals(expected,e.getMessage());
     assertEquals(null,e.getCause());
   }

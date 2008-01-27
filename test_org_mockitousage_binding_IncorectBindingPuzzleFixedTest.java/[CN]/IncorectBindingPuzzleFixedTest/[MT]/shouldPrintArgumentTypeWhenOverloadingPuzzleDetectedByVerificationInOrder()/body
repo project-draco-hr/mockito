@@ -1,0 +1,16 @@
+{
+  IMethods mockTwo=mock(IMethods.class);
+  mockTwo.simpleMethod();
+  Sub sub=mock(Sub.class);
+  setMockWithDowncast(sub);
+  say("Hello");
+  InOrder inOrder=inOrder(mock,mockTwo);
+  inOrder.verify(mockTwo).simpleMethod();
+  try {
+    inOrder.verify(sub).say("Hello");
+    fail();
+  }
+ catch (  VerifcationInOrderFailure e) {
+    assertThat(e,messageContains("Sub.say(class java.lang.String)"));
+  }
+}

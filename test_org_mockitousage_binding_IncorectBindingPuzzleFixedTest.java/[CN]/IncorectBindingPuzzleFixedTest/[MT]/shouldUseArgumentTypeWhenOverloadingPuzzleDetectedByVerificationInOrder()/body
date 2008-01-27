@@ -1,7 +1,0 @@
-{
-  Sub sub=mock(Sub.class);
-  setMockWithDowncast(sub);
-  say("Hello");
-  InOrder inOrder=inOrder(mock);
-  inOrder.verify(sub).say("Hello");
-}
