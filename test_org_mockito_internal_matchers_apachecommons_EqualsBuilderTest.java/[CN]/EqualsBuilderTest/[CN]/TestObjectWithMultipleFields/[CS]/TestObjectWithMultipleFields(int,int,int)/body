@@ -1,0 +1,5 @@
+{
+  this.one=new TestObject(one);
+  this.two=new TestObject(two);
+  this.three=new TestObject(three);
+}

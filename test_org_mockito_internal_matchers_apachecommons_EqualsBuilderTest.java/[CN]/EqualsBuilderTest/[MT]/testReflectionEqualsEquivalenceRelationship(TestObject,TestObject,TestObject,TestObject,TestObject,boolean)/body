@@ -1,0 +1,23 @@
+{
+  assertTrue(EqualsBuilder.reflectionEquals(to,to,testTransients));
+  assertTrue(EqualsBuilder.reflectionEquals(to2,to2,testTransients));
+  assertTrue(EqualsBuilder.reflectionEquals(to,toBis,testTransients) && EqualsBuilder.reflectionEquals(toBis,to,testTransients));
+  assertTrue(EqualsBuilder.reflectionEquals(to,toBis,testTransients) && EqualsBuilder.reflectionEquals(toBis,toTer,testTransients) && EqualsBuilder.reflectionEquals(to,toTer,testTransients));
+  oToChange.setA(to.getA());
+  if (oToChange instanceof TestSubObject) {
+    ((TestSubObject)oToChange).setB(((TestSubObject)to).getB());
+  }
+  assertTrue(EqualsBuilder.reflectionEquals(oToChange,to,testTransients));
+  assertTrue(EqualsBuilder.reflectionEquals(oToChange,to,testTransients));
+  oToChange.setA(to.getA() + 1);
+  if (oToChange instanceof TestSubObject) {
+    ((TestSubObject)oToChange).setB(((TestSubObject)to).getB() + 1);
+  }
+  assertTrue(!EqualsBuilder.reflectionEquals(oToChange,to,testTransients));
+  assertTrue(!EqualsBuilder.reflectionEquals(oToChange,to,testTransients));
+  assertTrue(!EqualsBuilder.reflectionEquals(to,null,testTransients));
+  assertTrue(!EqualsBuilder.reflectionEquals(to2,null,testTransients));
+  assertTrue(!EqualsBuilder.reflectionEquals(null,to,testTransients));
+  assertTrue(!EqualsBuilder.reflectionEquals(null,to2,testTransients));
+  assertTrue(EqualsBuilder.reflectionEquals((Object)null,(Object)null,testTransients));
+}

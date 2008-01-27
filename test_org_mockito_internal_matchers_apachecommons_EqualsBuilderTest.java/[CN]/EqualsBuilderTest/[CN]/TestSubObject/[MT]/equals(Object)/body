@@ -1,0 +1,13 @@
+{
+  if (o == null) {
+    return false;
+  }
+  if (o == this) {
+    return true;
+  }
+  if (o.getClass() != getClass()) {
+    return false;
+  }
+  TestSubObject rhs=(TestSubObject)o;
+  return super.equals(o) && (b == rhs.b);
+}

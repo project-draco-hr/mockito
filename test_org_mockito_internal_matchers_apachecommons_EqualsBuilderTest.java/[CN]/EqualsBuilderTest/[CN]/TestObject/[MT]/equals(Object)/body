@@ -1,0 +1,13 @@
+{
+  if (o == null) {
+    return false;
+  }
+  if (o == this) {
+    return true;
+  }
+  if (o.getClass() != getClass()) {
+    return false;
+  }
+  TestObject rhs=(TestObject)o;
+  return (a == rhs.a);
+}

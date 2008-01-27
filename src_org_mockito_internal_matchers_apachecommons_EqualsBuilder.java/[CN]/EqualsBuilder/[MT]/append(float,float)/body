@@ -1,0 +1,6 @@
+{
+  if (isEquals == false) {
+    return this;
+  }
+  return append(Float.floatToIntBits(lhs),Float.floatToIntBits(rhs));
+}

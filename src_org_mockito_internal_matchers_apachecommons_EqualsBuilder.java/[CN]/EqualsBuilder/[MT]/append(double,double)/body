@@ -1,0 +1,6 @@
+{
+  if (isEquals == false) {
+    return this;
+  }
+  return append(Double.doubleToLongBits(lhs),Double.doubleToLongBits(rhs));
+}

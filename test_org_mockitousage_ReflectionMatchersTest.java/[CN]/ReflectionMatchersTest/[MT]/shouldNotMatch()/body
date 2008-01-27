@@ -1,0 +1,4 @@
+{
+  Child wanted=new Child(234234,"foo",2,"bar");
+  verify(mock).run(refEq(wanted));
+}

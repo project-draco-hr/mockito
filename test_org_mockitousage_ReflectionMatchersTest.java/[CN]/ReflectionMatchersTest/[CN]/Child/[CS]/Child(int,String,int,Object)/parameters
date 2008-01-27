@@ -1,0 +1,4 @@
+int parentField
+String protectedParentField
+int childFieldOne
+Object childFieldTwo

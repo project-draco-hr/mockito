@@ -1,0 +1,2 @@
+int parentField
+String protectedParentField

@@ -1,0 +1,5 @@
+Object lhs
+Object rhs
+boolean testTransients
+Class reflectUpToClass
+String[] excludeFields

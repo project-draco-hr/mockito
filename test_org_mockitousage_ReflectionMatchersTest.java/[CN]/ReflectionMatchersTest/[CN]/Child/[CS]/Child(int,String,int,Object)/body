@@ -1,0 +1,5 @@
+{
+  super(parentField,protectedParentField);
+  this.childFieldOne=childFieldOne;
+  this.childFieldTwo=childFieldTwo;
+}

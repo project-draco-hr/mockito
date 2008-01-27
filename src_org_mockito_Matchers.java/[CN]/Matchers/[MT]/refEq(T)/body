@@ -1,0 +1,3 @@
+{
+  return reportMatcher(new ReflectionEquals(value)).<T>returnNull();
+}

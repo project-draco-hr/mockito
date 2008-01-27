@@ -1,0 +1,5 @@
+{
+  mock=mock(MockMe.class);
+  Child actual=new Child(1,"foo",2,"bar");
+  mock.run(actual);
+}

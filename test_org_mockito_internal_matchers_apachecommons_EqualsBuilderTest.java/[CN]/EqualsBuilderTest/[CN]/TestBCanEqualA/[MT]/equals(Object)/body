@@ -1,0 +1,12 @@
+{
+  if (o == this) {
+    return true;
+  }
+  if (o instanceof TestACanEqualB) {
+    return this.b == ((TestACanEqualB)o).getA();
+  }
+  if (o instanceof TestBCanEqualA) {
+    return this.b == ((TestBCanEqualA)o).getB();
+  }
+  return false;
+}
