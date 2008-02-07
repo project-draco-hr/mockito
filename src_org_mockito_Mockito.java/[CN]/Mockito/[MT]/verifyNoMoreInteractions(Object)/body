@@ -2,6 +2,11 @@
   assertMocksNotEmpty(mocks);
   MOCKING_PROGRESS.validateState();
   for (  Object mock : mocks) {
-    MockUtil.getMockHandler(mock).verifyNoMoreInteractions();
+    try {
+      MockUtil.getMockHandler(mock).verifyNoMoreInteractions();
+    }
+ catch (    NotAMockException e) {
+      REPORTER.notAMockPassedToVerifyNoMoreInteractions();
+    }
   }
 }

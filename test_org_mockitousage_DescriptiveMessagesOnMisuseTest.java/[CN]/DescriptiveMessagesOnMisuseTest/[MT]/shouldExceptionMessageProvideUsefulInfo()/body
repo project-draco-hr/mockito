@@ -1,0 +1,13 @@
+{
+  verifyNoMoreInteractions(null);
+  verifyNoMoreInteractions("");
+  verifyZeroInteractions(null);
+  verifyZeroInteractions("");
+  inOrder(null);
+  inOrder("test");
+  InOrder inOrder=inOrder(mock(List.class));
+  inOrder.verify(mock).simpleMethod();
+  verify(mock.differentMethod());
+  verify(null);
+  verify(mock).varargs("test",anyString());
+}

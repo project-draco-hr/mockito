@@ -1,5 +1,7 @@
 {
-  MockUtil.validateMock(mock);
+  if (!MockUtil.isMock(mock)) {
+    REPORTER.notAMockPassedToVerify();
+  }
   MOCKING_PROGRESS.verificationStarted(mode);
   return mock;
 }

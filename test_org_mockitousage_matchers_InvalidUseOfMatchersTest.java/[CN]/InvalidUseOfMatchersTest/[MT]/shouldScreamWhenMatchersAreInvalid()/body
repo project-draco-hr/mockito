@@ -5,20 +5,20 @@
     fail();
   }
  catch (  InvalidUseOfMatchersException e) {
-    assertEquals("\n" + "No matchers found for Not(?)." + "\n"+ "See javadoc for Matchers class",e.getMessage());
+    assertThat(e,messageContains("No matchers found for Not(?)."));
   }
   try {
     mock.simpleMethod(AdditionalMatchers.or(eq("jkl"),"asd"));
     fail();
   }
  catch (  InvalidUseOfMatchersException e) {
-    assertEquals("\n" + "2 matchers expected, 1 recorded." + "\n"+ "See javadoc for Matchers class",e.getMessage());
+    assertThat(e,messageContains("2 matchers expected, 1 recorded."));
   }
   try {
     mock.threeArgumentMethod(1,"asd",eq("asd"));
     fail();
   }
  catch (  InvalidUseOfMatchersException e) {
-    assertEquals("\n" + "3 matchers expected, 1 recorded." + "\n"+ "See javadoc for Matchers class",e.getMessage());
+    assertThat(e,messageContains("3 matchers expected, 1 recorded."));
   }
 }

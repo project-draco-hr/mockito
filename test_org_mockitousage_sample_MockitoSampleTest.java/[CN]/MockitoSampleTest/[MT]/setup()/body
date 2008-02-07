@@ -1,5 +1,3 @@
 {
-  mockCalculator=mock(ArticleCalculator.class);
-  mockDatabase=mock(ArticleDatabase.class);
   articleManager=new ArticleManager(mockCalculator,mockDatabase);
 }
