@@ -1,7 +1,9 @@
 {
   if (matchers != null) {
-    if (matchers.size() != invocation.getArguments().length) {
-      throw new InvalidUseOfMatchersException(invocation.getArguments().length + " matchers expected, " + matchers.size()+ " recorded.");
+    int recordedMatchersSize=matchers.size();
+    int expectedMatchersSize=invocation.getArguments().length;
+    if (expectedMatchersSize != recordedMatchersSize) {
+      new Reporter().invalidUseOfMatchers(expectedMatchersSize,recordedMatchersSize);
     }
   }
 }

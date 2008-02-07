@@ -1,3 +1,0 @@
-{
-  throw new MockitoException(join("Method requires argument(s).","Pass mocks that should be verified, e.g:","  verifyNoMoreInteractions(mockOne, mockTwo);","  verifyZeroInteractions(mockOne, mockTwo);"));
-}

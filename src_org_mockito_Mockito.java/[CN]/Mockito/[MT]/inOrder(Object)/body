@@ -1,9 +1,11 @@
 {
-  if (mocks.length == 0) {
+  if (mocks == null || mocks.length == 0) {
     REPORTER.mocksHaveToBePassedWhenCreatingInOrder();
   }
   for (  Object mock : mocks) {
-    MockUtil.validateMock(mock);
+    if (!MockUtil.isMock(mock)) {
+      REPORTER.notAMockPassedWhenCreatingInOrder();
+    }
   }
   InOrder inOrderVerifier=new InOrderVerifier(Arrays.asList(mocks));
   return inOrderVerifier;

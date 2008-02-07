@@ -1,3 +1,4 @@
 {
-  validateMock("");
+  assertFalse(isMock("i mock a mock"));
+  assertTrue(isMock(Mockito.mock(List.class)));
 }
