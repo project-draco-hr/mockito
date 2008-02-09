@@ -1,11 +1,3 @@
 {
-  return reportMatcher(new CustomMatcher<T>(){
-    public boolean matches(    T argument){
-      return matcher.matches(argument);
-    }
-    public void appendTo(    StringBuilder builder){
-      builder.append(matcher.toString());
-    }
-  }
-).<T>returnNull();
+  return reportMatcher(matcher).<T>returnNull();
 }

@@ -1,0 +1,32 @@
+{
+  return LastArguments.instance().reportMatcher(new ArgumentMatcher(){
+    public void appendTo(    final StringBuilder builder){
+      matcher.describeTo(new Description(){
+        public Description appendDescriptionOf(        SelfDescribing arg0){
+          throw new RuntimeException("not implemented");
+        }
+        public Description appendList(        String arg0,        String arg1,        String arg2,        Iterable<? extends SelfDescribing> arg3){
+          throw new RuntimeException("not implemented");
+        }
+        public Description appendText(        String arg0){
+          builder.append(arg0);
+          return this;
+        }
+        public Description appendValue(        Object arg0){
+          throw new RuntimeException("not implemented");
+        }
+        public <T>Description appendValueList(        String arg0,        String arg1,        String arg2,        T... arg3){
+          throw new RuntimeException("not implemented");
+        }
+        public <T>Description appendValueList(        String arg0,        String arg1,        String arg2,        Iterable<T> arg3){
+          throw new RuntimeException("not implemented");
+        }
+      }
+);
+    }
+    public boolean matches(    Object argument){
+      return matcher.matches(argument);
+    }
+  }
+);
+}
