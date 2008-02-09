@@ -1,0 +1,10 @@
+{
+  mock.simpleMethod("blah");
+  try {
+    verify(mock).simpleMethod(argThat(new ContainsX()));
+    fail();
+  }
+ catch (  InvocationDiffersFromActual e) {
+    assertThat(e,messageContains("IMethods.simpleMethod(<contains 'X'>)"));
+  }
+}
