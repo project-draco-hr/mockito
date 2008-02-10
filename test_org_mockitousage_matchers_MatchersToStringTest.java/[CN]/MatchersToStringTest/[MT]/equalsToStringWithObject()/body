@@ -5,6 +5,6 @@
     }
   }
 ;
-  new Equals(o).appendTo(buffer);
-  assertEquals("X",buffer.toString());
+  new Equals(o).describeTo(description);
+  assertEquals("X",description.toString());
 }

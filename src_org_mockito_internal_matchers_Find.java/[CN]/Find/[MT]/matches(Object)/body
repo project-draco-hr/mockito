@@ -1,0 +1,3 @@
+{
+  return actual != null && Pattern.compile(regex).matcher((String)actual).find();
+}

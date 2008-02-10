@@ -2,7 +2,7 @@
   assertEquals(lower,compareTo.matches("a"));
   assertEquals(equals,compareTo.matches("b"));
   assertEquals(higher,compareTo.matches("c"));
-  StringBuilder sb=new StringBuilder();
-  compareTo.appendTo(sb);
-  assertEquals(name + "(b)",sb.toString());
+  Description d=new StringDescription();
+  compareTo.describeTo(d);
+  assertEquals(name + "(b)",d.toString());
 }

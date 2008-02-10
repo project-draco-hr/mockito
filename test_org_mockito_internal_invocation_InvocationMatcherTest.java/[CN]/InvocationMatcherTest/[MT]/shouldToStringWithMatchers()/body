@@ -1,7 +1,7 @@
 {
-  ArgumentMatcher m=NotNull.NOT_NULL;
+  Matcher m=NotNull.NOT_NULL;
   InvocationMatcher notNull=new InvocationMatcher(new InvocationBuilder().toInvocation(),asList(m));
-  ArgumentMatcher mTwo=new Equals('x');
+  Matcher mTwo=new Equals('x');
   InvocationMatcher equals=new InvocationMatcher(new InvocationBuilder().toInvocation(),asList(mTwo));
   assertEquals("Object.simpleMethod(notNull())",notNull.toString());
   assertEquals("Object.simpleMethod('x')",equals.toString());

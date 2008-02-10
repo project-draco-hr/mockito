@@ -1,4 +1,4 @@
 {
-  new Equals("X").appendTo(buffer);
-  assertEquals("\"X\"",buffer.toString());
+  new Equals("X").describeTo(description);
+  assertEquals("\"X\"",description.toString());
 }

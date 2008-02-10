@@ -1,4 +1,4 @@
 {
-  new StartsWith("AB").appendTo(buffer);
-  assertEquals("startsWith(\"AB\")",buffer.toString());
+  new StartsWith("AB").describeTo(description);
+  assertEquals("startsWith(\"AB\")",description.toString());
 }

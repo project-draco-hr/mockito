@@ -1,3 +1,0 @@
-{
-  return actual != null && Pattern.compile(regex).matcher(actual).find();
-}

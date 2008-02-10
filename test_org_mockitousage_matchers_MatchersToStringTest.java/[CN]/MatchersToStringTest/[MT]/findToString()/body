@@ -1,4 +1,4 @@
 {
-  new Find("\\s+").appendTo(buffer);
-  assertEquals("find(\"\\\\s+\")",buffer.toString());
+  new Find("\\s+").describeTo(description);
+  assertEquals("find(\"\\\\s+\")",description.toString());
 }

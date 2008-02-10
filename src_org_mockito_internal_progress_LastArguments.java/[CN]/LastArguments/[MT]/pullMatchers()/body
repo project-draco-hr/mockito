@@ -2,7 +2,7 @@
   if (matcherStack.isEmpty()) {
     return null;
   }
-  ArrayList<ArgumentMatcher> matchers=new ArrayList<ArgumentMatcher>(matcherStack);
+  ArrayList<Matcher> matchers=new ArrayList<Matcher>(matcherStack);
   matcherStack.clear();
   return matchers;
 }

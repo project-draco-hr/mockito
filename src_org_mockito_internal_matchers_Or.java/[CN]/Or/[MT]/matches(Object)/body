@@ -1,5 +1,5 @@
 {
-  for (  ArgumentMatcher matcher : matchers) {
+  for (  Matcher matcher : matchers) {
     if (matcher.matches(actual)) {
       return true;
     }

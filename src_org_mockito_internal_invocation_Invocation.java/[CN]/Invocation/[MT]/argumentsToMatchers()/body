@@ -1,5 +1,5 @@
 {
-  List<ArgumentMatcher> matchers=new LinkedList<ArgumentMatcher>();
+  List<Matcher> matchers=new LinkedList<Matcher>();
   for (  Object arg : this.arguments) {
     if (arg != null && arg.getClass().isArray()) {
       matchers.add(new ArrayEquals(arg));

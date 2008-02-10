@@ -1,7 +1,7 @@
 {
-  List<ArgumentMatcher> matchers=new ArrayList<ArgumentMatcher>();
+  List<Matcher> matchers=new ArrayList<Matcher>();
   matchers.add(new Equals(1));
   matchers.add(new Equals(2));
-  new And(matchers).appendTo(buffer);
-  assertEquals("and(1, 2)",buffer.toString());
+  new And(matchers).describeTo(description);
+  assertEquals("and(1, 2)",description.toString());
 }

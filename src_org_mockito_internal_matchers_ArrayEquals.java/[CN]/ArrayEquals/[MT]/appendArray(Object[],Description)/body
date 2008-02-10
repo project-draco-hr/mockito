@@ -1,0 +1,10 @@
+{
+  description.appendText("[");
+  for (int i=0; i < array.length; i++) {
+    new Equals(array[i]).describeTo(description);
+    if (i != array.length - 1) {
+      description.appendText(", ");
+    }
+  }
+  description.appendText("]");
+}

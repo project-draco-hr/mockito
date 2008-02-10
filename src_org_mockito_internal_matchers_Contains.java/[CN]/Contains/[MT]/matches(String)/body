@@ -1,3 +1,0 @@
-{
-  return actual != null && actual.contains(substring);
-}

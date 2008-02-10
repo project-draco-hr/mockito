@@ -5,6 +5,6 @@
     }
   }
 ;
-  new Same(o).appendTo(buffer);
-  assertEquals("same(X)",buffer.toString());
+  new Same(o).describeTo(description);
+  assertEquals("same(X)",description.toString());
 }

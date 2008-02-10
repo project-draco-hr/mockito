@@ -1,7 +1,7 @@
 {
-  List<ArgumentMatcher> matchers=new ArrayList<ArgumentMatcher>();
+  List<Matcher> matchers=new ArrayList<Matcher>();
   matchers.add(new Equals(1));
   matchers.add(new Equals(2));
-  new Or(matchers).appendTo(buffer);
-  assertEquals("or(1, 2)",buffer.toString());
+  new Or(matchers).describeTo(description);
+  assertEquals("or(1, 2)",description.toString());
 }

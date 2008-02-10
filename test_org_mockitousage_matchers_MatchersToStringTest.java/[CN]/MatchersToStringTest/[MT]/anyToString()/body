@@ -1,4 +1,4 @@
 {
-  Any.ANY.appendTo(buffer);
-  assertEquals("<any>",buffer.toString());
+  Any.ANY.describeTo(description);
+  assertEquals("<any>",description.toString());
 }

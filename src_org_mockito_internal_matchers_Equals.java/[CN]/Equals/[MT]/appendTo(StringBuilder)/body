@@ -1,5 +1,0 @@
-{
-  appendQuoting(buffer);
-  buffer.append(wanted);
-  appendQuoting(buffer);
-}

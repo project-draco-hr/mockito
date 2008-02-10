@@ -1,9 +1,0 @@
-{
-  StringBuilder result=new StringBuilder();
-  result.append("(");
-  for (  ArgumentMatcher matcher : matchers) {
-    matcher.appendTo(result);
-    result.append(", ");
-  }
-  return result.toString().replaceFirst(", $","").concat(")");
-}
