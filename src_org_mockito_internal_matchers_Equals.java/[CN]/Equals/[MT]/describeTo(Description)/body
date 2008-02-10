@@ -1,5 +1,10 @@
 {
   appendQuoting(description);
-  description.appendText(wanted.toString());
+  if (wanted == null) {
+    description.appendText("null");
+  }
+ else {
+    description.appendText(wanted.toString());
+  }
   appendQuoting(description);
 }
