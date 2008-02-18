@@ -4,6 +4,6 @@
     fail();
   }
  catch (  MockitoException e) {
-    assertEquals("testClass cannot be null. For info how to use @Mock annotations see examples in javadoc for MockitoAnnotations",e.getMessage());
+    assertEquals("testClass cannot be null. For info how to use @Mock annotations see examples in javadoc for MockitoAnnotations class",e.getMessage());
   }
 }
