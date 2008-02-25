@@ -1,0 +1,3 @@
+{
+  return neverWanted() && actualCount > 0;
+}

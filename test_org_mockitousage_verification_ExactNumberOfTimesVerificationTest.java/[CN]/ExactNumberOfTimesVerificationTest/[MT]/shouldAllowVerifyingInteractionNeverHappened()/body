@@ -6,8 +6,6 @@
     verify(mock,never()).add("one");
     fail();
   }
- catch (  TooManyActualInvocations e) {
-    e.printStackTrace();
-    assertThat(e,messageContains("Wanted 0 times but was 1"));
+ catch (  NeverWantedButInvoked e) {
   }
 }

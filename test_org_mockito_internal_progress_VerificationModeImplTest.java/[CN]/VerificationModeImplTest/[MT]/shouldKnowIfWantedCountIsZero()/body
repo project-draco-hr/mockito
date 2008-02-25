@@ -1,6 +1,6 @@
 {
-  assertTrue(times(0).wantedCountIsZero());
-  assertFalse(times(1).wantedCountIsZero());
-  assertFalse(times(20).wantedCountIsZero());
-  assertFalse(atLeastOnce().wantedCountIsZero());
+  assertTrue(times(0).neverWanted());
+  assertFalse(times(1).neverWanted());
+  assertFalse(times(20).neverWanted());
+  assertFalse(atLeastOnce().neverWanted());
 }

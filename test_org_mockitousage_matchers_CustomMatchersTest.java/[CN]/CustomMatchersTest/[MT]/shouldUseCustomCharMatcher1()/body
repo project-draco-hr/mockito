@@ -1,0 +1,12 @@
+{
+  mock.simpleMethod(new Article(12,"Fabulous article"));
+  Article articleOnPage12=argThat(new ArgumentMatcher<Article>(){
+    public boolean matches(    Object argument){
+      Article o=(Article)argument;
+      assertEquals(12,o.getPageNumber());
+      return true;
+    }
+  }
+);
+  verify(mock).simpleMethod(articleOnPage12);
+}

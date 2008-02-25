@@ -3,7 +3,7 @@
     verify(mock,times(0)).simpleMethod(1);
     fail();
   }
- catch (  TooManyActualInvocations e) {
+ catch (  NeverWantedButInvoked e) {
     assertThat(e.getCause(),hasFirstMethodInStackTrace("first"));
   }
 }

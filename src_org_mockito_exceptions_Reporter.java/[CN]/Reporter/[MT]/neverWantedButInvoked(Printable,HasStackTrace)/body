@@ -1,0 +1,4 @@
+{
+  UndesiredInvocation cause=createUndesiredInvocationCause(firstUndesired);
+  throw new NeverWantedButInvoked(join(wanted.toString(),"Never wanted but invoked!"),cause);
+}

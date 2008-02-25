@@ -1,0 +1,9 @@
+{
+  assertFalse(times(1).neverWantedButInvoked(0));
+  assertFalse(times(10).neverWantedButInvoked(20));
+  assertFalse(times(0).neverWantedButInvoked(0));
+  assertFalse(atLeastOnce().neverWantedButInvoked(0));
+  assertFalse(atLeastOnce().neverWantedButInvoked(1));
+  assertTrue(times(0).neverWantedButInvoked(1));
+  assertTrue(times(0).neverWantedButInvoked(10));
+}

@@ -4,7 +4,7 @@
     verify(mock,times(0)).clear();
     fail();
   }
- catch (  TooManyActualInvocations e) {
-    assertThat(e,messageContains("Wanted 0 times but was 1"));
+ catch (  NeverWantedButInvoked e) {
+    assertThat(e,messageContains("Never wanted but invoked!"));
   }
 }

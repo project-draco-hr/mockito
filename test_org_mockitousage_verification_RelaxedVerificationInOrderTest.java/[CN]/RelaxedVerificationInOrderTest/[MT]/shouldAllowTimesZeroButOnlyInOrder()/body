@@ -5,6 +5,6 @@
     verify(mockOne,times(0)).simpleMethod(1);
     fail();
   }
- catch (  TooManyActualInvocations e) {
+ catch (  NeverWantedButInvoked e) {
   }
 }

@@ -1,0 +1,12 @@
+{
+  mock.simpleMethod(1);
+  verify(mock,never()).simpleMethod(2);
+  try {
+    verify(mock,never()).simpleMethod(1);
+    fail();
+  }
+ catch (  NeverWantedButInvoked e) {
+    assertThat(e,messageContains("Never wanted but invoked!"));
+    assertThat(e,causeMessageContains("Undesired invocation"));
+  }
+}
