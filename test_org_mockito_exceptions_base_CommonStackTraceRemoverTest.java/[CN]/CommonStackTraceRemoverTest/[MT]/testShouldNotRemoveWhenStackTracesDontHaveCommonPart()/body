@@ -1,0 +1,9 @@
+{
+  StackTraceElement elementOne=new StackTraceElement("MethodInterceptorFilter","intercept","MethodInterceptorFilter.java",49);
+  HasStackTrace trace=new HasStackTraceStub(elementOne);
+  StackTraceElement elementTwo=new StackTraceElement("Mockito","other","Mockito.java",90);
+  List<StackTraceElement> cause=Arrays.asList(elementTwo);
+  remover.remove(trace,cause);
+  assertEquals(1,trace.getStackTrace().length);
+  assertEquals(elementOne,trace.getStackTrace()[0]);
+}

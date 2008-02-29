@@ -8,6 +8,6 @@
     }
     i++;
   }
-  List<StackTraceElement> filtered=unfilteredStackTrace.subList(lastToRemove + 1,unfilteredStackTrace.size() - 1);
+  List<StackTraceElement> filtered=unfilteredStackTrace.subList(lastToRemove + 1,unfilteredStackTrace.size());
   hasStackTrace.setStackTrace(filtered.toArray(new StackTraceElement[]{}));
 }
