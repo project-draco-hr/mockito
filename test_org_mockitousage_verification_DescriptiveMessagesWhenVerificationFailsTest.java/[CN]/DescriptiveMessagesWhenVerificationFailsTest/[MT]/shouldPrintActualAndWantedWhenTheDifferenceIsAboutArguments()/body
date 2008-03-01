@@ -6,11 +6,11 @@
     verify(mock).twoArgumentMethod(1,1000);
     fail();
   }
- catch (  InvocationDiffersFromActual e) {
-    String expected="\n" + "Invocation differs from actual" + "\n"+ "Wanted invocation:"+ "\n"+ "IMethods.twoArgumentMethod(1, 1000)";
+ catch (  ArgumentsAreDifferentException e) {
+    String expected="\n" + "Argument(s) are different!" + "\n"+ "Method: IMethods.twoArgumentMethod(...)"+ "\n"+ "All wanted arguments:"+ "\n"+ "    1: 1"+ "\n"+ "    2: 1000";
     assertEquals(expected,e.getMessage());
     assertEquals(e.getCause().getClass(),WantedDiffersFromActual.class);
-    String expectedCause="\n" + "Actual invocation:" + "\n"+ "IMethods.twoArgumentMethod(1, 2)";
+    String expectedCause="\n" + "All actual arguments:" + "\n"+ "    1: 1"+ "\n"+ "    2: 2";
     assertEquals(expectedCause,e.getCause().getMessage());
   }
 }

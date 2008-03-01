@@ -6,10 +6,10 @@
     verify(sub).say("Hello");
     fail();
   }
- catch (  InvocationDiffersFromActual error) {
-    String expected="\n" + "Invocation differs from actual" + "\n"+ "Wanted invocation:"+ "\n"+ "Sub.say(class java.lang.String)";
+ catch (  ArgumentsAreDifferentException error) {
+    String expected="\n" + "Argument(s) are different!" + "\n"+ "Method: Sub.say(...)"+ "\n"+ "All wanted arguments:"+ "\n"+ "    1: class java.lang.String";
     assertEquals(expected,error.getMessage());
-    String expectedCause="\n" + "Actual invocation:" + "\n"+ "Sub.say(class java.lang.Object)";
+    String expectedCause="\n" + "All actual arguments:" + "\n"+ "    1: class java.lang.Object";
     assertEquals(expectedCause,error.getCause().getMessage());
   }
 }

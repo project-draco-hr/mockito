@@ -3,7 +3,8 @@
   Invocation actualInvocation=new InvocationBuilder().toInvocation();
   finderStub.similarToReturn=actualInvocation;
   verifier.verify(invocations,wanted,VerificationModeImpl.atLeastOnce());
-  assertEquals(wanted.toString(),reporterStub.wanted.toString());
-  assertEquals(actualInvocation.toString(),reporterStub.actual.toString());
+  assertNotNull(reporterStub.wanted);
+  assertNotNull(reporterStub.actualArgs);
+  assertNotNull(reporterStub.wantedArgs);
   assertSame(actualInvocation.getStackTrace(),reporterStub.actualInvocationStackTrace);
 }

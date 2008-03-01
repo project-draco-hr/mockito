@@ -4,8 +4,12 @@
     verify(mock).varargsString(10,"two","one");
     fail();
   }
- catch (  InvocationDiffersFromActual e) {
-    assertThat(e,messageContains("IMethods.varargsString(10, \"two\", \"one\")"));
-    assertThat(e,causeMessageContains("IMethods.varargsString(10, \"one\", \"two\")"));
+ catch (  ArgumentsAreDifferentException e) {
+    assertThat(e,messageContains("1: 10"));
+    assertThat(e,messageContains("2: \"two\""));
+    assertThat(e,messageContains("3: \"one\""));
+    assertThat(e,causeMessageContains("1: 10"));
+    assertThat(e,causeMessageContains("2: \"one\""));
+    assertThat(e,causeMessageContains("3: \"two\""));
   }
 }

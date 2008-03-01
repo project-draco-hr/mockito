@@ -1,0 +1,5 @@
+{
+  super();
+  this.pageNumber=pageNumber;
+  this.headline=headline;
+}

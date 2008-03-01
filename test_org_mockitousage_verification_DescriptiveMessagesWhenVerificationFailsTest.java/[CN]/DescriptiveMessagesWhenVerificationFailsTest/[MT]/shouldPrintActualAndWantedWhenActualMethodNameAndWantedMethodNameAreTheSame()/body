@@ -4,8 +4,8 @@
     verify(mock).simpleMethod("test");
     fail();
   }
- catch (  InvocationDiffersFromActual e) {
-    assertThat(e,messageContains("IMethods.simpleMethod(\"test\")"));
-    assertThat(e,causeMessageContains("IMethods.simpleMethod()"));
+ catch (  ArgumentsAreDifferentException e) {
+    assertThat(e,messageContains("    1: \"test\""));
+    assertThat(e,causeMessageContains("    <no arguments>"));
   }
 }

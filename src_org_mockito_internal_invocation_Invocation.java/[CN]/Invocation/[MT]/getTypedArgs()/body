@@ -1,0 +1,12 @@
+{
+  StringBuilder result=new StringBuilder();
+  Class<?>[] types=getMethod().getParameterTypes();
+  for (int i=0; i < types.length; i++) {
+    Class<?> paramType=types[i];
+    result.append(TAB).append(i + 1).append(": ").append(paramType);
+    if (i != types.length - 1) {
+      result.append("\n");
+    }
+  }
+  return result.toString();
+}

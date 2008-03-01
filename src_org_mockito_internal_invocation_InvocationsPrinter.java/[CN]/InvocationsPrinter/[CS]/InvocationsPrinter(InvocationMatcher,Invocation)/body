@@ -1,10 +1,11 @@
 {
+  wanted=wantedInvocation.getMethodName();
   if (wantedInvocation.differsWithArgumentTypes(actualInvocation)) {
-    wanted=wantedInvocation.toStringWithArgumentTypes();
-    actual=actualInvocation.toStringWithArgumentTypes();
+    wantedArgs=wantedInvocation.getTypedArgs();
+    actualArgs=actualInvocation.getTypedArgs();
   }
  else {
-    wanted=wantedInvocation.toString();
-    actual=actualInvocation.toString();
+    wantedArgs=wantedInvocation.getArgs();
+    actualArgs=actualInvocation.getArgs();
   }
 }

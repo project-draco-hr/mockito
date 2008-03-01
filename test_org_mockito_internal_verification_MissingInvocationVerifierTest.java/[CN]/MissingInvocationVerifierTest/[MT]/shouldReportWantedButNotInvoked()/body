@@ -3,4 +3,5 @@
   finderStub.similarToReturn=null;
   verifier.verify(invocations,wanted,VerificationModeImpl.atLeastOnce());
   assertEquals(wanted,reporterStub.wanted);
+  assertNull(reporterStub.actualInvocationStackTrace);
 }

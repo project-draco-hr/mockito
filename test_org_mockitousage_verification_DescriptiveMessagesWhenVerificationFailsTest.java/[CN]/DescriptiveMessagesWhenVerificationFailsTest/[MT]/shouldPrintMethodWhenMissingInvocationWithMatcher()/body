@@ -1,11 +1,11 @@
 {
   mock.simpleMethod("foo");
   try {
-    verify(mock).simpleMethod(matches("burrito"));
+    verify(mock).simpleMethod(matches("burrito from Exmouth"));
     fail();
   }
- catch (  InvocationDiffersFromActual e) {
-    assertThat(e,messageContains("IMethods.simpleMethod(matches(\"burrito\"))"));
-    assertThat(e,causeMessageContains("IMethods.simpleMethod(\"foo\")"));
+ catch (  ArgumentsAreDifferentException e) {
+    assertThat(e,messageContains("1: matches(\"burrito from Exmouth\")"));
+    assertThat(e,causeMessageContains("1: \"foo\""));
   }
 }

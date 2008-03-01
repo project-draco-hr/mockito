@@ -1,0 +1,4 @@
+{
+  String arg=(String)argument;
+  return arg.contains("xxx");
+}

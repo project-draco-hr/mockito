@@ -4,8 +4,8 @@
     verify(mock).varargs((String[])new String[]{});
     fail();
   }
- catch (  InvocationDiffersFromActual e) {
-    assertThat(e,messageContains("IMethods.varargs(class [Ljava.lang.String;)"));
-    assertThat(e,causeMessageContains("IMethods.varargs(class [Ljava.lang.Object;)"));
+ catch (  ArgumentsAreDifferentException e) {
+    assertThat(e,messageContains("1: class [Ljava.lang.String;"));
+    assertThat(e,causeMessageContains("1: class [Ljava.lang.Object;"));
   }
 }

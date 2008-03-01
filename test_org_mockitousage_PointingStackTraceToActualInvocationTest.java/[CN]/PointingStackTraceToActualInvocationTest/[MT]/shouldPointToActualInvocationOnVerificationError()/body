@@ -3,7 +3,7 @@
     verify(mock).simpleMethod(999);
     fail();
   }
- catch (  InvocationDiffersFromActual e) {
+ catch (  ArgumentsAreDifferentException e) {
     assertThat(e.getCause(),hasFirstMethodInStackTrace("first"));
   }
 }

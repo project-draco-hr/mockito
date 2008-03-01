@@ -1,0 +1,16 @@
+{
+  if (matchers.isEmpty()) {
+    return TAB + "<no arguments>";
+  }
+  Description d=new StringDescription();
+  for (int i=0; i < matchers.size(); i++) {
+    d.appendText(TAB);
+    d.appendText(String.valueOf(i + 1));
+    d.appendText(": ");
+    d.appendDescriptionOf(matchers.get(i));
+    if (i != matchers.size() - 1) {
+      d.appendText("\n");
+    }
+  }
+  return d.toString();
+}

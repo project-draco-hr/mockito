@@ -1,6 +1,6 @@
 {
-  List<Matcher> matchers=new LinkedList<Matcher>();
-  for (  Object arg : this.arguments) {
+  List<Matcher> matchers=new ArrayList<Matcher>(arguments.length);
+  for (  Object arg : arguments) {
     if (arg != null && arg.getClass().isArray()) {
       matchers.add(new ArrayEquals(arg));
     }

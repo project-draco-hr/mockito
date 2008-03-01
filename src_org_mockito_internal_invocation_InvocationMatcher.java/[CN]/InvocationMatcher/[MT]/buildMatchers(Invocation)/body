@@ -1,0 +1,7 @@
+{
+  List<Matcher> result=new ArrayList<Matcher>();
+  for (  Object argument : invocation.getArguments()) {
+    result.add(new Equals(argument));
+  }
+  return result;
+}
