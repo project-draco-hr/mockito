@@ -1,0 +1,3 @@
+{
+  return invocation.getMock().equals(actual.getMock()) && invocation.getMethod().getName().equals(actual.getMethod().getName()) && !invocation.getMethod().equals(actual.getMethod());
+}

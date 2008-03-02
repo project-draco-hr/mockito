@@ -1,8 +1,0 @@
-{
-  Invocation onDifferentMock=new InvocationBuilder().simpleMethod().mock("different mock").toInvocation();
-  invocations.addFirst(onDifferentMock);
-  simpleMethodInvocation.markVerified();
-  simpleMethodInvocationTwo.markVerified();
-  Invocation found=finder.findSimilarInvocation(invocations,new InvocationMatcher(simpleMethodInvocation),atLeastOnce());
-  assertNotSame(onDifferentMock,found);
-}

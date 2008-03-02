@@ -1,0 +1,4 @@
+{
+  Invocation onDifferentMock=new InvocationBuilder().simpleMethod().mock("different mock").toInvocation();
+  assertFalse(simpleMethod.isSimilarTo(onDifferentMock));
+}

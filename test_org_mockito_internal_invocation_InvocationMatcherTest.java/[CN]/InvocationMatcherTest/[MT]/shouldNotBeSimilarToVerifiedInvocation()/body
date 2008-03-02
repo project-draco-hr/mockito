@@ -1,0 +1,4 @@
+{
+  Invocation verified=new InvocationBuilder().simpleMethod().verified().toInvocation();
+  assertFalse(simpleMethod.isSimilarTo(verified));
+}

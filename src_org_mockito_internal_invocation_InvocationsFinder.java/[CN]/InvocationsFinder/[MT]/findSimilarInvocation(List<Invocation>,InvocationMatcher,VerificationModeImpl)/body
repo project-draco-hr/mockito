@@ -1,12 +1,6 @@
 {
   for (  Invocation invocation : invocations) {
-    String wantedMethodName=wanted.getMethod().getName();
-    String currentMethodName=invocation.getMethod().getName();
-    boolean methodNameEquals=wantedMethodName.equals(currentMethodName);
-    boolean isUnverified=!invocation.isVerified();
-    boolean mockIsTheSame=wanted.getInvocation().getMock() == invocation.getMock();
-    boolean isOverloaded=wanted.isOverloadedVersionOf(invocation);
-    if (methodNameEquals && isUnverified && mockIsTheSame&& !isOverloaded) {
+    if (wanted.isSimilarTo(invocation)) {
       return invocation;
     }
   }

@@ -1,4 +1,5 @@
 {
+  Object[] arguments=actual.getArguments();
   if (arguments.length != matchers.size()) {
     return false;
   }

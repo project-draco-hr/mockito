@@ -1,0 +1,3 @@
+{
+  simpleMethod=new InvocationBuilder().simpleMethod().toInvocationMatcher();
+}
