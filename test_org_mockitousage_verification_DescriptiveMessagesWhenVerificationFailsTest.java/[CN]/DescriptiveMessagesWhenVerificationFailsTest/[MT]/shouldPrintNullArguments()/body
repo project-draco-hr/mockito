@@ -1,5 +1,5 @@
 {
-  mock.simpleMethod(null,null);
+  mock.simpleMethod(null,(Integer)null);
   try {
     verify(mock).simpleMethod("test");
     fail();
