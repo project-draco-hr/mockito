@@ -1,0 +1,5 @@
+{
+  Invocation i=new InvocationBuilder().args("foo",new String[]{"bar"}).toInvocation();
+  List matchers=i.argumentsToMatchers();
+  assertThat(matchers,IsCollectionContaining.hasItems(CoreMatchers.is(Equals.class),CoreMatchers.is(ArrayEquals.class)));
+}
