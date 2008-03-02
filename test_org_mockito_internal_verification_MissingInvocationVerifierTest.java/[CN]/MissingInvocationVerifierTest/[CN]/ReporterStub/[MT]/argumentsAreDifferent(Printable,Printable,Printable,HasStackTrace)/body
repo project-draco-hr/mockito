@@ -1,6 +1,0 @@
-{
-  this.wanted=wanted;
-  this.wantedArgs=wantedArgs;
-  this.actualArgs=actualArgs;
-  this.actualInvocationStackTrace=actualInvocationStackTrace;
-}

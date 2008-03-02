@@ -1,5 +1,0 @@
-{
-  wanted=wantedInvocation.getMethodName();
-  wantedArgs=wantedInvocation.getArgs();
-  actualArgs=actualInvocation.getArgs();
-}

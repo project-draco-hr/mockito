@@ -4,7 +4,6 @@
   finderStub.similarToReturn=actualInvocation;
   verifier.verify(invocations,wanted,VerificationModeImpl.atLeastOnce());
   assertNotNull(reporterStub.wanted);
-  assertNotNull(reporterStub.actualArgs);
-  assertNotNull(reporterStub.wantedArgs);
+  assertNotNull(reporterStub.actual);
   assertSame(actualInvocation.getStackTrace(),reporterStub.actualInvocationStackTrace);
 }

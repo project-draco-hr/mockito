@@ -1,8 +1,0 @@
-{
-  InvocationMatcher simpleMethod=new InvocationBuilder().simpleMethod().arg("test").toInvocationMatcher();
-  Invocation differentMethod=new InvocationBuilder().differentMethod().arg("foo").toInvocation();
-  InvocationsPrinter printer=new InvocationsPrinter(simpleMethod,differentMethod);
-  assertEquals("Object.simpleMethod(...)",printer.getWanted().toString());
-  assertEquals("    1st: \"test\"",printer.getWantedArgs().toString());
-  assertEquals("    1st: \"foo\"",printer.getActualArgs().toString());
-}
