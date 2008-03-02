@@ -9,9 +9,9 @@
     fail();
   }
  catch (  ArgumentsAreDifferentException e) {
-    assertThat(e,messageContains("1: 3"));
-    assertThat(e,messageContains("2: 1000"));
-    assertThat(e,causeMessageContains("1: 3"));
-    assertThat(e,causeMessageContains("2: 3"));
+    assertThat(e,messageContains("1st: 3"));
+    assertThat(e,messageContains("2nd: 1000"));
+    assertThat(e,causeMessageContains("1st: 3"));
+    assertThat(e,causeMessageContains("2nd: 3"));
   }
 }
