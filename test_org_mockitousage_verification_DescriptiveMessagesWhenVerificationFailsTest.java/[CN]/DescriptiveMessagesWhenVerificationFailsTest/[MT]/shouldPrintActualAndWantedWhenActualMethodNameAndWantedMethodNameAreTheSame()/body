@@ -6,6 +6,6 @@
   }
  catch (  ArgumentsAreDifferentException e) {
     assertThat(e,messageContains("    1st: \"test\""));
-    assertThat(e,causeMessageContains("    <no arguments>"));
+    assertThat(e,causeMessageContains("    <NO ARGUMENTS>"));
   }
 }

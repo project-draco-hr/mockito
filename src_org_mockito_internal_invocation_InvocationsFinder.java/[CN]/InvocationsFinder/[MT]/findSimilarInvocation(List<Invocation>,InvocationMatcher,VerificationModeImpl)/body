@@ -5,7 +5,8 @@
     boolean methodNameEquals=wantedMethodName.equals(currentMethodName);
     boolean isUnverified=!invocation.isVerified();
     boolean mockIsTheSame=wanted.getInvocation().getMock() == invocation.getMock();
-    if (methodNameEquals && isUnverified && mockIsTheSame) {
+    boolean isOverloaded=wanted.isOverloadedVersionOf(invocation);
+    if (methodNameEquals && isUnverified && mockIsTheSame&& !isOverloaded) {
       return invocation;
     }
   }

@@ -1,6 +1,6 @@
 {
   if (matchers.isEmpty()) {
-    return TAB + "<no arguments>";
+    return TAB + "<NO ARGUMENTS>";
   }
   Description d=new StringDescription();
   for (int i=0; i < matchers.size(); i++) {
