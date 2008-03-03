@@ -1,5 +1,5 @@
 {
-  WantedDiffersFromActual cause=new WantedDiffersFromActual(join("All actual arguments:",actual.getArgs()));
+  ActualArgumentsAreDifferent cause=new ActualArgumentsAreDifferent(join("All actual arguments:",actual.getArgs()));
   cause.setStackTrace(actualStackTrace.getStackTrace());
-  throw new ArgumentsAreDifferentException(join("Argument(s) are different!","Method: " + wanted.getMethodName(),"All wanted arguments:",wanted.getArgs()),cause);
+  throw new ArgumentsAreDifferentException(join("Argument(s) are different!","    " + wanted.getMethodName(),"All wanted arguments:",wanted.getArgs()),cause);
 }

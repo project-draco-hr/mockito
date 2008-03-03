@@ -7,9 +7,9 @@
     fail();
   }
  catch (  ArgumentsAreDifferentException e) {
-    String expected="\n" + "Argument(s) are different!" + "\n"+ "Method: IMethods.twoArgumentMethod(...)"+ "\n"+ "All wanted arguments:"+ "\n"+ "    1st: 1"+ "\n"+ "    2nd: 1000";
+    String expected="\n" + "Argument(s) are different!" + "\n"+ "    IMethods.twoArgumentMethod(...)"+ "\n"+ "All wanted arguments:"+ "\n"+ "    1st: 1"+ "\n"+ "    2nd: 1000";
     assertEquals(expected,e.getMessage());
-    assertEquals(e.getCause().getClass(),WantedDiffersFromActual.class);
+    assertEquals(e.getCause().getClass(),ActualArgumentsAreDifferent.class);
     String expectedCause="\n" + "All actual arguments:" + "\n"+ "    1st: 1"+ "\n"+ "    2nd: 2";
     assertEquals(expectedCause,e.getCause().getMessage());
   }
