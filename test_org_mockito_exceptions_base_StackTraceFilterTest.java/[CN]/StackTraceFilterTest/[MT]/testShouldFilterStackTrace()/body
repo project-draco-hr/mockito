@@ -1,9 +1,0 @@
-{
-  StackTraceElement first=new StackTraceElement("MethodInterceptorFilter","intercept","MethodInterceptorFilter.java",49);
-  StackTraceElement second=new StackTraceElement("List$$EnhancerByCGLIB$$2c406024","add","<generated>",0);
-  StackTraceElement third=new StackTraceElement("MockitoSampleTest","main","MockitoSampleTest.java",100);
-  HasStackTraceStub trace=new HasStackTraceStub(first,second,third);
-  filter.filterStackTrace(trace);
-  assertEquals(1,trace.getStackTrace().length);
-  assertEquals(third,trace.getStackTrace()[0]);
-}
