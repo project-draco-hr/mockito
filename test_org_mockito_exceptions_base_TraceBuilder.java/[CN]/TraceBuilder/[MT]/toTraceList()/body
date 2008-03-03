@@ -1,0 +1,8 @@
+{
+  List<StackTraceElement> trace=new LinkedList<StackTraceElement>();
+  for (  String method : methods) {
+    trace.add(new StackTraceElement("SomeClass",method,"SomeClass.java",50));
+  }
+  Collections.reverse(trace);
+  return trace;
+}

@@ -1,10 +1,11 @@
 {
   String wantedMethodName=getMethod().getName();
   String currentMethodName=candidate.getMethod().getName();
-  boolean methodNameEquals=wantedMethodName.equals(currentMethodName);
-  boolean isUnverified=!candidate.isVerified();
-  boolean mockIsTheSame=getInvocation().getMock() == candidate.getMock();
-  boolean overloadedButSameArgs=isOverloaded(candidate) && argumentsMatch(candidate);
+  final boolean methodNameEquals=wantedMethodName.equals(currentMethodName);
+  final boolean isUnverified=!candidate.isVerified();
+  final boolean mockIsTheSame=getInvocation().getMock() == candidate.getMock();
+  final boolean methodEquals=invocation.getMethod().equals(candidate.getMethod());
+  final boolean overloadedButSameArgs=!methodEquals && argumentsMatch(candidate);
   if (methodNameEquals && isUnverified && mockIsTheSame&& !overloadedButSameArgs) {
     return true;
   }

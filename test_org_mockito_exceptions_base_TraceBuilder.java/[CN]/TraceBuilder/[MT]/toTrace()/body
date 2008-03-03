@@ -1,0 +1,4 @@
+{
+  List<StackTraceElement> trace=toTraceList();
+  return new HasStackTraceStub(trace.toArray(new StackTraceElement[methods.length]));
+}
