@@ -1,6 +1,0 @@
-{
-  Matcher matcher=new StringWithDirtyWords();
-  StringDescription d=new StringDescription();
-  matcher.describeTo(d);
-  assertEquals("String with dirty words",d.toString());
-}

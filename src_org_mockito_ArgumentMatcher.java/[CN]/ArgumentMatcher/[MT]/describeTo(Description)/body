@@ -1,3 +1,4 @@
 {
-  description.appendText(deCamelCase());
+  String className=getClass().getSimpleName();
+  description.appendText(Decamelizer.decamelizeMatcher(className));
 }
