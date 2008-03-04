@@ -1,0 +1,6 @@
+{
+  Matcher matcher=new WEIRDO1();
+  StringDescription d=new StringDescription();
+  matcher.describeTo(d);
+  assertEquals("W e i r d o1",d.toString());
+}

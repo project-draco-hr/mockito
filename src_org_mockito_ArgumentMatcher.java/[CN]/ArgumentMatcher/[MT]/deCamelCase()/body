@@ -1,0 +1,21 @@
+{
+  String className=getClass().getSimpleName();
+  if (className.length() == 0) {
+    return "<custom argument matcher>";
+  }
+  java.util.regex.Matcher match=CAPS.matcher(className);
+  StringBuilder deCameled=new StringBuilder();
+  while (match.find()) {
+    if (deCameled.length() == 0) {
+      deCameled.append(match.group());
+    }
+ else {
+      deCameled.append(" ");
+      deCameled.append(match.group().toLowerCase());
+    }
+  }
+  if (deCameled.length() == 0) {
+    return className;
+  }
+  return deCameled.toString();
+}

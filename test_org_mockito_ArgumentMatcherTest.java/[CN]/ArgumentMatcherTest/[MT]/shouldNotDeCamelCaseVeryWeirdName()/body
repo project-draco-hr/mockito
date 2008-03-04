@@ -1,0 +1,6 @@
+{
+  Matcher matcher=new _();
+  StringDescription d=new StringDescription();
+  matcher.describeTo(d);
+  assertEquals("_",d.toString());
+}
