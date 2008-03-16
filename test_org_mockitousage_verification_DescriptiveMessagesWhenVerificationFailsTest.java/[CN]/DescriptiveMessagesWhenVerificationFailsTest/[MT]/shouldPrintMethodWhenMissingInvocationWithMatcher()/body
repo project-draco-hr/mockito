@@ -4,7 +4,7 @@
     verify(mock).simpleMethod(matches("burrito from Exmouth"));
     fail();
   }
- catch (  ArgumentsAreDifferentException e) {
+ catch (  ArgumentsAreDifferent e) {
     assertThat(e,messageContains("matches(\"burrito from Exmouth\")"));
     assertThat(e,causeMessageContains("\"foo\""));
   }

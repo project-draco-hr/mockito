@@ -7,13 +7,13 @@
     verify(mock).simpleMethod("one");
     fail();
   }
- catch (  ArgumentsAreDifferentException e) {
+ catch (  ArgumentsAreDifferent e) {
   }
   try {
     verify(mock).simpleMethod("two");
     fail();
   }
- catch (  ArgumentsAreDifferentException e) {
+ catch (  ArgumentsAreDifferent e) {
   }
   try {
     verifyNoMoreInteractions(mock);

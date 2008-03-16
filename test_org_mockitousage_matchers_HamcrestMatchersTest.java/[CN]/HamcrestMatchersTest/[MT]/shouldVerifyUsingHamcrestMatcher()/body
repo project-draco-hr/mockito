@@ -4,7 +4,7 @@
     verify(mock).simpleMethod(argThat(new ContainsX()));
     fail();
   }
- catch (  ArgumentsAreDifferentException e) {
+ catch (  ArgumentsAreDifferent e) {
     assertThat(e,messageContains("contains 'X'"));
   }
 }

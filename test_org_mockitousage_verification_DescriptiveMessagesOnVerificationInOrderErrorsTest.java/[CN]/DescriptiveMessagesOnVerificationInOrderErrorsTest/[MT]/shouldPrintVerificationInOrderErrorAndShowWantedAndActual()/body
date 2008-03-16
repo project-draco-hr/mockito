@@ -3,7 +3,7 @@
     inOrder.verify(one).simpleMethod(999);
     fail();
   }
- catch (  ArgumentsAreDifferentException e) {
+ catch (  ArgumentsAreDifferent e) {
     String expected="\n" + "Arguments are different!" + "\n"+ "IMethods.simpleMethod(999)";
     assertEquals(expected,e.getMessage());
     assertEquals(null,e.getCause());

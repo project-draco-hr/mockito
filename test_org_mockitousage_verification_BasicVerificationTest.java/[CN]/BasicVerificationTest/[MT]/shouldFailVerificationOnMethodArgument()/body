@@ -6,6 +6,6 @@
     verify(mock).add("bar");
     fail();
   }
- catch (  ArgumentsAreDifferentException expected) {
+ catch (  ArgumentsAreDifferent expected) {
   }
 }

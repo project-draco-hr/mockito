@@ -6,7 +6,7 @@
     verify(mock).twoArgumentMethod(1,1000);
     fail();
   }
- catch (  ArgumentsAreDifferentException e) {
+ catch (  ArgumentsAreDifferent e) {
     String expected="\n" + "Argument(s) are different!" + "\n"+ "    IMethods.twoArgumentMethod(...)"+ "\n"+ "All wanted arguments:"+ "\n"+ "    1st: 1"+ "\n"+ "    2nd: 1000";
     assertEquals(expected,e.getMessage());
     assertEquals(e.getCause().getClass(),ActualArgumentsAreDifferent.class);

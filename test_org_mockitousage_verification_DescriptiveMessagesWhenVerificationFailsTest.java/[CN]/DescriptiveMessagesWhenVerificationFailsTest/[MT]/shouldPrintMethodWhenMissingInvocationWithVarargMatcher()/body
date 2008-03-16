@@ -4,7 +4,7 @@
     verify(mock).varargsString(10,"two","one","three");
     fail();
   }
- catch (  ArgumentsAreDifferentException e) {
+ catch (  ArgumentsAreDifferent e) {
     assertThat(e,messageContains("1st: 10"));
     assertThat(e,messageContains("2nd: \"two\""));
     assertThat(e,messageContains("3rd: \"one\""));

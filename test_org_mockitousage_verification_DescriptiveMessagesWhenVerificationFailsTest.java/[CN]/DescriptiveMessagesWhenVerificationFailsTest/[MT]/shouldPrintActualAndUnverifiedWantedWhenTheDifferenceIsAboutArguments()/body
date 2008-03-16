@@ -8,7 +8,7 @@
     verify(mock).twoArgumentMethod(3,1000);
     fail();
   }
- catch (  ArgumentsAreDifferentException e) {
+ catch (  ArgumentsAreDifferent e) {
     assertThat(e,messageContains("1st: 3"));
     assertThat(e,messageContains("2nd: 1000"));
     assertThat(e,causeMessageContains("1st: 3"));

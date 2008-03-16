@@ -1,0 +1,16 @@
+{
+  mock.simpleMethod("foo");
+  try {
+    verify(mock).simpleMethod(argThat(new ArgumentMatcher<Object>(){
+      @Override public boolean matches(      Object argument){
+        return false;
+      }
+    }
+));
+    fail();
+  }
+ catch (  ArgumentsAreDifferent e) {
+    assertThat(e,messageContains("1st: <custom argument matcher>"));
+    assertThat(e,causeMessageContains("1st: \"foo\""));
+  }
+}

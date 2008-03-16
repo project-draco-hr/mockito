@@ -4,7 +4,7 @@
     verify(mock).simpleMethod("test");
     fail();
   }
- catch (  ArgumentsAreDifferentException e) {
+ catch (  ArgumentsAreDifferent e) {
     assertThat(e,messageContains("    1st: \"test\""));
     assertThat(e,causeMessageContains("    <NO ARGUMENTS>"));
   }
