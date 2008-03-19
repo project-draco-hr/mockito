@@ -1,0 +1,8 @@
+{
+  return new Assertor<Throwable>(){
+    public void assertValue(    Throwable value){
+      assertTrue("String: " + value.getMessage() + " should contain: "+ text,((Throwable)value).getMessage().contains(text));
+    }
+  }
+;
+}

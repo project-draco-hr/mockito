@@ -6,7 +6,6 @@
     fail();
   }
  catch (  ArgumentsAreDifferent e) {
-    e.printStackTrace();
     assertThat(e,messageContains("bar"));
     assertThat(e,causeMessageContains("foo"));
   }
