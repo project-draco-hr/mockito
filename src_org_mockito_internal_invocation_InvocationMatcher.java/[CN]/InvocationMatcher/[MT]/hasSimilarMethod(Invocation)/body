@@ -4,7 +4,7 @@
   final boolean methodNameEquals=wantedMethodName.equals(currentMethodName);
   final boolean isUnverified=!candidate.isVerified();
   final boolean mockIsTheSame=getInvocation().getMock() == candidate.getMock();
-  final boolean methodEquals=invocation.getMethod().equals(candidate.getMethod());
+  final boolean methodEquals=hasSameMethod(candidate);
   final boolean overloadedButSameArgs=!methodEquals && argumentsMatch(candidate);
   if (methodNameEquals && isUnverified && mockIsTheSame&& !overloadedButSameArgs) {
     return true;

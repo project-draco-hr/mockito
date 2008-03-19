@@ -1,8 +1,15 @@
 {
+  Invocation firstSimilar=null;
   for (  Invocation invocation : invocations) {
-    if (wanted.isSimilarTo(invocation)) {
+    if (!wanted.hasSimilarMethod(invocation)) {
+      continue;
+    }
+    if (firstSimilar == null) {
+      firstSimilar=invocation;
+    }
+    if (wanted.hasSameMethod(invocation)) {
       return invocation;
     }
   }
-  return null;
+  return firstSimilar;
 }

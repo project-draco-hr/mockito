@@ -1,0 +1,5 @@
+{
+  Invocation overloadedSimpleMethod=new InvocationBuilder().simpleMethod().arg("test").toInvocation();
+  Invocation found=finder.findSimilarInvocation(invocations,new InvocationMatcher(overloadedSimpleMethod),atLeastOnce());
+  assertSame(found,simpleMethodInvocation);
+}

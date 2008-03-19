@@ -4,5 +4,5 @@
   String sameArg="test";
   InvocationMatcher invocation=new InvocationBuilder().method(method).arg(sameArg).toInvocationMatcher();
   Invocation overloadedInvocation=new InvocationBuilder().method(overloadedMethod).arg(sameArg).toInvocation();
-  assertFalse(invocation.isSimilarTo(overloadedInvocation));
+  assertFalse(invocation.hasSimilarMethod(overloadedInvocation));
 }
