@@ -5,6 +5,6 @@
     fail();
   }
  catch (  ArgumentsAreDifferent e) {
-    assertThat(e,messageContains("simpleMethod(<String that contains xxx>);"));
+    assertThat(e,messageContains("simpleMethod(\n    <String that contains xxx>\n);"));
   }
 }

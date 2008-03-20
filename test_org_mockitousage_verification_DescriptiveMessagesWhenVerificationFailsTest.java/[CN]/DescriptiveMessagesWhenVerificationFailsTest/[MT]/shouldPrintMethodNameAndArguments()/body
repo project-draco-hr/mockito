@@ -1,9 +1,9 @@
 {
   try {
-    verify(mock).threeArgumentMethod(12,new SomeClass(),"xx");
+    verify(mock).threeArgumentMethod(12,new Foo(),"xx");
     fail();
   }
  catch (  WantedButNotInvoked e) {
-    assertThat(e,messageContains("IMethods.threeArgumentMethod(12, SomeClass instance, \"xx\")"));
+    assertThat(e,messageContains("IMethods.threeArgumentMethod(12, foo, \"xx\")"));
   }
 }

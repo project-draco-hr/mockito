@@ -1,11 +1,11 @@
 {
-  mock.varargsString(10,"one","two","three");
+  mock.varargsString(10,"xxx","yyy","zzz");
   try {
-    verify(mock).varargsString(10,"two","one","three");
+    verify(mock).varargsString(10,"111","222","333");
     fail();
   }
  catch (  ArgumentsAreDifferent e) {
-    assertThat(e,messageContains("(10, \"two\""));
-    assertThat(e,causeMessageContains("(10, \"one\""));
+    assertThat(e,messageContains("111"));
+    assertThat(e,causeMessageContains("\"xxx\""));
   }
 }

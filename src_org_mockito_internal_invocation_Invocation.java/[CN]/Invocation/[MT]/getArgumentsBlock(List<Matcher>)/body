@@ -1,0 +1,5 @@
+{
+  Description result=new StringDescription();
+  result.appendList("(\n    ",",\n    ","\n);",matchers);
+  return result.toString();
+}
