@@ -4,7 +4,7 @@
   }
   String decamelized=decamelizeClassName(className);
   if (decamelized.length() == 0) {
-    return className;
+    return "<" + className + ">";
   }
-  return decamelized.toString();
+  return "<" + decamelized + ">";
 }

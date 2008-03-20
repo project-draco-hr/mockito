@@ -1,4 +1,4 @@
 {
   invocation=new InvocationBuilder().args("foo").toInvocation();
-  assertEquals("Object.simpleMethod(\"foo\")",invocation.toString());
+  assertEquals("Object.simpleMethod(\"foo\");",invocation.toString());
 }

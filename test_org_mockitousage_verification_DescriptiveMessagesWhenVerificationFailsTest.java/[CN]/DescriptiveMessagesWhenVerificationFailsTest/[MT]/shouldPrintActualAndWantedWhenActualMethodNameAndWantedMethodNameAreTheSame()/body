@@ -1,11 +1,11 @@
 {
   mock.simpleMethod();
   try {
-    verify(mock).simpleMethod("test");
+    verify(mock).simpleMethod(10);
     fail();
   }
  catch (  ArgumentsAreDifferent e) {
-    assertThat(e,messageContains("    1st: \"test\""));
-    assertThat(e,causeMessageContains("    <NO ARGUMENTS>"));
+    assertThat(e,messageContains("simpleMethod(10)"));
+    assertThat(e,causeMessageContains("simpleMethod()"));
   }
 }

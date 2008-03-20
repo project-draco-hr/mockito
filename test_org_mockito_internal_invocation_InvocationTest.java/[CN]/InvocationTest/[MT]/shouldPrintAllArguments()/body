@@ -1,5 +1,0 @@
-{
-  Invocation i=new InvocationBuilder().args(new Object[]{"1",2,3,4,5}).toInvocation();
-  String expected="    1st: \"1\"\n" + "    2nd: 2\n" + "    3rd: 3\n"+ "    4th: 4\n"+ "    5th: 5";
-  assertEquals(expected,i.getArgs());
-}

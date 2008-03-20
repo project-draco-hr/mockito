@@ -1,5 +1,11 @@
 {
   Description result=new StringDescription();
-  result.appendList("(",", ",")",matchers);
+  result.appendList("(",", ",");",matchers);
+  String args=result.toString();
+  if (args.length() < MAX_LINE_LENGTH) {
+    return args;
+  }
+  result=new StringDescription();
+  result.appendList("(\n    ",",\n    ","\n  );",matchers);
   return result.toString();
 }

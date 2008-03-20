@@ -5,13 +5,7 @@
     fail();
   }
  catch (  ArgumentsAreDifferent e) {
-    assertThat(e,messageContains("1st: 10"));
-    assertThat(e,messageContains("2nd: \"two\""));
-    assertThat(e,messageContains("3rd: \"one\""));
-    assertThat(e,messageContains("4th: \"three\""));
-    assertThat(e,causeMessageContains("1st: 10"));
-    assertThat(e,causeMessageContains("2nd: \"one\""));
-    assertThat(e,causeMessageContains("3rd: \"two\""));
-    assertThat(e,causeMessageContains("4th: \"three\""));
+    assertThat(e,messageContains("(10, \"two\""));
+    assertThat(e,causeMessageContains("(10, \"one\""));
   }
 }

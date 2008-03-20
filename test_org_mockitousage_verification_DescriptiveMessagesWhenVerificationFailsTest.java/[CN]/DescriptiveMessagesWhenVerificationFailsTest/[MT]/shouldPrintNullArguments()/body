@@ -5,7 +5,6 @@
     fail();
   }
  catch (  ArgumentsAreDifferent e) {
-    assertThat(e,causeMessageContains("1st: null"));
-    assertThat(e,causeMessageContains("2nd: null"));
+    assertThat(e,causeMessageContains("simpleMethod(null, null);"));
   }
 }

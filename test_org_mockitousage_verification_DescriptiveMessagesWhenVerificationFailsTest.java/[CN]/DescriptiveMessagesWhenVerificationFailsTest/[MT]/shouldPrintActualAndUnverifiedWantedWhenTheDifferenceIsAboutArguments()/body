@@ -1,17 +1,13 @@
 {
   mock.twoArgumentMethod(1,1);
   mock.twoArgumentMethod(2,2);
-  mock.twoArgumentMethod(3,3);
   verify(mock).twoArgumentMethod(1,1);
-  verify(mock).twoArgumentMethod(2,2);
   try {
-    verify(mock).twoArgumentMethod(3,1000);
+    verify(mock).twoArgumentMethod(2,1000);
     fail();
   }
  catch (  ArgumentsAreDifferent e) {
-    assertThat(e,messageContains("1st: 3"));
-    assertThat(e,messageContains("2nd: 1000"));
-    assertThat(e,causeMessageContains("1st: 3"));
-    assertThat(e,causeMessageContains("2nd: 3"));
+    assertThat(e,messageContains("(2, 1000)"));
+    assertThat(e,causeMessageContains("(2, 2)"));
   }
 }

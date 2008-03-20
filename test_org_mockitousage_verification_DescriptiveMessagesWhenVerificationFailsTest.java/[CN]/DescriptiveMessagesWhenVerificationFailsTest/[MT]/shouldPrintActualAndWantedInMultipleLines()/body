@@ -1,0 +1,14 @@
+{
+  mock.varargs("this is very long string","this is another very long string");
+  try {
+    verify(mock).varargs("this is very long string","this is another very long string","this is yet another very long string");
+    fail();
+  }
+ catch (  ArgumentsAreDifferent e) {
+    String expected="\n" + "Argument(s) are different! Wanted:" + "\n"+ "IMethods.varargs("+ "\n"+ "    \"this is very long string\","+ "\n"+ "    \"this is another very long string\","+ "\n"+ "    \"this is yet another very long string\""+ "\n"+ "  );";
+    assertEquals(expected,e.getMessage());
+    assertEquals(e.getCause().getClass(),ActualArgumentsAreDifferent.class);
+    String expectedCause="\n" + "Actual invocation has different arguments:" + "\n"+ "IMethods.varargs("+ "\n"+ "    \"this is very long string\","+ "\n"+ "    \"this is another very long string\""+ "\n"+ "  );";
+    assertEquals(expectedCause,e.getCause().getMessage());
+  }
+}

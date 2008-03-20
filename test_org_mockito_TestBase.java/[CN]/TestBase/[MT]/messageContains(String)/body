@@ -1,7 +1,7 @@
 {
   return new Assertor<Throwable>(){
     public void assertValue(    Throwable value){
-      assertTrue("String: " + value.getMessage() + " should contain: "+ text,((Throwable)value).getMessage().contains(text));
+      assertTrue("This substring: \n" + text + "\nshould occur in this exception message:"+ value.getMessage(),((Throwable)value).getMessage().contains(text));
     }
   }
 ;

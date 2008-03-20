@@ -8,7 +8,7 @@
  catch (  NoInteractionsWanted e) {
     String expected="\n" + "No interactions wanted";
     assertEquals(e.getMessage(),expected);
-    String expectedCause="\n" + "Undesired invocation:" + "\n"+ "IMethods.twoArgumentMethod(1, 2)";
+    String expectedCause="\n" + "Undesired invocation:" + "\n"+ "IMethods.twoArgumentMethod(1, 2);";
     assertEquals(e.getCause().getMessage(),expectedCause);
   }
 }

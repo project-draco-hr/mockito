@@ -5,7 +5,6 @@
     fail();
   }
  catch (  ArgumentsAreDifferent e) {
-    assertThat(e,messageContains("1st: String that contains xxx"));
-    assertThat(e,causeMessageContains("1st: \"foo\""));
+    assertThat(e,messageContains("simpleMethod(<String that contains xxx>);"));
   }
 }

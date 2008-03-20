@@ -1,4 +1,0 @@
-{
-  Invocation i=new InvocationBuilder().toInvocation();
-  assertEquals("    <NO ARGUMENTS>",i.getArgs());
-}
