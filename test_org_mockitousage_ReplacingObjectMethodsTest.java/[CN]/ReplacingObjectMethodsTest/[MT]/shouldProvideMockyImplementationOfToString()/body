@@ -1,4 +1,6 @@
 {
-  assertEquals("Mock for DummyClass",Mockito.mock(DummyClass.class).toString());
-  assertEquals("Mock for DummyInterface",Mockito.mock(DummyInterface.class).toString());
+  DummyClass dummyClass=Mockito.mock(DummyClass.class);
+  assertEquals("Mock for DummyClass, hashCode: " + dummyClass.hashCode(),dummyClass.toString());
+  DummyInterface dummyInterface=Mockito.mock(DummyInterface.class);
+  assertEquals("Mock for DummyInterface, hashCode: " + dummyInterface.hashCode(),dummyInterface.toString());
 }

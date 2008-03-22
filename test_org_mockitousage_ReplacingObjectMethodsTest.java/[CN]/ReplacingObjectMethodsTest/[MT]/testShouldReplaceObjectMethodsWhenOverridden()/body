@@ -4,5 +4,5 @@
   assertThat(mock,equalTo(mock));
   assertThat(mock,not(equalTo(otherMock)));
   assertThat(mock.hashCode(),not(equalTo(otherMock.hashCode())));
-  assertThat(mock.toString(),equalTo("Mock for ObjectMethodsOverriddenSubclass"));
+  assertContains("Mock for ObjectMethodsOverriddenSubclass",mock.toString());
 }

@@ -6,10 +6,10 @@
     return Boolean.valueOf(proxy == args[0]);
   }
  else   if (hashCodeMethod.equals(method)) {
-    return new Integer(System.identityHashCode(proxy));
+    return hashCodeForMock(proxy);
   }
  else   if (toStringMethod.equals(method)) {
-    return mockToString(proxy);
+    return stringForMock(proxy);
   }
   return delegate.intercept(proxy,method,args,null);
 }
