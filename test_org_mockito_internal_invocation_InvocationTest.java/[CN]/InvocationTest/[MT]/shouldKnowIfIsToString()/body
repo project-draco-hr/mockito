@@ -1,0 +1,6 @@
+{
+  Invocation toString=new InvocationBuilder().method("toString").toInvocation();
+  assertTrue(toString.isToString());
+  Invocation notToString=new InvocationBuilder().method("toString").arg("foo").toInvocation();
+  assertFalse(notToString.isToString());
+}
