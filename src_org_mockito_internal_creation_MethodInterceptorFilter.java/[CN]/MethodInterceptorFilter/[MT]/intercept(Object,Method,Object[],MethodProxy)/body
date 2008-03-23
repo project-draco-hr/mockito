@@ -8,8 +8,5 @@
  else   if (hashCodeMethod.equals(method)) {
     return hashCodeForMock(proxy);
   }
- else   if (toStringMethod.equals(method)) {
-    return stringForMock(proxy);
-  }
   return delegate.intercept(proxy,method,args,null);
 }

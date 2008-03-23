@@ -11,7 +11,7 @@
   InvocationMatcher invocationMatcher=matchersBinder.bindMatchers(invocation);
   if (verificationMode != null) {
     verifyingRecorder.verify(invocationMatcher,verificationMode);
-    return EmptyReturnValues.emptyValueFor(method.getReturnType());
+    return MockitoConfiguration.emptyValues().valueFor(invocationMatcher.getInvocation());
   }
   stubber.setInvocationForPotentialStubbing(invocationMatcher);
   verifyingRecorder.recordInvocation(invocationMatcher.getInvocation());

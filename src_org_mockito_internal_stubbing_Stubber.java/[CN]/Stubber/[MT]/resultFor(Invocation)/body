@@ -1,8 +1,8 @@
 {
   for (  StubbedInvocationMatcher s : stubbed) {
-    if (s.matches(wanted)) {
+    if (s.matches(invocation)) {
       return s.answer();
     }
   }
-  return EmptyReturnValues.emptyValueFor(wanted.getMethod().getReturnType());
+  return MockitoConfiguration.emptyValues().valueFor(invocation);
 }

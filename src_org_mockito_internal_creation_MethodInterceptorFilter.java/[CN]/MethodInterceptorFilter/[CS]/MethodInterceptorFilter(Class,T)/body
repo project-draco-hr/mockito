@@ -5,7 +5,6 @@
     }
     equalsMethod=toMock.getMethod("equals",new Class[]{Object.class});
     hashCodeMethod=toMock.getMethod("hashCode",(Class[])null);
-    toStringMethod=toMock.getMethod("toString",(Class[])null);
   }
  catch (  NoSuchMethodException e) {
     throw new RuntimeException("An Object method could not be found!");

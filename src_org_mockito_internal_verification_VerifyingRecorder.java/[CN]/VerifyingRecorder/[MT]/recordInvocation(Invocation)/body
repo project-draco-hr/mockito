@@ -1,3 +1,5 @@
 {
-  this.registeredInvocations.add(invocation);
+  if (!invocation.isToString()) {
+    this.registeredInvocations.add(invocation);
+  }
 }
