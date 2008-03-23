@@ -4,7 +4,7 @@
     invocations=globalInvocationsFinder.getAllInvocations(mode.getMocksToBeVerifiedInOrder());
   }
  else {
-    invocations=registeredInvocations;
+    invocations=getRegisteredInvocations();
   }
   for (  Verifier verifier : verifiers) {
     verifier.verify(invocations,wanted,mode);

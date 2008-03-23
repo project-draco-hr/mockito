@@ -1,0 +1,8 @@
+{
+  Invocation toString=new InvocationBuilder().method("toString").toInvocation();
+  Invocation simpleMethod=new InvocationBuilder().simpleMethod().toInvocation();
+  recorder.recordInvocation(toString);
+  recorder.recordInvocation(simpleMethod);
+  assertTrue(recorder.getRegisteredInvocations().contains(simpleMethod));
+  assertFalse(recorder.getRegisteredInvocations().contains(toString));
+}

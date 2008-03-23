@@ -1,5 +1,0 @@
-{
-  Invocation invocation=new InvocationBuilder().method("toString").toInvocation();
-  recorder.recordInvocation(invocation);
-  assertTrue(recorder.getRegisteredInvocations().isEmpty());
-}
