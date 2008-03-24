@@ -1,0 +1,9 @@
+{
+  Object value=new DefaultReturnValues().valueFor(invocation);
+  if (value != null || invocation.getMethod().getReturnType() == Void.TYPE) {
+    return value;
+  }
+ else {
+    return Mockito.mock(invocation.getMethod().getReturnType());
+  }
+}

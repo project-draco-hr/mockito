@@ -1,0 +1,6 @@
+{
+  MyObject m=mock(MyObject.class);
+  MyObject returned=m.foo();
+  assertNotNull(returned);
+  assertNotNull(returned.foo());
+}
