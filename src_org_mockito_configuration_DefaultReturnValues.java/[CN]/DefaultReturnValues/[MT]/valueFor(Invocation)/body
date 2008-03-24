@@ -1,5 +1,5 @@
 {
-  if (invocation.isToString()) {
+  if (Invocation.isToString(invocation)) {
     Object mock=invocation.getMock();
     String mockDescription="Mock for " + MockNamer.nameForMock(mock) + ", hashCode: "+ mock.hashCode();
     return mockDescription;
