@@ -1,3 +1,0 @@
-{
-  return getCustomReturnValues() != null ? getCustomReturnValues() : DEFAULT_RETURN_VALUES;
-}
