@@ -1,4 +1,3 @@
 {
   MockitoConfiguration.resetCustomReturnValues();
-  myDefaultReturnValues.clearSmartStubs();
 }
