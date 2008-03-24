@@ -1,3 +1,3 @@
 {
-  MockitoConfiguration.CUSTOM_RETURN_VALUES.set(returnValues);
+  CUSTOM_RETURN_VALUES.set(returnValues);
 }

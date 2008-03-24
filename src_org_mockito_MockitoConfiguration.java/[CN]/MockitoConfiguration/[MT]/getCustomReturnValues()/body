@@ -1,0 +1,3 @@
+{
+  return CUSTOM_RETURN_VALUES.get();
+}
