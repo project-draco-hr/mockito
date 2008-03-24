@@ -1,4 +1,4 @@
 {
   matcherStack.push(matcher);
-  return new ReturnValues();
+  return new EmptyReturnValues();
 }
