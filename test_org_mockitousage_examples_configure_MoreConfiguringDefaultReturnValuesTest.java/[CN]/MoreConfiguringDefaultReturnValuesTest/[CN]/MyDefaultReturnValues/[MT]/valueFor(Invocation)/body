@@ -1,0 +1,13 @@
+{
+  Object value=new DefaultReturnValues().valueFor(invocation);
+  Class<?> returnType=invocation.getMethod().getReturnType();
+  if (value != null || returnType == Void.TYPE) {
+    return value;
+  }
+ else   if (smartStubs.contains(invocation.getMock())) {
+    return returnValueForSmartStub(returnType);
+  }
+ else {
+    return null;
+  }
+}

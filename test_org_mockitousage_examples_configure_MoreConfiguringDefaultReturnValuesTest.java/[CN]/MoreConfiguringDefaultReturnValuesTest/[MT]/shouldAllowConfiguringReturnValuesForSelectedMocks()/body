@@ -1,0 +1,11 @@
+{
+  MyObject smartStub=mock(MyObject.class);
+  beSmartStub(smartStub);
+  MyObject mock=mock(MyObject.class);
+  assertNotNull(smartStub.returnMyObject());
+  assertEquals("",smartStub.returnString());
+  assertTrue(smartStub.returnBoolean());
+  assertNull(mock.returnMyObject());
+  assertNull(mock.returnString());
+  assertFalse(mock.returnBoolean());
+}

@@ -1,0 +1,11 @@
+{
+  if (returnType == String.class) {
+    return "";
+  }
+ else   if (returnType == Boolean.TYPE) {
+    return true;
+  }
+ else {
+    return mock(returnType);
+  }
+}
