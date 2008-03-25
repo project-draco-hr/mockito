@@ -5,5 +5,5 @@
     return mockDescription;
   }
   Class<?> returnType=invocation.getMethod().getReturnType();
-  return emptyValueFor(returnType);
+  return returnValueFor(returnType);
 }

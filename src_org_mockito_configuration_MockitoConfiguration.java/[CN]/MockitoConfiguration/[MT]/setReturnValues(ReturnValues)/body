@@ -1,3 +1,6 @@
 {
+  if (returnValues == null) {
+    throw new MockitoException("Cannot set null ReturnValues!");
+  }
   this.returnValues=returnValues;
 }
