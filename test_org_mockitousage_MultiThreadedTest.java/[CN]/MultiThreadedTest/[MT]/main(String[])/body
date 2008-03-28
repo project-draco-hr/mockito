@@ -1,5 +1,5 @@
 {
-  int numberOfThreads=100;
+  int numberOfThreads=10;
   long before=System.currentTimeMillis();
   runInMultipleThreads(numberOfThreads);
   long after=System.currentTimeMillis();

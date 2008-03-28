@@ -1,0 +1,9 @@
+{
+  MyObject fakeReturningMock=mock(MyObject.class);
+  fakeReturnValues(fakeReturningMock);
+  MyObject ordinaryMock=mock(MyObject.class);
+  assertNotNull(fakeReturningMock.returnMyObject());
+  assertEquals("",fakeReturningMock.returnString());
+  assertNull(ordinaryMock.returnMyObject());
+  assertNull(ordinaryMock.returnString());
+}

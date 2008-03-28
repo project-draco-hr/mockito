@@ -1,0 +1,6 @@
+{
+  list.add("test");
+  map.clear();
+  verify(list).add("test");
+  verify(map).clear();
+}
