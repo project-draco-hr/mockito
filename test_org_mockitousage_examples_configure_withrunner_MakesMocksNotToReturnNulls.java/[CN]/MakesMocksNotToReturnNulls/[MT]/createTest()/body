@@ -1,0 +1,6 @@
+{
+  Object test=super.createTest();
+  MockitoConfiguration.instance().setReturnValues(new MyDefaultReturnValues());
+  MockitoAnnotations.initMocks(test);
+  return test;
+}

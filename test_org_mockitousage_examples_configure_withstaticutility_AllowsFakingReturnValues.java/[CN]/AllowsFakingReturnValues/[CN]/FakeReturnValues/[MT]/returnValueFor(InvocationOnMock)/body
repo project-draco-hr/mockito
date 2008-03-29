@@ -1,0 +1,9 @@
+{
+  Class<?> returnType=invocation.getMethod().getReturnType();
+  if (mocksReturningFakes.contains(invocation.getMock())) {
+    return returnFake(returnType);
+  }
+ else {
+    return null;
+  }
+}

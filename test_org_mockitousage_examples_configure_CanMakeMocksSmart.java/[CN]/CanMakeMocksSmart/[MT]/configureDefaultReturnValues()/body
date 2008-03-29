@@ -1,4 +1,0 @@
-{
-  myDefaultReturnValues=new MyDefaultReturnValues();
-  MockitoConfiguration.instance().setReturnValues(myDefaultReturnValues);
-}

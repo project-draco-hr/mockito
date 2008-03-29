@@ -1,0 +1,8 @@
+{
+  Object returnByDefault=defaultReturnValues.valueFor(invocation);
+  Class<?> returnType=invocation.getMethod().getReturnType();
+  if (returnByDefault != null || returnType == Void.TYPE) {
+    return returnByDefault;
+  }
+  return returnValueFor(invocation);
+}
