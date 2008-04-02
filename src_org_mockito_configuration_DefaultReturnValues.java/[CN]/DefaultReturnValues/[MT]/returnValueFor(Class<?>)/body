@@ -1,5 +1,8 @@
 {
-  if (type == Collection.class) {
+  if (type.isPrimitive()) {
+    return primitiveOf(type);
+  }
+ else   if (type == Collection.class) {
     return new LinkedList<Object>();
   }
  else   if (type == Set.class) {

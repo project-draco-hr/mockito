@@ -1,0 +1,11 @@
+{
+  if (type == Boolean.TYPE) {
+    return false;
+  }
+ else   if (type == Character.TYPE) {
+    return (char)0;
+  }
+ else {
+    return 0;
+  }
+}
