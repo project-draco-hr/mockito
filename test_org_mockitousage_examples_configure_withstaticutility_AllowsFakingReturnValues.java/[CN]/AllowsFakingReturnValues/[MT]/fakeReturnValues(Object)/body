@@ -1,4 +1,4 @@
 {
   FakeReturnValues fakeReturnValues=getFakeReturnValues();
-  fakeReturnValues.configure(mocks);
+  fakeReturnValues.addMocks(mocks);
 }
