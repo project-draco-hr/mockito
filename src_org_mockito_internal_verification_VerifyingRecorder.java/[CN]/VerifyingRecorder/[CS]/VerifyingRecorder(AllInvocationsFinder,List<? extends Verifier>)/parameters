@@ -1,0 +1,2 @@
+AllInvocationsFinder globalInvocationsFinder
+List<? extends Verifier> verifiers

@@ -1,7 +1,7 @@
 {
   List<Invocation> invocations;
   if (mode.inOrderMode()) {
-    invocations=globalInvocationsFinder.getAllInvocations(mode.getMocksToBeVerifiedInOrder());
+    invocations=invocationsFinder.getAllInvocations(mode.getMocksToBeVerifiedInOrder());
   }
  else {
     invocations=getRegisteredInvocations();
