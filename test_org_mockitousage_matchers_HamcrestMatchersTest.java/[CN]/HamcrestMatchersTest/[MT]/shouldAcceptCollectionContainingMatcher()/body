@@ -1,5 +1,0 @@
-{
-  stub(mock.simpleMethod(argThat(collectionHas("1","2")))).toReturn("1 and 2");
-  assertNull(mock.simpleMethod(Arrays.asList("3","1")));
-  assertEquals("1 and 2",mock.simpleMethod(Arrays.asList("1","2")));
-}

@@ -4,5 +4,5 @@
   recorder.verify(differentMethod,mode);
   assertSame(verifierStub.mode,mode);
   assertSame(verifierStub.wanted,differentMethod);
-  assertThat(verifierStub.invocations,collectionHasExactlyInOrder(simpleMethod));
+  assertThat(verifierStub.invocations,hasExactlyInOrder(simpleMethod));
 }

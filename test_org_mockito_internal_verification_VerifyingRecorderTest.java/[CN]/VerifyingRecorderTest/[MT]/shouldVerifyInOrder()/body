@@ -1,5 +1,5 @@
 {
   VerificationModeImpl inOrderMode=new VerificationModeBuilder().inOrder();
   recorder.verify(differentMethod,inOrderMode);
-  assertThat(verifierStub.invocations,collectionHasExactlyInOrder(simpleMethod,differentMethod.getInvocation()));
+  assertThat(verifierStub.invocations,hasExactlyInOrder(simpleMethod,differentMethod.getInvocation()));
 }

@@ -2,6 +2,9 @@
   if (type.isPrimitive()) {
     return primitiveOf(type);
   }
+ else   if (isPrimitiveWrapper(type)) {
+    return primitiveWrapperOf(type);
+  }
  else   if (type == Collection.class) {
     return new LinkedList<Object>();
   }

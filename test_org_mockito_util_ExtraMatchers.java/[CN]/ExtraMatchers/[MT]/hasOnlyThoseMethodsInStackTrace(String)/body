@@ -1,6 +1,6 @@
 {
-  return new BaseMatcher(){
-    public boolean matches(    Object traceElements){
+  return new Assertor(){
+    public void assertValue(    Object traceElements){
       final List<StackTraceElement> trace;
       if (traceElements instanceof List) {
         trace=(List<StackTraceElement>)traceElements;
@@ -11,19 +11,10 @@
  else {
         throw new RuntimeException("this matcher cannot deal with object provided: " + traceElements);
       }
-      if (trace.size() != methods.length) {
-        return false;
-      }
+      assertEquals(methods.length,trace.size());
       for (int i=0; i < trace.size(); i++) {
-        if (!trace.get(i).getMethodName().equals(methods[i])) {
-          return false;
-        }
+        assertEquals(methods[i],trace.get(i).getMethodName());
       }
-      return true;
-    }
-    public void describeTo(    Description desc){
-      desc.appendText("has only those methods in stack trace: ");
-      desc.appendValue(methods);
     }
   }
 ;

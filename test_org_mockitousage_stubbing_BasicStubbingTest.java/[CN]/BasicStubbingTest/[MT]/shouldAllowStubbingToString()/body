@@ -1,6 +1,6 @@
 {
   IMethods mockTwo=mock(IMethods.class);
   stub(mockTwo.toString()).toReturn("test");
-  assertContains("Mock for IMethods",mock.toString());
+  assertThat(mock.toString(),contains("Mock for IMethods"));
   assertEquals("test",mockTwo.toString());
 }

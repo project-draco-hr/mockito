@@ -1,0 +1,11 @@
+{
+  iHavefunkyName.simpleMethod(10);
+  try {
+    verify(iHavefunkyName).simpleMethod(20);
+    fail();
+  }
+ catch (  ArgumentsAreDifferent e) {
+    assertThat(e,messageContains("iHavefunkyName.simpleMethod(20)"));
+    assertThat(e,causeMessageContains("iHavefunkyName.simpleMethod(10)"));
+  }
+}

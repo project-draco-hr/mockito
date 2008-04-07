@@ -1,3 +1,0 @@
-{
-  assertTrue("This substring:\n" + expectedSubstring + "\nshould exist somewhere here:\n"+ target,target.contains(expectedSubstring));
-}

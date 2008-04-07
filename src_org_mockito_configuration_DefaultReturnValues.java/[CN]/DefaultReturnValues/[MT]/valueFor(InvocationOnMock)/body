@@ -1,7 +1,7 @@
 {
   if (Invocation.isToString(invocation)) {
     Object mock=invocation.getMock();
-    String mockDescription="Mock for " + MockNamer.nameForMock(mock) + ", hashCode: "+ mock.hashCode();
+    String mockDescription="Mock for " + ClassNameFinder.classNameForMock(mock) + ", hashCode: "+ mock.hashCode();
     return mockDescription;
   }
   Class<?> returnType=invocation.getMethod().getReturnType();

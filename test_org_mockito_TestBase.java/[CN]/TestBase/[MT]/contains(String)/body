@@ -1,0 +1,8 @@
+{
+  return new Assertor<String>(){
+    public void assertValue(    String value){
+      assertTrue("This substring: \n" + substring + "\nshould be inside of:\n"+ value,value.contains(substring));
+    }
+  }
+;
+}

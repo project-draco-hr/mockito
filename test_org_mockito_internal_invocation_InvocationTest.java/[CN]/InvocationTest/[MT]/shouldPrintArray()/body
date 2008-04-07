@@ -1,4 +1,4 @@
 {
   invocation=new InvocationBuilder().method("oneArray").args(new int[]{1,2,3}).toInvocation();
-  assertEquals("Object.oneArray([1, 2, 3]);",invocation.toString());
+  assertThat(invocation.toString(),endsWith("oneArray([1, 2, 3]);"));
 }

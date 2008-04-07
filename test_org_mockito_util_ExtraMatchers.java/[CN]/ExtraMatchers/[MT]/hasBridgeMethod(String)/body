@@ -1,6 +1,6 @@
 {
-  return new BaseMatcher<Object>(){
-    public boolean matches(    Object o){
+  return new Assertor<Object>(){
+    public void assertValue(    Object o){
       Class clazz=null;
       if (o instanceof Class) {
         clazz=(Class)o;
@@ -9,16 +9,11 @@
         clazz=o.getClass();
       }
       for (      Method m : clazz.getMethods()) {
-        if (m.isBridge()) {
-          if (m.getName().equals(methodName)) {
-            return true;
-          }
+        if (m.isBridge() && m.getName().equals(methodName)) {
+          return;
         }
       }
-      return false;
-    }
-    public void describeTo(    Description desc){
-      desc.appendText("Bridge method: " + methodName + " not found!");
+      fail("Bridge method [" + methodName + "]\nnot found in:\n"+ o);
     }
   }
 ;

@@ -1,0 +1,3 @@
+{
+  return MockUtil.createMock(classToMock,name,MOCKING_PROGRESS);
+}

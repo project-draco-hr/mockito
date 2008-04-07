@@ -1,6 +1,6 @@
 {
   MockFactory<T> proxyFactory=new MockFactory<T>();
-  MockHandler<T> mockHandler=new MockHandler<T>(progress,new MatchersBinder());
+  MockHandler<T> mockHandler=new MockHandler<T>(mockName,progress,new MatchersBinder());
   MethodInterceptorFilter<MockHandler<T>> filter=new MethodInterceptorFilter<MockHandler<T>>(classToMock,mockHandler);
   return proxyFactory.createMock(classToMock,filter);
 }

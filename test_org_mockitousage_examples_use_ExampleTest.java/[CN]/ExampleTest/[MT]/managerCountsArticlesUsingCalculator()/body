@@ -2,5 +2,4 @@
   articleManager.updateArticleCounters("Guardian");
   verify(mockCalculator).countArticles("Guardian");
   verify(mockCalculator).countArticlesInPolish("Guardian");
-  verifyNoMoreInteractions(mockCalculator);
 }

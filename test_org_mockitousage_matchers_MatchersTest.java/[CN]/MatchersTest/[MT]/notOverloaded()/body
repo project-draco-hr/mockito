@@ -7,7 +7,7 @@
   stub(mock.oneArg(not(eq((int)1)))).toReturn("5");
   stub(mock.oneArg(not(eq((long)1)))).toReturn("6");
   stub(mock.oneArg(not(eq((short)1)))).toReturn("7");
-  stub(mock.oneArg(not(contains("a")))).toReturn("8");
+  stub(mock.oneArg(not(Matchers.contains("a")))).toReturn("8");
   stub(mock.oneArg(not(isA(Class.class)))).toReturn("9");
   assertEquals("0",mock.oneArg(true));
   assertEquals(null,mock.oneArg(false));

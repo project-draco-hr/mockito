@@ -3,6 +3,6 @@
   InvocationMatcher notNull=new InvocationMatcher(new InvocationBuilder().toInvocation(),asList(m));
   Matcher mTwo=new Equals('x');
   InvocationMatcher equals=new InvocationMatcher(new InvocationBuilder().toInvocation(),asList(mTwo));
-  assertContains("Object.simpleMethod(notNull())",notNull.toString());
-  assertContains("Object.simpleMethod('x')",equals.toString());
+  assertThat(notNull.toString(),contains("simpleMethod(notNull())"));
+  assertThat(equals.toString(),contains("simpleMethod('x')"));
 }

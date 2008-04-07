@@ -1,7 +1,7 @@
 {
-  Invocation simpleMethodInvocationThree=new InvocationBuilder().toInvocation();
+  Invocation simpleMethodInvocationThree=new InvocationBuilder().mock(mock).toInvocation();
   invocations.add(simpleMethodInvocationThree);
   VerificationModeImpl atLeastOnceInOrder=new VerificationModeBuilder().times(100).inOrder();
   List<Invocation> chunk=finder.findMatchingChunk(invocations,new InvocationMatcher(simpleMethodInvocation),atLeastOnceInOrder);
-  assertThat(chunk,collectionHasExactlyInOrder(simpleMethodInvocation,simpleMethodInvocationTwo,simpleMethodInvocationThree));
+  assertThat(chunk,hasExactlyInOrder(simpleMethodInvocation,simpleMethodInvocationTwo,simpleMethodInvocationThree));
 }

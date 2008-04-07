@@ -6,5 +6,5 @@
     }
   }
 );
-  assertThat(filtered,collectionHasExactlyInOrder("one","two","three"));
+  assertThat(filtered,hasExactlyInOrder("one","two","three"));
 }

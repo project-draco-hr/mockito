@@ -1,0 +1,10 @@
+{
+  return new Assertor<Collection>(){
+    public void assertValue(    Collection value){
+      for (      T element : elements) {
+        assertTrue("Element:" + "\n" + element + "does not exists in:"+ "\n"+ value,value.contains(element));
+      }
+    }
+  }
+;
+}

@@ -1,12 +1,9 @@
 {
-  return new BaseMatcher<Throwable>(){
+  return new Assertor<Throwable>(){
     private String actualMethodAtIndex;
-    public boolean matches(    Object throwable){
-      actualMethodAtIndex=((Throwable)throwable).getStackTrace()[stackTraceIndex].getMethodName();
-      return actualMethodAtIndex.equals(method);
-    }
-    public void describeTo(    Description desc){
-      desc.appendText("Method of index: " + stackTraceIndex + " expected to be: "+ method+ " but is: "+ actualMethodAtIndex);
+    public void assertValue(    Throwable throwable){
+      actualMethodAtIndex=throwable.getStackTrace()[stackTraceIndex].getMethodName();
+      assertTrue("Method at index: " + stackTraceIndex + "\n"+ "expected to be: "+ method+ "\n"+ "but is: "+ actualMethodAtIndex,actualMethodAtIndex.equals(method));
     }
   }
 ;

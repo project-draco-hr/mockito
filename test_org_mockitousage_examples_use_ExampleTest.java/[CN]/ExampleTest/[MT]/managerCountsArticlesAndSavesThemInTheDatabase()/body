@@ -5,5 +5,4 @@
   verify(mockDatabase).updateNumberOfArticles("Guardian",12);
   verify(mockDatabase).updateNumberOfPolishArticles("Guardian",5);
   verify(mockDatabase).updateNumberOfEnglishArticles("Guardian",7);
-  verifyNoMoreInteractions(mockDatabase);
 }

@@ -1,4 +1,4 @@
 {
-  assertFalse(isMock("i mock a mock"));
-  assertTrue(isMock(Mockito.mock(List.class)));
+  assertFalse(MockUtil.isMock("i mock a mock"));
+  assertTrue(MockUtil.isMock(Mockito.mock(List.class)));
 }
