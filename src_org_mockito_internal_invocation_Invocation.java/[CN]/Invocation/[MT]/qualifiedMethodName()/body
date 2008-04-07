@@ -1,4 +1,3 @@
 {
-  String name=MockUtil.getMockName(mock);
-  return name + "." + method.getName();
+  return MockUtil.getMockName(mock) + "." + method.getName();
 }
