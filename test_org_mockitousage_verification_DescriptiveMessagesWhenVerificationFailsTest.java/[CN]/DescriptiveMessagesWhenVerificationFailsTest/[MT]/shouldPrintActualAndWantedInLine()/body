@@ -5,10 +5,10 @@
     fail();
   }
  catch (  ArgumentsAreDifferent e) {
-    String expected="\n" + "Argument(s) are different! Wanted:" + "\n"+ "IMethods.varargs(1, 1000);";
+    String expected="\n" + "Argument(s) are different! Wanted:" + "\n"+ "iMethods.varargs(1, 1000);";
     assertEquals(expected,e.getMessage());
     assertEquals(e.getCause().getClass(),ActualArgumentsAreDifferent.class);
-    String expectedCause="\n" + "Actual invocation has different arguments:" + "\n"+ "IMethods.varargs(1, 2);";
+    String expectedCause="\n" + "Actual invocation has different arguments:" + "\n"+ "iMethods.varargs(1, 2);";
     assertEquals(expectedCause,e.getCause().getMessage());
   }
 }

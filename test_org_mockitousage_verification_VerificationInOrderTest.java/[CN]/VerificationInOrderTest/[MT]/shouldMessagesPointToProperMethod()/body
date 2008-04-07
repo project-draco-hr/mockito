@@ -6,6 +6,6 @@
     fail();
   }
  catch (  WantedButNotInvoked e) {
-    assertThat(e,messageContains("IMethods.differentMethod()"));
+    assertThat(e,messageContains("differentMethod()"));
   }
 }

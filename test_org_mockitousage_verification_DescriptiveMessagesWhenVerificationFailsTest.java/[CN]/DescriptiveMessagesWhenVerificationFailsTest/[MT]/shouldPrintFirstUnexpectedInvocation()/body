@@ -11,7 +11,7 @@
     String expectedMessage="\n" + "No interactions wanted";
     assertEquals(expectedMessage,e.getMessage());
     assertEquals(e.getCause().getClass(),UndesiredInvocation.class);
-    String expectedCause="\n" + "Undesired invocation:" + "\n"+ "IMethods.oneArg(false);";
+    String expectedCause="\n" + "Undesired invocation:" + "\n"+ "iMethods.oneArg(false);";
     assertEquals(expectedCause,e.getCause().getMessage());
   }
 }

@@ -6,10 +6,10 @@
     fail();
   }
  catch (  VerifcationInOrderFailure e) {
-    String expected="\n" + "Verification in order failure" + "\n"+ "Wanted but not invoked:"+ "\n"+ "IMethods.simpleMethod(11);";
+    String expected="\n" + "Verification in order failure" + "\n"+ "Wanted but not invoked:"+ "\n"+ "iMethods.simpleMethod(11);";
     assertEquals(expected,e.getMessage());
     assertEquals(e.getCause().getClass(),WantedAnywhereAfterFollowingInteraction.class);
-    String expectedCause="\n" + "Wanted anywhere AFTER following interaction:" + "\n"+ "IMethods.simpleMethod(2);";
+    String expectedCause="\n" + "Wanted anywhere AFTER following interaction:" + "\n"+ "iMethods.simpleMethod(2);";
     assertEquals(expectedCause,e.getCause().getMessage());
   }
 }

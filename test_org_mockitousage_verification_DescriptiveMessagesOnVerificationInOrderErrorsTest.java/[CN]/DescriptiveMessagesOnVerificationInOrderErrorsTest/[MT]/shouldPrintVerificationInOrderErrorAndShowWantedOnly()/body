@@ -4,7 +4,7 @@
     fail();
   }
  catch (  WantedButNotInvoked e) {
-    String expected="\n" + "Wanted but not invoked:" + "\n"+ "IMethods.differentMethod();";
+    String expected="\n" + "Wanted but not invoked:" + "\n"+ "iMethods.differentMethod();";
     assertEquals(expected,e.getMessage());
     assertEquals(null,e.getCause());
   }
