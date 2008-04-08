@@ -1,0 +1,3 @@
+{
+  return MockitoProperties.DEFAULT_RETURN_VALUES.valueFor(invocation);
+}

@@ -1,9 +1,8 @@
 {
-  Class<?> returnType=invocation.getMethod().getReturnType();
   if (mocksReturningFakes.contains(invocation.getMock())) {
-    return returnFake(returnType);
+    return returnFake(invocation);
   }
  else {
-    return null;
+    return defaultValueFor(invocation);
   }
 }

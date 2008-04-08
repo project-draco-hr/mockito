@@ -1,3 +1,9 @@
 {
-  return Mockito.mock(invocation.getMethod().getReturnType());
+  Class<?> returnType=invocation.getMethod().getReturnType();
+  if (isFinalClass(returnType)) {
+    return null;
+  }
+ else {
+    return Mockito.mock(returnType);
+  }
 }

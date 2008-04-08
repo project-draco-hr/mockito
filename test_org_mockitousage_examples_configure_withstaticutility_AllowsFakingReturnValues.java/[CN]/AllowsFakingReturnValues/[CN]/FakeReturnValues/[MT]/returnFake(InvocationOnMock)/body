@@ -1,9 +1,13 @@
 {
+  Class<?> returnType=invocation.getMethod().getReturnType();
   if (returnType == String.class) {
     return "";
   }
  else   if (returnType == Boolean.TYPE) {
     return true;
+  }
+ else   if (isFinalClass(returnType)) {
+    return null;
   }
  else {
     return mock(returnType);

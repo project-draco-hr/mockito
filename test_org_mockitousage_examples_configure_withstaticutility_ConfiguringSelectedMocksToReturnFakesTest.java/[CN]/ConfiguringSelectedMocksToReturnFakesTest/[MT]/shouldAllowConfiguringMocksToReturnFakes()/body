@@ -4,6 +4,8 @@
   MyObject ordinaryMock=mock(MyObject.class);
   assertNotNull(fakeReturningMock.returnMyObject());
   assertEquals("",fakeReturningMock.returnString());
+  assertNull(fakeReturningMock.returnFinalClass());
+  assertTrue(fakeReturningMock.returnBoolean());
   assertNull(ordinaryMock.returnMyObject());
   assertNull(ordinaryMock.returnString());
 }
