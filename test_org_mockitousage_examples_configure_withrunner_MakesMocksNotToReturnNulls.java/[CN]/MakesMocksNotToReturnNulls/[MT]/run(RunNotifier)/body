@@ -1,4 +1,4 @@
 {
   super.run(notifier);
-  MockitoConfiguration.instance().resetReturnValues();
+  ConfigurationSupport.getConfiguration().resetReturnValues();
 }

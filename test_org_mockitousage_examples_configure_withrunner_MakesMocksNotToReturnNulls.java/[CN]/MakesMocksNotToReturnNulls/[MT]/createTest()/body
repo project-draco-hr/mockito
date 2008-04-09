@@ -1,5 +1,5 @@
 {
   Object test=super.createTest();
-  MockitoConfiguration.instance().setReturnValues(new FriendlyReturnValues());
+  ConfigurationSupport.getConfiguration().setReturnValues(new FriendlyReturnValues());
   return test;
 }

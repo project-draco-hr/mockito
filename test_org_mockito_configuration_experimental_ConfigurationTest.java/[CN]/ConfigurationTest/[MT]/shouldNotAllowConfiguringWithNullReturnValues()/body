@@ -1,6 +1,6 @@
 {
   try {
-    MockitoConfiguration.instance().setReturnValues(null);
+    ConfigurationSupport.getConfiguration().setReturnValues(null);
     fail();
   }
  catch (  MockitoException e) {

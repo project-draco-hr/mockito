@@ -1,6 +1,6 @@
 {
   if (CONFIG.get() == null) {
-    CONFIG.set(new MockitoConfiguration());
+    CONFIG.set(new Configuration());
   }
   return CONFIG.get();
 }
