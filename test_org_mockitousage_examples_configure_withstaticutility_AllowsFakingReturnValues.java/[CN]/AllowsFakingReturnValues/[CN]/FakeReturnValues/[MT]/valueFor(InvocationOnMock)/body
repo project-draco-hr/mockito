@@ -3,6 +3,6 @@
     return returnFake(invocation);
   }
  else {
-    return defaultValueFor(invocation);
+    return ConfigurationSupport.defaultValueFor(invocation);
   }
 }

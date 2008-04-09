@@ -1,4 +1,3 @@
 {
-  MockitoConfiguration.instance().setReturnValues(new MyDefaultReturnValues());
-  MockitoAnnotations.initMocks(this);
+  MockitoConfiguration.instance().setReturnValues(new FriendlyReturnValues());
 }

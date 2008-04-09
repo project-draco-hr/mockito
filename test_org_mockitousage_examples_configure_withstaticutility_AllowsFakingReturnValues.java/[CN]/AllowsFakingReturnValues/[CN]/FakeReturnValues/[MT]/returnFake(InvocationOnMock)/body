@@ -6,10 +6,10 @@
  else   if (returnType == Boolean.TYPE) {
     return true;
   }
- else   if (!isMockable(returnType)) {
+ else   if (ConfigurationSupport.isMockable(returnType)) {
     return mock(returnType);
   }
  else {
-    return defaultValueFor(invocation);
+    return ConfigurationSupport.defaultValueFor(invocation);
   }
 }

@@ -1,10 +1,10 @@
 {
   Class<?> returnType=invocation.getMethod().getReturnType();
-  Object defaultReturnValue=defaultValueFor(invocation);
+  Object defaultReturnValue=ConfigurationSupport.defaultValueFor(invocation);
   if (defaultReturnValue != null) {
     return defaultReturnValue;
   }
- else   if (!isMockable(returnType)) {
+ else   if (ConfigurationSupport.isMockable(returnType)) {
     return Mockito.mock(returnType);
   }
  else {
