@@ -1,7 +1,0 @@
-{
-  Class<?> returnType=invocation.getMethod().getReturnType();
-  if (isVoid(returnType)) {
-    return null;
-  }
-  return returnValueFor(invocation);
-}

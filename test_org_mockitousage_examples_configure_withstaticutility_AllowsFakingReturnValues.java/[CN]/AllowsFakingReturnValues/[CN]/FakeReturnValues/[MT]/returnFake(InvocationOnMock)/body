@@ -6,10 +6,10 @@
  else   if (returnType == Boolean.TYPE) {
     return true;
   }
- else   if (isFinalClass(returnType)) {
-    return null;
+ else   if (!isMockable(returnType)) {
+    return mock(returnType);
   }
  else {
-    return mock(returnType);
+    return defaultValueFor(invocation);
   }
 }
