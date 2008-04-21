@@ -1,2 +1,7 @@
 {
+  Object object=new Object();
+  mock.simpleMethod(object);
+  ArgumentCaptor captor=new ArgumentCaptor();
+  verify(mock).simpleMethod(capturedArg(captor));
+  assertSame(object,captor.getArgument());
 }
