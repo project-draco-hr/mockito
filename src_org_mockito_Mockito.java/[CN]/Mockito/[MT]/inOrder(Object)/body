@@ -3,7 +3,10 @@
     REPORTER.mocksHaveToBePassedWhenCreatingInOrder();
   }
   for (  Object mock : mocks) {
-    if (!MockUtil.isMock(mock)) {
+    if (mock == null) {
+      REPORTER.nullPassedWhenCreatingInOrder();
+    }
+ else     if (!MockUtil.isMock(mock)) {
       REPORTER.notAMockPassedWhenCreatingInOrder();
     }
   }
