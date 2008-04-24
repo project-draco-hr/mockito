@@ -1,0 +1,4 @@
+{
+  stubber.addConsecutiveThrowable(throwable);
+  return this;
+}

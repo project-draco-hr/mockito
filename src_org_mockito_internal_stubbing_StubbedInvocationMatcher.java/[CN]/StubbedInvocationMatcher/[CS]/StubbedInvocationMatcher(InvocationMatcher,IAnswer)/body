@@ -1,4 +1,4 @@
 {
   super(invocation.getInvocation(),invocation.getMatchers());
-  this.result=result;
+  this.answers.add(result);
 }

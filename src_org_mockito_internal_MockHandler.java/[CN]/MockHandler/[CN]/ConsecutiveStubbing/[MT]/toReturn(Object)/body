@@ -1,0 +1,4 @@
+{
+  stubber.addConsecutiveReturnValue(value);
+  return this;
+}

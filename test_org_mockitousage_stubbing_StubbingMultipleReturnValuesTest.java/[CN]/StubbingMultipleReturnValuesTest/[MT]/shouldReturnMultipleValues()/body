@@ -1,0 +1,7 @@
+{
+  stub(mock.simpleMethod()).toReturn("one").toReturn("two").toReturn("three");
+  assertEquals("one",mock.simpleMethod());
+  assertEquals("two",mock.simpleMethod());
+  assertEquals("three",mock.simpleMethod());
+  assertEquals("three",mock.simpleMethod());
+}
