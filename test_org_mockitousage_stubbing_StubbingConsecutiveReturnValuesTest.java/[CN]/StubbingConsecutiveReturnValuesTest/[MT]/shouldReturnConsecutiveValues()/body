@@ -4,4 +4,5 @@
   assertEquals("two",mock.simpleMethod());
   assertEquals("three",mock.simpleMethod());
   assertEquals("three",mock.simpleMethod());
+  assertEquals("three",mock.simpleMethod());
 }

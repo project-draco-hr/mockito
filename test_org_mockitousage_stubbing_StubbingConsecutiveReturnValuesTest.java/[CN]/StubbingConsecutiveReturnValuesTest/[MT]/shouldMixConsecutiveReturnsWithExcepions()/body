@@ -1,0 +1,16 @@
+{
+  stub(mock.simpleMethod()).toThrow(new IllegalArgumentException()).toReturn("one").toThrow(new NullPointerException()).toReturn(null);
+  try {
+    mock.simpleMethod();
+  }
+ catch (  IllegalArgumentException e) {
+  }
+  assertEquals("one",mock.simpleMethod());
+  try {
+    mock.simpleMethod();
+  }
+ catch (  NullPointerException e) {
+  }
+  assertEquals(null,mock.simpleMethod());
+  assertEquals(null,mock.simpleMethod());
+}

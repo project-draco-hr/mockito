@@ -1,0 +1,3 @@
+{
+  stub(mock.simpleMethod()).toReturn("one").toThrow(new Exception());
+}

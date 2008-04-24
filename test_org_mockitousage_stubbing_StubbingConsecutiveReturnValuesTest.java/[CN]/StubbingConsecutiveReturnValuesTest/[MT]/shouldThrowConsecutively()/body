@@ -1,0 +1,23 @@
+{
+  stub(mock.simpleMethod()).toThrow(new RuntimeException()).toThrow(new IllegalArgumentException()).toThrow(new NullPointerException());
+  try {
+    mock.simpleMethod();
+  }
+ catch (  RuntimeException e) {
+  }
+  try {
+    mock.simpleMethod();
+  }
+ catch (  IllegalArgumentException e) {
+  }
+  try {
+    mock.simpleMethod();
+  }
+ catch (  NullPointerException e) {
+  }
+  try {
+    mock.simpleMethod();
+  }
+ catch (  NullPointerException e) {
+  }
+}
