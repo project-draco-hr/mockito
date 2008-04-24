@@ -1,4 +1,4 @@
 {
   mockingProgress.stubbingCompleted();
-  addResult(Result.createReturnResult(value));
+  addResult(AnswerFactory.createReturnResult(value));
 }

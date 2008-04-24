@@ -1,4 +1,0 @@
-{
-  Result result=Result.createReturnResult("lol");
-  assertEquals("lol",result.answer());
-}

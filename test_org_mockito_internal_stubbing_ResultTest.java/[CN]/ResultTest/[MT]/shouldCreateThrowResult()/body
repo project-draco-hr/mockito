@@ -1,3 +1,0 @@
-{
-  Result.createThrowResult(new RuntimeException(),new StackTraceFilter()).answer();
-}
