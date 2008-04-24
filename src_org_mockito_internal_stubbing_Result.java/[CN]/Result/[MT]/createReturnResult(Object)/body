@@ -1,5 +1,5 @@
 {
-  return new Result(new IAnswer<Object>(){
+  return new Result(new Answer<Object>(){
     public Object answer() throws Throwable {
       return value;
     }
