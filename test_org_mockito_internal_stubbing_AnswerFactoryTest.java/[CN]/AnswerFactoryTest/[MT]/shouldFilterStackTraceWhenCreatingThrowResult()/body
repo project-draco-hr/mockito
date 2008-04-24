@@ -1,6 +1,6 @@
 {
   StackTraceFilterStub filterStub=new StackTraceFilterStub();
-  Answer result=AnswerFactory.createThrowResult(new RuntimeException(),filterStub);
+  Answer result=AnswerFactory.createThrowingAnswer(new RuntimeException(),filterStub);
   try {
     result.answer();
     fail();

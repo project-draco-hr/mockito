@@ -1,5 +1,5 @@
 {
   mockingProgress.stubbingCompleted();
   validateThrowable(throwable);
-  addResult(AnswerFactory.createThrowResult(throwable,new StackTraceFilter()));
+  addResult(AnswerFactory.createThrowingAnswer(throwable,new StackTraceFilter()));
 }
