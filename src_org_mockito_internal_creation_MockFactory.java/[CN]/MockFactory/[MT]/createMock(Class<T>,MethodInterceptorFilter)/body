@@ -2,6 +2,9 @@
   validateClass(toMock);
   Enhancer enhancer=createEnhancer(toMock);
   enhancer.setCallbackType(filter.getClass());
+  if (toMock.getSigners() != null) {
+    enhancer.setNamingPolicy(ALLOWS_MOCKING_CLASSES_IN_SIGNED_PACKAGES);
+  }
   Class mockClass=enhancer.createClass();
   Enhancer.registerCallbacks(mockClass,new Callback[]{filter});
   Factory mock=createMock(mockClass);
