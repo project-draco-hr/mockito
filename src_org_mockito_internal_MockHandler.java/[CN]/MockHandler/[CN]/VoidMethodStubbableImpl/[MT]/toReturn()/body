@@ -1,0 +1,4 @@
+{
+  stubber.addThrowableForVoidMethod(DontThrow.DONT_THROW);
+  return this;
+}

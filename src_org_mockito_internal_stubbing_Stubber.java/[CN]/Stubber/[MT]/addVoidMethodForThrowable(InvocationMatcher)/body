@@ -1,5 +1,2 @@
 {
-  invocationForStubbing=voidMethodInvocationMatcher;
-  addThrowable(throwableForVoidMethod);
-  throwableForVoidMethod=null;
 }

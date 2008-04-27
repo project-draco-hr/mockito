@@ -1,0 +1,3 @@
+{
+  stubVoid(mock).toReturn().toThrow(new Exception()).on().voidMethod();
+}
