@@ -2,8 +2,11 @@
   if (!isVarArgs || isVarArgs && args[args.length - 1] != null && !args[args.length - 1].getClass().isArray()) {
     return args == null ? new Object[0] : args;
   }
-  Object[] varArgs=ArrayEquals.createObjectArray(args[args.length - 1]);
+  if (args[args.length - 1] == null) {
+    return new Object[]{null};
+  }
   final int nonVarArgsCount=args.length - 1;
+  Object[] varArgs=ArrayEquals.createObjectArray(args[nonVarArgsCount]);
   final int varArgsCount=varArgs.length;
   Object[] newArgs=new Object[nonVarArgsCount + varArgsCount];
   System.arraycopy(args,0,newArgs,0,nonVarArgsCount);
