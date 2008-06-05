@@ -2,5 +2,5 @@
   stub(mock.oneArg(anyString())).toReturn("1");
   assertEquals("1",mock.oneArg(""));
   assertEquals("1",mock.oneArg("any string"));
-  assertEquals(null,mock.oneArg(null));
+  assertEquals(null,mock.oneArg((Object)null));
 }
