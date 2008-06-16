@@ -1,0 +1,11 @@
+{
+  SyncingPrinter printer=new SyncingPrinter(multi,normal);
+  assertEquals("multi",printer.getWanted().toString());
+  assertEquals("multi",printer.getActual().toString());
+  printer=new SyncingPrinter(normal,multi);
+  assertEquals("multi",printer.getWanted().toString());
+  assertEquals("multi",printer.getActual().toString());
+  printer=new SyncingPrinter(multi,multi);
+  assertEquals("multi",printer.getWanted().toString());
+  assertEquals("multi",printer.getActual().toString());
+}

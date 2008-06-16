@@ -1,5 +1,5 @@
 {
-  if (wanted.hasMultilinePrint() || actual.hasMultiLinePrint()) {
+  if (wanted.printsInMultilines() || actual.printsInMultilines()) {
     this.wanted=wanted.toMultilineString();
     this.actual=actual.toMultilineString();
   }

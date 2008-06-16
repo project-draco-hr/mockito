@@ -1,0 +1,4 @@
+{
+  multi=new CanPrintInMultilinesStub(true,"multi","normal");
+  normal=new CanPrintInMultilinesStub(false,"multi","normal");
+}
