@@ -1,6 +1,5 @@
 {
-  Invocation lastInvocation=invocationForStubbing.getInvocation();
-  Class<?>[] exceptions=lastInvocation.getMethod().getExceptionTypes();
+  Class<?>[] exceptions=this.getMethod().getExceptionTypes();
   Class<?> throwableClass=throwable.getClass();
   for (  Class<?> exception : exceptions) {
     if (exception.isAssignableFrom(throwableClass)) {

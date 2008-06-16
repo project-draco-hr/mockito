@@ -10,7 +10,7 @@
     fail();
   }
  catch (  ArgumentsAreDifferent e) {
-    assertThat(e,messageContains("simpleMethod(\n    <custom argument matcher>\n);"));
+    assertThat(e,messageContains("<custom argument matcher>"));
     assertThat(e,causeMessageContains("foo"));
   }
 }

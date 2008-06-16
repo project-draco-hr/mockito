@@ -1,4 +1,4 @@
 {
-  Answer result=AnswerFactory.createReturningAnswer("lol");
+  Answer result=factory.createReturningAnswer("lol");
   assertEquals("lol",result.answer());
 }

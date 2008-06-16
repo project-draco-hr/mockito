@@ -1,0 +1,18 @@
+{
+  stub(mock.forInteger(anyInt())).toReturn("0");
+  stub(mock.forCharacter(anyChar())).toReturn("1");
+  stub(mock.forShort(anyShort())).toReturn("2");
+  stub(mock.forByte(anyByte())).toReturn("3");
+  stub(mock.forBoolean(anyBoolean())).toReturn("4");
+  stub(mock.forLong(anyLong())).toReturn("5");
+  stub(mock.forFloat(anyFloat())).toReturn("6");
+  stub(mock.forDouble(anyDouble())).toReturn("7");
+  assertEquals("0",mock.forInteger(null));
+  assertEquals("1",mock.forCharacter(null));
+  assertEquals("2",mock.forShort(null));
+  assertEquals("3",mock.forByte(null));
+  assertEquals("4",mock.forBoolean(null));
+  assertEquals("5",mock.forLong(null));
+  assertEquals("6",mock.forFloat(null));
+  assertEquals("7",mock.forDouble(null));
+}

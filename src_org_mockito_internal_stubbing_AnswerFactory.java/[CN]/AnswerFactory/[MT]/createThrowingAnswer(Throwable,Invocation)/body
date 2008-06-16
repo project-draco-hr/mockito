@@ -1,4 +1,5 @@
 {
+  validateThrowable(throwable,invocation);
   return new Answer<Object>(){
     public Object answer() throws Throwable {
       if (throwable == DontThrow.DONT_THROW) {

@@ -1,4 +1,3 @@
 {
-  validateThrowable(throwable);
-  stubbed.getFirst().addAnswer(AnswerFactory.createThrowingAnswer(throwable,new StackTraceFilter()));
+  stubbed.getFirst().addAnswer(answerFactory.createThrowingAnswer(throwable,invocationForStubbing.getInvocation()));
 }

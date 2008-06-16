@@ -1,0 +1,4 @@
+{
+  Invocation invocation=new InvocationBuilder().method("canThrowException").toInvocation();
+  factory.createThrowingAnswer(new CharacterCodingException(),invocation);
+}

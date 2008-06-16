@@ -1,1 +1,2 @@
 List<Matcher> matchers
+boolean forceMultiline

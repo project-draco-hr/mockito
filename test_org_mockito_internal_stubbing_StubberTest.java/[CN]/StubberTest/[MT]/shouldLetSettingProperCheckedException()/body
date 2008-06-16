@@ -1,4 +1,0 @@
-{
-  stubber.setInvocationForPotentialStubbing(new InvocationBuilder().method("canThrowException").toInvocationMatcher());
-  stubber.addThrowable(new CharacterCodingException());
-}
