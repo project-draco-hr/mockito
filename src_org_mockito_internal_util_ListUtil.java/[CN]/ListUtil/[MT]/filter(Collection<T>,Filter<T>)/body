@@ -1,6 +1,6 @@
 {
   LinkedList<T> filtered=new LinkedList<T>();
-  for (  T t : list) {
+  for (  T t : collection) {
     if (!filter.isOut(t)) {
       filtered.add(t);
     }
