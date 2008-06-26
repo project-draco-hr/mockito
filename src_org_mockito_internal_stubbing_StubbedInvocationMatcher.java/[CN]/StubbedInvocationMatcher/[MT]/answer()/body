@@ -1,3 +1,0 @@
-{
-  return answers.size() == 1 ? answers.getFirst().answer() : answers.removeFirst().answer();
-}

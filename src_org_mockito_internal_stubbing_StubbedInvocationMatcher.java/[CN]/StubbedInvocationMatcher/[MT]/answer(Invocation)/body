@@ -1,0 +1,3 @@
+{
+  return answers.size() == 1 ? answers.getFirst().answer(invocation) : answers.removeFirst().answer(invocation);
+}

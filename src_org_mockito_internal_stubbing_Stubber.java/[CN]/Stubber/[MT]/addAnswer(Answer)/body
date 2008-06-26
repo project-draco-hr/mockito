@@ -1,0 +1,4 @@
+{
+  mockingProgress.stubbingCompleted();
+  stubbed.addFirst(new StubbedInvocationMatcher(invocationForStubbing,answer));
+}

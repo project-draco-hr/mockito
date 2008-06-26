@@ -1,0 +1,16 @@
+{
+  RecordCall call1=new RecordCall();
+  RecordCall call2=new RecordCall();
+  stubVoid(mock).toAnswer(call1).toThrow(new UnsupportedOperationException()).toAnswer(call2).on().voidMethod();
+  mock.voidMethod();
+  assertTrue(call1.isCalled());
+  assertFalse(call2.isCalled());
+  try {
+    mock.voidMethod();
+    fail();
+  }
+ catch (  UnsupportedOperationException e) {
+  }
+  mock.voidMethod();
+  assertTrue(call2.isCalled());
+}

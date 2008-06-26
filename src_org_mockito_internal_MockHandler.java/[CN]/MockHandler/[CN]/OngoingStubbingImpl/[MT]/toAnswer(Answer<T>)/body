@@ -1,0 +1,5 @@
+{
+  verifyingRecorder.eraseLastInvocation();
+  stubber.addAnswer(answer);
+  return new ConsecutiveStubbing();
+}

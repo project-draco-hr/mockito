@@ -1,9 +1,9 @@
 {
   validateThrowable(throwable,invocation);
   return new Answer<Object>(){
-    public Object answer() throws Throwable {
-      if (throwable == DontThrow.DONT_THROW) {
-        return null;
+    public Object answer(    InvocationOnMock invocation) throws Throwable {
+      if (throwable instanceof DontThrow) {
+        return ((DontThrow)throwable).getAnswer().answer(invocation);
       }
       Throwable filtered=throwable.fillInStackTrace();
       filter.filterStackTrace(new HasStackTraceThrowableWrapper(filtered));

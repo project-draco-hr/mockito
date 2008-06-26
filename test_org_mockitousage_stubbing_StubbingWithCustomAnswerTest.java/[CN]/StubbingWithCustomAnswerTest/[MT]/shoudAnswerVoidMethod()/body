@@ -1,0 +1,6 @@
+{
+  RecordCall recordCall=new RecordCall();
+  stubVoid(mock).toAnswer(recordCall).on().voidMethod();
+  mock.voidMethod();
+  assertTrue(recordCall.isCalled());
+}

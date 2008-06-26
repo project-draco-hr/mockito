@@ -1,0 +1,4 @@
+{
+  stubber.addConsecutiveAnswer(answer);
+  return this;
+}

@@ -1,7 +1,7 @@
 {
   Answer result=factory.createThrowingAnswer(new RuntimeException(),null);
   try {
-    result.answer();
+    result.answer(null);
     fail();
   }
  catch (  RuntimeException e) {
