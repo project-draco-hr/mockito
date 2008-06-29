@@ -1,6 +1,6 @@
 {
   try {
-    stubber.addThrowable(null);
+    stubber.addAnswer(new ThrowsException(null));
     fail();
   }
  catch (  MockitoException e) {

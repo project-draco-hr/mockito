@@ -1,0 +1,27 @@
+{
+  mock=mock(IMethods.class);
+  stub(mock.simpleMethod("foo")).toReturn("foo").toReturn("bar").toReturn("baz").toReturn("foo").toReturn("bar").toReturn("baz");
+  final Thread[] listeners=new Thread[100];
+  for (int i=0; i < listeners.length; i++) {
+    listeners[i]=new Thread(){
+      @Override public void run(){
+        try {
+          mock.simpleMethod("foo");
+          mock.simpleMethod("foo");
+          mock.simpleMethod("foo");
+          mock.simpleMethod("foo");
+          mock.simpleMethod("foo");
+          mock.simpleMethod("foo");
+        }
+ catch (        Exception e) {
+          throw new RuntimeException(e);
+        }
+      }
+    }
+;
+    listeners[i].start();
+  }
+  for (int i=0; i < listeners.length; i++) {
+    listeners[i].join();
+  }
+}

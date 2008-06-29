@@ -1,0 +1,17 @@
+{
+  mock=mock(IMethods.class);
+  final Thread[] listeners=new Thread[3];
+  for (int i=0; i < listeners.length; i++) {
+    listeners[i]=new Thread(){
+      @Override public void run(){
+        stub(mock.simpleMethod(getId())).toReturn(getId() + "").toReturn("foo").toReturn("bar");
+        stubVoid(mock).toThrow(new RuntimeException(getId() + "")).toReturn().toThrow(new RuntimeException()).on().differentMethod();
+      }
+    }
+;
+    listeners[i].start();
+  }
+  for (int i=0; i < listeners.length; i++) {
+    listeners[i].join();
+  }
+}

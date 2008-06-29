@@ -1,4 +1,4 @@
 {
-  stubber.addConsecutiveThrowable(throwable);
+  stubber.addConsecutiveAnswer(new ThrowsException(throwable));
   return this;
 }

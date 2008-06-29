@@ -1,6 +1,6 @@
 {
-  stubber.addThrowableForVoidMethod(new MyException());
-  stubber.addVoidMethodForThrowable(new InvocationMatcher(simpleMethod));
+  stubber.addAnswerForVoidMethod(new ThrowsException(new MyException()));
+  stubber.addVoidMethodForStubbing(new InvocationMatcher(simpleMethod));
   try {
     stubber.resultFor(simpleMethod);
     fail();

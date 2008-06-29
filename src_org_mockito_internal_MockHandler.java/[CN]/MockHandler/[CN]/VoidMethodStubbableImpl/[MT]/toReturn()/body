@@ -1,4 +1,4 @@
 {
-  stubber.addThrowableForVoidMethod(DontThrow.DONT_THROW);
+  stubber.addAnswerForVoidMethod(new Returns());
   return this;
 }

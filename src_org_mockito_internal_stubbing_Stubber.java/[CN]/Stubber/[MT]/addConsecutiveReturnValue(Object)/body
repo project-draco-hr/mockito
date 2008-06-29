@@ -1,3 +1,0 @@
-{
-  stubbed.getFirst().addAnswer(answerFactory.createReturningAnswer(value));
-}

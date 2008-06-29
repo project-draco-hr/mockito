@@ -1,5 +1,0 @@
-{
-  mockingProgress.stubbingCompleted();
-  Answer answer=answerFactory.createThrowingAnswer(throwable,invocationForStubbing.getInvocation());
-  stubbed.addFirst(new StubbedInvocationMatcher(invocationForStubbing,answer));
-}

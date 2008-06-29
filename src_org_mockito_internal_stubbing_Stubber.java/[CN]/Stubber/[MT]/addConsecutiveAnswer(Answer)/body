@@ -1,3 +1,3 @@
 {
-  stubbed.getFirst().addAnswer(answer);
+  addAnswer(answer,true);
 }

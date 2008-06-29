@@ -1,5 +1,5 @@
 {
   state.stubbingStarted();
-  stubber.addReturnValue("test");
+  stubber.addAnswer(new Returns("test"));
   state.validateState();
 }

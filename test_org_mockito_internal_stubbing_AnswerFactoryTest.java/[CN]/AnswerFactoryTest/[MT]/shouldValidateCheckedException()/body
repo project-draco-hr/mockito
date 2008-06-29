@@ -1,4 +1,0 @@
-{
-  Invocation invocation=new InvocationBuilder().method("canThrowException").toInvocation();
-  factory.createThrowingAnswer(new IOException(),invocation);
-}

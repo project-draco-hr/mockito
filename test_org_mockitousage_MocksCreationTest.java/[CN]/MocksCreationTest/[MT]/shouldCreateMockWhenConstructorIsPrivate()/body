@@ -1,0 +1,3 @@
+{
+  assertNotNull(Mockito.mock(HasPrivateConstructor.class));
+}

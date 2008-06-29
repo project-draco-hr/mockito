@@ -1,8 +1,8 @@
 {
-  if (stubber.hasThrowableForVoidMethod()) {
+  if (stubber.hasAnswerForVoidMethod()) {
     Invocation invocation=new Invocation(proxy,method,args,mockingProgress.nextSequenceNumber());
     InvocationMatcher invocationMatcher=matchersBinder.bindMatchers(invocation);
-    stubber.addVoidMethodForThrowable(invocationMatcher);
+    stubber.addVoidMethodForStubbing(invocationMatcher);
     return null;
   }
   VerificationModeImpl verificationMode=mockingProgress.pullVerificationMode();

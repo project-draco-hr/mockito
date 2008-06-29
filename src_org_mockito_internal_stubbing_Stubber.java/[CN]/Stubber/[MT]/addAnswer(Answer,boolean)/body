@@ -1,0 +1,12 @@
+{
+  mockingProgress.stubbingCompleted();
+  if (answer instanceof ThrowsException) {
+    new ExceptionsValidator().validate(((ThrowsException)answer).getThrowable(),invocationForStubbing.getInvocation());
+  }
+  if (isConsecutive) {
+    stubbed.getFirst().addAnswer(answer);
+  }
+ else {
+    stubbed.addFirst(new StubbedInvocationMatcher(invocationForStubbing,answer));
+  }
+}

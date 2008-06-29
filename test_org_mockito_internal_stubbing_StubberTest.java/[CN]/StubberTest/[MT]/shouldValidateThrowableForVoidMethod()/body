@@ -1,7 +1,7 @@
 {
-  stubber.addThrowableForVoidMethod(new Exception());
+  stubber.addAnswerForVoidMethod(new ThrowsException(new Exception()));
   try {
-    stubber.addVoidMethodForThrowable(new InvocationMatcher(simpleMethod));
+    stubber.addVoidMethodForStubbing(new InvocationMatcher(simpleMethod));
     fail();
   }
  catch (  MockitoException e) {

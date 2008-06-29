@@ -1,8 +1,0 @@
-{
-  try {
-    factory.createThrowingAnswer(null,null);
-    fail();
-  }
- catch (  MockitoException e) {
-  }
-}

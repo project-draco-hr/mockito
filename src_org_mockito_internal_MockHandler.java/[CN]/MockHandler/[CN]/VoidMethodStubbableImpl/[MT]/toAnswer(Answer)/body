@@ -1,4 +1,0 @@
-{
-  stubber.addThrowableForVoidMethod(new DontThrow(answer));
-  return this;
-}

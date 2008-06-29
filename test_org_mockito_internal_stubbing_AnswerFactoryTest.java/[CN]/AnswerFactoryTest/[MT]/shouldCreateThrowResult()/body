@@ -1,3 +1,0 @@
-{
-  factory.createThrowingAnswer(new RuntimeException(),null).answer(null);
-}

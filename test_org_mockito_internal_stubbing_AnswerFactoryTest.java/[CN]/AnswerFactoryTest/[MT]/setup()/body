@@ -1,4 +1,0 @@
-{
-  this.filterStub=new StackTraceFilterStub();
-  this.factory=new AnswerFactory(filterStub);
-}
