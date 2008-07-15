@@ -1,0 +1,4 @@
+{
+  MockUtil.getMockHandler(mock).setAnswerForStubbing(new Returns(toBeReturned));
+  return mock;
+}

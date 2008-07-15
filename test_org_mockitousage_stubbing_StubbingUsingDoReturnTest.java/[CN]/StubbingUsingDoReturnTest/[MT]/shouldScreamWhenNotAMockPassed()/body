@@ -1,0 +1,9 @@
+{
+  try {
+    doReturn("foo").when("foo").toString();
+    fail();
+  }
+ catch (  Exception e) {
+    assertEquals("Argument passed to when() method is not a mock",e.getMessage());
+  }
+}

@@ -1,0 +1,3 @@
+{
+  stubber.addAnswerForVoidMethod(answer);
+}

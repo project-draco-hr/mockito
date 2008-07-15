@@ -1,0 +1,10 @@
+{
+  stub(mock.booleanReturningMethod()).toReturn(true);
+  mock.booleanReturningMethod();
+  try {
+    verifyNoMoreInteractions(mock);
+    fail();
+  }
+ catch (  NoInteractionsWanted e) {
+  }
+}

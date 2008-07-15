@@ -13,4 +13,6 @@
   detects(new OnVerifyZeroInteractions(),UnfinishedStubbingException.class);
   stubVoid(mock);
   detects(new OnVerifyNoMoreInteractions(),UnfinishedStubbingException.class);
+  stubVoid(mock);
+  detects(new OnDoReturn(),UnfinishedStubbingException.class);
 }

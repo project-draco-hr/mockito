@@ -1,0 +1,5 @@
+{
+  Generic mockTwo=mock(Generic.class);
+  List<Sub> subs=null;
+  stub(mockTwo.getList()).toReturn((List)subs);
+}

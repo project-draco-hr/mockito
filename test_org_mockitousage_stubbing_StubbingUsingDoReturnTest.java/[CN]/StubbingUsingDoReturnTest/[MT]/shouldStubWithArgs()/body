@@ -1,0 +1,7 @@
+{
+  doReturn("foo").when(mock).simpleMethod("foo");
+  doReturn("bar").when(mock).simpleMethod(eq("one"),anyInt());
+  assertEquals("foo",mock.simpleMethod("foo"));
+  assertEquals("bar",mock.simpleMethod("one",234));
+  assertEquals(null,mock.simpleMethod("xxx",234));
+}

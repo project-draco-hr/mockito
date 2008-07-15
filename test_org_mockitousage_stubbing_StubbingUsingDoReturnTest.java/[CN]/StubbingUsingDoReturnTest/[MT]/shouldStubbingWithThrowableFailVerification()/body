@@ -1,0 +1,24 @@
+{
+  stub(mock.simpleMethod("one")).toThrow(new RuntimeException());
+  stubVoid(mock).toThrow(new RuntimeException()).on().simpleMethod("two");
+  verifyZeroInteractions(mock);
+  mock.simpleMethod("foo");
+  try {
+    verify(mock).simpleMethod("one");
+    fail();
+  }
+ catch (  ArgumentsAreDifferent e) {
+  }
+  try {
+    verify(mock).simpleMethod("two");
+    fail();
+  }
+ catch (  ArgumentsAreDifferent e) {
+  }
+  try {
+    verifyNoMoreInteractions(mock);
+    fail();
+  }
+ catch (  NoInteractionsWanted e) {
+  }
+}

@@ -1,0 +1,4 @@
+{
+  doReturn(new RuntimeException()).when(mock).voidMethod();
+  fail();
+}

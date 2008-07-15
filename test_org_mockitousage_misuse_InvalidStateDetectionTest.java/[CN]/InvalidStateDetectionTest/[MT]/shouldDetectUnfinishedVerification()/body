@@ -11,4 +11,6 @@
   detects(new OnVerifyZeroInteractions(),UnfinishedVerificationException.class);
   verify(mock);
   detects(new OnVerifyNoMoreInteractions(),UnfinishedVerificationException.class);
+  verify(mock);
+  detects(new OnDoReturn(),UnfinishedVerificationException.class);
 }

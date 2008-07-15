@@ -1,0 +1,4 @@
+{
+  MOCKING_PROGRESS.stubbingStarted();
+  return new MethodSelectorImpl(null);
+}
