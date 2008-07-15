@@ -1,0 +1,5 @@
+{
+  mock(PackageProtected.class);
+  mock(Foo.class);
+  mock(Bar.class);
+}
