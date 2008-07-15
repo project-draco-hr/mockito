@@ -6,6 +6,6 @@
  catch (  Exception e) {
   }
   MockFactory<ClassWithDodgyConstructor> factory=new MockFactory<ClassWithDodgyConstructor>();
-  ClassWithDodgyConstructor mock=factory.createMock(ClassWithDodgyConstructor.class,new MockAwareStub());
+  ClassWithDodgyConstructor mock=factory.createMock(ClassWithDodgyConstructor.class,new MockAwareStub(),null);
   assertNotNull(mock);
 }

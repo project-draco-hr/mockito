@@ -1,0 +1,8 @@
+{
+  for (  StubbedInvocationMatcher s : stubbed) {
+    if (s.matches(invocation)) {
+      return s;
+    }
+  }
+  return null;
+}

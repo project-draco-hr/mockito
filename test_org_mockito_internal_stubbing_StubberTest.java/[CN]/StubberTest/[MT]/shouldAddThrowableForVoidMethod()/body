@@ -2,7 +2,7 @@
   stubber.addAnswerForVoidMethod(new ThrowsException(new MyException()));
   stubber.addVoidMethodForStubbing(new InvocationMatcher(simpleMethod));
   try {
-    stubber.resultFor(simpleMethod);
+    stubber.getResultFor(simpleMethod);
     fail();
   }
  catch (  MyException e) {

@@ -1,0 +1,8 @@
+{
+  spy.add("one");
+  stub(spy.get(0)).toReturn("1").toReturn("1 again");
+  assertEquals("1",spy.get(0));
+  assertEquals("1 again",spy.get(0));
+  assertEquals("one",spy.iterator().next());
+  assertEquals(1,spy.size());
+}

@@ -1,8 +1,3 @@
 {
-  if (mockName != null) {
-    return mockName;
-  }
- else {
-    return toInstanceName(ClassNameFinder.classNameForMock(mock));
-  }
+  return mockName;
 }

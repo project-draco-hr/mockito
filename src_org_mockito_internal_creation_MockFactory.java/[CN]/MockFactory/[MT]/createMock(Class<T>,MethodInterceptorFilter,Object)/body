@@ -5,6 +5,6 @@
   Class mockClass=enhancer.createClass();
   Enhancer.registerCallbacks(mockClass,new Callback[]{filter});
   Factory mock=createMock(mockClass);
-  filter.setMock(mock);
+  filter.setInstance(optionalInstance != null ? optionalInstance : mock);
   return (T)mock;
 }

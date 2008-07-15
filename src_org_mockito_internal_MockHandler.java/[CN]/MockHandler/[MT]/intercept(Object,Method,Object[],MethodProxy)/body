@@ -11,10 +11,18 @@
   InvocationMatcher invocationMatcher=matchersBinder.bindMatchers(invocation);
   if (verificationMode != null) {
     verifyingRecorder.verify(invocationMatcher,verificationMode);
-    return Configuration.instance().getReturnValues().valueFor(invocationMatcher.getInvocation());
+    return null;
   }
   stubber.setInvocationForPotentialStubbing(invocationMatcher);
   verifyingRecorder.recordInvocation(invocationMatcher.getInvocation());
   mockingProgress.reportOngoingStubbing(new OngoingStubbingImpl());
-  return stubber.resultFor(invocationMatcher.getInvocation());
+  if (stubber.hasResultFor(invocation)) {
+    return stubber.getResultFor(invocation);
+  }
+ else   if (MockUtil.isMock(instance)) {
+    return Configuration.instance().getReturnValues().valueFor(invocation);
+  }
+ else {
+    return methodProxy.invoke(instance,args);
+  }
 }

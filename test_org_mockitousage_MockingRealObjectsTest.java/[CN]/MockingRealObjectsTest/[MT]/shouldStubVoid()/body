@@ -1,0 +1,13 @@
+{
+  spy.add("one");
+  stubVoid(spy).toReturn().toThrow(new RuntimeException()).on().clear();
+  spy.add("one");
+  spy.clear();
+  try {
+    spy.clear();
+    fail();
+  }
+ catch (  RuntimeException e) {
+  }
+  assertEquals(1,spy.size());
+}

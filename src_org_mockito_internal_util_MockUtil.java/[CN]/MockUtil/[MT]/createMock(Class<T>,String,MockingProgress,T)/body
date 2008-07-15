@@ -1,6 +1,9 @@
 {
+  if (mockName == null) {
+    mockName=toInstanceName(classToMock);
+  }
   MockFactory<T> proxyFactory=new MockFactory<T>();
   MockHandler<T> mockHandler=new MockHandler<T>(mockName,progress,new MatchersBinder());
   MethodInterceptorFilter<MockHandler<T>> filter=new MethodInterceptorFilter<MockHandler<T>>(classToMock,mockHandler);
-  return proxyFactory.createMock(classToMock,filter);
+  return proxyFactory.createMock(classToMock,filter,optionalInstance);
 }

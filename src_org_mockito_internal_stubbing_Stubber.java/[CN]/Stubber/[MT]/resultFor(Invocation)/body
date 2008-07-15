@@ -1,8 +1,0 @@
-{
-  for (  StubbedInvocationMatcher s : stubbed) {
-    if (s.matches(invocation)) {
-      return s.answer(invocation);
-    }
-  }
-  return Configuration.instance().getReturnValues().valueFor(invocation);
-}

@@ -1,0 +1,4 @@
+{
+  spy.add("foo");
+  assertEquals("[foo]",spy.toString());
+}

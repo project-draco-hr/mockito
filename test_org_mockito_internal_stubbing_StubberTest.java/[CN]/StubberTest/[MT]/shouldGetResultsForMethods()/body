@@ -4,9 +4,9 @@
   Invocation differentMethod=new InvocationBuilder().differentMethod().toInvocation();
   stubber.setInvocationForPotentialStubbing(new InvocationMatcher(differentMethod));
   stubber.addAnswer(new ThrowsException(new MyException()));
-  assertEquals("simpleMethod",stubber.resultFor(simpleMethod));
+  assertEquals("simpleMethod",stubber.getResultFor(simpleMethod));
   try {
-    stubber.resultFor(differentMethod);
+    stubber.getResultFor(differentMethod);
     fail();
   }
  catch (  MyException e) {

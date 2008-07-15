@@ -1,6 +1,6 @@
 {
   MockFactory<SomeInterface> factory=new MockFactory<SomeInterface>();
-  SomeInterface proxy=factory.createMock(SomeInterface.class,new MockAwareStub());
+  SomeInterface proxy=factory.createMock(SomeInterface.class,new MockAwareStub(),null);
   Class superClass=proxy.getClass().getSuperclass();
   assertEquals(Object.class,superClass);
 }
