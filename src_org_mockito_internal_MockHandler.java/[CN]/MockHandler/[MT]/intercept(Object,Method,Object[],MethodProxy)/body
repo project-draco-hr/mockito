@@ -1,8 +1,8 @@
 {
-  if (stubber.hasAnswerForVoidMethod()) {
+  if (mockitoStubber.hasAnswerForVoidMethod()) {
     Invocation invocation=new Invocation(proxy,method,args,mockingProgress.nextSequenceNumber());
     InvocationMatcher invocationMatcher=matchersBinder.bindMatchers(invocation);
-    stubber.addVoidMethodForStubbing(invocationMatcher);
+    mockitoStubber.addVoidMethodForStubbing(invocationMatcher);
     return null;
   }
   VerificationModeImpl verificationMode=mockingProgress.pullVerificationMode();
@@ -13,11 +13,11 @@
     verifyingRecorder.verify(invocationMatcher,verificationMode);
     return null;
   }
-  stubber.setInvocationForPotentialStubbing(invocationMatcher);
+  mockitoStubber.setInvocationForPotentialStubbing(invocationMatcher);
   verifyingRecorder.recordInvocation(invocationMatcher.getInvocation());
   mockingProgress.reportOngoingStubbing(new OngoingStubbingImpl());
-  if (stubber.hasResultFor(invocation)) {
-    return stubber.getResultFor(invocation);
+  if (mockitoStubber.hasResultFor(invocation)) {
+    return mockitoStubber.getResultFor(invocation);
   }
  else   if (MockUtil.isMock(instance)) {
     return Configuration.instance().getReturnValues().valueFor(invocation);

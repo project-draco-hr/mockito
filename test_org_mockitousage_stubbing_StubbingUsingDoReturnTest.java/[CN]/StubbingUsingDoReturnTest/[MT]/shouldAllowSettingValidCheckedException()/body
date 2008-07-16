@@ -1,0 +1,9 @@
+{
+  doThrow(new IOException()).when(mock).throwsIOException(0);
+  try {
+    mock.throwsIOException(0);
+    fail();
+  }
+ catch (  IOException e) {
+  }
+}

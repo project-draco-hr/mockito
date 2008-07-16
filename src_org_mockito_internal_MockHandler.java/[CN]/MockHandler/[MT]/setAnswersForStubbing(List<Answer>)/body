@@ -1,0 +1,3 @@
+{
+  mockitoStubber.addAnswersForVoidMethod(answers);
+}

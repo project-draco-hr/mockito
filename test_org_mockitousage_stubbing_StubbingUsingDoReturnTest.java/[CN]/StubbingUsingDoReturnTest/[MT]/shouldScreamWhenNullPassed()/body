@@ -1,6 +1,6 @@
 {
   try {
-    doReturn("foo").when(null).toString();
+    doReturn("foo").when((Object)null).toString();
     fail();
   }
  catch (  Exception e) {

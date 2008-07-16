@@ -1,0 +1,4 @@
+{
+  answers.add(new ThrowsException(toBeThrown));
+  return this;
+}

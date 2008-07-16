@@ -1,9 +1,9 @@
 {
-  doThrow(new FooException()).when(mock).voidMethod();
+  doThrow(new FooRuntimeException()).when(mock).voidMethod();
   try {
     mock.voidMethod();
     fail();
   }
- catch (  FooException e) {
+ catch (  FooRuntimeException e) {
   }
 }

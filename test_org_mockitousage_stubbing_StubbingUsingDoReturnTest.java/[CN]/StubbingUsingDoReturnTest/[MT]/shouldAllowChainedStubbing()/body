@@ -1,0 +1,12 @@
+{
+  doReturn("foo").doThrow(new RuntimeException()).doReturn("bar").when(mock).simpleMethod();
+  assertEquals("foo",mock.simpleMethod());
+  try {
+    mock.simpleMethod();
+    fail();
+  }
+ catch (  RuntimeException e) {
+  }
+  assertEquals("bar",mock.simpleMethod());
+  assertEquals("bar",mock.simpleMethod());
+}

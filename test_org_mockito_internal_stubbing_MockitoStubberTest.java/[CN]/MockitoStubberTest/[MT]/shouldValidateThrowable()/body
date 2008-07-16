@@ -1,0 +1,8 @@
+{
+  try {
+    mockitoStubber.addAnswer(new ThrowsException(null));
+    fail();
+  }
+ catch (  MockitoException e) {
+  }
+}

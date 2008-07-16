@@ -1,9 +1,0 @@
-{
-  stubber.addAnswerForVoidMethod(new ThrowsException(new Exception()));
-  try {
-    stubber.addVoidMethodForStubbing(new InvocationMatcher(simpleMethod));
-    fail();
-  }
- catch (  MockitoException e) {
-  }
-}

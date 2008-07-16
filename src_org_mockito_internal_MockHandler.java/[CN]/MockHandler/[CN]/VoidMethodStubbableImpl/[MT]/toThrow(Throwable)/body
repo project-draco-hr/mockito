@@ -1,4 +1,4 @@
 {
-  stubber.addAnswerForVoidMethod(new ThrowsException(throwable));
+  mockitoStubber.addAnswerForVoidMethod(new ThrowsException(throwable));
   return this;
 }

@@ -1,0 +1,10 @@
+{
+  if (mock == null) {
+    reporter.nullPassedToWhenMethod();
+  }
+ else   if (!MockUtil.isMock(mock)) {
+    reporter.notAMockPassedToWhenMethod();
+  }
+  MockUtil.getMockHandler(mock).setAnswersForStubbing(answers);
+  return mock;
+}

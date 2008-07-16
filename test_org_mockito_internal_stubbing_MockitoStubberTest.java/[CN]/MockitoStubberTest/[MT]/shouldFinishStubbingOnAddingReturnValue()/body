@@ -1,0 +1,5 @@
+{
+  state.stubbingStarted();
+  mockitoStubber.addAnswer(new Returns("test"));
+  state.validateState();
+}

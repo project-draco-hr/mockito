@@ -1,0 +1,9 @@
+{
+  try {
+    doThrow(new FooCheckedException()).when(mock).throwsIOException(0);
+    fail();
+  }
+ catch (  Exception e) {
+    assertThat(e.getMessage(),contains("Checked exception is invalid"));
+  }
+}

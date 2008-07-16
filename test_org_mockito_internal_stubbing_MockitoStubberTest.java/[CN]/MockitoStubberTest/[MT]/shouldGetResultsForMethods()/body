@@ -1,0 +1,14 @@
+{
+  mockitoStubber.setInvocationForPotentialStubbing(new InvocationMatcher(simpleMethod));
+  mockitoStubber.addAnswer(new Returns("simpleMethod"));
+  Invocation differentMethod=new InvocationBuilder().differentMethod().toInvocation();
+  mockitoStubber.setInvocationForPotentialStubbing(new InvocationMatcher(differentMethod));
+  mockitoStubber.addAnswer(new ThrowsException(new MyException()));
+  assertEquals("simpleMethod",mockitoStubber.getResultFor(simpleMethod));
+  try {
+    mockitoStubber.getResultFor(differentMethod);
+    fail();
+  }
+ catch (  MyException e) {
+  }
+}

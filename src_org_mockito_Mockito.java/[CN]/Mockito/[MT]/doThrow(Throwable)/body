@@ -1,4 +1,3 @@
 {
-  MOCKING_PROGRESS.stubbingStarted();
-  return new MethodSelectorImpl(new ThrowsException(toBeThrown));
+  return doAnswer(new ThrowsException(toBeThrown));
 }

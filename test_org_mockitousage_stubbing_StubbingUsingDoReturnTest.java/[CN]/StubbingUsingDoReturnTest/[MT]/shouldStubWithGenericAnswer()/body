@@ -1,0 +1,9 @@
+{
+  doAnswer(new Answer<Object>(){
+    public Object answer(    InvocationOnMock invocation) throws Throwable {
+      return "foo";
+    }
+  }
+).when(mock).simpleMethod();
+  assertEquals("foo",mock.simpleMethod());
+}

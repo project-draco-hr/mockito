@@ -1,4 +1,4 @@
 {
-  stubber.addConsecutiveAnswer(new Returns(value));
+  mockitoStubber.addConsecutiveAnswer(new Returns(value));
   return this;
 }
