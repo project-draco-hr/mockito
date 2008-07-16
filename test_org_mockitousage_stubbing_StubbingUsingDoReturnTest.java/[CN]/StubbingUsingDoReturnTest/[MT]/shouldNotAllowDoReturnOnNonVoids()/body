@@ -1,4 +1,9 @@
 {
-  doReturn().when(mock).simpleMethod();
-  fail();
+  try {
+    doReturn().when(mock).simpleMethod();
+    fail();
+  }
+ catch (  MockitoException e) {
+    assertThat(e.getMessage(),contains("Cannot stub a non-void method"));
+  }
 }

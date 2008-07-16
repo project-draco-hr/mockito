@@ -1,8 +1,11 @@
 {
   if (answer instanceof ThrowsException) {
-    validateException(answer,invocation);
+    validateException((ThrowsException)answer,invocation);
   }
   if (answer instanceof Returns) {
-    validateReturnValue(answer,invocation);
+    validateReturnValue((Returns)answer,invocation);
+  }
+  if (answer instanceof ReturnsVoid) {
+    validateVoidReturn((ReturnsVoid)answer,invocation);
   }
 }

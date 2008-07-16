@@ -1,5 +1,0 @@
-{
-  if (invocation.isVoid() && ((Returns)answer).hasReturnValue()) {
-    reporter.cannotStubVoidMethodWithAReturnValue();
-  }
-}

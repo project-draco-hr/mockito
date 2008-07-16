@@ -1,5 +1,5 @@
 {
-  Throwable throwable=((ThrowsException)answer).getThrowable();
+  Throwable throwable=answer.getThrowable();
   if (throwable == null) {
     reporter.cannotStubWithNullThrowable();
   }

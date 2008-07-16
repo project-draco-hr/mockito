@@ -1,0 +1,3 @@
+{
+  validator.validate(new ReturnsVoid(),new InvocationBuilder().simpleMethod().toInvocation());
+}
