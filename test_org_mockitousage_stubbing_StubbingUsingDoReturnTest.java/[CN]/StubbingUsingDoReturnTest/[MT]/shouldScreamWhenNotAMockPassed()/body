@@ -4,6 +4,6 @@
     fail();
   }
  catch (  Exception e) {
-    assertEquals("Argument passed to when() method is not a mock",e.getMessage());
+    assertThat(e.getMessage(),contains("Argument passed to when() is not a mock"));
   }
 }

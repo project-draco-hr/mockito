@@ -1,0 +1,9 @@
+{
+  try {
+    doReturn("foo").when(null).toString();
+    fail();
+  }
+ catch (  Exception e) {
+    assertThat(e.getMessage(),contains("Argument passed to when() is null"));
+  }
+}

@@ -1,0 +1,4 @@
+{
+  validator.validate(new ThrowsException(new Error()),invocation);
+  validator.validate(new ThrowsException(new RuntimeException()),invocation);
+}

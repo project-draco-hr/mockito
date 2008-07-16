@@ -1,8 +1,0 @@
-{
-  try {
-    validator.validate(null,null);
-    fail();
-  }
- catch (  MockitoException e) {
-  }
-}

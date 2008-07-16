@@ -1,8 +1,7 @@
 {
   mockingProgress.stubbingCompleted();
-  if (answer instanceof ThrowsException) {
-    new ExceptionsValidator().validate(((ThrowsException)answer).getThrowable(),invocationForStubbing.getInvocation());
-  }
+  AnswersValidator answersValidator=new AnswersValidator();
+  answersValidator.validate(answer,invocationForStubbing.getInvocation());
   if (isConsecutive) {
     stubbed.getFirst().addAnswer(answer);
   }

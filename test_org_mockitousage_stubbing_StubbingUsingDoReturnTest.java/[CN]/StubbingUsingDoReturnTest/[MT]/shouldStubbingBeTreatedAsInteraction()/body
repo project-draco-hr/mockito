@@ -1,6 +1,6 @@
 {
-  stub(mock.booleanReturningMethod()).toReturn(true);
-  mock.booleanReturningMethod();
+  doReturn("foo").when(mock).simpleMethod();
+  mock.simpleMethod();
   try {
     verifyNoMoreInteractions(mock);
     fail();

@@ -1,0 +1,19 @@
+{
+  if (answer instanceof ThrowsException) {
+    Throwable throwable=((ThrowsException)answer).getThrowable();
+    if (throwable == null) {
+      reporter.cannotStubWithNullThrowable();
+    }
+    if (throwable instanceof RuntimeException || throwable instanceof Error) {
+      return;
+    }
+    if (!invocation.isValidException(throwable)) {
+      reporter.checkedExceptionInvalid(throwable);
+    }
+  }
+  if (answer instanceof Returns) {
+    if (invocation.isVoid() && ((Returns)answer).hasReturnValue()) {
+      reporter.cannotStubVoidMethodWithAReturnValue();
+    }
+  }
+}

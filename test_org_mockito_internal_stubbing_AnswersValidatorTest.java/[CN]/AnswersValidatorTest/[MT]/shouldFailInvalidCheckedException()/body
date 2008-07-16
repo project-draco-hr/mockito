@@ -1,0 +1,3 @@
+{
+  validator.validate(new ThrowsException(new IOException()),invocation);
+}

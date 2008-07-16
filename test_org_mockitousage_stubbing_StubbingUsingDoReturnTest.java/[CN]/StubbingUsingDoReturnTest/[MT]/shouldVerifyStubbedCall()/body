@@ -1,0 +1,7 @@
+{
+  doReturn("foo").when(mock).simpleMethod();
+  mock.simpleMethod();
+  mock.simpleMethod();
+  verify(mock,times(2)).simpleMethod();
+  verifyNoMoreInteractions(mock);
+}

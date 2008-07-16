@@ -1,4 +1,4 @@
 {
-  StateResetter.reset();
+  StateMaster.reset();
   mock=Mockito.mock(IMethods.class);
 }

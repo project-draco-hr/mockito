@@ -1,4 +1,9 @@
 {
-  doReturn(new RuntimeException()).when(mock).voidMethod();
-  fail();
+  try {
+    doReturn("foo").when(mock).voidMethod();
+    fail();
+  }
+ catch (  MockitoException e) {
+    assertThat(e.getMessage(),contains("Cannot stub a void method with a return value"));
+  }
 }

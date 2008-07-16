@@ -1,4 +1,0 @@
-{
-  Mockito.MOCKING_PROGRESS.validateState();
-  MockitoAnnotations.initMocks(this);
-}
