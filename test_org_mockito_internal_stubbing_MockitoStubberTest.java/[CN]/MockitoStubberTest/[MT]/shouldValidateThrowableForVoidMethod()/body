@@ -1,7 +1,7 @@
 {
   mockitoStubber.addAnswerForVoidMethod(new ThrowsException(new Exception()));
   try {
-    mockitoStubber.addVoidMethodForStubbing(new InvocationMatcher(simpleMethod));
+    mockitoStubber.setMethodForStubbing(new InvocationMatcher(simpleMethod));
     fail();
   }
  catch (  MockitoException e) {

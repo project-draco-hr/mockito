@@ -1,8 +1,8 @@
 {
-  if (mockitoStubber.hasAnswerForVoidMethod()) {
+  if (mockitoStubber.hasAnswersForStubbing()) {
     Invocation invocation=new Invocation(proxy,method,args,mockingProgress.nextSequenceNumber());
     InvocationMatcher invocationMatcher=matchersBinder.bindMatchers(invocation);
-    mockitoStubber.addVoidMethodForStubbing(invocationMatcher);
+    mockitoStubber.setMethodForStubbing(invocationMatcher);
     return null;
   }
   VerificationModeImpl verificationMode=mockingProgress.pullVerificationMode();
