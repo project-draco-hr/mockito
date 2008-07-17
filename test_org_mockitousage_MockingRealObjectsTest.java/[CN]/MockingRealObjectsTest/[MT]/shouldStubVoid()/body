@@ -1,5 +1,4 @@
 {
-  spy.add("one");
   stubVoid(spy).toReturn().toThrow(new RuntimeException()).on().clear();
   spy.add("one");
   spy.clear();
