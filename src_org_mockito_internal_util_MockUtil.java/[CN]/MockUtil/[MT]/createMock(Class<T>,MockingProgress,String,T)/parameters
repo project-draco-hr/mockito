@@ -1,4 +1,4 @@
 Class<T> classToMock
-String mockName
 MockingProgress progress
+String optionalMockName
 T optionalInstance

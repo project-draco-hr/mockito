@@ -1,3 +1,3 @@
 {
-  return MockUtil.createMock(classToMock,name,MOCKING_PROGRESS,null);
+  return MockUtil.createMock(classToMock,MOCKING_PROGRESS,name,null);
 }
