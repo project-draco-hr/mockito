@@ -1,3 +1,0 @@
-{
-  return doAnswer(new ReturnsVoid());
-}

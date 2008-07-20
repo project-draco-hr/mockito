@@ -1,6 +1,6 @@
 {
   try {
-    doReturn().when(mock).simpleMethod();
+    doNothing().when(mock).simpleMethod();
     fail();
   }
  catch (  MockitoException e) {

@@ -1,5 +1,5 @@
 {
-  doReturn().doReturn().doThrow(new RuntimeException()).when(mock).voidMethod();
+  doNothing().doNothing().doThrow(new RuntimeException()).when(mock).voidMethod();
   mock.voidMethod();
   mock.voidMethod();
   try {

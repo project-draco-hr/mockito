@@ -1,4 +1,0 @@
-{
-  answers.add(new ReturnsVoid());
-  return this;
-}

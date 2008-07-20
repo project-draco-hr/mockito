@@ -5,7 +5,7 @@
   if (answer instanceof Returns) {
     validateReturnValue((Returns)answer,invocation);
   }
-  if (answer instanceof ReturnsVoid) {
-    validateVoidReturn((ReturnsVoid)answer,invocation);
+  if (answer instanceof DoesNothing) {
+    validateVoidReturn((DoesNothing)answer,invocation);
   }
 }
