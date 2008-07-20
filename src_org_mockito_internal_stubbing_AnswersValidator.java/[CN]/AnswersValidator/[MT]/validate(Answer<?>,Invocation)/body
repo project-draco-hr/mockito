@@ -6,6 +6,6 @@
     validateReturnValue((Returns)answer,invocation);
   }
   if (answer instanceof DoesNothing) {
-    validateVoidReturn((DoesNothing)answer,invocation);
+    validateDoNothing((DoesNothing)answer,invocation);
   }
 }
