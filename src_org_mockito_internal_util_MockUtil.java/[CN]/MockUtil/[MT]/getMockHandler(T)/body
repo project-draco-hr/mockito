@@ -2,15 +2,10 @@
   if (mock == null) {
     throw new NotAMockException("Argument should be a mock, but is null!");
   }
-  try {
-    if (Enhancer.isEnhanced(mock.getClass())) {
-      return ((MethodInterceptorFilter<MockHandler<T>>)getInterceptor(mock)).getDelegate();
-    }
- else {
-      throw new NotAMockException("Argument should be a mock, but is: " + mock.getClass());
-    }
+  if (isMockitoMock(mock)) {
+    return getInterceptor(mock).getDelegate();
   }
- catch (  ClassCastException e) {
+ else {
     throw new NotAMockException("Argument should be a mock, but is: " + mock.getClass());
   }
 }

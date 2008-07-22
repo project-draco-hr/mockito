@@ -1,2 +1,4 @@
 {
+  doReturn("foo");
+  doReturn("bar");
 }

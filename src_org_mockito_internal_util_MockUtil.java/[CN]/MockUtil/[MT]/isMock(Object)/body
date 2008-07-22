@@ -1,9 +1,3 @@
 {
-  try {
-    getMockHandler(mock);
-    return true;
-  }
- catch (  MockitoException e) {
-    return false;
-  }
+  return mock != null && isMockitoMock(mock);
 }

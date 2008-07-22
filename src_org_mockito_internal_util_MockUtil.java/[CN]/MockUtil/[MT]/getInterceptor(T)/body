@@ -1,4 +1,8 @@
 {
   Factory factory=(Factory)mock;
-  return (MethodInterceptorFilter)factory.getCallback(0);
+  Callback callback=factory.getCallback(0);
+  if (callback instanceof MethodInterceptorFilter) {
+    return (MethodInterceptorFilter)callback;
+  }
+  return null;
 }
