@@ -1,0 +1,8 @@
+{
+  if (nextToSearch != null) {
+    return nextToSearch.loadClass(name);
+  }
+ else {
+    return super.findClass(name);
+  }
+}

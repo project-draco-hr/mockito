@@ -1,0 +1,11 @@
+{
+  List<ClassLoader> loaders=new ArrayList<ClassLoader>();
+  addIfNewElement(loaders,first.getClassLoader());
+  for (  Class<?> c : others) {
+    addIfNewElement(loaders,c.getClassLoader());
+  }
+  addIfNewElement(loaders,SearchingClassLoader.class.getClassLoader());
+  addIfNewElement(loaders,currentThread().getContextClassLoader());
+  addIfNewElement(loaders,ClassLoader.getSystemClassLoader());
+  return combine(loaders);
+}

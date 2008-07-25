@@ -14,6 +14,6 @@
   if (toMock.getSigners() != null) {
     enhancer.setNamingPolicy(ALLOWS_MOCKING_CLASSES_IN_SIGNED_PACKAGES);
   }
-  enhancer.setClassLoader(MockFactory.class.getClassLoader());
+  enhancer.setClassLoader(SearchingClassLoader.combineLoadersOf(toMock));
   return enhancer;
 }
