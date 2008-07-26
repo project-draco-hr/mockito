@@ -1,0 +1,6 @@
+{
+  stub(spy.contains(anyObject())).toReturn(true);
+  stub(spy.contains("foo")).toReturn(false);
+  assertTrue(spy.contains("bar"));
+  assertFalse(spy.contains("foo"));
+}
