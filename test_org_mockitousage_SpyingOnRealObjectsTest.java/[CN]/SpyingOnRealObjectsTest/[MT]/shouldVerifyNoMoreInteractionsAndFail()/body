@@ -1,0 +1,11 @@
+{
+  spy.add("one");
+  spy.add("two");
+  verify(spy).add("one");
+  try {
+    verifyNoMoreInteractions(spy);
+    fail();
+  }
+ catch (  NoInteractionsWanted e) {
+  }
+}
