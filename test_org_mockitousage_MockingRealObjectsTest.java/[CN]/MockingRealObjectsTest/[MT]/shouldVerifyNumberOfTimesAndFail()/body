@@ -1,0 +1,10 @@
+{
+  spy.add("one");
+  spy.add("one");
+  try {
+    verify(spy,times(3)).add("one");
+    fail();
+  }
+ catch (  TooLittleActualInvocations e) {
+  }
+}

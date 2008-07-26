@@ -1,0 +1,6 @@
+{
+  spy.add("one");
+  spy.add("one");
+  verify(spy,times(2)).add("one");
+  verifyNoMoreInteractions(spy);
+}
