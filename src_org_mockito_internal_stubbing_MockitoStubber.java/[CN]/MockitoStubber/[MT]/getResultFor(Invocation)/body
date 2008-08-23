@@ -1,3 +1,0 @@
-{
-  return findMatchFor(invocation).answer(invocation);
-}

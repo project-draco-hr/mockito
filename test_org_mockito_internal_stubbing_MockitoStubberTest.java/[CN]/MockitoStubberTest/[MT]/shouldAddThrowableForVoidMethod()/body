@@ -2,7 +2,7 @@
   mockitoStubber.addAnswerForVoidMethod(new ThrowsException(new MyException()));
   mockitoStubber.setMethodForStubbing(new InvocationMatcher(simpleMethod));
   try {
-    mockitoStubber.getResultFor(simpleMethod);
+    mockitoStubber.answerTo(simpleMethod);
     fail();
   }
  catch (  MyException e) {
