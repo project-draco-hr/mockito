@@ -15,7 +15,7 @@
   }
   mockitoStubber.setInvocationForPotentialStubbing(invocationMatcher);
   verifyingRecorder.recordInvocation(invocationMatcher.getInvocation());
-  mockingProgress.reportOngoingStubbing(new OngoingStubbingImpl());
+  mockingProgress.reportOngoingStubbing(new DeprecatedOngoingStubbingImpl());
   Answer<?> answer=mockitoStubber.findAnswerFor(invocation);
   if (answer != null) {
     return answer.answer(invocation);

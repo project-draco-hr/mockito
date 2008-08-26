@@ -1,0 +1,4 @@
+{
+  mockitoStubber.addConsecutiveAnswer(answer);
+  return this;
+}

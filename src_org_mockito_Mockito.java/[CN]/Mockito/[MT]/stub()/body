@@ -1,0 +1,7 @@
+{
+  OngoingStubbing stubbing=MOCKING_PROGRESS.pullOngoingStubbing();
+  if (stubbing == null) {
+    REPORTER.missingMethodInvocation();
+  }
+  return stubbing;
+}
