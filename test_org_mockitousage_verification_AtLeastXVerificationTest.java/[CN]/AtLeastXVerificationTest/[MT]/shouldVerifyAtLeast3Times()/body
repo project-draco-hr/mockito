@@ -1,5 +1,0 @@
-{
-  mock.add("foo");
-  mock.add("foo");
-  mock.add("foo");
-}

@@ -1,0 +1,8 @@
+{
+  mock.add("foo");
+  mock.add("foo");
+  mock.add("foo");
+  verify(mock,atLeast(1)).add("foo");
+  verify(mock,atLeast(2)).add("foo");
+  verify(mock,atLeast(3)).add("foo");
+}

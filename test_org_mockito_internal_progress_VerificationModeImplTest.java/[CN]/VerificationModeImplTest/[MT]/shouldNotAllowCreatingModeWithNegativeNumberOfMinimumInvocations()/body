@@ -1,0 +1,9 @@
+{
+  try {
+    atLeast(-50);
+    fail();
+  }
+ catch (  MockitoException e) {
+    assertEquals("Negative value and zero are not allowed for minNumberOfInvocations",e.getMessage());
+  }
+}

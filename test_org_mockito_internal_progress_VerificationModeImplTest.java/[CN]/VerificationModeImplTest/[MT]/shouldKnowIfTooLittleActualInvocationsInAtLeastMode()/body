@@ -1,0 +1,7 @@
+{
+  assertTrue(atLeast(3).tooLittleActualInvocationsInAtLeastMode(2));
+  assertTrue(atLeast(3).tooLittleActualInvocationsInAtLeastMode(1));
+  assertTrue(atLeast(3).tooLittleActualInvocationsInAtLeastMode(0));
+  assertFalse(atLeast(1).tooLittleActualInvocationsInAtLeastMode(1));
+  assertFalse(atLeast(1).tooLittleActualInvocationsInAtLeastMode(2));
+}

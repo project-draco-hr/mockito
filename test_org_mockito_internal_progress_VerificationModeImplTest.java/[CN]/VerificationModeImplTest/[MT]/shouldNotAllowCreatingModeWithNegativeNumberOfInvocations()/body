@@ -4,6 +4,6 @@
     fail();
   }
  catch (  MockitoException e) {
-    assertEquals("Negative value is not allowed here",e.getMessage());
+    assertEquals("Negative value is not allowed for wantedNumberOfInvocations",e.getMessage());
   }
 }
