@@ -1,5 +1,0 @@
-{
-  this.wanted=wanted;
-  this.comparator=comparator;
-  this.operator=result;
-}

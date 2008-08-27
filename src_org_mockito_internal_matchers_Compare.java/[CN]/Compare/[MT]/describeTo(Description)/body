@@ -1,3 +1,0 @@
-{
-  description.appendText(comparator + "(" + wanted+ ") "+ operator.getSymbol()+ " 0");
-}
