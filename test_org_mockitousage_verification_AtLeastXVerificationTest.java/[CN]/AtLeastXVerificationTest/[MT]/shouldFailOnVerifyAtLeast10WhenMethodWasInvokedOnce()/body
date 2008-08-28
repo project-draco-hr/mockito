@@ -1,4 +1,4 @@
 {
   mock.add("foo");
-  verify(mock,atLeast(10)).add("foo");
+  verify(mock,atLeast(2)).add("foo");
 }
