@@ -1,0 +1,16 @@
+{
+  stub(mock.simpleMethod("one")).toThrow(new RuntimeException());
+  stubVoid(mock).toThrow(new RuntimeException()).on().simpleMethod("two");
+  try {
+    verify(mock).simpleMethod("one");
+    fail();
+  }
+ catch (  ArgumentsAreDifferent e) {
+  }
+  try {
+    verify(mock).simpleMethod("two");
+    fail();
+  }
+ catch (  ArgumentsAreDifferent e) {
+  }
+}
