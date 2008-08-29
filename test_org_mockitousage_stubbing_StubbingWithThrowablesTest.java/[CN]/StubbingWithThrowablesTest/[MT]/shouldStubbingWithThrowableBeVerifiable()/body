@@ -1,5 +1,5 @@
 {
-  stub(mock.size()).toThrow(new RuntimeException());
+  when(mock.size()).thenThrow(new RuntimeException());
   stubVoid(mock).toThrow(new RuntimeException()).on().clone();
   try {
     mock.size();

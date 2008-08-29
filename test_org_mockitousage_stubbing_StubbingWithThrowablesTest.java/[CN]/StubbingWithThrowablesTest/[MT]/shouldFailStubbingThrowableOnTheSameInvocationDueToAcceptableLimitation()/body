@@ -1,7 +1,7 @@
 {
-  stub(mock.get(1)).toThrow(new ExceptionOne());
+  when(mock.get(1)).thenThrow(new ExceptionOne());
   try {
-    stub(mock.get(1)).toThrow(new ExceptionTwo());
+    when(mock.get(1)).thenThrow(new ExceptionTwo());
     fail();
   }
  catch (  ExceptionOne e) {

@@ -1,10 +1,10 @@
 {
-  stub(mock.add("ExceptionOne")).toThrow(new ExceptionOne());
-  stub(mock.getLast()).toReturn("last");
+  when(mock.add("ExceptionOne")).thenThrow(new ExceptionOne());
+  when(mock.getLast()).thenReturn("last");
   stubVoid(mock).toThrow(new ExceptionTwo()).on().clear();
   stubVoid(mockTwo).toThrow(new ExceptionThree()).on().clear();
-  stub(mockTwo.containsValue("ExceptionFour")).toThrow(new ExceptionFour());
-  stub(mockTwo.get("Are you there?")).toReturn("Yes!");
+  when(mockTwo.containsValue("ExceptionFour")).thenThrow(new ExceptionFour());
+  when(mockTwo.get("Are you there?")).thenReturn("Yes!");
   assertNull(mockTwo.get("foo"));
   assertTrue(mockTwo.keySet().isEmpty());
   assertEquals("Yes!",mockTwo.get("Are you there?"));

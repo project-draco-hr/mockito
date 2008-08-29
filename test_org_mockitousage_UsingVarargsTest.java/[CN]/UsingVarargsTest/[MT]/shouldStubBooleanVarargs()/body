@@ -1,6 +1,6 @@
 {
-  stub(mock.withBooleanVarargs(1)).toReturn(true);
-  stub(mock.withBooleanVarargs(1,true,false)).toReturn(true);
+  when(mock.withBooleanVarargs(1)).thenReturn(true);
+  when(mock.withBooleanVarargs(1,true,false)).thenReturn(true);
   assertEquals(true,mock.withBooleanVarargs(1));
   assertEquals(false,mock.withBooleanVarargs(9999));
   assertEquals(true,mock.withBooleanVarargs(1,true,false));

@@ -1,7 +1,7 @@
 {
-  stub(one.simpleMethod(2)).toReturn("2");
-  stub(two.simpleMethod(anyString())).toReturn("any");
-  stub(three.simpleMethod(startsWith("test"))).toThrow(new RuntimeException());
+  when(one.simpleMethod(2)).thenReturn("2");
+  when(two.simpleMethod(anyString())).thenReturn("any");
+  when(three.simpleMethod(startsWith("test"))).thenThrow(new RuntimeException());
   assertEquals(null,one.simpleMethod(1));
   assertEquals("2",one.simpleMethod(2));
   assertEquals("any",two.simpleMethod("two"));

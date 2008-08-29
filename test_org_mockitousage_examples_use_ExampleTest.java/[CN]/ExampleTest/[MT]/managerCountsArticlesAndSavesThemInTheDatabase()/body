@@ -1,6 +1,6 @@
 {
-  stub(mockCalculator.countArticles("Guardian")).toReturn(12);
-  stub(mockCalculator.countArticlesInPolish(anyString())).toReturn(5);
+  when(mockCalculator.countArticles("Guardian")).thenReturn(12);
+  when(mockCalculator.countArticlesInPolish(anyString())).thenReturn(5);
   articleManager.updateArticleCounters("Guardian");
   verify(mockDatabase).updateNumberOfArticles("Guardian",12);
   verify(mockDatabase).updateNumberOfPolishArticles("Guardian",5);

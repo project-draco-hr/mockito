@@ -1,5 +1,5 @@
 {
-  stub(mock.simpleMethod(anyString())).toAnswer(new Answer<String>(){
+  when(mock.simpleMethod(anyString())).thenAnswer(new Answer<String>(){
     public String answer(    InvocationOnMock invocation) throws Throwable {
       String arg=(String)invocation.getArguments()[0];
       return invocation.getMethod().getName() + "-" + arg;

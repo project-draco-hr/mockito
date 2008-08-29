@@ -1,9 +1,9 @@
 {
-  stub(mock.oneArg(anyObject())).toReturn("0");
-  stub(mock.oneArg(anyString())).toReturn("1");
-  stub(mock.forList(anyList())).toReturn("2");
-  stub(mock.forMap(anyMap())).toReturn("3");
-  stub(mock.forCollection(anyCollection())).toReturn("4");
+  when(mock.oneArg(anyObject())).thenReturn("0");
+  when(mock.oneArg(anyString())).thenReturn("1");
+  when(mock.forList(anyList())).thenReturn("2");
+  when(mock.forMap(anyMap())).thenReturn("3");
+  when(mock.forCollection(anyCollection())).thenReturn("4");
   assertEquals("0",mock.oneArg((Object)null));
   assertEquals("1",mock.oneArg((String)null));
   assertEquals("2",mock.forList(null));

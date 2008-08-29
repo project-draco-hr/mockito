@@ -1,3 +1,3 @@
 {
-  stub(mock.add("monkey island")).toThrow(new Exception());
+  when(mock.add("monkey island")).thenThrow(new Exception());
 }

@@ -1,4 +1,4 @@
 {
-  stub(mock.simpleMethod()).toReturn("this stubbing is required to make sure Stubbable is pulled");
-  stub("".toString()).toReturn("x");
+  when(mock.simpleMethod()).thenReturn("this stubbing is required to make sure Stubbable is pulled");
+  when("".toString()).thenReturn("x");
 }

@@ -1,6 +1,6 @@
 {
-  stub(mock.oneArg(matches("[a-z]+\\d\\d"))).toReturn("1");
-  stub(mock.oneArg(matches("\\d\\d\\d"))).toReturn("2");
+  when(mock.oneArg(matches("[a-z]+\\d\\d"))).thenReturn("1");
+  when(mock.oneArg(matches("\\d\\d\\d"))).thenReturn("2");
   assertEquals("1",mock.oneArg("a12"));
   assertEquals("2",mock.oneArg("131"));
   assertEquals(null,mock.oneArg("blah"));

@@ -1,9 +1,9 @@
 {
   Article articleOne=new Article();
   Article articleTwo=new Article();
-  stub(mockCalculator.countNumberOfRelatedArticles(articleOne)).toReturn(1);
-  stub(mockCalculator.countNumberOfRelatedArticles(articleTwo)).toReturn(12);
-  stub(mockDatabase.getArticlesFor("Guardian")).toReturn(Arrays.asList(articleOne,articleTwo));
+  when(mockCalculator.countNumberOfRelatedArticles(articleOne)).thenReturn(1);
+  when(mockCalculator.countNumberOfRelatedArticles(articleTwo)).thenReturn(12);
+  when(mockDatabase.getArticlesFor("Guardian")).thenReturn(Arrays.asList(articleOne,articleTwo));
   articleManager.updateRelatedArticlesCounters("Guardian");
   InOrder inOrder=inOrder(mockDatabase,mockCalculator);
   inOrder.verify(mockCalculator).countNumberOfRelatedArticles((Article)anyObject());

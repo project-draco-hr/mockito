@@ -1,6 +1,6 @@
 {
   IllegalArgumentException expected=new IllegalArgumentException("thrown by mock");
-  stub(mock.add("throw")).toThrow(expected);
+  when(mock.add("throw")).thenThrow(expected);
   try {
     mock.add("throw");
     fail();

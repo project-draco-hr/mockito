@@ -1,6 +1,6 @@
 {
   Object[] nullArray=null;
-  stub(mock.oneArray(aryEq(nullArray))).toReturn("null");
+  when(mock.oneArray(aryEq(nullArray))).thenReturn("null");
   assertEquals("null",mock.oneArray(nullArray));
   mock=mock(IMethods.class);
   try {

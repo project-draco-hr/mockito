@@ -5,8 +5,8 @@
   assertNotSame(one,two);
   assertEquals(one,two);
   assertEquals(two,three);
-  stub(mock.oneArg(same(one))).toReturn("1");
-  stub(mock.oneArg(same(two))).toReturn("2");
+  when(mock.oneArg(same(one))).thenReturn("1");
+  when(mock.oneArg(same(two))).thenReturn("2");
   assertEquals("1",mock.oneArg(one));
   assertEquals("2",mock.oneArg(two));
   assertEquals(null,mock.oneArg(three));

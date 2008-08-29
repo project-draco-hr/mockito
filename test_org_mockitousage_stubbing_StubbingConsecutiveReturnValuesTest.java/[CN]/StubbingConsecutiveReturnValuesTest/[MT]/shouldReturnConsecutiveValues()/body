@@ -1,5 +1,5 @@
 {
-  stub(mock.simpleMethod()).toReturn("one").toReturn("two").toReturn("three");
+  when(mock.simpleMethod()).thenReturn("one").thenReturn("two").thenReturn("three");
   assertEquals("one",mock.simpleMethod());
   assertEquals("two",mock.simpleMethod());
   assertEquals("three",mock.simpleMethod());

@@ -1,7 +1,7 @@
 {
   Reader reader=mock(Reader.class);
   IOException ioException=new IOException();
-  stub(reader.read()).toThrow(ioException);
+  when(reader.read()).thenThrow(ioException);
   try {
     reader.read();
     fail();

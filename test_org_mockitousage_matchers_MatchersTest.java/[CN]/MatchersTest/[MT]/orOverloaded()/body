@@ -1,14 +1,14 @@
 {
-  stub(mock.oneArg(or(eq(false),eq(true)))).toReturn("0");
-  stub(mock.oneArg(or(eq((byte)1),eq((byte)2)))).toReturn("1");
-  stub(mock.oneArg(or(eq((char)1),eq((char)2)))).toReturn("2");
-  stub(mock.oneArg(or(eq((double)1),eq((double)2)))).toReturn("3");
-  stub(mock.oneArg(or(eq((float)1),eq((float)2)))).toReturn("4");
-  stub(mock.oneArg(or(eq((int)1),eq((int)2)))).toReturn("5");
-  stub(mock.oneArg(or(eq((long)1),eq((long)2)))).toReturn("6");
-  stub(mock.oneArg(or(eq((short)1),eq((short)2)))).toReturn("7");
-  stub(mock.oneArg(or(eq("asd"),eq("jkl")))).toReturn("8");
-  stub(mock.oneArg(or(eq(this.getClass()),eq(Object.class)))).toReturn("9");
+  when(mock.oneArg(or(eq(false),eq(true)))).thenReturn("0");
+  when(mock.oneArg(or(eq((byte)1),eq((byte)2)))).thenReturn("1");
+  when(mock.oneArg(or(eq((char)1),eq((char)2)))).thenReturn("2");
+  when(mock.oneArg(or(eq((double)1),eq((double)2)))).thenReturn("3");
+  when(mock.oneArg(or(eq((float)1),eq((float)2)))).thenReturn("4");
+  when(mock.oneArg(or(eq((int)1),eq((int)2)))).thenReturn("5");
+  when(mock.oneArg(or(eq((long)1),eq((long)2)))).thenReturn("6");
+  when(mock.oneArg(or(eq((short)1),eq((short)2)))).thenReturn("7");
+  when(mock.oneArg(or(eq("asd"),eq("jkl")))).thenReturn("8");
+  when(mock.oneArg(or(eq(this.getClass()),eq(Object.class)))).thenReturn("9");
   assertEquals("0",mock.oneArg(true));
   assertEquals("0",mock.oneArg(false));
   assertEquals("1",mock.oneArg((byte)2));

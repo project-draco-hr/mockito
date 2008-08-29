@@ -1,5 +1,5 @@
 {
   verifyingRecorder.eraseLastInvocation();
   mockitoStubber.addAnswer(answer);
-  return new DeprecatedConsecutiveStubbing();
+  return new ConsecutiveStubbing();
 }

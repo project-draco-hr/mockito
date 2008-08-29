@@ -1,5 +1,5 @@
 {
-  stub(mock.oneArg(charThat(new IsSorZ()))).toReturn("foo");
+  when(mock.oneArg(charThat(new IsSorZ()))).thenReturn("foo");
   assertEquals("foo",mock.oneArg('s'));
   assertEquals("foo",mock.oneArg('z'));
   assertEquals(null,mock.oneArg('x'));

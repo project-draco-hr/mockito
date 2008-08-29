@@ -1,6 +1,6 @@
 {
   stubVoid(one).toThrow(new RuntimeException()).on().oneArg(true);
-  stub(three.varargsObject(5,"first arg","second arg")).toReturn("stubbed");
+  when(three.varargsObject(5,"first arg","second arg")).thenReturn("stubbed");
   try {
     one.oneArg(true);
     fail();

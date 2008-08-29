@@ -1,5 +1,5 @@
 {
-  stub(mock.oneArg(booleanThat(new IsAnyBoolean()))).toReturn("foo");
+  when(mock.oneArg(booleanThat(new IsAnyBoolean()))).thenReturn("foo");
   assertEquals("foo",mock.oneArg(true));
   assertEquals("foo",mock.oneArg(false));
   assertEquals(null,mock.oneArg("x"));

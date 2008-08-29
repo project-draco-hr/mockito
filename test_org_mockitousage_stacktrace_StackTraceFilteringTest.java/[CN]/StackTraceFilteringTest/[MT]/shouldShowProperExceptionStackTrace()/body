@@ -1,5 +1,5 @@
 {
-  stub(mock.simpleMethod()).toThrow(new RuntimeException());
+  when(mock.simpleMethod()).thenThrow(new RuntimeException());
   try {
     mock.simpleMethod();
     fail();

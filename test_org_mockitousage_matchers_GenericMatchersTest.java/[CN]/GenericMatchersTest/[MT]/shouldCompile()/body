@@ -1,5 +1,5 @@
 {
-  stub(sorter.convertDate(new Date())).toReturn("one");
-  stub(sorter.convertDate((Date)anyObject())).toReturn("two");
-  stub(sorter.sort(anyList())).toReturn(null);
+  when(sorter.convertDate(new Date())).thenReturn("one");
+  when(sorter.convertDate((Date)anyObject())).thenReturn("two");
+  when(sorter.sort(anyList())).thenReturn(null);
 }
