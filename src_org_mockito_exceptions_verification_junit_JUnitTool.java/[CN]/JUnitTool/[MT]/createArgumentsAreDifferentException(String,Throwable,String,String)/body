@@ -1,3 +1,10 @@
 {
-  return new ArgumentsAreDifferent(message,cause);
+  try {
+    Class<?> clazz=Class.forName("org.mockito.exceptions.verification.junit.ArgumentsAreDifferent");
+    AssertionError throwable=(AssertionError)clazz.getConstructors()[0].newInstance(message,cause,wanted,actual);
+    return throwable;
+  }
+ catch (  Throwable t) {
+    return new ArgumentsAreDifferent(message,cause);
+  }
 }
