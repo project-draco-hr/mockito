@@ -1,6 +1,8 @@
 {
   list.clear();
   map.clear();
+  listTwo.clear();
   verify(list).clear();
   verify(map).clear();
+  verify(listTwo).clear();
 }
