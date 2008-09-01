@@ -1,0 +1,14 @@
+{
+  mock.clear();
+  mock.add("one");
+  mock.add("two");
+  mock.add("three");
+  InOrder inOrder=inOrder(mock);
+  inOrder.verify(mock,atLeastOnce()).clear();
+  try {
+    inOrder.verify(mock,atLeast(4)).add(anyString());
+    fail();
+  }
+ catch (  TooLittleActualInvocations e) {
+  }
+}
