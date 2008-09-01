@@ -1,7 +1,3 @@
 {
-  if (!mocksToBeVerifiedInOrder.contains(mock)) {
-    reporter.inOrderRequiresFamiliarMock();
-  }
-  Integer wantedCount=((VerificationModeImpl)mode).wantedCount();
-  return Mockito.verify(mock,VerificationModeImpl.inOrder(wantedCount,mocksToBeVerifiedInOrder));
+  return verify(mock,(VerificationModeImpl)mode);
 }

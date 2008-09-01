@@ -1,5 +1,5 @@
 {
-  boolean atLeast=atLeastMode() && actualCount >= minInvocationCount;
+  boolean atLeast=atLeastMode() && actualCount >= wantedInvocationCount;
   boolean actualMatchesWanted=!atLeastMode() && wantedInvocationCount == actualCount;
   return atLeast || actualMatchesWanted;
 }

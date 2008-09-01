@@ -1,2 +1,2 @@
-Integer wantedNumberOfInvocations
+int minNumberOfInvocations
 List<? extends Object> mocksToBeVerifiedInOrder

@@ -9,6 +9,6 @@
     inOrder.verify(mock,atLeast(4)).add(anyString());
     fail();
   }
- catch (  TooLittleActualInvocations e) {
+ catch (  VerifcationInOrderFailure e) {
   }
 }

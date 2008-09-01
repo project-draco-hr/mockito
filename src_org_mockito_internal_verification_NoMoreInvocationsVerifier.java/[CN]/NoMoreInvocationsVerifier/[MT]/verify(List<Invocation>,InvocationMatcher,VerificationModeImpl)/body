@@ -1,5 +1,5 @@
 {
-  if (mode.explicitMode()) {
+  if (mode.explicitMode() || mode.atLeastMode()) {
     return;
   }
   Invocation unverified=finder.findFirstUnverified(invocations);
