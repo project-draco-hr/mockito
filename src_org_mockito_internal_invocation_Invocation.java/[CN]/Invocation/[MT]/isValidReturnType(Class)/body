@@ -1,0 +1,8 @@
+{
+  if (method.getReturnType().isPrimitive()) {
+    return Primitives.primitiveTypeOf(clazz) == method.getReturnType();
+  }
+ else {
+    return method.getReturnType().isAssignableFrom(clazz);
+  }
+}

@@ -1,0 +1,3 @@
+{
+  validator.validate(new Returns(1),new InvocationBuilder().method("doubleReturningMethod").toInvocation());
+}

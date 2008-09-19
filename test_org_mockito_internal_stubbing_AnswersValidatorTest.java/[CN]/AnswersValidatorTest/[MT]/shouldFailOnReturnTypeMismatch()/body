@@ -1,0 +1,3 @@
+{
+  validator.validate(new Returns("String"),new InvocationBuilder().method("booleanReturningMethod").toInvocation());
+}

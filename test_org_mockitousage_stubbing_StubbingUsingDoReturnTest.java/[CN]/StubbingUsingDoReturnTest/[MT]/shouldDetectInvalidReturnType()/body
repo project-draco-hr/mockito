@@ -1,0 +1,9 @@
+{
+  try {
+    doReturn("foo").when(mock).booleanObjectReturningMethod();
+    fail();
+  }
+ catch (  Exception e) {
+    assertThat(e,messageContains("String cannot be returned by booleanObjectReturningMethod" + "\n" + "booleanObjectReturningMethod should return Boolean"));
+  }
+}

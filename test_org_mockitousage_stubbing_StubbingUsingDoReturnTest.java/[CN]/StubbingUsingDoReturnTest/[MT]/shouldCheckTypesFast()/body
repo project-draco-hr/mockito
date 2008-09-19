@@ -1,8 +1,0 @@
-{
-  try {
-    doReturn("foo").when(mock).booleanReturningMethod();
-    fail();
-  }
- catch (  Exception e) {
-  }
-}

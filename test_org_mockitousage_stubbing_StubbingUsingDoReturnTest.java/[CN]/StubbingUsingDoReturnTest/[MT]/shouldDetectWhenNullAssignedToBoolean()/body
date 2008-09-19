@@ -1,0 +1,9 @@
+{
+  try {
+    doReturn(null).when(mock).intReturningMethod();
+    fail();
+  }
+ catch (  Exception e) {
+    assertThat(e,messageContains("null cannot be returned by intReturningMethod"));
+  }
+}
