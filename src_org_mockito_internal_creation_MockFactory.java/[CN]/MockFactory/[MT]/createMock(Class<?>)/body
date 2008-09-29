@@ -6,6 +6,5 @@
  catch (  InstantiationException e) {
     throw new RuntimeException("Fail to instantiate mock for " + mockClass + " on "+ System.getProperty("java.vm.vendor")+ " JVM");
   }
-  mock.getCallback(0);
   return mock;
 }

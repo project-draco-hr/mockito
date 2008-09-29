@@ -3,8 +3,8 @@
   Enhancer enhancer=createEnhancer(toMock);
   enhancer.setCallbackType(filter.getClass());
   Class mockClass=enhancer.createClass();
-  Enhancer.registerCallbacks(mockClass,new Callback[]{filter});
   Factory mock=createMock(mockClass);
+  mock.setCallbacks(new Callback[]{filter});
   filter.setInstance(optionalInstance != null ? optionalInstance : mock);
   return (T)mock;
 }
