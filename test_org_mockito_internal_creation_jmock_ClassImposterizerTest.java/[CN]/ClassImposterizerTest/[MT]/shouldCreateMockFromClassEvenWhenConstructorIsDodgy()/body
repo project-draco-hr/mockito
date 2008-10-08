@@ -1,0 +1,10 @@
+{
+  try {
+    new ClassWithDodgyConstructor();
+    fail();
+  }
+ catch (  Exception e) {
+  }
+  ClassWithDodgyConstructor mock=ClassImposterizer.INSTANCE.imposterise(new MethodInterceptorStub(),ClassWithDodgyConstructor.class);
+  assertNotNull(mock);
+}

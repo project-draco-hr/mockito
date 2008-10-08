@@ -1,0 +1,10 @@
+{
+  try {
+    setConstructorsAccessible(mockedType,true);
+    Class<?> proxyClass=createProxyClass(mockedType);
+    return mockedType.cast(createProxy(proxyClass,interceptor));
+  }
+  finally {
+    setConstructorsAccessible(mockedType,false);
+  }
+}

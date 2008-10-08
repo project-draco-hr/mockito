@@ -1,0 +1,30 @@
+{
+  if (mockedType == Object.class) {
+    mockedType=ClassWithSuperclassToWorkAroundCglibBug.class;
+  }
+  Enhancer enhancer=new Enhancer(){
+    @Override @SuppressWarnings("unchecked") protected void filterConstructors(    Class sc,    List constructors){
+    }
+  }
+;
+  enhancer.setClassLoader(SearchingClassLoader.combineLoadersOf(mockedType));
+  enhancer.setUseFactory(true);
+  if (mockedType.isInterface()) {
+    enhancer.setSuperclass(Object.class);
+    enhancer.setInterfaces(prepend(mockedType));
+  }
+ else {
+    enhancer.setSuperclass(mockedType);
+  }
+  enhancer.setCallbackTypes(new Class[]{MethodInterceptor.class,NoOp.class});
+  enhancer.setCallbackFilter(IGNORE_BRIDGE_METHODS);
+  if (mockedType.getSigners() != null) {
+    enhancer.setNamingPolicy(NAMING_POLICY_THAT_ALLOWS_IMPOSTERISATION_OF_CLASSES_IN_SIGNED_PACKAGES);
+  }
+  try {
+    return enhancer.createClass();
+  }
+ catch (  CodeGenerationException e) {
+    throw new IllegalArgumentException("could not imposterise " + mockedType,e);
+  }
+}

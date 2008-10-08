@@ -1,0 +1,5 @@
+{
+  for (  Constructor<?> constructor : mockedType.getDeclaredConstructors()) {
+    constructor.setAccessible(accessible);
+  }
+}

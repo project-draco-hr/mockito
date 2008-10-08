@@ -1,6 +1,0 @@
-{
-  MockFactory<ClassWithoutConstructor> factory=new MockFactory<ClassWithoutConstructor>();
-  ClassWithoutConstructor proxy=factory.createMock(ClassWithoutConstructor.class,new MockAwareStub(),null);
-  Class superClass=proxy.getClass().getSuperclass();
-  assertEquals(ClassWithoutConstructor.class,superClass);
-}

@@ -1,0 +1,3 @@
+MethodInterceptor interceptor
+Class<T> mockedType
+Class<?> ancilliaryTypes

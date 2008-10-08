@@ -1,0 +1,5 @@
+{
+  SomeInterface proxy=ClassImposterizer.INSTANCE.imposterise(new MethodInterceptorStub(),SomeInterface.class);
+  Class superClass=proxy.getClass().getSuperclass();
+  assertEquals(Object.class,superClass);
+}

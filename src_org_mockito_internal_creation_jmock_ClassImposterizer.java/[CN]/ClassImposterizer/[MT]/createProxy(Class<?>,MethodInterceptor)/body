@@ -1,0 +1,5 @@
+{
+  Factory proxy=(Factory)objenesis.newInstance(proxyClass);
+  proxy.setCallbacks(new Callback[]{interceptor,NoOp.INSTANCE});
+  return proxy;
+}
