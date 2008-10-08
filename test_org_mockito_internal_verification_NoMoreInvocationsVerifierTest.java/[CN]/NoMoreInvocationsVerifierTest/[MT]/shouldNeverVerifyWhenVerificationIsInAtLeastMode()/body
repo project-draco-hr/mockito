@@ -1,3 +1,3 @@
 {
-  verifier.verify(null,null,VerificationModeImpl.atLeastOnce());
+  assertFalse(verifier.appliesTo(VerificationModeImpl.atLeastOnce()));
 }

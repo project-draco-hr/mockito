@@ -1,7 +1,4 @@
 {
-  if (!mode.exactNumberOfInvocationsMode()) {
-    return;
-  }
   List<Invocation> actualInvocations=finder.findInvocations(invocations,wanted,mode);
   int actualCount=actualInvocations.size();
   if (mode.tooLittleActualInvocations(actualCount)) {
