@@ -1,0 +1,7 @@
+{
+  assertTrue(decode(inOrder(1,asList("mock"))).missingMethodInOrderMode());
+  assertTrue(decode(inOrder(10,asList("mock"))).missingMethodInOrderMode());
+  assertFalse(decode(times(10)).missingMethodInOrderMode());
+  assertFalse(decode(noMoreInteractions()).missingMethodInOrderMode());
+  assertFalse(decode(times(0)).missingMethodInOrderMode());
+}
