@@ -1,3 +1,0 @@
-{
-  return !mocksToBeVerifiedInOrder.isEmpty() && (explicitMode() || atLeastMode());
-}

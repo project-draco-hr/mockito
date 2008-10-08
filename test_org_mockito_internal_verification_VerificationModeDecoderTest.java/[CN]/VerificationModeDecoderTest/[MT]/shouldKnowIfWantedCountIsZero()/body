@@ -1,0 +1,6 @@
+{
+  assertTrue(decode(times(0)).neverWanted());
+  assertFalse(decode(times(1)).neverWanted());
+  assertFalse(decode(times(10)).neverWanted());
+  assertFalse(decode(atLeastOnce()).neverWanted());
+}

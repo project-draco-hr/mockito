@@ -1,8 +1,0 @@
-{
-  assertTrue(atLeastOnce().missingMethodMode());
-  assertTrue(times(1).missingMethodMode());
-  assertTrue(times(10).missingMethodMode());
-  assertFalse(atLeast(2).missingMethodMode());
-  assertFalse(noMoreInteractions().missingMethodMode());
-  assertFalse(times(0).missingMethodMode());
-}

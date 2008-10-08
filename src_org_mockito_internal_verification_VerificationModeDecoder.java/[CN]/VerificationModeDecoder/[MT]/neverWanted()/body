@@ -1,0 +1,3 @@
+{
+  return !atLeastMode() && mode.wantedCount() == 0;
+}

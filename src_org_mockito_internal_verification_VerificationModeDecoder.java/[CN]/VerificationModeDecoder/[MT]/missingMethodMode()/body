@@ -1,0 +1,3 @@
+{
+  return (explicitMode() && mode.wantedCount() > 0) || (atLeastMode() && mode.wantedCount() == 1);
+}

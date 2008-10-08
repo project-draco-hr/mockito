@@ -1,4 +1,0 @@
-{
-  assertFalse(times(10).tooLittleActualInvocationsInAtLeastMode(5));
-  assertFalse(times(10).tooLittleActualInvocationsInAtLeastMode(15));
-}

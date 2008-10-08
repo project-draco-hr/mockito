@@ -1,6 +1,0 @@
-{
-  VerificationModeImpl mode=atLeastOnce();
-  assertTrue(mode.atLeastMode());
-  mode=times(50);
-  assertFalse(mode.atLeastMode());
-}

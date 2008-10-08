@@ -1,0 +1,5 @@
+{
+  boolean atLeast=atLeastMode() && actualCount >= mode.wantedCount();
+  boolean actualMatchesWanted=!atLeastMode() && mode.wantedCount() == actualCount;
+  return atLeast || actualMatchesWanted;
+}

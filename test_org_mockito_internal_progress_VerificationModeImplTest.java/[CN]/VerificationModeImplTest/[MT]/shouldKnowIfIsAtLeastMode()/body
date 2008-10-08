@@ -1,7 +1,0 @@
-{
-  assertTrue(atLeastOnce().atLeastMode());
-  assertTrue(atLeast(10).atLeastMode());
-  assertFalse(times(0).atLeastMode());
-  assertFalse(times(2).atLeastMode());
-  assertFalse(noMoreInteractions().atLeastMode());
-}

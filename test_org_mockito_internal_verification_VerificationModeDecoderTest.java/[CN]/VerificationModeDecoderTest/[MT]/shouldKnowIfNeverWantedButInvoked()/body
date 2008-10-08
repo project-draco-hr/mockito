@@ -1,0 +1,9 @@
+{
+  assertFalse(decode(times(1)).neverWantedButInvoked(0));
+  assertFalse(decode(times(10)).neverWantedButInvoked(20));
+  assertFalse(decode(times(0)).neverWantedButInvoked(0));
+  assertFalse(decode(atLeastOnce()).neverWantedButInvoked(0));
+  assertFalse(decode(atLeastOnce()).neverWantedButInvoked(1));
+  assertTrue(decode(times(0)).neverWantedButInvoked(1));
+  assertTrue(decode(times(0)).neverWantedButInvoked(10));
+}

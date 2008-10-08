@@ -1,0 +1,6 @@
+{
+  assertFalse(decode(atLeast(10)).matchesActualCount(5));
+  assertFalse(decode(atLeast(2)).matchesActualCount(1));
+  assertTrue(decode(atLeast(10)).matchesActualCount(10));
+  assertTrue(decode(atLeast(10)).matchesActualCount(15));
+}

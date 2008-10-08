@@ -1,5 +1,0 @@
-{
-  assertFalse(atLeastOnce().matchesActualCount(0));
-  assertTrue(atLeastOnce().matchesActualCount(1));
-  assertTrue(atLeastOnce().matchesActualCount(100));
-}

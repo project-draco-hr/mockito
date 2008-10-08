@@ -3,7 +3,7 @@
     reporter.inOrderRequiresFamiliarMock();
   }
   Integer wantedCount=mode.wantedCount();
-  if (mode.atLeastMode()) {
+  if (new VerificationModeDecoder(mode).atLeastMode()) {
     return Mockito.verify(mock,VerificationModeImpl.inOrderAtLeast(wantedCount,mocksToBeVerifiedInOrder));
   }
  else {

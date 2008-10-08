@@ -1,5 +1,0 @@
-{
-  assertFalse(atLeast(10).tooLittleActualInvocations(5));
-  assertFalse(atLeast(10).tooLittleActualInvocations(15));
-  assertFalse(atLeastOnce().tooLittleActualInvocations(10));
-}

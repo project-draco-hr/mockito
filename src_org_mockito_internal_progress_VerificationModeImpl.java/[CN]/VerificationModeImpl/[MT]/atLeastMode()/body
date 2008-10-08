@@ -1,3 +1,0 @@
-{
-  return verification == Verification.AT_LEAST;
-}

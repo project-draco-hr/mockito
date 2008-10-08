@@ -1,0 +1,5 @@
+{
+  assertFalse(decode(atLeast(10)).tooLittleActualInvocations(5));
+  assertFalse(decode(atLeast(10)).tooLittleActualInvocations(15));
+  assertFalse(decode(atLeastOnce()).tooLittleActualInvocations(10));
+}
