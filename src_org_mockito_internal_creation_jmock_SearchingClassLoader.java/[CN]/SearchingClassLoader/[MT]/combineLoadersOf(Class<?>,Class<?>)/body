@@ -6,6 +6,5 @@
   }
   addIfNewElement(loaders,SearchingClassLoader.class.getClassLoader());
   addIfNewElement(loaders,currentThread().getContextClassLoader());
-  addIfNewElement(loaders,ClassLoader.getSystemClassLoader());
   return combine(loaders);
 }
