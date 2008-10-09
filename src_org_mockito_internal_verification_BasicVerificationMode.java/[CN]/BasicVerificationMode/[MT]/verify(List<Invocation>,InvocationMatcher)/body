@@ -1,0 +1,8 @@
+{
+  List<Verifier> verifiers=Arrays.asList(new MissingInvocationVerifier(),new NumberOfInvocationsVerifier());
+  for (  Verifier verifier : verifiers) {
+    if (verifier.appliesTo(this)) {
+      verifier.verify(invocations,wanted,this);
+    }
+  }
+}
