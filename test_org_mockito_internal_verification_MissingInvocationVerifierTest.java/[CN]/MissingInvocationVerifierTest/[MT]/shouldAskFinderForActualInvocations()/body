@@ -1,6 +1,6 @@
 {
   finderStub.actualToReturn.add(new InvocationBuilder().toInvocation());
-  VerificationModeImpl mode=atLeastOnce();
+  VerificationMode mode=atLeastOnce();
   verifier.verify(invocations,wanted,mode);
   assertSame(invocations,finderStub.invocations);
 }

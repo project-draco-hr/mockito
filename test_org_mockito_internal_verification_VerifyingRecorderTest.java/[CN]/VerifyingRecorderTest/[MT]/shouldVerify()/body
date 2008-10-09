@@ -1,6 +1,6 @@
 {
   recorder.recordInvocation(simpleMethod);
-  VerificationModeImpl mode=VerificationModeImpl.atLeastOnce();
+  VerificationMode mode=VerificationModeImpl.atLeastOnce();
   recorder.verify(differentMethod,mode);
   assertSame(verifierStub.mode,mode);
   assertSame(verifierStub.wanted,differentMethod);

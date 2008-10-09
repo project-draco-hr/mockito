@@ -5,7 +5,7 @@
     mockitoStubber.setMethodForStubbing(invocationMatcher);
     return null;
   }
-  VerificationModeImpl verificationMode=mockingProgress.pullVerificationMode();
+  VerificationMode verificationMode=mockingProgress.pullVerificationMode();
   mockingProgress.validateState();
   Invocation invocation=new Invocation(proxy,method,args,mockingProgress.nextSequenceNumber());
   InvocationMatcher invocationMatcher=matchersBinder.bindMatchers(invocation);

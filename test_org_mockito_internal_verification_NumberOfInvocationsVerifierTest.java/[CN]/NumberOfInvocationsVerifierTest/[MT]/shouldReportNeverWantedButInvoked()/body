@@ -1,5 +1,5 @@
 {
-  VerificationModeImpl mode=times(0);
+  VerificationMode mode=times(0);
   Invocation invocation=new InvocationBuilder().toInvocation();
   finderStub.actualToReturn.add(invocation);
   verifier.verify(invocations,wanted,mode);

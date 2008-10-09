@@ -1,4 +1,4 @@
 {
   validateState();
-  verificationMode=(VerificationModeImpl)verify;
+  verificationMode=(VerificationMode)verify;
 }

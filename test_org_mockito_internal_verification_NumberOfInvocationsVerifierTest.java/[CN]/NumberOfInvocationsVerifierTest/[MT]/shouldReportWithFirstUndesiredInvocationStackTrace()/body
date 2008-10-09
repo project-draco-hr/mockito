@@ -1,5 +1,5 @@
 {
-  VerificationModeImpl mode=times(2);
+  VerificationMode mode=times(2);
   Invocation first=new InvocationBuilder().toInvocation();
   Invocation second=new InvocationBuilder().toInvocation();
   Invocation third=new InvocationBuilder().toInvocation();
