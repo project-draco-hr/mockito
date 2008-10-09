@@ -1,3 +1,3 @@
 {
-  return new VerificationModeImpl(0,Collections.emptyList(),Verification.NO_MORE_WANTED);
+  return new NoMoreInteractionsMode(0,Collections.emptyList(),Verification.NO_MORE_WANTED);
 }
