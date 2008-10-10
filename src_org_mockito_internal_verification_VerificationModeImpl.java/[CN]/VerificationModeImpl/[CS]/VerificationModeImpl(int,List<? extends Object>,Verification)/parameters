@@ -1,3 +1,0 @@
-int wantedNumberOfInvocations
-List<? extends Object> mocksToBeVerifiedInOrder
-Verification verification

@@ -1,6 +1,6 @@
 {
   Invocation overloadedDifferentMethod=new InvocationBuilder().differentMethod().arg("test").toInvocation();
   invocations.add(overloadedDifferentMethod);
-  Invocation found=finder.findSimilarInvocation(invocations,new InvocationMatcher(overloadedDifferentMethod),atLeastOnce());
+  Invocation found=finder.findSimilarInvocation(invocations,new InvocationMatcher(overloadedDifferentMethod),VerificationModeFactory.atLeastOnce());
   assertSame(found,overloadedDifferentMethod);
 }

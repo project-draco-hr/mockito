@@ -1,7 +1,7 @@
 {
-  assertTrue(decode(atLeast(3)).tooLittleActualInvocationsInAtLeastMode(2));
-  assertTrue(decode(atLeast(3)).tooLittleActualInvocationsInAtLeastMode(1));
-  assertTrue(decode(atLeast(3)).tooLittleActualInvocationsInAtLeastMode(0));
-  assertFalse(decode(atLeast(1)).tooLittleActualInvocationsInAtLeastMode(1));
-  assertFalse(decode(atLeast(1)).tooLittleActualInvocationsInAtLeastMode(2));
+  assertTrue(decode(VerificationModeFactory.atLeast(3)).tooLittleActualInvocationsInAtLeastMode(2));
+  assertTrue(decode(VerificationModeFactory.atLeast(3)).tooLittleActualInvocationsInAtLeastMode(1));
+  assertTrue(decode(VerificationModeFactory.atLeast(3)).tooLittleActualInvocationsInAtLeastMode(0));
+  assertFalse(decode(VerificationModeFactory.atLeast(1)).tooLittleActualInvocationsInAtLeastMode(1));
+  assertFalse(decode(VerificationModeFactory.atLeast(1)).tooLittleActualInvocationsInAtLeastMode(2));
 }

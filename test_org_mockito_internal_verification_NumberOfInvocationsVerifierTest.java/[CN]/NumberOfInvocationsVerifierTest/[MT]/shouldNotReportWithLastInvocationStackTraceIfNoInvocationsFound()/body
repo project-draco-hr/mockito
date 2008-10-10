@@ -1,5 +1,5 @@
 {
-  VerificationMode mode=times(100);
+  MockitoVerificationMode mode=VerificationModeFactory.times(100);
   assertTrue(finderStub.actualToReturn.isEmpty());
   verifier.verify(invocations,wanted,mode);
   assertNull(reporterStub.stackTrace);

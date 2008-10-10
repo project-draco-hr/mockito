@@ -1,3 +1,0 @@
-{
-  return new BasicVerificationMode(minNumberOfInvocations,Collections.emptyList(),Verification.AT_LEAST);
-}

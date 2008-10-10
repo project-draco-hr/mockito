@@ -1,3 +1,0 @@
-{
-  return new BasicVerificationMode(wantedNumberOfInvocations,Collections.emptyList(),Verification.EXPLICIT);
-}

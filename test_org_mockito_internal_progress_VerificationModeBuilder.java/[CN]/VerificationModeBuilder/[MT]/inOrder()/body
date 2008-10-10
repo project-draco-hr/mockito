@@ -1,3 +1,3 @@
 {
-  return new BasicVerificationMode(times,Arrays.asList(new Object()),Verification.EXPLICIT);
+  return new MockitoVerificationMode(times,Verification.EXPLICIT);
 }

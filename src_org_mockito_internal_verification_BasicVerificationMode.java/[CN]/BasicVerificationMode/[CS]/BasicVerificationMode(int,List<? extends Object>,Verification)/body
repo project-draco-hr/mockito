@@ -1,3 +1,0 @@
-{
-  super(wantedNumberOfInvocations,mocksToBeVerifiedInOrder,verification);
-}

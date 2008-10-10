@@ -1,5 +1,5 @@
 {
-  VerificationMode mode=times(0);
+  MockitoVerificationMode mode=VerificationModeFactory.times(0);
   Invocation invocation=new InvocationBuilder().toInvocation();
   finderStub.actualToReturn.add(invocation);
   verifier.verify(invocations,wanted,mode);

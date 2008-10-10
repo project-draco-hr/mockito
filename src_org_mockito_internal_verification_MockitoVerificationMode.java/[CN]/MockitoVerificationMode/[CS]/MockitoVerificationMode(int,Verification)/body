@@ -1,0 +1,10 @@
+{
+  if (verification != Verification.AT_LEAST && wantedNumberOfInvocations < 0) {
+    throw new MockitoException("Negative value is not allowed here");
+  }
+  if (verification == Verification.AT_LEAST && wantedNumberOfInvocations < 1) {
+    throw new MockitoException("Negative value or zero are not allowed here");
+  }
+  this.wantedInvocationCount=wantedNumberOfInvocations;
+  this.verification=verification;
+}

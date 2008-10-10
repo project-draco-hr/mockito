@@ -1,3 +1,3 @@
 {
-  return VerificationModeImpl.atLeastOnce();
+  return VerificationModeFactory.atLeastOnce();
 }

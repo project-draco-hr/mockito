@@ -1,9 +1,0 @@
-{
-  try {
-    atLeast(-50);
-    fail();
-  }
- catch (  MockitoException e) {
-    assertEquals("Negative value or zero are not allowed here",e.getMessage());
-  }
-}

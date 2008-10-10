@@ -1,8 +1,7 @@
 {
-  assertTrue(decode(atLeastOnce()).missingMethodMode());
-  assertTrue(decode(times(1)).missingMethodMode());
-  assertTrue(decode(times(10)).missingMethodMode());
-  assertFalse(decode(atLeast(2)).missingMethodMode());
-  assertFalse(decode(noMoreInteractions()).missingMethodMode());
-  assertFalse(decode(times(0)).missingMethodMode());
+  assertTrue(decode(VerificationModeFactory.atLeastOnce()).missingMethodMode());
+  assertTrue(decode(VerificationModeFactory.times(1)).missingMethodMode());
+  assertTrue(decode(VerificationModeFactory.times(10)).missingMethodMode());
+  assertFalse(decode(VerificationModeFactory.atLeast(2)).missingMethodMode());
+  assertFalse(decode(VerificationModeFactory.times(0)).missingMethodMode());
 }

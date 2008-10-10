@@ -1,7 +1,6 @@
 {
-  assertTrue(decode(atLeastOnce()).atLeastMode());
-  assertTrue(decode(atLeast(10)).atLeastMode());
-  assertFalse(decode(times(0)).atLeastMode());
-  assertFalse(decode(times(10)).atLeastMode());
-  assertFalse(decode(noMoreInteractions()).atLeastMode());
+  assertTrue(decode(VerificationModeFactory.atLeastOnce()).atLeastMode());
+  assertTrue(decode(VerificationModeFactory.atLeast(10)).atLeastMode());
+  assertFalse(decode(VerificationModeFactory.times(0)).atLeastMode());
+  assertFalse(decode(VerificationModeFactory.times(10)).atLeastMode());
 }

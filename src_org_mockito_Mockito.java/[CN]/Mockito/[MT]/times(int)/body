@@ -1,3 +1,3 @@
 {
-  return VerificationModeImpl.times(wantedNumberOfInvocations);
+  return VerificationModeFactory.times(wantedNumberOfInvocations);
 }

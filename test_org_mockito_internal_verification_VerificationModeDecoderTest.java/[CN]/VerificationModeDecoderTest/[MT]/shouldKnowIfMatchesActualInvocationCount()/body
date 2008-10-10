@@ -1,7 +1,7 @@
 {
-  assertFalse(decode(times(1)).matchesActualCount(0));
-  assertFalse(decode(times(1)).matchesActualCount(2));
-  assertFalse(decode(times(10)).matchesActualCount(20));
-  assertTrue(decode(times(1)).matchesActualCount(1));
-  assertTrue(decode(times(10)).matchesActualCount(10));
+  assertFalse(decode(VerificationModeFactory.times(1)).matchesActualCount(0));
+  assertFalse(decode(VerificationModeFactory.times(1)).matchesActualCount(2));
+  assertFalse(decode(VerificationModeFactory.times(10)).matchesActualCount(20));
+  assertTrue(decode(VerificationModeFactory.times(1)).matchesActualCount(1));
+  assertTrue(decode(VerificationModeFactory.times(10)).matchesActualCount(10));
 }

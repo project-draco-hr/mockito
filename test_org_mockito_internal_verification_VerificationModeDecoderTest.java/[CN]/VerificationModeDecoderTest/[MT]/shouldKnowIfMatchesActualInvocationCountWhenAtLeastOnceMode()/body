@@ -1,5 +1,5 @@
 {
-  assertFalse(decode(atLeastOnce()).matchesActualCount(0));
-  assertTrue(decode(atLeastOnce()).matchesActualCount(1));
-  assertTrue(decode(atLeastOnce()).matchesActualCount(100));
+  assertFalse(decode(VerificationModeFactory.atLeastOnce()).matchesActualCount(0));
+  assertTrue(decode(VerificationModeFactory.atLeastOnce()).matchesActualCount(1));
+  assertTrue(decode(VerificationModeFactory.atLeastOnce()).matchesActualCount(100));
 }

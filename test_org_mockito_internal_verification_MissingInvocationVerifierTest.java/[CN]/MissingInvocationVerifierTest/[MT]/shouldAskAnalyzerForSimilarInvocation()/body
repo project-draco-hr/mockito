@@ -1,4 +1,4 @@
 {
-  verifier.verify(invocations,wanted,VerificationModeImpl.atLeastOnce());
+  verifier.verify(invocations,wanted,VerificationModeFactory.atLeastOnce());
   assertSame(invocations,finderStub.invocations);
 }

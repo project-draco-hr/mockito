@@ -1,6 +1,6 @@
 {
   MockingProgressImpl state=new MockingProgressImpl();
-  state.verificationStarted(VerificationModeImpl.atLeastOnce());
+  state.verificationStarted(VerificationModeFactory.atLeastOnce());
   MockHandler handler=new MockHandler(null,state,new ExceptionThrowingBinder());
   try {
     handler.intercept(null,String.class.getDeclaredMethod("toString"),new Object[]{},null);
