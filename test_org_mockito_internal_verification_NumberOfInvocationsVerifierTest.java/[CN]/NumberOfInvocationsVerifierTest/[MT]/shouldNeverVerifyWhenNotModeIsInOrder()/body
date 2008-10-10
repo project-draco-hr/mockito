@@ -1,3 +1,0 @@
-{
-  assertFalse(verifier.appliesTo(new VerificationModeBuilder().inOrder()));
-}

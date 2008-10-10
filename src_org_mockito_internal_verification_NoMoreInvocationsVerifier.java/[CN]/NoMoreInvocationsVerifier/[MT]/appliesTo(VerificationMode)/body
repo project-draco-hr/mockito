@@ -1,4 +1,0 @@
-{
-  VerificationModeDecoder decoder=new VerificationModeDecoder(mode);
-  return !decoder.explicitMode() && !decoder.atLeastMode();
-}

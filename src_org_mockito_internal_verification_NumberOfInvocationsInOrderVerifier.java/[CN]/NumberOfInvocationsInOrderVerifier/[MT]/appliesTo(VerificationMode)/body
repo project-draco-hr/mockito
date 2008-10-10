@@ -1,3 +1,0 @@
-{
-  return new VerificationModeDecoder(mode).inOrderMode();
-}

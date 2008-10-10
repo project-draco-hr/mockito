@@ -3,5 +3,5 @@
   this.mockingProgress=mockingProgress;
   this.matchersBinder=matchersBinder;
   this.mockitoStubber=new MockitoStubber(mockingProgress);
-  verifyingRecorder=createRecorder();
+  verifyingRecorder=new VerifyingRecorder();
 }
