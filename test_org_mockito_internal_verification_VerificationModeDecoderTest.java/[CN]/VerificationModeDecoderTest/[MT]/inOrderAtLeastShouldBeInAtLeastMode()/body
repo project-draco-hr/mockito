@@ -1,3 +1,0 @@
-{
-  assertTrue(decode(inOrderAtLeast(5,asList("mock"))).atLeastMode());
-}

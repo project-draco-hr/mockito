@@ -1,7 +1,0 @@
-{
-  assertTrue(decode(times(0)).exactNumberOfInvocationsMode());
-  assertTrue(decode(times(1)).exactNumberOfInvocationsMode());
-  assertTrue(decode(atLeastOnce()).exactNumberOfInvocationsMode());
-  assertFalse(decode(noMoreInteractions()).exactNumberOfInvocationsMode());
-  assertFalse(decode(inOrder(1,asList(new Object()))).exactNumberOfInvocationsMode());
-}

@@ -1,8 +1,8 @@
 {
-  MissingInvocationVerifier missingInvocation=new MissingInvocationVerifier();
-  NumberOfInvocationsVerifier numberOfInvocations=new NumberOfInvocationsVerifier();
-  if (wantedCount() > 0 || (verification == Verification.AT_LEAST && wantedCount() == 1)) {
-    missingInvocation.verify(invocations,wanted,this);
+  if (mocksToBeVerifiedInOrder.isEmpty()) {
+    doBasicVerification(invocations,wanted);
   }
-  numberOfInvocations.verify(invocations,wanted,this);
+ else {
+    doInOrderVerification(wanted);
+  }
 }
