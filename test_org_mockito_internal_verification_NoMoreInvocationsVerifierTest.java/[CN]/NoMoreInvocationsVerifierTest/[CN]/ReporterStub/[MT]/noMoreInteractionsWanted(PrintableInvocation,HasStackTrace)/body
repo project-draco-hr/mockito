@@ -1,4 +1,0 @@
-{
-  this.undesired=undesired;
-  this.actualInvocationStackTrace=actualInvocationStackTrace;
-}

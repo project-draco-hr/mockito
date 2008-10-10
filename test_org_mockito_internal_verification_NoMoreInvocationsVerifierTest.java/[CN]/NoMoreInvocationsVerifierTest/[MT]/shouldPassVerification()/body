@@ -1,4 +1,0 @@
-{
-  finder.firstUnverifiedToReturn=null;
-  verifier.verify(null,null,VerificationModeImpl.noMoreInteractions());
-}
