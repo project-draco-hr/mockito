@@ -1,3 +1,3 @@
 {
-  return "Wanted invocations count: " + wantedInvocationCount + ", Mocks to verify in order: "+ mocksToBeVerifiedInOrder;
+  return "Wanted invocations count: " + wantedInvocationCount;
 }

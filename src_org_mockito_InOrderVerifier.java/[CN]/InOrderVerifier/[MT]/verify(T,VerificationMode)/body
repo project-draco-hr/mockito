@@ -2,6 +2,8 @@
   if (!mocksToBeVerifiedInOrder.contains(mock)) {
     reporter.inOrderRequiresFamiliarMock();
   }
-  mode.setMocksToBeVerifiedInOrder(mocksToBeVerifiedInOrder);
+  if (mode instanceof MockitoVerificationMode) {
+    return Mockito.verify(mock,new MockitoInOrderVerificationMode((MockitoVerificationMode)mode,mocksToBeVerifiedInOrder));
+  }
   return Mockito.verify(mock,mode);
 }

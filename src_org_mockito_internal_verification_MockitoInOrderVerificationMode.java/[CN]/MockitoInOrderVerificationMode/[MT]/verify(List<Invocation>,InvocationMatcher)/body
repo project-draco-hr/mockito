@@ -1,0 +1,10 @@
+{
+  List<Invocation> allInvocations;
+  allInvocations=new AllInvocationsFinder().getAllInvocations(mocksToBeVerifiedInOrder);
+  MissingInvocationInOrderVerifier missingInvocation=new MissingInvocationInOrderVerifier();
+  NumberOfInvocationsInOrderVerifier numberOfCalls=new NumberOfInvocationsInOrderVerifier();
+  if (mode.wantedCount() > 0 || (mode.verification == Verification.AT_LEAST && mode.wantedCount() == 1)) {
+    missingInvocation.verify(allInvocations,wanted,this);
+  }
+  numberOfCalls.verify(allInvocations,wanted,mode);
+}
