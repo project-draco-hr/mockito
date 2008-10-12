@@ -1,0 +1,7 @@
+{
+  List<Invocation> actualInvocations=finder.findInvocations(invocations,wanted);
+  if (actualInvocations.isEmpty()) {
+    Invocation similar=finder.findSimilarInvocation(invocations,wanted,mode);
+    reportMissingInvocationError(wanted,similar);
+  }
+}

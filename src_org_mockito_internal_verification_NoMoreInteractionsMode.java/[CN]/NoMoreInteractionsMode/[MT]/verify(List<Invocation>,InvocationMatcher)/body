@@ -1,6 +1,0 @@
-{
-  Invocation unverified=new InvocationsFinder().findFirstUnverified(invocations);
-  if (unverified != null) {
-    new Reporter().noMoreInteractionsWanted(unverified,unverified.getStackTrace());
-  }
-}

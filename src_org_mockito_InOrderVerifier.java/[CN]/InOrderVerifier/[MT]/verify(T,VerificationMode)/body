@@ -2,8 +2,8 @@
   if (!mocksToBeVerifiedInOrder.contains(mock)) {
     reporter.inOrderRequiresFamiliarMock();
   }
-  if (mode instanceof MockitoVerificationMode) {
-    return Mockito.verify(mock,new MockitoInOrderVerificationMode((MockitoVerificationMode)mode,mocksToBeVerifiedInOrder));
+ else   if (!(mode instanceof VerificationInOrderMode)) {
+    throw new MockitoException("VerificationMode is not implmented to work with InOrder");
   }
-  throw new RuntimeException("nothing else is yet implemented");
+  return Mockito.verify(mock,new InOrderVerificationModeWrapper((VerificationInOrderMode)mode,mocksToBeVerifiedInOrder));
 }

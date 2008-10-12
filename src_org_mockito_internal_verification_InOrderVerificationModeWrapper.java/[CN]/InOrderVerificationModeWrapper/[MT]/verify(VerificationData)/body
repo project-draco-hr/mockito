@@ -1,0 +1,4 @@
+{
+  List<Invocation> allInvocations=new AllInvocationsFinder().getAllInvocations(mocksToBeVerifiedInOrder);
+  mode.verifyInOrder(new VerificationDataImpl(allInvocations,data.getWanted()));
+}

@@ -1,0 +1,10 @@
+{
+  mock.clear();
+  InOrder inOrder=inOrder(mock);
+  try {
+    inOrder.verify(mock,atMost(1)).clear();
+    fail();
+  }
+ catch (  MockitoException e) {
+  }
+}

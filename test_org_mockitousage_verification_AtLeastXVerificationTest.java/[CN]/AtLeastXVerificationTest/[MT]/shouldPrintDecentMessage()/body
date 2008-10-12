@@ -1,0 +1,10 @@
+{
+  mock.clear();
+  mock.clear();
+  try {
+    verify(mock,atMost(1)).clear();
+    fail();
+  }
+ catch (  MockitoAssertionError e) {
+  }
+}

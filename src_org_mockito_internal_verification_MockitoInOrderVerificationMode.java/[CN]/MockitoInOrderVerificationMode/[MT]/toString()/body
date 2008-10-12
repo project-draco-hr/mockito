@@ -1,3 +1,0 @@
-{
-  return "Wanted invocations count: " + mode.wantedCount() + ", Mocks to verify in order: "+ mocksToBeVerifiedInOrder;
-}

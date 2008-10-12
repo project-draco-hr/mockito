@@ -1,0 +1,10 @@
+{
+  List<Invocation> allInvocations=data.getAllInvocations();
+  InvocationMatcher wanted=data.getWanted();
+  MissingInvocationInOrderChecker missingInvocation=new MissingInvocationInOrderChecker();
+  NumberOfInvocationsInOrderChecker numberOfCalls=new NumberOfInvocationsInOrderChecker();
+  if (wantedCount() > 0 || (verification == Verification.AT_LEAST && wantedCount() == 1)) {
+    missingInvocation.verify(allInvocations,wanted,this);
+  }
+  numberOfCalls.verify(allInvocations,wanted,this);
+}
