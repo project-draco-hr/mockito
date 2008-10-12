@@ -1,3 +1,3 @@
 {
-  return (Map)anyObject();
+  return reportMatcher(Any.ANY).returnMap();
 }

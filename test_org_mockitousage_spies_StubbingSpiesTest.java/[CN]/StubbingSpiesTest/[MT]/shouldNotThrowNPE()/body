@@ -1,0 +1,8 @@
+{
+  Foo foo=new Foo();
+  Foo spy=spy(foo);
+  spy.len(anyString());
+  spy.size(anyMap());
+  spy.size(anyList());
+  spy.size(anyCollection());
+}

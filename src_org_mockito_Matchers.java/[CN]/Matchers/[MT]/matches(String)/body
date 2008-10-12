@@ -1,3 +1,3 @@
 {
-  return reportMatcher(new Matches(regex)).<String>returnNull();
+  return reportMatcher(new Matches(regex)).returnString();
 }
