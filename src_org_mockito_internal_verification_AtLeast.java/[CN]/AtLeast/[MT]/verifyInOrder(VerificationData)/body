@@ -6,5 +6,5 @@
   if (wantedCount == 1) {
     missingInvocation.check(allInvocations,wanted,this);
   }
-  numberOfCalls.verify(allInvocations,wanted,wantedCount);
+  numberOfCalls.check(allInvocations,wanted,wantedCount);
 }

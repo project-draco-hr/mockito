@@ -4,5 +4,5 @@
   if (wantedCount == 1) {
     missingInvocation.check(data.getAllInvocations(),data.getWanted());
   }
-  numberOfInvocations.verify(data.getAllInvocations(),data.getWanted(),wantedCount);
+  numberOfInvocations.check(data.getAllInvocations(),data.getWanted(),wantedCount);
 }
