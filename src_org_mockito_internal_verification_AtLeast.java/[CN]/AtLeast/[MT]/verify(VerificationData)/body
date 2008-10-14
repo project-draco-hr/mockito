@@ -1,7 +1,8 @@
 {
   MissingInvocationChecker missingInvocation=new MissingInvocationChecker();
-  NumberOfInvocationsChecker numberOfInvocations=new NumberOfInvocationsChecker();
+  AtLeastXNumberOfInvocationsChecker numberOfInvocations=new AtLeastXNumberOfInvocationsChecker();
   if (wantedInvocationCount == 1) {
     missingInvocation.verify(data.getAllInvocations(),data.getWanted());
   }
+  numberOfInvocations.verify(data.getAllInvocations(),data.getWanted(),wantedInvocationCount);
 }
