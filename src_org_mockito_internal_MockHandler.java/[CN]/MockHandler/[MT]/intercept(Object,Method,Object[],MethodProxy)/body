@@ -10,7 +10,7 @@
   Invocation invocation=new Invocation(proxy,method,args,mockingProgress.nextSequenceNumber());
   InvocationMatcher invocationMatcher=matchersBinder.bindMatchers(invocation);
   if (verificationMode != null) {
-    VerificationDataImpl data=new VerificationDataImpl(registeredInvocations.getVerifiableInvocations(),invocationMatcher);
+    VerificationDataImpl data=new VerificationDataImpl(registeredInvocations.getAll(),invocationMatcher);
     verificationMode.verify(data);
     return null;
   }
