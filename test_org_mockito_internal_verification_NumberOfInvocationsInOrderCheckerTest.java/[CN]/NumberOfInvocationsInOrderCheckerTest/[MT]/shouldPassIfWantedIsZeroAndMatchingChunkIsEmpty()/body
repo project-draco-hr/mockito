@@ -1,4 +1,4 @@
 {
   assertTrue(finderStub.validMatchingChunkToReturn.isEmpty());
-  verifier.verify(invocations,wanted,new VerificationModeBuilder().times(0).inOrder());
+  verifier.verify(invocations,wanted,0);
 }
