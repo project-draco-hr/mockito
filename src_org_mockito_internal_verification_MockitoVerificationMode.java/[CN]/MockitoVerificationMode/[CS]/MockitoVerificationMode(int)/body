@@ -3,5 +3,4 @@
     throw new MockitoException("Negative value is not allowed here");
   }
   this.wantedInvocationCount=wantedNumberOfInvocations;
-  this.verification=verification;
 }
