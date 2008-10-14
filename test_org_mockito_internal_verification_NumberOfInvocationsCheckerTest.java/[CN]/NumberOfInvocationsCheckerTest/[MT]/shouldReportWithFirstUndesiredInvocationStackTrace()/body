@@ -1,5 +1,5 @@
 {
-  MockitoVerificationMode mode=VerificationModeFactory.times(2);
+  Times mode=VerificationModeFactory.times(2);
   Invocation first=new InvocationBuilder().toInvocation();
   Invocation second=new InvocationBuilder().toInvocation();
   Invocation third=new InvocationBuilder().toInvocation();
