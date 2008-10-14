@@ -1,7 +1,7 @@
 {
   List<Invocation> allInvocations=data.getAllInvocations();
   InvocationMatcher wanted=data.getWanted();
-  if (wantedCount() > 0) {
+  if (wantedCount > 0) {
     MissingInvocationInOrderChecker missingInvocation=new MissingInvocationInOrderChecker();
     missingInvocation.verify(allInvocations,wanted,this);
   }
