@@ -1,4 +1,4 @@
 {
-  VerificationDataImpl data=new VerificationDataImpl(verifyingRecorder.getRegisteredInvocations(),null);
+  VerificationDataImpl data=new VerificationDataImpl(registeredInvocations.getVerifiableInvocations(),null);
   VerificationModeFactory.noMoreInteractions().verify(data);
 }

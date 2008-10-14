@@ -10,12 +10,12 @@
   Invocation invocation=new Invocation(proxy,method,args,mockingProgress.nextSequenceNumber());
   InvocationMatcher invocationMatcher=matchersBinder.bindMatchers(invocation);
   if (verificationMode != null) {
-    VerificationDataImpl data=new VerificationDataImpl(verifyingRecorder.getRegisteredInvocations(),invocationMatcher);
+    VerificationDataImpl data=new VerificationDataImpl(registeredInvocations.getVerifiableInvocations(),invocationMatcher);
     verificationMode.verify(data);
     return null;
   }
   mockitoStubber.setInvocationForPotentialStubbing(invocationMatcher);
-  verifyingRecorder.recordInvocation(invocationMatcher.getInvocation());
+  registeredInvocations.add(invocationMatcher.getInvocation());
   mockingProgress.reportOngoingStubbing(new OngoingStubbingImpl());
   Answer<?> answer=mockitoStubber.findAnswerFor(invocation);
   if (answer != null) {
