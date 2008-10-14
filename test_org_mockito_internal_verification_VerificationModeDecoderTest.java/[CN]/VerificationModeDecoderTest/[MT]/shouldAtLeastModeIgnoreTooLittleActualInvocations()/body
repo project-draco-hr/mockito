@@ -1,5 +1,0 @@
-{
-  assertFalse(decode(VerificationModeFactory.atLeast(10)).tooLittleActualInvocations(5));
-  assertFalse(decode(VerificationModeFactory.atLeast(10)).tooLittleActualInvocations(15));
-  assertFalse(decode(VerificationModeFactory.atLeastOnce()).tooLittleActualInvocations(10));
-}

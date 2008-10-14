@@ -1,6 +1,0 @@
-{
-  MockitoVerificationMode mode=VerificationModeFactory.atLeastOnce();
-  assertTrue(decode(mode).atLeastMode());
-  mode=VerificationModeFactory.times(50);
-  assertFalse(decode(mode).atLeastMode());
-}

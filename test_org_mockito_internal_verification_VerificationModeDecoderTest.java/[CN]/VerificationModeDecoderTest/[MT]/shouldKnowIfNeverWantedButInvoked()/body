@@ -2,8 +2,6 @@
   assertFalse(decode(VerificationModeFactory.times(1)).neverWantedButInvoked(0));
   assertFalse(decode(VerificationModeFactory.times(10)).neverWantedButInvoked(20));
   assertFalse(decode(VerificationModeFactory.times(0)).neverWantedButInvoked(0));
-  assertFalse(decode(VerificationModeFactory.atLeastOnce()).neverWantedButInvoked(0));
-  assertFalse(decode(VerificationModeFactory.atLeastOnce()).neverWantedButInvoked(1));
   assertTrue(decode(VerificationModeFactory.times(0)).neverWantedButInvoked(1));
   assertTrue(decode(VerificationModeFactory.times(0)).neverWantedButInvoked(10));
 }

@@ -2,5 +2,4 @@
   assertTrue(decode(VerificationModeFactory.times(0)).neverWanted());
   assertFalse(decode(VerificationModeFactory.times(1)).neverWanted());
   assertFalse(decode(VerificationModeFactory.times(10)).neverWanted());
-  assertFalse(decode(VerificationModeFactory.atLeastOnce()).neverWanted());
 }
