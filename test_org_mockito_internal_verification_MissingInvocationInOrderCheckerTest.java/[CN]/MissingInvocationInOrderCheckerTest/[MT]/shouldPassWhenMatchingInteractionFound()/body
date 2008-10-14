@@ -1,5 +1,5 @@
 {
   Invocation actual=new InvocationBuilder().toInvocation();
   finderStub.allMatchingUnverifiedChunksToReturn.add(actual);
-  verifier.check(invocations,wanted,new VerificationModeBuilder().inOrder());
+  checker.check(invocations,wanted,new VerificationModeBuilder().inOrder());
 }

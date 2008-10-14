@@ -1,4 +1,4 @@
 {
   finderStub.actualToReturn.add(new InvocationBuilder().toInvocation());
-  verifier.check(invocations,wanted);
+  checker.check(invocations,wanted);
 }

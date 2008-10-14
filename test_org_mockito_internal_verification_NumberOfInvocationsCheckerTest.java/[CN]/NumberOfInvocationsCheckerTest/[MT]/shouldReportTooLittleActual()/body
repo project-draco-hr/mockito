@@ -1,6 +1,6 @@
 {
   finderStub.actualToReturn.add(new InvocationBuilder().toInvocation());
-  verifier.check(invocations,wanted,100);
+  checker.check(invocations,wanted,100);
   assertEquals(1,reporterStub.actualCount);
   assertEquals(100,reporterStub.wantedCount);
   assertEquals(wanted,reporterStub.wanted);

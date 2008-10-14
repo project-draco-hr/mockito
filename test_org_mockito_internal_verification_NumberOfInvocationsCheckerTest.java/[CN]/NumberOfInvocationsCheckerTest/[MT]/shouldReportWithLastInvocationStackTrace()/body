@@ -2,6 +2,6 @@
   Invocation first=new InvocationBuilder().toInvocation();
   Invocation second=new InvocationBuilder().toInvocation();
   finderStub.actualToReturn.addAll(asList(first,second));
-  verifier.check(invocations,wanted,100);
+  checker.check(invocations,wanted,100);
   assertSame(second.getStackTrace(),reporterStub.stackTrace);
 }

@@ -1,5 +1,5 @@
 {
   assertTrue(finderStub.allMatchingUnverifiedChunksToReturn.isEmpty());
-  verifier.check(invocations,wanted,new VerificationModeBuilder().inOrder());
+  checker.check(invocations,wanted,new VerificationModeBuilder().inOrder());
   assertEquals(wanted,reporterStub.wanted);
 }

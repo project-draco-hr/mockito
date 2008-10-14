@@ -1,7 +1,7 @@
 {
   Invocation previous=new InvocationBuilder().toInvocation();
   finderStub.previousInOrderToReturn=previous;
-  verifier.check(invocations,wanted,new VerificationModeBuilder().inOrder());
+  checker.check(invocations,wanted,new VerificationModeBuilder().inOrder());
   assertEquals(wanted,reporterStub.wanted);
   assertEquals(previous,reporterStub.previous);
   assertSame(previous.getStackTrace(),reporterStub.previousStackTrace);

@@ -2,7 +2,7 @@
   assertTrue(finderStub.actualToReturn.isEmpty());
   Invocation actualInvocation=new InvocationBuilder().toInvocation();
   finderStub.similarToReturn=actualInvocation;
-  verifier.check(invocations,wanted);
+  checker.check(invocations,wanted);
   assertNotNull(reporterStub.wanted);
   assertNotNull(reporterStub.actual);
   assertSame(actualInvocation.getStackTrace(),reporterStub.actualInvocationStackTrace);
