@@ -1,3 +1,3 @@
 List<Invocation> invocations
 InvocationMatcher wanted
-MockitoVerificationMode mode
+int wantedCount
