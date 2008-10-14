@@ -1,6 +1,5 @@
 {
-  Times mode=VerificationModeFactory.times(100);
   assertTrue(finderStub.actualToReturn.isEmpty());
-  verifier.verify(invocations,wanted,mode);
+  verifier.verify(invocations,wanted,100);
   assertNull(reporterStub.stackTrace);
 }

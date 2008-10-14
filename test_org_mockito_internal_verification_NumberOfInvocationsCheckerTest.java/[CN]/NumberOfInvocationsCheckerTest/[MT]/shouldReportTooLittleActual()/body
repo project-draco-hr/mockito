@@ -1,7 +1,6 @@
 {
-  Times mode=VerificationModeFactory.times(100);
   finderStub.actualToReturn.add(new InvocationBuilder().toInvocation());
-  verifier.verify(invocations,wanted,mode);
+  verifier.verify(invocations,wanted,100);
   assertEquals(1,reporterStub.actualCount);
   assertEquals(100,reporterStub.wantedCount);
   assertEquals(wanted,reporterStub.wanted);

@@ -1,0 +1,19 @@
+{
+  List<Invocation> actualInvocations=finder.findInvocations(invocations,wanted);
+  int actualCount=actualInvocations.size();
+  if (wantedCount > actualCount) {
+    HasStackTrace lastInvocation=finder.getLastStackTrace(actualInvocations);
+    reporter.tooLittleActualInvocations(wantedCount,actualCount,wanted,lastInvocation);
+  }
+ else   if (wantedCount == 0 && actualCount > 0) {
+    HasStackTrace firstUndesired=actualInvocations.get(wantedCount).getStackTrace();
+    reporter.neverWantedButInvoked(wanted,firstUndesired);
+  }
+ else   if (wantedCount < actualCount) {
+    HasStackTrace firstUndesired=actualInvocations.get(wantedCount).getStackTrace();
+    reporter.tooManyActualInvocations(wantedCount,actualCount,wanted,firstUndesired);
+  }
+  for (  Invocation i : actualInvocations) {
+    i.markVerified();
+  }
+}

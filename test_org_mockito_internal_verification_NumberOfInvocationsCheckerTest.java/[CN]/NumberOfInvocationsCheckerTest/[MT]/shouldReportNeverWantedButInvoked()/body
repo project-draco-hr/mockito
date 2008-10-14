@@ -1,8 +1,7 @@
 {
-  Times mode=VerificationModeFactory.times(0);
   Invocation invocation=new InvocationBuilder().toInvocation();
   finderStub.actualToReturn.add(invocation);
-  verifier.verify(invocations,wanted,mode);
+  verifier.verify(invocations,wanted,0);
   assertEquals(wanted,reporterStub.wanted);
   assertEquals(invocation.getStackTrace(),reporterStub.stackTrace);
 }

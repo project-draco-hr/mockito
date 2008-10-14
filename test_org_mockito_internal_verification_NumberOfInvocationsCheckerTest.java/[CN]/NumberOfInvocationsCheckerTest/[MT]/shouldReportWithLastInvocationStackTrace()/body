@@ -1,8 +1,7 @@
 {
-  Times mode=VerificationModeFactory.times(100);
   Invocation first=new InvocationBuilder().toInvocation();
   Invocation second=new InvocationBuilder().toInvocation();
   finderStub.actualToReturn.addAll(asList(first,second));
-  verifier.verify(invocations,wanted,mode);
+  verifier.verify(invocations,wanted,100);
   assertSame(second.getStackTrace(),reporterStub.stackTrace);
 }
