@@ -1,5 +1,4 @@
 {
-  Times inOrderMode=new VerificationModeBuilder().times(2).inOrder();
-  List<Invocation> chunk=finder.findMatchingChunk(invocations,new InvocationMatcher(simpleMethodInvocation),inOrderMode);
+  List<Invocation> chunk=finder.findMatchingChunk(invocations,new InvocationMatcher(simpleMethodInvocation),2);
   assertThat(chunk,hasExactlyInOrder(simpleMethodInvocation,simpleMethodInvocationTwo));
 }

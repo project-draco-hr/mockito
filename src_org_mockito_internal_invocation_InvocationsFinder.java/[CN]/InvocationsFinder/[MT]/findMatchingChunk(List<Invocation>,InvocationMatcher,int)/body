@@ -1,8 +1,7 @@
 {
   List<Invocation> unverified=removeVerifiedInOrder(invocations);
   List<Invocation> firstChunk=getFirstMatchingChunk(wanted,unverified);
-  VerificationModeDecoder decoder=new VerificationModeDecoder(mode);
-  if (!decoder.matchesActualCount(firstChunk.size())) {
+  if (wantedCount != firstChunk.size()) {
     return this.findAllMatchingUnverifiedChunks(invocations,wanted);
   }
  else {
