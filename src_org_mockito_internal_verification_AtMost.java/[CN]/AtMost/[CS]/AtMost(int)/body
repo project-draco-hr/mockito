@@ -1,6 +1,6 @@
 {
   if (maxNumberOfInvocations < 0) {
-    throw new MockitoException("maxNumberOfInvocations cannot be negative");
+    throw new MockitoException("Negative value is not allowed here");
   }
   this.maxNumberOfInvocations=maxNumberOfInvocations;
 }

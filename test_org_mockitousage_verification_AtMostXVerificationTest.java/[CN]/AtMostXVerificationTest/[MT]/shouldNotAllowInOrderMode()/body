@@ -6,5 +6,6 @@
     fail();
   }
  catch (  MockitoException e) {
+    assertEquals("AtMost is not implemented to work with InOrder",e.getMessage());
   }
 }

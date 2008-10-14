@@ -6,5 +6,6 @@
     fail();
   }
  catch (  MockitoAssertionError e) {
+    assertEquals("\nWanted at most 1 time but was 2",e.getMessage());
   }
 }

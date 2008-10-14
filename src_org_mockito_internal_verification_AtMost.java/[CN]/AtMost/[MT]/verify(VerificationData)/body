@@ -5,6 +5,6 @@
   List<Invocation> found=finder.findInvocations(invocations,wanted);
   int foundSize=found.size();
   if (foundSize > maxNumberOfInvocations) {
-    throw new MockitoAssertionError("Wanted at most " + maxNumberOfInvocations + " but found: "+ foundSize);
+    new Reporter().wantedAtMostX(maxNumberOfInvocations,foundSize);
   }
 }
