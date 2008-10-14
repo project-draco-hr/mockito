@@ -3,8 +3,8 @@
   InvocationMatcher wanted=data.getWanted();
   if (wantedCount > 0) {
     MissingInvocationInOrderChecker missingInvocation=new MissingInvocationInOrderChecker();
-    missingInvocation.verify(allInvocations,wanted,this);
+    missingInvocation.check(allInvocations,wanted,this);
   }
   NumberOfInvocationsInOrderChecker numberOfCalls=new NumberOfInvocationsInOrderChecker();
-  numberOfCalls.verify(allInvocations,wanted,wantedCount);
+  numberOfCalls.check(allInvocations,wanted,wantedCount);
 }

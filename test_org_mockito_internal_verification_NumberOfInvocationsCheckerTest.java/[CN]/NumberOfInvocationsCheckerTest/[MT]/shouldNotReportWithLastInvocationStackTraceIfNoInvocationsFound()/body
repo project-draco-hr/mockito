@@ -1,5 +1,5 @@
 {
   assertTrue(finderStub.actualToReturn.isEmpty());
-  verifier.verify(invocations,wanted,100);
+  verifier.check(invocations,wanted,100);
   assertNull(reporterStub.stackTrace);
 }

@@ -4,7 +4,7 @@
   MissingInvocationInOrderChecker missingInvocation=new MissingInvocationInOrderChecker();
   AtLeastXNumberOfInvocationsInOrderChecker numberOfCalls=new AtLeastXNumberOfInvocationsInOrderChecker();
   if (wantedCount == 1) {
-    missingInvocation.verify(allInvocations,wanted,this);
+    missingInvocation.check(allInvocations,wanted,this);
   }
   numberOfCalls.verify(allInvocations,wanted,wantedCount);
 }

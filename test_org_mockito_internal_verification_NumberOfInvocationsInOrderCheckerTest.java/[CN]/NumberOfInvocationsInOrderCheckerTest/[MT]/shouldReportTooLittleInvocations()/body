@@ -3,7 +3,7 @@
   Invocation second=new InvocationBuilder().toInvocation();
   finderStub.validMatchingChunkToReturn.addAll(asList(first,second));
   try {
-    verifier.verify(invocations,wanted,4);
+    verifier.check(invocations,wanted,4);
     fail();
   }
  catch (  VerifcationInOrderFailure e) {

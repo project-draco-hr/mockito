@@ -1,7 +1,7 @@
 {
   assertTrue(finderStub.actualToReturn.isEmpty());
   finderStub.similarToReturn=null;
-  verifier.verify(invocations,wanted);
+  verifier.check(invocations,wanted);
   assertEquals(wanted,reporterStub.wanted);
   assertNull(reporterStub.actualInvocationStackTrace);
 }
