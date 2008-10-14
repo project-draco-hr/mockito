@@ -10,7 +10,8 @@
   Invocation invocation=new Invocation(proxy,method,args,mockingProgress.nextSequenceNumber());
   InvocationMatcher invocationMatcher=matchersBinder.bindMatchers(invocation);
   if (verificationMode != null) {
-    verifyingRecorder.verify(invocationMatcher,verificationMode);
+    VerificationDataImpl data=new VerificationDataImpl(verifyingRecorder.getRegisteredInvocations(),invocationMatcher);
+    verificationMode.verify(data);
     return null;
   }
   mockitoStubber.setInvocationForPotentialStubbing(invocationMatcher);
