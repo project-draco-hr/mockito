@@ -1,3 +1,4 @@
 {
-  verifyingRecorder.verify(VerificationModeFactory.noMoreInteractions());
+  VerificationDataImpl data=new VerificationDataImpl(verifyingRecorder.getRegisteredInvocations(),null);
+  VerificationModeFactory.noMoreInteractions().verify(data);
 }
