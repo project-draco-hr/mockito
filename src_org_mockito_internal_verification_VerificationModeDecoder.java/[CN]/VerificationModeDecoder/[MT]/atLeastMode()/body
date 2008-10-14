@@ -1,3 +1,0 @@
-{
-  return mode.getVerification() == Verification.AT_LEAST;
-}

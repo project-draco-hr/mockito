@@ -1,4 +1,0 @@
-{
-  assertFalse(decode(VerificationModeFactory.times(0)).atLeastMode());
-  assertFalse(decode(VerificationModeFactory.times(10)).atLeastMode());
-}
