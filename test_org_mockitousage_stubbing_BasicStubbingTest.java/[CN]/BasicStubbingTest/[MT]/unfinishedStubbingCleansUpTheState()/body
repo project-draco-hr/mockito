@@ -1,0 +1,9 @@
+{
+  try {
+    when("").thenReturn("");
+    fail();
+  }
+ catch (  MissingMethodInvocationException e) {
+  }
+  verifyZeroInteractions(mock);
+}
