@@ -1,18 +1,18 @@
 {
   stubVoid(mock);
-  detects(new OnMethodCallOnMock(),UnfinishedStubbingException.class);
+  detectsAndCleansUp(new OnMethodCallOnMock(),UnfinishedStubbingException.class);
   stubVoid(mock);
-  detects(new OnStub(),UnfinishedStubbingException.class);
+  detectsAndCleansUp(new OnStub(),UnfinishedStubbingException.class);
   stubVoid(mock);
-  detects(new OnStubVoid(),UnfinishedStubbingException.class);
+  detectsAndCleansUp(new OnStubVoid(),UnfinishedStubbingException.class);
   stubVoid(mock);
-  detects(new OnVerify(),UnfinishedStubbingException.class);
+  detectsAndCleansUp(new OnVerify(),UnfinishedStubbingException.class);
   stubVoid(mock);
-  detects(new OnVerifyInOrder(),UnfinishedStubbingException.class);
+  detectsAndCleansUp(new OnVerifyInOrder(),UnfinishedStubbingException.class);
   stubVoid(mock);
-  detects(new OnVerifyZeroInteractions(),UnfinishedStubbingException.class);
+  detectsAndCleansUp(new OnVerifyZeroInteractions(),UnfinishedStubbingException.class);
   stubVoid(mock);
-  detects(new OnVerifyNoMoreInteractions(),UnfinishedStubbingException.class);
+  detectsAndCleansUp(new OnVerifyNoMoreInteractions(),UnfinishedStubbingException.class);
   stubVoid(mock);
-  detects(new OnDoAnswer(),UnfinishedStubbingException.class);
+  detectsAndCleansUp(new OnDoAnswer(),UnfinishedStubbingException.class);
 }

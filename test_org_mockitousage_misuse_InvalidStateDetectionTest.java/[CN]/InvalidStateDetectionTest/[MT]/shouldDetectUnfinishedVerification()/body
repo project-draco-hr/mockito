@@ -1,16 +1,16 @@
 {
   verify(mock);
-  detects(new OnStub(),UnfinishedVerificationException.class);
+  detectsAndCleansUp(new OnStub(),UnfinishedVerificationException.class);
   verify(mock);
-  detects(new OnStubVoid(),UnfinishedVerificationException.class);
+  detectsAndCleansUp(new OnStubVoid(),UnfinishedVerificationException.class);
   verify(mock);
-  detects(new OnVerify(),UnfinishedVerificationException.class);
+  detectsAndCleansUp(new OnVerify(),UnfinishedVerificationException.class);
   verify(mock);
-  detects(new OnVerifyInOrder(),UnfinishedVerificationException.class);
+  detectsAndCleansUp(new OnVerifyInOrder(),UnfinishedVerificationException.class);
   verify(mock);
-  detects(new OnVerifyZeroInteractions(),UnfinishedVerificationException.class);
+  detectsAndCleansUp(new OnVerifyZeroInteractions(),UnfinishedVerificationException.class);
   verify(mock);
-  detects(new OnVerifyNoMoreInteractions(),UnfinishedVerificationException.class);
+  detectsAndCleansUp(new OnVerifyNoMoreInteractions(),UnfinishedVerificationException.class);
   verify(mock);
-  detects(new OnDoAnswer(),UnfinishedVerificationException.class);
+  detectsAndCleansUp(new OnDoAnswer(),UnfinishedVerificationException.class);
 }

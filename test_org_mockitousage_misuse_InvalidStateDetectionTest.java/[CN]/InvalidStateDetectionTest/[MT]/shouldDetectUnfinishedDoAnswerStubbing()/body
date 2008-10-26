@@ -1,18 +1,18 @@
 {
   doAnswer(null);
-  detects(new OnMethodCallOnMock(),UnfinishedStubbingException.class);
+  detectsAndCleansUp(new OnMethodCallOnMock(),UnfinishedStubbingException.class);
   doAnswer(null);
-  detects(new OnStub(),UnfinishedStubbingException.class);
+  detectsAndCleansUp(new OnStub(),UnfinishedStubbingException.class);
   doAnswer(null);
-  detects(new OnStubVoid(),UnfinishedStubbingException.class);
+  detectsAndCleansUp(new OnStubVoid(),UnfinishedStubbingException.class);
   doAnswer(null);
-  detects(new OnVerify(),UnfinishedStubbingException.class);
+  detectsAndCleansUp(new OnVerify(),UnfinishedStubbingException.class);
   doAnswer(null);
-  detects(new OnVerifyInOrder(),UnfinishedStubbingException.class);
+  detectsAndCleansUp(new OnVerifyInOrder(),UnfinishedStubbingException.class);
   doAnswer(null);
-  detects(new OnVerifyZeroInteractions(),UnfinishedStubbingException.class);
+  detectsAndCleansUp(new OnVerifyZeroInteractions(),UnfinishedStubbingException.class);
   doAnswer(null);
-  detects(new OnVerifyNoMoreInteractions(),UnfinishedStubbingException.class);
+  detectsAndCleansUp(new OnVerifyNoMoreInteractions(),UnfinishedStubbingException.class);
   doAnswer(null);
-  detects(new OnDoAnswer(),UnfinishedStubbingException.class);
+  detectsAndCleansUp(new OnDoAnswer(),UnfinishedStubbingException.class);
 }
