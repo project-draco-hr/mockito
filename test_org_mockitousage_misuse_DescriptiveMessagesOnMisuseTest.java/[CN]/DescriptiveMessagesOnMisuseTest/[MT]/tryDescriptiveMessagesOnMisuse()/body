@@ -1,4 +1,3 @@
 {
-  doReturn("foo");
-  doReturn("bar");
+  Foo foo=mock(Foo.class);
 }
