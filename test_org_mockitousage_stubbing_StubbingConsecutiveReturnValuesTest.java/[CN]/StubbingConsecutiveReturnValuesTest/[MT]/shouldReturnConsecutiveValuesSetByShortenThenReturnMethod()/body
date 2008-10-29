@@ -1,0 +1,8 @@
+{
+  when(mock.simpleMethod()).thenReturn("one","two","three");
+  assertEquals("one",mock.simpleMethod());
+  assertEquals("two",mock.simpleMethod());
+  assertEquals("three",mock.simpleMethod());
+  assertEquals("three",mock.simpleMethod());
+  assertEquals("three",mock.simpleMethod());
+}

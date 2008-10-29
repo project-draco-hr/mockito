@@ -1,0 +1,7 @@
+{
+  NewOngoingStubbing<T> stubbing=thenAnswer(new Returns(value));
+  for (  Object v : values) {
+    stubbing=stubbing.thenAnswer(new Returns(v));
+  }
+  return stubbing;
+}
