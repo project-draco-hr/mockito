@@ -1,0 +1,16 @@
+{
+  try {
+    when(mock.hashCode()).thenReturn(1);
+    fail();
+  }
+ catch (  MockitoException e) {
+    assertEquals("Cannot stub hashCode() method",e.getMessage());
+  }
+  try {
+    when(mock.equals(null)).thenReturn(false);
+    fail();
+  }
+ catch (  MockitoException e) {
+    assertEquals("Cannot stub equals() method",e.getMessage());
+  }
+}
