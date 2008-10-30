@@ -1,0 +1,9 @@
+{
+  SmartNullReturnValues returnValues=new SmartNullReturnValues();
+  assertEquals(false,returnValues.valueFor(invocationOf(HasPrimitiveMethods.class,"booleanMethod")));
+  assertEquals((char)0,returnValues.valueFor(invocationOf(HasPrimitiveMethods.class,"charMethod")));
+  assertEquals(0,returnValues.valueFor(invocationOf(HasPrimitiveMethods.class,"intMethod")));
+  assertEquals(0,returnValues.valueFor(invocationOf(HasPrimitiveMethods.class,"longMethod")));
+  assertEquals(0,returnValues.valueFor(invocationOf(HasPrimitiveMethods.class,"floatMethod")));
+  assertEquals(0,returnValues.valueFor(invocationOf(HasPrimitiveMethods.class,"doubleMethod")));
+}

@@ -1,0 +1,4 @@
+Class<T> classToMock
+String name
+T optionalInstance
+ReturnValues returnValues

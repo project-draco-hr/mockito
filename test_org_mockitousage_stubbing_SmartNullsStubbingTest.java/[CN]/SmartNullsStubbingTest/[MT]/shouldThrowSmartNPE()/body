@@ -1,0 +1,10 @@
+{
+  List list=unstubbedMethodInvokedHere(mock);
+  try {
+    list.clear();
+    fail();
+  }
+ catch (  SmartNullPointerException e) {
+    assertThat(e.getCause(),hasMethodInStackTraceAt(0,"unstubbedMethodInvokedHere"));
+  }
+}

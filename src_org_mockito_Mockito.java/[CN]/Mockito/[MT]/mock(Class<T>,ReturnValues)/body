@@ -1,0 +1,3 @@
+{
+  return mock(classToMock,null,(T)null,returnValues);
+}

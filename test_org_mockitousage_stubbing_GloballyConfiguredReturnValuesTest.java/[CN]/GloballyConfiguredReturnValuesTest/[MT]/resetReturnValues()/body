@@ -1,0 +1,3 @@
+{
+  ConfigurationSupport.getConfiguration().resetReturnValues();
+}

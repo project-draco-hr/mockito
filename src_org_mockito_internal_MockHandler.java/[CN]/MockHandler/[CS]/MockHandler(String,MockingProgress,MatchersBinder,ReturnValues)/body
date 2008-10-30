@@ -2,6 +2,7 @@
   this.mockName=mockName;
   this.mockingProgress=mockingProgress;
   this.matchersBinder=matchersBinder;
+  this.returnValues=returnValues;
   this.mockitoStubber=new MockitoStubber(mockingProgress);
   this.registeredInvocations=new RegisteredInvocations();
 }

@@ -1,0 +1,9 @@
+{
+  ReturnValues returnsEdam=new HardCodedReturnValues("edam");
+  ReturnValues returnsCheddar=new HardCodedReturnValues("cheddar");
+  IMethods mock=Mockito.mock(IMethods.class,new GloballyConfiguredReturnValues());
+  ConfigurationSupport.getConfiguration().setReturnValues(returnsEdam);
+  assertEquals("edam",mock.simpleMethod());
+  ConfigurationSupport.getConfiguration().setReturnValues(returnsCheddar);
+  assertEquals("cheddar",mock.simpleMethod());
+}

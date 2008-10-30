@@ -1,0 +1,3 @@
+{
+  mock=mock(IMethods.class,Mockito.SMART_NULLS);
+}

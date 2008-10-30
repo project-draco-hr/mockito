@@ -1,0 +1,13 @@
+{
+  final Class<?> type=invocation.getMethod().getReturnType();
+  if (type.isPrimitive()) {
+    return delegate.valueFor(invocation);
+  }
+  return Proxy.newProxyInstance(type.getClassLoader(),new Class<?>[]{type},new InvocationHandler(){
+    Exception whenCreated=new UndesiredInvocation("Unstubbed method was invoked here");
+    public Object invoke(    Object proxy,    Method method,    Object[] args) throws Throwable {
+      throw new SmartNullPointerException("oops",whenCreated);
+    }
+  }
+);
+}

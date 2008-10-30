@@ -22,7 +22,7 @@
     return answer.answer(invocation);
   }
  else   if (MockUtil.isMock(instance)) {
-    return Configuration.instance().getReturnValues().valueFor(invocation);
+    return returnValues.valueFor(invocation);
   }
  else {
     return methodProxy.invoke(instance,args);
