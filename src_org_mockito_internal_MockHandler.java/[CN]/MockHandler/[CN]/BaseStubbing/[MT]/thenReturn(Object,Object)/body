@@ -1,0 +1,10 @@
+{
+  NewOngoingStubbing<T> stubbing=thenReturn(value);
+  if (values == null) {
+    return stubbing.thenReturn(null);
+  }
+  for (  Object v : values) {
+    stubbing=stubbing.thenReturn(v);
+  }
+  return stubbing;
+}

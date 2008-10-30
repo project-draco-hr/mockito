@@ -1,10 +1,7 @@
 {
   Object wanted=getWanted();
-  if (wanted == null) {
+  if (wanted == null || actual == null) {
     return super.matches(actual);
-  }
- else   if (actual == null) {
-    return false;
   }
  else   if (wanted instanceof boolean[] && actual instanceof boolean[]) {
     return Arrays.equals((boolean[])wanted,(boolean[])actual);

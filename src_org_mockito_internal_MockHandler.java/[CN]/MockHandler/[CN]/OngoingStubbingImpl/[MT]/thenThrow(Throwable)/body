@@ -1,3 +1,0 @@
-{
-  return thenAnswer(new ThrowsException(throwable));
-}

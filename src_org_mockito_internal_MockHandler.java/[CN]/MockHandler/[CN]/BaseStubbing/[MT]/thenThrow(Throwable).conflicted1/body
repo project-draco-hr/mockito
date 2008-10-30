@@ -1,0 +1,15 @@
+{
+  if (throwables == null) {
+    thenThrow((Throwable)null);
+  }
+  NewOngoingStubbing<T> stubbing=null;
+  for (  Throwable t : throwables) {
+    if (stubbing == null) {
+      stubbing=thenThrow(t);
+    }
+ else {
+      stubbing=stubbing.thenThrow(t);
+    }
+  }
+  return stubbing;
+}

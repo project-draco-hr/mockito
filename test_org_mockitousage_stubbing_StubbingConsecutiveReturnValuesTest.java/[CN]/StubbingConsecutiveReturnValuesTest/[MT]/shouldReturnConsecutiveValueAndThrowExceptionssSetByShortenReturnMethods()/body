@@ -1,0 +1,25 @@
+{
+  when(mock.simpleMethod()).thenReturn("zero").thenReturn("one","two").thenThrow(new NullPointerException(),new RuntimeException()).thenReturn("three").thenThrow(new IllegalArgumentException());
+  assertEquals("zero",mock.simpleMethod());
+  assertEquals("one",mock.simpleMethod());
+  assertEquals("two",mock.simpleMethod());
+  try {
+    mock.simpleMethod();
+    fail();
+  }
+ catch (  NullPointerException e) {
+  }
+  try {
+    mock.simpleMethod();
+    fail();
+  }
+ catch (  RuntimeException e) {
+  }
+  assertEquals("three",mock.simpleMethod());
+  try {
+    mock.simpleMethod();
+    fail();
+  }
+ catch (  IllegalArgumentException e) {
+  }
+}
