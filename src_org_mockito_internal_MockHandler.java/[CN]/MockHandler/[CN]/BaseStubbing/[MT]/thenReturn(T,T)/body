@@ -3,7 +3,7 @@
   if (values == null) {
     return stubbing.thenReturn(null);
   }
-  for (  Object v : values) {
+  for (  T v : values) {
     stubbing=stubbing.thenReturn(v);
   }
   return stubbing;
