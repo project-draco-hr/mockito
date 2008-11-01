@@ -1,13 +1,13 @@
 {
   if (mockitoStubber.hasAnswersForStubbing()) {
-    Invocation invocation=new Invocation(proxy,method,args,mockingProgress.nextSequenceNumber());
+    Invocation invocation=new Invocation(proxy,method,args,SequenceNumber.next());
     InvocationMatcher invocationMatcher=matchersBinder.bindMatchers(invocation);
     mockitoStubber.setMethodForStubbing(invocationMatcher);
     return null;
   }
   VerificationMode verificationMode=mockingProgress.pullVerificationMode();
   mockingProgress.validateState();
-  Invocation invocation=new Invocation(proxy,method,args,mockingProgress.nextSequenceNumber());
+  Invocation invocation=new Invocation(proxy,method,args,SequenceNumber.next());
   InvocationMatcher invocationMatcher=matchersBinder.bindMatchers(invocation);
   if (verificationMode != null) {
     VerificationDataImpl data=new VerificationDataImpl(registeredInvocations.getAll(),invocationMatcher);
