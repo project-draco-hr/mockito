@@ -1,6 +1,6 @@
 {
-  Foo myClass=Mockito.mock(Foo.class);
-  myClass.varArgs((String[])null);
-  Mockito.verify(myClass).varArgs((String[])Mockito.anyObject());
-  Mockito.verify(myClass).varArgs((String[])null);
+  Foo foo=Mockito.mock(Foo.class);
+  foo.varArgs((String[])null);
+  Mockito.verify(foo).varArgs((String[])Mockito.anyObject());
+  Mockito.verify(foo).varArgs((String[])null);
 }
