@@ -1,7 +1,7 @@
 {
-  List list=unstubbedMethodInvokedHere(mock);
+  IMethods methods=unstubbedMethodInvokedHere(mock);
   try {
-    list.clear();
+    methods.simpleMethod();
     fail();
   }
  catch (  SmartNullPointerException e) {

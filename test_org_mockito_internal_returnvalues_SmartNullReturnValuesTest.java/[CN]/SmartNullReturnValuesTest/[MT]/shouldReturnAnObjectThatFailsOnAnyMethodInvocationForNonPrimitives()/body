@@ -1,8 +1,8 @@
 {
   ReturnValues returnValues=new SmartNullReturnValues();
-  @SuppressWarnings("unchecked") List<String> smartNull=(List<String>)returnValues.valueFor(invocationOf(HasInterfaceMethod.class,"doListStuff"));
+  Foo smartNull=(Foo)returnValues.valueFor(invocationOf(Foo.class,"get"));
   try {
-    smartNull.iterator();
+    smartNull.get();
     fail();
   }
  catch (  SmartNullPointerException expected) {

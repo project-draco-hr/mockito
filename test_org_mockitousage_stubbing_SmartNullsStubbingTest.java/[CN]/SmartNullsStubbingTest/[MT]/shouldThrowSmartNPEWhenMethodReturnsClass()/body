@@ -1,0 +1,10 @@
+{
+  Foo mock=mock(Foo.class,SMART_NULLS);
+  Foo foo=mock.getSomeClass();
+  try {
+    foo.boo();
+    fail();
+  }
+ catch (  SmartNullPointerException e) {
+  }
+}

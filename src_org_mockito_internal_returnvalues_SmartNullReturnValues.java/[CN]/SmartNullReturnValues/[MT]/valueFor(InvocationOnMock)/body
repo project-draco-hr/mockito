@@ -1,13 +1,17 @@
 {
-  final Class<?> type=invocation.getMethod().getReturnType();
-  if (type.isPrimitive()) {
-    return delegate.valueFor(invocation);
+  Object defaultReturnValue=delegate.valueFor(invocation);
+  if (defaultReturnValue != null) {
+    return defaultReturnValue;
   }
-  return Proxy.newProxyInstance(type.getClassLoader(),new Class<?>[]{type},new InvocationHandler(){
-    Exception whenCreated=new UndesiredInvocation("Unstubbed method was invoked here");
-    public Object invoke(    Object proxy,    Method method,    Object[] args) throws Throwable {
-      throw new SmartNullPointerException("oops",whenCreated);
+  Class<?> type=invocation.getMethod().getReturnType();
+  if (ClassImposterizer.INSTANCE.canImposterise(type)) {
+    return ClassImposterizer.INSTANCE.imposterise(new MethodInterceptor(){
+      Exception whenCreated=new UndesiredInvocation("Unstubbed method was invoked here");
+      public Object intercept(      Object obj,      Method method,      Object[] args,      MethodProxy proxy) throws Throwable {
+        throw new SmartNullPointerException("oops",whenCreated);
+      }
     }
+,type);
   }
-);
+  return null;
 }
