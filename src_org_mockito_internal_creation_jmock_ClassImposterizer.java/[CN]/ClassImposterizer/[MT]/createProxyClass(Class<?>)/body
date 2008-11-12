@@ -22,7 +22,7 @@
     enhancer.setNamingPolicy(NAMING_POLICY_THAT_ALLOWS_IMPOSTERISATION_OF_CLASSES_IN_SIGNED_PACKAGES);
   }
  else {
-    enhancer.setNamingPolicy(MOCKITO_NAMING_POLICY);
+    enhancer.setNamingPolicy(MockitoNamingPolicy.INSTANCE);
   }
   try {
     return enhancer.createClass();

@@ -8,5 +8,6 @@
  else   if (hashCodeMethod.equals(method)) {
     return hashCodeForMock(proxy);
   }
+  new CGLIBHacker().setMockitoNamingPolicy(methodProxy);
   return delegate.intercept(proxy,method,args,methodProxy);
 }
