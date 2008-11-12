@@ -1,5 +1,0 @@
-{
-  Factory f1=createMock();
-  Factory f2=createMock();
-  assertNotSame(f1.getCallback(0),f2.getCallback(0));
-}
