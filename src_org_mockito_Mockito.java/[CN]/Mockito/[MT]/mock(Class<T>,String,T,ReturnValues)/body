@@ -1,3 +1,4 @@
 {
+  MOCKING_PROGRESS.validateState();
   return MockUtil.createMock(classToMock,MOCKING_PROGRESS,name,optionalInstance,returnValues);
 }
