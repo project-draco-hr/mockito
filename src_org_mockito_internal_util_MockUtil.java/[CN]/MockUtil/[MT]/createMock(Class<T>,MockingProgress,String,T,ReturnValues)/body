@@ -1,5 +1,4 @@
 {
-  Method[] methods=classToMock.getMethods();
   validateType(classToMock);
   if (mockName == null) {
     mockName=toInstanceName(classToMock);
