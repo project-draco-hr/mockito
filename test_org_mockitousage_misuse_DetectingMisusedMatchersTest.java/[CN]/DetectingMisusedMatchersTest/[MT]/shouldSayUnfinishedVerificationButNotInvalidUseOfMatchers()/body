@@ -1,0 +1,9 @@
+{
+  verify(withFinal).finalMethod(anyObject());
+  try {
+    verify(withFinal).finalMethod(anyObject());
+    fail();
+  }
+ catch (  UnfinishedVerificationException e) {
+  }
+}
