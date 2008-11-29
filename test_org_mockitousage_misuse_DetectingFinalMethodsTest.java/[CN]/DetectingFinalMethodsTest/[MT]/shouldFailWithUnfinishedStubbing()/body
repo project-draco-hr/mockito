@@ -1,0 +1,10 @@
+{
+  withFinal=mock(WithFinal.class);
+  MockUtil.getMockHandler(withFinal);
+  try {
+    when(withFinal.foo()).thenReturn(null);
+    fail();
+  }
+ catch (  MissingMethodInvocationException e) {
+  }
+}

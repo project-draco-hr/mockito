@@ -1,5 +1,5 @@
 {
-  MockingProgressImpl state=new MockingProgressImpl();
+  MockingProgress state=new MockingProgressImpl();
   state.verificationStarted(VerificationModeFactory.atLeastOnce());
   MockHandler handler=new MockHandler(null,state,new ExceptionThrowingBinder(),null);
   try {

@@ -1,0 +1,5 @@
+{
+  mock.booleanReturningMethod();
+  verify(mock).booleanReturningMethod();
+  assertOngoingStubbingIsReset();
+}

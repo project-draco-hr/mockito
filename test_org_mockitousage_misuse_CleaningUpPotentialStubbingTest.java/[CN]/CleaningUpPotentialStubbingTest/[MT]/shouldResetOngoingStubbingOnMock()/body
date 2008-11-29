@@ -1,0 +1,5 @@
+{
+  mock.booleanReturningMethod();
+  mock(IMethods.class);
+  assertOngoingStubbingIsReset();
+}

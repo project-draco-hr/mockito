@@ -1,0 +1,6 @@
+{
+  mock.booleanReturningMethod();
+  InOrder inOrder=inOrder(mock);
+  inOrder.verify(mock).booleanReturningMethod();
+  assertOngoingStubbingIsReset();
+}

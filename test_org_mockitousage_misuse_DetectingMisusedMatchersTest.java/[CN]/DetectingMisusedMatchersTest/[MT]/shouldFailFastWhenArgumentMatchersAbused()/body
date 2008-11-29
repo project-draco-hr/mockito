@@ -1,0 +1,11 @@
+{
+  misplacedArgumentMatcher();
+  try {
+    mock(IMethods.class);
+    fail();
+  }
+ catch (  InvalidUseOfMatchersException e) {
+    assertThat(e,messageContains("Misplaced argument matcher"));
+    assertThat(e.getCause(),ExtraMatchers.hasFirstMethodInStackTrace("misplacedArgumentMatcher"));
+  }
+}

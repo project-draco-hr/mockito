@@ -1,0 +1,7 @@
+{
+  if (!matcherStack.isEmpty()) {
+    MockitoException lastMatcherLocation=((LocalizedMatcher)matcherStack.pop()).getLocation();
+    matcherStack.clear();
+    throw new InvalidUseOfMatchersException("Misplaced argument matcher.",lastMatcherLocation);
+  }
+}

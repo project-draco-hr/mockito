@@ -1,0 +1,3 @@
+{
+  return "invocationForStubbing: " + invocationForStubbing;
+}

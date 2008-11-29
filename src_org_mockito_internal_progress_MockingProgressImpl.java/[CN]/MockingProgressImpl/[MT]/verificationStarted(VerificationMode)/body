@@ -1,4 +1,5 @@
 {
   validateState();
+  resetOngoingStubbing();
   verificationMode=(VerificationMode)verify;
 }

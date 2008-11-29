@@ -1,0 +1,4 @@
+{
+  s.getClass();
+  this.s=s;
+}
