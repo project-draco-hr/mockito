@@ -1,4 +1,0 @@
-{
-  BaseClass ci=spy(new BaseClass("test"));
-  assertEquals(false,ci.isLarger(2));
-}
