@@ -5,4 +5,5 @@
   final String message="this is my message to you";
   when(reader.readFromFile(filename)).thenReturn(message.getBytes("UTF8"));
   byte[] bytes=controller.naughtyMethodUnderTestWhichDoesNotFailBecauseItReturnsAValue(filename);
+  assertNotNull("Should have returned some bytes, i am HUNGRY!",bytes);
 }
