@@ -1,0 +1,5 @@
+{
+  willReturn("foo").given(mock).simpleMethod("bar");
+  assertEquals(null,mock.simpleMethod("boooo"));
+  assertEquals("foo",mock.simpleMethod("bar"));
+}

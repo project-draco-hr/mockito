@@ -1,0 +1,3 @@
+{
+  return new BDDOngoingStubbingImpl<T>(mockitoOngoingStubbing.thenReturn(value));
+}

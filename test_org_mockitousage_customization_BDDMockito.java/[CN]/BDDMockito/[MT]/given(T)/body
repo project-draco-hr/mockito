@@ -1,0 +1,3 @@
+{
+  return new BDDOngoingStubbingImpl<T>(Mockito.when(methodCall));
+}

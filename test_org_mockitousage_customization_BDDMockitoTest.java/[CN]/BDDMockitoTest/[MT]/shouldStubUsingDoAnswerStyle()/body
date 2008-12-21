@@ -1,0 +1,9 @@
+{
+  willAnswer(new Answer<String>(){
+    public String answer(    InvocationOnMock invocation) throws Throwable {
+      return (String)invocation.getArguments()[0];
+    }
+  }
+).given(mock).simpleMethod(anyString());
+  assertEquals("foo",mock.simpleMethod("foo"));
+}

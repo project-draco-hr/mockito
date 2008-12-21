@@ -1,0 +1,10 @@
+{
+  willDoNothing().willThrow(new RuntimeException()).given(mock).voidMethod();
+  mock.voidMethod();
+  try {
+    mock.voidMethod();
+    fail();
+  }
+ catch (  RuntimeException e) {
+  }
+}
