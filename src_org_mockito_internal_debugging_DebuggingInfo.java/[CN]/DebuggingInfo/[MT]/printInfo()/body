@@ -1,0 +1,9 @@
+{
+  if (!shouldPrint()) {
+    return;
+  }
+  for (  Invocation i : unusedStubs) {
+    print("Warning - unused stub detected:");
+    print(i.getStackTrace().getStackTrace()[0]);
+  }
+}

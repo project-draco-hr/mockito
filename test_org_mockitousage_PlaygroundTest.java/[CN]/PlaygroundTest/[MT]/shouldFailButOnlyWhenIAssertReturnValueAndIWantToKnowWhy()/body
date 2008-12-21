@@ -1,0 +1,8 @@
+{
+  ReadFromSomeFileSystem reader=mock(ReadFromSomeFileSystem.class);
+  SomeController controller=new SomeController(reader,null);
+  final String filename="/some/non/random/path";
+  final String message="this is my message to you";
+  when(reader.readFromFile(filename)).thenReturn(message.getBytes("UTF8"));
+  byte[] bytes=controller.naughtyMethodUnderTestWhichDoesNotFailBecauseItReturnsAValue(filename);
+}

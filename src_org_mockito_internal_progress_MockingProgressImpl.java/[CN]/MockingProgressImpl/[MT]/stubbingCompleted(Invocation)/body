@@ -1,0 +1,4 @@
+{
+  stubbedInvocations.add(invocation);
+  stubbingInProgress=false;
+}

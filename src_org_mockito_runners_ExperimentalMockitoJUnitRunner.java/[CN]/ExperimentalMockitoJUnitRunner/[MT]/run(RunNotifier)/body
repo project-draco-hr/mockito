@@ -1,0 +1,7 @@
+{
+  MockingProgress progress=new ThreadSafeMockingProgress();
+  MockitoListener listener=new MockitoListener(progress);
+  notifier.addListener(listener);
+  super.run(notifier);
+  progress.pullStubbedInvocations();
+}

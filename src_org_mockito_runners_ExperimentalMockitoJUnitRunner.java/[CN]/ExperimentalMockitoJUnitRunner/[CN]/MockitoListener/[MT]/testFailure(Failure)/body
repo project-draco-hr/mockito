@@ -1,0 +1,13 @@
+{
+  DebuggingInfo debuggingInfo=new DebuggingInfo(failure.getTestHeader());
+  Throwable e=failure.getException();
+  List<Invocation> stubbedInvocations=progress.pullStubbedInvocations();
+  for (  Invocation invocation : stubbedInvocations) {
+    if (!invocation.isVerified()) {
+      debuggingInfo.addUnusedStub(invocation);
+      break;
+    }
+  }
+  debuggingInfo.printInfo();
+  super.testFailure(failure);
+}
