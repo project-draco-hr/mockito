@@ -1,4 +1,11 @@
 {
+  Iterator<InvocationMatcher> unstubbedIterator=unstubbedInvocations.iterator();
+  while (unstubbedIterator.hasNext()) {
+    InvocationMatcher unstubbed=unstubbedIterator.next();
+    if (unstubbed.getInvocation().equals(invocation)) {
+      unstubbedIterator.remove();
+    }
+  }
   unstubbedInvocations.remove(invocation);
   stubbedInvocations.add(invocation);
 }

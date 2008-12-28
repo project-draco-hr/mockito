@@ -7,8 +7,8 @@
       break;
     }
   }
-  List<Invocation> unstubbedInvocations=debuggingHelper.pullUnstubbedInvocations();
-  for (  Invocation invocation : unstubbedInvocations) {
+  List<InvocationMatcher> unstubbedInvocations=debuggingHelper.pullUnstubbedInvocations();
+  for (  InvocationMatcher invocation : unstubbedInvocations) {
     debuggingInfo.addUnstubbedInvocation(invocation);
   }
   debuggingInfo.printInfo(logger);
