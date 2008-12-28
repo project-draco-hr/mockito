@@ -1,0 +1,4 @@
+{
+  this.argument=argument;
+  return true;
+}
