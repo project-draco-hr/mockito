@@ -1,7 +1,9 @@
 {
   MockingProgress progress=new ThreadSafeMockingProgress();
-  MockitoListener listener=new MockitoListener(progress);
+  DebuggingHelper debuggingHelper=progress.getDebuggingHelper();
+  debuggingHelper.collectData();
+  MockitoListener listener=new MockitoListener(debuggingHelper);
   notifier.addListener(listener);
   super.run(notifier);
-  progress.pullStubbedInvocations();
+  debuggingHelper.clearData();
 }

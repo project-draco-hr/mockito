@@ -1,5 +1,6 @@
 {
   boolean fromMockObject=e.getClassName().contains("$$EnhancerByMockitoWithCGLIB$$");
   boolean fromOrgMockito=e.getClassName().startsWith("org.mockito.");
-  return fromMockObject || fromOrgMockito;
+  boolean isRunner=e.getClassName().startsWith("org.mockito.runners.");
+  return fromMockObject || fromOrgMockito && !isRunner;
 }

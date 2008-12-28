@@ -1,0 +1,4 @@
+{
+  unstubbedInvocations.remove(invocation);
+  stubbedInvocations.add(invocation);
+}

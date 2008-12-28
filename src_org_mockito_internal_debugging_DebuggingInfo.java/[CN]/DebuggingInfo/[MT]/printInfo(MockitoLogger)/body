@@ -1,0 +1,13 @@
+{
+  if (!shouldPrint()) {
+    return;
+  }
+  for (  Invocation i : unusedStubs) {
+    logger.print("Warning - unused stub detected here:");
+    logger.print(i.getStackTrace().getStackTrace()[0]);
+  }
+  for (  Invocation i : unstubbedInvocations) {
+    logger.print("Warning - unstubbed method invoked here:");
+    logger.print(i.getStackTrace().getStackTrace()[0]);
+  }
+}

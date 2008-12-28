@@ -1,0 +1,6 @@
+{
+  String value=methods.simpleMethod(what);
+  if (!"foo".equals(value)) {
+    throw new IllegalArgumentException("I control only foo");
+  }
+}

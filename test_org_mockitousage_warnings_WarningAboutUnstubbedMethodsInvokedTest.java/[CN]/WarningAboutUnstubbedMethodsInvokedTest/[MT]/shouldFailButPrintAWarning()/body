@@ -1,0 +1,4 @@
+{
+  SomeController controller=new SomeController(mock);
+  controller.control("foo");
+}

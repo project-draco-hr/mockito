@@ -1,12 +1,16 @@
 {
   DebuggingInfo debuggingInfo=new DebuggingInfo(failure.getTestHeader());
-  List<Invocation> stubbedInvocations=progress.pullStubbedInvocations();
+  List<Invocation> stubbedInvocations=debuggingHelper.pullStubbedInvocations();
   for (  Invocation invocation : stubbedInvocations) {
     if (!invocation.isVerified()) {
       debuggingInfo.addUnusedStub(invocation);
       break;
     }
   }
-  debuggingInfo.printInfo();
+  List<Invocation> unstubbedInvocations=debuggingHelper.pullUnstubbedInvocations();
+  for (  Invocation invocation : unstubbedInvocations) {
+    debuggingInfo.addUnstubbedInvocation(invocation);
+  }
+  debuggingInfo.printInfo(logger);
   super.testFailure(failure);
 }

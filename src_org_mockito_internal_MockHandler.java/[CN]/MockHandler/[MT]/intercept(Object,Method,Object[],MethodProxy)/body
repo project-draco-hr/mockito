@@ -18,6 +18,9 @@
   registeredInvocations.add(invocationMatcher.getInvocation());
   mockingProgress.reportOngoingStubbing(new OngoingStubbingImpl());
   Answer<?> answer=mockitoStubber.findAnswerFor(invocation);
+  if (!invocation.isVoid() && answer == null) {
+    mockingProgress.getDebuggingHelper().addUnstubbedInvocation(invocation);
+  }
   if (answer != null) {
     return answer.answer(invocation);
   }

@@ -1,4 +1,0 @@
-{
-  super();
-  this.progress=progress;
-}
