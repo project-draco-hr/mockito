@@ -7,5 +7,5 @@
     stubbingInProgress=false;
     reporter.unfinishedStubbing();
   }
-  getLastArguments().validateState();
+  getArgumentMatcherStorage().validateState();
 }

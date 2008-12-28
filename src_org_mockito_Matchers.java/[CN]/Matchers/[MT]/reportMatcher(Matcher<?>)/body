@@ -1,3 +1,3 @@
 {
-  return mockingProgress.getLastArguments().reportMatcher(matcher);
+  return mockingProgress.getArgumentMatcherStorage().reportMatcher(matcher);
 }

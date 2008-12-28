@@ -1,3 +1,3 @@
 {
-  return mockingProgress.getLastArguments().reportNot().<T>returnNull();
+  return mockingProgress.getArgumentMatcherStorage().reportNot().<T>returnNull();
 }

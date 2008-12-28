@@ -1,5 +1,5 @@
 {
-  List<Matcher> lastMatchers=lastArguments.pullMatchers();
+  List<Matcher> lastMatchers=argumentMatcherStorage.pullMatchers();
   validateMatchers(invocation,lastMatchers);
   InvocationMatcher invocationWithMatchers=new InvocationMatcher(invocation,lastMatchers);
   return invocationWithMatchers;
