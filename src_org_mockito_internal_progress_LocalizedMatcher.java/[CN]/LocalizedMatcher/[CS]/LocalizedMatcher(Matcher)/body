@@ -1,4 +1,0 @@
-{
-  this.matcher=matcher;
-  this.location=new MockitoException("Argument matcher was used here:");
-}
