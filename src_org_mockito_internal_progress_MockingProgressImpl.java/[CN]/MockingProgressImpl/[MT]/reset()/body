@@ -1,5 +1,5 @@
 {
   stubbingInProgress=false;
   verificationMode=null;
-  LastArguments.instance().reset();
+  getLastArguments().reset();
 }
