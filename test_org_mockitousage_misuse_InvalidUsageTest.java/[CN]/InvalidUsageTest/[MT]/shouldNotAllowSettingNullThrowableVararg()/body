@@ -1,0 +1,3 @@
+{
+  when(mock.simpleMethod()).thenThrow(null);
+}
