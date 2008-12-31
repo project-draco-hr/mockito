@@ -1,0 +1,15 @@
+{
+  Iterator<Invocation> unusedIterator=unusedStubs.iterator();
+  while (unusedIterator.hasNext()) {
+    Invocation unused=unusedIterator.next();
+    Iterator<InvocationMatcher> unstubbedIterator=unstubbedInvocations.iterator();
+    while (unstubbedIterator.hasNext()) {
+      InvocationMatcher unstubbed=unstubbedIterator.next();
+      if (unstubbed.hasSimilarMethod(unused)) {
+        logger.println(join("[Mockito] Warning - stubbed method called with different arguments.","Stubbed this way:",unused,"Here:",unused.getStackTrace().getStackTrace()[0],"","But called with different arguments:",unstubbed.getInvocation(),"Here:",unstubbed.getInvocation().getStackTrace().getStackTrace()[0],""));
+        unusedIterator.remove();
+        unstubbedIterator.remove();
+      }
+    }
+  }
+}

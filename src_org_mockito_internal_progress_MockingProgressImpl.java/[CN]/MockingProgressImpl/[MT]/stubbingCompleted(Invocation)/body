@@ -1,4 +1,4 @@
 {
-  debuggingHelper.addStubbedInvocation(invocation);
+  debuggingInfo.addStubbedInvocation(invocation);
   stubbingInProgress=false;
 }

@@ -1,0 +1,4 @@
+{
+  WarningsPrinter warningsPrinter=new WarningsPrinter(stubbedInvocations,unstubbedInvocations);
+  warningsPrinter.print(logger);
+}

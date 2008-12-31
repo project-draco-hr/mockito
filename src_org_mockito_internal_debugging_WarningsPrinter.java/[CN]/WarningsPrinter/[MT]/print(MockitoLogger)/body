@@ -1,0 +1,8 @@
+{
+  if (!shouldPrint()) {
+    return;
+  }
+  warnAboutStubsUsedWithDifferentArgs(logger);
+  warnAboutUnusedStubs(logger);
+  warnAboutUnstubbedInvocations(logger);
+}

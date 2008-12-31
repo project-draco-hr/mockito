@@ -1,0 +1,4 @@
+{
+  this.unusedStubs=unusedStubs;
+  this.unstubbedInvocations=unstubbedInvocations;
+}
