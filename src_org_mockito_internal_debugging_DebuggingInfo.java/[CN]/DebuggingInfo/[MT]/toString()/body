@@ -1,3 +1,0 @@
-{
-  return "unusedInvocations: " + stubbedInvocations + "\nunstubbed invocations:"+ potentiallyUnstubbedInvocations;
-}

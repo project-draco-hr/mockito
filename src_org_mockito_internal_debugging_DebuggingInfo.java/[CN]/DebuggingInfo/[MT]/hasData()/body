@@ -1,3 +1,3 @@
 {
-  return !stubbedInvocations.isEmpty() || !potentiallyUnstubbedInvocations.isEmpty();
+  return !unusedStubs.isEmpty() || !unstubbedInvocations.isEmpty();
 }

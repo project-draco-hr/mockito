@@ -2,7 +2,6 @@
   runner.run(notifier,new SimpleRunner(){
     public void run(    RunNotifier notifier){
       someStubbing();
-      callStubbedMethodCorrectly();
       callStubbedMethodWithDifferentArgs();
       notifier.fireTestFailure(null);
       String loggedInfo=logger.getLoggedInfo();

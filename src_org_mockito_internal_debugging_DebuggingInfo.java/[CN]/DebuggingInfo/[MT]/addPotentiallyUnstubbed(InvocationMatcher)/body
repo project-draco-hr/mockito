@@ -2,5 +2,5 @@
   if (!collectingData) {
     return;
   }
-  potentiallyUnstubbedInvocations.add(invocationMatcher);
+  unstubbedInvocations.add(invocationMatcher);
 }

@@ -1,0 +1,12 @@
+{
+  runner.run(notifier,new SimpleRunner(){
+    public void run(    RunNotifier notifier){
+      when(mock.simpleMethod()).thenReturn("foo");
+      mock.simpleMethod();
+      notifier.fireTestFailure(null);
+      String loggedInfo=logger.getLoggedInfo();
+      assertEquals("",loggedInfo);
+    }
+  }
+);
+}

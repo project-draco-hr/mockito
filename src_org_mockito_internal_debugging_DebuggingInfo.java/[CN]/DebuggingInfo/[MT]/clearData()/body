@@ -1,5 +1,5 @@
 {
   collectingData=false;
-  potentiallyUnstubbedInvocations.clear();
-  stubbedInvocations.clear();
+  unstubbedInvocations.clear();
+  unusedStubs.clear();
 }

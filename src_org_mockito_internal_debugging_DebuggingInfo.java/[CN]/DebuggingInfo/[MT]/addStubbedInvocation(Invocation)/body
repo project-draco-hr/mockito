@@ -2,12 +2,12 @@
   if (!collectingData) {
     return;
   }
-  Iterator<InvocationMatcher> unstubbedIterator=potentiallyUnstubbedInvocations.iterator();
+  Iterator<InvocationMatcher> unstubbedIterator=unstubbedInvocations.iterator();
   while (unstubbedIterator.hasNext()) {
     InvocationMatcher unstubbed=unstubbedIterator.next();
     if (unstubbed.getInvocation().equals(invocation)) {
       unstubbedIterator.remove();
     }
   }
-  stubbedInvocations.add(invocation);
+  unusedStubs.add(invocation);
 }
