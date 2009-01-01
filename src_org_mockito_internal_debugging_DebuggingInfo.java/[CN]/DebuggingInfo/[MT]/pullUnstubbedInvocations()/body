@@ -1,5 +1,0 @@
-{
-  List<InvocationMatcher> ret=new LinkedList<InvocationMatcher>(unstubbedInvocations);
-  unstubbedInvocations.clear();
-  return ret;
-}

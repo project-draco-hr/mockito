@@ -1,0 +1,3 @@
+{
+  loggedInfo.append(what);
+}

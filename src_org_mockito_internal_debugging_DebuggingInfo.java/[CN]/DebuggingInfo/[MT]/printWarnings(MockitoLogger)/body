@@ -1,4 +1,6 @@
 {
-  WarningsPrinter warningsPrinter=new WarningsPrinter(stubbedInvocations,unstubbedInvocations);
-  warningsPrinter.print(logger);
+  if (hasData()) {
+    WarningsPrinter warningsPrinter=new WarningsPrinter(stubbedInvocations,potentiallyUnstubbedInvocations);
+    warningsPrinter.print(logger);
+  }
 }

@@ -1,0 +1,12 @@
+{
+  final DebuggingInfo debuggingInfo=new ThreadSafeMockingProgress().getDebuggingInfo();
+  runner.run(notifier,new SimpleRunner(){
+    public void run(    RunNotifier notifier){
+      unusedStubbingThatQualifiesForWarning();
+      notifier.fireTestFailure(null);
+      assertTrue(debuggingInfo.hasData());
+    }
+  }
+);
+  assertFalse(debuggingInfo.hasData());
+}

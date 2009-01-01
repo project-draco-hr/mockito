@@ -1,0 +1,8 @@
+{
+  runner.run(notifier,new SimpleRunner(){
+    public void run(    RunNotifier notifier){
+      throw new RunWasCalled();
+    }
+  }
+);
+}
