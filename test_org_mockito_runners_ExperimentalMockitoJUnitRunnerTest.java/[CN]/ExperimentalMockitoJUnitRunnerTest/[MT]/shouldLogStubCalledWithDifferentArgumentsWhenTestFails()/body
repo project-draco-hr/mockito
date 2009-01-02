@@ -4,7 +4,7 @@
       someStubbing();
       callStubbedMethodWithDifferentArgs();
       notifier.fireTestFailure(null);
-      String loggedInfo=logger.getLoggedInfo();
+      String loggedInfo=loggerStub.getLoggedInfo();
       assertThat(loggedInfo,contains("[Mockito] Warning - stubbed method called with different arguments"));
       assertThat(loggedInfo,contains("Stubbed this way:"));
       assertThat(loggedInfo,contains("mock.simpleMethod(789);"));

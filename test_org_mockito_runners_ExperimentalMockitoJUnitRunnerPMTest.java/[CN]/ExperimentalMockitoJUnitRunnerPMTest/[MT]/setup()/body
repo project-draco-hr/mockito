@@ -1,6 +1,5 @@
 {
-  runner=new ExperimentalMockitoJUnitRunnerPMStub();
   loggerStub=new MockitoLoggerStub();
-  ExperimentalMockitoJUnitRunnerPM.logger=loggerStub;
+  runner=new ExperimentalMockitoJUnitRunnerPMStub();
   notifier=new RunNotifier();
 }

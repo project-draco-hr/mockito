@@ -4,7 +4,7 @@
       when(mock.simpleMethod()).thenReturn("foo");
       mock.simpleMethod();
       notifier.fireTestFailure(null);
-      String loggedInfo=logger.getLoggedInfo();
+      String loggedInfo=loggerStub.getLoggedInfo();
       assertEquals("",loggedInfo);
     }
   }

@@ -1,3 +1,0 @@
-{
-  ExperimentalMockitoJUnitRunnerPM.logger=new MockitoLoggerImpl();
-}
