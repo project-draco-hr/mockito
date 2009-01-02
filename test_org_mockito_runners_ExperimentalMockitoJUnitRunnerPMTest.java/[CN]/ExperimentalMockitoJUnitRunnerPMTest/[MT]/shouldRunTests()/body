@@ -1,0 +1,11 @@
+{
+  final StringBuilder sb=new StringBuilder();
+  runner=new ExperimentalMockitoJUnitRunnerPMStub(){
+    protected void runTestBody(    RunNotifier notifier){
+      sb.append("ran test body");
+    }
+  }
+;
+  runner.run(notifier);
+  assertEquals("ran test body",sb.toString());
+}

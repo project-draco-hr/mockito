@@ -1,0 +1,3 @@
+{
+  when(mock.simpleMethod(789)).thenReturn("foo");
+}

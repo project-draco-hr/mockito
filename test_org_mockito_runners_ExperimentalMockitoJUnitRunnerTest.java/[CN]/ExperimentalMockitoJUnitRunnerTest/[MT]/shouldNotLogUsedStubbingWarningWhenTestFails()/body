@@ -1,5 +1,5 @@
 {
-  runner.run(notifier,new SimpleRunner(){
+  runner.run(notifier,new JunitTestBody(){
     public void run(    RunNotifier notifier){
       when(mock.simpleMethod()).thenReturn("foo");
       mock.simpleMethod();

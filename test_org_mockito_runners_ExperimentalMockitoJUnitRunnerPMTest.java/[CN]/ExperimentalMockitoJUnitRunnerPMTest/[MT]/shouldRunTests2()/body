@@ -1,0 +1,9 @@
+{
+  runner=new ExperimentalMockitoJUnitRunnerPMStub(){
+    protected void runTestBody(    RunNotifier notifier){
+      throw new TestBodyWasRan();
+    }
+  }
+;
+  runner.run(notifier);
+}

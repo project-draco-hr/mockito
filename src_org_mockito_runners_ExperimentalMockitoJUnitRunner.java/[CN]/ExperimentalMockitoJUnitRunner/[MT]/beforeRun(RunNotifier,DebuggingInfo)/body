@@ -1,6 +1,4 @@
 {
-  final MockingProgress progress=new ThreadSafeMockingProgress();
-  final DebuggingInfo debuggingInfo=progress.getDebuggingInfo();
   debuggingInfo.collectData();
   RunListener listener=new RunListener(){
     @Override public void testFailure(    Failure failure) throws Exception {
@@ -9,6 +7,4 @@
   }
 ;
   notifier.addListener(listener);
-  littleRunner.run(notifier);
-  debuggingInfo.clearData();
 }

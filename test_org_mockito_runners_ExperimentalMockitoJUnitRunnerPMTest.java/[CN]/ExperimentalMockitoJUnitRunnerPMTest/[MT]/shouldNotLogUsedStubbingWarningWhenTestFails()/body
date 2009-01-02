@@ -1,0 +1,13 @@
+{
+  runner=new ExperimentalMockitoJUnitRunnerPMStub(){
+    protected void runTestBody(    RunNotifier notifier){
+      when(mock.simpleMethod()).thenReturn("foo");
+      mock.simpleMethod();
+      notifier.fireTestFailure(null);
+      String loggedInfo=loggerStub.getLoggedInfo();
+      assertEquals("",loggedInfo);
+    }
+  }
+;
+  runner.run(notifier);
+}

@@ -1,0 +1,7 @@
+{
+  MockingProgress progress=new ThreadSafeMockingProgress();
+  DebuggingInfo debuggingInfo=progress.getDebuggingInfo();
+  beforeRun(notifier,debuggingInfo);
+  junitTestBody.run(notifier);
+  afterRun(debuggingInfo);
+}

@@ -1,10 +1,10 @@
 {
-  runner.run(notifier,new JunitTestBody(){
-    public void run(    RunNotifier notifier){
+  runner=new ExperimentalMockitoJUnitRunnerPMStub(){
+    protected void runTestBody(    RunNotifier notifier){
       someStubbing();
       callStubbedMethodWithDifferentArgs();
       notifier.fireTestFailure(null);
-      String loggedInfo=logger.getLoggedInfo();
+      String loggedInfo=loggerStub.getLoggedInfo();
       assertThat(loggedInfo,contains("[Mockito] Warning - stubbed method called with different arguments"));
       assertThat(loggedInfo,contains("Stubbed this way:"));
       assertThat(loggedInfo,contains("mock.simpleMethod(789);"));
@@ -15,5 +15,6 @@
       assertThat(loggedInfo,notContains(".callStubbedMethodCorrectly("));
     }
   }
-);
+;
+  runner.run(notifier);
 }
