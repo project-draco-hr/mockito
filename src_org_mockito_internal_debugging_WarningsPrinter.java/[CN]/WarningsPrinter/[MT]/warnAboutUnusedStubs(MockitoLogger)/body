@@ -1,5 +1,5 @@
 {
   for (  Invocation i : unusedStubs) {
-    logger.log(join("[Mockito] Warning - this stub was not used:",i,"Here:",i.getStackTrace().getStackTrace()[0],""));
+    logger.log(join("[Mockito] Warning - this stub was not used:",i,"Click here:",i.getStackTrace().getStackTrace()[0],""));
   }
 }

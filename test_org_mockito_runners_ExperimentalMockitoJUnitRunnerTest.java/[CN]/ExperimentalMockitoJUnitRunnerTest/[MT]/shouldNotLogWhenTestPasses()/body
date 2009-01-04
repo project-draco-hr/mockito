@@ -2,10 +2,8 @@
   runner.run(notifier,new JunitTestBody(){
     public void run(    RunNotifier notifier){
       when(mock.simpleMethod()).thenReturn("foo");
-      mock.simpleMethod();
-      notifier.fireTestFailure(null);
-      String loggedInfo=loggerStub.getLoggedInfo();
-      assertEquals("",loggedInfo);
+      notifier.fireTestFinished(null);
+      assertEquals("",loggerStub.getLoggedInfo());
     }
   }
 );

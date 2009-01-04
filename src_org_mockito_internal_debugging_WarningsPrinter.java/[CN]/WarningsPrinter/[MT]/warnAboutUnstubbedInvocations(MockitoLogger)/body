@@ -1,5 +1,5 @@
 {
   for (  InvocationMatcher i : unstubbedInvocations) {
-    logger.log(join("[Mockito] Warning - this method was not stubbed:",i,"Here:",i.getInvocation().getStackTrace().getStackTrace()[0],""));
+    logger.log(join("[Mockito] Warning - this method was not stubbed:",i,"Click here:",i.getInvocation().getStackTrace().getStackTrace()[0],""));
   }
 }
