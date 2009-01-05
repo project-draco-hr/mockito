@@ -1,0 +1,7 @@
+{
+  Invocation unusedStub=new InvocationBuilder().simpleMethod().toInvocation();
+  WarningsPrinter p=new WarningsPrinter(asList(unusedStub),Arrays.<InvocationMatcher>asList());
+  p.print(logger);
+  assertThat(logger.getLoggedInfo(),contains("stub was not used"));
+  assertThat(logger.getLoggedInfo(),contains("simpleMethod()"));
+}

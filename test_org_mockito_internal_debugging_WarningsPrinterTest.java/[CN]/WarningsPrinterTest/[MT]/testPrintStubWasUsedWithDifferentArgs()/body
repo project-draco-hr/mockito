@@ -1,0 +1,11 @@
+{
+  IMethods mock=mock(IMethods.class);
+  Invocation stub=new InvocationBuilder().arg("foo").mock(mock).toInvocation();
+  InvocationMatcher wrongArg=new InvocationBuilder().arg("bar").mock(mock).toInvocationMatcher();
+  WarningsPrinter p=new WarningsPrinter(Arrays.<Invocation>asList(stub),Arrays.<InvocationMatcher>asList(wrongArg));
+  p.print(logger);
+  assertThat(logger.getLoggedInfo(),contains("Stubbed this way"));
+  assertThat(logger.getLoggedInfo(),contains("simpleMethod(\"foo\")"));
+  assertThat(logger.getLoggedInfo(),contains("called with different arguments"));
+  assertThat(logger.getLoggedInfo(),contains("simpleMethod(\"bar\")"));
+}
