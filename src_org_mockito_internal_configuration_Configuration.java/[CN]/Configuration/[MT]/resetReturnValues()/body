@@ -1,3 +1,4 @@
 {
-  returnValues=new DefaultReturnValues();
+  IMockitoConfiguration defaultConfiguration=new DefaultMockitoConfiguration();
+  returnValues=defaultConfiguration.getReturnValues();
 }
