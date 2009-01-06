@@ -1,0 +1,10 @@
+{
+  MockitoConfiguration.overrideReturnValues(new ReturnValues(){
+    public Object valueFor(    InvocationOnMock invocation){
+      return "foo";
+    }
+  }
+);
+  IMethods mock=mock(IMethods.class);
+  assertEquals("foo",mock.simpleMethod());
+}

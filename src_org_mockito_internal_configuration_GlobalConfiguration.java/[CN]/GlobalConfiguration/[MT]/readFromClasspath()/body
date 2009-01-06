@@ -1,0 +1,18 @@
+{
+  Class configClass=null;
+  try {
+    configClass=(Class)Class.forName("org.mockito.MockitoConfiguration");
+  }
+ catch (  ClassNotFoundException e) {
+    return null;
+  }
+  try {
+    return (IMockitoConfiguration)configClass.newInstance();
+  }
+ catch (  ClassCastException e) {
+    throw new RuntimeException("MockitoConfiguration class should implement org.mockito.configuration.IMockitoConfiguration interface.");
+  }
+catch (  Exception e) {
+    throw new RuntimeException("Unable to instantianate MockitoConfiguration class. Does it have a public, no-arg constructor?",e);
+  }
+}
