@@ -6,7 +6,7 @@
   Class<?> type=invocation.getMethod().getReturnType();
   if (ClassImposterizer.INSTANCE.canImposterise(type)) {
     return ClassImposterizer.INSTANCE.imposterise(new MethodInterceptor(){
-      Exception whenCreated=new BecauseThisMethodWasNotStubbed("\nBecause this method was not stubbed:");
+      Exception whenCreated=new BecauseThisMethodWasNotStubbed("\nBecause this method was not stubbed correctly:");
       public Object intercept(      Object obj,      Method method,      Object[] args,      MethodProxy proxy) throws Throwable {
         throw new SmartNullPointerException("\nYou have a NullPointerException here:",whenCreated);
       }

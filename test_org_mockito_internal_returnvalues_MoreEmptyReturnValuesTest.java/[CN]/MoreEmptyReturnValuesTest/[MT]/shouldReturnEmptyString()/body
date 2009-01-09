@@ -1,0 +1,3 @@
+{
+  assertEquals("",rv.returnValueFor(String.class));
+}

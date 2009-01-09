@@ -2,7 +2,7 @@
   final DebuggingInfo debuggingInfo=new ThreadSafeMockingProgress().getDebuggingInfo();
   runner=new ExperimentalMockitoJUnitRunnerPMStub(){
     protected void runTestBody(    RunNotifier notifier){
-      unusedStubbingThatQualifiesForWarning();
+      someUnusedStubbingThatQualifiesForWarning();
       notifier.fireTestFailure(null);
       assertTrue(debuggingInfo.hasData());
     }

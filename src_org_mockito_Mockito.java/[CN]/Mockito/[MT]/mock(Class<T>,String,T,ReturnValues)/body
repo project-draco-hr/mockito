@@ -1,4 +1,5 @@
 {
+  GlobalConfiguration.init();
   MOCKING_PROGRESS.validateState();
   MOCKING_PROGRESS.resetOngoingStubbing();
   return MockUtil.createMock(classToMock,MOCKING_PROGRESS,name,optionalInstance,returnValues);

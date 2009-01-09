@@ -1,5 +1,4 @@
 {
-  runner=spy(runner);
   doNothing().when(runner).runTestBody(notifier);
   runner.run(notifier);
   verify(runner).runTestBody(notifier);

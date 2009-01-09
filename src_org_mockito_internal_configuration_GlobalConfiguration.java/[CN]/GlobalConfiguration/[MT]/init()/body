@@ -1,0 +1,6 @@
+{
+  if (!initialized) {
+    globalConfiguration=readFromClasspath();
+    initialized=true;
+  }
+}

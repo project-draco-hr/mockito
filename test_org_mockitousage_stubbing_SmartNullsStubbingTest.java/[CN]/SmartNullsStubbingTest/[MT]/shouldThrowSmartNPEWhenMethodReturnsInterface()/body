@@ -1,5 +1,5 @@
 {
-  Foo mock=mock(Foo.class,SMART_NULLS);
+  Foo mock=mock(Foo.class,RETURNS_SMART_NULLS);
   Bar bar=mock.getSomeInterface();
   try {
     bar.boo();

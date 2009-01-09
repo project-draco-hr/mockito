@@ -1,4 +1,4 @@
 {
   matcherStack.push(matcher);
-  return new EmptyReturnValues();
+  return new HandyReturnValues();
 }

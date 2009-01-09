@@ -1,5 +1,5 @@
 {
   assertState(!matcherStack.isEmpty(),"No matchers found for And(?).");
   matcherStack.push(new And(popLastArgumentMatchers(2)));
-  return new EmptyReturnValues();
+  return new HandyReturnValues();
 }

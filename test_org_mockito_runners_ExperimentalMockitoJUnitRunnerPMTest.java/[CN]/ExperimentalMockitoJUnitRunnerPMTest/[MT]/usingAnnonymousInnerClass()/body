@@ -1,0 +1,14 @@
+{
+  loggerStub=new MockitoLoggerStub();
+  notifier=new RunNotifier();
+  runner=new ExperimentalMockitoJUnitRunnerPMStub(){
+    protected void runTestBody(    RunNotifier notifier){
+      someUnusedStubbingThatQualifiesForWarning();
+      notifier.fireTestFailure(null);
+    }
+  }
+;
+  runner.run(notifier);
+  String loggedInfo=loggerStub.getLoggedInfo();
+  assertThat(loggedInfo,contains("[Mockito] Warning - this stub was not used"));
+}
