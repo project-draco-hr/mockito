@@ -6,7 +6,8 @@
     return new Object();
   }
  else   if (type.isArray()) {
-    return null;
+    Class<?> componenetType=type.getComponentType();
+    return Array.newInstance(componenetType,0);
   }
   return null;
 }
