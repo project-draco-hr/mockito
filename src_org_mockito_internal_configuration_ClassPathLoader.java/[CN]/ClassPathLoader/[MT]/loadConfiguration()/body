@@ -4,7 +4,7 @@
     configClass=(Class)Class.forName("org.mockito.MockitoConfiguration");
   }
  catch (  ClassNotFoundException e) {
-    return defaultConfiguration;
+    return null;
   }
   try {
     return (IMockitoConfiguration)configClass.newInstance();

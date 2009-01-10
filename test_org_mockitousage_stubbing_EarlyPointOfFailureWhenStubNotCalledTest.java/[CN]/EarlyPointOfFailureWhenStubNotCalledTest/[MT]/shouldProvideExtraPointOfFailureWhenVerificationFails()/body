@@ -1,4 +1,0 @@
-{
-  when(mock.simpleMethod()).thenReturn("foo");
-  verify(mock).differentMethod();
-}

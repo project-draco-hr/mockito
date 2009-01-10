@@ -1,5 +1,0 @@
-{
-  when(mock.simpleMethod()).thenReturn("foo");
-  String result=getFromSimpleMethod();
-  assertEquals("foo",result);
-}

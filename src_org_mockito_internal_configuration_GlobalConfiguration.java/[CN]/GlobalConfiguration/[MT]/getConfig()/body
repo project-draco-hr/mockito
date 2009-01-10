@@ -5,6 +5,11 @@
     }
   }
 ;
-  IMockitoConfiguration config=new ClassPathLoader().loadConfiguration(defaultConfiguration);
-  return config;
+  IMockitoConfiguration config=new ClassPathLoader().loadConfiguration();
+  if (config != null) {
+    return config;
+  }
+ else {
+    return defaultConfiguration;
+  }
 }
