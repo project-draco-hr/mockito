@@ -1,4 +1,5 @@
 {
+  GlobalConfiguration.validate();
   if (verificationMode != null) {
     verificationMode=null;
     reporter.unfinishedVerificationException();

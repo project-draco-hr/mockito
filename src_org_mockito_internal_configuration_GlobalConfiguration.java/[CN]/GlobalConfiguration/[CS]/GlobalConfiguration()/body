@@ -1,0 +1,5 @@
+{
+  if (globalConfiguration.get() == null) {
+    globalConfiguration.set(getConfig());
+  }
+}

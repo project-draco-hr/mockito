@@ -1,6 +1,10 @@
 {
-  if (!initialized) {
-    throw new IllegalStateException("Something went wrong. GlobalConfiguration should be initialised by now.\n" + "Please report issue at http://mockito.org or write an email to mockito@googlegroups.com");
+  IMockitoConfiguration defaultConfiguration=new IMockitoConfiguration(){
+    public ReturnValues getReturnValues(){
+      return Configuration.instance().getReturnValues();
+    }
   }
-  return globalConfiguration;
+;
+  IMockitoConfiguration config=new ClassPathLoader().loadConfiguration(defaultConfiguration);
+  return config;
 }

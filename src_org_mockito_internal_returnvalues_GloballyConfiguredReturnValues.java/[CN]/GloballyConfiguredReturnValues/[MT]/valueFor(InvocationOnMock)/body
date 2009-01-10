@@ -1,6 +1,3 @@
 {
-  if (GlobalConfiguration.getConfig() != null) {
-    return GlobalConfiguration.getConfig().getReturnValues().valueFor(invocation);
-  }
-  return Configuration.instance().getReturnValues().valueFor(invocation);
+  return new GlobalConfiguration().getReturnValues().valueFor(invocation);
 }
