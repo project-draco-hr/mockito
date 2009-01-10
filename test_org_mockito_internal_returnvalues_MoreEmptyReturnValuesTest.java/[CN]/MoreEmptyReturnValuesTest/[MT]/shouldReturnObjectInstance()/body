@@ -1,3 +1,0 @@
-{
-  assertNotNull(rv.returnValueFor(Object.class));
-}
