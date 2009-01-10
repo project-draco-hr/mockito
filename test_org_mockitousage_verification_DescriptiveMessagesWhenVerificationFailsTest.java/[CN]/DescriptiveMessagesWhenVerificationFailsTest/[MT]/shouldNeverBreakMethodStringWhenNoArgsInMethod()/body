@@ -1,0 +1,9 @@
+{
+  try {
+    verify(veeeeeeeeeeeeeeeeeeeeeeeerylongNameMock).simpleMethod();
+    fail();
+  }
+ catch (  WantedButNotInvoked e) {
+    assertThat(e,messageContains("veeeeeeeeeeeeeeeeeeeeeeeerylongNameMock.simpleMethod()"));
+  }
+}

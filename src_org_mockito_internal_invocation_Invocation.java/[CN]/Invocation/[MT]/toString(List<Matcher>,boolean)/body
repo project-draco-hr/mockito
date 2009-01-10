@@ -1,7 +1,7 @@
 {
   String method=qualifiedMethodName();
   String invocation=method + getArgumentsLine(matchers);
-  if (forceMultiline || invocation.length() > MAX_LINE_LENGTH) {
+  if (forceMultiline || (!matchers.isEmpty() && invocation.length() > MAX_LINE_LENGTH)) {
     return method + getArgumentsBlock(matchers);
   }
  else {
