@@ -1,0 +1,10 @@
+{
+  List real=Arrays.asList(new String[]{"first","second"});
+  try {
+    spy(real);
+    fail();
+  }
+ catch (  MockitoException e) {
+    assertThat(e,messageContains("Most likely it is a private class that is not visible by Mockito"));
+  }
+}
