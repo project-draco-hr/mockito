@@ -1,3 +1,0 @@
-{
-  assertTrue(mock.arrayReturningMethod().length == 0);
-}
