@@ -1,0 +1,5 @@
+{
+  when(mock.objectArgMethod(any(String.class))).thenReturn("string");
+  assertEquals("string",mock.objectArgMethod("foo"));
+  assertEquals(null,mock.objectArgMethod(new Object()));
+}
