@@ -1,5 +1,0 @@
-{
-  loggerStub=new MockitoLoggerStub();
-  notifier=new RunNotifier();
-  runner=new ExperimentalMockitoJUnitRunner(this.getClass(),loggerStub);
-}

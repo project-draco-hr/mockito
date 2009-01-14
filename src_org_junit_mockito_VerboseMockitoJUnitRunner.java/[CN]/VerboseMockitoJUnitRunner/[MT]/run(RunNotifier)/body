@@ -1,7 +1,7 @@
 {
   this.run(notifier,new JunitTestBody(){
     public void run(    RunNotifier notifier){
-      ExperimentalMockitoJUnitRunner.super.run(notifier);
+      VerboseMockitoJUnitRunner.super.run(notifier);
     }
   }
 );
