@@ -1,3 +1,0 @@
-{
-  this(klass,new MockitoLoggerImpl());
-}
