@@ -1,0 +1,8 @@
+{
+  if (annotation instanceof Mock || annotation instanceof org.mockito.MockitoAnnotations.Mock) {
+    return Mockito.mock(field.getType(),field.getName());
+  }
+ else {
+    return null;
+  }
+}

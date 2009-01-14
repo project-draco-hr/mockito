@@ -1,6 +1,6 @@
 {
-  IMockitoConfiguration defaultConfiguration=new IMockitoConfiguration(){
-    public ReturnValues getReturnValues(){
+  IMockitoConfiguration defaultConfiguration=new DefaultMockitoConfiguration(){
+    @Override public ReturnValues getReturnValues(){
       return Configuration.instance().getReturnValues();
     }
   }

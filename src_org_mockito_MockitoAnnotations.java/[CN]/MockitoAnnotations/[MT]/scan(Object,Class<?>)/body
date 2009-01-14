@@ -1,17 +1,21 @@
 {
+  AnnotationEngine annotationEngine=new GlobalConfiguration().getAnnotationEngine();
   Field[] fields=clazz.getDeclaredFields();
-  for (  Field f : fields) {
-    if (f.isAnnotationPresent(org.mockito.Mock.class) || f.isAnnotationPresent(Mock.class)) {
-      boolean wasAccessible=f.isAccessible();
-      f.setAccessible(true);
-      try {
-        f.set(testClass,Mockito.mock(f.getType(),f.getName()));
-      }
- catch (      IllegalAccessException e) {
-        throw new MockitoException("Problems initiating mocks annotated with @Mock",e);
-      }
+  for (  Field field : fields) {
+    for (    Annotation annotation : field.getAnnotations()) {
+      Object mock=annotationEngine.createMockFor(annotation,field);
+      if (mock != null) {
+        boolean wasAccessible=field.isAccessible();
+        field.setAccessible(true);
+        try {
+          field.set(testClass,mock);
+        }
+ catch (        IllegalAccessException e) {
+          throw new MockitoException("Problems initiating mocks annotated with " + annotation,e);
+        }
  finally {
-        f.setAccessible(wasAccessible);
+          field.setAccessible(wasAccessible);
+        }
       }
     }
   }
