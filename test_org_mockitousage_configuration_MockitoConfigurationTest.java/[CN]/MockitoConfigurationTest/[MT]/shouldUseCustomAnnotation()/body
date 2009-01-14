@@ -1,0 +1,4 @@
+{
+  assertEquals("SmartMock should return empty String by default","",smartMock.simpleMethod(1));
+  verify(smartMock).simpleMethod(1);
+}

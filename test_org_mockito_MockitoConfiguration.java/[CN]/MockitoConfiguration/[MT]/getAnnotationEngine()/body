@@ -1,0 +1,13 @@
+{
+  return new DefaultAnnotationEngine(){
+    @Override public Object createMockFor(    Annotation annotation,    Field field){
+      if (annotation instanceof SmartMock) {
+        return Mockito.mock(field.getType(),Mockito.RETURNS_SMART_NULLS);
+      }
+ else {
+        return super.createMockFor(annotation,field);
+      }
+    }
+  }
+;
+}
