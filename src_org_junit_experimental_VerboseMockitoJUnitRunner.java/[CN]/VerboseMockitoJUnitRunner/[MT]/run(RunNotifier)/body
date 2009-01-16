@@ -1,0 +1,8 @@
+{
+  this.run(notifier,new JunitTestBody(){
+    public void run(    RunNotifier notifier){
+      VerboseMockitoJUnitRunner.super.run(notifier);
+    }
+  }
+);
+}
