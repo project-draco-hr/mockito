@@ -1,4 +1,0 @@
-{
-  super(klass);
-  this.logger=logger;
-}
