@@ -1,8 +1,13 @@
 {
   if (Invocation.isToString(invocation)) {
     Object mock=invocation.getMock();
-    String mockDescription="Mock for " + ClassNameFinder.classNameForMock(mock) + ", hashCode: "+ mock.hashCode();
-    return mockDescription;
+    MockName name=MockUtil.getMockName(mock);
+    if (name.isSurrogate()) {
+      return "Mock for " + ClassNameFinder.classNameForMock(mock) + ", hashCode: "+ mock.hashCode();
+    }
+ else {
+      return name.toString();
+    }
   }
   Class<?> returnType=invocation.getMethod().getReturnType();
   return returnValueFor(returnType);

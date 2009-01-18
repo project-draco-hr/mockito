@@ -1,0 +1,6 @@
+{
+  IMethods mock=mock(IMethods.class,"mockie");
+  IMethods mockTwo=mock(IMethods.class);
+  assertContains("Mock for IMethods","" + mockTwo);
+  assertEquals("mockie","" + mock);
+}

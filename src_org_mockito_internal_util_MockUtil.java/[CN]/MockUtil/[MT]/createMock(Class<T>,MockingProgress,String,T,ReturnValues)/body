@@ -1,9 +1,6 @@
 {
   validateType(classToMock);
-  if (mockName == null) {
-    mockName=toInstanceName(classToMock);
-  }
-  MockHandler<T> mockHandler=new MockHandler<T>(mockName,progress,new MatchersBinder(),returnValues);
+  MockHandler<T> mockHandler=new MockHandler<T>(new MockName(mockName,classToMock),progress,new MatchersBinder(),returnValues);
   MethodInterceptorFilter<MockHandler<T>> filter=new MethodInterceptorFilter<MockHandler<T>>(classToMock,mockHandler);
   T mock=(T)ClassImposterizer.INSTANCE.imposterise(filter,classToMock);
   filter.setInstance(optionalInstance != null ? optionalInstance : mock);

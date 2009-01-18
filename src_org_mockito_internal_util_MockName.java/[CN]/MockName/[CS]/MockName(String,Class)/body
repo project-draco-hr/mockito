@@ -1,0 +1,9 @@
+{
+  if (mockName == null) {
+    this.mockName=toInstanceName(classToMock);
+    this.surrogate=true;
+  }
+ else {
+    this.mockName=mockName;
+  }
+}

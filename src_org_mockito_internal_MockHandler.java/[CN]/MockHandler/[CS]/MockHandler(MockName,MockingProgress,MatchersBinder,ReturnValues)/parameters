@@ -1,4 +1,4 @@
-String mockName
+MockName mockName
 MockingProgress mockingProgress
 MatchersBinder matchersBinder
 ReturnValues returnValues
