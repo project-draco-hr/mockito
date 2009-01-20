@@ -1,0 +1,8 @@
+def get_svn_config_dir():
+    "Return user's Subversion configuration directory."
+    try:
+        from win32com.shell.shell import SHGetFolderPath
+        import win32com.shell.shellcon
+    except ImportError:
+        return os.path.expanduser('~/.subversion')
+    return os.path.join(SHGetFolderPath(0, win32com.shell.shellcon.CSIDL_APPDATA, 0, 0).encode('utf-8'), 'Subversion')
