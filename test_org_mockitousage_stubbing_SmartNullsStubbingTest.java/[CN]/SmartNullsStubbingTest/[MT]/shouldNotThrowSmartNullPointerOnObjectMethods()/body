@@ -1,0 +1,6 @@
+{
+  Object smartNull=mock.objectReturningMethod();
+  smartNull.toString();
+  smartNull.hashCode();
+  smartNull.equals(null);
+}
