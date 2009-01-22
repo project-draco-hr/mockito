@@ -5,18 +5,7 @@
   }
   Class<?> type=invocation.getMethod().getReturnType();
   if (ClassImposterizer.INSTANCE.canImposterise(type)) {
-    return ClassImposterizer.INSTANCE.imposterise(new MethodInterceptorFilter<MockAwareInterceptor>(type,new MockAwareInterceptor(){
-      Exception whenCreated=new BecauseThisMethodWasNotStubbed("\nBecause this method was not stubbed correctly:");
-      public Object intercept(      Object proxy,      Method method,      Object[] args,      MethodProxy methodProxy) throws Throwable {
-        if (Invocation.isToString(method)) {
-          return "SmartNull returned by " + invocation.getMethod().getName() + "() method on mock";
-        }
-        throw new SmartNullPointerException("\nYou have a NullPointerException here:",whenCreated);
-      }
-      public void setInstance(      Object mock){
-      }
-    }
-),type);
+    return ClassImposterizer.INSTANCE.imposterise(new ThrowingInterceptor(invocation),type);
   }
   return null;
 }
