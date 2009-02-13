@@ -1,7 +1,7 @@
 {
   unfinishedVerificationHere();
   try {
-    unfinishedVerificationHere();
+    mock(IMethods.class);
     fail();
   }
  catch (  UnfinishedVerificationException e) {
