@@ -1,5 +1,8 @@
 {
-  VerificationMode temp=verificationMode;
+  if (verificationMode == null) {
+    return null;
+  }
+  VerificationMode temp=verificationMode.getObject();
   verificationMode=null;
   return temp;
 }

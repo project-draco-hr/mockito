@@ -1,0 +1,4 @@
+{
+  UnfinishedVerificationException exception=new UnfinishedVerificationException(join("Missing method call for verify(mock) method"," -> Located at " + location,"","Example of correct verification:","    verify(mock).doSomething()","Also make sure the method is not final - you cannot verify final methods.",""));
+  throw exception;
+}

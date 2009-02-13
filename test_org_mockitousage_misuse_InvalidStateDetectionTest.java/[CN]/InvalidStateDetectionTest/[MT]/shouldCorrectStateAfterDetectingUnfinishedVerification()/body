@@ -1,6 +1,6 @@
 {
   mock.simpleMethod();
-  verify(mock);
+  unfinishedVerificationHere();
   try {
     verify(mock).simpleMethod();
     fail();

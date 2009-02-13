@@ -1,5 +1,5 @@
 {
   validateState();
   resetOngoingStubbing();
-  verificationMode=(VerificationMode)verify;
+  verificationMode=new Localized(verify);
 }

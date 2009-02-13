@@ -1,0 +1,3 @@
+{
+  return this.stackTrace[0].toString();
+}

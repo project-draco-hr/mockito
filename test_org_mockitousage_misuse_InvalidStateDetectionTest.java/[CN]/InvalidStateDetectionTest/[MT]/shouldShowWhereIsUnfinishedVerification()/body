@@ -1,0 +1,10 @@
+{
+  unfinishedVerificationHere();
+  try {
+    unfinishedVerificationHere();
+    fail();
+  }
+ catch (  UnfinishedVerificationException e) {
+    assertContains("InvalidStateDetectionTest.unfinishedVerificationHere",e.getMessage());
+  }
+}
