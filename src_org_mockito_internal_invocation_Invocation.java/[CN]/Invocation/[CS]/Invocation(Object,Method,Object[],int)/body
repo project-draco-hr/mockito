@@ -3,5 +3,14 @@
   this.method=method;
   this.arguments=expandVarArgs(method.isVarArgs(),args);
   this.sequenceNumber=sequenceNumber;
-  this.stackTrace=new MockitoException("");
+  this.stackTrace=new HasStackTrace(){
+    private Location location=new Location();
+    public StackTraceElement[] getStackTrace(){
+      return location.getStackTrace();
+    }
+    public void setStackTrace(    StackTraceElement[] stackTrace){
+      throw new RuntimeException("Setting stack trace is not supported");
+    }
+  }
+;
 }

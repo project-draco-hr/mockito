@@ -1,6 +1,4 @@
 {
   this.object=object;
-  StackTraceElement[] stackTrace=Thread.currentThread().getStackTrace();
-  StackTraceFilter filter=new StackTraceFilter();
-  this.stackTrace=filter.filterStackTrace(stackTrace);
+  location=new Location();
 }
