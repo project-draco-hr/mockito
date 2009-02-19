@@ -1,5 +1,5 @@
 {
   StackTraceElement[] stackTrace=Thread.currentThread().getStackTrace();
   StackTraceFilter filter=new StackTraceFilter();
-  this.stackTrace=filter.filterStackTrace(stackTrace);
+  this.firstTraceElement=filter.filterStackTrace(stackTrace)[0];
 }
