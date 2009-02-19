@@ -1,0 +1,5 @@
+{
+  verify(mock);
+  reset(mock);
+  mock(IMethods.class);
+}

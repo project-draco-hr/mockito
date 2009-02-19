@@ -1,0 +1,7 @@
+{
+  MockHandler<T> oldMockHandler=(MockHandler<T>)getMockHandler(mock);
+  MockHandler<T> newMockHandler=new MockHandler<T>(oldMockHandler.getMockName(),progress,new MatchersBinder(),returnValues);
+  MethodInterceptorFilter<MockHandler<T>> newFilter=new MethodInterceptorFilter<MockHandler<T>>(Object.class,newMockHandler);
+  newFilter.setInstance(mock);
+  ((Factory)mock).setCallback(0,newFilter);
+}

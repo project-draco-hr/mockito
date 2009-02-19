@@ -1,0 +1,5 @@
+{
+  mock.simpleMethod(1);
+  reset(mock);
+  verifyZeroInteractions(mock);
+}

@@ -1,0 +1,5 @@
+{
+  anyInt();
+  reset(mock);
+  mock(IMethods.class);
+}
