@@ -6,6 +6,6 @@
   }
  catch (  ArgumentsAreDifferent e) {
     assertThat(e,messageContains("matches(\"burrito from Exmouth\")"));
-    assertThat(e,causeMessageContains("\"foo\""));
+    assertThat(e,messageContains("\"foo\""));
   }
 }

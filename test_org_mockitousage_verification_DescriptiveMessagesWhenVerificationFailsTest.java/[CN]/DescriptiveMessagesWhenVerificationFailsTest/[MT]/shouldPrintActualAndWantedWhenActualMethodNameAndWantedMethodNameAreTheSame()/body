@@ -6,6 +6,6 @@
   }
  catch (  ArgumentsAreDifferent e) {
     assertThat(e,messageContains("simpleMethod(10)"));
-    assertThat(e,causeMessageContains("simpleMethod()"));
+    assertThat(e,messageContains("simpleMethod()"));
   }
 }

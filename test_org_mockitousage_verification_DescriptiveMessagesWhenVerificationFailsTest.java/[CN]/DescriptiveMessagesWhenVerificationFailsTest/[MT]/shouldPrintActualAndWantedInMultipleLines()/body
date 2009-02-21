@@ -5,10 +5,9 @@
     fail();
   }
  catch (  ArgumentsAreDifferent e) {
-    String expected="\n" + "Argument(s) are different! Wanted:" + "\n"+ "iMethods.varargs("+ "\n"+ "    \"x\","+ "\n"+ "    \"y\","+ "\n"+ "    \"z\""+ "\n"+ ");";
-    assertEquals(expected,e.getMessage());
-    assertEquals(e.getCause().getClass(),ActualArgumentsAreDifferent.class);
-    String expectedCause="\n" + "Actual invocation has different arguments:" + "\n"+ "iMethods.varargs("+ "\n"+ "    \"this is very long string\","+ "\n"+ "    \"this is another very long string\""+ "\n"+ ");";
-    assertEquals(expectedCause,e.getCause().getMessage());
+    String wanted="\n" + "Argument(s) are different! Wanted:" + "\n"+ "iMethods.varargs("+ "\n"+ "    \"x\","+ "\n"+ "    \"y\","+ "\n"+ "    \"z\""+ "\n"+ ");";
+    assertContains(wanted,e.getMessage());
+    String actual="\n" + "Actual invocation has different arguments:" + "\n"+ "iMethods.varargs("+ "\n"+ "    \"this is very long string\","+ "\n"+ "    \"this is another very long string\""+ "\n"+ ");";
+    assertContains(actual,e.getMessage());
   }
 }

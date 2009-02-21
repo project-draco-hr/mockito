@@ -1,10 +1,9 @@
 {
-  ActualArgumentsAreDifferent cause=new ActualArgumentsAreDifferent(join("Actual invocation has different arguments:",actual.toString()));
-  cause.setStackTrace(actualStackTrace.getStackTrace());
+  String message=join("Argument(s) are different! Wanted:",wanted.toString(),"-> at " + new Location(),"Actual invocation has different arguments:",actual.toString(),"-> at " + actualStackTrace.getStackTrace()[0],"");
   if (JUnitTool.hasJUnit()) {
-    throw JUnitTool.createArgumentsAreDifferentException(join("Argument(s) are different! Wanted:",wanted.toString()),cause,wanted.toString(),actual.toString());
+    throw JUnitTool.createArgumentsAreDifferentException(message,wanted.toString(),actual.toString());
   }
  else {
-    throw new ArgumentsAreDifferent(join("Argument(s) are different! Wanted:",wanted.toString()),cause);
+    throw new ArgumentsAreDifferent(message);
   }
 }

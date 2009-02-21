@@ -5,8 +5,7 @@
     fail();
   }
  catch (  AssertionError e) {
-    assertThat(e,hasMethodInStackTraceAt(0,"verifySimpleMethodOnAMock"));
-    assertThat(e,hasMethodInStackTraceAt(1,"shouldShowActualInvocationAsExceptionCause"));
-    assertThat(e.getCause(),hasMethodInStackTraceAt(0,"simpleMethodOnAMock"));
+    String expected="\nArgument(s) are different! Wanted:" + "\niMethods.simpleMethod();" + "\n-> at org.mockitousage.stacktrace.StackTrackeChangingTest.verifySimpleMethodOnAMock(StackTrackeChangingTest.java:29)"+ "\nActual invocation has different arguments:"+ "\niMethods.simpleMethod(\"blah\");"+ "\n-> at org.mockitousage.stacktrace.StackTrackeChangingTest.simpleMethodOnAMock(StackTrackeChangingTest.java:25)"+ "\n";
+    assertEquals(expected,e.getMessage());
   }
 }

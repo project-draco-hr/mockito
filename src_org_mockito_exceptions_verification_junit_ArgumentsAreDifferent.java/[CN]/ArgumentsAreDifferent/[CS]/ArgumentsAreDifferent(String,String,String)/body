@@ -4,7 +4,4 @@
   unfilteredStackTrace=getStackTrace();
   StackTraceFilter filter=new StackTraceFilter();
   filter.filterStackTrace(this);
-  this.initCause(cause);
-  CommonStackTraceRemover remover=new CommonStackTraceRemover();
-  remover.remove(this,Arrays.asList(cause.getStackTrace()));
 }

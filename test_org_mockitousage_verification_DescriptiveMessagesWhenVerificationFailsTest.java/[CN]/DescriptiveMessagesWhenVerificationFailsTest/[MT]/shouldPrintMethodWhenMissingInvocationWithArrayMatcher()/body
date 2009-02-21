@@ -6,6 +6,6 @@
   }
  catch (  ArgumentsAreDifferent e) {
     assertThat(e,messageContains("[false, false, false]"));
-    assertThat(e,causeMessageContains("[true, false, false]"));
+    assertThat(e,messageContains("[true, false, false]"));
   }
 }

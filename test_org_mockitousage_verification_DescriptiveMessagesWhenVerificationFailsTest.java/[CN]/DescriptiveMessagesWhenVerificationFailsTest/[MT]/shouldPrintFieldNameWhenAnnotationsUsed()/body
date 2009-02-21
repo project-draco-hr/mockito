@@ -6,6 +6,6 @@
   }
  catch (  ArgumentsAreDifferent e) {
     assertThat(e,messageContains("iHavefunkyName.simpleMethod(20)"));
-    assertThat(e,causeMessageContains("iHavefunkyName.simpleMethod(10)"));
+    assertThat(e,messageContains("iHavefunkyName.simpleMethod(10)"));
   }
 }

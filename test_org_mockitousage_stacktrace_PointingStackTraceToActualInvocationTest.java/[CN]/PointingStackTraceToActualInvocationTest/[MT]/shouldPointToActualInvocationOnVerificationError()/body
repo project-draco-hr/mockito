@@ -1,9 +1,0 @@
-{
-  try {
-    verify(mock).simpleMethod(999);
-    fail();
-  }
- catch (  AssertionError e) {
-    assertThat(e.getCause(),hasFirstMethodInStackTrace("first"));
-  }
-}
