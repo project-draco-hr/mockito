@@ -1,8 +1,0 @@
-{
-  mock=Mockito.mock(IMethods.class);
-  mockTwo=Mockito.mock(IMethods.class);
-  firstChunk();
-  secondChunk();
-  thirdChunk();
-  fourthChunk();
-}
