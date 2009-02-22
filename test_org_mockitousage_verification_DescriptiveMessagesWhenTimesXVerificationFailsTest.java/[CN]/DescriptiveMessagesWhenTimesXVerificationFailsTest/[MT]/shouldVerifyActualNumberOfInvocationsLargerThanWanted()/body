@@ -9,10 +9,8 @@
     fail();
   }
  catch (  TooManyActualInvocations e) {
-    String expected="\n" + "linkedList.clear();" + "\n"+ "Wanted 1 time but was 4";
-    assertEquals(expected,e.getMessage());
-    assertEquals(UndesiredInvocation.class,e.getCause().getClass());
-    String expectedCause="\n" + "Undesired invocation:";
-    assertEquals(expectedCause,e.getCause().getMessage());
+    assertThat(e,messageContains("mock.clear();"));
+    assertThat(e,messageContains("Wanted 1 time"));
+    assertThat(e,messageContains("was 4"));
   }
 }

@@ -1,4 +1,4 @@
 {
-  TooLittleInvocations cause=createTooLittleInvocationsCause(lastActualInvocationStackTrace);
-  throw new TooLittleActualInvocations(join(wanted.toString(),"Wanted " + pluralize(wantedCount) + " but was "+ actualCount),cause);
+  String ending=(lastActualInvocationStackTrace != null) ? "-> at " + lastActualInvocationStackTrace.getStackTrace()[0] + "\n" : "\n";
+  throw new TooLittleActualInvocations(join(wanted.toString(),"Wanted " + pluralize(wantedCount) + ":","-> at " + new Location(),"But was " + actualCount + ":",ending));
 }

@@ -1,3 +1,4 @@
 {
+  mock.simpleMethod("blah");
   verify(mock).simpleMethod();
 }
