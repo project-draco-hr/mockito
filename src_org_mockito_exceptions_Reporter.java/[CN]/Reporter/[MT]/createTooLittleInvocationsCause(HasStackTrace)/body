@@ -1,8 +1,0 @@
-{
-  TooLittleInvocations cause=null;
-  if (lastActualInvocationStackTrace != null) {
-    cause=new TooLittleInvocations(join("Too little invocations:"));
-    cause.setStackTrace(lastActualInvocationStackTrace.getStackTrace());
-  }
-  return cause;
-}

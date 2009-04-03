@@ -1,4 +1,0 @@
-{
-  String message=createTooLittleInvocationsMessage(wantedCount,actualCount,wanted,lastActualStackTrace);
-  throw new VerifcationInOrderFailure(join("Verification in order failure:" + message));
-}

@@ -1,0 +1,4 @@
+{
+  this.wantedCount=wantedCount;
+  this.actualCount=actualCount;
+}

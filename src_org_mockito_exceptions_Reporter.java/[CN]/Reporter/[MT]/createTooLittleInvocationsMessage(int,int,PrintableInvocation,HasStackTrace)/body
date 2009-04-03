@@ -1,5 +1,0 @@
-{
-  String ending=(lastActualStackTrace != null) ? "-> at " + lastActualStackTrace.getStackTrace()[0] + "\n" : "\n";
-  String message=join(wanted.toString(),"Wanted " + pluralize(wantedCount) + ":","-> at " + new Location(),"But was " + pluralize(actualCount) + ":",ending);
-  return message;
-}
