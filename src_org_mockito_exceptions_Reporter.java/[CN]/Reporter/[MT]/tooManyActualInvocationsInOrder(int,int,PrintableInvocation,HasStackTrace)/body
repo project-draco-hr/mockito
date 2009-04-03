@@ -1,4 +1,4 @@
 {
-  UndesiredInvocation cause=createUndesiredInvocationCause(firstUndesired);
-  throw new VerifcationInOrderFailure(join("Verification in order failure",wanted.toString(),"Wanted " + pluralize(wantedCount) + " but was "+ actualCount),cause);
+  String message=createTooManyInvocationsMessage(wantedCount,actualCount,wanted,firstUndesired);
+  throw new VerifcationInOrderFailure(join("Verification in order failure:" + message));
 }

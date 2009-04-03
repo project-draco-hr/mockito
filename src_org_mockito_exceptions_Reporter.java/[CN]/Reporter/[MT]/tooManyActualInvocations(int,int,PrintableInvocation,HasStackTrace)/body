@@ -1,3 +1,4 @@
 {
-  throw new TooManyActualInvocations(join(wanted.toString(),"Wanted " + pluralize(wantedCount) + ":","-> at " + new Location(),"but was " + pluralize(actualCount) + ". Undesired invocation:","-> at " + firstUndesired.getStackTrace()[0],""));
+  String message=createTooManyInvocationsMessage(wantedCount,actualCount,wanted,firstUndesired);
+  throw new TooManyActualInvocations(message);
 }
