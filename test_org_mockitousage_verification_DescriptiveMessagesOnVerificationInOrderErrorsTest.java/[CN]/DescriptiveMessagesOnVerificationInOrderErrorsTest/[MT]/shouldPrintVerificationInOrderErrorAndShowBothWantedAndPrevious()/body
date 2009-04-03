@@ -5,7 +5,7 @@
     inOrder.verify(one,atLeastOnce()).simpleMethod(11);
     fail();
   }
- catch (  VerifcationInOrderFailure e) {
+ catch (  VerificationInOrderFailure e) {
     String expected="\n" + "Verification in order failure" + "\n"+ "Wanted but not invoked:"+ "\n"+ "iMethods.simpleMethod(11);"+ "\n"+ "-> at ";
     assertContains(expected,e.getMessage());
     String expectedCause="\n" + "Wanted anywhere AFTER following interaction:" + "\n"+ "iMethods.simpleMethod(2);"+ "\n"+ "-> at ";

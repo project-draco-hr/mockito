@@ -3,7 +3,7 @@
     inOrder.verify(mock,times(0)).simpleMethod(anyInt());
     fail();
   }
- catch (  VerifcationInOrderFailure e) {
+ catch (  VerificationInOrderFailure e) {
     assertContains("first(",e.getMessage());
   }
 }

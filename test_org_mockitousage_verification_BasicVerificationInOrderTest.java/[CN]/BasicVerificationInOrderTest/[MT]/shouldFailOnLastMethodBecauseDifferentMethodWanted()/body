@@ -7,6 +7,6 @@
     inOrder.verify(mockOne).oneArg(false);
     fail();
   }
- catch (  VerifcationInOrderFailure e) {
+ catch (  VerificationInOrderFailure e) {
   }
 }

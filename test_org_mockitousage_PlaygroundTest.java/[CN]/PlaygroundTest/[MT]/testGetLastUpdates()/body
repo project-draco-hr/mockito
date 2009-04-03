@@ -1,0 +1,4 @@
+{
+  mock=Mockito.mock(IMethods.class);
+  mock.simpleMethod();
+}

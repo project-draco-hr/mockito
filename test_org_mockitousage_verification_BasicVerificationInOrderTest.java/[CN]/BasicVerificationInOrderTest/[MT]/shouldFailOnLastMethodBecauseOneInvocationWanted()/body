@@ -7,6 +7,6 @@
     inOrder.verify(mockOne,times(0)).simpleMethod(4);
     fail();
   }
- catch (  VerifcationInOrderFailure e) {
+ catch (  VerificationInOrderFailure e) {
   }
 }

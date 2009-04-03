@@ -7,6 +7,6 @@
     inOrder.verify(spy).add("one");
     fail();
   }
- catch (  VerifcationInOrderFailure f) {
+ catch (  VerificationInOrderFailure f) {
   }
 }

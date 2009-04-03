@@ -1,0 +1,4 @@
+{
+  mock.simpleMethod();
+  verify(mock,atLeast(2)).simpleMethod();
+}

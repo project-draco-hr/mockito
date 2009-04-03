@@ -7,7 +7,7 @@
     inOrder.verify(mock).oneArg(true);
     fail();
   }
- catch (  VerifcationInOrderFailure e) {
+ catch (  VerificationInOrderFailure e) {
     assertThat(e,hasFirstMethodInStackTrace("shouldFilterStacktraceWhenVerifyingInOrder"));
   }
 }

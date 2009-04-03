@@ -1,4 +1,4 @@
 {
   String message=createTooManyInvocationsMessage(wantedCount,actualCount,wanted,firstUndesired);
-  throw new VerifcationInOrderFailure(join("Verification in order failure:" + message));
+  throw new VerificationInOrderFailure(join("Verification in order failure:" + message));
 }

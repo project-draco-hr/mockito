@@ -5,7 +5,7 @@
     inOrder.verify(mockTwo,times(3)).simpleMethod(999);
     fail();
   }
- catch (  VerifcationInOrderFailure e) {
+ catch (  VerificationInOrderFailure e) {
     assertContains("second(",e.getMessage());
   }
 }

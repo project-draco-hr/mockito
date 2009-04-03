@@ -4,7 +4,7 @@
     inOrder.verify(mockTwo).simpleMethod(999);
     fail();
   }
- catch (  VerifcationInOrderFailure e) {
+ catch (  VerificationInOrderFailure e) {
     assertContains("third(",e.getMessage());
   }
 }

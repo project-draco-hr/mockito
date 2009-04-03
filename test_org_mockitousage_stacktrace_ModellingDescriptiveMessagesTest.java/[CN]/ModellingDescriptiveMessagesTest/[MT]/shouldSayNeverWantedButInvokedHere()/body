@@ -1,0 +1,4 @@
+{
+  mock.otherMethod();
+  verify(mock,never()).otherMethod();
+}

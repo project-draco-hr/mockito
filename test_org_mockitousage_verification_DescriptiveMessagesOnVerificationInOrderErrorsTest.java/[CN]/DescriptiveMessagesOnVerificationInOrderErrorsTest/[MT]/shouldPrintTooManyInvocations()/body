@@ -5,7 +5,7 @@
     inOrder.verify(two,times(1)).simpleMethod(2);
     fail();
   }
- catch (  VerifcationInOrderFailure e) {
+ catch (  VerificationInOrderFailure e) {
     String actualMessage=e.getMessage();
     String expectedMessage="\n" + "Verification in order failure:" + "\n"+ "iMethods.simpleMethod(2);"+ "\n"+ "Wanted 1 time:"+ "\n"+ "-> at";
     assertContains(expectedMessage,actualMessage);

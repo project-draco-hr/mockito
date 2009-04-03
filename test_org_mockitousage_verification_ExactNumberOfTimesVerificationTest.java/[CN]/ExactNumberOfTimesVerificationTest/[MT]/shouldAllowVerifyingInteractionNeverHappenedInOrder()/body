@@ -9,6 +9,6 @@
     inOrder.verify(mock,never()).add("two");
     fail();
   }
- catch (  VerifcationInOrderFailure e) {
+ catch (  VerificationInOrderFailure e) {
   }
 }

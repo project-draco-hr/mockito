@@ -1,0 +1,5 @@
+{
+  mock.simpleMethod();
+  InOrder inOrder=inOrder(mock);
+  inOrder.verify(mock,atLeast(2)).simpleMethod();
+}
