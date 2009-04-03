@@ -5,6 +5,6 @@
     fail();
   }
  catch (  SmartNullPointerException e) {
-    assertThat(e.getCause(),hasMethodInStackTraceAt(0,"unstubbedMethodInvokedHere"));
+    assertContains("unstubbedMethodInvokedHere(",e.getMessage());
   }
 }

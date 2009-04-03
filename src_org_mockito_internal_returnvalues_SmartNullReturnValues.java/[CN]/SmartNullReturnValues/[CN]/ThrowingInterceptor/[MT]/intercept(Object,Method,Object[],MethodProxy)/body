@@ -2,5 +2,6 @@
   if (Invocation.isToString(method)) {
     return "SmartNull returned by unstubbed " + invocation.getMethod().getName() + "() method on mock";
   }
-  throw new SmartNullPointerException("\nYou have a NullPointerException here:",whenCreated);
+  new Reporter().smartNullPointerException(location);
+  return null;
 }
