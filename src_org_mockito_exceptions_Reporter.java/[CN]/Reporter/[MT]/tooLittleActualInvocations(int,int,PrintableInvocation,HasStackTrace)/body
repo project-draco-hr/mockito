@@ -1,4 +1,4 @@
 {
-  String ending=(lastActualInvocationStackTrace != null) ? "-> at " + lastActualInvocationStackTrace.getStackTrace()[0] + "\n" : "\n";
-  throw new TooLittleActualInvocations(join(wanted.toString(),"Wanted " + pluralize(wantedCount) + ":","-> at " + new Location(),"But was " + pluralize(actualCount) + ":",ending));
+  String message=createTooLittleInvocationsMessage(wantedCount,actualCount,wanted,lastActualStackTrace);
+  throw new TooLittleActualInvocations(message);
 }

@@ -9,10 +9,9 @@
   }
  catch (  VerifcationInOrderFailure e) {
     String actualMessage=e.getMessage();
-    String expectedMessage="\n" + "Verification in order failure" + "\n"+ "iMethods.simpleMethod(2);"+ "\n"+ "Wanted 2 times but was 1";
-    assertEquals(expectedMessage,actualMessage);
-    assertEquals(e.getCause().getClass(),TooLittleInvocations.class);
-    String expectedCause="\n" + "Too little invocations:";
-    assertEquals(expectedCause,e.getCause().getMessage());
+    String expectedMessage="\n" + "Verification in order failure:" + "\n"+ "iMethods.simpleMethod(2);"+ "\n"+ "Wanted 2 times:"+ "\n"+ "-> at";
+    assertContains(expectedMessage,actualMessage);
+    String expectedCause="\n" + "But was 1 time:" + "\n"+ "-> at";
+    assertContains(expectedCause,e.getMessage());
   }
 }
