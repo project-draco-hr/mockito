@@ -4,6 +4,6 @@
     fail();
   }
  catch (  NeverWantedButInvoked e) {
-    assertThat(e.getCause(),hasFirstMethodInStackTrace("first"));
+    assertContains("first(",e.getMessage());
   }
 }

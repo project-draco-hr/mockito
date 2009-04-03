@@ -1,5 +1,0 @@
-{
-  UndesiredInvocation cause=new UndesiredInvocation(join("Undesired invocation:"));
-  cause.setStackTrace(firstUndesired.getStackTrace());
-  return cause;
-}

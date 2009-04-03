@@ -6,7 +6,7 @@
     fail();
   }
  catch (  NeverWantedButInvoked e) {
-    assertThat(e,messageContains("Never wanted but invoked!"));
-    assertThat(e,causeMessageContains("Undesired invocation"));
+    assertThat(e,messageContains("Never wanted here:"));
+    assertThat(e,messageContains("But invoked here:"));
   }
 }
