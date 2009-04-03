@@ -1,0 +1,6 @@
+{
+  when(mock.forMap(anyMap())).thenReturn("x");
+  assertEquals("x",mock.forMap(null));
+  assertEquals("x",mock.forMap(new HashMap<String,String>()));
+  verify(mock,times(2)).forMap(anyMap());
+}

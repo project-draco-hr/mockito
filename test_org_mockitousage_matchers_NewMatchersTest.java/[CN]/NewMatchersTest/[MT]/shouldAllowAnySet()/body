@@ -1,0 +1,6 @@
+{
+  when(mock.forSet(anySet())).thenReturn("x");
+  assertEquals("x",mock.forSet(null));
+  assertEquals("x",mock.forSet(new HashSet<String>()));
+  verify(mock,times(2)).forSet(anySet());
+}
