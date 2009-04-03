@@ -5,6 +5,6 @@
     fail();
   }
  catch (  VerifcationInOrderFailure e) {
-    assertThat(e.getCause(),hasFirstMethodInStackTrace("third"));
+    assertContains("third(",e.getMessage());
   }
 }
