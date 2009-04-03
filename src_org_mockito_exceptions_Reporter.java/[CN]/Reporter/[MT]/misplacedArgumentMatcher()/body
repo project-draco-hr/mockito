@@ -1,3 +1,0 @@
-{
-  throw new InvalidUseOfMatchersException(join("Misplaced argument matcher detected!","Somewhere before this line you probably misused Mockito argument matchers.","For example you might have used anyObject() argument matcher outside of verification or stubbing.","Here are examples of correct usage of argument matchers:","    when(mock.get(anyInt())).thenReturn(null);","    doThrow(new RuntimeException()).when(mock).someVoidMethod(anyObject());","    verify(mock).someMethod(contains(\"foo\"))","Also make sure you're *not* stubbing/verifying a final method with an argument matcher."));
-}

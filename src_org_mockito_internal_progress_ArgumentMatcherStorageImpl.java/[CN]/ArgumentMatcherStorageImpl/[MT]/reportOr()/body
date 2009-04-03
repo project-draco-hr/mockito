@@ -1,5 +1,6 @@
 {
   assertState(!matcherStack.isEmpty(),"No matchers found.");
-  matcherStack.push(new Or(popLastArgumentMatchers(2)));
+  Or or=new Or(popLastArgumentMatchers(2));
+  matcherStack.push(new LocalizedMatcher(or));
   return new HandyReturnValues();
 }

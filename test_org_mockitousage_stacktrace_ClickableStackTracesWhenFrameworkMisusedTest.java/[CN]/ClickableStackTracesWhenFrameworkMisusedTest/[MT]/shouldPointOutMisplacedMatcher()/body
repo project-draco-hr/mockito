@@ -1,0 +1,11 @@
+{
+  misplacedArgumentMatcher();
+  try {
+    verify(mock).simpleMethod();
+    fail();
+  }
+ catch (  InvalidUseOfMatchersException e) {
+    assertThat(e,messageContains("-> at "));
+    assertThat(e,messageContains("misplacedArgumentMatcher("));
+  }
+}

@@ -1,5 +1,6 @@
 {
   assertState(!matcherStack.isEmpty(),"No matchers found for Not(?).");
-  matcherStack.push(new Not(popLastArgumentMatchers(1).get(0)));
+  Not not=new Not(popLastArgumentMatchers(1).get(0));
+  matcherStack.push(new LocalizedMatcher(not));
   return new HandyReturnValues();
 }

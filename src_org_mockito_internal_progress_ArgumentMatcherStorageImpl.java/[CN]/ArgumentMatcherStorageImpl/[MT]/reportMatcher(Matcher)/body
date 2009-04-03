@@ -1,4 +1,4 @@
 {
-  matcherStack.push(matcher);
+  matcherStack.push(new LocalizedMatcher(matcher));
   return new HandyReturnValues();
 }

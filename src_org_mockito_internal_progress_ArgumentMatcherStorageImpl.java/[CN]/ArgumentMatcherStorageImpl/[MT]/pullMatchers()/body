@@ -2,7 +2,7 @@
   if (matcherStack.isEmpty()) {
     return null;
   }
-  ArrayList<Matcher> matchers=new ArrayList<Matcher>(matcherStack);
+  List<LocalizedMatcher> matchers=new ArrayList<LocalizedMatcher>(matcherStack);
   matcherStack.clear();
-  return matchers;
+  return (List)matchers;
 }

@@ -1,6 +1,7 @@
 {
   if (!matcherStack.isEmpty()) {
+    LocalizedMatcher lastMatcher=matcherStack.lastElement();
     matcherStack.clear();
-    new Reporter().misplacedArgumentMatcher();
+    new Reporter().misplacedArgumentMatcher(lastMatcher.getLocation());
   }
 }
