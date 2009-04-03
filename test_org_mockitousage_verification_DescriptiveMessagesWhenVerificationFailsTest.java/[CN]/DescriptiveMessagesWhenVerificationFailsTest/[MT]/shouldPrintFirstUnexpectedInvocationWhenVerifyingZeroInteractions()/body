@@ -6,9 +6,9 @@
     fail();
   }
  catch (  NoInteractionsWanted e) {
-    String expected="\n" + "No interactions wanted";
-    assertEquals(e.getMessage(),expected);
-    String expectedCause="\n" + "Undesired invocation:" + "\n"+ "iMethods.twoArgumentMethod(1, 2);";
-    assertEquals(e.getCause().getMessage(),expectedCause);
+    String expected="\n" + "No interactions wanted here:" + "\n"+ "-> at";
+    assertContains(expected,e.getMessage());
+    String expectedCause="\n" + "But found this interaction:" + "\n"+ "-> at";
+    assertContains(expectedCause,e.getMessage());
   }
 }
