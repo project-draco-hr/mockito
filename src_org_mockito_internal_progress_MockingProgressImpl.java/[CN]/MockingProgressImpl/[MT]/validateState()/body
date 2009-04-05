@@ -5,9 +5,10 @@
     verificationMode=null;
     reporter.unfinishedVerificationException(location);
   }
-  if (stubbingInProgress) {
-    stubbingInProgress=false;
-    reporter.unfinishedStubbing();
+  if (stubbingInProgress != null) {
+    Location temp=stubbingInProgress;
+    stubbingInProgress=null;
+    reporter.unfinishedStubbing(temp);
   }
   getArgumentMatcherStorage().validateState();
 }

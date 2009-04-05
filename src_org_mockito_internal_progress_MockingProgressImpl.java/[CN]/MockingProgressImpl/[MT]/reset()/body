@@ -1,5 +1,5 @@
 {
-  stubbingInProgress=false;
+  stubbingInProgress=null;
   verificationMode=null;
   getArgumentMatcherStorage().reset();
 }
