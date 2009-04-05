@@ -1,0 +1,4 @@
+{
+  this.mockitoStubber=mockitoStubber;
+  this.registeredInvocations=registeredInvocations;
+}

@@ -14,9 +14,9 @@
     verificationMode.verify(data);
     return null;
   }
-  mockitoStubber.setInvocationForPotentialStubbing(invocationMatcher);
+  OngoingStubbingImpl<T> ongoingStubbing=new OngoingStubbingImpl<T>(mockitoStubber,registeredInvocations);
+  mockitoStubber.setInvocationForPotentialStubbing(invocationMatcher,ongoingStubbing);
   registeredInvocations.add(invocationMatcher.getInvocation());
-  mockingProgress.reportOngoingStubbing(new OngoingStubbingImpl());
   Answer<?> answer=mockitoStubber.findAnswerFor(invocation);
   if (!invocation.isVoid() && answer == null) {
     mockingProgress.getDebuggingInfo().addPotentiallyUnstubbed(invocationMatcher);

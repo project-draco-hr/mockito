@@ -1,0 +1,3 @@
+{
+  return lastInvocation == null ? null : lastInvocation.getLocation();
+}

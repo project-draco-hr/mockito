@@ -1,6 +1,6 @@
 {
   state=new MockingProgressImpl();
   mockitoStubber=new MockitoStubber(state);
-  mockitoStubber.setInvocationForPotentialStubbing(new InvocationBuilder().toInvocationMatcher());
+  mockitoStubber.setInvocationForPotentialStubbing(new InvocationBuilder().toInvocationMatcher(),null);
   simpleMethod=new InvocationBuilder().simpleMethod().toInvocation();
 }

@@ -1,0 +1,11 @@
+{
+  unfinishedStubbingHere();
+  try {
+    verify(mock).simpleMethod();
+    fail();
+  }
+ catch (  UnfinishedStubbingException e) {
+    assertThat(e,messageContains("-> at "));
+    assertThat(e,messageContains("unfinishedStubbingHere("));
+  }
+}
