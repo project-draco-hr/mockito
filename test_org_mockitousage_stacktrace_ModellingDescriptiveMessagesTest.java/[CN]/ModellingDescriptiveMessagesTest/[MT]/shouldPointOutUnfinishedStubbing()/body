@@ -1,0 +1,4 @@
+{
+  when(mock.simpleMethod());
+  verify(mock).simpleMethod();
+}

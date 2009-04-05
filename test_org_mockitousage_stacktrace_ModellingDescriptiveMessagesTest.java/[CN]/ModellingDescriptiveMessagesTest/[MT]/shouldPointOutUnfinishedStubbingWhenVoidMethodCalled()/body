@@ -1,0 +1,4 @@
+{
+  doReturn("asdf");
+  verify(mock).simpleMethod();
+}

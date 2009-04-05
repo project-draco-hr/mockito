@@ -1,3 +1,0 @@
-{
-  return new Location(getStackTrace().getStackTrace()[0]);
-}

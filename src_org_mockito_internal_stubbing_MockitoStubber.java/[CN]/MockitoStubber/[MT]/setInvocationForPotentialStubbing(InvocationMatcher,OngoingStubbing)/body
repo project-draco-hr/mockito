@@ -1,4 +1,0 @@
-{
-  mockingProgress.reportOngoingStubbing(ongoingStubbing);
-  this.invocationForStubbing=invocation;
-}

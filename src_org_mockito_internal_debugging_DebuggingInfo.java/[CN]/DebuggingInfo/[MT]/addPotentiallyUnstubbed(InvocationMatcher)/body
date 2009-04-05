@@ -1,5 +1,4 @@
 {
-  this.lastInvocation=invocationMatcher.getInvocation();
   if (!collectingData) {
     return;
   }
