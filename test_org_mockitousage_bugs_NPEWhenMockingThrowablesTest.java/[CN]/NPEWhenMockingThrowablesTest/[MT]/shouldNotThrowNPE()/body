@@ -1,0 +1,9 @@
+{
+  when(mock.simpleMethod()).thenThrow(mock2);
+  try {
+    mock.simpleMethod();
+    fail();
+  }
+ catch (  DummyException e) {
+  }
+}

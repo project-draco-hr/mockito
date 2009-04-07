@@ -1,5 +1,8 @@
 {
-  Throwable filtered=throwable.fillInStackTrace();
-  filter.filterStackTrace(filtered);
-  throw filtered;
+  if (MockUtil.isMock(throwable)) {
+    throw throwable;
+  }
+  Throwable t=throwable.fillInStackTrace();
+  filter.filterStackTrace(t);
+  throw t;
 }
