@@ -1,4 +1,4 @@
 {
-  mock=Mockito.mock(IMethods.class);
+  when(mock.simpleMethod()).thenThrow(mock2);
   mock.simpleMethod();
 }

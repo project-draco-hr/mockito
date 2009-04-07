@@ -1,3 +1,0 @@
-{
-  causeStackTrace=new StackTraceBuilder().methods(methods).toStackTraceList();
-}

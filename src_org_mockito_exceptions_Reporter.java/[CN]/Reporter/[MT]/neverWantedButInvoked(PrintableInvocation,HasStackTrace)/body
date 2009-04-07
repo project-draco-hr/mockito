@@ -1,3 +1,0 @@
-{
-  throw new NeverWantedButInvoked(join(wanted.toString(),"Never wanted here:","-> at " + new Location(),"But invoked here:","-> at " + firstUndesired.getStackTrace()[0],""));
-}

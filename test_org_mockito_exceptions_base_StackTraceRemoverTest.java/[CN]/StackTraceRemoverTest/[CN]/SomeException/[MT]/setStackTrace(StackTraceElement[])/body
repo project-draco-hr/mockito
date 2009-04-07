@@ -1,6 +1,0 @@
-{
-  methodsOnTraceAfterRemoving=new LinkedList<String>();
-  for (  StackTraceElement e : stackTrace) {
-    methodsOnTraceAfterRemoving.add(e.getMethodName());
-  }
-}

@@ -4,6 +4,6 @@
   }
  else {
     Invocation last=invocations.get(invocations.size() - 1);
-    return last.getStackTrace();
+    return last.getLocation();
   }
 }

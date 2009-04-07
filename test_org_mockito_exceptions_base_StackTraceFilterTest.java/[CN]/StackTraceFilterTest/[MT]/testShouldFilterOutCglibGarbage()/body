@@ -1,5 +1,5 @@
 {
-  HasStackTrace trace=new TraceBuilder().classes("MockitoExampleTest","List$$EnhancerByMockitoWithCGLIB$$2c406024","MethodInterceptorFilter").toTrace();
-  filter.filterStackTrace(trace);
-  assertThat(trace,hasOnlyThoseClassesInStackTrace("MockitoExampleTest"));
+  Throwable t=new TraceBuilder().classes("MockitoExampleTest","List$$EnhancerByMockitoWithCGLIB$$2c406024","MethodInterceptorFilter").toThrowable();
+  filter.filterStackTrace(t);
+  assertThat(t,hasOnlyThoseClassesInStackTrace("MockitoExampleTest"));
 }

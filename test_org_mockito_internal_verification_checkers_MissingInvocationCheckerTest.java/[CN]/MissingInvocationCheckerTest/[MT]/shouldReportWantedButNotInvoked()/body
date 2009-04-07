@@ -3,5 +3,5 @@
   finderStub.similarToReturn=null;
   checker.check(invocations,wanted);
   assertEquals(wanted,reporterStub.wanted);
-  assertNull(reporterStub.actualInvocationStackTrace);
+  assertNull(reporterStub.actualLocation);
 }

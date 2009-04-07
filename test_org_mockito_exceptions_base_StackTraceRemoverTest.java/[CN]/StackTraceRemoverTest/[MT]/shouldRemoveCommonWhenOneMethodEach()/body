@@ -1,6 +1,0 @@
-{
-  setStackTrace("one","commonOne");
-  setCauseStackTrace("two","commonOne");
-  remove();
-  assertThat(methodsOnTraceAfterRemoving,hasExactlyInOrder("one"));
-}

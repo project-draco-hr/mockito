@@ -3,5 +3,5 @@
   Invocation second=new InvocationBuilder().toInvocation();
   finderStub.actualToReturn.addAll(asList(first,second));
   checker.check(invocations,wanted,100);
-  assertSame(second.getStackTrace(),reporterStub.stackTrace);
+  assertSame(second.getLocation(),reporterStub.location);
 }

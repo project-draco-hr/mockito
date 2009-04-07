@@ -1,6 +1,0 @@
-{
-  setStackTrace("commonOne");
-  setCauseStackTrace("commonOne");
-  remove();
-  assertTrue(methodsOnTraceAfterRemoving.isEmpty());
-}

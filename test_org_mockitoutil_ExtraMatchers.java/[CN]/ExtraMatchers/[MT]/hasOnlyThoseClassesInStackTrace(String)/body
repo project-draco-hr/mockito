@@ -1,6 +1,6 @@
 {
-  return new Assertor<HasStackTrace>(){
-    public void assertValue(    HasStackTrace traceElements){
+  return new Assertor<Throwable>(){
+    public void assertValue(    Throwable traceElements){
       StackTraceElement[] trace=traceElements.getStackTrace();
       assertEquals("Number of classes does not match",classes.length,trace.length);
       for (int i=0; i < trace.length; i++) {

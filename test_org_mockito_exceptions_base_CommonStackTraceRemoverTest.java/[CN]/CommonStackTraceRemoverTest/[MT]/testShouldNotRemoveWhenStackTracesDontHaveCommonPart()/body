@@ -1,6 +1,0 @@
-{
-  HasStackTrace exception=new TraceBuilder().methods("intercept").toTrace();
-  List<StackTraceElement> cause=new TraceBuilder().methods("foo").toTraceList();
-  remover.remove(exception,cause);
-  assertThat(exception,hasOnlyThoseMethodsInStackTrace("intercept"));
-}

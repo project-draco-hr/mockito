@@ -1,0 +1,9 @@
+{
+  String message=join("Argument(s) are different! Wanted:",wanted.toString(),"-> at " + new Location(),"Actual invocation has different arguments:",actual.toString(),"-> at " + actualLocation,"");
+  if (JUnitTool.hasJUnit()) {
+    throw JUnitTool.createArgumentsAreDifferentException(message,wanted.toString(),actual.toString());
+  }
+ else {
+    throw new ArgumentsAreDifferent(message);
+  }
+}

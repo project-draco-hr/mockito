@@ -5,5 +5,5 @@
   checker.check(invocations,wanted);
   assertNotNull(reporterStub.wanted);
   assertNotNull(reporterStub.actual);
-  assertSame(actualInvocation.getStackTrace(),reporterStub.actualInvocationStackTrace);
+  assertSame(actualInvocation.getLocation(),reporterStub.actualLocation);
 }

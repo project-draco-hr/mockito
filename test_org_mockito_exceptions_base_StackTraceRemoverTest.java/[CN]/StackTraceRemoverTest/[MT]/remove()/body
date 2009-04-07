@@ -1,5 +1,0 @@
-{
-  CommonStackTraceRemover remover=new CommonStackTraceRemover();
-  SomeException exception=new SomeException();
-  remover.remove(exception,causeStackTrace);
-}

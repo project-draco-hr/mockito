@@ -1,3 +1,0 @@
-{
-  stackTrace=new StackTraceBuilder().methods(methods).toStackTrace();
-}

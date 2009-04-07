@@ -4,5 +4,5 @@
   Invocation third=new InvocationBuilder().toInvocation();
   finderStub.actualToReturn.addAll(asList(first,second,third));
   checker.check(invocations,wanted,2);
-  assertSame(third.getStackTrace(),reporterStub.stackTrace);
+  assertSame(third.getLocation(),reporterStub.location);
 }

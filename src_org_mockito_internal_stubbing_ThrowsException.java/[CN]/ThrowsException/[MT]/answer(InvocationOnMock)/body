@@ -1,5 +1,5 @@
 {
   Throwable filtered=throwable.fillInStackTrace();
-  filter.filterStackTrace(new HasStackTraceThrowableWrapper(filtered));
+  filter.filterStackTrace(filtered);
   throw filtered;
 }

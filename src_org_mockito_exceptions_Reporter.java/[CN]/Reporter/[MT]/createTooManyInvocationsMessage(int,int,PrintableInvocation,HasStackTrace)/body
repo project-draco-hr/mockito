@@ -1,3 +1,0 @@
-{
-  return join(wanted.toString(),"Wanted " + Pluralizer.pluralize(wantedCount) + ":","-> at " + new Location(),"But was " + pluralize(actualCount) + ". Undesired invocation:","-> at " + firstUndesired.getStackTrace()[0],"");
-}

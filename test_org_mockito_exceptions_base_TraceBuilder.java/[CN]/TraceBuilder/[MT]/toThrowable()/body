@@ -1,0 +1,6 @@
+{
+  List<StackTraceElement> trace=toTraceList();
+  RuntimeException exception=new RuntimeException();
+  exception.setStackTrace(trace.toArray(new StackTraceElement[0]));
+  return exception;
+}

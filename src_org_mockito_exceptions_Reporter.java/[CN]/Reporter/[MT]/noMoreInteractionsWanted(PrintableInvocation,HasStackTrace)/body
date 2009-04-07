@@ -1,3 +1,0 @@
-{
-  throw new NoInteractionsWanted(join("No interactions wanted here:","-> at " + new Location(),"But found this interaction:","-> at " + actualInvocationStackTrace.getStackTrace()[0],""));
-}
