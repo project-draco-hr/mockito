@@ -1,0 +1,9 @@
+{
+  mock.run("a","b");
+  verify(mock).run((String[])anyObject());
+  verify(mock).run(anyString(),anyString());
+  verify(mock).run((String)anyObject(),(String)anyObject());
+  verify(mock).run(new String[]{anyObject()});
+  verify(mock,never()).run();
+  verify(mock,never()).run(anyString(),eq("f"));
+}

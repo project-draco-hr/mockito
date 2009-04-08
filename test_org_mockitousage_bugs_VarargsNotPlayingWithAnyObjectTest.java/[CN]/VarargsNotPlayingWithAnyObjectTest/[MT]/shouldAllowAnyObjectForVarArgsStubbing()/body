@@ -1,0 +1,4 @@
+{
+  when(mock.run((String[])anyObject())).thenReturn("foo");
+  assertEquals("foo",mock.run("a","b"));
+}
