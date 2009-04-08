@@ -5,6 +5,6 @@
     fail();
   }
  catch (  UnfinishedVerificationException e) {
-    assertContains("InvalidStateDetectionTest.unfinishedVerificationHere",e.getMessage());
+    assertContains("unfinishedVerificationHere(",e.getMessage());
   }
 }
