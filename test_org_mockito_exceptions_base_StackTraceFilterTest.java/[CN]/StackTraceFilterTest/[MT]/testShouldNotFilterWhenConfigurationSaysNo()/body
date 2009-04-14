@@ -1,0 +1,6 @@
+{
+  ConfigurationAccess.getConfig().overrideCleansStackTrace(false);
+  Throwable t=new TraceBuilder().classes("org.test.MockitoSampleTest","org.mockito.Mockito").toThrowable();
+  filter.filterStackTrace(t);
+  assertThat(t,hasOnlyThoseClassesInStackTrace("org.mockito.Mockito","org.test.MockitoSampleTest"));
+}

@@ -1,4 +1,7 @@
 {
+  if (!config.cleansStackTrace()) {
+    return target;
+  }
   List<StackTraceElement> unfilteredStackTrace=Arrays.asList(target);
   int lastToRemove=-1;
   int i=0;

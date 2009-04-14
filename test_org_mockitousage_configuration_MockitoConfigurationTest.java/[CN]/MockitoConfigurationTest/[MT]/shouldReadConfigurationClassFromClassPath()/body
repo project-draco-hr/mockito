@@ -1,5 +1,5 @@
 {
-  MockitoConfiguration.overrideReturnValues(new ReturnValues(){
+  ConfigurationAccess.getConfig().overrideReturnValues(new ReturnValues(){
     public Object valueFor(    InvocationOnMock invocation){
       return "foo";
     }

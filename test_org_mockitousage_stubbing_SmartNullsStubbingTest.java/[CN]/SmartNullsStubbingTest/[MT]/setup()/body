@@ -1,3 +1,4 @@
 {
   mock=mock(IMethods.class,Mockito.RETURNS_SMART_NULLS);
+  ConfigurationAccess.getConfig().overrideCleansStackTrace(true);
 }

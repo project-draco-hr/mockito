@@ -1,3 +1,0 @@
-{
-  MockitoConfiguration.overrideReturnValues(null);
-}

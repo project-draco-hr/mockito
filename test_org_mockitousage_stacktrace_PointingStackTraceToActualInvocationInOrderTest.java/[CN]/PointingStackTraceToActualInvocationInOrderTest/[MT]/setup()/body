@@ -1,6 +1,5 @@
 {
-  mock=Mockito.mock(IMethods.class);
-  mockTwo=Mockito.mock(IMethods.class);
+  ConfigurationAccess.getConfig().overrideCleansStackTrace(true);
   inOrder=inOrder(mock,mockTwo);
   first();
   second();
