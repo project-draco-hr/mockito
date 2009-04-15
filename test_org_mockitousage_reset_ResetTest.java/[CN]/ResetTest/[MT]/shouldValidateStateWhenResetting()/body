@@ -1,0 +1,9 @@
+{
+  verify(mock);
+  try {
+    reset(mockTwo);
+    fail();
+  }
+ catch (  UnfinishedVerificationException e) {
+  }
+}

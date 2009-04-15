@@ -1,4 +1,5 @@
 {
+  MOCKING_PROGRESS.validateState();
   MOCKING_PROGRESS.reset();
   MOCKING_PROGRESS.resetOngoingStubbing();
   for (  T m : mocks) {
