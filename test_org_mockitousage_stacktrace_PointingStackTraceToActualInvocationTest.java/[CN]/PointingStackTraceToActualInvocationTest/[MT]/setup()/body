@@ -1,5 +1,5 @@
 {
-  ConfigurationAccess.getConfig().overrideCleansStackTrace(true);
+  super.makeStackTracesClean();
   first();
   second();
   third();

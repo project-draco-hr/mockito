@@ -1,6 +1,6 @@
 {
   inOrder=inOrder(mock,mockTwo);
-  ConfigurationAccess.getConfig().overrideCleansStackTrace(true);
+  super.makeStackTracesClean();
   firstChunk();
   secondChunk();
   thirdChunk();
