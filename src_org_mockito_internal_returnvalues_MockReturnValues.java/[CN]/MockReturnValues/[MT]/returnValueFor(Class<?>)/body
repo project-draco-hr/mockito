@@ -1,0 +1,6 @@
+{
+  if (!ClassImposterizer.INSTANCE.canImposterise(class1)) {
+    return null;
+  }
+  return MockitoCore.mock((Class)class1,null,null,this);
+}

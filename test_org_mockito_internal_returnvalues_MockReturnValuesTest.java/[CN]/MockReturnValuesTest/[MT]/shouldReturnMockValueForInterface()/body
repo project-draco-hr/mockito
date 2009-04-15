@@ -1,0 +1,4 @@
+{
+  Object interfaceMock=values.returnValueFor(FooInterface.class);
+  assertTrue(MockUtil.isMock(interfaceMock));
+}

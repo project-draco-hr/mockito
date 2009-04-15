@@ -1,0 +1,15 @@
+{
+  MockitoCore.assertMocksNotEmpty(mocks);
+  MOCKING_PROGRESS.validateState();
+  for (  Object mock : mocks) {
+    try {
+      if (mock == null) {
+        REPORTER.nullPassedToVerifyNoMoreInteractions();
+      }
+      MockUtil.getMockHandler(mock).verifyNoMoreInteractions();
+    }
+ catch (    NotAMockException e) {
+      REPORTER.notAMockPassedToVerifyNoMoreInteractions();
+    }
+  }
+}

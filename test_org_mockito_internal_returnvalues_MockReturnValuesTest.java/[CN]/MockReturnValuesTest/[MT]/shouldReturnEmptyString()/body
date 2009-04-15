@@ -1,0 +1,3 @@
+{
+  assertEquals("",values.valueFor(invocationOf(StringMethods.class,"stringMethod")));
+}

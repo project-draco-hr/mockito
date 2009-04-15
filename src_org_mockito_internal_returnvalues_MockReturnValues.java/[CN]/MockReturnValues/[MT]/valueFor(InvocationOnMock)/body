@@ -1,0 +1,7 @@
+{
+  Object ret=delegate.valueFor(invocation);
+  if (ret != null) {
+    return ret;
+  }
+  return returnValueFor(invocation.getMethod().getReturnType());
+}

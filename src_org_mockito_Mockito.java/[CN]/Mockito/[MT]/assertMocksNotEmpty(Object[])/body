@@ -1,5 +1,3 @@
 {
-  if (mocks == null || mocks.length == 0) {
-    REPORTER.mocksHaveToBePassedToVerifyNoMoreInteractions();
-  }
+  MockitoCore.assertMocksNotEmpty(mocks);
 }

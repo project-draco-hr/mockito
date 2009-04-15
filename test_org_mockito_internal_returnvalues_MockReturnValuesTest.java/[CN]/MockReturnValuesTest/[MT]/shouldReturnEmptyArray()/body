@@ -1,0 +1,5 @@
+{
+  String[] ret=(String[])values.valueFor(invocationOf(StringMethods.class,"stringArrayMethod"));
+  assertTrue(ret.getClass().isArray());
+  assertTrue(ret.length == 0);
+}

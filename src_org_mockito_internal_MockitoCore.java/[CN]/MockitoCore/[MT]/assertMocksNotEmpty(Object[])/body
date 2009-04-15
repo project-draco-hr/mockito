@@ -1,0 +1,5 @@
+{
+  if (mocks == null || mocks.length == 0) {
+    REPORTER.mocksHaveToBePassedToVerifyNoMoreInteractions();
+  }
+}

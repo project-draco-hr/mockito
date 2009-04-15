@@ -1,4 +1,3 @@
 {
-  MOCKING_PROGRESS.stubbingStarted();
-  return (DeprecatedOngoingStubbing)stub();
+  return MockitoCore.stub(methodCall);
 }
