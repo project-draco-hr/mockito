@@ -1,4 +1,4 @@
 {
-  MOCKING_PROGRESS.stubbingStarted();
+  mockingProgress.stubbingStarted();
   return (DeprecatedOngoingStubbing)stub();
 }

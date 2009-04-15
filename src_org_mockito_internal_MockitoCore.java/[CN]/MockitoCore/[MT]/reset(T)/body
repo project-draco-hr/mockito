@@ -1,8 +1,8 @@
 {
-  MOCKING_PROGRESS.validateState();
-  MOCKING_PROGRESS.reset();
-  MOCKING_PROGRESS.resetOngoingStubbing();
+  mockingProgress.validateState();
+  mockingProgress.reset();
+  mockingProgress.resetOngoingStubbing();
   for (  T m : mocks) {
-    MockUtil.resetMock(m,MOCKING_PROGRESS);
+    MockUtil.resetMock(m,mockingProgress);
   }
 }

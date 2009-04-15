@@ -1,4 +1,3 @@
 {
-  resetState();
   ConfigurationAccess.getConfig().overrideCleansStackTrace(true);
 }

@@ -1,10 +1,10 @@
 {
   if (mock == null) {
-    REPORTER.nullPassedToVerify();
+    reporter.nullPassedToVerify();
   }
  else   if (!MockUtil.isMock(mock)) {
-    REPORTER.notAMockPassedToVerify();
+    reporter.notAMockPassedToVerify();
   }
-  MOCKING_PROGRESS.verificationStarted(mode);
+  mockingProgress.verificationStarted(mode);
   return mock;
 }

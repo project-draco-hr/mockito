@@ -1,4 +1,3 @@
 {
   StateMaster.reset();
-  mock=mock(IMethods.class);
 }

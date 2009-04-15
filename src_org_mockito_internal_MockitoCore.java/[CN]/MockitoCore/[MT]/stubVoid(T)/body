@@ -1,5 +1,5 @@
 {
   MockHandler<T> handler=MockUtil.getMockHandler(mock);
-  MOCKING_PROGRESS.stubbingStarted();
+  mockingProgress.stubbingStarted();
   return handler.voidMethodStubbable(mock);
 }

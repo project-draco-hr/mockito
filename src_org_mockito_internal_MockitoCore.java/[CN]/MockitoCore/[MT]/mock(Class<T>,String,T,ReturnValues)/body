@@ -1,5 +1,5 @@
 {
-  MOCKING_PROGRESS.validateState();
-  MOCKING_PROGRESS.resetOngoingStubbing();
-  return MockUtil.createMock(classToMock,MOCKING_PROGRESS,name,optionalInstance,returnValues);
+  mockingProgress.validateState();
+  mockingProgress.resetOngoingStubbing();
+  return MockUtil.createMock(classToMock,mockingProgress,name,optionalInstance,returnValues);
 }

@@ -1,13 +1,13 @@
 {
   if (mocks == null || mocks.length == 0) {
-    REPORTER.mocksHaveToBePassedWhenCreatingInOrder();
+    reporter.mocksHaveToBePassedWhenCreatingInOrder();
   }
   for (  Object mock : mocks) {
     if (mock == null) {
-      REPORTER.nullPassedWhenCreatingInOrder();
+      reporter.nullPassedWhenCreatingInOrder();
     }
  else     if (!MockUtil.isMock(mock)) {
-      REPORTER.notAMockPassedWhenCreatingInOrder();
+      reporter.notAMockPassedWhenCreatingInOrder();
     }
   }
   InOrder inOrder=new InOrderImpl(Arrays.asList(mocks));
