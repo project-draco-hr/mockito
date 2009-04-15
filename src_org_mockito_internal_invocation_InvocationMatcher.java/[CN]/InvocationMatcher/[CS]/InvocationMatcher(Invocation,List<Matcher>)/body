@@ -1,6 +1,6 @@
 {
   this.invocation=invocation;
-  if (matchers == null) {
+  if (matchers.isEmpty()) {
     this.matchers=invocation.argumentsToMatchers();
   }
  else {

@@ -1,6 +1,6 @@
 {
   if (matcherStack.isEmpty()) {
-    return null;
+    return Collections.emptyList();
   }
   List<LocalizedMatcher> matchers=new ArrayList<LocalizedMatcher>(matcherStack);
   matcherStack.clear();

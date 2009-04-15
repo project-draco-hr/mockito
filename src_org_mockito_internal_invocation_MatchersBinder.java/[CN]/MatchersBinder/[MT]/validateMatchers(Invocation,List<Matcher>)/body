@@ -1,5 +1,5 @@
 {
-  if (matchers != null) {
+  if (!matchers.isEmpty()) {
     int recordedMatchersSize=matchers.size();
     int expectedMatchersSize=invocation.getArgumentsCount();
     if (expectedMatchersSize != recordedMatchersSize) {
