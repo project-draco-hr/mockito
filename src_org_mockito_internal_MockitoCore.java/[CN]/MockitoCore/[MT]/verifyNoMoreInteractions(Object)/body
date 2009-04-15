@@ -1,5 +1,5 @@
 {
-  MockitoCore.assertMocksNotEmpty(mocks);
+  assertMocksNotEmpty(mocks);
   MOCKING_PROGRESS.validateState();
   for (  Object mock : mocks) {
     try {

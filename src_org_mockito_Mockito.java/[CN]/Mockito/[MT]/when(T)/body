@@ -1,3 +1,3 @@
 {
-  return MockitoCore.when(methodCall);
+  return MOCKITO_CORE.when(methodCall);
 }
