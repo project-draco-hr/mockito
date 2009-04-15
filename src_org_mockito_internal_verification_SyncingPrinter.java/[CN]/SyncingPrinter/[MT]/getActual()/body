@@ -1,8 +1,3 @@
 {
-  return new PrintableInvocation(){
-    public String toString(){
-      return actual;
-    }
-  }
-;
+  return actual;
 }

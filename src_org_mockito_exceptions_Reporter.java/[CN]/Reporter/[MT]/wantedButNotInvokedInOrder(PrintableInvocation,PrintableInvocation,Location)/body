@@ -1,3 +1,0 @@
-{
-  throw new VerificationInOrderFailure(join("Verification in order failure","Wanted but not invoked:",wanted.toString(),"-> at " + new Location(),"Wanted anywhere AFTER following interaction:",previous.toString(),"-> at " + previousLocation,""));
-}

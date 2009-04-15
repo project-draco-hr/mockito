@@ -1,5 +1,4 @@
 {
   this.wanted=wanted;
   this.previous=previous;
-  this.previousLocation=previousStackTrace;
 }

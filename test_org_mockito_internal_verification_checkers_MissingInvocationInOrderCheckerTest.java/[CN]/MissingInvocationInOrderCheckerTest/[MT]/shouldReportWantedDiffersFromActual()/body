@@ -4,5 +4,4 @@
   checker.check(invocations,wanted,new VerificationModeBuilder().inOrder());
   assertEquals(wanted,reporterStub.wanted);
   assertEquals(previous,reporterStub.previous);
-  assertSame(previous.getLocation(),reporterStub.previousLocation);
 }
