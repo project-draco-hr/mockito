@@ -1,0 +1,5 @@
+{
+  mock=mock(IMethods.class,RETURNS_MOCKS);
+  reset(mock);
+  assertNotNull(mock.iMethodsReturningMethod());
+}

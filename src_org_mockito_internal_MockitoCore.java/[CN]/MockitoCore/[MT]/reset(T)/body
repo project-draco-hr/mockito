@@ -3,6 +3,6 @@
   MOCKING_PROGRESS.reset();
   MOCKING_PROGRESS.resetOngoingStubbing();
   for (  T m : mocks) {
-    MockUtil.resetMock(m,MOCKING_PROGRESS,Mockito.RETURNS_DEFAULTS);
+    MockUtil.resetMock(m,MOCKING_PROGRESS);
   }
 }
