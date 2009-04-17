@@ -1,4 +1,4 @@
 {
-  StateMaster.validate();
+  new StateMaster().validate();
   MockitoAnnotations.initMocks(this);
 }
