@@ -1,0 +1,4 @@
+{
+  when(mock.simpleMethod()).thenReturn("foo");
+  fail();
+}

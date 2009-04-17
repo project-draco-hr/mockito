@@ -1,4 +1,5 @@
 {
+  super.makeStackTracesClean();
   loggerStub=new MockitoLoggerStub();
   notifier=new RunNotifier();
   runner=new VerboseMockitoJUnitRunner(this.getClass(),loggerStub);
