@@ -3,8 +3,8 @@
   InvocationMatcher wrongArg=new InvocationBuilder().arg("bar").mock(mock).toInvocationMatcher();
   WarningsPrinter p=new WarningsPrinter(Arrays.<Invocation>asList(stub),Arrays.<InvocationMatcher>asList(wrongArg));
   p.print(logger);
-  assertThat(logger.getLoggedInfo(),contains("Stubbed this way"));
-  assertThat(logger.getLoggedInfo(),contains("simpleMethod(\"foo\")"));
-  assertThat(logger.getLoggedInfo(),contains("called with different arguments"));
-  assertThat(logger.getLoggedInfo(),contains("simpleMethod(\"bar\")"));
+  assertContains("Stubbed this way",logger.getLoggedInfo());
+  assertContains("simpleMethod(\"foo\")",logger.getLoggedInfo());
+  assertContains("called with different arguments",logger.getLoggedInfo());
+  assertContains("simpleMethod(\"bar\")",logger.getLoggedInfo());
 }

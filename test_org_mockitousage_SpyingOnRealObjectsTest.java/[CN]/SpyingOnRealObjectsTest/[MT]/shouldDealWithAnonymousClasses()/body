@@ -6,6 +6,6 @@
     fail();
   }
  catch (  MockitoException e) {
-    assertThat(e.getMessage(),contains("cannot mock"));
+    assertContains("cannot mock",e.getMessage());
   }
 }

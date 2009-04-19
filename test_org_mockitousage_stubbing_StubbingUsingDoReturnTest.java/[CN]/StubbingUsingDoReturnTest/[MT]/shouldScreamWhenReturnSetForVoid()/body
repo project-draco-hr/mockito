@@ -4,6 +4,6 @@
     fail();
   }
  catch (  MockitoException e) {
-    assertThat(e.getMessage(),contains("Cannot stub a void method with a return value"));
+    assertContains("Cannot stub a void method with a return value",e.getMessage());
   }
 }

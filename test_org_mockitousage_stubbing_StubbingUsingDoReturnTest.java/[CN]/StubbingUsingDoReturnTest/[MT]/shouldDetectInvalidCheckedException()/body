@@ -4,6 +4,6 @@
     fail();
   }
  catch (  Exception e) {
-    assertThat(e.getMessage(),contains("Checked exception is invalid"));
+    assertContains("Checked exception is invalid",e.getMessage());
   }
 }

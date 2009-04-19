@@ -4,6 +4,6 @@
     fail();
   }
  catch (  Exception e) {
-    assertThat(e.getMessage(),contains("Argument passed to when() is null"));
+    assertContains("Argument passed to when() is null",e.getMessage());
   }
 }
