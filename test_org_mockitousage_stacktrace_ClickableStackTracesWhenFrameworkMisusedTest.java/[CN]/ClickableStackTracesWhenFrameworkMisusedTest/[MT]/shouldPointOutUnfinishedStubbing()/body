@@ -5,7 +5,7 @@
     fail();
   }
  catch (  UnfinishedStubbingException e) {
-    assertThat(e,messageContains("-> at "));
-    assertThat(e,messageContains("unfinishedStubbingHere("));
+    assertContains("-> at ",e.getMessage());
+    assertContains("unfinishedStubbingHere(",e.getMessage());
   }
 }

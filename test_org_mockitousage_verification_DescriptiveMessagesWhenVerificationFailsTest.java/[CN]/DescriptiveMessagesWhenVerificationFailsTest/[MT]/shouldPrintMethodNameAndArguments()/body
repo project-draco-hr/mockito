@@ -4,6 +4,6 @@
     fail();
   }
  catch (  WantedButNotInvoked e) {
-    assertThat(e,messageContains("iMethods.threeArgumentMethod(12, foo, \"xx\")"));
+    assertContains("iMethods.threeArgumentMethod(12, foo, \"xx\")",e.getMessage());
   }
 }

@@ -7,7 +7,7 @@
     fail();
   }
  catch (  ArgumentsAreDifferent e) {
-    assertThat(e,messageContains("(2, 1000)"));
-    assertThat(e,messageContains("(2, 2)"));
+    assertContains("(2, 1000)",e.getMessage());
+    assertContains("(2, 2)",e.getMessage());
   }
 }

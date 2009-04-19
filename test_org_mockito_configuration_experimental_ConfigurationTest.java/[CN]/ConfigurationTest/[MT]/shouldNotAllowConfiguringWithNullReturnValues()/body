@@ -4,6 +4,6 @@
     fail();
   }
  catch (  MockitoException e) {
-    assertThat(e,messageContains("Cannot set null ReturnValues!"));
+    assertContains("Cannot set null ReturnValues!",e.getMessage());
   }
 }

@@ -5,7 +5,7 @@
     fail();
   }
  catch (  ArgumentsAreDifferent e) {
-    assertThat(e,messageContains("[false, false, false]"));
-    assertThat(e,messageContains("[true, false, false]"));
+    assertContains("[false, false, false]",e.getMessage());
+    assertContains("[true, false, false]",e.getMessage());
   }
 }

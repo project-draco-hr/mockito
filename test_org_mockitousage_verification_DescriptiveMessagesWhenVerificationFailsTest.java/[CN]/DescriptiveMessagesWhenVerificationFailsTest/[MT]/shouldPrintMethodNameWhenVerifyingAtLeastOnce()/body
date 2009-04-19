@@ -4,6 +4,6 @@
     fail();
   }
  catch (  WantedButNotInvoked e) {
-    assertThat(e,messageContains("twoArgumentMethod(1, 2)"));
+    assertContains("twoArgumentMethod(1, 2)",e.getMessage());
   }
 }

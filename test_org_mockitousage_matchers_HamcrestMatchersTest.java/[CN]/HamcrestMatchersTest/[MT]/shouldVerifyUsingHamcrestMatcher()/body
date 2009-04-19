@@ -5,6 +5,6 @@
     fail();
   }
  catch (  ArgumentsAreDifferent e) {
-    assertThat(e,messageContains("contains 'X'"));
+    assertContains("contains 'X'",e.getMessage());
   }
 }

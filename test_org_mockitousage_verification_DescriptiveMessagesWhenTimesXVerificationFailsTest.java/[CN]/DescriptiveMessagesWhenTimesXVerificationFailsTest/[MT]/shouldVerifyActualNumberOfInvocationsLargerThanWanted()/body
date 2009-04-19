@@ -9,8 +9,8 @@
     fail();
   }
  catch (  TooManyActualInvocations e) {
-    assertThat(e,messageContains("mock.clear();"));
-    assertThat(e,messageContains("Wanted 1 time"));
-    assertThat(e,messageContains("was 4"));
+    assertContains("mock.clear();",e.getMessage());
+    assertContains("Wanted 1 time",e.getMessage());
+    assertContains("was 4",e.getMessage());
   }
 }

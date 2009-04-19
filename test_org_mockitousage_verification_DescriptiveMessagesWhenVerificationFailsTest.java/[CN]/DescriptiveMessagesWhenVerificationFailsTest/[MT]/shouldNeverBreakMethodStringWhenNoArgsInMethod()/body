@@ -4,6 +4,6 @@
     fail();
   }
  catch (  WantedButNotInvoked e) {
-    assertThat(e,messageContains("veeeeeeeeeeeeeeeeeeeeeeeerylongNameMock.simpleMethod()"));
+    assertContains("veeeeeeeeeeeeeeeeeeeeeeeerylongNameMock.simpleMethod()",e.getMessage());
   }
 }

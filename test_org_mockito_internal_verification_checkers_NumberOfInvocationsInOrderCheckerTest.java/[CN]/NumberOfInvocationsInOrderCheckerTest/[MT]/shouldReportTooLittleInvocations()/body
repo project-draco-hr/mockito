@@ -7,7 +7,7 @@
     fail();
   }
  catch (  VerificationInOrderFailure e) {
-    assertThat(e,messageContains("Wanted 4 times"));
-    assertThat(e,messageContains("But was 2 times"));
+    assertContains("Wanted 4 times",e.getMessage());
+    assertContains("But was 2 times",e.getMessage());
   }
 }

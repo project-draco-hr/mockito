@@ -5,7 +5,7 @@
     fail();
   }
  catch (  ArgumentsAreDifferent e) {
-    assertThat(e,messageContains("111"));
-    assertThat(e,messageContains("\"xxx\""));
+    assertContains("111",e.getMessage());
+    assertContains("\"xxx\"",e.getMessage());
   }
 }

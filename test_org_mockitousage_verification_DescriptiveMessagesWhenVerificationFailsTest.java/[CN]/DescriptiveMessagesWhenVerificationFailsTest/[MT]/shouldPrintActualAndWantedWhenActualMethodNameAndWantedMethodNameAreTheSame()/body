@@ -5,7 +5,7 @@
     fail();
   }
  catch (  ArgumentsAreDifferent e) {
-    assertThat(e,messageContains("simpleMethod(10)"));
-    assertThat(e,messageContains("simpleMethod()"));
+    assertContains("simpleMethod(10)",e.getMessage());
+    assertContains("simpleMethod()",e.getMessage());
   }
 }

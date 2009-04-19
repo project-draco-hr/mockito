@@ -8,6 +8,6 @@
     fail();
   }
  catch (  WantedButNotInvoked e) {
-    assertThat(e,messageContains("oneArray(null)"));
+    assertContains("oneArray(null)",e.getMessage());
   }
 }
