@@ -3,6 +3,6 @@
     throw throwable;
   }
   Throwable t=throwable.fillInStackTrace();
-  filter.filterConditionally(t);
+  filter.filter(t);
   throw t;
 }
