@@ -1,5 +1,4 @@
 {
-  IMethods mock=mock(IMethods.class);
   Invocation stub=new InvocationBuilder().arg("foo").mock(mock).toInvocation();
   InvocationMatcher wrongArg=new InvocationBuilder().arg("bar").mock(mock).toInvocationMatcher();
   WarningsPrinter p=new WarningsPrinter(Arrays.<Invocation>asList(stub),Arrays.<InvocationMatcher>asList(wrongArg));

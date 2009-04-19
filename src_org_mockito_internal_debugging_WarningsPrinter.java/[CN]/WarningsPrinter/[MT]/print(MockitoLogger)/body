@@ -1,5 +1,21 @@
 {
-  warnAboutStubsUsedWithDifferentArgs(logger);
-  warnAboutUnusedStubs(logger);
-  warnAboutUnstubbedInvocations(logger);
+  Iterator<Invocation> unusedIterator=unusedStubs.iterator();
+  while (unusedIterator.hasNext()) {
+    Invocation unused=unusedIterator.next();
+    Iterator<InvocationMatcher> unstubbedIterator=unstubbedInvocations.iterator();
+    while (unstubbedIterator.hasNext()) {
+      InvocationMatcher unstubbed=unstubbedIterator.next();
+      if (unstubbed.hasSimilarMethod(unused)) {
+        logger.log(stubbedMethodCalledWithDifferentArguments(unused,unstubbed));
+        unusedIterator.remove();
+        unstubbedIterator.remove();
+      }
+    }
+  }
+  for (  Invocation i : unusedStubs) {
+    logger.log(thisStubWasNotUsed(i));
+  }
+  for (  InvocationMatcher i1 : unstubbedInvocations) {
+    logger.log(thisMethodWasNotStubbed(i1));
+  }
 }
