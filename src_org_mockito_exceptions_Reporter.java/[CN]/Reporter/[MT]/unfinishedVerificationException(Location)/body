@@ -1,4 +1,4 @@
 {
-  UnfinishedVerificationException exception=new UnfinishedVerificationException(join("Missing method call for verify(mock) here:",location,"","Example of correct verification:","    verify(mock).doSomething()","","Also, this error might show up because you stub a final method, equals() or hashcode() method.","Those methods *cannot* be stubbed/verified.",""));
+  UnfinishedVerificationException exception=new UnfinishedVerificationException(join("Missing method call for verify(mock) here:",location,"","Example of correct verification:","    verify(mock).doSomething()","","Also, this error might show up because you stub a final method, equals() or hashCode() method.","Those methods *cannot* be stubbed/verified.",""));
   throw exception;
 }
