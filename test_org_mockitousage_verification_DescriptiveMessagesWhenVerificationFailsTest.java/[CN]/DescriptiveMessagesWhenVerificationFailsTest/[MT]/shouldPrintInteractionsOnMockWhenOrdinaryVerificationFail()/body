@@ -1,0 +1,10 @@
+{
+  mock.otherMethod();
+  mock.booleanReturningMethod();
+  try {
+    verify(mock).simpleMethod();
+    fail();
+  }
+ catch (  WantedButNotInvoked e) {
+  }
+}

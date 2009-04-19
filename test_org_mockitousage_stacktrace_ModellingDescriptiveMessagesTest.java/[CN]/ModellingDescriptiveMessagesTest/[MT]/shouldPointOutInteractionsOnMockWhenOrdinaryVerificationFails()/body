@@ -1,0 +1,5 @@
+{
+  mock.otherMethod();
+  mock.booleanObjectReturningMethod();
+  verify(mock).simpleMethod();
+}

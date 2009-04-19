@@ -1,0 +1,16 @@
+{
+  String allInvocations;
+  if (invocations.isEmpty()) {
+    allInvocations="Actually, there were zero interactions with this mock.\n";
+  }
+ else {
+    StringBuilder sb=new StringBuilder("\nHowever, there were other interactions with this mock:\n");
+    for (    PrintableInvocation i : invocations) {
+      sb.append(i.getLocation());
+      sb.append("\n");
+    }
+    allInvocations=sb.toString();
+  }
+  String message=createWantedButNotInvokedMessage(wanted);
+  throw new WantedButNotInvoked(message + allInvocations);
+}

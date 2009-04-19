@@ -1,0 +1,13 @@
+{
+  firstInteraction();
+  secondInteraction();
+  try {
+    verify(mock).simpleMethod();
+    fail();
+  }
+ catch (  WantedButNotInvoked e) {
+    assertContains("However, there were other interactions with this mock",e.getMessage());
+    assertContains("firstInteraction(",e.getMessage());
+    assertContains("secondInteraction(",e.getMessage());
+  }
+}

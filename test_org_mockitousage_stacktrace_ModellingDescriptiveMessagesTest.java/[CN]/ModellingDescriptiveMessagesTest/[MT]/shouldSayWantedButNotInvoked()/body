@@ -1,4 +1,3 @@
 {
-  mock.simpleMethod();
   verify(mock).otherMethod();
 }
