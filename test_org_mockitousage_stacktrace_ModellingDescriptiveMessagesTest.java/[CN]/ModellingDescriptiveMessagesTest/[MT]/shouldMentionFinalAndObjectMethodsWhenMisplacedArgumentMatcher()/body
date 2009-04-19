@@ -1,0 +1,3 @@
+{
+  when(mock.equals(anyObject())).thenReturn(false);
+}
