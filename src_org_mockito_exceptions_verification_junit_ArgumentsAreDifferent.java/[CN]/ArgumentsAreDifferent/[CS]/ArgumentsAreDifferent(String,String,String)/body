@@ -3,5 +3,5 @@
   this.message=message;
   unfilteredStackTrace=getStackTrace();
   StackTraceFilter filter=new StackTraceFilter();
-  filter.filterStackTrace(this);
+  filter.filterConditionally(this);
 }

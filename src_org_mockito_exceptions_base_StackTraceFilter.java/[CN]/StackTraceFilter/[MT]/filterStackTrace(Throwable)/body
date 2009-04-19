@@ -1,4 +1,0 @@
-{
-  StackTraceElement[] filtered=filterStackTrace(throwable.getStackTrace());
-  throwable.setStackTrace(filtered);
-}

@@ -1,6 +1,0 @@
-{
-  ConfigurationAccess.getConfig().overrideCleansStackTrace(true);
-  Throwable t=new TraceBuilder().classes("MockitoExampleTest","List$$EnhancerByMockitoWithCGLIB$$2c406024","MethodInterceptorFilter").toThrowable();
-  filter.filterStackTrace(t);
-  assertThat(t,hasOnlyThoseClassesInStackTrace("MockitoExampleTest"));
-}

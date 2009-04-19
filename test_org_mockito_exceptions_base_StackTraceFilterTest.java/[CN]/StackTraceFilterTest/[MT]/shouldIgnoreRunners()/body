@@ -1,0 +1,5 @@
+{
+  StackTraceElement[] t=new TraceBuilder().classes("org.mockito.runners.Runner","junit.stuff","org.test.MockitoSampleTest","org.mockito.Mockito").toTraceArray();
+  StackTraceElement[] filtered=filter.filter(t);
+  assertThat(filtered,hasOnlyThoseClasses("org.test.MockitoSampleTest","junit.stuff","org.mockito.runners.Runner"));
+}

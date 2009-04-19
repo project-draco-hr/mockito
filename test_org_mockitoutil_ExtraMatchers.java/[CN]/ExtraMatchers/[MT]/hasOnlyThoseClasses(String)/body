@@ -1,0 +1,11 @@
+{
+  return new Assertor<StackTraceElement[]>(){
+    public void assertValue(    StackTraceElement[] traceElements){
+      assertEquals("Number of classes does not match." + "\nExpected: " + Arrays.toString(classes) + "\nGot: "+ Arrays.toString(traceElements),classes.length,traceElements.length);
+      for (int i=0; i < traceElements.length; i++) {
+        assertEquals(classes[i],traceElements[i].getClassName());
+      }
+    }
+  }
+;
+}
