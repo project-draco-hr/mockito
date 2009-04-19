@@ -1,6 +1,5 @@
 {
   inOrder=inOrder(mock,mockTwo);
-  super.makeStackTracesClean();
   firstChunk();
   secondChunk();
   thirdChunk();

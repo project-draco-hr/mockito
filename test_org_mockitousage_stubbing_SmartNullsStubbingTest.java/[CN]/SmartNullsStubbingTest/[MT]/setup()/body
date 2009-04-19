@@ -1,4 +1,3 @@
 {
   mock=mock(IMethods.class,Mockito.RETURNS_SMART_NULLS);
-  super.makeStackTracesClean();
 }
