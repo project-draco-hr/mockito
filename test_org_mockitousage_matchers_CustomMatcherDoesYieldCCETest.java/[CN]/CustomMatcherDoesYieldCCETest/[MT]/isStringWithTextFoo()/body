@@ -1,0 +1,9 @@
+{
+  return new ArgumentMatcher<String>(){
+    @Override public boolean matches(    Object argument){
+      String str=(String)argument;
+      return str.equals("foo");
+    }
+  }
+;
+}
