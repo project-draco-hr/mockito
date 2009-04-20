@@ -1,0 +1,13 @@
+{
+  mock.clear();
+  mock.clear();
+  undesiredInteraction();
+  verify(mock,atMost(3)).clear();
+  try {
+    verifyNoMoreInteractions(mock);
+    fail();
+  }
+ catch (  NoInteractionsWanted e) {
+    assertContains("undesiredInteraction(",e.getMessage());
+  }
+}

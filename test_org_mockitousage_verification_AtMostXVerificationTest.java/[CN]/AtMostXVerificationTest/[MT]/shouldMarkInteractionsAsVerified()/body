@@ -1,0 +1,6 @@
+{
+  mock.clear();
+  mock.clear();
+  verify(mock,atMost(3)).clear();
+  verifyNoMoreInteractions(mock);
+}
