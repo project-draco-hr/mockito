@@ -1,0 +1,9 @@
+{
+  verify(mock);
+  try {
+    MockitoTroubleshooter.validateFrameworkState();
+    fail();
+  }
+ catch (  UnfinishedVerificationException e) {
+  }
+}

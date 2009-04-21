@@ -1,3 +1,0 @@
-{
-  MOCKITO_CORE.assertMocksNotEmpty(mocks);
-}

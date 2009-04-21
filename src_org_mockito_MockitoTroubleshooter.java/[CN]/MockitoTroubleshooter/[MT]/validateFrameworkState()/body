@@ -1,0 +1,4 @@
+{
+  MockingProgress mockingProgress=new ThreadSafeMockingProgress();
+  mockingProgress.validateState();
+}

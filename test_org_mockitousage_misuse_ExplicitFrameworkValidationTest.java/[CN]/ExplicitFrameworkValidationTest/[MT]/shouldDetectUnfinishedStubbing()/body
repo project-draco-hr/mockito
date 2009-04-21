@@ -1,0 +1,9 @@
+{
+  when(mock.simpleMethod());
+  try {
+    MockitoTroubleshooter.validateFrameworkState();
+    fail();
+  }
+ catch (  UnfinishedStubbingException e) {
+  }
+}
