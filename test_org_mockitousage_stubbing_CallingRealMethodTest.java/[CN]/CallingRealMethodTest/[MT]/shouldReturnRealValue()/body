@@ -1,0 +1,4 @@
+{
+  when(mock.getValue()).thenCallRealMethod();
+  Assert.assertEquals("HARD_CODED_RETURN_VALUE",mock.getValue());
+}

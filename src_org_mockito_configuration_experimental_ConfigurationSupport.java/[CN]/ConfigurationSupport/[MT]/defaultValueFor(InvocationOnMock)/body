@@ -1,3 +1,10 @@
 {
-  return DEFAULT_RETURN_VALUES.valueFor(invocation);
+  Object retValue=null;
+  try {
+    retValue=DEFAULT_RETURN_VALUES.valueFor(invocation);
+  }
+ catch (  Throwable t) {
+    throw new RuntimeException(t);
+  }
+  return retValue;
 }

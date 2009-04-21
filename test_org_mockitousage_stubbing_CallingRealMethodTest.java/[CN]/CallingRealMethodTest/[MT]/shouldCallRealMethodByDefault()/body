@@ -1,0 +1,4 @@
+{
+  UnderTest mock=mock(UnderTest.class,CALLS_REAL_METHODS);
+  Assert.assertEquals("HARD_CODED_RETURN_VALUE",mock.getValue());
+}

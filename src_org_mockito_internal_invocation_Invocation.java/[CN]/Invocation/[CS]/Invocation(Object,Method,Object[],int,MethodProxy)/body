@@ -5,4 +5,5 @@
   this.rawArguments=args;
   this.sequenceNumber=sequenceNumber;
   this.location=new Location();
+  this.methodProxy=methodProxy;
 }

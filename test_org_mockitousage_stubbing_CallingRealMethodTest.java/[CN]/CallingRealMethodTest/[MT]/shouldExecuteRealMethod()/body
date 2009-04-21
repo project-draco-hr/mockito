@@ -1,0 +1,5 @@
+{
+  doCallRealMethod().when(mock).setValue(anyString());
+  mock.setValue("REAL_VALUE");
+  Assert.assertEquals("REAL_VALUE",mock.value);
+}

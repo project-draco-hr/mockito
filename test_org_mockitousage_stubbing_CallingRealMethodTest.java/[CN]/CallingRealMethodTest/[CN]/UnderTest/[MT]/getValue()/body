@@ -1,0 +1,3 @@
+{
+  return "HARD_CODED_RETURN_VALUE";
+}
