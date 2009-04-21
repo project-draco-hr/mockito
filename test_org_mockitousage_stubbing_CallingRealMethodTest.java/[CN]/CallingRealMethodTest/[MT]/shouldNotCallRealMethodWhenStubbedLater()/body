@@ -1,5 +1,5 @@
 {
-  UnderTest mock=mock(UnderTest.class);
+  TestedObject mock=mock(TestedObject.class);
   when(mock.getValue()).thenCallRealMethod();
   when(mock.getValue()).thenReturn("FAKE_VALUE");
   Assert.assertEquals("FAKE_VALUE",mock.getValue());
