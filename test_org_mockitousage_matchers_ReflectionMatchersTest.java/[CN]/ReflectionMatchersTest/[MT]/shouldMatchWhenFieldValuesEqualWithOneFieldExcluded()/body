@@ -1,0 +1,4 @@
+{
+  Child wanted=new Child(1,"foo",2,"excluded");
+  verify(mock).run(refEq(wanted,"childFieldTwo"));
+}
