@@ -1,4 +1,0 @@
-{
-  this.wanted=wanted;
-  this.excludeFields=null;
-}
