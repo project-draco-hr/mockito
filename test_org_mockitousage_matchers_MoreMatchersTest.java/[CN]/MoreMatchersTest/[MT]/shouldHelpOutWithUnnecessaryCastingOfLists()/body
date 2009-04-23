@@ -1,0 +1,5 @@
+{
+  when(mock.listArgMethod(anyListOf(String.class))).thenReturn("list");
+  assertEquals("list",mock.listArgMethod(new LinkedList<String>()));
+  assertEquals("list",mock.listArgMethod(Collections.<String>emptyList()));
+}

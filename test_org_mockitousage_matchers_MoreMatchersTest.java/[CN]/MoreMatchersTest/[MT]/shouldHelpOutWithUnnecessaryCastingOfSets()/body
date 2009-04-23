@@ -1,0 +1,5 @@
+{
+  when(mock.setArgMethod(anySetOf(String.class))).thenReturn("set");
+  assertEquals("set",mock.setArgMethod(new HashSet<String>()));
+  assertEquals("set",mock.setArgMethod(Collections.<String>emptySet()));
+}
