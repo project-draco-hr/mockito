@@ -1,6 +1,6 @@
 {
   if (arguments.isEmpty()) {
-    new Reporter().argumentValueNotYetCaptured();
+    new Reporter().noArgumentValueWasCaptured();
   }
  else {
     return (T)arguments.getLast();

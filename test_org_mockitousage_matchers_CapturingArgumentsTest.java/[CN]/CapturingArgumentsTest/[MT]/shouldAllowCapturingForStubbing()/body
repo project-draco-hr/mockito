@@ -1,0 +1,6 @@
+{
+  Argument<Person> argument=new Argument<Person>();
+  when(emailService.sendEmailTo(argument.capture())).thenReturn(false);
+  emailService.sendEmailTo(new Person(10));
+  assertEquals(10,argument.value().getAge());
+}

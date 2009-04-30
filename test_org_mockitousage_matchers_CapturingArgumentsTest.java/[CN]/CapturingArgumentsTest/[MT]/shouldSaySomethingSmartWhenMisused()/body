@@ -5,6 +5,5 @@
     fail();
   }
  catch (  MockitoException e) {
-    assertContains("Argument value not yet captured",e.getMessage());
   }
 }
