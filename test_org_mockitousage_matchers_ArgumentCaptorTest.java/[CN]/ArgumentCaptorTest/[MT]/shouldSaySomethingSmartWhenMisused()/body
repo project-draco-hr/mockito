@@ -1,0 +1,10 @@
+{
+  Argument<Person> argument=new Argument<Person>();
+  try {
+    argument.value();
+    fail();
+  }
+ catch (  MockitoException e) {
+    assertContains("Argument value has not yet been captured",e.getMessage());
+  }
+}

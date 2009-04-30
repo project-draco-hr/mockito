@@ -1,0 +1,5 @@
+{
+  Argument<String> argument=new Argument<String>();
+  argument.capture();
+  argument.value();
+}
