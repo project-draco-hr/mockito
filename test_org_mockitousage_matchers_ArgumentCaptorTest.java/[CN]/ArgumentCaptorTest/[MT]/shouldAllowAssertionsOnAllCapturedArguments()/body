@@ -1,0 +1,8 @@
+{
+  emailer.email(11,12);
+  Argument<Person> argument=new Argument<Person>();
+  verify(emailService,atLeastOnce()).sendEmailTo(argument.capture());
+  List<Person> allValues=argument.allValues();
+  assertEquals(11,allValues.get(0).getAge());
+  assertEquals(12,allValues.get(1).getAge());
+}

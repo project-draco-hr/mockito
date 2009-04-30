@@ -1,0 +1,4 @@
+{
+  Mockito.argThat(this);
+  return null;
+}

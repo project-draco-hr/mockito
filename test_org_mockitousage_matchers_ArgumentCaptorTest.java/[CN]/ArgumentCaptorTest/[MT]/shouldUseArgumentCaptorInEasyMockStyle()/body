@@ -1,7 +1,0 @@
-{
-  Foo foo=new Foo(mock);
-  foo.bar();
-  Capture<Person> capturedArgument=new Capture<Person>();
-  verify(mock).simpleMethod(capture(capturedArgument));
-  assertEquals(12,capturedArgument.getValue().getAge());
-}

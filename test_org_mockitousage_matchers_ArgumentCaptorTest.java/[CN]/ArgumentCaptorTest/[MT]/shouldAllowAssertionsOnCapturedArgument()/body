@@ -1,0 +1,6 @@
+{
+  emailer.email(12);
+  Argument<Person> argument=new Argument<Person>();
+  verify(emailService).sendEmailTo(argument.capture());
+  assertEquals(12,argument.value().getAge());
+}
