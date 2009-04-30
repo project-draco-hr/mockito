@@ -1,4 +1,0 @@
-{
-  this.argument=(T)argument;
-  return true;
-}

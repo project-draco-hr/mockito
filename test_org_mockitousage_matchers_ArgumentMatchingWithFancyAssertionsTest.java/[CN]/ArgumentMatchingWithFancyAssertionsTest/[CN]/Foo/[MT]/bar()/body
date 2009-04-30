@@ -1,0 +1,4 @@
+{
+  Person person=new Person(12);
+  methods.simpleMethod(person);
+}
