@@ -1,4 +1,3 @@
 {
-  MockingProgress mockingProgress=new ThreadSafeMockingProgress();
-  mockingProgress.validateState();
+  MOCKITO_CORE.validateMockitoUsage();
 }
