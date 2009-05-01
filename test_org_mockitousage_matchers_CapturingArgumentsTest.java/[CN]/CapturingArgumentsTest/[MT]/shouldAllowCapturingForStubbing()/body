@@ -1,6 +1,6 @@
 {
-  Argument<Person> argument=new Argument<Person>();
+  ArgumentCaptor<Person> argument=new ArgumentCaptor<Person>();
   when(emailService.sendEmailTo(argument.capture())).thenReturn(false);
   emailService.sendEmailTo(new Person(10));
-  assertEquals(10,argument.value().getAge());
+  assertEquals(10,argument.getValue().getAge());
 }

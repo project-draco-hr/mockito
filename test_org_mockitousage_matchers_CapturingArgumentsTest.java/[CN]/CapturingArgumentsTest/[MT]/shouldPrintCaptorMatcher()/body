@@ -1,0 +1,10 @@
+{
+  ArgumentCaptor<Person> person=new ArgumentCaptor<Person>();
+  try {
+    verify(emailService).sendEmailTo(person.capture());
+    fail();
+  }
+ catch (  WantedButNotInvoked e) {
+    assertContains("<Capturing argument>",e.getMessage());
+  }
+}

@@ -1,7 +1,7 @@
 {
-  Argument<Person> argument=new Argument<Person>();
+  ArgumentCaptor<Person> argument=new ArgumentCaptor<Person>();
   try {
-    argument.value();
+    argument.getValue();
     fail();
   }
  catch (  MockitoException e) {

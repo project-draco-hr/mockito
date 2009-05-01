@@ -1,6 +1,6 @@
 {
   emailService.sendEmailTo(null);
-  Argument<Person> argument=new Argument<Person>();
+  ArgumentCaptor<Person> argument=new ArgumentCaptor<Person>();
   verify(emailService).sendEmailTo(argument.capture());
-  assertEquals(null,argument.value());
+  assertEquals(null,argument.getValue());
 }
