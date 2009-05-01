@@ -1,0 +1,5 @@
+{
+  runner=new MockitoJUnitRunner(DummyTest.class);
+  runner.run(notifier);
+  assertThat(notifier.addedListeners,contains(clazz(FrameworkUsageValidator.class)));
+}

@@ -1,0 +1,9 @@
+{
+  super.testFinished(description);
+  try {
+    Mockito.validateMockitoUsage();
+  }
+ catch (  Throwable t) {
+    notifier.fireTestFailure(new Failure(description,t));
+  }
+}

@@ -1,0 +1,6 @@
+{
+  runner=new VerboseMockitoJUnitRunner(DummyTest.class);
+  runner.run(notifier);
+  assertEquals(2,notifier.addedListeners.size());
+  assertThat(notifier.addedListeners,contains(clazz(FrameworkUsageValidator.class)));
+}
