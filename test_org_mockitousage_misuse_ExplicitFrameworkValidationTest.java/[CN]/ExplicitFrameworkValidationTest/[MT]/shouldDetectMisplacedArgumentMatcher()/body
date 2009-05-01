@@ -1,7 +1,7 @@
 {
   anyObject();
   try {
-    MockitoTroubleshooter.validateFrameworkState();
+    Mockito.validateMockitoUsage();
     fail();
   }
  catch (  InvalidUseOfMatchersException e) {

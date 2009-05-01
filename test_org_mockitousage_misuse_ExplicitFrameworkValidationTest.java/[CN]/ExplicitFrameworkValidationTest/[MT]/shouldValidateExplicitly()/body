@@ -1,7 +1,7 @@
 {
   verify(mock);
   try {
-    MockitoTroubleshooter.validateFrameworkState();
+    Mockito.validateMockitoUsage();
     fail();
   }
  catch (  UnfinishedVerificationException e) {
