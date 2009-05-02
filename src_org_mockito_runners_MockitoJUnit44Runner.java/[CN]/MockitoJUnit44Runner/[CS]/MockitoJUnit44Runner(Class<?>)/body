@@ -1,3 +1,3 @@
 {
-  this.runner=new JUnit44RunnerImpl(klass);
+  super(klass);
 }
