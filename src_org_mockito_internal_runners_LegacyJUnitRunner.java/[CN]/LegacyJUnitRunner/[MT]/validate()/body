@@ -1,5 +1,0 @@
-{
-  MethodValidator methodValidator=new MethodValidator(fTestClass);
-  methodValidator.validateMethodsForDefaultRunner();
-  methodValidator.assertValid();
-}

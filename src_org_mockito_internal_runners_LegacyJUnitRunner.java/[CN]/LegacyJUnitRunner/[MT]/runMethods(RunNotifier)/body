@@ -1,5 +1,0 @@
-{
-  for (  Method method : fTestMethods) {
-    invokeTestMethod(method,notifier);
-  }
-}

@@ -1,0 +1,5 @@
+{
+  Object test=super.createTest();
+  MockitoAnnotations.initMocks(test);
+  return test;
+}

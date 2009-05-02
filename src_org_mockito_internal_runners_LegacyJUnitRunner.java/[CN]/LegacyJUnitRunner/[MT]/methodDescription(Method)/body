@@ -1,3 +1,0 @@
-{
-  return Description.createTestDescription(getTestClass().getJavaClass(),testName(method),testAnnotations(method));
-}

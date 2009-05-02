@@ -1,0 +1,4 @@
+{
+  System.out.println(getStuff());
+  return 0;
+}

@@ -1,4 +1,0 @@
-{
-  notifier.addListener(new FrameworkUsageValidator(notifier));
-  legacyRunner.run(notifier);
-}
