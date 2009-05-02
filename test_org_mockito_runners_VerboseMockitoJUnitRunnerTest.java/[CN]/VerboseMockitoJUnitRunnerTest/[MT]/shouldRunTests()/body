@@ -1,8 +1,0 @@
-{
-  runner.run(notifier,new JunitTestBody(){
-    public void run(    RunNotifier notifier){
-      throw new RunWasCalled();
-    }
-  }
-);
-}

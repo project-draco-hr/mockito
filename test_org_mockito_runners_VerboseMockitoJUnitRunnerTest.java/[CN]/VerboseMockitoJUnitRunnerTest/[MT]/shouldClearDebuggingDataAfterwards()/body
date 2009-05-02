@@ -1,12 +1,13 @@
 {
   final DebuggingInfo debuggingInfo=new ThreadSafeMockingProgress().getDebuggingInfo();
-  runner.run(notifier,new JunitTestBody(){
-    public void run(    RunNotifier notifier){
+  runner=new VerboseMockitoJUnitRunner(this.getClass(),loggerStub){
+    @Override public void runTest(    RunNotifier notifier){
       unusedStubbingThatQualifiesForWarning();
       notifier.fireTestFailure(null);
       assertTrue(debuggingInfo.hasData());
     }
   }
-);
+;
+  runner.run(notifier);
   assertFalse(debuggingInfo.hasData());
 }

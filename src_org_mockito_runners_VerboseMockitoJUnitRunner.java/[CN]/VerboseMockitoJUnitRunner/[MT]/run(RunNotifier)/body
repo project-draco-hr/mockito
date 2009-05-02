@@ -1,8 +1,7 @@
 {
-  this.run(notifier,new JunitTestBody(){
-    public void run(    RunNotifier notifier){
-      VerboseMockitoJUnitRunner.super.run(notifier);
-    }
-  }
-);
+  MockingProgress progress=new ThreadSafeMockingProgress();
+  DebuggingInfo debuggingInfo=progress.getDebuggingInfo();
+  beforeRun(notifier,debuggingInfo);
+  this.runTest(notifier);
+  afterRun(debuggingInfo);
 }

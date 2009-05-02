@@ -1,6 +1,6 @@
 {
-  runner.run(notifier,new JunitTestBody(){
-    public void run(    RunNotifier notifier){
+  runner=new VerboseMockitoJUnitRunner(this.getClass(),loggerStub){
+    @Override public void runTest(    RunNotifier notifier){
       unusedStubbingThatQualifiesForWarning();
       notifier.fireTestFailure(null);
       String loggedInfo=loggerStub.getLoggedInfo();
@@ -9,5 +9,6 @@
       assertContains(".unusedStubbingThatQualifiesForWarning(",loggedInfo);
     }
   }
-);
+;
+  runner.run(notifier);
 }
