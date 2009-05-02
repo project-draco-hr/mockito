@@ -1,0 +1,11 @@
+{
+  ClassProvider provider=new ClassProvider(){
+    public boolean hasJUnit45OrHigher(){
+      return true;
+    }
+  }
+;
+  RunnerFactory factory=new RunnerFactory(provider);
+  Runner runner=factory.create(RunnerFactoryTest.class);
+  assertThat(runner,is(MockitoJUnit45AndUpRunner.class));
+}

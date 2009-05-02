@@ -1,0 +1,5 @@
+{
+  Class<?> runnerClass=Class.forName(runnerClassName);
+  Constructor<?> constructor=runnerClass.getConstructor(Class.class.getClass());
+  return (Runner)constructor.newInstance(constructorParam);
+}

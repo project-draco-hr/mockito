@@ -1,0 +1,19 @@
+{
+  ClassProvider provider=new ClassProvider(){
+    public boolean hasJUnit45OrHigher(){
+      return false;
+    }
+    public Runner newInstance(    String runnerClassName,    Class<?> constructorParam) throws Throwable {
+      throw new InitializationError("Where is JUnit, dude?");
+    }
+  }
+;
+  RunnerFactory factory=new RunnerFactory(provider);
+  try {
+    factory.create(RunnerFactoryTest.class);
+    fail();
+  }
+ catch (  MockitoException e) {
+    assertContains("upgrade your JUnit version",e.getMessage());
+  }
+}

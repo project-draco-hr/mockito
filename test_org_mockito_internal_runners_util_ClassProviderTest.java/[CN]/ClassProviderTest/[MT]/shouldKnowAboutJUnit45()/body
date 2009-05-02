@@ -1,0 +1,4 @@
+{
+  ClassProvider provider=new ClassProvider();
+  assertTrue(provider.hasJUnit45OrHigher());
+}
