@@ -1,3 +1,8 @@
 {
-  super(klass);
+  legacyRunner=new LegacyJUnitRunner(klass,new TestCreationListener(){
+    public void testCreated(    Object test){
+      MockitoAnnotations.initMocks(test);
+    }
+  }
+);
 }

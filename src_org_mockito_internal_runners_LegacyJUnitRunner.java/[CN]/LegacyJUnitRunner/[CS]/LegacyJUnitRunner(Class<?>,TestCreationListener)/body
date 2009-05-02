@@ -1,0 +1,6 @@
+{
+  this.testStartedCallback=testStartedCallback;
+  fTestClass=new TestClass(klass);
+  fTestMethods=getTestMethods();
+  validate();
+}

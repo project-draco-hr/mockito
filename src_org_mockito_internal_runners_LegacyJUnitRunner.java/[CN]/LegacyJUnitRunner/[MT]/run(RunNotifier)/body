@@ -1,0 +1,8 @@
+{
+  new ClassRoadie(notifier,fTestClass,getDescription(),new Runnable(){
+    public void run(){
+      runMethods(notifier);
+    }
+  }
+).runProtected();
+}

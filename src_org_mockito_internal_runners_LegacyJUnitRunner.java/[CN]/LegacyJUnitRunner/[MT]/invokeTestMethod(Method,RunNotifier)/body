@@ -1,0 +1,17 @@
+{
+  Description description=methodDescription(method);
+  Object test;
+  try {
+    test=createTest();
+  }
+ catch (  InvocationTargetException e) {
+    testAborted(notifier,description,e.getCause());
+    return;
+  }
+catch (  Exception e) {
+    testAborted(notifier,description,e);
+    return;
+  }
+  TestMethod testMethod=wrapMethod(method);
+  new MethodRoadie(test,testMethod,notifier,description).run();
+}

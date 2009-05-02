@@ -1,0 +1,8 @@
+{
+  Collections.sort(fTestMethods,new Comparator<Method>(){
+    public int compare(    Method o1,    Method o2){
+      return sorter.compare(methodDescription(o1),methodDescription(o2));
+    }
+  }
+);
+}

@@ -1,0 +1,5 @@
+{
+  Object test=getTestClass().getConstructor().newInstance();
+  testStartedCallback.testCreated(test);
+  return test;
+}
