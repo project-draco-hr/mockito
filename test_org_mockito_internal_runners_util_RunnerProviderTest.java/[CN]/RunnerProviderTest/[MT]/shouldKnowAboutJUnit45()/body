@@ -1,0 +1,4 @@
+{
+  RunnerProvider provider=new RunnerProvider();
+  assertTrue(provider.isJUnit45OrHigherAvailable());
+}

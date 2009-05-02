@@ -1,0 +1,5 @@
+{
+  RunnerProvider provider=new RunnerProvider();
+  Runner runner=provider.newInstance("org.mockito.internal.runners.MockitoJUnit45AndUpRunner",this.getClass());
+  assertNotNull(runner);
+}

@@ -1,6 +1,6 @@
 {
   try {
-    if (classProvider.hasJUnit45OrHigher()) {
+    if (classProvider.isJUnit45OrHigherAvailable()) {
       return classProvider.newInstance("org.mockito.internal.runners.MockitoJUnit45AndUpRunner",klass);
     }
  else {

@@ -1,6 +1,6 @@
 {
-  ClassProvider provider=new ClassProvider(){
-    public boolean hasJUnit45OrHigher(){
+  RunnerProvider provider=new RunnerProvider(){
+    public boolean isJUnit45OrHigherAvailable(){
       return false;
     }
   }
