@@ -1,4 +1,4 @@
 {
   notifier.addListener(new FrameworkUsageValidator(notifier));
-  super.run(notifier);
+  runner.run(notifier);
 }

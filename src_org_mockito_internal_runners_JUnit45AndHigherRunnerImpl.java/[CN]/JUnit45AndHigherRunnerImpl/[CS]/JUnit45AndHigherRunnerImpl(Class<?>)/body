@@ -1,0 +1,9 @@
+{
+  runner=new BlockJUnit4ClassRunner(klass){
+    protected Statement withBefores(    FrameworkMethod method,    Object target,    Statement statement){
+      MockitoAnnotations.initMocks(target);
+      return super.withBefores(method,target,statement);
+    }
+  }
+;
+}

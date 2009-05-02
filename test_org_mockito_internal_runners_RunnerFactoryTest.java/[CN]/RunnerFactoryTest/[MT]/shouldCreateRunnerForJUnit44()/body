@@ -6,6 +6,6 @@
   }
 ;
   RunnerFactory factory=new RunnerFactory(provider);
-  Runner runner=factory.create(RunnerFactoryTest.class);
-  assertThat(runner,is(MockitoJUnit44RunnerImpl.class));
+  RunnerImpl runner=factory.create(RunnerFactoryTest.class);
+  assertThat(runner,is(JUnit44RunnerImpl.class));
 }
