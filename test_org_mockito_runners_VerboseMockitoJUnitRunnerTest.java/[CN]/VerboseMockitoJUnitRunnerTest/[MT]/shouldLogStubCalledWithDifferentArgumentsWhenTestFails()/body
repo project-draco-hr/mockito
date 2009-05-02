@@ -1,6 +1,6 @@
 {
-  runner=new VerboseMockitoJUnitRunner(this.getClass(),loggerStub){
-    @Override public void runTest(    RunNotifier notifier){
+  runner=new VerboseMockitoJUnitRunner(this.getClass(),loggerStub,new RunnerImplStub(){
+    @Override public void run(    RunNotifier notifier){
       someStubbing();
       callStubbedMethodWithDifferentArgs();
       notifier.fireTestFailure(null);
@@ -14,6 +14,6 @@
       assertContains(".callStubbedMethodWithDifferentArgs(",loggedInfo);
     }
   }
-;
+);
   runner.run(notifier);
 }

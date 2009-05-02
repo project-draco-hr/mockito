@@ -2,6 +2,6 @@
   MockingProgress progress=new ThreadSafeMockingProgress();
   DebuggingInfo debuggingInfo=progress.getDebuggingInfo();
   beforeRun(notifier,debuggingInfo);
-  this.runTest(notifier);
+  runner.run(notifier);
   afterRun(debuggingInfo);
 }
