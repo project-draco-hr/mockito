@@ -1,0 +1,4 @@
+{
+  String name=mock.getName();
+  assertEquals("Default name",name);
+}

@@ -1,0 +1,5 @@
+{
+  when(mock.guessName()).thenReturn("John");
+  String name=mock.getName();
+  assertEquals("John",name);
+}

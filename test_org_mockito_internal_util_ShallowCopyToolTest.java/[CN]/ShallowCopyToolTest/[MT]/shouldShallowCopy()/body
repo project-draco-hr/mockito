@@ -1,0 +1,7 @@
+{
+  SomeObject first=new SomeObject(100);
+  SomeObject second=new SomeObject(200);
+  assertEquals(200,second.fieldFive);
+  tool.copy(first,second);
+  assertEquals(100,second.fieldFive);
+}

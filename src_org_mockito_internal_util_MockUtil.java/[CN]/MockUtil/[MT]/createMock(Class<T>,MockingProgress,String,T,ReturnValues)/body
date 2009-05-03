@@ -3,6 +3,13 @@
   MockHandler<T> mockHandler=new MockHandler<T>(new MockName(mockName,classToMock),progress,new MatchersBinder(),returnValues);
   MethodInterceptorFilter<MockHandler<T>> filter=new MethodInterceptorFilter<MockHandler<T>>(classToMock,mockHandler);
   T mock=ClassImposterizer.INSTANCE.imposterise(filter,classToMock);
+  if (optionalInstance != null) {
+    try {
+      new ShallowCopyTool().copy(optionalInstance,mock);
+    }
+ catch (    UnableToCopyFieldValue e) {
+    }
+  }
   filter.setInstance(optionalInstance != null ? optionalInstance : mock);
   return mock;
 }

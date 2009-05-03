@@ -1,0 +1,4 @@
+{
+  mock.getName();
+  verify(mock).guessName();
+}
