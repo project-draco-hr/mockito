@@ -29,6 +29,6 @@
     return returnValues.valueFor(invocation);
   }
  else {
-    return methodProxy.invoke(instance,args);
+    return methodProxy.invokeSuper(proxy,args);
   }
 }

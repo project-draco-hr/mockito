@@ -1,4 +1,4 @@
 {
-  mock.getName();
-  verify(mock).guessName();
+  spy.getName();
+  verify(spy).guessName();
 }

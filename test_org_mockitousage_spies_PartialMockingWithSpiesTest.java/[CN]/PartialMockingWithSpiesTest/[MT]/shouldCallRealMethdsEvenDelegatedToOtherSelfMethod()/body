@@ -1,4 +1,4 @@
 {
-  String name=mock.getName();
+  String name=spy.getName();
   assertEquals("Default name",name);
 }

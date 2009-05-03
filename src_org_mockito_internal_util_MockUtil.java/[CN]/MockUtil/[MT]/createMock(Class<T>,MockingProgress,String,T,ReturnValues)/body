@@ -5,7 +5,7 @@
   T mock=ClassImposterizer.INSTANCE.imposterise(filter,classToMock);
   if (optionalInstance != null) {
     try {
-      new ShallowCopyTool().copy(optionalInstance,mock);
+      new ShallowCopyTool().copyToMock(optionalInstance,mock);
     }
  catch (    UnableToCopyFieldValue e) {
     }
