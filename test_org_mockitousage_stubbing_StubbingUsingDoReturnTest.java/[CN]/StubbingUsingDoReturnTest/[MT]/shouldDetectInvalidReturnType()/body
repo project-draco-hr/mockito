@@ -4,6 +4,6 @@
     fail();
   }
  catch (  Exception e) {
-    assertContains("String cannot be returned by booleanObjectReturningMethod" + "\n" + "booleanObjectReturningMethod should return Boolean",e.getMessage());
+    assertContains("String cannot be returned by booleanObjectReturningMethod()" + "\n" + "booleanObjectReturningMethod() should return Boolean",e.getMessage());
   }
 }
