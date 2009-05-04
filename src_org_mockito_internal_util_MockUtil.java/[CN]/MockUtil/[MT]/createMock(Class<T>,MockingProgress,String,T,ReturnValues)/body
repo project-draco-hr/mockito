@@ -4,11 +4,7 @@
   MethodInterceptorFilter<MockHandler<T>> filter=new MethodInterceptorFilter<MockHandler<T>>(classToMock,mockHandler);
   T mock=ClassImposterizer.INSTANCE.imposterise(filter,classToMock);
   if (optionalInstance != null) {
-    try {
-      new ShallowCopyTool().copyToMock(optionalInstance,mock);
-    }
- catch (    UnableToCopyFieldValue e) {
-    }
+    new LenientCopyTool().copyToMock(optionalInstance,mock);
   }
   filter.setInstance(optionalInstance != null ? optionalInstance : mock);
   return mock;

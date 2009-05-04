@@ -1,0 +1,4 @@
+{
+  Object value=field.get(from);
+  field.set(to,value);
+}
