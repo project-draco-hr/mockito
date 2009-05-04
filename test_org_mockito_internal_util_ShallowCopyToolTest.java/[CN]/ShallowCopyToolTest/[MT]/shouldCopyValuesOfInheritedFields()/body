@@ -1,0 +1,9 @@
+{
+  ((InheritMe)from).privateInherited="foo";
+  ((InheritMe)from).protectedInherited="bar";
+  assertNotEquals(((InheritMe)from).privateInherited,((InheritMe)to).privateInherited);
+  assertNotEquals(((InheritMe)from).privateInherited,((InheritMe)to).privateInherited);
+  tool.copyToMock(from,to);
+  assertEquals(((InheritMe)from).privateInherited,((InheritMe)to).privateInherited);
+  assertEquals(((InheritMe)from).privateInherited,((InheritMe)to).privateInherited);
+}
