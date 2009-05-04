@@ -1,0 +1,5 @@
+{
+  registeredInvocations.removeLast();
+  mockitoStubber.addAnswer(answer);
+  return new ConsecutiveStubbing<T>(mockitoStubber);
+}
