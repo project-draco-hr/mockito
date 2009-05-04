@@ -1,0 +1,46 @@
+{
+  if (this == obj) {
+    return true;
+  }
+  if (obj == null) {
+    return false;
+  }
+  if (getClass() != obj.getClass()) {
+    return false;
+  }
+  final SomeObject other=(SomeObject)obj;
+  if (defaultField == null) {
+    if (other.defaultField != null) {
+      return false;
+    }
+  }
+ else   if (!defaultField.equals(other.defaultField)) {
+    return false;
+  }
+  if (finalField != other.finalField) {
+    return false;
+  }
+  if (instancePublicField == null) {
+    if (other.instancePublicField != null) {
+      return false;
+    }
+  }
+ else   if (!instancePublicField.equals(other.instancePublicField)) {
+    return false;
+  }
+  if (privateField != other.privateField) {
+    return false;
+  }
+  if (privateTransientField != other.privateTransientField) {
+    return false;
+  }
+  if (protectedField == null) {
+    if (other.protectedField != null) {
+      return false;
+    }
+  }
+ else   if (!protectedField.equals(other.protectedField)) {
+    return false;
+  }
+  return true;
+}

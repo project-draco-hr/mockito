@@ -1,0 +1,6 @@
+{
+  assertEquals(100,from.finalField);
+  assertNotEquals(100,to.finalField);
+  tool.copyToMock(from,to);
+  assertEquals(100,to.finalField);
+}

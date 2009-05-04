@@ -1,6 +1,6 @@
 {
-  first.privateTransientField=1000;
-  assertNotEquals(1000,second.privateTransientField);
-  tool.copyToMock(first,second);
-  assertEquals(1000,second.privateTransientField);
+  from.privateTransientField=1000;
+  assertNotEquals(1000,to.privateTransientField);
+  tool.copyToMock(from,to);
+  assertEquals(1000,to.privateTransientField);
 }

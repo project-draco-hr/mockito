@@ -1,5 +1,5 @@
 {
-  LinkedList from=new LinkedList();
-  LinkedList to=mock(LinkedList.class);
-  tool.copyToMock(from,to);
+  LinkedList fromList=new LinkedList();
+  LinkedList toList=mock(LinkedList.class);
+  tool.copyToMock(fromList,toList);
 }
