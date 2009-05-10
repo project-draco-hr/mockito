@@ -1,5 +1,0 @@
-Class<T> classToMock
-AncillaryTypes implementing
-String name
-T optionalInstance
-ReturnValues returnValues

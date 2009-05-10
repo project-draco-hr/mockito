@@ -1,0 +1,4 @@
+{
+  this.extraInterfaces=extraInterfaces;
+  return this;
+}

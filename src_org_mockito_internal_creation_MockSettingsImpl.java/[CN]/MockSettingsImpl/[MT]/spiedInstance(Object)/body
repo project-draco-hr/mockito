@@ -1,0 +1,4 @@
+{
+  this.spiedInstance=spiedInstance;
+  return this;
+}
