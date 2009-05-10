@@ -1,0 +1,4 @@
+{
+  SomeClass mock=ClassImposterizer.INSTANCE.imposterise(new MethodInterceptorStub(),SomeClass.class,SomeInterface.class);
+  assertThat(mock,is(instanceOf(SomeInterface.class)));
+}

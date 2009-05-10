@@ -1,5 +1,5 @@
 Class<T> classToMock
-MockingProgress progress
-String mockName
+AncillaryTypes implementing
+String name
 T optionalInstance
 ReturnValues returnValues

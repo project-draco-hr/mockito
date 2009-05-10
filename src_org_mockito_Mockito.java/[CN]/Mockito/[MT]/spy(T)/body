@@ -1,3 +1,3 @@
 {
-  return MOCKITO_CORE.mock((Class<T>)object.getClass(),null,object,RETURNS_DEFAULTS);
+  return MOCKITO_CORE.mock((Class<T>)object.getClass(),null,null,object,RETURNS_DEFAULTS);
 }

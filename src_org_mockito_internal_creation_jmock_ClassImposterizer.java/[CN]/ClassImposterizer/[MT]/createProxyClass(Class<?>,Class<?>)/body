@@ -11,10 +11,11 @@
   enhancer.setUseFactory(true);
   if (mockedType.isInterface()) {
     enhancer.setSuperclass(Object.class);
-    enhancer.setInterfaces(prepend(mockedType));
+    enhancer.setInterfaces(prepend(mockedType,interfaces));
   }
  else {
     enhancer.setSuperclass(mockedType);
+    enhancer.setInterfaces(interfaces);
   }
   enhancer.setCallbackTypes(new Class[]{MethodInterceptor.class,NoOp.class});
   enhancer.setCallbackFilter(IGNORE_BRIDGE_METHODS);

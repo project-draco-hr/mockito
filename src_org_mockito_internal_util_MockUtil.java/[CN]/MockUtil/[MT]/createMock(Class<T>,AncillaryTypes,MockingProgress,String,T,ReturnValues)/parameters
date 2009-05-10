@@ -1,0 +1,6 @@
+Class<T> classToMock
+AncillaryTypes ancillaryTypes
+MockingProgress progress
+String mockName
+T optionalInstance
+ReturnValues returnValues

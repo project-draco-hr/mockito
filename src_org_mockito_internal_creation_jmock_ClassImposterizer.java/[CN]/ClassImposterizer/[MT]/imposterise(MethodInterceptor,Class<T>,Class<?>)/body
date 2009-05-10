@@ -1,7 +1,7 @@
 {
   try {
     setConstructorsAccessible(mockedType,true);
-    Class<?> proxyClass=createProxyClass(mockedType);
+    Class<?> proxyClass=createProxyClass(mockedType,ancillaryTypes);
     return mockedType.cast(createProxy(proxyClass,interceptor));
   }
   finally {

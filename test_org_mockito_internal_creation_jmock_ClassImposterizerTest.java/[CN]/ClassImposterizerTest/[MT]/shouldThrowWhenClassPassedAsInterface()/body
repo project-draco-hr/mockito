@@ -1,0 +1,3 @@
+{
+  ClassImposterizer.INSTANCE.imposterise(new MethodInterceptorStub(),SomeInterface.class,SomeClass.class);
+}
