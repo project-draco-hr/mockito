@@ -2,7 +2,7 @@
   if (mock == null) {
     reporter.nullPassedToVerify();
   }
- else   if (!MockUtil.isMock(mock)) {
+ else   if (!mockUtil.isMock(mock)) {
     reporter.notAMockPassedToVerify();
   }
   mockingProgress.verificationStarted(mode);

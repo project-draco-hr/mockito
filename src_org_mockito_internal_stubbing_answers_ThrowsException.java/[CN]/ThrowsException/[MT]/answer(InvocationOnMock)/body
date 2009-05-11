@@ -1,5 +1,5 @@
 {
-  if (MockUtil.isMock(throwable)) {
+  if (new MockUtil().isMock(throwable)) {
     throw throwable;
   }
   Throwable t=throwable.fillInStackTrace();

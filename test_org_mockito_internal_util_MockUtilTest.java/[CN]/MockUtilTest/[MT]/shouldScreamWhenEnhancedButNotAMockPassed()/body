@@ -1,7 +1,7 @@
 {
   Object o=Enhancer.create(ArrayList.class,NoOp.INSTANCE);
   try {
-    MockUtil.getMockHandler(o);
+    mockUtil.getMockHandler(o);
     fail();
   }
  catch (  NotAMockException e) {
