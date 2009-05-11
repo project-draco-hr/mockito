@@ -1,0 +1,9 @@
+{
+  try {
+    mock(Foo.class,configureWith().extraInterfaces());
+    fail();
+  }
+ catch (  MockitoException e) {
+    assertContains("extraInterfaces() requires at least one interface",e.getMessage());
+  }
+}

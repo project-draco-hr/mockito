@@ -1,6 +1,5 @@
 {
-  MockSettingsImpl settings=new MockSettingsImpl();
-  settings.extraInterfaces(List.class,Set.class);
-  assertEquals(List.class,settings.getExtraInterfaces()[0]);
-  assertEquals(Set.class,settings.getExtraInterfaces()[1]);
+  mockSettingsImpl.extraInterfaces(List.class,Set.class);
+  assertEquals(List.class,mockSettingsImpl.getExtraInterfaces()[0]);
+  assertEquals(Set.class,mockSettingsImpl.getExtraInterfaces()[1]);
 }

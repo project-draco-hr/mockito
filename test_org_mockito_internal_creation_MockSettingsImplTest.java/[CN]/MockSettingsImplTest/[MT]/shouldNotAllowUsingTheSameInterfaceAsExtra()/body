@@ -1,8 +1,3 @@
 {
-  try {
-    new MockSettingsImpl().extraInterfaces(List.class,LinkedList.class);
-    fail();
-  }
- catch (  MockitoException e) {
-  }
+  mockSettingsImpl.extraInterfaces(List.class,LinkedList.class);
 }

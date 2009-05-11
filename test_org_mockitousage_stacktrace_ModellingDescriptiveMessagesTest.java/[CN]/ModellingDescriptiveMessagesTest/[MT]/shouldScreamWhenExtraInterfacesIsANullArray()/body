@@ -1,0 +1,3 @@
+{
+  mock(IMethods.class,configureWith().extraInterfaces((Class[])null));
+}
