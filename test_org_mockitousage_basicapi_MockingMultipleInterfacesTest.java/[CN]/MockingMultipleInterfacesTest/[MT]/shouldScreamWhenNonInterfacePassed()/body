@@ -1,0 +1,9 @@
+{
+  try {
+    mock(Foo.class,configureWith().extraInterfaces(Foo.class));
+    fail();
+  }
+ catch (  MockitoException e) {
+    assertContains("Foo which is not an interface",e.getMessage());
+  }
+}

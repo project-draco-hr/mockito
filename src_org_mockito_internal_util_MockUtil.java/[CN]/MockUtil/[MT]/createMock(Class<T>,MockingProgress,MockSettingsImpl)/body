@@ -1,5 +1,6 @@
 {
-  validateType(classToMock);
+  creationValidator.validateType(classToMock);
+  creationValidator.validateExtraInterfaces(classToMock,settings.getExtraInterfaces());
   MockName mockName=new MockName(settings.getMockName(),classToMock);
   MockHandler<T> mockHandler=new MockHandler<T>(mockName,progress,new MatchersBinder(),settings.getReturnValues());
   MethodInterceptorFilter<MockHandler<T>> filter=new MethodInterceptorFilter<MockHandler<T>>(classToMock,mockHandler);

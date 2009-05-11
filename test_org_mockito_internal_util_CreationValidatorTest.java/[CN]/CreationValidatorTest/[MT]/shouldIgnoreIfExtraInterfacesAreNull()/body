@@ -1,0 +1,4 @@
+{
+  CreationValidator validator=new CreationValidator();
+  validator.validateExtraInterfaces(IMethods.class,(Class[])null);
+}

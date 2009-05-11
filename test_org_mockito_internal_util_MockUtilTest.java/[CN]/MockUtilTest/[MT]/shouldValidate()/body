@@ -1,0 +1,7 @@
+{
+  assertFalse(((CreationValidatorStub)MockUtil.creationValidator).extraInterfacesValidated);
+  assertFalse(((CreationValidatorStub)MockUtil.creationValidator).typeValidated);
+  MockUtil.createMock(IMethods.class,new ThreadSafeMockingProgress(),new MockSettingsImpl());
+  assertTrue(((CreationValidatorStub)MockUtil.creationValidator).extraInterfacesValidated);
+  assertTrue(((CreationValidatorStub)MockUtil.creationValidator).typeValidated);
+}

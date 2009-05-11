@@ -1,0 +1,9 @@
+{
+  try {
+    mock(Foo.class,configureWith().extraInterfaces(IFoo.class,null));
+    fail();
+  }
+ catch (  MockitoException e) {
+    assertContains("extraInterfaces() does not accept null parameters",e.getMessage());
+  }
+}
