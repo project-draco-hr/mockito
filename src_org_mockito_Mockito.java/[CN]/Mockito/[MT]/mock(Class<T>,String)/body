@@ -1,3 +1,3 @@
 {
-  return MOCKITO_CORE.mock(classToMock,configureWith().name(name).defaultBehavior(RETURNS_DEFAULTS));
+  return MOCKITO_CORE.mock(classToMock,withSettings().name(name).defaultBehavior(RETURNS_DEFAULTS));
 }

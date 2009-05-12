@@ -1,0 +1,4 @@
+{
+  MockSettingsImpl settings=(MockSettingsImpl)Mockito.withSettings();
+  assertEquals(Mockito.RETURNS_DEFAULTS,settings.getReturnValues());
+}

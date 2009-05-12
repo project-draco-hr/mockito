@@ -1,0 +1,12 @@
+{
+  IMethods mock=mock(IMethods.class,withSettings().defaultBehavior(RETURNS_SMART_NULLS).name("great mockie"));
+  IMethods smartNull=mock.iMethodsReturningMethod();
+  String name=mock.toString();
+  assertContains("great mockie",name);
+  try {
+    smartNull.simpleMethod();
+    fail();
+  }
+ catch (  SmartNullPointerException e) {
+  }
+}

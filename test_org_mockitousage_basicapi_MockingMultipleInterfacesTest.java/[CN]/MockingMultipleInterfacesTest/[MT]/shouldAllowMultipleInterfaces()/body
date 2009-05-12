@@ -1,5 +1,5 @@
 {
-  Foo mock=mock(Foo.class,configureWith().extraInterfaces(IFoo.class,IBar.class));
+  Foo mock=mock(Foo.class,withSettings().extraInterfaces(IFoo.class,IBar.class));
   assertThat(mock,is(IFoo.class));
   assertThat(mock,is(IBar.class));
 }

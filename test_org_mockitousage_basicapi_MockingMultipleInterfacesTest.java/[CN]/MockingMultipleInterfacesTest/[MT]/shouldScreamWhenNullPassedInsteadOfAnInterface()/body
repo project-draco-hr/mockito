@@ -1,6 +1,6 @@
 {
   try {
-    mock(Foo.class,configureWith().extraInterfaces(IFoo.class,null));
+    mock(Foo.class,withSettings().extraInterfaces(IFoo.class,null));
     fail();
   }
  catch (  MockitoException e) {
