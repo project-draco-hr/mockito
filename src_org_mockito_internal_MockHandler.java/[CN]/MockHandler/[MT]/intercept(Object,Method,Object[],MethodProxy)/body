@@ -26,8 +26,8 @@
     mockingProgress.getDebuggingInfo().reportUsedStub(invocationMatcher);
     return answer.answer(invocation);
   }
- else   if (new MockUtil().isMock(instance)) {
-    return returnValues.valueFor(invocation);
+ else   if (mockSettings.isSpy() == false) {
+    return mockSettings.getReturnValues().valueFor(invocation);
   }
  else {
     Object ret=methodProxy.invokeSuper(proxy,args);

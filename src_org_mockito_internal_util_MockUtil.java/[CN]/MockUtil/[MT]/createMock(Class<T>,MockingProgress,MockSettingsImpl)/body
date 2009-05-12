@@ -2,7 +2,7 @@
   creationValidator.validateType(classToMock);
   creationValidator.validateExtraInterfaces(classToMock,settings.getExtraInterfaces());
   MockName mockName=new MockName(settings.getMockName(),classToMock);
-  MockHandler<T> mockHandler=new MockHandler<T>(mockName,progress,new MatchersBinder(),settings.getReturnValues());
+  MockHandler<T> mockHandler=new MockHandler<T>(mockName,progress,new MatchersBinder(),settings);
   MethodInterceptorFilter<MockHandler<T>> filter=new MethodInterceptorFilter<MockHandler<T>>(classToMock,mockHandler);
   Class<?>[] ancillaryTypes=settings.getExtraInterfaces();
   Class<?>[] interfaces=ancillaryTypes == null ? new Class<?>[0] : ancillaryTypes;
@@ -11,6 +11,5 @@
   if (optionalInstance != null) {
     new LenientCopyTool().copyToMock(optionalInstance,mock);
   }
-  filter.setInstance(optionalInstance != null ? optionalInstance : mock);
   return mock;
 }
