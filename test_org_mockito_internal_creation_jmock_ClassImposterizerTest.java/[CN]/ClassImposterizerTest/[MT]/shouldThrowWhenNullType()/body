@@ -1,3 +1,0 @@
-{
-  ClassImposterizer.INSTANCE.imposterise(new MethodInterceptorStub(),SomeClass.class,(Class<?>)null);
-}
