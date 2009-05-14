@@ -1,0 +1,13 @@
+{
+  buf.setLength(0);
+  appendComa(valueNumber++);
+  if (name != null) {
+    buf.append(name).append('=');
+  }
+  appendDescriptor(FIELD_DESCRIPTOR,desc);
+  buf.append('.').append(value);
+  text.add(buf.toString());
+  if (av != null) {
+    av.visitEnum(name,desc,value);
+  }
+}

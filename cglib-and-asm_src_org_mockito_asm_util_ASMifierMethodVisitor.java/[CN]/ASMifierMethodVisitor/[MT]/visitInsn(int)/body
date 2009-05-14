@@ -1,0 +1,5 @@
+{
+  buf.setLength(0);
+  buf.append("mv.visitInsn(").append(OPCODES[opcode]).append(");\n");
+  text.add(buf.toString());
+}

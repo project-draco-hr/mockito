@@ -1,0 +1,6 @@
+{
+  if (!v.equals(w)) {
+    return BasicValue.UNINITIALIZED_VALUE;
+  }
+  return v;
+}

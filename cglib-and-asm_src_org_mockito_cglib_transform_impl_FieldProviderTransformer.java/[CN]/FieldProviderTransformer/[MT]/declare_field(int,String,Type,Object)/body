@@ -1,0 +1,6 @@
+{
+  super.declare_field(access,name,type,value);
+  if (!TypeUtils.isStatic(access)) {
+    fields.put(name,type);
+  }
+}

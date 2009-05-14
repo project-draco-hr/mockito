@@ -1,0 +1,33 @@
+{
+  if (start) {
+    throw new IllegalStateException("visit must be called only once");
+  }
+  start=true;
+  checkState();
+  checkAccess(access,Opcodes.ACC_PUBLIC + Opcodes.ACC_FINAL + Opcodes.ACC_SUPER+ Opcodes.ACC_INTERFACE+ Opcodes.ACC_ABSTRACT+ Opcodes.ACC_SYNTHETIC+ Opcodes.ACC_ANNOTATION+ Opcodes.ACC_ENUM+ Opcodes.ACC_DEPRECATED);
+  if (name == null || !name.endsWith("package-info")) {
+    CheckMethodAdapter.checkInternalName(name,"class name");
+  }
+  if ("java/lang/Object".equals(name)) {
+    if (superName != null) {
+      throw new IllegalArgumentException("The super class name of the Object class must be 'null'");
+    }
+  }
+ else {
+    CheckMethodAdapter.checkInternalName(superName,"super class name");
+  }
+  if (signature != null) {
+    CheckMethodAdapter.checkClassSignature(signature);
+  }
+  if ((access & Opcodes.ACC_INTERFACE) != 0) {
+    if (!"java/lang/Object".equals(superName)) {
+      throw new IllegalArgumentException("The super class name of interfaces must be 'java/lang/Object'");
+    }
+  }
+  if (interfaces != null) {
+    for (int i=0; i < interfaces.length; ++i) {
+      CheckMethodAdapter.checkInternalName(interfaces[i],"interface name at index " + i);
+    }
+  }
+  cv.visit(version,access,name,signature,superName,interfaces);
+}

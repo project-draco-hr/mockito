@@ -1,0 +1,3 @@
+{
+  return new TableSwitchInsnNode(min,max,clone(dflt,labels),clone(this.labels,labels));
+}

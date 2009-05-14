@@ -1,0 +1,38 @@
+{
+  if (cw.firstMethod == null) {
+    cw.firstMethod=this;
+  }
+ else {
+    cw.lastMethod.next=this;
+  }
+  cw.lastMethod=this;
+  this.cw=cw;
+  this.access=access;
+  this.name=cw.newUTF8(name);
+  this.desc=cw.newUTF8(desc);
+  this.descriptor=desc;
+  if (ClassReader.SIGNATURES) {
+    this.signature=signature;
+  }
+  if (exceptions != null && exceptions.length > 0) {
+    exceptionCount=exceptions.length;
+    this.exceptions=new int[exceptionCount];
+    for (int i=0; i < exceptionCount; ++i) {
+      this.exceptions[i]=cw.newClass(exceptions[i]);
+    }
+  }
+  this.compute=computeFrames ? FRAMES : (computeMaxs ? MAXS : NOTHING);
+  if (computeMaxs || computeFrames) {
+    if (computeFrames && "<init>".equals(name)) {
+      this.access|=ACC_CONSTRUCTOR;
+    }
+    int size=getArgumentsAndReturnSizes(descriptor) >> 2;
+    if ((access & Opcodes.ACC_STATIC) != 0) {
+      --size;
+    }
+    maxLocals=size;
+    labels=new Label();
+    labels.status|=Label.PUSHED;
+    visitLabel(labels);
+  }
+}

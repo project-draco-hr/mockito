@@ -1,0 +1,8 @@
+{
+  try {
+    return getMethod(type.getMethod(name,parameterTypes));
+  }
+ catch (  NoSuchMethodException e) {
+    throw new NoSuchMethodError(e.getMessage());
+  }
+}

@@ -1,0 +1,6 @@
+{
+  this.cv=cv;
+  fieldInfo=new HashMap();
+  staticInit=staticHook=null;
+  staticHookSig=null;
+}

@@ -1,0 +1,3 @@
+{
+  return ReflectUtils.getPropertyMethods(ReflectUtils.getBeanProperties(type),true,true);
+}

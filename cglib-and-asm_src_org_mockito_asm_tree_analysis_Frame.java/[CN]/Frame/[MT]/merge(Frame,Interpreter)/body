@@ -1,0 +1,14 @@
+{
+  if (top != frame.top) {
+    throw new AnalyzerException("Incompatible stack heights");
+  }
+  boolean changes=false;
+  for (int i=0; i < locals + top; ++i) {
+    Value v=interpreter.merge(values[i],frame.values[i]);
+    if (v != values[i]) {
+      values[i]=v;
+      changes|=true;
+    }
+  }
+  return changes;
+}

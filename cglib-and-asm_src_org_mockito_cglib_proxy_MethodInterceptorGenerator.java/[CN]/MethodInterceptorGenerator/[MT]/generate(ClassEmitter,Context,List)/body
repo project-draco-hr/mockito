@@ -1,0 +1,41 @@
+{
+  Map sigMap=new HashMap();
+  for (Iterator it=methods.iterator(); it.hasNext(); ) {
+    MethodInfo method=(MethodInfo)it.next();
+    Signature sig=method.getSignature();
+    Signature impl=context.getImplSignature(method);
+    String methodField=getMethodField(impl);
+    String methodProxyField=getMethodProxyField(impl);
+    sigMap.put(sig.toString(),methodProxyField);
+    ce.declare_field(Constants.PRIVATE_FINAL_STATIC,methodField,METHOD,null);
+    ce.declare_field(Constants.PRIVATE_FINAL_STATIC,methodProxyField,METHOD_PROXY,null);
+    ce.declare_field(Constants.PRIVATE_FINAL_STATIC,EMPTY_ARGS_NAME,Constants.TYPE_OBJECT_ARRAY,null);
+    CodeEmitter e;
+    e=ce.begin_method(Constants.ACC_FINAL,impl,method.getExceptionTypes());
+    superHelper(e,method);
+    e.return_value();
+    e.end_method();
+    e=context.beginMethod(ce,method);
+    Label nullInterceptor=e.make_label();
+    context.emitCallback(e,context.getIndex(method));
+    e.dup();
+    e.ifnull(nullInterceptor);
+    e.load_this();
+    e.getfield(methodField);
+    if (sig.getArgumentTypes().length == 0) {
+      e.getfield(EMPTY_ARGS_NAME);
+    }
+ else {
+      e.create_arg_array();
+    }
+    e.getfield(methodProxyField);
+    e.invoke_interface(METHOD_INTERCEPTOR,INTERCEPT);
+    e.unbox_or_zero(sig.getReturnType());
+    e.return_value();
+    e.mark(nullInterceptor);
+    superHelper(e,method);
+    e.return_value();
+    e.end_method();
+  }
+  generateFindProxy(ce,sigMap);
+}

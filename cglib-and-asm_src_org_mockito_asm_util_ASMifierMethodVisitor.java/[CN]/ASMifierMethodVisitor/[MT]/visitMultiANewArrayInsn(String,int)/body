@@ -1,0 +1,7 @@
+{
+  buf.setLength(0);
+  buf.append("mv.visitMultiANewArrayInsn(");
+  appendConstant(desc);
+  buf.append(", ").append(dims).append(");\n");
+  text.add(buf.toString());
+}

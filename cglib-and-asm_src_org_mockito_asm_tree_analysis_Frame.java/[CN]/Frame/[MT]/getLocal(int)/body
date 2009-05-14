@@ -1,0 +1,6 @@
+{
+  if (i >= locals) {
+    throw new IndexOutOfBoundsException("Trying to access an inexistant local variable");
+  }
+  return values[i];
+}

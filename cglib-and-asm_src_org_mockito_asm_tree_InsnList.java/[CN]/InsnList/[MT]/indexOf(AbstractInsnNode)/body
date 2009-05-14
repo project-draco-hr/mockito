@@ -1,0 +1,9 @@
+{
+  if (check && !contains(insn)) {
+    throw new IllegalArgumentException();
+  }
+  if (cache == null) {
+    cache=toArray();
+  }
+  return insn.index;
+}

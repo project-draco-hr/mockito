@@ -1,0 +1,12 @@
+{
+  endFormals();
+  if (seenParameter) {
+    declaration.append(", ");
+  }
+ else {
+    seenParameter=true;
+    declaration.append('(');
+  }
+  startType();
+  return this;
+}

@@ -1,0 +1,4 @@
+{
+  Type t=((BasicValue)value).getType();
+  return t != null && ("Lnull;".equals(t.getDescriptor()) || t.getSort() == Type.ARRAY);
+}

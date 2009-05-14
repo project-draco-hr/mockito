@@ -1,0 +1,13 @@
+{
+  Map buckets=new HashMap();
+  for (Iterator it=c.iterator(); it.hasNext(); ) {
+    Object value=(Object)it.next();
+    Object key=t.transform(value);
+    List bucket=(List)buckets.get(key);
+    if (bucket == null) {
+      buckets.put(key,bucket=new LinkedList());
+    }
+    bucket.add(value);
+  }
+  return buckets;
+}

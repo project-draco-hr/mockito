@@ -1,0 +1,11 @@
+{
+  buf.setLength(0);
+  buf.append("// ATTRIBUTE ").append(attr.type).append('\n');
+  if (attr instanceof ASMifiable) {
+    buf.append("{\n");
+    ((ASMifiable)attr).asmify(buf,"attr",labelNames);
+    buf.append(name).append(".visitAttribute(attr);\n");
+    buf.append("}\n");
+  }
+  text.add(buf.toString());
+}

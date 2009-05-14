@@ -1,0 +1,9 @@
+{
+  if (next == null) {
+    return size();
+  }
+  if (cache == null) {
+    cache=toArray();
+  }
+  return next.index;
+}

@@ -1,0 +1,29 @@
+{
+  if (len1 == 0 || len2 == 0) {
+    return;
+  }
+  if (len1 + len2 == 2) {
+    if (compare(pivot,lo) < 0) {
+      swap(pivot,lo);
+    }
+    return;
+  }
+  int first_cut, second_cut;
+  int len11, len22;
+  if (len1 > len2) {
+    len11=len1 / 2;
+    first_cut=lo + len11;
+    second_cut=lower(pivot,hi,first_cut);
+    len22=second_cut - pivot;
+  }
+ else {
+    len22=len2 / 2;
+    second_cut=pivot + len22;
+    first_cut=upper(lo,pivot,second_cut);
+    len11=first_cut - lo;
+  }
+  rotate(first_cut,pivot,second_cut);
+  int new_mid=first_cut + len22;
+  merge(lo,first_cut,new_mid,len11,len22);
+  merge(new_mid,second_cut,hi,len1 - len11,len2 - len22);
+}

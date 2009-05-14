@@ -1,0 +1,3 @@
+PropertyDescriptor[] properties
+boolean read
+boolean write

@@ -1,0 +1,4 @@
+{
+  this.protectedOk=protectedOk;
+  pkg=TypeUtils.getPackageName(Type.getType(source));
+}

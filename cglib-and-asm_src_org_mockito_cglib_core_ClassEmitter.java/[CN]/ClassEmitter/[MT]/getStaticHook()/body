@@ -1,0 +1,13 @@
+{
+  if (TypeUtils.isInterface(getAccess())) {
+    throw new IllegalStateException("static hook is invalid for this class");
+  }
+  if (staticHook == null) {
+    staticHookSig=new Signature("CGLIB$STATICHOOK" + getNextHook(),"()V");
+    staticHook=begin_method(Constants.ACC_STATIC,staticHookSig,null);
+    if (staticInit != null) {
+      staticInit.invoke_static_this(staticHookSig);
+    }
+  }
+  return staticHook;
+}

@@ -1,0 +1,59 @@
+{
+  Label skip=e.make_label();
+  Label end=e.make_label();
+  if (TypeUtils.isPrimitive(type)) {
+switch (type.getSort()) {
+case Type.INT:
+case Type.SHORT:
+case Type.BYTE:
+      e.invoke_virtual(Constants.TYPE_STRING_BUFFER,APPEND_INT);
+    break;
+case Type.DOUBLE:
+  e.invoke_virtual(Constants.TYPE_STRING_BUFFER,APPEND_DOUBLE);
+break;
+case Type.FLOAT:
+e.invoke_virtual(Constants.TYPE_STRING_BUFFER,APPEND_FLOAT);
+break;
+case Type.LONG:
+e.invoke_virtual(Constants.TYPE_STRING_BUFFER,APPEND_LONG);
+break;
+case Type.BOOLEAN:
+e.invoke_virtual(Constants.TYPE_STRING_BUFFER,APPEND_BOOLEAN);
+break;
+case Type.CHAR:
+e.invoke_virtual(Constants.TYPE_STRING_BUFFER,APPEND_CHAR);
+break;
+}
+}
+ else if (TypeUtils.isArray(type)) {
+e.dup();
+e.ifnull(skip);
+e.swap();
+if (delims != null && delims.before != null && !"".equals(delims.before)) {
+e.push(delims.before);
+e.invoke_virtual(Constants.TYPE_STRING_BUFFER,APPEND_STRING);
+e.swap();
+}
+EmitUtils.process_array(e,type,callback);
+shrinkStringBuffer(e,2);
+if (delims != null && delims.after != null && !"".equals(delims.after)) {
+e.push(delims.after);
+e.invoke_virtual(Constants.TYPE_STRING_BUFFER,APPEND_STRING);
+}
+}
+ else {
+e.dup();
+e.ifnull(skip);
+if (customizer != null) {
+customizer.customize(e,type);
+}
+e.invoke_virtual(Constants.TYPE_OBJECT,TO_STRING);
+e.invoke_virtual(Constants.TYPE_STRING_BUFFER,APPEND_STRING);
+}
+e.goTo(end);
+e.mark(skip);
+e.pop();
+e.push("null");
+e.invoke_virtual(Constants.TYPE_STRING_BUFFER,APPEND_STRING);
+e.mark(end);
+}

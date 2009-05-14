@@ -1,0 +1,12 @@
+{
+  int source=code.length;
+  code.putByte(Opcodes.LOOKUPSWITCH);
+  code.length+=(4 - code.length % 4) % 4;
+  dflt.put(this,code,source,true);
+  code.putInt(labels.length);
+  for (int i=0; i < labels.length; ++i) {
+    code.putInt(keys[i]);
+    labels[i].put(this,code,source,true);
+  }
+  visitSwitchInsn(dflt,labels);
+}

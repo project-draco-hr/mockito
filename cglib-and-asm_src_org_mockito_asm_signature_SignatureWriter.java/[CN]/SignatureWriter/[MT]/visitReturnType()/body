@@ -1,0 +1,8 @@
+{
+  endFormals();
+  if (!hasParameters) {
+    buf.append('(');
+  }
+  buf.append(')');
+  return this;
+}

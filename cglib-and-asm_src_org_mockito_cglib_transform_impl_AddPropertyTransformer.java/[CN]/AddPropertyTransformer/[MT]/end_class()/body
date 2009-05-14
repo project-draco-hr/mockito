@@ -1,0 +1,6 @@
+{
+  if (!TypeUtils.isAbstract(getAccess())) {
+    EmitUtils.add_properties(this,names,types);
+  }
+  super.end_class();
+}

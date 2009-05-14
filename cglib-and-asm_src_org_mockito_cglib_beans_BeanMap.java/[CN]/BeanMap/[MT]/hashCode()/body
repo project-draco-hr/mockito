@@ -1,0 +1,9 @@
+{
+  int code=0;
+  for (Iterator it=keySet().iterator(); it.hasNext(); ) {
+    Object key=it.next();
+    Object value=get(key);
+    code+=((key == null) ? 0 : key.hashCode()) ^ ((value == null) ? 0 : value.hashCode());
+  }
+  return code;
+}

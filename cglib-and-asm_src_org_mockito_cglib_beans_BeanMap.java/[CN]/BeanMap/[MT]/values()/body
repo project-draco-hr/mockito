@@ -1,0 +1,8 @@
+{
+  Set keys=keySet();
+  List values=new ArrayList(keys.size());
+  for (Iterator it=keys.iterator(); it.hasNext(); ) {
+    values.add(get(it.next()));
+  }
+  return Collections.unmodifiableCollection(values);
+}

@@ -1,0 +1,22 @@
+{
+switch (type.getSort()) {
+case Type.CHAR:
+    return Constants.TYPE_CHARACTER;
+case Type.BOOLEAN:
+  return Constants.TYPE_BOOLEAN;
+case Type.DOUBLE:
+return Constants.TYPE_DOUBLE;
+case Type.FLOAT:
+return Constants.TYPE_FLOAT;
+case Type.LONG:
+return Constants.TYPE_LONG;
+case Type.INT:
+return Constants.TYPE_INTEGER;
+case Type.SHORT:
+return Constants.TYPE_SHORT;
+case Type.BYTE:
+return Constants.TYPE_BYTE;
+default :
+return type;
+}
+}

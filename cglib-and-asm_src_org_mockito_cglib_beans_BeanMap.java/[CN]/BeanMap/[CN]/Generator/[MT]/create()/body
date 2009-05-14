@@ -1,0 +1,5 @@
+{
+  if (beanClass == null)   throw new IllegalArgumentException("Class of bean unknown");
+  setNamePrefix(beanClass.getName());
+  return (BeanMap)super.create(KEY_FACTORY.newInstance(beanClass,require));
+}

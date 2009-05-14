@@ -1,0 +1,5 @@
+{
+  if (!type.equals(Constants.TYPE_OBJECT)) {
+    emit_type(Constants.CHECKCAST,type);
+  }
+}

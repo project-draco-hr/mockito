@@ -1,0 +1,3 @@
+String className
+byte[] b
+ClassLoader loader

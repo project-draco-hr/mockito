@@ -1,0 +1,4 @@
+{
+  e.push(-1);
+  e.return_value();
+}

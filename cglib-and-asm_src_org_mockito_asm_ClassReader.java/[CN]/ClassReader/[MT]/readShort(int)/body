@@ -1,0 +1,4 @@
+{
+  byte[] b=this.b;
+  return (short)(((b[index] & 0xFF) << 8) | (b[index + 1] & 0xFF));
+}

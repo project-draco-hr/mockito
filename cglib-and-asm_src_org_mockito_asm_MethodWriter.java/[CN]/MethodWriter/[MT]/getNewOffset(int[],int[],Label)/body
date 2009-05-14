@@ -1,0 +1,6 @@
+{
+  if ((label.status & Label.RESIZED) == 0) {
+    label.position=getNewOffset(indexes,sizes,0,label.position);
+    label.status|=Label.RESIZED;
+  }
+}

@@ -1,0 +1,5 @@
+{
+  List methods=new ArrayList(Arrays.asList(type.getMethods()));
+  CollectionUtils.filter(methods,new RejectModifierPredicate(Modifier.FINAL | Modifier.STATIC));
+  return (Method[])methods.toArray(new Method[methods.size()]);
+}

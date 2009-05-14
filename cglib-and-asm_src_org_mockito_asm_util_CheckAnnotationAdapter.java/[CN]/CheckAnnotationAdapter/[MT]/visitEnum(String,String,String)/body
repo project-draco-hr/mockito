@@ -1,0 +1,11 @@
+{
+  checkEnd();
+  checkName(name);
+  CheckMethodAdapter.checkDesc(desc,false);
+  if (value == null) {
+    throw new IllegalArgumentException("Invalid enum value");
+  }
+  if (av != null) {
+    av.visitEnum(name,desc,value);
+  }
+}

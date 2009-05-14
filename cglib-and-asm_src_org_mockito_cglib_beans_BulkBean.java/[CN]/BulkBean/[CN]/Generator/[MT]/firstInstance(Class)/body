@@ -1,0 +1,12 @@
+{
+  BulkBean instance=(BulkBean)ReflectUtils.newInstance(type);
+  instance.target=target;
+  int length=getters.length;
+  instance.getters=new String[length];
+  System.arraycopy(getters,0,instance.getters,0,length);
+  instance.setters=new String[length];
+  System.arraycopy(setters,0,instance.setters,0,length);
+  instance.types=new Class[types.length];
+  System.arraycopy(types,0,instance.types,0,types.length);
+  return instance;
+}

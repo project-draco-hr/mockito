@@ -1,0 +1,9 @@
+{
+  for (int i=0; i < CALLBACKS.length; i++) {
+    CallbackInfo info=CALLBACKS[i];
+    if (info.type.equals(callbackType)) {
+      return info.generator;
+    }
+  }
+  throw new IllegalStateException("Unknown callback type " + callbackType);
+}

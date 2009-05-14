@@ -1,0 +1,5 @@
+{
+  if (mv != null) {
+    mv.visitCode();
+  }
+}

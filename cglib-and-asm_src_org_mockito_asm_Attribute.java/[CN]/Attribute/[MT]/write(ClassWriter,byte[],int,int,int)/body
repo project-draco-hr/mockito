@@ -1,0 +1,6 @@
+{
+  ByteVector v=new ByteVector();
+  v.data=value;
+  v.length=value.length;
+  return v;
+}

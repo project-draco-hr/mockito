@@ -1,0 +1,6 @@
+{
+  Attribute attr=new Attribute(type);
+  attr.value=new byte[len];
+  System.arraycopy(cr.b,off,attr.value,0,len);
+  return attr;
+}

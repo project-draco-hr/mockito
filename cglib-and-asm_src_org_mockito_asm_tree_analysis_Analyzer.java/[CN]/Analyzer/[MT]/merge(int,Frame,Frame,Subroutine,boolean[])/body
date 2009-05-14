@@ -1,0 +1,20 @@
+{
+  Frame oldFrame=frames[insn];
+  Subroutine oldSubroutine=subroutines[insn];
+  boolean changes;
+  afterRET.merge(beforeJSR,access);
+  if (oldFrame == null) {
+    frames[insn]=newFrame(afterRET);
+    changes=true;
+  }
+ else {
+    changes=oldFrame.merge(afterRET,access);
+  }
+  if (oldSubroutine != null && subroutineBeforeJSR != null) {
+    changes|=oldSubroutine.merge(subroutineBeforeJSR);
+  }
+  if (changes && !queued[insn]) {
+    queued[insn]=true;
+    queue[top++]=insn;
+  }
+}

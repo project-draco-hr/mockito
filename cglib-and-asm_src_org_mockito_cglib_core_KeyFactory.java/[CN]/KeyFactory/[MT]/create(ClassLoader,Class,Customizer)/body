@@ -1,0 +1,7 @@
+{
+  Generator gen=new Generator();
+  gen.setInterface(keyInterface);
+  gen.setCustomizer(customizer);
+  gen.setClassLoader(loader);
+  return gen.create();
+}

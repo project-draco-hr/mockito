@@ -1,0 +1,30 @@
+{
+switch (sort) {
+case VOID:
+    return "void";
+case BOOLEAN:
+  return "boolean";
+case CHAR:
+return "char";
+case BYTE:
+return "byte";
+case SHORT:
+return "short";
+case INT:
+return "int";
+case FLOAT:
+return "float";
+case LONG:
+return "long";
+case DOUBLE:
+return "double";
+case ARRAY:
+StringBuffer b=new StringBuffer(getElementType().getClassName());
+for (int i=getDimensions(); i > 0; --i) {
+b.append("[]");
+}
+return b.toString();
+default :
+return new String(buf,off,len).replace('/','.');
+}
+}

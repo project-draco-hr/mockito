@@ -1,0 +1,3 @@
+{
+  return ((ParallelSorter)ReflectUtils.newInstance(type)).newInstance(arrays);
+}

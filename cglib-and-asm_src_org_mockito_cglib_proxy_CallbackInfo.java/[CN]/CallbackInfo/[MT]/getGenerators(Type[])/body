@@ -1,0 +1,7 @@
+{
+  CallbackGenerator[] generators=new CallbackGenerator[callbackTypes.length];
+  for (int i=0; i < generators.length; i++) {
+    generators[i]=getGenerator(callbackTypes[i]);
+  }
+  return generators;
+}

@@ -1,0 +1,50 @@
+{
+  ClassNode cn=new ClassNode();
+  cr.accept(new CheckClassAdapter(cn),ClassReader.SKIP_DEBUG);
+  Type syperType=cn.superName == null ? null : Type.getObjectType(cn.superName);
+  List methods=cn.methods;
+  for (int i=0; i < methods.size(); ++i) {
+    MethodNode method=(MethodNode)methods.get(i);
+    Analyzer a=new Analyzer(new SimpleVerifier(Type.getObjectType(cn.name),syperType,false));
+    try {
+      a.analyze(cn.name,method);
+      if (!dump) {
+        continue;
+      }
+    }
+ catch (    Exception e) {
+      e.printStackTrace(pw);
+    }
+    Frame[] frames=a.getFrames();
+    TraceMethodVisitor mv=new TraceMethodVisitor();
+    pw.println(method.name + method.desc);
+    for (int j=0; j < method.instructions.size(); ++j) {
+      method.instructions.get(j).accept(mv);
+      StringBuffer s=new StringBuffer();
+      Frame f=frames[j];
+      if (f == null) {
+        s.append('?');
+      }
+ else {
+        for (int k=0; k < f.getLocals(); ++k) {
+          s.append(getShortName(f.getLocal(k).toString())).append(' ');
+        }
+        s.append(" : ");
+        for (int k=0; k < f.getStackSize(); ++k) {
+          s.append(getShortName(f.getStack(k).toString())).append(' ');
+        }
+      }
+      while (s.length() < method.maxStack + method.maxLocals + 1) {
+        s.append(' ');
+      }
+      pw.print(Integer.toString(j + 100000).substring(1));
+      pw.print(" " + s + " : "+ mv.buf);
+    }
+    for (int j=0; j < method.tryCatchBlocks.size(); ++j) {
+      ((TryCatchBlockNode)method.tryCatchBlocks.get(j)).accept(mv);
+      pw.print(" " + mv.buf);
+    }
+    pw.println();
+  }
+  pw.flush();
+}

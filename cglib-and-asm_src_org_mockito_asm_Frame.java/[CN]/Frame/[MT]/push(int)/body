@@ -1,0 +1,16 @@
+{
+  if (outputStack == null) {
+    outputStack=new int[10];
+  }
+  int n=outputStack.length;
+  if (outputStackTop >= n) {
+    int[] t=new int[Math.max(outputStackTop + 1,2 * n)];
+    System.arraycopy(outputStack,0,t,0,n);
+    outputStack=t;
+  }
+  outputStack[outputStackTop++]=type;
+  int top=owner.inputStackTop + outputStackTop;
+  if (top > owner.outputStackMax) {
+    owner.outputStackMax=top;
+  }
+}

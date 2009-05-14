@@ -1,0 +1,7 @@
+{
+  int amount=0;
+  for (int i=0; i < numArgs; i++) {
+    amount+=state.argumentTypes[i].getSize();
+  }
+  return amount;
+}

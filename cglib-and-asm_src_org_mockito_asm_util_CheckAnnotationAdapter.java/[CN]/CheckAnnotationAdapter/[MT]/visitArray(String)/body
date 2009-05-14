@@ -1,0 +1,5 @@
+{
+  checkEnd();
+  checkName(name);
+  return new CheckAnnotationAdapter(av == null ? null : av.visitArray(name),false);
+}

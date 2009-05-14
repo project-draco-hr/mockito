@@ -1,0 +1,3 @@
+{
+  instance_of(ce.getClassType());
+}

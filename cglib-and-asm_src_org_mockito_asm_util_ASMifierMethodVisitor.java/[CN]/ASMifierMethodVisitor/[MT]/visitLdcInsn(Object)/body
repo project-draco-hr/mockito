@@ -1,0 +1,7 @@
+{
+  buf.setLength(0);
+  buf.append("mv.visitLdcInsn(");
+  appendConstant(cst);
+  buf.append(");\n");
+  text.add(buf.toString());
+}

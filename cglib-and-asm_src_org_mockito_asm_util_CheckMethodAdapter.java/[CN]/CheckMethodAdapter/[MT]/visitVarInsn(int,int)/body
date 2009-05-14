@@ -1,0 +1,7 @@
+{
+  checkStartCode();
+  checkEndCode();
+  checkOpcode(opcode,2);
+  checkUnsignedShort(var,"Invalid variable index");
+  mv.visitVarInsn(opcode,var);
+}

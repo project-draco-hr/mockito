@@ -1,0 +1,8 @@
+{
+  buf.setLength(0);
+  declareLabel(label);
+  buf.append("mv.visitJumpInsn(").append(OPCODES[opcode]).append(", ");
+  appendLabel(label);
+  buf.append(");\n");
+  text.add(buf.toString());
+}

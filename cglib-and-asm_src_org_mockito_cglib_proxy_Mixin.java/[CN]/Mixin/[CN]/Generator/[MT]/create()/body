@@ -1,0 +1,34 @@
+{
+  if (classes == null && delegates == null) {
+    throw new IllegalStateException("Either classes or delegates must be set");
+  }
+switch (style) {
+case STYLE_INTERFACES:
+    if (classes == null) {
+      Route r=route(delegates);
+      classes=r.classes;
+      route=r.route;
+    }
+  break;
+case STYLE_BEANS:
+case STYLE_EVERYTHING:
+if (classes == null) {
+  classes=ReflectUtils.getClasses(delegates);
+}
+ else {
+  if (delegates != null) {
+    Class[] temp=ReflectUtils.getClasses(delegates);
+    if (classes.length != temp.length) {
+      throw new IllegalStateException("Specified classes are incompatible with delegates");
+    }
+    for (int i=0; i < classes.length; i++) {
+      if (!classes[i].isAssignableFrom(temp[i])) {
+        throw new IllegalStateException("Specified class " + classes[i] + " is incompatible with delegate class "+ temp[i]+ " (index "+ i+ ")");
+      }
+    }
+  }
+}
+}
+setNamePrefix(classes[ReflectUtils.findPackageProtected(classes)].getName());
+return (Mixin)super.create(KEY_FACTORY.newInstance(style,ReflectUtils.getNames(classes),route));
+}

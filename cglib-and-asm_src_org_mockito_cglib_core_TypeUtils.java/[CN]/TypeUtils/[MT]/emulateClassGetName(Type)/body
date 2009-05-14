@@ -1,0 +1,8 @@
+{
+  if (isArray(type)) {
+    return type.getDescriptor().replace('/','.');
+  }
+ else {
+    return getClassName(type);
+  }
+}

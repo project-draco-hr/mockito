@@ -1,0 +1,11 @@
+{
+  key.set(value);
+  Item result=get(key);
+  if (result == null) {
+    pool.putByte(LONG).putLong(value);
+    result=new Item(index,key);
+    put(result);
+    index+=2;
+  }
+  return result;
+}

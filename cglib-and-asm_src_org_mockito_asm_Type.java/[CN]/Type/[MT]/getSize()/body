@@ -1,0 +1,3 @@
+{
+  return sort == LONG || sort == DOUBLE ? 2 : 1;
+}

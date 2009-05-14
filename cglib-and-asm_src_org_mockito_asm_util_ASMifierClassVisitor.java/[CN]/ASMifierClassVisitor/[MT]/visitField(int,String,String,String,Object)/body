@@ -1,0 +1,20 @@
+{
+  buf.setLength(0);
+  buf.append("{\n");
+  buf.append("fv = cw.visitField(");
+  appendAccess(access | ACCESS_FIELD);
+  buf.append(", ");
+  appendConstant(name);
+  buf.append(", ");
+  appendConstant(desc);
+  buf.append(", ");
+  appendConstant(signature);
+  buf.append(", ");
+  appendConstant(value);
+  buf.append(");\n");
+  text.add(buf.toString());
+  ASMifierFieldVisitor aav=new ASMifierFieldVisitor();
+  text.add(aav.getText());
+  text.add("}\n");
+  return aav;
+}

@@ -1,0 +1,5 @@
+{
+  FieldNode fn=new FieldNode(access,name,desc,signature,value);
+  fields.add(fn);
+  return fn;
+}

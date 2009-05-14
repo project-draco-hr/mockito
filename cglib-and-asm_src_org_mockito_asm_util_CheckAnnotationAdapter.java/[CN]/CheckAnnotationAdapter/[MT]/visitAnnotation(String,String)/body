@@ -1,0 +1,6 @@
+{
+  checkEnd();
+  checkName(name);
+  CheckMethodAdapter.checkDesc(desc,false);
+  return new CheckAnnotationAdapter(av == null ? null : av.visitAnnotation(name,desc));
+}

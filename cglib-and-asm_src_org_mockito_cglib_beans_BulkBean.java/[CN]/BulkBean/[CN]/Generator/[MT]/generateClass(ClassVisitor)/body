@@ -1,0 +1,3 @@
+{
+  new BulkBeanEmitter(v,getClassName(),target,getters,setters,types);
+}

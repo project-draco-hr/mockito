@@ -1,0 +1,21 @@
+{
+  if (currentBlock != null) {
+    if (compute == FRAMES) {
+      currentBlock.frame.execute(Opcodes.LOOKUPSWITCH,0,null,null);
+      addSuccessor(Edge.NORMAL,dflt);
+      dflt.getFirst().status|=Label.TARGET;
+      for (int i=0; i < labels.length; ++i) {
+        addSuccessor(Edge.NORMAL,labels[i]);
+        labels[i].getFirst().status|=Label.TARGET;
+      }
+    }
+ else {
+      --stackSize;
+      addSuccessor(stackSize,dflt);
+      for (int i=0; i < labels.length; ++i) {
+        addSuccessor(stackSize,labels[i]);
+      }
+    }
+    noSuccessor();
+  }
+}

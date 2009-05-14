@@ -1,0 +1,3 @@
+{
+  return ((MulticastDelegate)instance).newInstance();
+}

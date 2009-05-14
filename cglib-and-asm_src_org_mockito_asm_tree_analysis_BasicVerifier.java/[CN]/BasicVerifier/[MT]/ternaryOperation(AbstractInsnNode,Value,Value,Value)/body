@@ -1,0 +1,55 @@
+{
+  Value expected1;
+  Value expected3;
+switch (insn.getOpcode()) {
+case IASTORE:
+    expected1=newValue(Type.getType("[I"));
+  expected3=BasicValue.INT_VALUE;
+break;
+case BASTORE:
+if (isSubTypeOf(value1,newValue(Type.getType("[Z")))) {
+expected1=newValue(Type.getType("[Z"));
+}
+ else {
+expected1=newValue(Type.getType("[B"));
+}
+expected3=BasicValue.INT_VALUE;
+break;
+case CASTORE:
+expected1=newValue(Type.getType("[C"));
+expected3=BasicValue.INT_VALUE;
+break;
+case SASTORE:
+expected1=newValue(Type.getType("[S"));
+expected3=BasicValue.INT_VALUE;
+break;
+case LASTORE:
+expected1=newValue(Type.getType("[J"));
+expected3=BasicValue.LONG_VALUE;
+break;
+case FASTORE:
+expected1=newValue(Type.getType("[F"));
+expected3=BasicValue.FLOAT_VALUE;
+break;
+case DASTORE:
+expected1=newValue(Type.getType("[D"));
+expected3=BasicValue.DOUBLE_VALUE;
+break;
+case AASTORE:
+expected1=value1;
+expected3=BasicValue.REFERENCE_VALUE;
+break;
+default :
+throw new Error("Internal error.");
+}
+if (!isSubTypeOf(value1,expected1)) {
+throw new AnalyzerException("First argument","a " + expected1 + " array reference",value1);
+}
+ else if (value2 != BasicValue.INT_VALUE) {
+throw new AnalyzerException("Second argument",BasicValue.INT_VALUE,value2);
+}
+ else if (!isSubTypeOf(value3,expected3)) {
+throw new AnalyzerException("Third argument",expected3,value3);
+}
+return null;
+}

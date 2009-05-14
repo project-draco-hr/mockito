@@ -1,0 +1,8 @@
+{
+  if (superclass != null) {
+    setNamePrefix(superclass.getName());
+  }
+  String superName=(superclass != null) ? superclass.getName() : "java.lang.Object";
+  Object key=KEY_FACTORY.newInstance(superName,props);
+  return super.create(key);
+}

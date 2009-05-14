@@ -1,0 +1,3 @@
+{
+  emit_type(Constants.NEW,type);
+}

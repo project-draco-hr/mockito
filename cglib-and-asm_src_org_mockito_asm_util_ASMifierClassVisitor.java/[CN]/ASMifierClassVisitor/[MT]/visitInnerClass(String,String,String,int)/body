@@ -1,0 +1,13 @@
+{
+  buf.setLength(0);
+  buf.append("cw.visitInnerClass(");
+  appendConstant(name);
+  buf.append(", ");
+  appendConstant(outerName);
+  buf.append(", ");
+  appendConstant(innerName);
+  buf.append(", ");
+  appendAccess(access | ACCESS_INNER);
+  buf.append(");\n\n");
+  text.add(buf.toString());
+}

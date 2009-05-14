@@ -1,0 +1,3 @@
+ClassVisitor classVisitor
+Attribute[] attrs
+int flags

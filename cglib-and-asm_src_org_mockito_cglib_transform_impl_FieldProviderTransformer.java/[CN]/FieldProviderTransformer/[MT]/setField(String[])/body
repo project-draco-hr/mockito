@@ -1,0 +1,19 @@
+{
+  final CodeEmitter e=begin_method(Constants.ACC_PUBLIC,PROVIDER_SET,null);
+  e.load_this();
+  e.load_arg(1);
+  e.load_arg(0);
+  EmitUtils.string_switch(e,names,Constants.SWITCH_STYLE_HASH,new ObjectSwitchCallback(){
+    public void processCase(    Object key,    Label end){
+      Type type=(Type)fields.get(key);
+      e.unbox(type);
+      e.putfield((String)key);
+      e.return_value();
+    }
+    public void processDefault(){
+      e.throw_exception(ILLEGAL_ARGUMENT_EXCEPTION,"Unknown field name");
+    }
+  }
+);
+  e.end_method();
+}

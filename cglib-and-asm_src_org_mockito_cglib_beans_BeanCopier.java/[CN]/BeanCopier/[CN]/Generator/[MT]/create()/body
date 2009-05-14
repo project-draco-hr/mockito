@@ -1,0 +1,4 @@
+{
+  Object key=KEY_FACTORY.newInstance(source.getName(),target.getName(),useConverter);
+  return (BeanCopier)super.create(key);
+}

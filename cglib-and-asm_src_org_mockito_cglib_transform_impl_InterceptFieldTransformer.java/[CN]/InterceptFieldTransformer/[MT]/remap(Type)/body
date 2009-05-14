@@ -1,0 +1,9 @@
+{
+switch (type.getSort()) {
+case Type.OBJECT:
+case Type.ARRAY:
+    return Constants.TYPE_OBJECT;
+default :
+  return type;
+}
+}

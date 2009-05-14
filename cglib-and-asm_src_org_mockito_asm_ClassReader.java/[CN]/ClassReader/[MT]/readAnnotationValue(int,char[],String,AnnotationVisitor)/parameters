@@ -1,0 +1,4 @@
+int v
+char[] buf
+String name
+AnnotationVisitor av

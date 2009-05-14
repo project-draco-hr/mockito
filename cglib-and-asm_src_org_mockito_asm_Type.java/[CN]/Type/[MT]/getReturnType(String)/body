@@ -1,0 +1,4 @@
+{
+  char[] buf=methodDescriptor.toCharArray();
+  return getType(buf,methodDescriptor.indexOf(')') + 1);
+}

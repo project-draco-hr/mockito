@@ -1,0 +1,10 @@
+{
+  if (type != METHOD_SIGNATURE || (state & (EMPTY | FORMAL | BOUND| PARAM)) == 0) {
+    throw new IllegalArgumentException();
+  }
+  state=RETURN;
+  SignatureVisitor v=sv == null ? null : sv.visitReturnType();
+  CheckSignatureAdapter cv=new CheckSignatureAdapter(TYPE_SIGNATURE,v);
+  cv.canBeVoid=true;
+  return cv;
+}

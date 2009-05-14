@@ -1,0 +1,7 @@
+{
+  new_instance(type);
+  dup();
+  push(msg);
+  invoke_constructor(type,CSTRUCT_STRING);
+  athrow();
+}

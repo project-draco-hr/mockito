@@ -1,0 +1,3 @@
+{
+  mv.visitVarInsn(opcode,var);
+}

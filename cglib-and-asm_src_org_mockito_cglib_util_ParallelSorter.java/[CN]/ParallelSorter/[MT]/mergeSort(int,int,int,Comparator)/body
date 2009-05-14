@@ -1,0 +1,4 @@
+{
+  chooseComparer(index,cmp);
+  super.mergeSort(lo,hi - 1);
+}

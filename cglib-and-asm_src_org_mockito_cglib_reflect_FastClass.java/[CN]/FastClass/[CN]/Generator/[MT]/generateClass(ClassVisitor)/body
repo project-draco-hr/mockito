@@ -1,0 +1,3 @@
+{
+  new FastClassEmitter(v,getClassName(),type);
+}

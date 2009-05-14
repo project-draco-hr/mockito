@@ -1,0 +1,5 @@
+{
+  buf.setLength(0);
+  buf.append("av").append(id).append(".visitEnd();\n");
+  text.add(buf.toString());
+}

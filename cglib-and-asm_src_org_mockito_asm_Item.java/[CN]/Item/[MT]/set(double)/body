@@ -1,0 +1,5 @@
+{
+  this.type=ClassWriter.DOUBLE;
+  this.longVal=Double.doubleToRawLongBits(doubleVal);
+  this.hashCode=0x7FFFFFFF & (type + (int)doubleVal);
+}

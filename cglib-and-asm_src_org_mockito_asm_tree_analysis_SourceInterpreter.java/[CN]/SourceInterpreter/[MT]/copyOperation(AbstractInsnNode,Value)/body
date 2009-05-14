@@ -1,0 +1,3 @@
+{
+  return new SourceValue(value.getSize(),insn);
+}

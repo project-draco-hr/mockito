@@ -1,0 +1,22 @@
+{
+  Type componentType=TypeUtils.getComponentType(type);
+  Local array=e.make_local();
+  Local loopvar=e.make_local(Type.INT_TYPE);
+  Label loopbody=e.make_label();
+  Label checkloop=e.make_label();
+  e.store_local(array);
+  e.push(0);
+  e.store_local(loopvar);
+  e.goTo(checkloop);
+  e.mark(loopbody);
+  e.load_local(array);
+  e.load_local(loopvar);
+  e.array_load(componentType);
+  callback.processElement(componentType);
+  e.iinc(loopvar,1);
+  e.mark(checkloop);
+  e.load_local(loopvar);
+  e.load_local(array);
+  e.arraylength();
+  e.if_icmp(e.LT,loopbody);
+}

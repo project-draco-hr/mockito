@@ -1,0 +1,20 @@
+{
+  boolean flag=cstruct.isAccessible();
+  try {
+    cstruct.setAccessible(true);
+    Object result=cstruct.newInstance(args);
+    return result;
+  }
+ catch (  InstantiationException e) {
+    throw new CodeGenerationException(e);
+  }
+catch (  IllegalAccessException e) {
+    throw new CodeGenerationException(e);
+  }
+catch (  InvocationTargetException e) {
+    throw new CodeGenerationException(e.getTargetException());
+  }
+ finally {
+    cstruct.setAccessible(flag);
+  }
+}

@@ -1,0 +1,9 @@
+{
+  Class protoclass=(instance instanceof Class) ? (Class)instance : instance.getClass();
+  if (classOnly) {
+    return protoclass;
+  }
+ else {
+    return ReflectUtils.newInstance(protoclass);
+  }
+}

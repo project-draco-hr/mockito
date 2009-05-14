@@ -1,0 +1,5 @@
+{
+  this.cls=cls;
+  this.generator=generator;
+  type=Type.getType(cls);
+}

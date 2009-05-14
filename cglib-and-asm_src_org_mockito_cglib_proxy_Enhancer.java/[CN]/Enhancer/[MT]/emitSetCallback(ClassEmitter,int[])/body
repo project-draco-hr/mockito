@@ -1,0 +1,18 @@
+{
+  final CodeEmitter e=ce.begin_method(Constants.ACC_PUBLIC,SET_CALLBACK,null);
+  e.load_arg(0);
+  e.process_switch(keys,new ProcessSwitchCallback(){
+    public void processCase(    int key,    Label end){
+      e.load_this();
+      e.load_arg(1);
+      e.checkcast(callbackTypes[key]);
+      e.putfield(getCallbackField(key));
+      e.goTo(end);
+    }
+    public void processDefault(){
+    }
+  }
+);
+  e.return_value();
+  e.end_method();
+}

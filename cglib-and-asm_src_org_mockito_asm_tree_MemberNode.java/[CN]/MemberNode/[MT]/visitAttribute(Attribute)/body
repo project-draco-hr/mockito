@@ -1,0 +1,6 @@
+{
+  if (attrs == null) {
+    attrs=new ArrayList(1);
+  }
+  attrs.add(attr);
+}

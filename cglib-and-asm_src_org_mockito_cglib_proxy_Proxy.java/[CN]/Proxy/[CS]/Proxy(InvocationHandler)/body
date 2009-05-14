@@ -1,0 +1,4 @@
+{
+  Enhancer.registerCallbacks(getClass(),new Callback[]{h,null});
+  this.h=h;
+}

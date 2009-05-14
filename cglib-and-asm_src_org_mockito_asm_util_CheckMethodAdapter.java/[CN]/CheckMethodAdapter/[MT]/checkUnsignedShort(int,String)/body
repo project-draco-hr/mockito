@@ -1,0 +1,5 @@
+{
+  if (value < 0 || value > 65535) {
+    throw new IllegalArgumentException(msg + " (must be an unsigned short): " + value);
+  }
+}

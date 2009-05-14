@@ -1,0 +1,6 @@
+{
+  separator=seenInterface ? ", " : isInterface ? " extends " : " implements ";
+  seenInterface=true;
+  startType();
+  return this;
+}

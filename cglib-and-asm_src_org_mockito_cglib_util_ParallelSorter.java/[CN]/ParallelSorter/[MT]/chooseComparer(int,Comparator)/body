@@ -1,0 +1,28 @@
+{
+  Object array=a[index];
+  Class type=array.getClass().getComponentType();
+  if (type.equals(Integer.TYPE)) {
+    comparer=new IntComparer((int[])array);
+  }
+ else   if (type.equals(Long.TYPE)) {
+    comparer=new LongComparer((long[])array);
+  }
+ else   if (type.equals(Double.TYPE)) {
+    comparer=new DoubleComparer((double[])array);
+  }
+ else   if (type.equals(Float.TYPE)) {
+    comparer=new FloatComparer((float[])array);
+  }
+ else   if (type.equals(Short.TYPE)) {
+    comparer=new ShortComparer((short[])array);
+  }
+ else   if (type.equals(Byte.TYPE)) {
+    comparer=new ByteComparer((byte[])array);
+  }
+ else   if (cmp != null) {
+    comparer=new ComparatorComparer((Object[])array,cmp);
+  }
+ else {
+    comparer=new ObjectComparer((Object[])array);
+  }
+}

@@ -1,0 +1,3 @@
+{
+  return begin_method(access,new Signature(name,desc),TypeUtils.fromInternalNames(exceptions));
+}

@@ -1,0 +1,3 @@
+{
+  return Arrays.asList(o).subList(0,n);
+}

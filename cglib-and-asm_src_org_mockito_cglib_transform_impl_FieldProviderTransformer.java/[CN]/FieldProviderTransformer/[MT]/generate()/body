@@ -1,0 +1,16 @@
+{
+  final String[] names=(String[])fields.keySet().toArray(new String[fields.size()]);
+  int indexes[]=new int[names.length];
+  for (int i=0; i < indexes.length; i++) {
+    indexes[i]=i;
+  }
+  super.declare_field(Constants.PRIVATE_FINAL_STATIC,FIELD_NAMES,Constants.TYPE_STRING_ARRAY,null);
+  super.declare_field(Constants.PRIVATE_FINAL_STATIC,FIELD_TYPES,Constants.TYPE_CLASS_ARRAY,null);
+  initFieldProvider(names);
+  getNames();
+  getTypes();
+  getField(names);
+  setField(names);
+  setByIndex(names,indexes);
+  getByIndex(names,indexes);
+}

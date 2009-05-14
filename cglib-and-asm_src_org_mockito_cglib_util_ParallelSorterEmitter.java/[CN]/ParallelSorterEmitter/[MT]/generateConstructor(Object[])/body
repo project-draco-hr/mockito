@@ -1,0 +1,20 @@
+{
+  CodeEmitter e=begin_method(Constants.ACC_PUBLIC,CSTRUCT_OBJECT_ARRAY,null);
+  e.load_this();
+  e.super_invoke_constructor();
+  e.load_this();
+  e.load_arg(0);
+  e.super_putfield("a",Constants.TYPE_OBJECT_ARRAY);
+  for (int i=0; i < arrays.length; i++) {
+    Type type=Type.getType(arrays[i].getClass());
+    declare_field(Constants.ACC_PRIVATE,getFieldName(i),type,null);
+    e.load_this();
+    e.load_arg(0);
+    e.push(i);
+    e.aaload();
+    e.checkcast(type);
+    e.putfield(getFieldName(i));
+  }
+  e.return_value();
+  e.end_method();
+}

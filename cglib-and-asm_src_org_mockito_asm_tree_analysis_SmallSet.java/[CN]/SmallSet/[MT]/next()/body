@@ -1,0 +1,6 @@
+{
+  Object e=e1;
+  e1=e2;
+  e2=null;
+  return e;
+}

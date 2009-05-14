@@ -1,0 +1,3 @@
+{
+  return getPropertiesHelper(type,true,false);
+}

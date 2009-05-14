@@ -1,0 +1,41 @@
+{
+  String signature=this.signature;
+  int len=signature.length();
+  int pos;
+  char c;
+  if (signature.charAt(0) == '<') {
+    pos=2;
+    do {
+      int end=signature.indexOf(':',pos);
+      v.visitFormalTypeParameter(signature.substring(pos - 1,end));
+      pos=end + 1;
+      c=signature.charAt(pos);
+      if (c == 'L' || c == '[' || c == 'T') {
+        pos=parseType(signature,pos,v.visitClassBound());
+      }
+      while ((c=signature.charAt(pos++)) == ':') {
+        pos=parseType(signature,pos,v.visitInterfaceBound());
+      }
+    }
+ while (c != '>');
+  }
+ else {
+    pos=0;
+  }
+  if (signature.charAt(pos) == '(') {
+    pos++;
+    while (signature.charAt(pos) != ')') {
+      pos=parseType(signature,pos,v.visitParameterType());
+    }
+    pos=parseType(signature,pos + 1,v.visitReturnType());
+    while (pos < len) {
+      pos=parseType(signature,pos + 1,v.visitExceptionType());
+    }
+  }
+ else {
+    pos=parseType(signature,pos,v.visitSuperclass());
+    while (pos < len) {
+      pos=parseType(signature,pos,v.visitInterface());
+    }
+  }
+}

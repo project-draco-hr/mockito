@@ -1,0 +1,4 @@
+{
+  mv1.visitTryCatchBlock(start,end,handler,type);
+  mv2.visitTryCatchBlock(start,end,handler,type);
+}

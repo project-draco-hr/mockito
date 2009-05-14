@@ -1,0 +1,7 @@
+{
+  AnnotationVisitor av=super.visitAnnotation(desc,visible);
+  if (mv != null) {
+    ((TraceAnnotationVisitor)av).av=mv.visitAnnotation(desc,visible);
+  }
+  return av;
+}

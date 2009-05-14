@@ -1,0 +1,3 @@
+{
+  mv.visitIntInsn(opcode,operand);
+}

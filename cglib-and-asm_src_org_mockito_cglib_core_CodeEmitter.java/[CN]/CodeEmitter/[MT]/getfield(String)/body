@@ -1,0 +1,5 @@
+{
+  ClassEmitter.FieldInfo info=ce.getFieldInfo(name);
+  int opcode=TypeUtils.isStatic(info.access) ? Constants.GETSTATIC : Constants.GETFIELD;
+  emit_field(opcode,ce.getClassType(),name,info.type);
+}

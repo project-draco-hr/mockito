@@ -1,0 +1,35 @@
+{
+  buf.setLength(0);
+  buf.append(ltab);
+  buf.append("FRAME ");
+switch (type) {
+case Opcodes.F_NEW:
+case Opcodes.F_FULL:
+    buf.append("FULL [");
+  appendFrameTypes(nLocal,local);
+buf.append("] [");
+appendFrameTypes(nStack,stack);
+buf.append(']');
+break;
+case Opcodes.F_APPEND:
+buf.append("APPEND [");
+appendFrameTypes(nLocal,local);
+buf.append(']');
+break;
+case Opcodes.F_CHOP:
+buf.append("CHOP ").append(nLocal);
+break;
+case Opcodes.F_SAME:
+buf.append("SAME");
+break;
+case Opcodes.F_SAME1:
+buf.append("SAME1 ");
+appendFrameTypes(1,stack);
+break;
+}
+buf.append('\n');
+text.add(buf.toString());
+if (mv != null) {
+mv.visitFrame(type,nLocal,local,nStack,stack);
+}
+}

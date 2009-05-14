@@ -1,0 +1,30 @@
+{
+  buf.setLength(0);
+  buf.append("{\n");
+  buf.append("mv = cw.visitMethod(");
+  appendAccess(access);
+  buf.append(", ");
+  appendConstant(name);
+  buf.append(", ");
+  appendConstant(desc);
+  buf.append(", ");
+  appendConstant(signature);
+  buf.append(", ");
+  if (exceptions != null && exceptions.length > 0) {
+    buf.append("new String[] {");
+    for (int i=0; i < exceptions.length; ++i) {
+      buf.append(i == 0 ? " " : ", ");
+      appendConstant(exceptions[i]);
+    }
+    buf.append(" }");
+  }
+ else {
+    buf.append("null");
+  }
+  buf.append(");\n");
+  text.add(buf.toString());
+  ASMifierMethodVisitor acv=createASMifierMethodVisitor();
+  text.add(acv.getText());
+  text.add("}\n");
+  return acv;
+}

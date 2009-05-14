@@ -1,0 +1,3 @@
+{
+  mv.visitTypeInsn(opcode,desc);
+}

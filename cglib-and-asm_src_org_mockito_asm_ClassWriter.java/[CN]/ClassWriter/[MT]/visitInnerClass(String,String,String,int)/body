@@ -1,0 +1,10 @@
+{
+  if (innerClasses == null) {
+    innerClasses=new ByteVector();
+  }
+  ++innerClassesCount;
+  innerClasses.putShort(name == null ? 0 : newClass(name));
+  innerClasses.putShort(outerName == null ? 0 : newClass(outerName));
+  innerClasses.putShort(innerName == null ? 0 : newUTF8(innerName));
+  innerClasses.putShort(access);
+}

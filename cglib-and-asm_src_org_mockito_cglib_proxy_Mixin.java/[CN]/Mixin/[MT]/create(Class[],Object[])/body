@@ -1,0 +1,6 @@
+{
+  Generator gen=new Generator();
+  gen.setClasses(interfaces);
+  gen.setDelegates(delegates);
+  return gen.create();
+}

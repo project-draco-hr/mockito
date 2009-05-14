@@ -1,0 +1,3 @@
+{
+  return LDC_INSN;
+}

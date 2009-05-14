@@ -1,0 +1,3 @@
+{
+  return getInstance(av1.visitAnnotation(name,desc),av2.visitAnnotation(name,desc));
+}

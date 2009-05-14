@@ -1,0 +1,3 @@
+{
+  return ((Object[])a[0]).length;
+}

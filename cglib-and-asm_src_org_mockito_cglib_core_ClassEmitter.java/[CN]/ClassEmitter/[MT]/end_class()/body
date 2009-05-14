@@ -1,0 +1,14 @@
+{
+  if (staticHook != null && staticInit == null) {
+    begin_static();
+  }
+  if (staticInit != null) {
+    staticHook.return_value();
+    staticHook.end_method();
+    rawStaticInit.visitInsn(Constants.RETURN);
+    rawStaticInit.visitMaxs(0,0);
+    staticInit=staticHook=null;
+    staticHookSig=null;
+  }
+  cv.visitEnd();
+}

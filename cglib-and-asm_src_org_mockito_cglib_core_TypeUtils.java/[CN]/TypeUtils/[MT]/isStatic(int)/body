@@ -1,0 +1,3 @@
+{
+  return (Constants.ACC_STATIC & access) != 0;
+}

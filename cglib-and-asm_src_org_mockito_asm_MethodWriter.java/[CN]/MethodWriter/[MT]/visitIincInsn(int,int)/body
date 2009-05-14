@@ -1,0 +1,19 @@
+{
+  if (currentBlock != null) {
+    if (compute == FRAMES) {
+      currentBlock.frame.execute(Opcodes.IINC,var,null,null);
+    }
+  }
+  if (compute != NOTHING) {
+    int n=var + 1;
+    if (n > maxLocals) {
+      maxLocals=n;
+    }
+  }
+  if ((var > 255) || (increment > 127) || (increment < -128)) {
+    code.putByte(196).put12(Opcodes.IINC,var).putShort(increment);
+  }
+ else {
+    code.putByte(Opcodes.IINC).put11(var,increment);
+  }
+}

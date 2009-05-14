@@ -1,0 +1,3 @@
+{
+  return unique.add(MethodWrapper.create((Method)arg));
+}

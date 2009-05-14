@@ -1,0 +1,4 @@
+{
+  mv1.visitIincInsn(var,increment);
+  mv2.visitIincInsn(var,increment);
+}

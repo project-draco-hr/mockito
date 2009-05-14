@@ -1,0 +1,11 @@
+{
+  buf.setLength(0);
+  buf.append(tab2).append("MAXSTACK = ").append(maxStack).append('\n');
+  text.add(buf.toString());
+  buf.setLength(0);
+  buf.append(tab2).append("MAXLOCALS = ").append(maxLocals).append('\n');
+  text.add(buf.toString());
+  if (mv != null) {
+    mv.visitMaxs(maxStack,maxLocals);
+  }
+}

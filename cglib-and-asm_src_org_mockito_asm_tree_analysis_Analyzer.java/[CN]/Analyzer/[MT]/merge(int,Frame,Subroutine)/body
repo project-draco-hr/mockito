@@ -1,0 +1,27 @@
+{
+  Frame oldFrame=frames[insn];
+  Subroutine oldSubroutine=subroutines[insn];
+  boolean changes;
+  if (oldFrame == null) {
+    frames[insn]=newFrame(frame);
+    changes=true;
+  }
+ else {
+    changes=oldFrame.merge(frame,interpreter);
+  }
+  if (oldSubroutine == null) {
+    if (subroutine != null) {
+      subroutines[insn]=subroutine.copy();
+      changes=true;
+    }
+  }
+ else {
+    if (subroutine != null) {
+      changes|=oldSubroutine.merge(subroutine);
+    }
+  }
+  if (changes && !queued[insn]) {
+    queued[insn]=true;
+    queue[top++]=insn;
+  }
+}

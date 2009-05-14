@@ -1,0 +1,7 @@
+{
+  buf.setLength(0);
+  buf.append("mv.visitLineNumber(").append(line).append(", ");
+  appendLabel(start);
+  buf.append(");\n");
+  text.add(buf.toString());
+}

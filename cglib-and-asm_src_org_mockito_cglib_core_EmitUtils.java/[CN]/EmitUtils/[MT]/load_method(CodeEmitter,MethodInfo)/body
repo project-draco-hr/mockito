@@ -1,0 +1,6 @@
+{
+  load_class(e,method.getClassInfo().getType());
+  e.push(method.getSignature().getName());
+  push_object(e,method.getSignature().getArgumentTypes());
+  e.invoke_virtual(Constants.TYPE_CLASS,GET_DECLARED_METHOD);
+}

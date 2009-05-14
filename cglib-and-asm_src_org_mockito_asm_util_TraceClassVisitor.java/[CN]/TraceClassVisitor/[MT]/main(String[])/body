@@ -1,0 +1,28 @@
+{
+  int i=0;
+  int flags=ClassReader.SKIP_DEBUG;
+  boolean ok=true;
+  if (args.length < 1 || args.length > 2) {
+    ok=false;
+  }
+  if (ok && "-debug".equals(args[0])) {
+    i=1;
+    flags=0;
+    if (args.length != 2) {
+      ok=false;
+    }
+  }
+  if (!ok) {
+    System.err.println("Prints a disassembled view of the given class.");
+    System.err.println("Usage: TraceClassVisitor [-debug] " + "<fully qualified class name or class file name>");
+    return;
+  }
+  ClassReader cr;
+  if (args[i].endsWith(".class") || args[i].indexOf('\\') > -1 || args[i].indexOf('/') > -1) {
+    cr=new ClassReader(new FileInputStream(args[i]));
+  }
+ else {
+    cr=new ClassReader(args[i]);
+  }
+  cr.accept(new TraceClassVisitor(new PrintWriter(System.out)),getDefaultAttributes(),flags);
+}

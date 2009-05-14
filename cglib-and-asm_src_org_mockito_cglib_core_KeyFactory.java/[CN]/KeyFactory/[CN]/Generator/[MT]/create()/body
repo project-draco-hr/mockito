@@ -1,0 +1,4 @@
+{
+  setNamePrefix(keyInterface.getName());
+  return (KeyFactory)super.create(keyInterface.getName());
+}

@@ -1,0 +1,5 @@
+{
+  super(wrap);
+  this.ce=wrap.ce;
+  this.state=wrap.state;
+}

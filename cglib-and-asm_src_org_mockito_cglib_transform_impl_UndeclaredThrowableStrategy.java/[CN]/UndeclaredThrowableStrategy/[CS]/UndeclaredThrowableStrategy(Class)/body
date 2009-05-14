@@ -1,0 +1,4 @@
+{
+  t=new UndeclaredThrowableTransformer(wrapper);
+  t=new MethodFilterTransformer(TRANSFORM_FILTER,t);
+}

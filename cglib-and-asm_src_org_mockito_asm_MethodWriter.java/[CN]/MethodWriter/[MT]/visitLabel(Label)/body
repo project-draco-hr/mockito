@@ -1,0 +1,44 @@
+{
+  resize|=label.resolve(this,code.length,code.data);
+  if ((label.status & Label.DEBUG) != 0) {
+    return;
+  }
+  if (compute == FRAMES) {
+    if (currentBlock != null) {
+      if (label.position == currentBlock.position) {
+        currentBlock.status|=(label.status & Label.TARGET);
+        label.frame=currentBlock.frame;
+        return;
+      }
+      addSuccessor(Edge.NORMAL,label);
+    }
+    currentBlock=label;
+    if (label.frame == null) {
+      label.frame=new Frame();
+      label.frame.owner=label;
+    }
+    if (previousBlock != null) {
+      if (label.position == previousBlock.position) {
+        previousBlock.status|=(label.status & Label.TARGET);
+        label.frame=previousBlock.frame;
+        currentBlock=previousBlock;
+        return;
+      }
+      previousBlock.successor=label;
+    }
+    previousBlock=label;
+  }
+ else   if (compute == MAXS) {
+    if (currentBlock != null) {
+      currentBlock.outputStackMax=maxStackSize;
+      addSuccessor(stackSize,label);
+    }
+    currentBlock=label;
+    stackSize=0;
+    maxStackSize=0;
+    if (previousBlock != null) {
+      previousBlock.successor=label;
+    }
+    previousBlock=label;
+  }
+}

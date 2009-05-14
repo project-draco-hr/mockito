@@ -1,0 +1,4 @@
+Class target
+String[] getters
+String[] setters
+Class[] types

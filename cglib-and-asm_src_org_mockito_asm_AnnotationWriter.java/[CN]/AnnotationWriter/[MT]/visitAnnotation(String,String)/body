@@ -1,0 +1,8 @@
+{
+  ++size;
+  if (named) {
+    bv.putShort(cw.newUTF8(name));
+  }
+  bv.put12('@',cw.newUTF8(desc)).putShort(0);
+  return new AnnotationWriter(cw,true,bv,bv,bv.length - 2);
+}

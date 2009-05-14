@@ -1,0 +1,6 @@
+{
+  if (superclass != null && superclass.equals(Object.class)) {
+    superclass=null;
+  }
+  this.superclass=superclass;
+}

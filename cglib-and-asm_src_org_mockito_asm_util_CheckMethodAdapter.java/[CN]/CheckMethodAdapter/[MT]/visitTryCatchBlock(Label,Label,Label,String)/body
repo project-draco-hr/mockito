@@ -1,0 +1,8 @@
+{
+  checkStartCode();
+  checkEndCode();
+  if (type != null) {
+    checkInternalName(type,"type");
+  }
+  mv.visitTryCatchBlock(start,end,handler,type);
+}

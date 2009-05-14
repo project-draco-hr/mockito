@@ -1,0 +1,12 @@
+{
+  try {
+    Class clazz=getProxyClass(loader,interfaces);
+    return clazz.getConstructor(new Class[]{InvocationHandler.class}).newInstance(new Object[]{h});
+  }
+ catch (  RuntimeException e) {
+    throw e;
+  }
+catch (  Exception e) {
+    throw new CodeGenerationException(e);
+  }
+}

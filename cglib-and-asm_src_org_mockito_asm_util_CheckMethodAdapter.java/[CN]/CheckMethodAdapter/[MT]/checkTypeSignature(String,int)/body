@@ -1,0 +1,15 @@
+{
+switch (getChar(signature,pos)) {
+case 'Z':
+case 'C':
+case 'B':
+case 'S':
+case 'I':
+case 'F':
+case 'J':
+case 'D':
+    return pos + 1;
+default :
+  return checkFieldTypeSignature(signature,pos);
+}
+}

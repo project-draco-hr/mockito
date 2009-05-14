@@ -1,0 +1,5 @@
+{
+  setNamePrefix(targetClass.getName());
+  Object key=KEY_FACTORY.newInstance(iface.getName(),targetClass.getName());
+  return (ConstructorDelegate)super.create(key);
+}

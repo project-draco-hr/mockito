@@ -1,0 +1,9 @@
+{
+  buf.setLength(0);
+  buf.append("{\n").append("av0 = mv.visitAnnotationDefault();\n");
+  text.add(buf.toString());
+  ASMifierAnnotationVisitor av=new ASMifierAnnotationVisitor(0);
+  text.add(av.getText());
+  text.add("}\n");
+  return av;
+}

@@ -1,0 +1,9 @@
+{
+  if (state != CLASS_TYPE) {
+    throw new IllegalStateException();
+  }
+  CheckMethodAdapter.checkIdentifier(name,"inner class name");
+  if (sv != null) {
+    sv.visitInnerClassType(name);
+  }
+}

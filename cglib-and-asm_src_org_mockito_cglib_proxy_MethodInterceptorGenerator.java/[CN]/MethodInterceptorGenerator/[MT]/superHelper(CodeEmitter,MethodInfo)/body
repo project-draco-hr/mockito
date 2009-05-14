@@ -1,0 +1,10 @@
+{
+  if (TypeUtils.isAbstract(method.getModifiers())) {
+    e.throw_exception(ABSTRACT_METHOD_ERROR,method.toString() + " is abstract");
+  }
+ else {
+    e.load_this();
+    e.load_args();
+    e.super_invoke(method.getSignature());
+  }
+}

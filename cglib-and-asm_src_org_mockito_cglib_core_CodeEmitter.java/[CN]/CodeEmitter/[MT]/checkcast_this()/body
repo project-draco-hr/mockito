@@ -1,0 +1,3 @@
+{
+  checkcast(ce.getClassType());
+}

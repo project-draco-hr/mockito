@@ -1,0 +1,6 @@
+{
+  if (o == null || !(o instanceof FastMember)) {
+    return false;
+  }
+  return member.equals(((FastMember)o).member);
+}

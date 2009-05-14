@@ -1,0 +1,9 @@
+{
+  buf.setLength(0);
+  buf.append("av").append(id).append(".visit(");
+  ASMifierAbstractVisitor.appendConstant(buf,name);
+  buf.append(", ");
+  ASMifierAbstractVisitor.appendConstant(buf,value);
+  buf.append(");\n");
+  text.add(buf.toString());
+}

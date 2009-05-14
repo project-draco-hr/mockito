@@ -1,0 +1,3 @@
+{
+  return e1 == null ? 0 : (e2 == null ? 1 : 2);
+}

@@ -1,0 +1,8 @@
+{
+  ++size;
+  if (named) {
+    bv.putShort(cw.newUTF8(name));
+  }
+  bv.put12('[',0);
+  return new AnnotationWriter(cw,false,bv,bv,bv.length - 2);
+}

@@ -1,0 +1,4 @@
+{
+  av1.visitEnum(name,desc,value);
+  av2.visitEnum(name,desc,value);
+}

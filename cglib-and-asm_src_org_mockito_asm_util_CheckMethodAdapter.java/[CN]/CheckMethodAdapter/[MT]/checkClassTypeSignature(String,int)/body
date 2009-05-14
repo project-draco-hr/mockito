@@ -1,0 +1,17 @@
+{
+  pos=checkChar('L',signature,pos);
+  pos=checkIdentifier(signature,pos);
+  while (getChar(signature,pos) == '/') {
+    pos=checkIdentifier(signature,pos + 1);
+  }
+  if (getChar(signature,pos) == '<') {
+    pos=checkTypeArguments(signature,pos);
+  }
+  while (getChar(signature,pos) == '.') {
+    pos=checkIdentifier(signature,pos + 1);
+    if (getChar(signature,pos) == '<') {
+      pos=checkTypeArguments(signature,pos);
+    }
+  }
+  return checkChar(';',signature,pos);
+}

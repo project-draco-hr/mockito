@@ -1,0 +1,3 @@
+{
+  return (StringSwitcher)ReflectUtils.newInstance(type);
+}

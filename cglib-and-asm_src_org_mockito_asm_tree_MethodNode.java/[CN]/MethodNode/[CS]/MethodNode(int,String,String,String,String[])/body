@@ -1,0 +1,16 @@
+{
+  this();
+  this.access=access;
+  this.name=name;
+  this.desc=desc;
+  this.signature=signature;
+  this.exceptions=new ArrayList(exceptions == null ? 0 : exceptions.length);
+  boolean isAbstract=(access & Opcodes.ACC_ABSTRACT) != 0;
+  if (!isAbstract) {
+    this.localVariables=new ArrayList(5);
+  }
+  this.tryCatchBlocks=new ArrayList();
+  if (exceptions != null) {
+    this.exceptions.addAll(Arrays.asList(exceptions));
+  }
+}

@@ -1,0 +1,5 @@
+{
+  Generator gen=new Generator();
+  gen.setArrays(arrays);
+  return gen.create();
+}

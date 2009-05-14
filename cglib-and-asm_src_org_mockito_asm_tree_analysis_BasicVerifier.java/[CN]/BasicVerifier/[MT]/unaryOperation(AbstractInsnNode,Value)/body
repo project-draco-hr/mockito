@@ -1,0 +1,80 @@
+{
+  Value expected;
+switch (insn.getOpcode()) {
+case INEG:
+case IINC:
+case I2F:
+case I2L:
+case I2D:
+case I2B:
+case I2C:
+case I2S:
+case IFEQ:
+case IFNE:
+case IFLT:
+case IFGE:
+case IFGT:
+case IFLE:
+case TABLESWITCH:
+case LOOKUPSWITCH:
+case IRETURN:
+case NEWARRAY:
+case ANEWARRAY:
+    expected=BasicValue.INT_VALUE;
+  break;
+case FNEG:
+case F2I:
+case F2L:
+case F2D:
+case FRETURN:
+expected=BasicValue.FLOAT_VALUE;
+break;
+case LNEG:
+case L2I:
+case L2F:
+case L2D:
+case LRETURN:
+expected=BasicValue.LONG_VALUE;
+break;
+case DNEG:
+case D2I:
+case D2F:
+case D2L:
+case DRETURN:
+expected=BasicValue.DOUBLE_VALUE;
+break;
+case GETFIELD:
+expected=newValue(Type.getObjectType(((FieldInsnNode)insn).owner));
+break;
+case CHECKCAST:
+if (!((BasicValue)value).isReference()) {
+throw new AnalyzerException(null,"an object reference",value);
+}
+return super.unaryOperation(insn,value);
+case ARRAYLENGTH:
+if (!isArrayValue(value)) {
+throw new AnalyzerException(null,"an array reference",value);
+}
+return super.unaryOperation(insn,value);
+case ARETURN:
+case ATHROW:
+case INSTANCEOF:
+case MONITORENTER:
+case MONITOREXIT:
+case IFNULL:
+case IFNONNULL:
+if (!((BasicValue)value).isReference()) {
+throw new AnalyzerException(null,"an object reference",value);
+}
+return super.unaryOperation(insn,value);
+case PUTSTATIC:
+expected=newValue(Type.getType(((FieldInsnNode)insn).desc));
+break;
+default :
+throw new Error("Internal error.");
+}
+if (!isSubTypeOf(value,expected)) {
+throw new AnalyzerException(null,expected,value);
+}
+return super.unaryOperation(insn,value);
+}

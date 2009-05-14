@@ -1,0 +1,11 @@
+{
+  Class[] parameters=m.getParameterTypes();
+  StringBuffer buf=new StringBuffer();
+  buf.append('(');
+  for (int i=0; i < parameters.length; ++i) {
+    getDescriptor(buf,parameters[i]);
+  }
+  buf.append(')');
+  getDescriptor(buf,m.getReturnType());
+  return buf.toString();
+}

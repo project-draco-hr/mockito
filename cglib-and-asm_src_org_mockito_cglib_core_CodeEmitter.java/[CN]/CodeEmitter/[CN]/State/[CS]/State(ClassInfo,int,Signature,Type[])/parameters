@@ -1,0 +1,4 @@
+ClassInfo classInfo
+int access
+Signature sig
+Type[] exceptionTypes

@@ -1,0 +1,5 @@
+int insn
+Frame beforeJSR
+Frame afterRET
+Subroutine subroutineBeforeJSR
+boolean[] access

@@ -1,0 +1,16 @@
+{
+  if (mark) {
+    AbstractInsnNode insn=first;
+    while (insn != null) {
+      AbstractInsnNode next=insn.next;
+      insn.index=-1;
+      insn.prev=null;
+      insn.next=null;
+      insn=next;
+    }
+  }
+  size=0;
+  first=null;
+  last=null;
+  cache=null;
+}

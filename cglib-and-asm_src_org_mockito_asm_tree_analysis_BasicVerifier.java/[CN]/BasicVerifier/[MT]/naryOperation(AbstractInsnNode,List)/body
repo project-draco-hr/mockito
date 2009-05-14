@@ -1,0 +1,29 @@
+{
+  int opcode=insn.getOpcode();
+  if (opcode == MULTIANEWARRAY) {
+    for (int i=0; i < values.size(); ++i) {
+      if (values.get(i) != BasicValue.INT_VALUE) {
+        throw new AnalyzerException(null,BasicValue.INT_VALUE,(Value)values.get(i));
+      }
+    }
+  }
+ else {
+    int i=0;
+    int j=0;
+    if (opcode != INVOKESTATIC) {
+      Type owner=Type.getObjectType(((MethodInsnNode)insn).owner);
+      if (!isSubTypeOf((Value)values.get(i++),newValue(owner))) {
+        throw new AnalyzerException("Method owner",newValue(owner),(Value)values.get(0));
+      }
+    }
+    Type[] args=Type.getArgumentTypes(((MethodInsnNode)insn).desc);
+    while (i < values.size()) {
+      Value expected=newValue(args[j++]);
+      Value encountered=(Value)values.get(i++);
+      if (!isSubTypeOf(encountered,expected)) {
+        throw new AnalyzerException("Argument " + j,expected,encountered);
+      }
+    }
+  }
+  return super.naryOperation(insn,values);
+}

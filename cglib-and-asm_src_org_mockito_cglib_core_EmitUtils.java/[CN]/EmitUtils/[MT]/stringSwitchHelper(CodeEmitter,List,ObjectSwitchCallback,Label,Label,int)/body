@@ -1,0 +1,28 @@
+{
+  final int len=((String)strings.get(0)).length();
+  final Map buckets=CollectionUtils.bucket(strings,new Transformer(){
+    public Object transform(    Object value){
+      return new Integer(((String)value).charAt(index));
+    }
+  }
+);
+  e.dup();
+  e.push(index);
+  e.invoke_virtual(Constants.TYPE_STRING,STRING_CHAR_AT);
+  e.process_switch(getSwitchKeys(buckets),new ProcessSwitchCallback(){
+    public void processCase(    int key,    Label ignore_end) throws Exception {
+      List bucket=(List)buckets.get(new Integer(key));
+      if (index + 1 == len) {
+        e.pop();
+        callback.processCase(bucket.get(0),end);
+      }
+ else {
+        stringSwitchHelper(e,bucket,callback,def,end,index + 1);
+      }
+    }
+    public void processDefault(){
+      e.goTo(def);
+    }
+  }
+);
+}

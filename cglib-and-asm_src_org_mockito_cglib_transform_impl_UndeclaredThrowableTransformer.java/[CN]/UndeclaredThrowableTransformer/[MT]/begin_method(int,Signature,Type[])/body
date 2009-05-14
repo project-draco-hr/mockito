@@ -1,0 +1,18 @@
+{
+  CodeEmitter e=super.begin_method(access,sig,exceptions);
+  if (TypeUtils.isAbstract(access) || sig.equals(Constants.SIG_STATIC)) {
+    return e;
+  }
+  return new CodeEmitter(e){
+    private Block handler;
+{
+      handler=begin_block();
+    }
+    public void visitMaxs(    int maxStack,    int maxLocals){
+      handler.end();
+      EmitUtils.wrap_undeclared_throwable(this,handler,exceptions,wrapper);
+      super.visitMaxs(maxStack,maxLocals);
+    }
+  }
+;
+}

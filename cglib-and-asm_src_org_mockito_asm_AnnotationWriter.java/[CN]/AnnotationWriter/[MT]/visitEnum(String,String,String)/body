@@ -1,0 +1,7 @@
+{
+  ++size;
+  if (named) {
+    bv.putShort(cw.newUTF8(name));
+  }
+  bv.put12('e',cw.newUTF8(desc)).putShort(cw.newUTF8(value));
+}

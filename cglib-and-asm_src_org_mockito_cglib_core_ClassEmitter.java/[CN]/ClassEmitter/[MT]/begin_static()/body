@@ -1,0 +1,3 @@
+{
+  return begin_method(Constants.ACC_STATIC,Constants.SIG_STATIC,null);
+}

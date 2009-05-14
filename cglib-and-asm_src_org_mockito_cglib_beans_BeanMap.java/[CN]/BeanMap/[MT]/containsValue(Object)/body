@@ -1,0 +1,7 @@
+{
+  for (Iterator it=keySet().iterator(); it.hasNext(); ) {
+    Object v=get(it.next());
+    if (((value == null) && (v == null)) || value.equals(v))     return true;
+  }
+  return false;
+}

@@ -1,0 +1,8 @@
+{
+  if (value == 0L || value == 1L) {
+    mv.visitInsn(TypeUtils.LCONST(value));
+  }
+ else {
+    mv.visitLdcInsn(new Long(value));
+  }
+}

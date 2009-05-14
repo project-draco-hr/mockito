@@ -1,0 +1,4 @@
+{
+  this(src.locals,src.values.length - src.locals);
+  init(src);
+}

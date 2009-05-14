@@ -1,0 +1,11 @@
+{
+  buf.setLength(0);
+  buf.append("cw.visitOuterClass(");
+  appendConstant(owner);
+  buf.append(", ");
+  appendConstant(name);
+  buf.append(", ");
+  appendConstant(desc);
+  buf.append(");\n\n");
+  text.add(buf.toString());
+}

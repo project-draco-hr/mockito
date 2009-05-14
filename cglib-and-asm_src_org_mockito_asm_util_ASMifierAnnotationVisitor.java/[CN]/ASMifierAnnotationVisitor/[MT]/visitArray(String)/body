@@ -1,0 +1,13 @@
+{
+  buf.setLength(0);
+  buf.append("{\n");
+  buf.append("AnnotationVisitor av").append(id + 1).append(" = av");
+  buf.append(id).append(".visitArray(");
+  ASMifierAbstractVisitor.appendConstant(buf,name);
+  buf.append(");\n");
+  text.add(buf.toString());
+  ASMifierAnnotationVisitor av=new ASMifierAnnotationVisitor(id + 1);
+  text.add(av.getText());
+  text.add("}\n");
+  return av;
+}

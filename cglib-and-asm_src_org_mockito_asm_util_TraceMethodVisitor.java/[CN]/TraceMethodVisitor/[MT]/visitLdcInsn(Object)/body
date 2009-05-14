@@ -1,0 +1,18 @@
+{
+  buf.setLength(0);
+  buf.append(tab2).append("LDC ");
+  if (cst instanceof String) {
+    AbstractVisitor.appendString(buf,(String)cst);
+  }
+ else   if (cst instanceof Type) {
+    buf.append(((Type)cst).getDescriptor()).append(".class");
+  }
+ else {
+    buf.append(cst);
+  }
+  buf.append('\n');
+  text.add(buf.toString());
+  if (mv != null) {
+    mv.visitLdcInsn(cst);
+  }
+}

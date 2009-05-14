@@ -1,0 +1,4 @@
+{
+  cv1.visit(version,access,name,signature,superName,interfaces);
+  cv2.visit(version,access,name,signature,superName,interfaces);
+}

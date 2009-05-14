@@ -1,0 +1,11 @@
+{
+  if (value instanceof Method) {
+    return ReflectUtils.getMethodInfo((Method)value);
+  }
+ else   if (value instanceof Constructor) {
+    return ReflectUtils.getMethodInfo((Constructor)value);
+  }
+ else {
+    throw new IllegalArgumentException("cannot get method info for " + value);
+  }
+}

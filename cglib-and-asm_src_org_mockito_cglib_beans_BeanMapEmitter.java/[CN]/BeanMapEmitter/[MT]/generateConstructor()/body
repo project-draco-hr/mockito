@@ -1,0 +1,8 @@
+{
+  CodeEmitter e=begin_method(Constants.ACC_PUBLIC,CSTRUCT_OBJECT,null);
+  e.load_this();
+  e.load_arg(0);
+  e.super_invoke_constructor(CSTRUCT_OBJECT);
+  e.return_value();
+  e.end_method();
+}

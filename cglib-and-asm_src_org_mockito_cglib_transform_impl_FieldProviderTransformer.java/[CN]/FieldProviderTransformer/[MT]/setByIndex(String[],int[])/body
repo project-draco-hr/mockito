@@ -1,0 +1,19 @@
+{
+  final CodeEmitter e=super.begin_method(Constants.ACC_PUBLIC,PROVIDER_SET_BY_INDEX,null);
+  e.load_this();
+  e.load_arg(1);
+  e.load_arg(0);
+  e.process_switch(indexes,new ProcessSwitchCallback(){
+    public void processCase(    int key,    Label end) throws Exception {
+      Type type=(Type)fields.get(names[key]);
+      e.unbox(type);
+      e.putfield(names[key]);
+      e.return_value();
+    }
+    public void processDefault() throws Exception {
+      e.throw_exception(ILLEGAL_ARGUMENT_EXCEPTION,"Unknown field index");
+    }
+  }
+);
+  e.end_method();
+}

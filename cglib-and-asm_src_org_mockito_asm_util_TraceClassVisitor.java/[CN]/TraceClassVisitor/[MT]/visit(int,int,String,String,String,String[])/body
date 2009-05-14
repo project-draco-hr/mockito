@@ -1,0 +1,45 @@
+{
+  int major=version & 0xFFFF;
+  int minor=version >>> 16;
+  buf.setLength(0);
+  buf.append("// class version ").append(major).append('.').append(minor).append(" (").append(version).append(")\n");
+  if ((access & Opcodes.ACC_DEPRECATED) != 0) {
+    buf.append("// DEPRECATED\n");
+  }
+  buf.append("// access flags ").append(access).append('\n');
+  appendDescriptor(CLASS_SIGNATURE,signature);
+  if (signature != null) {
+    TraceSignatureVisitor sv=new TraceSignatureVisitor(access);
+    SignatureReader r=new SignatureReader(signature);
+    r.accept(sv);
+    buf.append("// declaration: ").append(name).append(sv.getDeclaration()).append('\n');
+  }
+  appendAccess(access & ~Opcodes.ACC_SUPER);
+  if ((access & Opcodes.ACC_ANNOTATION) != 0) {
+    buf.append("@interface ");
+  }
+ else   if ((access & Opcodes.ACC_INTERFACE) != 0) {
+    buf.append("interface ");
+  }
+ else   if ((access & Opcodes.ACC_ENUM) == 0) {
+    buf.append("class ");
+  }
+  appendDescriptor(INTERNAL_NAME,name);
+  if (superName != null && !"java/lang/Object".equals(superName)) {
+    buf.append(" extends ");
+    appendDescriptor(INTERNAL_NAME,superName);
+    buf.append(' ');
+  }
+  if (interfaces != null && interfaces.length > 0) {
+    buf.append(" implements ");
+    for (int i=0; i < interfaces.length; ++i) {
+      appendDescriptor(INTERNAL_NAME,interfaces[i]);
+      buf.append(' ');
+    }
+  }
+  buf.append(" {\n\n");
+  text.add(buf.toString());
+  if (cv != null) {
+    cv.visit(version,access,name,signature,superName,interfaces);
+  }
+}

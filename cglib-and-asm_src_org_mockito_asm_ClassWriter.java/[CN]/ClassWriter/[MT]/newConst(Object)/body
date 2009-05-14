@@ -1,0 +1,3 @@
+{
+  return newConstItem(cst).index;
+}

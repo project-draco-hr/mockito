@@ -1,0 +1,9 @@
+{
+  FastClass.Generator g=new FastClass.Generator();
+  g.setType(type);
+  g.setClassLoader(ci.c2.getClassLoader());
+  g.setNamingPolicy(ci.namingPolicy);
+  g.setStrategy(ci.strategy);
+  g.setAttemptLoad(ci.attemptLoad);
+  return g.create();
+}

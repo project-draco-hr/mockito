@@ -1,0 +1,6 @@
+{
+  separator=seenInterfaceBound ? ", " : " extends ";
+  seenInterfaceBound=true;
+  startType();
+  return this;
+}

@@ -1,0 +1,12 @@
+{
+  Item i=cw.newClassItem(desc);
+  if (currentBlock != null) {
+    if (compute == FRAMES) {
+      currentBlock.frame.execute(Opcodes.MULTIANEWARRAY,dims,cw,i);
+    }
+ else {
+      stackSize+=1 - dims;
+    }
+  }
+  code.put12(Opcodes.MULTIANEWARRAY,i.index).putByte(dims);
+}

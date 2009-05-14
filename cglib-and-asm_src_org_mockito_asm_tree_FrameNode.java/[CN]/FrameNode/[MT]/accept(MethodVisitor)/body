@@ -1,0 +1,20 @@
+{
+switch (type) {
+case Opcodes.F_NEW:
+case Opcodes.F_FULL:
+    mv.visitFrame(type,local.size(),asArray(local),stack.size(),asArray(stack));
+  break;
+case Opcodes.F_APPEND:
+mv.visitFrame(type,local.size(),asArray(local),0,null);
+break;
+case Opcodes.F_CHOP:
+mv.visitFrame(type,local.size(),asArray(local),0,null);
+break;
+case Opcodes.F_SAME:
+mv.visitFrame(type,0,null,0,null);
+break;
+case Opcodes.F_SAME1:
+mv.visitFrame(type,0,null,1,asArray(stack));
+break;
+}
+}

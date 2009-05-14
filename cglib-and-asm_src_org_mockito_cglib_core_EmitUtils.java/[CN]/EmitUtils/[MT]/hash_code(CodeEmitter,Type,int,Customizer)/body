@@ -1,0 +1,18 @@
+{
+  if (TypeUtils.isArray(type)) {
+    hash_array(e,type,multiplier,customizer);
+  }
+ else {
+    e.swap(Type.INT_TYPE,type);
+    e.push(multiplier);
+    e.math(e.MUL,Type.INT_TYPE);
+    e.swap(type,Type.INT_TYPE);
+    if (TypeUtils.isPrimitive(type)) {
+      hash_primitive(e,type);
+    }
+ else {
+      hash_object(e,type,customizer);
+    }
+    e.math(e.ADD,Type.INT_TYPE);
+  }
+}

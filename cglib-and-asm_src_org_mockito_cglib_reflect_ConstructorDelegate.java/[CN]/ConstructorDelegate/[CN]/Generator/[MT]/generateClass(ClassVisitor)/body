@@ -1,0 +1,26 @@
+{
+  setNamePrefix(targetClass.getName());
+  final Method newInstance=ReflectUtils.findNewInstance(iface);
+  if (!newInstance.getReturnType().isAssignableFrom(targetClass)) {
+    throw new IllegalArgumentException("incompatible return type");
+  }
+  final Constructor constructor;
+  try {
+    constructor=targetClass.getDeclaredConstructor(newInstance.getParameterTypes());
+  }
+ catch (  NoSuchMethodException e) {
+    throw new IllegalArgumentException("interface does not match any known constructor");
+  }
+  ClassEmitter ce=new ClassEmitter(v);
+  ce.begin_class(Constants.V1_2,Constants.ACC_PUBLIC,getClassName(),CONSTRUCTOR_DELEGATE,new Type[]{Type.getType(iface)},Constants.SOURCE_FILE);
+  Type declaring=Type.getType(constructor.getDeclaringClass());
+  EmitUtils.null_constructor(ce);
+  CodeEmitter e=ce.begin_method(Constants.ACC_PUBLIC,ReflectUtils.getSignature(newInstance),ReflectUtils.getExceptionTypes(newInstance));
+  e.new_instance(declaring);
+  e.dup();
+  e.load_args();
+  e.invoke_constructor(declaring,ReflectUtils.getSignature(constructor));
+  e.return_value();
+  e.end_method();
+  ce.end_class();
+}

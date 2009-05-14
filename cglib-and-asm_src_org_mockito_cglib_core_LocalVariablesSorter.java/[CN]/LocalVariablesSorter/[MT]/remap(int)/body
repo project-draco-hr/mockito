@@ -1,0 +1,14 @@
+{
+  if (var < firstLocal) {
+    return var;
+  }
+  int key=2 * var;
+  int value=key < state.mapping.length ? state.mapping[key] : 0;
+  if (value == 0) {
+    value=key + 1 < state.mapping.length ? state.mapping[key + 1] : 0;
+  }
+  if (value == 0) {
+    throw new IllegalStateException("Unknown local variable " + var);
+  }
+  return value - 1;
+}

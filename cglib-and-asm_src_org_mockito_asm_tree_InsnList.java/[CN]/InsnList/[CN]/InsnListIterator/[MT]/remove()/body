@@ -1,0 +1,4 @@
+{
+  InsnList.this.remove(prev);
+  prev=prev.prev;
+}

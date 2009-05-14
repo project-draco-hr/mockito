@@ -1,0 +1,4 @@
+{
+  mv1.visitLocalVariable(name,desc,signature,start,end,index);
+  mv2.visitLocalVariable(name,desc,signature,start,end,index);
+}

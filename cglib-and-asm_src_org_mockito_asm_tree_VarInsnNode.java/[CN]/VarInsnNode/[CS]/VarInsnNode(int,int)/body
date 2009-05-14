@@ -1,0 +1,4 @@
+{
+  super(opcode);
+  this.var=var;
+}

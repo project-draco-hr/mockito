@@ -1,0 +1,3 @@
+{
+  this(ClassLoader.getSystemResourceAsStream(name.replace('.','/') + ".class"));
+}

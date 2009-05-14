@@ -1,0 +1,7 @@
+{
+  buf.setLength(0);
+  buf.append("mv.visitTypeInsn(").append(OPCODES[opcode]).append(", ");
+  appendConstant(type);
+  buf.append(");\n");
+  text.add(buf.toString());
+}

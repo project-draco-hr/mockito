@@ -1,0 +1,7 @@
+{
+  if (!ClassReader.ANNOTATIONS) {
+    return null;
+  }
+  annd=new ByteVector();
+  return new AnnotationWriter(cw,false,annd,null,0);
+}

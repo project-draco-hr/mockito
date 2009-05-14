@@ -1,0 +1,3 @@
+{
+  return !ClassReader.FRAMES || frame == null ? this : frame.owner;
+}

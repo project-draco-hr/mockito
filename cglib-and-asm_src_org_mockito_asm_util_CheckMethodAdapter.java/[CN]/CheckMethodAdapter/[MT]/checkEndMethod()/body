@@ -1,0 +1,5 @@
+{
+  if (endMethod) {
+    throw new IllegalStateException("Cannot visit elements after visitEnd has been called.");
+  }
+}

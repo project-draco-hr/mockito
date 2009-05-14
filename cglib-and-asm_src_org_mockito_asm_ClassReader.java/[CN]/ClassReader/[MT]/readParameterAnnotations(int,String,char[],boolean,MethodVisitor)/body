@@ -1,0 +1,20 @@
+{
+  int i;
+  int n=b[v++] & 0xFF;
+  int synthetics=Type.getArgumentTypes(desc).length - n;
+  AnnotationVisitor av;
+  for (i=0; i < synthetics; ++i) {
+    av=mv.visitParameterAnnotation(i,"Ljava/lang/Synthetic;",false);
+    if (av != null) {
+      av.visitEnd();
+    }
+  }
+  for (; i < n + synthetics; ++i) {
+    int j=readUnsignedShort(v);
+    v+=2;
+    for (; j > 0; --j) {
+      av=mv.visitParameterAnnotation(i,readUTF8(v,buf),visible);
+      v=readAnnotationValues(v + 2,buf,true,av);
+    }
+  }
+}

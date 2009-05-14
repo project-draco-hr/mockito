@@ -1,0 +1,3 @@
+{
+  mv.visitTableSwitchInsn(min,max,dflt,labels);
+}

@@ -1,0 +1,4 @@
+{
+  InnerClassNode icn=new InnerClassNode(name,outerName,innerName,access);
+  innerClasses.add(icn);
+}

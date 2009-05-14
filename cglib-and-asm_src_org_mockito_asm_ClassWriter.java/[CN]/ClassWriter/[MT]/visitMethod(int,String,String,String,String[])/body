@@ -1,0 +1,3 @@
+{
+  return new MethodWriter(this,access,name,desc,signature,exceptions,computeMaxs,computeFrames);
+}

@@ -1,0 +1,4 @@
+{
+  target=accept(version,access,name,signature,superName,interfaces) ? pass : cv;
+  target.visit(version,access,name,signature,superName,interfaces);
+}

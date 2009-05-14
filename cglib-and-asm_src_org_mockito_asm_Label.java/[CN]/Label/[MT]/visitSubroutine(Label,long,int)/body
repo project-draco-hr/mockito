@@ -1,0 +1,30 @@
+{
+  if (JSR != null) {
+    if ((status & VISITED) != 0) {
+      return;
+    }
+    status|=VISITED;
+    if ((status & RET) != 0) {
+      if (!inSameSubroutine(JSR)) {
+        Edge e=new Edge();
+        e.info=inputStackTop;
+        e.successor=JSR.successors.successor;
+        e.next=successors;
+        successors=e;
+      }
+    }
+  }
+ else {
+    if (inSubroutine(id)) {
+      return;
+    }
+    addToSubroutine(id,nbSubroutines);
+  }
+  Edge e=successors;
+  while (e != null) {
+    if ((status & Label.JSR) == 0 || e != successors.next) {
+      e.successor.visitSubroutine(JSR,id,nbSubroutines);
+    }
+    e=e.next;
+  }
+}

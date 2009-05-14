@@ -1,0 +1,3 @@
+{
+  return AnnotationVisitorTee.getInstance(mv1.visitParameterAnnotation(parameter,desc,visible),mv2.visitParameterAnnotation(parameter,desc,visible));
+}

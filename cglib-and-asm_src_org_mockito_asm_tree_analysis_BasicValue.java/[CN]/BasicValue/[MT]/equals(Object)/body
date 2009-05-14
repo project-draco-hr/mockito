@@ -1,0 +1,16 @@
+{
+  if (value == this) {
+    return true;
+  }
+ else   if (value instanceof BasicValue) {
+    if (type == null) {
+      return ((BasicValue)value).type == null;
+    }
+ else {
+      return type.equals(((BasicValue)value).type);
+    }
+  }
+ else {
+    return false;
+  }
+}

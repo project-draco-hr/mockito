@@ -1,0 +1,7 @@
+{
+  MethodVisitor mv1=cv1.visitMethod(access,name,desc,signature,exceptions);
+  MethodVisitor mv2=cv2.visitMethod(access,name,desc,signature,exceptions);
+  if (mv1 == null)   return mv2;
+  if (mv2 == null)   return mv1;
+  return new MethodVisitorTee(mv1,mv2);
+}

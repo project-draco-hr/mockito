@@ -1,0 +1,50 @@
+{
+  final Map buckets=CollectionUtils.bucket(Arrays.asList(strings),new Transformer(){
+    public Object transform(    Object value){
+      return new Integer(value.hashCode());
+    }
+  }
+);
+  final Label def=e.make_label();
+  final Label end=e.make_label();
+  e.dup();
+  e.invoke_virtual(Constants.TYPE_OBJECT,HASH_CODE);
+  e.process_switch(getSwitchKeys(buckets),new ProcessSwitchCallback(){
+    public void processCase(    int key,    Label ignore_end) throws Exception {
+      List bucket=(List)buckets.get(new Integer(key));
+      Label next=null;
+      if (skipEquals && bucket.size() == 1) {
+        if (skipEquals)         e.pop();
+        callback.processCase((String)bucket.get(0),end);
+      }
+ else {
+        for (Iterator it=bucket.iterator(); it.hasNext(); ) {
+          String string=(String)it.next();
+          if (next != null) {
+            e.mark(next);
+          }
+          if (it.hasNext()) {
+            e.dup();
+          }
+          e.push(string);
+          e.invoke_virtual(Constants.TYPE_OBJECT,EQUALS);
+          if (it.hasNext()) {
+            e.if_jump(e.EQ,next=e.make_label());
+            e.pop();
+          }
+ else {
+            e.if_jump(e.EQ,def);
+          }
+          callback.processCase(string,end);
+        }
+      }
+    }
+    public void processDefault(){
+      e.pop();
+    }
+  }
+);
+  e.mark(def);
+  callback.processDefault();
+  e.mark(end);
+}

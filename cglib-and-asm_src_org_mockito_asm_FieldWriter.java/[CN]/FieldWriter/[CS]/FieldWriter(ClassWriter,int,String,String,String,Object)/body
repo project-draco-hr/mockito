@@ -1,0 +1,19 @@
+{
+  if (cw.firstField == null) {
+    cw.firstField=this;
+  }
+ else {
+    cw.lastField.next=this;
+  }
+  cw.lastField=this;
+  this.cw=cw;
+  this.access=access;
+  this.name=cw.newUTF8(name);
+  this.desc=cw.newUTF8(desc);
+  if (ClassReader.SIGNATURES && signature != null) {
+    this.signature=cw.newUTF8(signature);
+  }
+  if (value != null) {
+    this.value=cw.newConstItem(value).index;
+  }
+}

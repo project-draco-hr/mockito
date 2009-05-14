@@ -1,0 +1,10 @@
+{
+  String desc;
+  if (TypeUtils.isArray(type)) {
+    desc=type.getDescriptor();
+  }
+ else {
+    desc=type.getInternalName();
+  }
+  mv.visitTypeInsn(opcode,desc);
+}

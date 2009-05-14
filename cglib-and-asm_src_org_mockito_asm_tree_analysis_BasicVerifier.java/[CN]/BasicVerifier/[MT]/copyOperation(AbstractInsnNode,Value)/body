@@ -1,0 +1,37 @@
+{
+  Value expected;
+switch (insn.getOpcode()) {
+case ILOAD:
+case ISTORE:
+    expected=BasicValue.INT_VALUE;
+  break;
+case FLOAD:
+case FSTORE:
+expected=BasicValue.FLOAT_VALUE;
+break;
+case LLOAD:
+case LSTORE:
+expected=BasicValue.LONG_VALUE;
+break;
+case DLOAD:
+case DSTORE:
+expected=BasicValue.DOUBLE_VALUE;
+break;
+case ALOAD:
+if (!((BasicValue)value).isReference()) {
+throw new AnalyzerException(null,"an object reference",value);
+}
+return value;
+case ASTORE:
+if (!((BasicValue)value).isReference() && value != BasicValue.RETURNADDRESS_VALUE) {
+throw new AnalyzerException(null,"an object reference or a return address",value);
+}
+return value;
+default :
+return value;
+}
+if (value != expected) {
+throw new AnalyzerException(null,expected,value);
+}
+return value;
+}

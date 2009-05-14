@@ -1,0 +1,16 @@
+{
+  CodeEmitter e=getStaticHook();
+  EmitUtils.push_object(e,names);
+  e.putstatic(getClassType(),FIELD_NAMES,Constants.TYPE_STRING_ARRAY);
+  e.push(names.length);
+  e.newarray(Constants.TYPE_CLASS);
+  e.dup();
+  for (int i=0; i < names.length; i++) {
+    e.dup();
+    e.push(i);
+    Type type=(Type)fields.get(names[i]);
+    EmitUtils.load_class(e,type);
+    e.aastore();
+  }
+  e.putstatic(getClassType(),FIELD_TYPES,Constants.TYPE_CLASS_ARRAY);
+}

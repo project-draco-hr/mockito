@@ -1,0 +1,14 @@
+{
+  int size;
+switch (opcode) {
+case Opcodes.LLOAD:
+case Opcodes.LSTORE:
+case Opcodes.DLOAD:
+case Opcodes.DSTORE:
+    size=2;
+  break;
+default :
+size=1;
+}
+mv.visitVarInsn(opcode,remap(var,size));
+}

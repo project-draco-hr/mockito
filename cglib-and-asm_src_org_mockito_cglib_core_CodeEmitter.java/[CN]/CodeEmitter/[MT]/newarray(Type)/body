@@ -1,0 +1,8 @@
+{
+  if (TypeUtils.isPrimitive(type)) {
+    mv.visitIntInsn(Constants.NEWARRAY,TypeUtils.NEWARRAY(type));
+  }
+ else {
+    emit_type(Constants.ANEWARRAY,type);
+  }
+}

@@ -1,0 +1,21 @@
+{
+  if (check && insns == this) {
+    throw new IllegalArgumentException();
+  }
+  if (insns.size == 0) {
+    return;
+  }
+  size+=insns.size;
+  if (last == null) {
+    first=insns.first;
+    last=insns.last;
+  }
+ else {
+    AbstractInsnNode elem=insns.first;
+    last.next=elem;
+    elem.prev=last;
+    last=insns.last;
+  }
+  cache=null;
+  insns.removeAll(false);
+}

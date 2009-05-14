@@ -1,0 +1,3 @@
+{
+  mv.visitMultiANewArrayInsn(desc,dims);
+}

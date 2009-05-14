@@ -1,0 +1,20 @@
+{
+  final Map buckets=CollectionUtils.bucket(members,new Transformer(){
+    public Object transform(    Object value){
+      return new Integer(typer.getParameterTypes((MethodInfo)value).length);
+    }
+  }
+);
+  e.dup();
+  e.arraylength();
+  e.process_switch(EmitUtils.getSwitchKeys(buckets),new ProcessSwitchCallback(){
+    public void processCase(    int key,    Label dontUseEnd) throws Exception {
+      List bucket=(List)buckets.get(new Integer(key));
+      member_helper_type(e,bucket,callback,typer,def,end,new BitSet());
+    }
+    public void processDefault() throws Exception {
+      e.goTo(def);
+    }
+  }
+);
+}

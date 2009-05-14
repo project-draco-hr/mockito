@@ -1,0 +1,14 @@
+{
+  ObjectSwitchCallback callback=new ObjectSwitchCallback(){
+    public void processCase(    Object key,    Label end){
+      e.push(signatures.indexOf(key));
+      e.return_value();
+    }
+    public void processDefault(){
+      e.push(-1);
+      e.return_value();
+    }
+  }
+;
+  EmitUtils.string_switch(e,(String[])signatures.toArray(new String[signatures.size()]),Constants.SWITCH_STYLE_HASH,callback);
+}

@@ -1,0 +1,3 @@
+{
+  return KEY_FACTORY.newInstance(method.getName(),ReflectUtils.getNames(method.getParameterTypes()),method.getReturnType().getName());
+}

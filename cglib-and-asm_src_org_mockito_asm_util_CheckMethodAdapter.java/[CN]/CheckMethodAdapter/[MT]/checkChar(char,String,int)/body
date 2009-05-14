@@ -1,0 +1,6 @@
+{
+  if (getChar(signature,pos) == c) {
+    return pos + 1;
+  }
+  throw new IllegalArgumentException(signature + ": '" + c+ "' expected at index "+ pos);
+}

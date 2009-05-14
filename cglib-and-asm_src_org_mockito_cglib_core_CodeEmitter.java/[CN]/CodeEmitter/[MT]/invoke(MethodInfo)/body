@@ -1,0 +1,3 @@
+{
+  invoke(method,method.getClassInfo().getType());
+}

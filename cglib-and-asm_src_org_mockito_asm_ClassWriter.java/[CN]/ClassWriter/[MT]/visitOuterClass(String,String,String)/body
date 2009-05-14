@@ -1,0 +1,6 @@
+{
+  enclosingMethodOwner=newClass(owner);
+  if (name != null && desc != null) {
+    enclosingMethod=newNameType(name,desc);
+  }
+}

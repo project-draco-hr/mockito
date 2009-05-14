@@ -1,0 +1,15 @@
+{
+  buf.setLength(0);
+  buf.append(tab).append("OUTERCLASS ");
+  appendDescriptor(INTERNAL_NAME,owner);
+  buf.append(' ');
+  if (name != null) {
+    buf.append(name).append(' ');
+  }
+  appendDescriptor(METHOD_DESCRIPTOR,desc);
+  buf.append('\n');
+  text.add(buf.toString());
+  if (cv != null) {
+    cv.visitOuterClass(owner,name,desc);
+  }
+}

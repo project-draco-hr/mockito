@@ -1,0 +1,2 @@
+ClassVisitor classVisitor
+int flags

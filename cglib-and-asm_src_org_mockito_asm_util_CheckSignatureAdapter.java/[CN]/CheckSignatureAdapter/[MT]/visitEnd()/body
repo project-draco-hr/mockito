@@ -1,0 +1,9 @@
+{
+  if (state != CLASS_TYPE) {
+    throw new IllegalStateException();
+  }
+  state=END;
+  if (sv != null) {
+    sv.visitEnd();
+  }
+}

@@ -1,0 +1,43 @@
+{
+  if (opcode == Opcodes.IALOAD || opcode == Opcodes.IASTORE) {
+switch (sort) {
+case BOOLEAN:
+case BYTE:
+      return opcode + 5;
+case CHAR:
+    return opcode + 6;
+case SHORT:
+  return opcode + 7;
+case INT:
+return opcode;
+case FLOAT:
+return opcode + 2;
+case LONG:
+return opcode + 1;
+case DOUBLE:
+return opcode + 3;
+default :
+return opcode + 4;
+}
+}
+ else {
+switch (sort) {
+case VOID:
+return opcode + 5;
+case BOOLEAN:
+case CHAR:
+case BYTE:
+case SHORT:
+case INT:
+return opcode;
+case FLOAT:
+return opcode + 2;
+case LONG:
+return opcode + 1;
+case DOUBLE:
+return opcode + 3;
+default :
+return opcode + 4;
+}
+}
+}

@@ -1,0 +1,3 @@
+{
+  return (filter.accept(access,name,desc,signature,exceptions) ? pass : direct).visitMethod(access,name,desc,signature,exceptions);
+}

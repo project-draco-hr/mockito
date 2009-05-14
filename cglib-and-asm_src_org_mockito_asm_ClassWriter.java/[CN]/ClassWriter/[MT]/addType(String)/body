@@ -1,0 +1,8 @@
+{
+  key.set(TYPE_NORMAL,type,null,null);
+  Item result=get(key);
+  if (result == null) {
+    result=addType(key);
+  }
+  return result.index;
+}

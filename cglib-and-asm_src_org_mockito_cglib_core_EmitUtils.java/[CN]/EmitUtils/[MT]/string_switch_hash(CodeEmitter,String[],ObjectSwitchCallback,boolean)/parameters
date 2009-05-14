@@ -1,0 +1,4 @@
+CodeEmitter e
+String[] strings
+ObjectSwitchCallback callback
+boolean skipEquals

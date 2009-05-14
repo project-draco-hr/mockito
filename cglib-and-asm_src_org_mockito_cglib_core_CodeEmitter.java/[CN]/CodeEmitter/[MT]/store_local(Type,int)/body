@@ -1,0 +1,3 @@
+{
+  mv.visitVarInsn(t.getOpcode(Constants.ISTORE),pos);
+}

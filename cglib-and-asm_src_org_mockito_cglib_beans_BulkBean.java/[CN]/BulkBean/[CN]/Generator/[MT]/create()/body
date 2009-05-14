@@ -1,0 +1,7 @@
+{
+  setNamePrefix(target.getName());
+  String targetClassName=target.getName();
+  String[] typeClassNames=ReflectUtils.getNames(types);
+  Object key=KEY_FACTORY.newInstance(targetClassName,getters,setters,typeClassNames);
+  return (BulkBean)super.create(key);
+}

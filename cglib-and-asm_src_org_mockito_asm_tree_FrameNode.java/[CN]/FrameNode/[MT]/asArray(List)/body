@@ -1,0 +1,11 @@
+{
+  Object[] objs=new Object[l.size()];
+  for (int i=0; i < objs.length; ++i) {
+    Object o=l.get(i);
+    if (o instanceof LabelNode) {
+      o=((LabelNode)o).getLabel();
+    }
+    objs[i]=o;
+  }
+  return objs;
+}

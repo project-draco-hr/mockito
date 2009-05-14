@@ -1,0 +1,5 @@
+{
+  int var=state.nextLocal;
+  state.nextLocal+=size;
+  return var;
+}

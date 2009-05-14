@@ -1,0 +1,9 @@
+{
+  if (index < 0 || index >= size) {
+    throw new IndexOutOfBoundsException();
+  }
+  if (cache == null) {
+    cache=toArray();
+  }
+  return cache[index];
+}

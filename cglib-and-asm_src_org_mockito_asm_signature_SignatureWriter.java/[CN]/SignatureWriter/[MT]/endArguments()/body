@@ -1,0 +1,6 @@
+{
+  if (argumentStack % 2 != 0) {
+    buf.append('>');
+  }
+  argumentStack/=2;
+}

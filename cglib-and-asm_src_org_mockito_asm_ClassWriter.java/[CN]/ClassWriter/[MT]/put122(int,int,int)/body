@@ -1,0 +1,3 @@
+{
+  pool.put12(b,s1).putShort(s2);
+}

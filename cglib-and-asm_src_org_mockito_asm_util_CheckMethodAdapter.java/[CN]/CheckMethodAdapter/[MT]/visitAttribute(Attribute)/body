@@ -1,0 +1,7 @@
+{
+  checkEndMethod();
+  if (attr == null) {
+    throw new IllegalArgumentException("Invalid attribute (must not be null)");
+  }
+  mv.visitAttribute(attr);
+}

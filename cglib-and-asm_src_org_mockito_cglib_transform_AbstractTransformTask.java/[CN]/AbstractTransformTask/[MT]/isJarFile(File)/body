@@ -1,0 +1,3 @@
+{
+  return checkMagic(file,ZIP_MAGIC);
+}

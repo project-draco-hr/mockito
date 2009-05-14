@@ -1,0 +1,10 @@
+{
+  buf.setLength(0);
+  buf.append(tab2).append("MULTIANEWARRAY ");
+  appendDescriptor(FIELD_DESCRIPTOR,desc);
+  buf.append(' ').append(dims).append('\n');
+  text.add(buf.toString());
+  if (mv != null) {
+    mv.visitMultiANewArrayInsn(desc,dims);
+  }
+}

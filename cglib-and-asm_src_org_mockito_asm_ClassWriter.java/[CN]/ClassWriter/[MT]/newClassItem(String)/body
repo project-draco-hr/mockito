@@ -1,0 +1,10 @@
+{
+  key2.set(CLASS,value,null,null);
+  Item result=get(key2);
+  if (result == null) {
+    pool.put12(CLASS,newUTF8(value));
+    result=new Item(index++,key2);
+    put(result);
+  }
+  return result;
+}

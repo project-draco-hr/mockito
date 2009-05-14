@@ -1,0 +1,9 @@
+{
+  return new AnnotationNode(new ArrayList(0){
+    public boolean add(    final Object o){
+      annotationDefault=o;
+      return super.add(o);
+    }
+  }
+);
+}

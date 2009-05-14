@@ -1,0 +1,3 @@
+{
+  mv.visitInsn(type.getOpcode(op));
+}

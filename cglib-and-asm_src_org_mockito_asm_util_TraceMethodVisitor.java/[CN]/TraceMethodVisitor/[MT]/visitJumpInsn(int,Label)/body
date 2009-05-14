@@ -1,0 +1,10 @@
+{
+  buf.setLength(0);
+  buf.append(tab2).append(OPCODES[opcode]).append(' ');
+  appendLabel(label);
+  buf.append('\n');
+  text.add(buf.toString());
+  if (mv != null) {
+    mv.visitJumpInsn(opcode,label);
+  }
+}

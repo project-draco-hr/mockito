@@ -1,0 +1,4 @@
+{
+  mv1.visitMultiANewArrayInsn(desc,dims);
+  mv2.visitMultiANewArrayInsn(desc,dims);
+}

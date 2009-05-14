@@ -1,0 +1,5 @@
+{
+  super(lvs.mv);
+  state=lvs.state;
+  firstLocal=lvs.firstLocal;
+}

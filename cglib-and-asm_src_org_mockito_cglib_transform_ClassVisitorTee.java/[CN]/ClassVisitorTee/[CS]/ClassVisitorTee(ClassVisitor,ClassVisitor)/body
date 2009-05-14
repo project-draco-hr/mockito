@@ -1,0 +1,4 @@
+{
+  this.cv1=cv1;
+  this.cv2=cv2;
+}

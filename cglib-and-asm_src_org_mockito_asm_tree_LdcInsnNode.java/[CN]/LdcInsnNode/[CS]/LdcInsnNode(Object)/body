@@ -1,0 +1,4 @@
+{
+  super(Opcodes.LDC);
+  this.cst=cst;
+}

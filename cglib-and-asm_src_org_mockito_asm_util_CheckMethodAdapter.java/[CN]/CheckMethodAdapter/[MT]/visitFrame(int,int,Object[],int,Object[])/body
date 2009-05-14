@@ -1,0 +1,47 @@
+{
+  int mLocal;
+  int mStack;
+switch (type) {
+case Opcodes.F_NEW:
+case Opcodes.F_FULL:
+    mLocal=Integer.MAX_VALUE;
+  mStack=Integer.MAX_VALUE;
+break;
+case Opcodes.F_SAME:
+mLocal=0;
+mStack=0;
+break;
+case Opcodes.F_SAME1:
+mLocal=0;
+mStack=1;
+break;
+case Opcodes.F_APPEND:
+case Opcodes.F_CHOP:
+mLocal=3;
+mStack=0;
+break;
+default :
+throw new IllegalArgumentException("Invalid frame type " + type);
+}
+if (nLocal > mLocal) {
+throw new IllegalArgumentException("Invalid nLocal=" + nLocal + " for frame type "+ type);
+}
+if (nStack > mStack) {
+throw new IllegalArgumentException("Invalid nStack=" + nStack + " for frame type "+ type);
+}
+if (type != Opcodes.F_CHOP) {
+if (nLocal > 0 && (local == null || local.length < nLocal)) {
+throw new IllegalArgumentException("Array local[] is shorter than nLocal");
+}
+for (int i=0; i < nLocal; ++i) {
+checkFrameValue(local[i]);
+}
+}
+if (nStack > 0 && (stack == null || stack.length < nStack)) {
+throw new IllegalArgumentException("Array stack[] is shorter than nStack");
+}
+for (int i=0; i < nStack; ++i) {
+checkFrameValue(stack[i]);
+}
+mv.visitFrame(type,nLocal,local,nStack,stack);
+}

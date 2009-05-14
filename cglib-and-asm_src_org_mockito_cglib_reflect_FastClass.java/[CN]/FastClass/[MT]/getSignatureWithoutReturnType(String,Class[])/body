@@ -1,0 +1,10 @@
+{
+  StringBuffer sb=new StringBuffer();
+  sb.append(name);
+  sb.append('(');
+  for (int i=0; i < parameterTypes.length; i++) {
+    sb.append(Type.getDescriptor(parameterTypes[i]));
+  }
+  sb.append(')');
+  return sb.toString();
+}

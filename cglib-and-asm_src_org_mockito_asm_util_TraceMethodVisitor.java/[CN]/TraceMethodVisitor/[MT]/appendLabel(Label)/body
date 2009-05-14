@@ -1,0 +1,8 @@
+{
+  String name=(String)labelNames.get(l);
+  if (name == null) {
+    name="L" + labelNames.size();
+    labelNames.put(l,name);
+  }
+  buf.append(name);
+}

@@ -1,0 +1,4 @@
+{
+  mv1.visitTypeInsn(opcode,desc);
+  mv2.visitTypeInsn(opcode,desc);
+}

@@ -1,0 +1,5 @@
+{
+  if (av1 == null)   return av2;
+  if (av2 == null)   return av1;
+  return new AnnotationVisitorTee(av1,av2);
+}

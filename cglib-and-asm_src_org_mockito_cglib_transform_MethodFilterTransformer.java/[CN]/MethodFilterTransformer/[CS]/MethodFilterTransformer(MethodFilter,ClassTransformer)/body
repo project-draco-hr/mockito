@@ -1,0 +1,5 @@
+{
+  this.filter=filter;
+  this.pass=pass;
+  super.setTarget(pass);
+}

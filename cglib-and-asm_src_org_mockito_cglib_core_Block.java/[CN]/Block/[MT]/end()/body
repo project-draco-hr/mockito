@@ -1,0 +1,6 @@
+{
+  if (end != null) {
+    throw new IllegalStateException("end of label already set");
+  }
+  end=e.mark();
+}

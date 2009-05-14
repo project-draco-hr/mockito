@@ -1,0 +1,9 @@
+{
+  int length=this.length;
+  if (length + 1 > data.length) {
+    enlarge(1);
+  }
+  data[length++]=(byte)b;
+  this.length=length;
+  return this;
+}

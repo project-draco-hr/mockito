@@ -1,0 +1,5 @@
+{
+  this.type=ClassWriter.LONG;
+  this.longVal=longVal;
+  this.hashCode=0x7FFFFFFF & (type + (int)longVal);
+}

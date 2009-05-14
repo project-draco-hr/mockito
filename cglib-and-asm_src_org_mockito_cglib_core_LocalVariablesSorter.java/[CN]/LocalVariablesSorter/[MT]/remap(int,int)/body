@@ -1,0 +1,19 @@
+{
+  if (var < firstLocal) {
+    return var;
+  }
+  int key=2 * var + size - 1;
+  int length=state.mapping.length;
+  if (key >= length) {
+    int[] newMapping=new int[Math.max(2 * length,key + 1)];
+    System.arraycopy(state.mapping,0,newMapping,0,length);
+    state.mapping=newMapping;
+  }
+  int value=state.mapping[key];
+  if (value == 0) {
+    value=state.nextLocal + 1;
+    state.mapping[key]=value;
+    state.nextLocal+=size;
+  }
+  return value - 1;
+}

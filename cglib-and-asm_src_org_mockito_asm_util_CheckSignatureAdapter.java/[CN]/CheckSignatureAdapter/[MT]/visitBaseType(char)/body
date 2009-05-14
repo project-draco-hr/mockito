@@ -1,0 +1,19 @@
+{
+  if (type != TYPE_SIGNATURE || state != EMPTY) {
+    throw new IllegalStateException();
+  }
+  if (descriptor == 'V') {
+    if (!canBeVoid) {
+      throw new IllegalArgumentException();
+    }
+  }
+ else {
+    if ("ZCBSIFJD".indexOf(descriptor) == -1) {
+      throw new IllegalArgumentException();
+    }
+  }
+  state=SIMPLE_TYPE;
+  if (sv != null) {
+    sv.visitBaseType(descriptor);
+  }
+}

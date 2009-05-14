@@ -1,0 +1,19 @@
+{
+  if (TypeUtils.isPrimitive(type)) {
+    if (type != Type.VOID_TYPE) {
+      Label nonNull=make_label();
+      Label end=make_label();
+      dup();
+      ifnonnull(nonNull);
+      pop();
+      zero_or_null(type);
+      goTo(end);
+      mark(nonNull);
+      unbox(type);
+      mark(end);
+    }
+  }
+ else {
+    checkcast(type);
+  }
+}

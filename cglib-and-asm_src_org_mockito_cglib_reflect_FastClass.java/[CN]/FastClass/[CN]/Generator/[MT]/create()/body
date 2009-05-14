@@ -1,0 +1,4 @@
+{
+  setNamePrefix(type.getName());
+  return (FastClass)super.create(type.getName());
+}

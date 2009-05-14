@@ -1,0 +1,5 @@
+{
+  Generator gen=new Generator();
+  gen.setInterface(iface);
+  return gen.create();
+}

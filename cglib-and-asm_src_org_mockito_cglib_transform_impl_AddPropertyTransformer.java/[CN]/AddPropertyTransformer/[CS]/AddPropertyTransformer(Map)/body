@@ -1,0 +1,8 @@
+{
+  int size=props.size();
+  names=(String[])props.keySet().toArray(new String[size]);
+  types=new Type[size];
+  for (int i=0; i < size; i++) {
+    types[i]=(Type)props.get(names[i]);
+  }
+}

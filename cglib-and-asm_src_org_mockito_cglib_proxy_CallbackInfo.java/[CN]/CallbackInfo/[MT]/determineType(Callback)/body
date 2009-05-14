@@ -1,0 +1,6 @@
+{
+  if (callback == null) {
+    throw new IllegalStateException("Callback is null");
+  }
+  return determineType(callback.getClass());
+}

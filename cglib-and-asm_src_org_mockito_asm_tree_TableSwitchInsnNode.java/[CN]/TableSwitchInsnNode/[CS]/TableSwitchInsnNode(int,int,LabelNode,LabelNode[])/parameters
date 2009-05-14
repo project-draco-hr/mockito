@@ -1,0 +1,4 @@
+int min
+int max
+LabelNode dflt
+LabelNode[] labels

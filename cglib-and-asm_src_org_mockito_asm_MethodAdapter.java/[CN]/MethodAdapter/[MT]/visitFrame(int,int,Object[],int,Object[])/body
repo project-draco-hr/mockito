@@ -1,0 +1,3 @@
+{
+  mv.visitFrame(type,nLocal,local,nStack,stack);
+}

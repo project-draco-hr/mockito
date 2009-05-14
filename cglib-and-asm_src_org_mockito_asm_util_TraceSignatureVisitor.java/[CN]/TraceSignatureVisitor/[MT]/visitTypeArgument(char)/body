@@ -1,0 +1,17 @@
+{
+  if (argumentStack % 2 == 0) {
+    ++argumentStack;
+    declaration.append('<');
+  }
+ else {
+    declaration.append(", ");
+  }
+  if (tag == EXTENDS) {
+    declaration.append("? extends ");
+  }
+ else   if (tag == SUPER) {
+    declaration.append("? super ");
+  }
+  startType();
+  return this;
+}

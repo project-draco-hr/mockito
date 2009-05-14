@@ -1,0 +1,3 @@
+{
+  emit_invoke(Constants.INVOKESTATIC,owner,sig);
+}

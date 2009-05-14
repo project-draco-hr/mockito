@@ -1,0 +1,4 @@
+{
+  MethodDelegate other=(MethodDelegate)obj;
+  return target == other.target && eqMethod.equals(other.eqMethod);
+}

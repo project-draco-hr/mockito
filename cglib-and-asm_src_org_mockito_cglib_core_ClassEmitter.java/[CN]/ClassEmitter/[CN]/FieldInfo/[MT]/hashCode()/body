@@ -1,0 +1,3 @@
+{
+  return access ^ name.hashCode() ^ type.hashCode()^ ((value == null) ? 0 : value.hashCode());
+}

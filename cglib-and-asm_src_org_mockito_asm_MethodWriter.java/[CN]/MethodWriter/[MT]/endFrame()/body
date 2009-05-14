@@ -1,0 +1,11 @@
+{
+  if (previousFrame != null) {
+    if (stackMap == null) {
+      stackMap=new ByteVector();
+    }
+    writeFrame();
+    ++frameCount;
+  }
+  previousFrame=frame;
+  frame=null;
+}

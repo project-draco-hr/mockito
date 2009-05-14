@@ -1,0 +1,5 @@
+{
+  MethodNode mn=new MethodNode(access,name,desc,signature,exceptions);
+  methods.add(mn);
+  return mn;
+}

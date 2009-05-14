@@ -1,0 +1,3 @@
+{
+  mv.visitFieldInsn(opcode,ctype.getInternalName(),name,ftype.getDescriptor());
+}

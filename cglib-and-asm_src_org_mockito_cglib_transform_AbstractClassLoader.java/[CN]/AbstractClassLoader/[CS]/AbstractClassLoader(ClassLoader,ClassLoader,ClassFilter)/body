@@ -1,0 +1,5 @@
+{
+  super(parent);
+  this.filter=filter;
+  this.classPath=classPath;
+}

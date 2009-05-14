@@ -1,0 +1,9 @@
+{
+  int[] keys=new int[buckets.size()];
+  int index=0;
+  for (Iterator it=buckets.keySet().iterator(); it.hasNext(); ) {
+    keys[index++]=((Integer)it.next()).intValue();
+  }
+  Arrays.sort(keys);
+  return keys;
+}

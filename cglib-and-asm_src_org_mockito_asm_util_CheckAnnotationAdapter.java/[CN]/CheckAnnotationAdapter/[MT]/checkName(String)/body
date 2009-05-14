@@ -1,0 +1,5 @@
+{
+  if (named && name == null) {
+    throw new IllegalArgumentException("Annotation value name must not be null");
+  }
+}

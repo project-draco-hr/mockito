@@ -1,0 +1,4 @@
+{
+  mv1.visitLookupSwitchInsn(dflt,keys,labels);
+  mv2.visitLookupSwitchInsn(dflt,keys,labels);
+}

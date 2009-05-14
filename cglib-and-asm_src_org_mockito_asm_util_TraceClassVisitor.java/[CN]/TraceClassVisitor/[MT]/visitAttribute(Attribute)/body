@@ -1,0 +1,7 @@
+{
+  text.add("\n");
+  super.visitAttribute(attr);
+  if (cv != null) {
+    cv.visitAttribute(attr);
+  }
+}

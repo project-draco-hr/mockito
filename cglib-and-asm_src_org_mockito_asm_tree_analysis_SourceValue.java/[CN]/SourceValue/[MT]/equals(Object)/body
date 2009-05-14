@@ -1,0 +1,7 @@
+{
+  if (!(value instanceof SourceValue)) {
+    return false;
+  }
+  SourceValue v=(SourceValue)value;
+  return size == v.size && insns.equals(v.insns);
+}

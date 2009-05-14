@@ -1,0 +1,16 @@
+{
+  final CodeEmitter emitter=super.begin_method(access,sig,exceptions);
+  if (sig.getName().equals(Constants.CONSTRUCTOR_NAME)) {
+    return new CodeEmitter(emitter){
+      public void visitInsn(      int opcode){
+        if (opcode == Constants.RETURN) {
+          load_this();
+          invoke(info);
+        }
+        super.visitInsn(opcode);
+      }
+    }
+;
+  }
+  return emitter;
+}

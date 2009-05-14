@@ -1,0 +1,6 @@
+{
+  super(opcode);
+  this.owner=owner;
+  this.name=name;
+  this.desc=desc;
+}

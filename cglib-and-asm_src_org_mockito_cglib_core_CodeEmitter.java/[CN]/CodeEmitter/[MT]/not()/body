@@ -1,0 +1,4 @@
+{
+  push(1);
+  math(XOR,Type.INT_TYPE);
+}

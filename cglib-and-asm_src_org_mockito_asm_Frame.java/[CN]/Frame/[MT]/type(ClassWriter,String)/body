@@ -1,0 +1,59 @@
+{
+  String t;
+  int index=desc.charAt(0) == '(' ? desc.indexOf(')') + 1 : 0;
+switch (desc.charAt(index)) {
+case 'V':
+    return 0;
+case 'Z':
+case 'C':
+case 'B':
+case 'S':
+case 'I':
+  return INTEGER;
+case 'F':
+return FLOAT;
+case 'J':
+return LONG;
+case 'D':
+return DOUBLE;
+case 'L':
+t=desc.substring(index + 1,desc.length() - 1);
+return OBJECT | cw.addType(t);
+default :
+int data;
+int dims=index + 1;
+while (desc.charAt(dims) == '[') {
+++dims;
+}
+switch (desc.charAt(dims)) {
+case 'Z':
+data=BOOLEAN;
+break;
+case 'C':
+data=CHAR;
+break;
+case 'B':
+data=BYTE;
+break;
+case 'S':
+data=SHORT;
+break;
+case 'I':
+data=INTEGER;
+break;
+case 'F':
+data=FLOAT;
+break;
+case 'J':
+data=LONG;
+break;
+case 'D':
+data=DOUBLE;
+break;
+default :
+t=desc.substring(dims + 1,desc.length() - 1);
+data=OBJECT | cw.addType(t);
+}
+return (dims - index) << 28 | data;
+}
+}

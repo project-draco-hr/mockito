@@ -1,0 +1,4 @@
+{
+  this.bean=bean;
+  if (bean != null)   beanClass=bean.getClass();
+}

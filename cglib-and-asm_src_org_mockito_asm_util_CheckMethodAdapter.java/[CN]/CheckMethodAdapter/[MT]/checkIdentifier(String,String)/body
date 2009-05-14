@@ -1,0 +1,3 @@
+{
+  checkIdentifier(name,0,-1,msg);
+}

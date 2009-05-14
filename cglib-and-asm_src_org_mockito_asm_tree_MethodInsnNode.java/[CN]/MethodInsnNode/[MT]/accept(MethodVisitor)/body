@@ -1,0 +1,3 @@
+{
+  mv.visitMethodInsn(opcode,owner,name,desc);
+}

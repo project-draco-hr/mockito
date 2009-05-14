@@ -1,0 +1,7 @@
+{
+  Edge b=new Edge();
+  b.info=info;
+  b.successor=successor;
+  b.next=currentBlock.successors;
+  currentBlock.successors=b;
+}

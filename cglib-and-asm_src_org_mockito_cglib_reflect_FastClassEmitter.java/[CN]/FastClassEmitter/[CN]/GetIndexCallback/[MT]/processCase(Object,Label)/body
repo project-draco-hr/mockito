@@ -1,0 +1,4 @@
+{
+  e.push(((Integer)indexes.get(key)).intValue());
+  e.return_value();
+}

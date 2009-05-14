@@ -1,0 +1,3 @@
+{
+  return readClass(header + 2,new char[maxStringLength]);
+}

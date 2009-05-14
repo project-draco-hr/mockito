@@ -1,0 +1,8 @@
+{
+  if (lineNumber == null) {
+    lineNumber=new ByteVector();
+  }
+  ++lineNumberCount;
+  lineNumber.putShort(start.position);
+  lineNumber.putShort(line);
+}

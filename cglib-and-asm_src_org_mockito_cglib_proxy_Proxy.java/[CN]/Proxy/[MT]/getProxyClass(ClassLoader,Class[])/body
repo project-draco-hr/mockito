@@ -1,0 +1,9 @@
+{
+  Enhancer e=new Enhancer();
+  e.setSuperclass(ProxyImpl.class);
+  e.setInterfaces(interfaces);
+  e.setCallbackTypes(new Class[]{InvocationHandler.class,NoOp.class});
+  e.setCallbackFilter(BAD_OBJECT_METHOD_FILTER);
+  e.setUseFactory(false);
+  return e.createClass();
+}

@@ -1,0 +1,5 @@
+{
+  className=name.replace('/','.');
+  this.superName=superName.replace('/','.');
+  super.visit(version,access,name,signature,superName,interfaces);
+}

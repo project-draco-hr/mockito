@@ -1,0 +1,3 @@
+{
+  return getClass(className,loader,CGLIB_PACKAGES);
+}

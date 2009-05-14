@@ -1,0 +1,18 @@
+{
+  code.putByte(opcode);
+  if (currentBlock != null) {
+    if (compute == FRAMES) {
+      currentBlock.frame.execute(opcode,0,null,null);
+    }
+ else {
+      int size=stackSize + Frame.SIZE[opcode];
+      if (size > maxStackSize) {
+        maxStackSize=size;
+      }
+      stackSize=size;
+    }
+    if ((opcode >= Opcodes.IRETURN && opcode <= Opcodes.RETURN) || opcode == Opcodes.ATHROW) {
+      noSuccessor();
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  int j;
+  for (j=0; i != 0; i^=j) {
+    j=i & -i;
+  }
+  return j;
+}

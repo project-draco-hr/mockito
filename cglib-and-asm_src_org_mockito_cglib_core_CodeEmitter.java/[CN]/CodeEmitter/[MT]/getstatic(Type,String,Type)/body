@@ -1,0 +1,3 @@
+{
+  emit_field(Constants.GETSTATIC,owner,name,type);
+}

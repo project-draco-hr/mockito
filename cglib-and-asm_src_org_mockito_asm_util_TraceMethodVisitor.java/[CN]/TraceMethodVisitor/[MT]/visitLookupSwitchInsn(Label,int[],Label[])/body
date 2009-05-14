@@ -1,0 +1,16 @@
+{
+  buf.setLength(0);
+  buf.append(tab2).append("LOOKUPSWITCH\n");
+  for (int i=0; i < labels.length; ++i) {
+    buf.append(tab3).append(keys[i]).append(": ");
+    appendLabel(labels[i]);
+    buf.append('\n');
+  }
+  buf.append(tab3).append("default: ");
+  appendLabel(dflt);
+  buf.append('\n');
+  text.add(buf.toString());
+  if (mv != null) {
+    mv.visitLookupSwitchInsn(dflt,keys,labels);
+  }
+}

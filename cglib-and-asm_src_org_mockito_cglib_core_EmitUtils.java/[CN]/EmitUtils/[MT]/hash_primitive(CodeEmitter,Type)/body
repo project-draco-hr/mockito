@@ -1,0 +1,15 @@
+{
+switch (type.getSort()) {
+case Type.BOOLEAN:
+    e.push(1);
+  e.math(e.XOR,Type.INT_TYPE);
+break;
+case Type.FLOAT:
+e.invoke_static(Constants.TYPE_FLOAT,FLOAT_TO_INT_BITS);
+break;
+case Type.DOUBLE:
+e.invoke_static(Constants.TYPE_DOUBLE,DOUBLE_TO_LONG_BITS);
+case Type.LONG:
+hash_long(e);
+}
+}

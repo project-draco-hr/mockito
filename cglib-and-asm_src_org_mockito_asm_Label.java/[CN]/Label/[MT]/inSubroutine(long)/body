@@ -1,0 +1,6 @@
+{
+  if ((status & Label.VISITED) != 0) {
+    return (srcAndRefPositions[(int)(id >>> 32)] & (int)id) != 0;
+  }
+  return false;
+}

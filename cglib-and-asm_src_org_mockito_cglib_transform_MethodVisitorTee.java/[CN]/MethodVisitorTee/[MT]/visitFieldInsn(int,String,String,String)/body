@@ -1,0 +1,4 @@
+{
+  mv1.visitFieldInsn(opcode,owner,name,desc);
+  mv2.visitFieldInsn(opcode,owner,name,desc);
+}

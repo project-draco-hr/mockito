@@ -1,0 +1,4 @@
+{
+  this.cv=cv;
+  this.pw=pw;
+}

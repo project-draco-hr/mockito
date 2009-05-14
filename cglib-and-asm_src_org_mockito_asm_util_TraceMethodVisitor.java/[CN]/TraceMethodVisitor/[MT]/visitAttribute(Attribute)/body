@@ -1,0 +1,15 @@
+{
+  buf.setLength(0);
+  buf.append(tab).append("ATTRIBUTE ");
+  appendDescriptor(-1,attr.type);
+  if (attr instanceof Traceable) {
+    ((Traceable)attr).trace(buf,labelNames);
+  }
+ else {
+    buf.append(" : unknown\n");
+  }
+  text.add(buf.toString());
+  if (mv != null) {
+    mv.visitAttribute(attr);
+  }
+}

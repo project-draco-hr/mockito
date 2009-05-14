@@ -1,0 +1,10 @@
+{
+  if (argumentStack % 2 == 0) {
+    ++argumentStack;
+    buf.append('<');
+  }
+  if (wildcard != '=') {
+    buf.append(wildcard);
+  }
+  return this;
+}

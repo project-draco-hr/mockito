@@ -1,0 +1,6 @@
+{
+  int pos=checkFieldTypeSignature(signature,0);
+  if (pos != signature.length()) {
+    throw new IllegalArgumentException(signature + ": error at index " + pos);
+  }
+}

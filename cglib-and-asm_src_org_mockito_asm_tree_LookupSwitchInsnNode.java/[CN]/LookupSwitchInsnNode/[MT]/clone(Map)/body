@@ -1,0 +1,5 @@
+{
+  LookupSwitchInsnNode clone=new LookupSwitchInsnNode(clone(dflt,labels),null,clone(this.labels,labels));
+  clone.keys.addAll(keys);
+  return clone;
+}

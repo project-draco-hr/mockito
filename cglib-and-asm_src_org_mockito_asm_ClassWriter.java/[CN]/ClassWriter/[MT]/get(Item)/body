@@ -1,0 +1,7 @@
+{
+  Item i=items[key.hashCode % items.length];
+  while (i != null && !key.isEqualTo(i)) {
+    i=i.next;
+  }
+  return i;
+}

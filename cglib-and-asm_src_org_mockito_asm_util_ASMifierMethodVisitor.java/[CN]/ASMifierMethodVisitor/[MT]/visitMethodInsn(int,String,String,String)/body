@@ -1,0 +1,11 @@
+{
+  buf.setLength(0);
+  buf.append("mv.visitMethodInsn(").append(OPCODES[opcode]).append(", ");
+  appendConstant(owner);
+  buf.append(", ");
+  appendConstant(name);
+  buf.append(", ");
+  appendConstant(desc);
+  buf.append(");\n");
+  text.add(buf.toString());
+}

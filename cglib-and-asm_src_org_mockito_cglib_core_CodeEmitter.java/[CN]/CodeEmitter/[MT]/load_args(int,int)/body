@@ -1,0 +1,8 @@
+{
+  int pos=state.localOffset + skipArgs(fromArg);
+  for (int i=0; i < count; i++) {
+    Type t=state.argumentTypes[fromArg + i];
+    load_local(t,pos);
+    pos+=t.getSize();
+  }
+}

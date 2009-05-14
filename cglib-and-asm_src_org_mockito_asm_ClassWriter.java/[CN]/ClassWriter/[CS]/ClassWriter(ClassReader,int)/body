@@ -1,0 +1,5 @@
+{
+  this(flags);
+  classReader.copyPool(this);
+  this.cr=classReader;
+}

@@ -1,0 +1,3 @@
+{
+  return ((Comparable)a[i]).compareTo(a[j]);
+}

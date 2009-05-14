@@ -1,0 +1,40 @@
+{
+  CodeEmitter e=begin_method(Constants.ACC_PUBLIC,SET_PROPERTY_VALUES,null);
+  if (setters.length > 0) {
+    Local index=e.make_local(Type.INT_TYPE);
+    e.push(0);
+    e.store_local(index);
+    e.load_arg(0);
+    e.checkcast(Type.getType(target));
+    e.load_arg(1);
+    Block handler=e.begin_block();
+    int lastIndex=0;
+    for (int i=0; i < setters.length; i++) {
+      if (setters[i] != null) {
+        MethodInfo setter=ReflectUtils.getMethodInfo(setters[i]);
+        int diff=i - lastIndex;
+        if (diff > 0) {
+          e.iinc(index,diff);
+          lastIndex=i;
+        }
+        e.dup2();
+        e.aaload(i);
+        e.unbox(setter.getSignature().getArgumentTypes()[0]);
+        e.invoke(setter);
+      }
+    }
+    handler.end();
+    e.return_value();
+    e.catch_exception(handler,Constants.TYPE_THROWABLE);
+    e.new_instance(BULK_BEAN_EXCEPTION);
+    e.dup_x1();
+    e.swap();
+    e.load_local(index);
+    e.invoke_constructor(BULK_BEAN_EXCEPTION,CSTRUCT_EXCEPTION);
+    e.athrow();
+  }
+ else {
+    e.return_value();
+  }
+  e.end_method();
+}

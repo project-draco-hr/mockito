@@ -1,0 +1,31 @@
+{
+  Item i=cw.newConstItem(cst);
+  if (currentBlock != null) {
+    if (compute == FRAMES) {
+      currentBlock.frame.execute(Opcodes.LDC,0,cw,i);
+    }
+ else {
+      int size;
+      if (i.type == ClassWriter.LONG || i.type == ClassWriter.DOUBLE) {
+        size=stackSize + 2;
+      }
+ else {
+        size=stackSize + 1;
+      }
+      if (size > maxStackSize) {
+        maxStackSize=size;
+      }
+      stackSize=size;
+    }
+  }
+  int index=i.index;
+  if (i.type == ClassWriter.LONG || i.type == ClassWriter.DOUBLE) {
+    code.put12(20,index);
+  }
+ else   if (index >= 256) {
+    code.put12(19,index);
+  }
+ else {
+    code.put11(Opcodes.LDC,index);
+  }
+}

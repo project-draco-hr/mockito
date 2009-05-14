@@ -1,0 +1,10 @@
+{
+  checkStartCode();
+  checkEndCode();
+  checkLabel(label,false,"label");
+  if (labels.get(label) != null) {
+    throw new IllegalArgumentException("Already visited label");
+  }
+  labels.put(label,new Integer(labels.size()));
+  mv.visitLabel(label);
+}

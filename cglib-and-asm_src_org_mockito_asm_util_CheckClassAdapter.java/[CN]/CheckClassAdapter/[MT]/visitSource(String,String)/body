@@ -1,0 +1,8 @@
+{
+  checkState();
+  if (source) {
+    throw new IllegalStateException("visitSource can be called only once.");
+  }
+  source=true;
+  cv.visitSource(file,debug);
+}

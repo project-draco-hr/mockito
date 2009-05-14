@@ -1,0 +1,3 @@
+{
+  return ReflectUtils.newInstance(type,new Class[]{Class.class},new Object[]{this.type});
+}

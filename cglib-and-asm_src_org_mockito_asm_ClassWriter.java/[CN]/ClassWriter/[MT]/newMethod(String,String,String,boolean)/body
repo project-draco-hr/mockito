@@ -1,0 +1,3 @@
+{
+  return newMethodItem(owner,name,desc,itf).index;
+}

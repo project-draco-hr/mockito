@@ -1,0 +1,7 @@
+{
+  FieldInfo field=(FieldInfo)fieldInfo.get(name);
+  if (field == null) {
+    throw new IllegalArgumentException("Field " + name + " is not declared in "+ getClassType().getClassName());
+  }
+  return field;
+}

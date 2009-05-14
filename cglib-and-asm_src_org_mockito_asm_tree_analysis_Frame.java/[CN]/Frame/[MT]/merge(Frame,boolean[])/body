@@ -1,0 +1,10 @@
+{
+  boolean changes=false;
+  for (int i=0; i < locals; ++i) {
+    if (!access[i] && !values[i].equals(frame.values[i])) {
+      values[i]=frame.values[i];
+      changes=true;
+    }
+  }
+  return changes;
+}

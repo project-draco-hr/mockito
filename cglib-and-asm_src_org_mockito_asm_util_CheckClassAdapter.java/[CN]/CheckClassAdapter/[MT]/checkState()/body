@@ -1,0 +1,8 @@
+{
+  if (!start) {
+    throw new IllegalStateException("Cannot visit member before visit has been called.");
+  }
+  if (end) {
+    throw new IllegalStateException("Cannot visit member after visitEnd has been called.");
+  }
+}

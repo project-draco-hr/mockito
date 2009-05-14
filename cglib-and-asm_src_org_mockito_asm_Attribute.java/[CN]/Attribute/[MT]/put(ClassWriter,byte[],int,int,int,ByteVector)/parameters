@@ -1,0 +1,6 @@
+ClassWriter cw
+byte[] code
+int len
+int maxStack
+int maxLocals
+ByteVector out

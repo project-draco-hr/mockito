@@ -1,0 +1,10 @@
+{
+  if (index == size()) {
+    next=null;
+    prev=getLast();
+  }
+ else {
+    next=get(index);
+    prev=next.prev;
+  }
+}

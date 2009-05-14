@@ -1,0 +1,9 @@
+{
+  checkStartCode();
+  checkEndCode();
+  checkOpcode(opcode,5);
+  checkMethodIdentifier(name,"name");
+  checkInternalName(owner,"owner");
+  checkMethodDesc(desc);
+  mv.visitMethodInsn(opcode,owner,name,desc);
+}

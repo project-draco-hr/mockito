@@ -1,0 +1,3 @@
+{
+  emit_field(Constants.GETSTATIC,ce.getSuperType(),name,type);
+}

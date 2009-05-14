@@ -1,0 +1,4 @@
+{
+  super(cause.getClass().getName() + "-->" + cause.getMessage());
+  this.cause=cause;
+}

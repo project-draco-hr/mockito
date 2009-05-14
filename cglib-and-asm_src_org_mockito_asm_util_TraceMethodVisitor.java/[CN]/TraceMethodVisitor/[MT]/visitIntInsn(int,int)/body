@@ -1,0 +1,8 @@
+{
+  buf.setLength(0);
+  buf.append(tab2).append(OPCODES[opcode]).append(' ').append(opcode == Opcodes.NEWARRAY ? TYPES[operand] : Integer.toString(operand)).append('\n');
+  text.add(buf.toString());
+  if (mv != null) {
+    mv.visitIntInsn(opcode,operand);
+  }
+}

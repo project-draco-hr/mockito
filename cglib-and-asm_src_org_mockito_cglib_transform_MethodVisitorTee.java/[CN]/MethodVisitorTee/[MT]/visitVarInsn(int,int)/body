@@ -1,0 +1,4 @@
+{
+  mv1.visitVarInsn(opcode,var);
+  mv2.visitVarInsn(opcode,var);
+}

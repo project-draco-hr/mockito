@@ -1,0 +1,8 @@
+{
+  e.dup();
+  e.dup();
+  e.invoke_virtual(Constants.TYPE_STRING_BUFFER,LENGTH);
+  e.push(amt);
+  e.math(e.SUB,Type.INT_TYPE);
+  e.invoke_virtual(Constants.TYPE_STRING_BUFFER,SET_LENGTH);
+}

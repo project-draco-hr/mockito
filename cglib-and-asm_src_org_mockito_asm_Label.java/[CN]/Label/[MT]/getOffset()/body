@@ -1,0 +1,6 @@
+{
+  if ((status & RESOLVED) == 0) {
+    throw new IllegalStateException("Label offset position has not been resolved yet");
+  }
+  return position;
+}

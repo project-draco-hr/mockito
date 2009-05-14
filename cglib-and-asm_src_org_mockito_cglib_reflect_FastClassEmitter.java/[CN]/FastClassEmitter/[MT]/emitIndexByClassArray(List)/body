@@ -1,0 +1,21 @@
+{
+  CodeEmitter e=begin_method(Constants.ACC_PUBLIC,METHOD_GET_INDEX,null);
+  if (methods.size() > TOO_MANY_METHODS) {
+    List signatures=CollectionUtils.transform(methods,new Transformer(){
+      public Object transform(      Object obj){
+        String s=ReflectUtils.getSignature((Method)obj).toString();
+        return s.substring(0,s.lastIndexOf(')') + 1);
+      }
+    }
+);
+    e.load_args();
+    e.invoke_static(FAST_CLASS,GET_SIGNATURE_WITHOUT_RETURN_TYPE);
+    signatureSwitchHelper(e,signatures);
+  }
+ else {
+    e.load_args();
+    List info=CollectionUtils.transform(methods,MethodInfoTransformer.getInstance());
+    EmitUtils.method_switch(e,info,new GetIndexCallback(e,info));
+  }
+  e.end_method();
+}

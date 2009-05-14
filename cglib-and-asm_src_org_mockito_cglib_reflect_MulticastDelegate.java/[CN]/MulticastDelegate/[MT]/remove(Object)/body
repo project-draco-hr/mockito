@@ -1,0 +1,12 @@
+{
+  for (int i=targets.length - 1; i >= 0; i--) {
+    if (targets[i].equals(target)) {
+      MulticastDelegate copy=newInstance();
+      copy.targets=new Object[targets.length - 1];
+      System.arraycopy(targets,0,copy.targets,0,i);
+      System.arraycopy(targets,i + 1,copy.targets,i,targets.length - i - 1);
+      return copy;
+    }
+  }
+  return this;
+}

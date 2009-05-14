@@ -1,0 +1,3 @@
+{
+  return pos < signature.length() ? signature.charAt(pos) : (char)0;
+}

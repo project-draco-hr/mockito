@@ -1,0 +1,14 @@
+{
+  if (value == 0f) {
+    return Constants.FCONST_0;
+  }
+ else   if (value == 1f) {
+    return Constants.FCONST_1;
+  }
+ else   if (value == 2f) {
+    return Constants.FCONST_2;
+  }
+ else {
+    return -1;
+  }
+}

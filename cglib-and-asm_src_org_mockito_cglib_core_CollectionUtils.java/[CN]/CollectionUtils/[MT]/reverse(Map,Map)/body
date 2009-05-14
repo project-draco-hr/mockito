@@ -1,0 +1,6 @@
+{
+  for (Iterator it=source.keySet().iterator(); it.hasNext(); ) {
+    Object key=it.next();
+    target.put(source.get(key),key);
+  }
+}

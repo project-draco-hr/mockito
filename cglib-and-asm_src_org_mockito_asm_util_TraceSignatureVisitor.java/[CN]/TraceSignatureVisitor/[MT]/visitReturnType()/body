@@ -1,0 +1,12 @@
+{
+  endFormals();
+  if (seenParameter) {
+    seenParameter=false;
+  }
+ else {
+    declaration.append('(');
+  }
+  declaration.append(')');
+  returnType=new StringBuffer();
+  return new TraceSignatureVisitor(returnType);
+}

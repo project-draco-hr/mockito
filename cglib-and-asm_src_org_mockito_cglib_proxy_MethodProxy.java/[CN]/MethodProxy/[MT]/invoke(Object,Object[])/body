@@ -1,0 +1,14 @@
+{
+  try {
+    init();
+    FastClassInfo fci=fastClassInfo;
+    return fci.f1.invoke(fci.i1,obj,args);
+  }
+ catch (  InvocationTargetException e) {
+    throw e.getTargetException();
+  }
+catch (  IllegalArgumentException e) {
+    if (fastClassInfo.i1 < 0)     throw new IllegalArgumentException("Protected method: " + sig1);
+    throw e;
+  }
+}

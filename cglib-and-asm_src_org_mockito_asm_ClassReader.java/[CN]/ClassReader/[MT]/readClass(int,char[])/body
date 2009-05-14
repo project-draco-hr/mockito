@@ -1,0 +1,3 @@
+{
+  return readUTF8(items[readUnsignedShort(index)],buf);
+}

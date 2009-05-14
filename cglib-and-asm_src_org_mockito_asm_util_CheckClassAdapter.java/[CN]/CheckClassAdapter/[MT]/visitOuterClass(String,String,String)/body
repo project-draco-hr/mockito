@@ -1,0 +1,14 @@
+{
+  checkState();
+  if (outer) {
+    throw new IllegalStateException("visitOuterClass can be called only once.");
+  }
+  outer=true;
+  if (owner == null) {
+    throw new IllegalArgumentException("Illegal outer class owner");
+  }
+  if (desc != null) {
+    CheckMethodAdapter.checkMethodDesc(desc);
+  }
+  cv.visitOuterClass(owner,name,desc);
+}

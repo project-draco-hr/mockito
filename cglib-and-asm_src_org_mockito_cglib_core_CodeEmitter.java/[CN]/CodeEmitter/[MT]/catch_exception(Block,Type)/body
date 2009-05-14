@@ -1,0 +1,6 @@
+{
+  if (block.getEnd() == null) {
+    throw new IllegalStateException("end of block is unset");
+  }
+  mv.visitTryCatchBlock(block.getStart(),block.getEnd(),mark(),exception.getInternalName());
+}

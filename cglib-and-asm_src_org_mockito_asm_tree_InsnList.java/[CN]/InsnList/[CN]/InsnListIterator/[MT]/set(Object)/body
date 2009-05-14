@@ -1,0 +1,4 @@
+{
+  InsnList.this.set(next.prev,(AbstractInsnNode)o);
+  prev=(AbstractInsnNode)o;
+}

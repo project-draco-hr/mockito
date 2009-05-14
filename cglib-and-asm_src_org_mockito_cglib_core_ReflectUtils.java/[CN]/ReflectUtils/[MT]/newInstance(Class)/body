@@ -1,0 +1,3 @@
+{
+  return newInstance(type,Constants.EMPTY_CLASS_ARRAY,null);
+}

@@ -1,0 +1,6 @@
+{
+  for (int i=1; i < keys.length; i++) {
+    if (keys[i] < keys[i - 1])     return false;
+  }
+  return true;
+}

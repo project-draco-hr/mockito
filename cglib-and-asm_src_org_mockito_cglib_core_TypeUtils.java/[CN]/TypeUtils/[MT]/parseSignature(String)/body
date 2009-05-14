@@ -1,0 +1,15 @@
+{
+  int space=s.indexOf(' ');
+  int lparen=s.indexOf('(',space);
+  int rparen=s.indexOf(')',lparen);
+  String returnType=s.substring(0,space);
+  String methodName=s.substring(space + 1,lparen);
+  StringBuffer sb=new StringBuffer();
+  sb.append('(');
+  for (Iterator it=parseTypes(s,lparen + 1,rparen).iterator(); it.hasNext(); ) {
+    sb.append(it.next());
+  }
+  sb.append(')');
+  sb.append(map(returnType));
+  return new Signature(methodName,sb.toString());
+}

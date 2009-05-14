@@ -1,0 +1,5 @@
+{
+  buf.setLength(0);
+  buf.append("mv.visitIincInsn(").append(var).append(", ").append(increment).append(");\n");
+  text.add(buf.toString());
+}

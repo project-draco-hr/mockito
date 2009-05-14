@@ -1,0 +1,6 @@
+{
+  this.interfaces=new ArrayList();
+  this.innerClasses=new ArrayList();
+  this.fields=new ArrayList();
+  this.methods=new ArrayList();
+}

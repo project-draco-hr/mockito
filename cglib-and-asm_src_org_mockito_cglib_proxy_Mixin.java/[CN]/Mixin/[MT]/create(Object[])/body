@@ -1,0 +1,5 @@
+{
+  Generator gen=new Generator();
+  gen.setDelegates(delegates);
+  return gen.create();
+}

@@ -1,0 +1,4 @@
+{
+  chooseComparer(index,cmp);
+  super.quickSort(lo,hi - 1);
+}

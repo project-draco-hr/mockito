@@ -1,0 +1,3 @@
+{
+  return log2(topbit(value));
+}

@@ -1,0 +1,8 @@
+{
+  checkStartCode();
+  checkEndCode();
+  if (!(cst instanceof Type)) {
+    checkConstant(cst);
+  }
+  mv.visitLdcInsn(cst);
+}

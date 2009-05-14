@@ -1,0 +1,9 @@
+{
+  if (exceptions == null) {
+    exceptions=new StringBuffer();
+  }
+ else {
+    exceptions.append(", ");
+  }
+  return new TraceSignatureVisitor(exceptions);
+}

@@ -1,0 +1,8 @@
+{
+  pos=checkChar('<',signature,pos);
+  pos=checkFormalTypeParameter(signature,pos);
+  while (getChar(signature,pos) != '>') {
+    pos=checkFormalTypeParameter(signature,pos);
+  }
+  return pos + 1;
+}

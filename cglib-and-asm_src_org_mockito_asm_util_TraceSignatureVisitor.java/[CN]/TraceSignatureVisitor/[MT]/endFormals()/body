@@ -1,0 +1,6 @@
+{
+  if (seenFormalParameter) {
+    declaration.append('>');
+    seenFormalParameter=false;
+  }
+}

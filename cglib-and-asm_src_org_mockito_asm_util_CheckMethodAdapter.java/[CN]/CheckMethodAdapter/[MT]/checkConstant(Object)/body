@@ -1,0 +1,5 @@
+{
+  if (!(cst instanceof Integer) && !(cst instanceof Float) && !(cst instanceof Long)&& !(cst instanceof Double)&& !(cst instanceof String)) {
+    throw new IllegalArgumentException("Invalid constant: " + cst);
+  }
+}

@@ -1,0 +1,3 @@
+{
+  load_class_helper(e,e.getClassEmitter().getClassType());
+}

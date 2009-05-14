@@ -1,0 +1,25 @@
+{
+  FrameNode clone=new FrameNode();
+  clone.type=type;
+  if (local != null) {
+    clone.local=new ArrayList();
+    for (int i=0; i < local.size(); ++i) {
+      Object l=local.get(i);
+      if (l instanceof LabelNode) {
+        l=labels.get(l);
+      }
+      clone.local.add(l);
+    }
+  }
+  if (stack != null) {
+    clone.stack=new ArrayList();
+    for (int i=0; i < stack.size(); ++i) {
+      Object s=stack.get(i);
+      if (s instanceof LabelNode) {
+        s=labels.get(s);
+      }
+      clone.stack.add(s);
+    }
+  }
+  return clone;
+}

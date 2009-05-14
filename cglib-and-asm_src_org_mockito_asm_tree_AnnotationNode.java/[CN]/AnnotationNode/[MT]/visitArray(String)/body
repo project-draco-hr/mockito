@@ -1,0 +1,11 @@
+{
+  if (values == null) {
+    values=new ArrayList(this.desc != null ? 2 : 1);
+  }
+  if (this.desc != null) {
+    values.add(name);
+  }
+  List array=new ArrayList();
+  values.add(array);
+  return new AnnotationNode(array);
+}

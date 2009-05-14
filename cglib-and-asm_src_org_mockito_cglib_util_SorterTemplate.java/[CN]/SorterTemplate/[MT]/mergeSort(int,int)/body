@@ -1,0 +1,11 @@
+{
+  int diff=hi - lo;
+  if (diff <= MERGESORT_THRESHOLD) {
+    insertionSort(lo,hi);
+    return;
+  }
+  int mid=lo + diff / 2;
+  mergeSort(lo,mid);
+  mergeSort(mid,hi);
+  merge(lo,mid,hi,mid - lo,hi - mid);
+}

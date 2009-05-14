@@ -1,0 +1,4 @@
+{
+  pass.setTarget(target);
+  direct=target;
+}

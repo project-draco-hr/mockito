@@ -1,0 +1,8 @@
+{
+  if (state != FORMAL) {
+    throw new IllegalStateException();
+  }
+  state=BOUND;
+  SignatureVisitor v=sv == null ? null : sv.visitClassBound();
+  return new CheckSignatureAdapter(TYPE_SIGNATURE,v);
+}

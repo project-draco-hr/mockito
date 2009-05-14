@@ -1,0 +1,10 @@
+{
+  checkStartCode();
+  checkEndCode();
+  checkOpcode(opcode,3);
+  checkInternalName(type,"type");
+  if (opcode == Opcodes.NEW && type.charAt(0) == '[') {
+    throw new IllegalArgumentException("NEW cannot be used to create arrays: " + type);
+  }
+  mv.visitTypeInsn(opcode,type);
+}

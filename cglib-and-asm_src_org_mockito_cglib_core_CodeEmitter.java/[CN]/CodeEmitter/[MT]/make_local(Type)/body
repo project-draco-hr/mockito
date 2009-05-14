@@ -1,0 +1,3 @@
+{
+  return new Local(newLocal(type.getSize()),type);
+}

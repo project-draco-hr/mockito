@@ -1,0 +1,11 @@
+{
+  int i=0;
+  AbstractInsnNode elem=first;
+  AbstractInsnNode[] insns=new AbstractInsnNode[size];
+  while (elem != null) {
+    insns[i]=elem;
+    elem.index=i++;
+    elem=elem.next;
+  }
+  return insns;
+}

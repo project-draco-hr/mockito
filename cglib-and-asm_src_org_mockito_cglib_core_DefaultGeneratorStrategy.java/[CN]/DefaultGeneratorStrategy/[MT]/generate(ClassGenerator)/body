@@ -1,0 +1,5 @@
+{
+  ClassWriter cw=getClassWriter();
+  transform(cg).generateClass(cw);
+  return transform(cw.toByteArray());
+}

@@ -1,0 +1,6 @@
+{
+  this.start=start;
+  this.access=new boolean[maxLocals];
+  this.callers=new ArrayList();
+  callers.add(caller);
+}

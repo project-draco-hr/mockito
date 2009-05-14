@@ -1,0 +1,30 @@
+{
+  if (type == null) {
+    return BasicValue.UNINITIALIZED_VALUE;
+  }
+  boolean isArray=type.getSort() == Type.ARRAY;
+  if (isArray) {
+switch (type.getElementType().getSort()) {
+case Type.BOOLEAN:
+case Type.CHAR:
+case Type.BYTE:
+case Type.SHORT:
+      return new BasicValue(type);
+  }
+}
+Value v=super.newValue(type);
+if (v == BasicValue.REFERENCE_VALUE) {
+  if (isArray) {
+    v=newValue(type.getElementType());
+    String desc=((BasicValue)v).getType().getDescriptor();
+    for (int i=0; i < type.getDimensions(); ++i) {
+      desc='[' + desc;
+    }
+    v=new BasicValue(Type.getType(desc));
+  }
+ else {
+    v=new BasicValue(type);
+  }
+}
+return v;
+}

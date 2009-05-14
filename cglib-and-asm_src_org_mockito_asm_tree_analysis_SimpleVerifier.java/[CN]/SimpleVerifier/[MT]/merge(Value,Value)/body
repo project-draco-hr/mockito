@@ -1,0 +1,34 @@
+{
+  if (!v.equals(w)) {
+    Type t=((BasicValue)v).getType();
+    Type u=((BasicValue)w).getType();
+    if (t != null && (t.getSort() == Type.OBJECT || t.getSort() == Type.ARRAY)) {
+      if (u != null && (u.getSort() == Type.OBJECT || u.getSort() == Type.ARRAY)) {
+        if ("Lnull;".equals(t.getDescriptor())) {
+          return w;
+        }
+        if ("Lnull;".equals(u.getDescriptor())) {
+          return v;
+        }
+        if (isAssignableFrom(t,u)) {
+          return v;
+        }
+        if (isAssignableFrom(u,t)) {
+          return w;
+        }
+        do {
+          if (t == null || isInterface(t)) {
+            return BasicValue.REFERENCE_VALUE;
+          }
+          t=getSuperClass(t);
+          if (isAssignableFrom(t,u)) {
+            return newValue(t);
+          }
+        }
+ while (true);
+      }
+    }
+    return BasicValue.UNINITIALIZED_VALUE;
+  }
+  return v;
+}

@@ -1,0 +1,6 @@
+{
+  if (props.containsKey(name)) {
+    throw new IllegalArgumentException("Duplicate property name \"" + name + "\"");
+  }
+  props.put(name,Type.getType(type));
+}

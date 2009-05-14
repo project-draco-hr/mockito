@@ -1,0 +1,22 @@
+{
+  if (TypeUtils.isPrimitive(type)) {
+switch (type.getSort()) {
+case Type.DOUBLE:
+      push(0d);
+    break;
+case Type.LONG:
+  push(0L);
+break;
+case Type.FLOAT:
+push(0f);
+break;
+case Type.VOID:
+aconst_null();
+default :
+push(0);
+}
+}
+ else {
+aconst_null();
+}
+}

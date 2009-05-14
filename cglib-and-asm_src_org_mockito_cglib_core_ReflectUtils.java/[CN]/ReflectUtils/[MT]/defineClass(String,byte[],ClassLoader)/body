@@ -1,0 +1,4 @@
+{
+  Object[] args=new Object[]{className,b,new Integer(0),new Integer(b.length),PROTECTION_DOMAIN};
+  return (Class)DEFINE_CLASS.invoke(loader,args);
+}

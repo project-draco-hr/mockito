@@ -1,0 +1,4 @@
+{
+  Type remap=remap(type);
+  return new Signature("read" + callbackName(remap),remap,new Type[]{Constants.TYPE_OBJECT,Constants.TYPE_STRING,remap});
+}

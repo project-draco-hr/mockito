@@ -1,0 +1,21 @@
+{
+  final Type classType=Type.getType("L" + className.replace('.','/') + ";");
+  classInfo=new ClassInfo(){
+    public Type getType(){
+      return classType;
+    }
+    public Type getSuperType(){
+      return (superType != null) ? superType : Constants.TYPE_OBJECT;
+    }
+    public Type[] getInterfaces(){
+      return interfaces;
+    }
+    public int getModifiers(){
+      return access;
+    }
+  }
+;
+  cv.visit(version,access,classInfo.getType().getInternalName(),null,classInfo.getSuperType().getInternalName(),TypeUtils.toInternalNames(interfaces));
+  if (source != null)   cv.visitSource(source,null);
+  init();
+}

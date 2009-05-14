@@ -1,0 +1,11 @@
+{
+  for (int i=0; i < l.size(); ++i) {
+    Object o=l.get(i);
+    if (o instanceof List) {
+      printList(pw,(List)o);
+    }
+ else {
+      pw.print(o.toString());
+    }
+  }
+}

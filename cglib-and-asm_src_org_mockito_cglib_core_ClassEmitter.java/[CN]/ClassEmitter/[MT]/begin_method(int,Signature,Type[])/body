@@ -1,0 +1,36 @@
+{
+  if (classInfo == null)   throw new IllegalStateException("classInfo is null! " + this);
+  MethodVisitor v=cv.visitMethod(access,sig.getName(),sig.getDescriptor(),null,TypeUtils.toInternalNames(exceptions));
+  if (sig.equals(Constants.SIG_STATIC) && !TypeUtils.isInterface(getAccess())) {
+    rawStaticInit=v;
+    MethodVisitor wrapped=new MethodAdapter(v){
+      public void visitMaxs(      int maxStack,      int maxLocals){
+      }
+      public void visitInsn(      int insn){
+        if (insn != Constants.RETURN) {
+          super.visitInsn(insn);
+        }
+      }
+    }
+;
+    staticInit=new CodeEmitter(this,wrapped,access,sig,exceptions);
+    if (staticHook == null) {
+      getStaticHook();
+    }
+ else {
+      staticInit.invoke_static_this(staticHookSig);
+    }
+    return staticInit;
+  }
+ else   if (sig.equals(staticHookSig)) {
+    return new CodeEmitter(this,v,access,sig,exceptions){
+      public boolean isStaticHook(){
+        return true;
+      }
+    }
+;
+  }
+ else {
+    return new CodeEmitter(this,v,access,sig,exceptions);
+  }
+}

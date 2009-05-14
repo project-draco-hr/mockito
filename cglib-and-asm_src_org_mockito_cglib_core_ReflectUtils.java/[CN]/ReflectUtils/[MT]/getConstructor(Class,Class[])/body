@@ -1,0 +1,10 @@
+{
+  try {
+    Constructor constructor=type.getDeclaredConstructor(parameterTypes);
+    constructor.setAccessible(true);
+    return constructor;
+  }
+ catch (  NoSuchMethodException e) {
+    throw new CodeGenerationException(e);
+  }
+}

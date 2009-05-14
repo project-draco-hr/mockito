@@ -1,0 +1,5 @@
+{
+  setNamePrefix(StringSwitcher.class.getName());
+  Object key=KEY_FACTORY.newInstance(strings,ints,fixedInput);
+  return (StringSwitcher)super.create(key);
+}

@@ -1,0 +1,4 @@
+{
+  init();
+  return fastClassInfo.i2;
+}

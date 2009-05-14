@@ -1,0 +1,4 @@
+{
+  setNamePrefix(MulticastDelegate.class.getName());
+  return (MulticastDelegate)super.create(iface.getName());
+}

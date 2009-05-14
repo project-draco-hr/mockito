@@ -1,0 +1,4 @@
+{
+  this.mv1=mv1;
+  this.mv2=mv2;
+}

@@ -1,0 +1,7 @@
+{
+  Generator gen=new Generator();
+  gen.setSource(source);
+  gen.setTarget(target);
+  gen.setUseConverter(useConverter);
+  return gen.create();
+}

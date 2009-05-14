@@ -1,0 +1,59 @@
+{
+  int i, j, n;
+  if (annotationDefault != null) {
+    AnnotationVisitor av=mv.visitAnnotationDefault();
+    AnnotationNode.accept(av,null,annotationDefault);
+    if (av != null) {
+      av.visitEnd();
+    }
+  }
+  n=visibleAnnotations == null ? 0 : visibleAnnotations.size();
+  for (i=0; i < n; ++i) {
+    AnnotationNode an=(AnnotationNode)visibleAnnotations.get(i);
+    an.accept(mv.visitAnnotation(an.desc,true));
+  }
+  n=invisibleAnnotations == null ? 0 : invisibleAnnotations.size();
+  for (i=0; i < n; ++i) {
+    AnnotationNode an=(AnnotationNode)invisibleAnnotations.get(i);
+    an.accept(mv.visitAnnotation(an.desc,false));
+  }
+  n=visibleParameterAnnotations == null ? 0 : visibleParameterAnnotations.length;
+  for (i=0; i < n; ++i) {
+    List l=visibleParameterAnnotations[i];
+    if (l == null) {
+      continue;
+    }
+    for (j=0; j < l.size(); ++j) {
+      AnnotationNode an=(AnnotationNode)l.get(j);
+      an.accept(mv.visitParameterAnnotation(i,an.desc,true));
+    }
+  }
+  n=invisibleParameterAnnotations == null ? 0 : invisibleParameterAnnotations.length;
+  for (i=0; i < n; ++i) {
+    List l=invisibleParameterAnnotations[i];
+    if (l == null) {
+      continue;
+    }
+    for (j=0; j < l.size(); ++j) {
+      AnnotationNode an=(AnnotationNode)l.get(j);
+      an.accept(mv.visitParameterAnnotation(i,an.desc,false));
+    }
+  }
+  n=attrs == null ? 0 : attrs.size();
+  for (i=0; i < n; ++i) {
+    mv.visitAttribute((Attribute)attrs.get(i));
+  }
+  if (instructions.size() > 0) {
+    mv.visitCode();
+    for (i=0; i < tryCatchBlocks.size(); ++i) {
+      ((TryCatchBlockNode)tryCatchBlocks.get(i)).accept(mv);
+    }
+    instructions.accept(mv);
+    n=localVariables == null ? 0 : localVariables.size();
+    for (i=0; i < n; ++i) {
+      ((LocalVariableNode)localVariables.get(i)).accept(mv);
+    }
+    mv.visitMaxs(maxStack,maxLocals);
+  }
+  mv.visitEnd();
+}

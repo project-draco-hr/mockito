@@ -1,0 +1,8 @@
+{
+  this.classInfo=classInfo;
+  this.access=access;
+  this.sig=sig;
+  this.exceptionTypes=exceptionTypes;
+  localOffset=TypeUtils.isStatic(access) ? 0 : 1;
+  argumentTypes=sig.getArgumentTypes();
+}

@@ -1,0 +1,3 @@
+{
+  mergeSort(index,0,len(),null);
+}

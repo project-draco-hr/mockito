@@ -1,0 +1,22 @@
+{
+  if (desc == null || desc.length() == 0) {
+    throw new IllegalArgumentException("Invalid method descriptor (must not be null or empty)");
+  }
+  if (desc.charAt(0) != '(' || desc.length() < 3) {
+    throw new IllegalArgumentException("Invalid descriptor: " + desc);
+  }
+  int start=1;
+  if (desc.charAt(start) != ')') {
+    do {
+      if (desc.charAt(start) == 'V') {
+        throw new IllegalArgumentException("Invalid descriptor: " + desc);
+      }
+      start=checkDesc(desc,start,false);
+    }
+ while (start < desc.length() && desc.charAt(start) != ')');
+  }
+  start=checkDesc(desc,start + 1,true);
+  if (start != desc.length()) {
+    throw new IllegalArgumentException("Invalid descriptor: " + desc);
+  }
+}

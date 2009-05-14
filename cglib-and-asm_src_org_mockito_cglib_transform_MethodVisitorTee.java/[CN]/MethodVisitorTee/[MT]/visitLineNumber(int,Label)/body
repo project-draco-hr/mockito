@@ -1,0 +1,4 @@
+{
+  mv1.visitLineNumber(line,start);
+  mv2.visitLineNumber(line,start);
+}

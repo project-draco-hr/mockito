@@ -1,0 +1,13 @@
+{
+  int size=props.size();
+  String[] names=(String[])props.keySet().toArray(new String[size]);
+  Type[] types=new Type[size];
+  for (int i=0; i < size; i++) {
+    types[i]=(Type)props.get(names[i]);
+  }
+  ClassEmitter ce=new ClassEmitter(v);
+  ce.begin_class(Constants.V1_2,Constants.ACC_PUBLIC,getClassName(),superclass != null ? Type.getType(superclass) : Constants.TYPE_OBJECT,null,null);
+  EmitUtils.null_constructor(ce);
+  EmitUtils.add_properties(ce,names,types);
+  ce.end_class();
+}

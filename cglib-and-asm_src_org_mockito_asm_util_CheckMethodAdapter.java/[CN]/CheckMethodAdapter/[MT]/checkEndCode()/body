@@ -1,0 +1,5 @@
+{
+  if (endCode) {
+    throw new IllegalStateException("Cannot visit instructions after visitMaxs has been called.");
+  }
+}

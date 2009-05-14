@@ -1,0 +1,8 @@
+{
+  if (!TypeUtils.isAbstract(access)) {
+    interfaces=TypeUtils.add(interfaces,FIELD_PROVIDER);
+  }
+  this.access=access;
+  fields=new HashMap();
+  super.begin_class(version,access,className,superType,interfaces,sourceFile);
+}

@@ -1,0 +1,9 @@
+{
+  checkStartCode();
+  checkEndCode();
+  checkOpcode(opcode,4);
+  checkInternalName(owner,"owner");
+  checkIdentifier(name,"name");
+  checkDesc(desc,false);
+  mv.visitFieldInsn(opcode,owner,name,desc);
+}

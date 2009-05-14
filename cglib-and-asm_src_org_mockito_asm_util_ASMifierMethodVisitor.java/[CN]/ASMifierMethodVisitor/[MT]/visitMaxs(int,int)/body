@@ -1,0 +1,5 @@
+{
+  buf.setLength(0);
+  buf.append("mv.visitMaxs(").append(maxStack).append(", ").append(maxLocals).append(");\n");
+  text.add(buf.toString());
+}

@@ -1,0 +1,3 @@
+{
+  return IINC_INSN;
+}
