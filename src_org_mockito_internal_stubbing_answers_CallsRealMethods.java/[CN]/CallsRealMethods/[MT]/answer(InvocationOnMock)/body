@@ -1,3 +1,3 @@
 {
-  return invocation.invokeSuper();
+  return invocation.callRealMethod();
 }
