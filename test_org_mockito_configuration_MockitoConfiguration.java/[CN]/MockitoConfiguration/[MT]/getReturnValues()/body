@@ -1,8 +1,0 @@
-{
-  if (overriddenReturnValues == null) {
-    return Configuration.instance().getReturnValues();
-  }
- else {
-    return overriddenReturnValues;
-  }
-}

@@ -1,8 +1,0 @@
-{
-  MockitoConfiguration config=ConfigurationSupport.getConfiguration();
-  ReturnValues current=config.getReturnValues();
-  if (!(current instanceof FakeReturnValues)) {
-    config.setReturnValues(new FakeReturnValues());
-  }
-  return (FakeReturnValues)config.getReturnValues();
-}

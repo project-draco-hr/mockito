@@ -1,4 +1,0 @@
-{
-  super.run(notifier);
-  ConfigurationSupport.getConfiguration().resetReturnValues();
-}

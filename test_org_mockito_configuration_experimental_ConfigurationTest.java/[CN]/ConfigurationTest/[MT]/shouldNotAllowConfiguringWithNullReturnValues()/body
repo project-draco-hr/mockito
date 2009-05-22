@@ -1,9 +1,0 @@
-{
-  try {
-    ConfigurationSupport.getConfiguration().setReturnValues(null);
-    fail();
-  }
- catch (  MockitoException e) {
-    assertContains("Cannot set null ReturnValues!",e.getMessage());
-  }
-}

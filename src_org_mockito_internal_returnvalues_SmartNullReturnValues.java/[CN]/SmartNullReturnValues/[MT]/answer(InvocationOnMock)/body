@@ -1,0 +1,11 @@
+{
+  Object defaultReturnValue=delegate.answer(invocation);
+  if (defaultReturnValue != null) {
+    return defaultReturnValue;
+  }
+  Class<?> type=invocation.getMethod().getReturnType();
+  if (ClassImposterizer.INSTANCE.canImposterise(type)) {
+    return ClassImposterizer.INSTANCE.imposterise(new ThrowingInterceptor(invocation),type);
+  }
+  return null;
+}

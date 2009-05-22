@@ -1,6 +1,0 @@
-{
-  if (CONFIG.get() == null) {
-    CONFIG.set(new Configuration());
-  }
-  return CONFIG.get();
-}

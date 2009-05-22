@@ -1,3 +1,0 @@
-{
-  mocksReturningFakes.addAll(Arrays.asList(mocks));
-}

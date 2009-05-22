@@ -1,0 +1,8 @@
+{
+  if (overriddenReturnValues == null) {
+    return super.getDefaultAnswer();
+  }
+ else {
+    return overriddenReturnValues;
+  }
+}

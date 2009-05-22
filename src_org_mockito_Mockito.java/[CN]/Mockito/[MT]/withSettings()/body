@@ -1,3 +1,3 @@
 {
-  return new MockSettingsImpl().defaultBehavior(RETURNS_DEFAULTS);
+  return new MockSettingsImpl().defaultAnswer(RETURNS_DEFAULTS);
 }

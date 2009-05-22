@@ -1,0 +1,8 @@
+{
+  Object ret=delegate.answer(invocation);
+  if (ret != null) {
+    return ret;
+  }
+  Class<?> returnType=invocation.getMethod().getReturnType();
+  return returnValueFor(returnType);
+}

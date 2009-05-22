@@ -1,6 +1,6 @@
 {
-  ReturnValues returnValues=new SmartNullReturnValues();
-  Foo smartNull=(Foo)returnValues.valueFor(invocationOf(Foo.class,"get"));
+  Answer<Object> returnValues=new SmartNullReturnValues();
+  Foo smartNull=(Foo)returnValues.answer(invocationOf(Foo.class,"get"));
   try {
     smartNull.get();
     fail();

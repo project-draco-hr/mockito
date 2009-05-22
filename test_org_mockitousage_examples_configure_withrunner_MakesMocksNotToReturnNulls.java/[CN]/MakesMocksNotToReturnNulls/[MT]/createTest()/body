@@ -1,5 +1,0 @@
-{
-  Object test=super.createTest();
-  ConfigurationSupport.getConfiguration().setReturnValues(new FriendlyReturnValues());
-  return test;
-}

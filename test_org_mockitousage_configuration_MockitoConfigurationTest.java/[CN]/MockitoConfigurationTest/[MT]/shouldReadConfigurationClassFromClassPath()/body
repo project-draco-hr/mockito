@@ -1,6 +1,6 @@
 {
-  ConfigurationAccess.getConfig().overrideReturnValues(new ReturnValues(){
-    public Object valueFor(    InvocationOnMock invocation){
+  ConfigurationAccess.getConfig().overrideReturnValues(new Answer<Object>(){
+    public Object answer(    InvocationOnMock invocation){
       return "foo";
     }
   }

@@ -1,6 +1,6 @@
 {
-  if (!ClassImposterizer.INSTANCE.canImposterise(class1)) {
+  if (!ClassImposterizer.INSTANCE.canImposterise(clazz)) {
     return null;
   }
-  return mockitoCore.mock((Class)class1,new MockSettingsImpl().defaultBehavior(this));
+  return mockitoCore.mock((Class)clazz,new MockSettingsImpl().defaultAnswer(this));
 }

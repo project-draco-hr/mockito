@@ -1,3 +1,3 @@
 {
-  return new EmptyReturnValues();
+  throw new RuntimeException("\n" + "This method should not be used by the framework because it was deprecated" + "\n"+ "Please report the failure to the Mockito mailing list");
 }

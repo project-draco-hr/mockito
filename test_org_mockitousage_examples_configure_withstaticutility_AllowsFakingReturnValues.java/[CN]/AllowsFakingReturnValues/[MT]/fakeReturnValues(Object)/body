@@ -1,4 +1,0 @@
-{
-  FakeReturnValues fakeReturnValues=getFakeReturnValues();
-  fakeReturnValues.addMocks(mocks);
-}

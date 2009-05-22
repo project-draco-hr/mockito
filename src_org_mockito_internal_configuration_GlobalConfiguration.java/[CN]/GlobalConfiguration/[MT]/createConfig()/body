@@ -1,10 +1,5 @@
 {
-  IMockitoConfiguration defaultConfiguration=new DefaultMockitoConfiguration(){
-    @Override public ReturnValues getReturnValues(){
-      return Configuration.instance().getReturnValues();
-    }
-  }
-;
+  IMockitoConfiguration defaultConfiguration=new DefaultMockitoConfiguration();
   IMockitoConfiguration config=new ClassPathLoader().loadConfiguration();
   if (config != null) {
     return config;

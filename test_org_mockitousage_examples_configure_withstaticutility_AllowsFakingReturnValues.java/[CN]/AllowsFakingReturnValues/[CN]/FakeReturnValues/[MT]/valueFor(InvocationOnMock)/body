@@ -1,8 +1,0 @@
-{
-  if (mocksReturningFakes.contains(invocation.getMock())) {
-    return returnFake(invocation);
-  }
- else {
-    return ConfigurationSupport.defaultValueFor(invocation);
-  }
-}

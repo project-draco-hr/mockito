@@ -27,7 +27,7 @@
     return answer.answer(invocation);
   }
  else   if (mockSettings.isSpy() == false) {
-    return mockSettings.getReturnValues().valueFor(invocation);
+    return mockSettings.getDefaultAnswer().answer(invocation);
   }
  else {
     Object ret=methodProxy.invokeSuper(proxy,args);
