@@ -1,9 +1,0 @@
-{
-  Answer<Object> returnValues=new ReturnsSmartNulls();
-  assertEquals(false,returnValues.answer(invocationOf(HasPrimitiveMethods.class,"booleanMethod")));
-  assertEquals((char)0,returnValues.answer(invocationOf(HasPrimitiveMethods.class,"charMethod")));
-  assertEquals(0,returnValues.answer(invocationOf(HasPrimitiveMethods.class,"intMethod")));
-  assertEquals(0,returnValues.answer(invocationOf(HasPrimitiveMethods.class,"longMethod")));
-  assertEquals(0,returnValues.answer(invocationOf(HasPrimitiveMethods.class,"floatMethod")));
-  assertEquals(0,returnValues.answer(invocationOf(HasPrimitiveMethods.class,"doubleMethod")));
-}

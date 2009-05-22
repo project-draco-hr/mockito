@@ -1,4 +1,4 @@
 {
   ConfigurationAccess.getConfig().overrideCleansStackTrace(false);
-  ConfigurationAccess.getConfig().overrideReturnValues(null);
+  ConfigurationAccess.getConfig().overrideDefaultAnswer(null);
 }

@@ -1,8 +1,8 @@
 {
-  if (overriddenReturnValues == null) {
+  if (overriddenDefaultAnswer == null) {
     return super.getDefaultAnswer();
   }
  else {
-    return overriddenReturnValues;
+    return overriddenDefaultAnswer;
   }
 }

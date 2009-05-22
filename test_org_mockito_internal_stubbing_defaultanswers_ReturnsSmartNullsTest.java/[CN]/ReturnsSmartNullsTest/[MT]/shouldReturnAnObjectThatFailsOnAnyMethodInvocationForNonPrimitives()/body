@@ -1,0 +1,10 @@
+{
+  Answer<Object> answer=new ReturnsSmartNulls();
+  Foo smartNull=(Foo)answer.answer(invocationOf(Foo.class,"get"));
+  try {
+    smartNull.get();
+    fail();
+  }
+ catch (  SmartNullPointerException expected) {
+  }
+}

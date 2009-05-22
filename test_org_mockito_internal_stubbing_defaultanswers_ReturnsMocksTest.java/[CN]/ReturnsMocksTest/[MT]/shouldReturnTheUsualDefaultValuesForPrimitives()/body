@@ -1,0 +1,9 @@
+{
+  ReturnsMocks answer=new ReturnsMocks();
+  assertEquals(false,answer.answer(invocationOf(HasPrimitiveMethods.class,"booleanMethod")));
+  assertEquals((char)0,answer.answer(invocationOf(HasPrimitiveMethods.class,"charMethod")));
+  assertEquals(0,answer.answer(invocationOf(HasPrimitiveMethods.class,"intMethod")));
+  assertEquals(0,answer.answer(invocationOf(HasPrimitiveMethods.class,"longMethod")));
+  assertEquals(0,answer.answer(invocationOf(HasPrimitiveMethods.class,"floatMethod")));
+  assertEquals(0,answer.answer(invocationOf(HasPrimitiveMethods.class,"doubleMethod")));
+}
