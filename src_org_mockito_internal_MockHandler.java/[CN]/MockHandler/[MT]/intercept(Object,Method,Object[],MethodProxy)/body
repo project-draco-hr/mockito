@@ -18,19 +18,23 @@
   mockitoStubber.setInvocationForPotentialStubbing(invocationMatcher);
   OngoingStubbingImpl<T> ongoingStubbing=new OngoingStubbingImpl<T>(mockitoStubber,registeredInvocations);
   mockingProgress.reportOngoingStubbing(ongoingStubbing);
-  Answer<?> answer=mockitoStubber.findAnswerFor(invocation);
-  if (!invocation.isVoid() && answer == null) {
+  Answer<?> stubbedAnswer=mockitoStubber.findAnswerFor(invocation);
+  if (!invocation.isVoid() && stubbedAnswer == null) {
     mockingProgress.getDebuggingInfo().addPotentiallyUnstubbed(invocationMatcher);
   }
-  if (answer != null) {
+  if (stubbedAnswer != null) {
     mockingProgress.getDebuggingInfo().reportUsedStub(invocationMatcher);
-    return answer.answer(invocation);
-  }
- else   if (mockSettings.isSpy() == false) {
-    return mockSettings.getDefaultAnswer().answer(invocation);
+    return stubbedAnswer.answer(invocation);
   }
  else {
-    Object ret=methodProxy.invokeSuper(proxy,args);
+    Object ret=null;
+    try {
+      ret=mockSettings.getDefaultAnswer().answer(invocation);
+    }
+ catch (    Throwable t) {
+      new ConditionalStackTraceFilter().filter(t);
+      throw t;
+    }
     mockitoStubber.setInvocationForPotentialStubbing(invocationMatcher);
     return ret;
   }

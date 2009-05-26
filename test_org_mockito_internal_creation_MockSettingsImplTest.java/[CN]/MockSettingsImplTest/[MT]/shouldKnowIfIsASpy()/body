@@ -1,4 +1,0 @@
-{
-  mockSettingsImpl.spiedInstance(new Object());
-  assertTrue(mockSettingsImpl.isSpy());
-}

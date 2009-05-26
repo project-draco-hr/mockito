@@ -1,0 +1,9 @@
+{
+  try {
+    spy.getNameButDelegateToMethodThatThrows();
+    fail();
+  }
+ catch (  Throwable t) {
+    assertThat(t,ExtraMatchers.hasMethodsInStackTrace("throwSomeException","getNameButDelegateToMethodThatThrows","shouldStackTraceGetFilteredOnUserExceptions"));
+  }
+}
