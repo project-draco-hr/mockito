@@ -1,4 +1,5 @@
 {
+  spy.getNameButDelegateToMethodThatThrows();
   try {
     spy.getNameButDelegateToMethodThatThrows();
     fail();

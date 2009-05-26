@@ -32,7 +32,6 @@
       ret=mockSettings.getDefaultAnswer().answer(invocation);
     }
  catch (    Throwable t) {
-      new ConditionalStackTraceFilter().filter(t);
       throw t;
     }
     mockitoStubber.setInvocationForPotentialStubbing(invocationMatcher);
