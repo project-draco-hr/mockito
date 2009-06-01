@@ -1,0 +1,6 @@
+{
+  StackTraceElement[] t=new TraceBuilder().classes("org.test.Good","org.mockito.internal.Bad","org.test.MockitoSampleTest").toTraceArray();
+  int startIndex=1;
+  StackTraceElement[] filtered=filter.filter(t,startIndex);
+  assertThat(filtered,hasOnlyThoseClasses("org.test.Good"));
+}

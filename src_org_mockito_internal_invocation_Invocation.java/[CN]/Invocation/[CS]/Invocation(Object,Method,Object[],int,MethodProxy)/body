@@ -1,9 +1,0 @@
-{
-  this.mock=mock;
-  this.method=method;
-  this.arguments=expandVarArgs(method.isVarArgs(),args);
-  this.rawArguments=args;
-  this.sequenceNumber=sequenceNumber;
-  this.location=new Location();
-  this.methodProxy=methodProxy;
-}

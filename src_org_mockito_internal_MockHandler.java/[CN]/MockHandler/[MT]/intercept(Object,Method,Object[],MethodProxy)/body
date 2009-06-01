@@ -1,12 +1,12 @@
 {
   if (mockitoStubber.hasAnswersForStubbing()) {
-    Invocation invocation=new Invocation(proxy,method,args,SequenceNumber.next(),methodProxy);
+    Invocation invocation=new Invocation(proxy,method,args,SequenceNumber.next(),new FilteredCGLIBProxyRealMethod(methodProxy));
     InvocationMatcher invocationMatcher=matchersBinder.bindMatchers(mockingProgress.getArgumentMatcherStorage(),invocation);
     mockitoStubber.setMethodForStubbing(invocationMatcher);
     return null;
   }
   VerificationMode verificationMode=mockingProgress.pullVerificationMode();
-  Invocation invocation=new Invocation(proxy,method,args,SequenceNumber.next(),methodProxy);
+  Invocation invocation=new Invocation(proxy,method,args,SequenceNumber.next(),new FilteredCGLIBProxyRealMethod(methodProxy));
   InvocationMatcher invocationMatcher=matchersBinder.bindMatchers(mockingProgress.getArgumentMatcherStorage(),invocation);
   mockingProgress.validateState();
   if (verificationMode != null) {
@@ -27,13 +27,7 @@
     return stubbedAnswer.answer(invocation);
   }
  else {
-    Object ret=null;
-    try {
-      ret=mockSettings.getDefaultAnswer().answer(invocation);
-    }
- catch (    Throwable t) {
-      throw t;
-    }
+    Object ret=mockSettings.getDefaultAnswer().answer(invocation);
     mockitoStubber.setInvocationForPotentialStubbing(invocationMatcher);
     return ret;
   }

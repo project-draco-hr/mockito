@@ -1,0 +1,7 @@
+{
+  if (!config.cleansStackTrace()) {
+    return;
+  }
+  StackTraceElement[] filtered=filter.filter(throwable.getStackTrace(),0);
+  throwable.setStackTrace(filtered);
+}

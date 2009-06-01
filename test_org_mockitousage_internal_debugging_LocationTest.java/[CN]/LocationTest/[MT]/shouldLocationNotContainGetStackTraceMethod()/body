@@ -1,0 +1,3 @@
+{
+  assertContains("shouldLocationNotContainGetStackTraceMethod",new Location().toString());
+}
