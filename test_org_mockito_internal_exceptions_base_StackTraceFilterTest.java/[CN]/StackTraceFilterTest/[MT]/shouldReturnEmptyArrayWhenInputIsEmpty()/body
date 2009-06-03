@@ -1,4 +1,4 @@
 {
-  StackTraceElement[] filtered=filter.filter(new StackTraceElement[0],0);
+  StackTraceElement[] filtered=filter.filter(new StackTraceElement[0],false);
   assertEquals(0,filtered.length);
 }

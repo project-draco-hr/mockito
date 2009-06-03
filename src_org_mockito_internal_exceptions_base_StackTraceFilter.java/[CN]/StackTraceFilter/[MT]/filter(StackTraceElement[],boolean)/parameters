@@ -1,2 +1,2 @@
 StackTraceElement[] target
-int startWith
+boolean keepTop
