@@ -1,4 +1,7 @@
 {
-  multi=new CanPrintInMultilinesStub(true,"multi","normal");
-  normal=new CanPrintInMultilinesStub(false,"multi","normal");
+  mock.varargs("first very long argument","second very long argument","another very long argument");
+  multi=getLastInvocation();
+  multi.toString();
+  mock.varargs("short arg");
+  shortie=getLastInvocation();
 }

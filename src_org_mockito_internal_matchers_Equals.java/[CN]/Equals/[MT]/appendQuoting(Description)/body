@@ -1,8 +1,0 @@
-{
-  if (wanted instanceof String) {
-    description.appendText("\"");
-  }
- else   if (wanted instanceof Character) {
-    description.appendText("'");
-  }
-}

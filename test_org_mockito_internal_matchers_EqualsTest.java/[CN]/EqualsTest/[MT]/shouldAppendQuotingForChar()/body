@@ -1,0 +1,4 @@
+{
+  String descStr=describe(new Equals('s'));
+  assertEquals("'s'",descStr);
+}

@@ -1,5 +1,0 @@
-{
-  this.printsInMultilines=printsInMultilines;
-  this.multilineString=multilineString;
-  this.normalString=normalString;
-}

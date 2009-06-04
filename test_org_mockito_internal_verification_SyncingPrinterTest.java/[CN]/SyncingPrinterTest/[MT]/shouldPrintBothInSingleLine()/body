@@ -1,5 +1,0 @@
-{
-  SyncingPrinter printer=new SyncingPrinter(normal,normal);
-  assertEquals("normal",printer.getWanted().toString());
-  assertEquals("normal",printer.getActual().toString());
-}

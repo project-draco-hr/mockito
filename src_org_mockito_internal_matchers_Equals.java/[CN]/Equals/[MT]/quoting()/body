@@ -1,0 +1,11 @@
+{
+  if (wanted instanceof String) {
+    return "\"";
+  }
+ else   if (wanted instanceof Character) {
+    return "'";
+  }
+ else {
+    return "";
+  }
+}

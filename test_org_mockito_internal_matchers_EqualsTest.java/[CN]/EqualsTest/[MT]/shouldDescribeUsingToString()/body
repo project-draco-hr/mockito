@@ -1,0 +1,4 @@
+{
+  String descStr=describe(new Equals(100));
+  assertEquals("100",descStr);
+}
