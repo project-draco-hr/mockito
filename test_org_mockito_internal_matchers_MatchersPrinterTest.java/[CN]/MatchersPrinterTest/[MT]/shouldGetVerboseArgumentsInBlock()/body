@@ -1,4 +1,6 @@
 {
-  String line=printer.getArgumentsBlock((List)Arrays.asList(new Equals(1L),new Equals(2)),PrintSettings.verboseMatchers());
+  Equals verboselyPrinted=new Equals(1L);
+  Equals verboselyPrintedTwo=new Equals(2);
+  String line=printer.getArgumentsBlock((List)Arrays.asList(verboselyPrinted,verboselyPrintedTwo),PrintSettings.verboseMatchers(verboselyPrinted,verboselyPrintedTwo));
   assertEquals("(\n    (Long) 1,\n    (Integer) 2\n);",line);
 }

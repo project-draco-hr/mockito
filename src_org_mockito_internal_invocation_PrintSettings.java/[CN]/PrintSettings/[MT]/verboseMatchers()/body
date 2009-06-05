@@ -1,5 +1,0 @@
-{
-  PrintSettings settings=new PrintSettings();
-  settings.verboseArguments=true;
-  return settings;
-}
