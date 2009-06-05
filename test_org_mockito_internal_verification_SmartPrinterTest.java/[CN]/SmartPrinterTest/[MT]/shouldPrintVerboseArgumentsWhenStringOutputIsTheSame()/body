@@ -3,7 +3,7 @@
   Invocation withLongArg=getLastInvocation();
   mock.longArg(1);
   Invocation withIntArg=getLastInvocation();
-  SyncingPrinter printer=new SyncingPrinter(withLongArg,withIntArg);
+  SmartPrinter printer=new SmartPrinter(withLongArg,withIntArg);
   assertContains("longArg((Long) 1)",printer.getWanted().toString());
   assertContains("longArg((Long) 1)",printer.getActual().toString());
 }

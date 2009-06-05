@@ -1,5 +1,5 @@
 {
-  SyncingPrinter printer=new SyncingPrinter(multi,shortie);
+  SmartPrinter printer=new SmartPrinter(multi,shortie);
   assertContains("\n",printer.getWanted().toString());
   assertContains("\n",printer.getActual().toString());
 }
