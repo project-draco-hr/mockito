@@ -1,0 +1,5 @@
+{
+  Equals verboselyPrinted=new Equals(2);
+  String line=printer.getArgumentsLine((List)Arrays.asList(new Equals(1L),verboselyPrinted),PrintSettings.verboseMatchers(verboselyPrinted));
+  assertEquals("(1, (Integer) 2);",line);
+}

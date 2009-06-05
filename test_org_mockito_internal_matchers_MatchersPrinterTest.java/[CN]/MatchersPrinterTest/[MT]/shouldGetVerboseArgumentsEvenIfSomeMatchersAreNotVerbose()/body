@@ -1,4 +1,4 @@
 {
-  String line=printer.getArgumentsLine((List)Arrays.asList(new Equals(1L),NotNull.NOT_NULL),PrintSettings.verboseArgs());
+  String line=printer.getArgumentsLine((List)Arrays.asList(new Equals(1L),NotNull.NOT_NULL),PrintSettings.verboseMatchers());
   assertEquals("((Long) 1, notNull());",line);
 }

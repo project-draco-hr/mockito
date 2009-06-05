@@ -1,0 +1,5 @@
+{
+  PrintSettings settings=new PrintSettings();
+  settings.verboseMatchers.add(verboselyPrinted);
+  return settings;
+}

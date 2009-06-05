@@ -1,4 +1,0 @@
-{
-  String line=printer.getArgumentsLine((List)Arrays.asList(new Equals(1L),new Equals(2)),PrintSettings.verboseArgs());
-  assertEquals("((Long) 1, (Integer) 2);",line);
-}
