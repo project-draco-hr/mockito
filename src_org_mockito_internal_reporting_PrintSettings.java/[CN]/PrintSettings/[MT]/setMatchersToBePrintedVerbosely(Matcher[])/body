@@ -1,0 +1,3 @@
+{
+  this.verboseMatchers=Arrays.asList(toBePrintedVerbosely);
+}

@@ -1,2 +1,3 @@
 PrintingFriendlyInocation wanted
 PrintingFriendlyInocation actual
+Matcher toBePrintedVerbosely
