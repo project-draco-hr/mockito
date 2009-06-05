@@ -1,7 +1,4 @@
 {
-  if (isVerboseArguments()) {
-    return true;
-  }
   for (  Matcher m : verboseMatchers) {
     if (m == matcher) {
       return true;
