@@ -1,8 +1,0 @@
-{
-  if (actualMatcher instanceof HasVerboseVariant) {
-    return ((HasVerboseVariant)actualMatcher).getVerboseVariant();
-  }
- else {
-    return this;
-  }
-}
