@@ -7,6 +7,6 @@
     }
   }
 );
-  Matcher[] suspicious=tool.getSuspiciouslyNotMatchingArgs(matchers,new Object[]{10});
+  Integer[] suspicious=tool.getSuspiciouslyNotMatchingArgsIndexes(matchers,new Object[]{10});
   assertEquals(0,suspicious.length);
 }

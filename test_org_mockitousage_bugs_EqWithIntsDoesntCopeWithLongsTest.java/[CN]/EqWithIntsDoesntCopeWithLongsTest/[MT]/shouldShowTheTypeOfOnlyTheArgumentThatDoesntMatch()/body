@@ -6,7 +6,7 @@
     fail();
   }
  catch (  ArgumentsAreDifferent e) {
-    assertContains("withLongAndInt((Integer) 100,  200)",e.getMessage());
-    assertContains("withLongAndInt((Long) 100,  200)",e.getMessage());
+    assertContains("withLongAndInt((Integer) 100, 200)",e.getMessage());
+    assertContains("withLongAndInt((Long) 100, 200)",e.getMessage());
   }
 }

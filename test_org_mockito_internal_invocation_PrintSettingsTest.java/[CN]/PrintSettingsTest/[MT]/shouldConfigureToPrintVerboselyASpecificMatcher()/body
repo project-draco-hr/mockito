@@ -1,6 +1,0 @@
-{
-  Equals toPrintVerbosely=new Equals(1);
-  PrintSettings settings=PrintSettings.verboseMatchers(toPrintVerbosely);
-  boolean printsVerbosely=settings.printsVerbosely(toPrintVerbosely);
-  assertTrue(printsVerbosely);
-}

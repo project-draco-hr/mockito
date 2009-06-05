@@ -1,8 +1,0 @@
-{
-  for (  Matcher m : verboseMatchers) {
-    if (m == matcher) {
-      return true;
-    }
-  }
-  return false;
-}
