@@ -1,0 +1,12 @@
+{
+  List<Matcher> matchers=(List)Arrays.asList(new BaseMatcher(){
+    public boolean matches(    Object item){
+      throw new ClassCastException("nasty matcher");
+    }
+    public void describeTo(    Description description){
+    }
+  }
+);
+  Matcher[] suspicious=tool.getSuspiciouslyNotMatchingArgs(matchers,new Object[]{10});
+  assertEquals(0,suspicious.length);
+}
