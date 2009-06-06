@@ -1,6 +1,6 @@
 {
-  PrintingFriendlyInocation withOneArg=new InvocationMatcher(new InvocationBuilder().args("test").toInvocation());
-  PrintingFriendlyInocation withTwoArgs=new InvocationMatcher(new InvocationBuilder().args("test",100).toInvocation());
+  PrintingFriendlyInvocation withOneArg=new InvocationMatcher(new InvocationBuilder().args("test").toInvocation());
+  PrintingFriendlyInvocation withTwoArgs=new InvocationMatcher(new InvocationBuilder().args("test",100).toInvocation());
   assertFalse(withOneArg.equals(null));
   assertFalse(withOneArg.equals(withTwoArgs));
 }
