@@ -1,0 +1,10 @@
+{
+  Equals matcherWithBadDescription=new Equals(20){
+    public void describeTo(    Description desc){
+      desc.appendText("10");
+    }
+  }
+;
+  Integer[] suspicious=tool.getSuspiciouslyNotMatchingArgsIndexes((List)Arrays.asList(matcherWithBadDescription),new Object[]{10});
+  assertEquals(0,suspicious.length);
+}
