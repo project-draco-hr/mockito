@@ -1,6 +1,5 @@
 {
   ContainsExtraTypeInformation equals10=new Equals(10);
   LocalizedMatcher m=new LocalizedMatcher((Matcher)equals10);
-  assertTrue(m.typeMatches(10));
-  assertFalse(m.typeMatches(10L));
+  assertEquals("(Integer) 10",StringDescription.toString(m.withExtraTypeInfo()));
 }

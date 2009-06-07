@@ -1,0 +1,4 @@
+{
+  LocalizedMatcher m=new LocalizedMatcher(Any.ANY);
+  assertSame(m,m.withExtraTypeInfo());
+}
