@@ -1,4 +1,3 @@
 {
-  Any.ANY.describeTo(description);
-  assertEquals("<any>",description.toString());
+  assertEquals("<any>",describe(Any.ANY));
 }

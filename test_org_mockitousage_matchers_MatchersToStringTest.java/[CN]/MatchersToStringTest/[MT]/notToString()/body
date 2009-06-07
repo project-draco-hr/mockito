@@ -1,4 +1,3 @@
 {
-  new Not(new Equals(1)).describeTo(description);
-  assertEquals("not(1)",description.toString());
+  assertEquals("not(1)",describe(new Not(new Equals(1))));
 }

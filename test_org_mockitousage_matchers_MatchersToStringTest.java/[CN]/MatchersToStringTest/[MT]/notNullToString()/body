@@ -1,4 +1,3 @@
 {
-  NotNull.NOT_NULL.describeTo(description);
-  assertEquals("notNull()",description.toString());
+  assertEquals("notNull()",describe(NotNull.NOT_NULL));
 }

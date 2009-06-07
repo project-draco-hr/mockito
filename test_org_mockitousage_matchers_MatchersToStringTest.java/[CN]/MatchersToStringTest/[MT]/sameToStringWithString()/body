@@ -1,4 +1,3 @@
 {
-  new Same("X").describeTo(description);
-  assertEquals("same(\"X\")",description.toString());
+  assertEquals("same(\"X\")",describe(new Same("X")));
 }

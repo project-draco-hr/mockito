@@ -2,6 +2,5 @@
   List<Matcher> matchers=new ArrayList<Matcher>();
   matchers.add(new Equals(1));
   matchers.add(new Equals(2));
-  new Or(matchers).describeTo(description);
-  assertEquals("or(1, 2)",description.toString());
+  assertEquals("or(1, 2)",describe(new Or(matchers)));
 }

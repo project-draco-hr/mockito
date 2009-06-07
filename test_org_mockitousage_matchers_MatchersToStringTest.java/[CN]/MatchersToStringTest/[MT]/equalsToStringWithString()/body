@@ -1,4 +1,3 @@
 {
-  new Equals("X").describeTo(description);
-  assertEquals("\"X\"",description.toString());
+  assertEquals("\"X\"",describe(new Equals("X")));
 }

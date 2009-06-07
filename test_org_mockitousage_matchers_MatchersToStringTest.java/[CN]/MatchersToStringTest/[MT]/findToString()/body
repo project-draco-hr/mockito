@@ -1,4 +1,3 @@
 {
-  new Find("\\s+").describeTo(description);
-  assertEquals("find(\"\\\\s+\")",description.toString());
+  assertEquals("find(\"\\\\s+\")",describe(new Find("\\s+")));
 }

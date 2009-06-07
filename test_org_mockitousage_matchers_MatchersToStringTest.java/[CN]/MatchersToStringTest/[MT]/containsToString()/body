@@ -1,4 +1,3 @@
 {
-  new Contains("AB").describeTo(description);
-  assertEquals("contains(\"AB\")",description.toString());
+  assertEquals("contains(\"AB\")",describe(new Contains("AB")));
 }

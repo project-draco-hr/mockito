@@ -1,4 +1,3 @@
 {
-  new StartsWith("AB").describeTo(description);
-  assertEquals("startsWith(\"AB\")",description.toString());
+  assertEquals("startsWith(\"AB\")",describe(new StartsWith("AB")));
 }
