@@ -1,0 +1,8 @@
+{
+  if (actualMatcher instanceof ContainsExtraTypeInformation) {
+    return ((ContainsExtraTypeInformation)actualMatcher).withExtraTypeInfo();
+  }
+ else {
+    return this;
+  }
+}

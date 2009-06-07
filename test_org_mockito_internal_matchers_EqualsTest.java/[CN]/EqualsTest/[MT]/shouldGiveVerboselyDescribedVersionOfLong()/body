@@ -1,4 +1,0 @@
-{
-  String descStr=describe(new Equals(100L).getSelfDescribingVerbosely());
-  assertEquals("(Long) 100",descStr);
-}

@@ -1,5 +1,5 @@
 {
   PrintSettings settings=new PrintSettings();
-  settings.setMatchersToBePrintedVerbosely(verboselyPrinted);
+  settings.setMatchersToBeDescribedWithExtraTypeInfo(indexesOfMatchers);
   return settings;
 }

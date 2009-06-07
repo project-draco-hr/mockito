@@ -1,0 +1,3 @@
+{
+  this.withTypeInfo=Arrays.asList(indexesOfMatchers);
+}

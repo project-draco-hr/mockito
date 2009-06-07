@@ -1,7 +1,7 @@
 {
   PrintSettings printSettings=new PrintSettings();
   printSettings.setMultiline(wanted.toString().contains("\n") || actual.toString().contains("\n"));
-  printSettings.setMatchersToBePrintedVerbosely(toBePrintedVerbosely);
+  printSettings.setMatchersToBeDescribedWithExtraTypeInfo(indexesOfMatchersToBeDescribedWithExtraTypeInfo);
   this.wanted=wanted.toString(printSettings);
   this.actual=actual.toString(printSettings);
 }

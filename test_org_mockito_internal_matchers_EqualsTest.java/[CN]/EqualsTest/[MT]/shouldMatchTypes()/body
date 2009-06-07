@@ -1,5 +1,5 @@
 {
-  CanDescribeVerbosely equals=new Equals(10);
+  ContainsExtraTypeInformation equals=new Equals(10);
   assertTrue(equals.typeMatches(10));
   assertFalse(equals.typeMatches(10L));
 }

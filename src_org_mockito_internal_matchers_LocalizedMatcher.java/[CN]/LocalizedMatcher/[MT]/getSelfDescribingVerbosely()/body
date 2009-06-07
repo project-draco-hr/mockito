@@ -1,8 +1,0 @@
-{
-  if (actualMatcher instanceof CanDescribeVerbosely) {
-    return ((CanDescribeVerbosely)actualMatcher).getSelfDescribingVerbosely();
-  }
- else {
-    return this;
-  }
-}
