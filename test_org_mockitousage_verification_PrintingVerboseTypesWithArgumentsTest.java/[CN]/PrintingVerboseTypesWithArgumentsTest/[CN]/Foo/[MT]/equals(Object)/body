@@ -1,0 +1,3 @@
+{
+  return x == ((Foo)obj).x;
+}
