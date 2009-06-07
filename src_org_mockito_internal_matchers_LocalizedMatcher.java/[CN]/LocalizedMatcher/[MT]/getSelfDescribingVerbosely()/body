@@ -1,6 +1,6 @@
 {
-  if (actualMatcher instanceof CanPrintArgumentVerbosely) {
-    return ((CanPrintArgumentVerbosely)actualMatcher).getSelfDescribingVerbosely();
+  if (actualMatcher instanceof CanDescribeVerbosely) {
+    return ((CanDescribeVerbosely)actualMatcher).getSelfDescribingVerbosely();
   }
  else {
     return this;
