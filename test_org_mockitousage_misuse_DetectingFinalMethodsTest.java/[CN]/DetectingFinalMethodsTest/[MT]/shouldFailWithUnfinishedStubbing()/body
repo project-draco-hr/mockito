@@ -1,6 +1,5 @@
 {
   withFinal=mock(WithFinal.class);
-  new MockUtil().getMockHandler(withFinal);
   try {
     when(withFinal.foo()).thenReturn(null);
     fail();
