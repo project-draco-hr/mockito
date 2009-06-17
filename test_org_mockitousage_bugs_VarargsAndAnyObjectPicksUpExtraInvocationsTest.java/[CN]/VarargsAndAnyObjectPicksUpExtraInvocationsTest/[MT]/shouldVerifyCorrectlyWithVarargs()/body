@@ -3,5 +3,4 @@
   table.newRow("abc","def");
   verify(table).newRow(anyString(),eq("foo"),anyString(),anyString());
   verify(table).newRow(anyString(),anyString());
-  verify(table,times(2)).newRow(anyString(),(String[])anyObject());
 }
