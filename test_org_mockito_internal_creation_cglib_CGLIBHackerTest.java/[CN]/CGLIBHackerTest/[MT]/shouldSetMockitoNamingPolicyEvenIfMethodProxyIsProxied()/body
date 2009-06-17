@@ -1,0 +1,7 @@
+{
+  MethodProxy proxiedMethodProxy=spy(new MethodProxyBuilder().build());
+  new CGLIBHacker().setMockitoNamingPolicy(proxiedMethodProxy);
+  Object createInfo=Whitebox.getInternalState(proxiedMethodProxy,"createInfo");
+  NamingPolicy namingPolicy=(NamingPolicy)Whitebox.getInternalState(createInfo,"namingPolicy");
+  assertEquals(namingPolicy,MockitoNamingPolicy.INSTANCE);
+}

@@ -1,6 +1,6 @@
 {
   try {
-    Field createInfoField=methodProxy.getClass().getDeclaredField("createInfo");
+    Field createInfoField=reflectOnCreateInfo(methodProxy);
     createInfoField.setAccessible(true);
     Object createInfo=createInfoField.get(methodProxy);
     Field namingPolicyField=createInfo.getClass().getDeclaredField("namingPolicy");

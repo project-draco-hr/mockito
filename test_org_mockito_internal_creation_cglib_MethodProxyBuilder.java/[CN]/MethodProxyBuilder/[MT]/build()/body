@@ -1,0 +1,11 @@
+{
+  IMethods mock=mock(IMethods.class);
+  when(mock.objectReturningMethodNoArgs()).thenAnswer(new Answer<Object>(){
+    public Object answer(    InvocationOnMock invocation) throws Throwable {
+      return invocation;
+    }
+  }
+);
+  Invocation i=(Invocation)mock.objectReturningMethodNoArgs();
+  return new ExposedInvocation(i).getMethodProxy();
+}
