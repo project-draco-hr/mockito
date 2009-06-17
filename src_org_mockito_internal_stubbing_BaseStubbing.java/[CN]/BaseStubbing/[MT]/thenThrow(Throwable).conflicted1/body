@@ -2,7 +2,7 @@
   if (throwables == null) {
     thenThrow((Throwable)null);
   }
-  NewOngoingStubbing<T> stubbing=null;
+  OngoingStubbing<T> stubbing=null;
   for (  Throwable t : throwables) {
     if (stubbing == null) {
       stubbing=thenThrow(t);

@@ -1,5 +1,5 @@
 {
-  OngoingStubbing stubbing=mockingProgress.pullOngoingStubbing();
+  IOngoingStubbing stubbing=mockingProgress.pullOngoingStubbing();
   if (stubbing == null) {
     mockingProgress.reset();
     reporter.missingMethodInvocation();

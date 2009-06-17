@@ -1,4 +1,4 @@
 {
   mockingProgress.stubbingStarted();
-  return (NewOngoingStubbing)stub();
+  return (OngoingStubbing)stub();
 }

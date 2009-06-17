@@ -1,5 +1,5 @@
 {
-  NewOngoingStubbing<T> stubbing=thenReturn(value);
+  OngoingStubbing<T> stubbing=thenReturn(value);
   if (values == null) {
     return stubbing.thenReturn(null);
   }

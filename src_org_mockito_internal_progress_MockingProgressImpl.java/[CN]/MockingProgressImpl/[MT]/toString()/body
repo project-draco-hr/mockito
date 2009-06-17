@@ -1,3 +1,3 @@
 {
-  return "ongoingStubbing: " + ongoingStubbing + ", verificationMode: "+ verificationMode+ ", stubbingInProgress: "+ stubbingInProgress;
+  return "iOngoingStubbing: " + iOngoingStubbing + ", verificationMode: "+ verificationMode+ ", stubbingInProgress: "+ stubbingInProgress;
 }
