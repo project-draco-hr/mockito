@@ -4,7 +4,7 @@
       callUnstubbedMethodThatQualifiesForWarning();
       notifier.fireTestFailure(null);
       String loggedInfo=loggerStub.getLoggedInfo();
-      assertContains("[Mockito] Warning - this method was not stubbed",loggedInfo);
+      assertContains("method was not stubbed",loggedInfo);
       assertContains("mock.simpleMethod(456);",loggedInfo);
       assertContains(".callUnstubbedMethodThatQualifiesForWarning(",loggedInfo);
     }
