@@ -1,7 +1,7 @@
 {
   Invocation stub=new InvocationBuilder().arg("foo").mock(mock).toInvocation();
   InvocationMatcher wrongArg=new InvocationBuilder().arg("bar").mock(mock).toInvocationMatcher();
-  WarningsPrinter p=new WarningsPrinter(Arrays.<Invocation>asList(stub),Arrays.<InvocationMatcher>asList(wrongArg));
+  WarningsPrinterImpl p=new WarningsPrinterImpl(Arrays.<Invocation>asList(stub),Arrays.<InvocationMatcher>asList(wrongArg));
   p.print(logger);
   assertNotContains("stub was not used",logger.getLoggedInfo());
   assertNotContains("was not stubbed",logger.getLoggedInfo());

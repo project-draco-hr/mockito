@@ -1,3 +1,0 @@
-{
-  return join("[Mockito] Warning - stubbed method called with different arguments.","Stubbed this way:",unused,unused.getLocation(),"","But called with different arguments:",unstubbed,unstubbed.getInvocation().getLocation(),"");
-}

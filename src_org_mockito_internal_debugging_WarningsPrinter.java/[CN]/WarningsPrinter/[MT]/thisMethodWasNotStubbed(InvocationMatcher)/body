@@ -1,3 +1,0 @@
-{
-  return join("[Mockito] Warning - this method was not stubbed:",i,i.getInvocation().getLocation(),"");
-}

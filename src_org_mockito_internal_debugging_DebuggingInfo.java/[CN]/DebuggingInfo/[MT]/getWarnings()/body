@@ -1,0 +1,12 @@
+{
+  final StringBuilder sb=new StringBuilder();
+  if (hasData()) {
+    new WarningsPrinterImpl(unusedStubs,unstubbedInvocations).print(new MockitoLogger(){
+      public void log(      Object what){
+        sb.append(what);
+      }
+    }
+);
+  }
+  return sb.toString();
+}
