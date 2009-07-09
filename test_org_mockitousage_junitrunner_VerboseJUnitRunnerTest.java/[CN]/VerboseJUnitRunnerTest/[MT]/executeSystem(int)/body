@@ -1,4 +1,0 @@
-{
-  Object first=list.get(idx + 1);
-  listTwo.add(first);
-}
