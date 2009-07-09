@@ -1,0 +1,5 @@
+{
+  ReturnsString mock=mock(ReturnsString.class);
+  when(mock.callMe()).thenReturn("foo");
+  assertEquals("foo",mock.callMe());
+}
