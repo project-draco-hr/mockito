@@ -4,6 +4,7 @@
   mockFun.doFun(null);
   try {
     verify(mockFun).doFun("hello");
+    fail();
   }
  catch (  AssertionError r) {
   }
