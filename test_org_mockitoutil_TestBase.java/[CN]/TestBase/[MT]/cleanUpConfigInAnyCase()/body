@@ -1,4 +1,5 @@
 {
   ConfigurationAccess.getConfig().overrideCleansStackTrace(false);
   ConfigurationAccess.getConfig().overrideDefaultAnswer(null);
+  new StateMaster().validate();
 }
