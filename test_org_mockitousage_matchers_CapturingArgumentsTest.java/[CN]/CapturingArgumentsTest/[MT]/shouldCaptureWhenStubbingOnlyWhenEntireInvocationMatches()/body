@@ -1,0 +1,7 @@
+{
+  ArgumentCaptor<String> argument=new ArgumentCaptor<String>();
+  when(mock.simpleMethod(argument.capture(),eq(2))).thenReturn("blah");
+  mock.simpleMethod("foo",200);
+  mock.simpleMethod("bar",2);
+  Assertions.assertThat(argument.getAllValues()).containsOnly("bar");
+}
