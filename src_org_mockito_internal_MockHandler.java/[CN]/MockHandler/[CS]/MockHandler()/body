@@ -1,0 +1,3 @@
+{
+  this(new MockName("mockie for tests",MockHandler.class),new ThreadSafeMockingProgress(),new MatchersBinder(),new MockSettingsImpl());
+}

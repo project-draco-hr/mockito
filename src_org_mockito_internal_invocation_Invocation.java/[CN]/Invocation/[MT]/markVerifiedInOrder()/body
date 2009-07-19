@@ -1,4 +1,4 @@
 {
-  this.markVerified();
+  markVerified();
   this.verifiedInOrder=true;
 }

@@ -1,0 +1,10 @@
+{
+  InvocationMarker marker=new InvocationMarker();
+  Invocation i=new InvocationBuilder().toInvocation();
+  InvocationMatcher im=new InvocationBuilder().toInvocationMatcher();
+  assertFalse(i.isVerifiedInOrder());
+  assertFalse(i.isVerified());
+  marker.markVerifiedInOrder(Arrays.asList(i),im);
+  assertTrue(i.isVerifiedInOrder());
+  assertTrue(i.isVerified());
+}

@@ -1,0 +1,8 @@
+{
+  mock.simpleMethod("foo",1);
+  mock.simpleMethod("bar",2);
+  ArgumentCaptor<String> captor=new ArgumentCaptor<String>();
+  verify(mock).simpleMethod(captor.capture(),eq(1));
+  assertEquals(1,captor.getAllValues().size());
+  assertEquals("foo",captor.getValue());
+}

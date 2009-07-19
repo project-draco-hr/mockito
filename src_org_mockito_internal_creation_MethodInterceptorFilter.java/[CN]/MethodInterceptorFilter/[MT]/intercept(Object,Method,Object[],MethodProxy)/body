@@ -6,5 +6,6 @@
     return hashCodeForMock(proxy);
   }
   new CGLIBHacker().setMockitoNamingPolicy(methodProxy);
-  return delegate.intercept(proxy,method,args,methodProxy);
+  Invocation invocation=new Invocation(proxy,method,args,SequenceNumber.next(),new FilteredCGLIBProxyRealMethod(methodProxy));
+  return mockHandler.handle(invocation);
 }

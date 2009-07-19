@@ -13,7 +13,5 @@
     Location firstUndesired=actualInvocations.get(wantedCount).getLocation();
     reporter.tooManyActualInvocations(wantedCount,actualCount,wanted,firstUndesired);
   }
-  for (  Invocation i : actualInvocations) {
-    i.markVerified();
-  }
+  invocationMarker.markVerified(actualInvocations,wanted);
 }

@@ -1,0 +1,6 @@
+{
+  CapturingMatcher m=new CapturingMatcher();
+  m.captureFrom("foo");
+  m.captureFrom("bar");
+  Assertions.assertThat(m.getAllValues()).containsSequence("foo","bar");
+}

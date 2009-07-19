@@ -1,0 +1,9 @@
+{
+  CapturingMatcher m=new CapturingMatcher();
+  try {
+    m.getLastValue();
+    fail();
+  }
+ catch (  MockitoException e) {
+  }
+}

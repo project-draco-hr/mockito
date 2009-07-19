@@ -5,7 +5,5 @@
     Location lastLocation=finder.getLastLocation(actualInvocations);
     reporter.tooLittleActualInvocations(new AtLeastDiscrepancy(wantedCount,actualCount),wanted,lastLocation);
   }
-  for (  Invocation i : actualInvocations) {
-    i.markVerified();
-  }
+  invocationMarker.markVerified(invocations,wanted);
 }

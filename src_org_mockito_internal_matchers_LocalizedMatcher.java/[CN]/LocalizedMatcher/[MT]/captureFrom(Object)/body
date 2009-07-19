@@ -1,0 +1,5 @@
+{
+  if (actualMatcher instanceof CapturesArguments) {
+    ((CapturesArguments)actualMatcher).captureFrom(argument);
+  }
+}

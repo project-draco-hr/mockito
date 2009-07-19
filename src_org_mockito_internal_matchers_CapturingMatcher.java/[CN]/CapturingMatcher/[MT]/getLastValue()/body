@@ -1,9 +1,9 @@
 {
   if (arguments.isEmpty()) {
     new Reporter().noArgumentValueWasCaptured();
+    return null;
   }
  else {
     return (T)arguments.getLast();
   }
-  return (T)arguments;
 }

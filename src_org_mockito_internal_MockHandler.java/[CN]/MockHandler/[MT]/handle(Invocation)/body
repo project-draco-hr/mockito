@@ -1,0 +1,33 @@
+{
+  if (mockitoStubber.hasAnswersForStubbing()) {
+    InvocationMatcher invocationMatcher=matchersBinder.bindMatchers(mockingProgress.getArgumentMatcherStorage(),invocation);
+    mockitoStubber.setMethodForStubbing(invocationMatcher);
+    return null;
+  }
+  VerificationMode verificationMode=mockingProgress.pullVerificationMode();
+  InvocationMatcher invocationMatcher=matchersBinder.bindMatchers(mockingProgress.getArgumentMatcherStorage(),invocation);
+  mockingProgress.validateState();
+  if (verificationMode != null) {
+    VerificationDataImpl data=new VerificationDataImpl(registeredInvocations.getAll(),invocationMatcher);
+    verificationMode.verify(data);
+    return null;
+  }
+  registeredInvocations.add(invocationMatcher.getInvocation());
+  mockitoStubber.setInvocationForPotentialStubbing(invocationMatcher);
+  OngoingStubbingImpl<T> ongoingStubbing=new OngoingStubbingImpl<T>(mockitoStubber,registeredInvocations);
+  mockingProgress.reportOngoingStubbing(ongoingStubbing);
+  StubbedInvocationMatcher stubbedInvocation=mockitoStubber.findAnswerFor(invocation);
+  if (!invocation.isVoid() && stubbedInvocation == null) {
+    mockingProgress.getDebuggingInfo().addPotentiallyUnstubbed(invocationMatcher);
+  }
+  if (stubbedInvocation != null) {
+    mockingProgress.getDebuggingInfo().reportUsedStub(invocationMatcher);
+    stubbedInvocation.captureArgumentsFrom(invocation);
+    return stubbedInvocation.answer(invocation);
+  }
+ else {
+    Object ret=mockSettings.getDefaultAnswer().answer(invocation);
+    mockitoStubber.setInvocationForPotentialStubbing(invocationMatcher);
+    return ret;
+  }
+}
