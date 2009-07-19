@@ -1,6 +1,6 @@
 {
   emailer.email(11,12);
-  ArgumentCaptor<Person> argument=new ArgumentCaptor<Person>();
+  ArgumentCaptor<Person> argument=ArgumentCaptor.forClass(Person.class);
   verify(emailService,atLeastOnce()).sendEmailTo(argument.capture());
   List<Person> allValues=argument.getAllValues();
   assertEquals(11,allValues.get(0).getAge());

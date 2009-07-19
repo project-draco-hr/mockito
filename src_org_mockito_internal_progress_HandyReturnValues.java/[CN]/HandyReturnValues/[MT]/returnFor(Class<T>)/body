@@ -1,6 +1,6 @@
 {
-  if (Primitives.isPrimitiveWrapper(clazz)) {
-    return Primitives.primitiveWrapperOf(clazz);
+  if (isPrimitiveWrapper(clazz)) {
+    return primitiveWrapperOf(clazz);
   }
-  return null;
+  return primitiveValueFor(clazz);
 }

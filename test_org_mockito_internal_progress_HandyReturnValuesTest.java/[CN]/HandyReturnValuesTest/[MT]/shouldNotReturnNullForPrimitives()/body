@@ -1,0 +1,10 @@
+{
+  assertNotNull(h.returnFor(boolean.class));
+  assertNotNull(h.returnFor(char.class));
+  assertNotNull(h.returnFor(byte.class));
+  assertNotNull(h.returnFor(short.class));
+  assertNotNull(h.returnFor(int.class));
+  assertNotNull(h.returnFor(long.class));
+  assertNotNull(h.returnFor(float.class));
+  assertNotNull(h.returnFor(double.class));
+}

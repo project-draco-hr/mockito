@@ -1,5 +1,5 @@
 {
-  ArgumentCaptor<String> argument=new ArgumentCaptor<String>();
+  ArgumentCaptor<String> argument=ArgumentCaptor.forClass(String.class);
   when(mock.simpleMethod(argument.capture(),eq(2))).thenReturn("blah");
   mock.simpleMethod("foo",200);
   mock.simpleMethod("bar",2);

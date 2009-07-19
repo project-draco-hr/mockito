@@ -1,4 +1,4 @@
 {
   Mockito.argThat(capturingMatcher);
-  return new HandyReturnValues().returnFor(clazz);
+  return handyReturnValues.returnFor(clazz);
 }

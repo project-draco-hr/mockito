@@ -1,5 +1,5 @@
 {
-  ArgumentCaptor<Person> person=new ArgumentCaptor<Person>();
+  ArgumentCaptor<Person> person=ArgumentCaptor.forClass(Person.class);
   try {
     verify(emailService).sendEmailTo(person.capture());
     fail();

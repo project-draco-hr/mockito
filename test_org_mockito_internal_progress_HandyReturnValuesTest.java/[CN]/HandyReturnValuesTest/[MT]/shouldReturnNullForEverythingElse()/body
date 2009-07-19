@@ -1,0 +1,4 @@
+{
+  assertNull(h.returnFor(Object.class));
+  assertNull(h.returnFor(String.class));
+}
