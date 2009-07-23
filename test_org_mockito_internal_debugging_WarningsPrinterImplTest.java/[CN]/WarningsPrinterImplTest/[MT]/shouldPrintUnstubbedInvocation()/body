@@ -1,6 +1,6 @@
 {
   InvocationMatcher unstubbedInvocation=new InvocationBuilder().differentMethod().toInvocationMatcher();
-  WarningsPrinterImpl p=new WarningsPrinterImpl(Arrays.<Invocation>asList(),Arrays.<InvocationMatcher>asList(unstubbedInvocation));
+  WarningsPrinterImpl p=new WarningsPrinterImpl(Arrays.<Invocation>asList(),Arrays.<InvocationMatcher>asList(unstubbedInvocation),true);
   p.print(logger);
   assertContains("was not stubbed",logger.getLoggedInfo());
   assertContains("differentMethod()",logger.getLoggedInfo());
