@@ -4,7 +4,7 @@
     @Override public void testFailure(    final Failure failure) throws Exception {
       Throwable throwable=(Throwable)Whitebox.getInternalState(failure,"fThrownException");
       String newMessage=throwable.getMessage();
-      newMessage+="\n" + debuggingInfo.getWarnings() + "\n*** The actual failure is because of: ***\n";
+      newMessage+="\n" + debuggingInfo.getWarnings(false) + "\n*** The actual failure is because of: ***\n";
       Whitebox.setInternalState(throwable,"detailMessage",newMessage);
     }
   }

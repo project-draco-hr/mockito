@@ -15,7 +15,9 @@
   for (  Invocation i : unusedStubs) {
     logger.log(thisStubWasNotUsed(i));
   }
-  for (  InvocationMatcher i1 : unstubbedInvocations) {
-    logger.log(thisMethodWasNotStubbed(i1));
+  if (warnAboutUnstubbed) {
+    for (    InvocationMatcher i1 : unstubbedInvocations) {
+      logger.log(thisMethodWasNotStubbed(i1));
+    }
   }
 }

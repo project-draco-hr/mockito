@@ -4,8 +4,6 @@
       unusedStubbingThatQualifiesForWarning();
       notifier.fireTestFailure(null);
       String loggedInfo=loggerStub.getLoggedInfo();
-      assertContains("stub was not used",loggedInfo);
-      assertContains("mock.simpleMethod(123);",loggedInfo);
       assertContains(".unusedStubbingThatQualifiesForWarning(",loggedInfo);
     }
   }

@@ -1,4 +1,3 @@
 {
-  this.unusedStubs=new LinkedList<Invocation>(unusedStubs);
-  this.unstubbedInvocations=new LinkedList<InvocationMatcher>(unstubbedInvocations);
+  this(unusedStubs,unstubbedInvocations,true);
 }
