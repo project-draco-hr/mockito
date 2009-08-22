@@ -1,0 +1,5 @@
+{
+  IMethods mock=mock(IMethods.class);
+  ByteArrayOutputStream serialized=new ByteArrayOutputStream();
+  new ObjectOutputStream(serialized).writeObject(mock);
+}
