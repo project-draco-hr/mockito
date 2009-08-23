@@ -1,0 +1,3 @@
+{
+  new ObjectOutputStream(new ByteArrayOutputStream()).writeObject(filter);
+}

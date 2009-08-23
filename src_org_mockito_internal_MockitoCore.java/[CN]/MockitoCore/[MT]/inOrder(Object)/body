@@ -10,6 +10,5 @@
       reporter.notAMockPassedWhenCreatingInOrder();
     }
   }
-  InOrder inOrder=new InOrderImpl(Arrays.asList(mocks));
-  return inOrder;
+  return new InOrderImpl(Arrays.asList(mocks));
 }

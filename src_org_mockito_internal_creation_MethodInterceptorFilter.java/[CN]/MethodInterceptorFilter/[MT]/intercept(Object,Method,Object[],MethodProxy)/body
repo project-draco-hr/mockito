@@ -1,11 +1,11 @@
 {
   if (equalsMethod.equals(method)) {
-    return Boolean.valueOf(proxy == args[0]);
+    return proxy == args[0];
   }
  else   if (hashCodeMethod.equals(method)) {
     return hashCodeForMock(proxy);
   }
-  new CGLIBHacker().setMockitoNamingPolicy(methodProxy);
+  cglibHacker.setMockitoNamingPolicy(methodProxy);
   Invocation invocation=new Invocation(proxy,method,args,SequenceNumber.next(),new FilteredCGLIBProxyRealMethod(methodProxy));
   return mockHandler.handle(invocation);
 }
