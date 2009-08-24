@@ -1,3 +1,3 @@
 {
-  return isToString(invocation.getMethod());
+  return ObjectMethodsGuru.isToString(invocation.getMethod());
 }
