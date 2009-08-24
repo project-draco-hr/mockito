@@ -3,7 +3,7 @@
   creationValidator.validateExtraInterfaces(classToMock,settings.getExtraInterfaces());
   MockName mockName=new MockName(settings.getMockName(),classToMock);
   MockHandler<T> mockHandler=new MockHandler<T>(mockName,progress,new MatchersBinder(),settings);
-  MethodInterceptorFilter filter=new MethodInterceptorFilter(classToMock,mockHandler);
+  MethodInterceptorFilter filter=new MethodInterceptorFilter(mockHandler);
   Class<?>[] interfaces=settings.getExtraInterfaces();
   Class<?>[] ancillaryTypes=interfaces == null ? new Class<?>[0] : interfaces;
   Object spiedInstance=settings.getSpiedInstance();

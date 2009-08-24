@@ -1,5 +1,5 @@
 {
-  assertFalse(isToString(String.class.getMethod("equals",Object.class)));
+  assertFalse(isToString(Object.class.getMethod("equals",Object.class)));
   assertFalse(isToString(IMethods.class.getMethod("toString",String.class)));
-  assertTrue(isToString(Object.class.getMethod("toString")));
+  assertTrue(isToString(IMethods.class.getMethod("toString")));
 }

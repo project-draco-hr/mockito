@@ -2,7 +2,7 @@
   if (objectMethodsGuru.isEqualsMethod(method)) {
     return proxy == args[0];
   }
- else   if (hashCodeMethod.equals(method)) {
+ else   if (objectMethodsGuru.isHashCodeMethod(method)) {
     return hashCodeForMock(proxy);
   }
   cglibHacker.setMockitoNamingPolicy(methodProxy);
