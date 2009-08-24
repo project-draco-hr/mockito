@@ -1,0 +1,5 @@
+{
+  assertFalse(guru.isEqualsMethod(IMethods.class.getMethod("equals",String.class)));
+  assertFalse(guru.isEqualsMethod(Object.class.getMethod("toString")));
+  assertTrue(guru.isEqualsMethod(String.class.getMethod("equals",Object.class)));
+}

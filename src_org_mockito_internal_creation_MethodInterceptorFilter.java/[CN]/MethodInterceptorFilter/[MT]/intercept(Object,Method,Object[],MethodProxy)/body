@@ -1,5 +1,5 @@
 {
-  if (equalsMethod.equals(method)) {
+  if (objectMethodsGuru.isEqualsMethod(method)) {
     return proxy == args[0];
   }
  else   if (hashCodeMethod.equals(method)) {
