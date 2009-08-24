@@ -1,6 +1,0 @@
-{
-  MethodsImpl proxy=new MethodsImpl();
-  Object ret=filter.intercept(proxy,MethodsImpl.class.getMethod("equals",Object.class),new Object[]{"some other object"},null);
-  assertFalse((Boolean)ret);
-  Mockito.verify(mockHanlder,never()).handle(any(Invocation.class));
-}
