@@ -1,0 +1,10 @@
+{
+  mock.clear();
+  mock.clear();
+  try {
+    verify(mock,only()).clear();
+    fail();
+  }
+ catch (  NoInteractionsWanted e) {
+  }
+}

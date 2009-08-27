@@ -1,0 +1,4 @@
+{
+  mock.get(0);
+  verify(mock,only()).get(anyInt());
+}

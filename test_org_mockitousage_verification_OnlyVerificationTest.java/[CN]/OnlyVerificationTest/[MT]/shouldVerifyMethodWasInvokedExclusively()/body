@@ -1,0 +1,4 @@
+{
+  mock.clear();
+  verify(mock,only()).clear();
+}
