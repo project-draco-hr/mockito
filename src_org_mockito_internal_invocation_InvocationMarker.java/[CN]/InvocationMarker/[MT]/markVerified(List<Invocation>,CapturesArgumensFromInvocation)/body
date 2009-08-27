@@ -1,6 +1,5 @@
 {
   for (  Invocation invocation : invocations) {
-    invocation.markVerified();
-    wanted.captureArgumentsFrom(invocation);
+    markVerified(invocation,wanted);
   }
 }

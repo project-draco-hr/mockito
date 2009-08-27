@@ -1,0 +1,4 @@
+{
+  invocation.markVerified();
+  wanted.captureArgumentsFrom(invocation);
+}
