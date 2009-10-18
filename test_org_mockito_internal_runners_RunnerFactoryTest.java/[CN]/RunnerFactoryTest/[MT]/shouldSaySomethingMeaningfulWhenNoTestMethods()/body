@@ -1,0 +1,10 @@
+{
+  RunnerFactory factory=new RunnerFactory(new RunnerProvider());
+  try {
+    factory.create(NoTestMethods.class);
+    fail();
+  }
+ catch (  MockitoException e) {
+    assertContains("No tests",e.getMessage());
+  }
+}
