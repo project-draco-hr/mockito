@@ -1,0 +1,9 @@
+{
+  mock.run("a","b");
+  try {
+    verify(mock).run((String[])anyObject());
+    fail();
+  }
+ catch (  AssertionError e) {
+  }
+}

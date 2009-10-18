@@ -1,0 +1,4 @@
+{
+  Object[] actualArgs=actual.getArguments();
+  return argumentsMatch(invocationMatcher,actualArgs) || varArgsMatch(invocationMatcher,actual);
+}

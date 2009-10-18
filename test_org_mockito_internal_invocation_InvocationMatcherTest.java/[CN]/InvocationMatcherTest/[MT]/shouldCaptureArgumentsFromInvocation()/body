@@ -1,7 +1,7 @@
 {
   Invocation invocation=new InvocationBuilder().args("1",100).toInvocation();
   CapturingMatcher capturingMatcher=new CapturingMatcher();
-  InvocationMatcher invocationMatcher=new InvocationMatcher(invocation,(List)Arrays.asList(new Equals("1"),capturingMatcher));
+  InvocationMatcher invocationMatcher=new InvocationMatcher(invocation,(List)asList(new Equals("1"),capturingMatcher));
   invocationMatcher.captureArgumentsFrom(invocation);
   assertEquals(1,capturingMatcher.getAllValues().size());
   assertEquals(100,capturingMatcher.getLastValue());

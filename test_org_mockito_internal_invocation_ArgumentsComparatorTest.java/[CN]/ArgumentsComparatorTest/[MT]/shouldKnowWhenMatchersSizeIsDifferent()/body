@@ -1,0 +1,6 @@
+{
+  Invocation invocation=new InvocationBuilder().args("100").toInvocation();
+  InvocationMatcher invocationMatcher=new InvocationBuilder().args("100",100).toInvocationMatcher();
+  boolean match=comparator.argumentsMatch(invocationMatcher,invocation);
+  assertFalse(match);
+}

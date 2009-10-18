@@ -1,8 +1,3 @@
 {
-  if (actualMatcher instanceof ContainsExtraTypeInformation) {
-    return ((ContainsExtraTypeInformation)actualMatcher).typeMatches(object);
-  }
- else {
-    return false;
-  }
+  return actualMatcher instanceof ContainsExtraTypeInformation && ((ContainsExtraTypeInformation)actualMatcher).typeMatches(object);
 }

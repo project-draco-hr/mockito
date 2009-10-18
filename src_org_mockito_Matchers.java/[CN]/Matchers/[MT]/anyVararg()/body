@@ -1,0 +1,3 @@
+{
+  return (T)reportMatcher(AnyVararg.ANY_VARARG).returnNull();
+}
