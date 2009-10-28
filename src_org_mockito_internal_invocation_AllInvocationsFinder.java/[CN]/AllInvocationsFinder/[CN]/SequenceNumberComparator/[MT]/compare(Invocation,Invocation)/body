@@ -1,2 +1,3 @@
 {
+  return o1.getSequenceNumber().compareTo(o2.getSequenceNumber());
 }
