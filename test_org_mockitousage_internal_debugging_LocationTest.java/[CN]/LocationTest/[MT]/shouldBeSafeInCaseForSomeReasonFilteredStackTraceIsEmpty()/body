@@ -1,0 +1,10 @@
+{
+  StackTraceFilter filterReturningEmptyArray=new StackTraceFilter(){
+    @Override public StackTraceElement[] filter(    StackTraceElement[] target,    boolean keepTop){
+      return new StackTraceElement[0];
+    }
+  }
+;
+  String loc=new Location(filterReturningEmptyArray).toString();
+  assertEquals("-> at <<unknown line>>",loc);
+}
