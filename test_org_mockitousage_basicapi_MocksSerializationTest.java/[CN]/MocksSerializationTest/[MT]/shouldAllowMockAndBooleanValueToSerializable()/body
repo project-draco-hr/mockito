@@ -1,0 +1,7 @@
+{
+  IMethods mock=mock(IMethods.class,withSettings().extraInterfaces(Serializable.class));
+  when(mock.booleanReturningMethod()).thenReturn(true);
+  ByteArrayOutputStream serialized=serializeMock(mock);
+  IMethods readObject=deserializeMock(serialized,IMethods.class);
+  assertTrue(readObject.booleanReturningMethod());
+}

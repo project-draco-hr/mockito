@@ -1,0 +1,6 @@
+{
+  Class<?>[] args=new Class<?>[0];
+  Method method=this.getClass().getMethod("toString",args);
+  MockitoMethod mockMethod=new MockitoMethod(method);
+  assertEquals(method,mockMethod.getMethod());
+}

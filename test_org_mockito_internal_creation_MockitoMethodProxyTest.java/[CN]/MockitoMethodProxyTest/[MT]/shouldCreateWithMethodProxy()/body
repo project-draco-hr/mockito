@@ -1,0 +1,5 @@
+{
+  MethodProxy proxy=MethodProxy.create(String.class,String.class,"","toString","toString");
+  MockitoMethodProxy mockitoMethodProxy=new MockitoMethodProxy(proxy);
+  assertNotNull(mockitoMethodProxy.getMethodProxy());
+}

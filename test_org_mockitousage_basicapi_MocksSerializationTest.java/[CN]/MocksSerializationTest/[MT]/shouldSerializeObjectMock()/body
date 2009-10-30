@@ -1,0 +1,5 @@
+{
+  Any mock=mock(Any.class);
+  ByteArrayOutputStream serialized=serializeMock(mock);
+  deserializeMock(serialized,Any.class);
+}

@@ -1,0 +1,8 @@
+{
+  List<Object> list=new ArrayList<Object>();
+  List<Object> spy=spy(list);
+  when(spy.size()).thenReturn(100);
+  ByteArrayOutputStream serialized=serializeMock(spy);
+  List<?> readObject=deserializeMock(serialized,List.class);
+  assertEquals(100,readObject.size());
+}

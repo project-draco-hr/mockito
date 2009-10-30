@@ -1,0 +1,5 @@
+{
+  ByteArrayOutputStream serialized=new ByteArrayOutputStream();
+  new ObjectOutputStream(serialized).writeObject(mock);
+  return serialized;
+}

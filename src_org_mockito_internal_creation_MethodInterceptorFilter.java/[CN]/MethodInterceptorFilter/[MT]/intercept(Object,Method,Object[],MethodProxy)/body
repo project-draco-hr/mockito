@@ -6,6 +6,7 @@
     return hashCodeForMock(proxy);
   }
   cglibHacker.setMockitoNamingPolicy(methodProxy);
-  Invocation invocation=new Invocation(proxy,method,args,SequenceNumber.next(),new FilteredCGLIBProxyRealMethod(methodProxy));
+  FilteredCGLIBProxyRealMethod realMethod=new FilteredCGLIBProxyRealMethod(new MockitoMethodProxy(methodProxy));
+  Invocation invocation=new Invocation(proxy,method,args,SequenceNumber.next(),realMethod);
   return mockHandler.handle(invocation);
 }

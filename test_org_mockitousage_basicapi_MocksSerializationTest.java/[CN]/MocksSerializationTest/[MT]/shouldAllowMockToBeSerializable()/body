@@ -1,5 +1,5 @@
 {
   IMethods mock=mock(IMethods.class,withSettings().extraInterfaces(Serializable.class));
-  ByteArrayOutputStream serialized=new ByteArrayOutputStream();
-  new ObjectOutputStream(serialized).writeObject(mock);
+  ByteArrayOutputStream serialized=serializeMock(mock);
+  deserializeMock(serialized,IMethods.class);
 }

@@ -1,6 +1,6 @@
 {
+  this.method=new MockitoMethod(method);
   this.mock=mock;
-  this.method=method;
   this.realMethod=realMethod;
   this.arguments=expandVarArgs(method.isVarArgs(),args);
   this.rawArguments=args;

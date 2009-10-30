@@ -1,0 +1,11 @@
+{
+  try {
+    return declaringClass.getDeclaredMethod(methodName,parameterTypes);
+  }
+ catch (  SecurityException e) {
+    throw new MockitoException("could not create method",e);
+  }
+catch (  NoSuchMethodException e) {
+    throw new MockitoException("could not create method",e);
+  }
+}

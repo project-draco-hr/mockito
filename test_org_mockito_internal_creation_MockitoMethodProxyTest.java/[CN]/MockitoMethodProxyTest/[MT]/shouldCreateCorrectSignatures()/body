@@ -1,0 +1,8 @@
+{
+  MethodProxy proxy=MethodProxy.create(String.class,Integer.class,"a","b","c");
+  MockitoMethodProxy mockitoMethodProxy=new MockitoMethodProxy(proxy);
+  MethodProxy methodProxy=(MethodProxy)mockitoMethodProxy.getMethodProxy();
+  assertEquals("a",methodProxy.getSignature().getDescriptor());
+  assertEquals("b",methodProxy.getSignature().getName());
+  assertEquals("c",methodProxy.getSuperName());
+}

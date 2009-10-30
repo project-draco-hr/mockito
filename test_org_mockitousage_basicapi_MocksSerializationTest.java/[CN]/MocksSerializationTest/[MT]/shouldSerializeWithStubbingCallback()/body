@@ -1,0 +1,15 @@
+{
+  IMethods mock=mock(IMethods.class,withSettings().extraInterfaces(Serializable.class));
+  final String string="return value";
+  when(mock.objectArgMethod(anyString())).thenAnswer(new Answer<Object>(){
+    public Object answer(    InvocationOnMock invocation){
+      invocation.getArguments();
+      invocation.getMock();
+      return string;
+    }
+  }
+);
+  ByteArrayOutputStream serialized=serializeMock(mock);
+  IMethods readObject=deserializeMock(serialized,IMethods.class);
+  assertEquals(string,readObject.objectArgMethod(""));
+}
