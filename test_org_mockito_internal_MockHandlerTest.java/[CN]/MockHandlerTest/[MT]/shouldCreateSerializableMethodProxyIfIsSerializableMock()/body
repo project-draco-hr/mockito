@@ -1,7 +1,0 @@
-{
-  MockSettingsImpl mockSettings=(MockSettingsImpl)withSettings().serializable();
-  MockHandler handler=new MockHandler(null,null,null,mockSettings);
-  MethodProxy methodProxy=MethodProxy.create(String.class,String.class,"","toString","toString");
-  MockitoMethodProxy mockitoMethodProxy=handler.createMockitoMethodProxy(methodProxy);
-  assertThat(mockitoMethodProxy,instanceOf(SerializableMockitoMethodProxy.class));
-}

@@ -1,3 +1,4 @@
 {
   this.mockHandler=mockHandler;
+  this.mockSettings=mockSettings;
 }

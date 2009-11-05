@@ -1,0 +1,6 @@
+{
+  MethodInterceptorFilter filter=new MethodInterceptorFilter(mockHanlder,(MockSettingsImpl)withSettings());
+  MethodProxy methodProxy=MethodProxy.create(String.class,String.class,"","toString","toString");
+  MockitoMethodProxy mockitoMethodProxy=filter.createMockitoMethodProxy(methodProxy);
+  assertThat(mockitoMethodProxy,instanceOf(DelegatingMockitoMethodProxy.class));
+}

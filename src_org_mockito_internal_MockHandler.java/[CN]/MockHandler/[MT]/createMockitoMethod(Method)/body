@@ -1,4 +1,0 @@
-{
-  if (mockSettings.isSerializable())   return new SerializableMockitoMethod(method);
-  return new DelegatingMockitoMethod(method);
-}

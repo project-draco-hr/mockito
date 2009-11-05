@@ -1,7 +1,0 @@
-{
-  MockSettingsImpl mockSettings=(MockSettingsImpl)withSettings().serializable();
-  MockHandler handler=new MockHandler(null,null,null,mockSettings);
-  Method method=getClass().getMethod("toString",new Class<?>[0]);
-  MockitoMethod mockitoMethod=handler.createMockitoMethod(method);
-  assertThat(mockitoMethod,instanceOf(SerializableMockitoMethod.class));
-}
