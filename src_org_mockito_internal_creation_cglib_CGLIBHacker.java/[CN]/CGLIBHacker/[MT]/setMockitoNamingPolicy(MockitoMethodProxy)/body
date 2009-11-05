@@ -1,0 +1,3 @@
+{
+  methodProxy.setNamingPolicyField(MockitoNamingPolicy.INSTANCE);
+}

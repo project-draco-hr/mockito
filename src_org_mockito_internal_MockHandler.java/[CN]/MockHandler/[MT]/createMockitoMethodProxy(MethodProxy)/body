@@ -1,0 +1,4 @@
+{
+  if (mockSettings.isSerializable())   return new SerializableMockitoMethodProxy(methodProxy);
+  return new DelegatingMockitoMethodProxy(methodProxy);
+}

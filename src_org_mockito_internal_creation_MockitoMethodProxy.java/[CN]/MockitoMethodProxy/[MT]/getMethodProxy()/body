@@ -1,3 +1,0 @@
-{
-  return MethodProxy.create(c1,c2,desc,name,superName);
-}

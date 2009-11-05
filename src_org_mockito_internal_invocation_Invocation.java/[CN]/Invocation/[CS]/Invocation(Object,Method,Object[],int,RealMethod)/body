@@ -1,9 +1,0 @@
-{
-  this.method=new MockitoMethod(method);
-  this.mock=mock;
-  this.realMethod=realMethod;
-  this.arguments=expandVarArgs(method.isVarArgs(),args);
-  this.rawArguments=args;
-  this.sequenceNumber=sequenceNumber;
-  this.location=new Location();
-}

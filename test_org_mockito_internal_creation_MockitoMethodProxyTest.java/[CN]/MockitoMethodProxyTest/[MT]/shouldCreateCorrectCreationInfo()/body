@@ -1,8 +1,0 @@
-{
-  MethodProxy proxy=MethodProxy.create(String.class,Integer.class,"","","");
-  MockitoMethodProxy mockitoMethodProxy=new MockitoMethodProxy(proxy);
-  Object methodProxy=mockitoMethodProxy.getMethodProxy();
-  Object info=Whitebox.getInternalState(methodProxy,"createInfo");
-  assertEquals(String.class,Whitebox.getInternalState(info,"c1"));
-  assertEquals(Integer.class,Whitebox.getInternalState(info,"c2"));
-}

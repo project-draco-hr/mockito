@@ -1,8 +1,0 @@
-{
-  Object info=Whitebox.getInternalState(methodProxy,"createInfo");
-  c1=(Class<?>)Whitebox.getInternalState(info,"c1");
-  c2=(Class<?>)Whitebox.getInternalState(info,"c2");
-  desc=methodProxy.getSignature().getDescriptor();
-  name=methodProxy.getSignature().getName();
-  superName=methodProxy.getSuperName();
-}

@@ -1,6 +1,0 @@
-{
-  Class<?>[] args=new Class<?>[0];
-  MockitoMethod method=new MockitoMethod(this.getClass().getMethod("toString",args));
-  ByteArrayOutputStream serialized=new ByteArrayOutputStream();
-  new ObjectOutputStream(serialized).writeObject(method);
-}

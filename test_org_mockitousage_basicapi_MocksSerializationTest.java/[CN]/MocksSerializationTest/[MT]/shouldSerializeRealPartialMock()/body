@@ -1,5 +1,5 @@
 {
-  Any mock=mock(Any.class);
+  Any mock=mock(Any.class,withSettings().serializable());
   when(mock.matches(anyObject())).thenCallRealMethod();
   ByteArrayOutputStream serialized=serializeMock(mock);
   Any readObject=deserializeMock(serialized,Any.class);

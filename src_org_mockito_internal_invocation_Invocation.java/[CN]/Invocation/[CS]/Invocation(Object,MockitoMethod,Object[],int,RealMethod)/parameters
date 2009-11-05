@@ -1,0 +1,5 @@
+Object mock
+MockitoMethod mockitoMethod
+Object[] args
+int sequenceNumber
+RealMethod realMethod

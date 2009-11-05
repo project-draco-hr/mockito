@@ -1,5 +1,5 @@
 {
-  IMethods mock=mock(IMethods.class,withSettings().extraInterfaces(Serializable.class));
+  IMethods mock=mock(IMethods.class,withSettings().extraInterfaces(Serializable.class).serializable());
   final String string="return value";
   when(mock.objectArgMethod(anyString())).thenAnswer(new Answer<Object>(){
     public Object answer(    InvocationOnMock invocation){

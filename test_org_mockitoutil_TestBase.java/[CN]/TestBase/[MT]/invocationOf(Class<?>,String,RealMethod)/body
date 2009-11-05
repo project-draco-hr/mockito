@@ -1,3 +1,3 @@
 {
-  return new Invocation(new Object(),type.getMethod(methodName,new Class[0]),new Object[0],1,realMethod);
+  return new Invocation(new Object(),new DelegatingMockitoMethod(type.getMethod(methodName,new Class[0])),new Object[0],1,realMethod);
 }

@@ -1,0 +1,6 @@
+{
+  MockHandler handler=new MockHandler(null,null,null,(MockSettingsImpl)withSettings());
+  MethodProxy methodProxy=MethodProxy.create(String.class,String.class,"","toString","toString");
+  MockitoMethodProxy mockitoMethodProxy=handler.createMockitoMethodProxy(methodProxy);
+  assertThat(mockitoMethodProxy,instanceOf(DelegatingMockitoMethodProxy.class));
+}

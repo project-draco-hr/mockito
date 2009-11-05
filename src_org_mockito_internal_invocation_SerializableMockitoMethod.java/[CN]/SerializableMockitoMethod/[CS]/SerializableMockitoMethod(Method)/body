@@ -1,0 +1,8 @@
+{
+  declaringClass=method.getDeclaringClass();
+  methodName=method.getName();
+  parameterTypes=method.getParameterTypes();
+  returnType=method.getReturnType();
+  exceptionTypes=method.getExceptionTypes();
+  isVarArgs=method.isVarArgs();
+}
