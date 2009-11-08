@@ -1,0 +1,9 @@
+{
+  List list=new LinkedList();
+  try {
+    mock(List.class,withSettings().spiedInstance(list));
+    fail();
+  }
+ catch (  MockitoException e) {
+  }
+}

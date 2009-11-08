@@ -1,0 +1,4 @@
+{
+  List list=new LinkedList();
+  mock(LinkedList.class,withSettings().spiedInstance(list));
+}

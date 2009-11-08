@@ -1,0 +1,8 @@
+{
+  if (classToMock == null || spiedInstance == null) {
+    return;
+  }
+  if (!classToMock.equals(spiedInstance.getClass())) {
+    new Reporter().mockedTypeIsInconsistentWithSpiedInstanceType(classToMock,spiedInstance);
+  }
+}

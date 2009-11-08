@@ -1,5 +1,4 @@
 {
-  CreationValidator validator=new CreationValidator();
   try {
     validator.validateExtraInterfaces(IMethods.class,new Class<?>[]{IMethods.class});
     fail();

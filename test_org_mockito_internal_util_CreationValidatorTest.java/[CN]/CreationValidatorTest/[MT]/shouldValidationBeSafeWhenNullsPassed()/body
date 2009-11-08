@@ -1,0 +1,4 @@
+{
+  validator.validateMockedType(null,new ArrayList());
+  validator.validateMockedType(ArrayList.class,null);
+}
