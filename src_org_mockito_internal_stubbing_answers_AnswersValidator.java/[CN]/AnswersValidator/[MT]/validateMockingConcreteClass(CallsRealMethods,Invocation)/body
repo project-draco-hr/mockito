@@ -1,0 +1,5 @@
+{
+  if (invocation.getMethod().getDeclaringClass().isInterface()) {
+    reporter.cannotCallRealMethodOnInterface();
+  }
+}

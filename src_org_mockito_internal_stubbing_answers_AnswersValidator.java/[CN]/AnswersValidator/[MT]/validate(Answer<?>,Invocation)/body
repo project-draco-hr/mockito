@@ -8,4 +8,7 @@
   if (answer instanceof DoesNothing) {
     validateDoNothing((DoesNothing)answer,invocation);
   }
+  if (answer instanceof CallsRealMethods) {
+    validateMockingConcreteClass((CallsRealMethods)answer,invocation);
+  }
 }
