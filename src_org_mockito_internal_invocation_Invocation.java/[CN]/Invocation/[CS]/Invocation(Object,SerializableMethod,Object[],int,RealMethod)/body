@@ -1,8 +1,8 @@
 {
-  this.method=mockitoMethod;
+  this.method=serializableMethod;
   this.mock=mock;
   this.realMethod=realMethod;
-  this.arguments=expandVarArgs(mockitoMethod.isVarArgs(),args);
+  this.arguments=expandVarArgs(serializableMethod.isVarArgs(),args);
   this.rawArguments=args;
   this.sequenceNumber=sequenceNumber;
   this.location=new Location();
