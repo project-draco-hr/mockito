@@ -1,3 +1,0 @@
-{
-  assertTrue(new SerializableMethod(toStringMethod).equals(mockMethod));
-}

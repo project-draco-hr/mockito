@@ -1,0 +1,3 @@
+{
+  assertArrayEquals(toStringMethod.getParameterTypes(),method.getParameterTypes());
+}

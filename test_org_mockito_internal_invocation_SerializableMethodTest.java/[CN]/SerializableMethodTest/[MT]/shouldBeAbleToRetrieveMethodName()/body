@@ -1,0 +1,3 @@
+{
+  assertEquals(toStringMethod.getName(),method.getName());
+}

@@ -1,0 +1,3 @@
+{
+  assertArrayEquals(toStringMethod.getExceptionTypes(),method.getExceptionTypes());
+}

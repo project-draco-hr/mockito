@@ -1,0 +1,13 @@
+{
+  try {
+    return declaringClass.getDeclaredMethod(methodName,parameterTypes);
+  }
+ catch (  SecurityException e) {
+    String message=String.format("The method %1$s.%2$s is probably private or protected and cannot be mocked.\n" + "Please report this as a defect with an example of how to reproduce it.",declaringClass,methodName);
+    throw new MockitoException(message,e);
+  }
+catch (  NoSuchMethodException e) {
+    String message=String.format("The method %1$s.%2$s does not exists and you should not get to this point.\n" + "Please report this as a defect with an example of how to reproduce it.",declaringClass,methodName);
+    throw new MockitoException(message,e);
+  }
+}

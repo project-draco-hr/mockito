@@ -1,5 +1,5 @@
 {
-  if (this.getMethod().isDeclaredOnInterface()) {
+  if (isDeclaredOnInterface()) {
     new Reporter().cannotCallRealMethodOnInterface();
   }
   return realMethod.invoke(mock,rawArguments);

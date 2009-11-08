@@ -1,4 +1,0 @@
-{
-  Method testBaseToStringMethod=String.class.getMethod("toString",args);
-  assertFalse(new SerializableMethod(testBaseToStringMethod).equals(mockMethod));
-}

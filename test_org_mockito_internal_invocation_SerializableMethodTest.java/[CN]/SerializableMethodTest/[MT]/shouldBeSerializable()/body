@@ -1,4 +1,4 @@
 {
   ByteArrayOutputStream serialized=new ByteArrayOutputStream();
-  new ObjectOutputStream(serialized).writeObject(mockMethod);
+  new ObjectOutputStream(serialized).writeObject(method);
 }

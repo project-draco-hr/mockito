@@ -1,3 +1,0 @@
-{
-  assertArrayEquals(toStringMethod.getParameterTypes(),mockMethod.getParameterTypes());
-}
