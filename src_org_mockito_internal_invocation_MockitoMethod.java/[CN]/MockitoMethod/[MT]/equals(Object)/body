@@ -2,7 +2,7 @@
   if (this == obj)   return true;
   if (obj == null)   return false;
   if (getClass() != obj.getClass())   return false;
-  SerializableMockitoMethod other=(SerializableMockitoMethod)obj;
+  MockitoMethod other=(MockitoMethod)obj;
   if (declaringClass == null) {
     if (other.declaringClass != null)     return false;
   }

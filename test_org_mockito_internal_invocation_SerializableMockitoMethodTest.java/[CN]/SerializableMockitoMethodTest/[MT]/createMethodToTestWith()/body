@@ -1,5 +1,5 @@
 {
   args=new Class<?>[0];
   toStringMethod=this.getClass().getMethod("toString",args);
-  mockMethod=new SerializableMockitoMethod(toStringMethod);
+  mockMethod=new MockitoMethod(toStringMethod);
 }
