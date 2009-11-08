@@ -1,0 +1,9 @@
+{
+  Invocation invocationOnInterface=new InvocationBuilder().toInvocation();
+  try {
+    invocationOnInterface.callRealMethod();
+    fail();
+  }
+ catch (  MockitoException e) {
+  }
+}
