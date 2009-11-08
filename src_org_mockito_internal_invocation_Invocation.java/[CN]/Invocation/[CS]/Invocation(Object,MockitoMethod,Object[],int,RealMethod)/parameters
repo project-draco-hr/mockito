@@ -1,5 +1,5 @@
 Object mock
-SerializableMethod serializableMethod
+MockitoMethod mockitoMethod
 Object[] args
 int sequenceNumber
 RealMethod realMethod

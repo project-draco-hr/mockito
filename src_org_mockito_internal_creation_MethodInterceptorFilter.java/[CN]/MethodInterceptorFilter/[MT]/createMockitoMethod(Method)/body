@@ -1,0 +1,8 @@
+{
+  if (mockSettings.isSerializable()) {
+    return new SerializableMethod(method);
+  }
+ else {
+    return new DelegatingMethod(method);
+  }
+}
