@@ -1,0 +1,4 @@
+{
+  mock.intArgumentMethod(100);
+  verify(mock,never()).intArgumentMethod(same(new Integer(100)));
+}
