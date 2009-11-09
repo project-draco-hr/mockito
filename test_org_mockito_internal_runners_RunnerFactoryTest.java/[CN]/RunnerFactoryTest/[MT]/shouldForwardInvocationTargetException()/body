@@ -1,0 +1,14 @@
+{
+  RunnerFactory factory=new RunnerFactory(new RunnerProvider(){
+    @Override public RunnerImpl newInstance(    String runnerClassName,    Class<?> constructorParam) throws Exception {
+      throw new InvocationTargetException(new RuntimeException());
+    }
+  }
+);
+  try {
+    factory.create(this.getClass());
+    fail();
+  }
+ catch (  InvocationTargetException e) {
+  }
+}

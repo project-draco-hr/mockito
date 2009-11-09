@@ -1,3 +1,2 @@
-Class<?> klass
 MockitoLogger logger
 RunnerImpl runnerImpl
