@@ -1,6 +1,3 @@
 {
-  if (this.wanted == null) {
-    return actual == null;
-  }
-  return wanted.equals(actual);
+  return Equality.areEqual(this.wanted,actual);
 }

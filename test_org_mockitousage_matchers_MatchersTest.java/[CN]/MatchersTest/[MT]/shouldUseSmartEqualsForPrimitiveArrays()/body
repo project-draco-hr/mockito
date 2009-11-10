@@ -1,0 +1,5 @@
+{
+  mock.objectArgMethod(new int[]{1,2});
+  verify(mock).objectArgMethod(eq(new int[]{1,2}));
+  verify(mock).objectArgMethod(new int[]{1,2});
+}

@@ -1,0 +1,3 @@
+{
+  return Array.getLength(o1) == Array.getLength(o2);
+}

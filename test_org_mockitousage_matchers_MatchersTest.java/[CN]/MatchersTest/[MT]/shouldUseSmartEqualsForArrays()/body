@@ -1,0 +1,5 @@
+{
+  mock.arrayMethod(new String[]{"one"});
+  verify(mock).arrayMethod(eq(new String[]{"one"}));
+  verify(mock).arrayMethod(new String[]{"one"});
+}

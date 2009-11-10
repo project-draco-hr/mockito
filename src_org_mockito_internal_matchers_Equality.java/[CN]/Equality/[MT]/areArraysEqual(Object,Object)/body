@@ -1,0 +1,3 @@
+{
+  return areArrayLengthsEqual(o1,o2) && areArrayElementsEqual(o1,o2);
+}
