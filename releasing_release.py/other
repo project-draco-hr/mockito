@@ -1,4 +1,3 @@
-raise 'TODO: should do a tag at the end'
 import os
 run('ruby replace_headers.rb')
 ok = raw_input('Make sure NOW if all you need is checked in. Proceed? (Y/N):')
@@ -21,6 +20,8 @@ run('svn add javadoc/*')
 run('svn ps -R svn:mime-type text/html javadoc/*')
 run('svn ps -R svn:mime-type text/css javadoc/stylesheet.css')
 run('svn ci -m "released javadoc, updated version"')
+tag = ('https://mockito.googlecode.com/svn/tags/' + ver)
+run(((('svn copy -m "Tagged new release" ' + branch) + ' ') + tag))
 print 'Uploading binaries to the googlecode'
 os.chdir('releasing')
 import google_upload
