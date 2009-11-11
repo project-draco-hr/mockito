@@ -1,6 +1,6 @@
 {
-  IMethods mock=mock(IMethods.class,withSettings().extraInterfaces(Serializable.class).serializable());
-  IMethods mock2=mock(IMethods.class,withSettings().extraInterfaces(Serializable.class).serializable());
+  IMethods mock=mock(IMethods.class,withSettings().serializable());
+  IMethods mock2=mock(IMethods.class,withSettings().serializable());
   mock.arrayReturningMethod();
   mock2.arrayReturningMethod();
   ByteArrayOutputStream serialized=serializeMock(mock);

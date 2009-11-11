@@ -1,5 +1,5 @@
 {
-  IMethods mock=mock(IMethods.class,withSettings().extraInterfaces(Serializable.class).serializable());
+  IMethods mock=mock(IMethods.class,withSettings().serializable());
   List<?> value=Collections.emptyList();
   when(mock.objectReturningMethodNoArgs()).thenReturn(value);
   ByteArrayOutputStream serialized=serializeMock(mock);

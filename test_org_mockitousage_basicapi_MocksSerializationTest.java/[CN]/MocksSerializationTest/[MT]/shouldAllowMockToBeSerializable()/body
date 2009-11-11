@@ -1,4 +1,4 @@
 {
-  IMethods mock=mock(IMethods.class,withSettings().extraInterfaces(Serializable.class).serializable());
+  IMethods mock=mock(IMethods.class,withSettings().serializable());
   serializeAndBack(mock);
 }
