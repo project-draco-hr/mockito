@@ -1,0 +1,6 @@
+{
+  AlreadySerializable mock=mock(AlreadySerializable.class,withSettings().serializable());
+  when(mock.toString()).thenReturn("foo");
+  mock=serializeAndBack(mock);
+  assertEquals("foo",mock.toString());
+}
