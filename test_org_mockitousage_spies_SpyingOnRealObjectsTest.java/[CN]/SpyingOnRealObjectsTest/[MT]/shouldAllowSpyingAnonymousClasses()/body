@@ -1,0 +1,9 @@
+{
+  Foo spy=spy(new Foo(){
+    public String print(){
+      return "foo";
+    }
+  }
+);
+  assertEquals("foo",spy.print());
+}

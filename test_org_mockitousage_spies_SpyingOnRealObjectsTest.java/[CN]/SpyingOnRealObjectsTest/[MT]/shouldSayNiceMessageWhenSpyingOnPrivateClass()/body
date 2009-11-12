@@ -1,5 +1,5 @@
 {
-  List real=Arrays.asList(new String[]{"first","second"});
+  List real=Arrays.asList("first","second");
   try {
     spy(real);
     fail();
