@@ -1,0 +1,4 @@
+{
+  String out=mock.simpleMethod(name);
+  mockTwo.oneArg(out);
+}
