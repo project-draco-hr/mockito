@@ -1,0 +1,6 @@
+{
+  ImportLogBean importLogBean=new ImportLogBean(date,importType);
+  importLogBean.setStatus(1);
+  importLogDao.include(importLogBean);
+  return importLogBean;
+}

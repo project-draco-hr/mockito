@@ -1,0 +1,4 @@
+{
+  this.currentDate=currentDate;
+  this.importType=importType;
+}

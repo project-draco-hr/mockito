@@ -1,0 +1,3 @@
+{
+  return importLogDao.anyImportRunningOrRunnedToday(importType,date);
+}

@@ -1,0 +1,5 @@
+{
+  importLogDao=Mockito.mock(ImportLogDao.class);
+  importHandler=Mockito.mock(IImportHandler.class);
+  importManager=new ImportManager(importLogDao);
+}

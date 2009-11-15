@@ -1,0 +1,6 @@
+{
+  int result=currentDate != null ? currentDate.hashCode() : 0;
+  result=31 * result + importType;
+  result=31 * result + status;
+  return result;
+}

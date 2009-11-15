@@ -1,0 +1,18 @@
+{
+  ImportLogBean importLogBean=null;
+  try {
+    importLogBean=createResume(importType,date);
+    if (isOkToImport(importType,date)) {
+      importLogBean.setStatus(2);
+    }
+ else {
+      importLogBean.setStatus(9);
+    }
+  }
+ catch (  Exception e) {
+    if (importLogBean != null)     importLogBean.setStatus(9);
+  }
+ finally {
+    if (importLogBean != null)     finalizeResume(importLogBean);
+  }
+}
