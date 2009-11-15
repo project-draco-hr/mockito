@@ -1,4 +1,4 @@
 {
-  mockitoStubber.addAnswerForVoidMethod(new ThrowsException(throwable));
+  invocationContainerImpl.addAnswerForVoidMethod(new ThrowsException(throwable));
   return this;
 }

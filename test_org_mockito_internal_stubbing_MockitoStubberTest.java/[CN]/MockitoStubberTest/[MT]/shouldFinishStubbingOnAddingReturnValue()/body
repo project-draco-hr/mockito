@@ -1,5 +1,5 @@
 {
   state.stubbingStarted();
-  mockitoStubber.addAnswer(new Returns("test"));
+  invocationContainerImpl.addAnswer(new Returns("test"));
   state.validateState();
 }

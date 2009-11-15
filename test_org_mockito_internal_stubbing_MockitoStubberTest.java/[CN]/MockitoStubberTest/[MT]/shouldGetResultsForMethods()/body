@@ -1,12 +1,12 @@
 {
-  mockitoStubber.setInvocationForPotentialStubbing(new InvocationMatcher(simpleMethod));
-  mockitoStubber.addAnswer(new Returns("simpleMethod"));
+  invocationContainerImpl.setInvocationForPotentialStubbing(new InvocationMatcher(simpleMethod));
+  invocationContainerImpl.addAnswer(new Returns("simpleMethod"));
   Invocation differentMethod=new InvocationBuilder().differentMethod().toInvocation();
-  mockitoStubber.setInvocationForPotentialStubbing(new InvocationMatcher(differentMethod));
-  mockitoStubber.addAnswer(new ThrowsException(new MyException()));
-  assertEquals("simpleMethod",mockitoStubber.answerTo(simpleMethod));
+  invocationContainerImpl.setInvocationForPotentialStubbing(new InvocationMatcher(differentMethod));
+  invocationContainerImpl.addAnswer(new ThrowsException(new MyException()));
+  assertEquals("simpleMethod",invocationContainerImpl.answerTo(simpleMethod));
   try {
-    mockitoStubber.answerTo(differentMethod);
+    invocationContainerImpl.answerTo(differentMethod);
     fail();
   }
  catch (  MyException e) {

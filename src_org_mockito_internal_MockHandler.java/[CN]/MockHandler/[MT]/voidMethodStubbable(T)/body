@@ -1,3 +1,3 @@
 {
-  return new VoidMethodStubbableImpl<T>(mock,mockitoStubber);
+  return new VoidMethodStubbableImpl<T>(mock,invocationContainerImpl);
 }

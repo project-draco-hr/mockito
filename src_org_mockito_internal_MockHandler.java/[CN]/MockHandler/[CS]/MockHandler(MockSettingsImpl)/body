@@ -2,5 +2,5 @@
   this.mockSettings=mockSettings;
   this.mockingProgress=new ThreadSafeMockingProgress();
   this.matchersBinder=new MatchersBinder();
-  this.mockitoStubber=new MockitoStubber(mockingProgress);
+  this.invocationContainerImpl=new InvocationContainerImpl(mockingProgress);
 }

@@ -1,7 +1,7 @@
 {
   state.stubbingStarted();
   try {
-    mockitoStubber.addAnswer(new ThrowsException(new Exception()));
+    invocationContainerImpl.addAnswer(new ThrowsException(new Exception()));
     fail();
   }
  catch (  MockitoException e) {

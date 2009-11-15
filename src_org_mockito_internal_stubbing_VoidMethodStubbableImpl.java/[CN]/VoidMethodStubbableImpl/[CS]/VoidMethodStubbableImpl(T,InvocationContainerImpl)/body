@@ -1,0 +1,4 @@
+{
+  this.mock=mock;
+  this.invocationContainerImpl=invocationContainerImpl;
+}

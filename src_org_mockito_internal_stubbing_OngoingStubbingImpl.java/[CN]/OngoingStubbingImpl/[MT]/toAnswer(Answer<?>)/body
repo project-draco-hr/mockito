@@ -1,4 +1,4 @@
 {
-  mockitoStubber.addAnswer(answer);
-  return new ConsecutiveStubbing<T>(mockitoStubber);
+  invocationContainerImpl.addAnswer(answer);
+  return new ConsecutiveStubbing<T>(invocationContainerImpl);
 }

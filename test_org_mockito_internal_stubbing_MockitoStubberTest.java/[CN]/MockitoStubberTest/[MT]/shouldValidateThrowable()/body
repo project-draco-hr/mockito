@@ -1,6 +1,6 @@
 {
   try {
-    mockitoStubber.addAnswer(new ThrowsException(null));
+    invocationContainerImpl.addAnswer(new ThrowsException(null));
     fail();
   }
  catch (  MockitoException e) {
