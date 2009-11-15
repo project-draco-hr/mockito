@@ -1,0 +1,5 @@
+{
+  performStubbing();
+  businessLogicWithAsking("arg");
+  verify(mockTwo).doSomething("foo");
+}

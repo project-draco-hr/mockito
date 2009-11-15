@@ -1,0 +1,4 @@
+{
+  String out=mock.giveMeSomeString(name);
+  businessLogicWithTelling(out);
+}

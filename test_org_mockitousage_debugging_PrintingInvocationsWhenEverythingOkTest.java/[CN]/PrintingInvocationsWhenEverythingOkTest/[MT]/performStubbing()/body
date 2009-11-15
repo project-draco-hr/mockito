@@ -1,0 +1,3 @@
+{
+  given(mock.giveMeSomeString("arg")).willReturn("foo");
+}

@@ -1,5 +1,0 @@
-{
-  given(mock.simpleMethod("different arg")).willReturn("foo");
-  businessLogic("arg");
-  verify(mockTwo).oneArg("foo");
-}

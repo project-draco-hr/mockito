@@ -1,0 +1,9 @@
+{
+  String log=Mockito.debug().printInvocations(mock,mockTwo);
+  assertContains("giveMeSomeString(\"arg\")",log);
+  assertContains(".businessLogicWithAsking(",log);
+  assertContains("doSomething(null)",log);
+  assertContains(".businessLogicWithTelling(",log);
+  assertContains("giveMeSomeString(\"different arg\")",log);
+  assertContains(".performStubbing(",log);
+}
