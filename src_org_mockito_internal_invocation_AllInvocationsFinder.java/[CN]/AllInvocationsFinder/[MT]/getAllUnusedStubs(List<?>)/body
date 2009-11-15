@@ -1,7 +1,8 @@
 {
   List<Invocation> unused=new LinkedList<Invocation>();
   for (  Object mock : mocks) {
-    List<StubbedInvocationMatcher> fromSingleMock=new MockUtil().getMockHandler(mock).getStubbedInvocations();
+    MockHandlerInterface<Object> handler=new MockUtil().getMockHandler(mock);
+    List<StubbedInvocationMatcher> fromSingleMock=handler.getInvocationContainer().getStubbedInvocations();
     for (    StubbedInvocationMatcher s : fromSingleMock) {
       if (!s.wasUsed()) {
         unused.add(s.getInvocation());
