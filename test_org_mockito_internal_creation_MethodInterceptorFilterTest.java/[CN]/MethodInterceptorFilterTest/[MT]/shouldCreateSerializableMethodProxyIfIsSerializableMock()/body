@@ -1,5 +1,5 @@
 {
-  MethodInterceptorFilter filter=new MethodInterceptorFilter(mockHanlder,(MockSettingsImpl)withSettings().serializable());
+  MethodInterceptorFilter filter=new MethodInterceptorFilter(handler,(MockSettingsImpl)withSettings().serializable());
   MethodProxy methodProxy=MethodProxy.create(String.class,String.class,"","toString","toString");
   MockitoMethodProxy mockitoMethodProxy=filter.createMockitoMethodProxy(methodProxy);
   assertThat(mockitoMethodProxy,instanceOf(SerializableMockitoMethodProxy.class));

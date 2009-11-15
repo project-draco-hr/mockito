@@ -10,5 +10,5 @@
   MockitoMethod mockitoMethod=createMockitoMethod(method);
   FilteredCGLIBProxyRealMethod realMethod=new FilteredCGLIBProxyRealMethod(mockitoMethodProxy);
   Invocation invocation=new Invocation(proxy,mockitoMethod,args,SequenceNumber.next(),realMethod);
-  return mockHandler.handle(invocation);
+  return handler.handle(invocation);
 }

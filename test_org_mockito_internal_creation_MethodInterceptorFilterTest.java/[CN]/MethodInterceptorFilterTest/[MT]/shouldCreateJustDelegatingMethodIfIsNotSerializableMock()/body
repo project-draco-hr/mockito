@@ -1,5 +1,5 @@
 {
-  MethodInterceptorFilter filter=new MethodInterceptorFilter(mockHanlder,(MockSettingsImpl)withSettings());
+  MethodInterceptorFilter filter=new MethodInterceptorFilter(handler,(MockSettingsImpl)withSettings());
   Method method=new InvocationBuilder().toInvocation().getMethod();
   MockitoMethod mockitoMethod=filter.createMockitoMethod(method);
   assertThat(mockitoMethod,instanceOf(DelegatingMethod.class));
