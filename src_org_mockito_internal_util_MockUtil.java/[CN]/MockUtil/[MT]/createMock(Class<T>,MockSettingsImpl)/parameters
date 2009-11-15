@@ -1,3 +1,2 @@
 Class<T> classToMock
-MockingProgress progress
 MockSettingsImpl settings

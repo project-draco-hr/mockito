@@ -1,6 +1,0 @@
-{
-  this.mockingProgress=mockingProgress;
-  this.matchersBinder=matchersBinder;
-  this.mockSettings=mockSettings;
-  this.mockitoStubber=new MockitoStubber(mockingProgress);
-}

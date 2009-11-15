@@ -1,3 +1,0 @@
-{
-  this(oldMockHandler.mockingProgress,oldMockHandler.matchersBinder,oldMockHandler.mockSettings);
-}

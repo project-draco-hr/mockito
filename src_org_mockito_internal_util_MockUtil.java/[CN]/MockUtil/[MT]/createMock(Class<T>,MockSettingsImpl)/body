@@ -3,7 +3,7 @@
   creationValidator.validateExtraInterfaces(classToMock,settings.getExtraInterfaces());
   creationValidator.validateMockedType(classToMock,settings.getSpiedInstance());
   settings.initiateMockName(classToMock);
-  MockHandler<T> mockHandler=new MockHandler<T>(progress,new MatchersBinder(),settings);
+  MockHandler<T> mockHandler=new MockHandler<T>(settings);
   MethodInterceptorFilter filter=new MethodInterceptorFilter(mockHandler,settings);
   Class<?>[] interfaces=settings.getExtraInterfaces();
   Class<?>[] ancillaryTypes=interfaces == null ? new Class<?>[0] : interfaces;
