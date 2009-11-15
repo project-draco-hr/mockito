@@ -1,0 +1,6 @@
+{
+  given(mock.giveMeSomeString("different arg")).willReturn("foo");
+  mock.giveMeSomeString("arg");
+  String log=Mockito.debug().printInvocations(mock,mockTwo);
+  assertContainsIgnoringCase("unused",log);
+}

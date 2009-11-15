@@ -1,0 +1,15 @@
+{
+  int subLength=sub.length();
+  if (string.length() < subLength) {
+    return false;
+  }
+  int i=0;
+  while (i + subLength <= string.length()) {
+    boolean temp=string.substring(i,i + subLength).equalsIgnoreCase(sub);
+    if (temp) {
+      return true;
+    }
+    i++;
+  }
+  return false;
+}
