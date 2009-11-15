@@ -4,5 +4,4 @@
   this.matchersBinder=matchersBinder;
   this.mockSettings=mockSettings;
   this.mockitoStubber=new MockitoStubber(mockingProgress);
-  this.registeredInvocations=new RegisteredInvocations();
 }

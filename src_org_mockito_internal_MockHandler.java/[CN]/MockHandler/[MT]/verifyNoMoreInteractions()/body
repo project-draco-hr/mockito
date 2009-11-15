@@ -1,4 +1,4 @@
 {
-  VerificationDataImpl data=new VerificationDataImpl(registeredInvocations.getAll(),null);
+  VerificationDataImpl data=new VerificationDataImpl(mockitoStubber.getInvocations(),null);
   VerificationModeFactory.noMoreInteractions().verify(data);
 }

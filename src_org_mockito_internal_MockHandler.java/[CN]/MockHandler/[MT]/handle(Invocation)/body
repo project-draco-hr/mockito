@@ -8,13 +8,12 @@
   InvocationMatcher invocationMatcher=matchersBinder.bindMatchers(mockingProgress.getArgumentMatcherStorage(),invocation);
   mockingProgress.validateState();
   if (verificationMode != null) {
-    VerificationDataImpl data=new VerificationDataImpl(registeredInvocations.getAll(),invocationMatcher);
+    VerificationDataImpl data=new VerificationDataImpl(mockitoStubber.getInvocations(),invocationMatcher);
     verificationMode.verify(data);
     return null;
   }
-  registeredInvocations.add(invocationMatcher.getInvocation());
   mockitoStubber.setInvocationForPotentialStubbing(invocationMatcher);
-  OngoingStubbingImpl<T> ongoingStubbing=new OngoingStubbingImpl<T>(mockitoStubber,registeredInvocations);
+  OngoingStubbingImpl<T> ongoingStubbing=new OngoingStubbingImpl<T>(mockitoStubber,mockitoStubber.getRegisteredInvocations());
   mockingProgress.reportOngoingStubbing(ongoingStubbing);
   StubbedInvocationMatcher stubbedInvocation=mockitoStubber.findAnswerFor(invocation);
   if (!invocation.isVoid() && stubbedInvocation == null) {
@@ -27,7 +26,7 @@
   }
  else {
     Object ret=mockSettings.getDefaultAnswer().answer(invocation);
-    mockitoStubber.setInvocationForPotentialStubbing(invocationMatcher);
+    mockitoStubber.resetInvocationForPotentialStubbing(invocationMatcher);
     return ret;
   }
 }
