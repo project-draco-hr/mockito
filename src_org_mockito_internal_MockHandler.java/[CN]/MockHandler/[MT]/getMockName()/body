@@ -1,3 +1,3 @@
 {
-  return mockName;
+  return mockSettings.getMockName();
 }

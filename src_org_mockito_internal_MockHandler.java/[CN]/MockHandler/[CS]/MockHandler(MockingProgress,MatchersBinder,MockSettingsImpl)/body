@@ -1,5 +1,4 @@
 {
-  this.mockName=mockName;
   this.mockingProgress=mockingProgress;
   this.matchersBinder=matchersBinder;
   this.mockSettings=mockSettings;

@@ -1,0 +1,3 @@
+{
+  mockName=new MockName(name,classToMock);
+}
