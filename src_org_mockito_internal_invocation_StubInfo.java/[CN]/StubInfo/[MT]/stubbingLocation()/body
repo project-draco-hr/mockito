@@ -1,3 +1,0 @@
-{
-  return stubbing.getLocation().toString();
-}

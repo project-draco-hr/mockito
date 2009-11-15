@@ -1,0 +1,3 @@
+{
+  return stubbedAt.getLocation().toString();
+}
