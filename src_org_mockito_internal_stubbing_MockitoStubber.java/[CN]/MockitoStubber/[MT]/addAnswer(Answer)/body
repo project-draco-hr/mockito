@@ -1,3 +1,4 @@
 {
+  registeredInvocations.removeLast();
   addAnswer(answer,false);
 }
