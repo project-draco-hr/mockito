@@ -1,3 +1,4 @@
 {
-  invocations.remove(invocations.size() - 1);
+  int last=invocations.size() - 1;
+  invocations.remove(last);
 }

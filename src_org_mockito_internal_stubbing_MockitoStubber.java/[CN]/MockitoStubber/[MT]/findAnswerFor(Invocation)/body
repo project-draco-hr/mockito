@@ -1,6 +1,8 @@
 {
   for (  StubbedInvocationMatcher s : stubbed) {
     if (s.matches(invocation)) {
+      invocation.markStubbed(new StubInfo(s.getInvocation()));
+      s.markStubUsed(invocation);
       return s;
     }
   }
