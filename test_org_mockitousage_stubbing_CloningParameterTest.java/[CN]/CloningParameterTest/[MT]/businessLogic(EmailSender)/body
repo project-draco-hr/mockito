@@ -1,0 +1,5 @@
+{
+  Person person=new Person("Wes");
+  emailSender.sendEmail(1,person);
+  person.emailSent();
+}

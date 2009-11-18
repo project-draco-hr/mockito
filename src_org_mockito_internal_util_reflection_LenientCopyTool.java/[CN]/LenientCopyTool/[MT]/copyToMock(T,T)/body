@@ -1,2 +1,3 @@
 {
+  copy(from,mock,from.getClass(),mock.getClass().getSuperclass());
 }
