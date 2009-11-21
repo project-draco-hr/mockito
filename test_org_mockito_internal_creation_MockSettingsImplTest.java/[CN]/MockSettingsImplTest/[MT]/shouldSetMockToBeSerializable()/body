@@ -1,4 +1,4 @@
 {
   mockSettingsImpl.serializable();
-  Assertions.assertThat(mockSettingsImpl.getExtraInterfaces()).contains(Serializable.class);
+  assertTrue(mockSettingsImpl.isSerializable());
 }

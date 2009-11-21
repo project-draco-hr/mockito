@@ -1,0 +1,4 @@
+{
+  Class<?>[] items=utils.concat(new Class[0],List.class);
+  Assertions.assertThat(items).containsOnly(List.class);
+}

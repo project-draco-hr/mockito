@@ -1,3 +1,4 @@
 {
-  return this.extraInterfaces(Serializable.class);
+  this.serializable=true;
+  return this;
 }
