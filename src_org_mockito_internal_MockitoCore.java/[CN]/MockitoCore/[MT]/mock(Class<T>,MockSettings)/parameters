@@ -1,3 +1,2 @@
 Class<T> classToMock
 MockSettings mockSettings
-boolean shouldResetOngoingStubbing

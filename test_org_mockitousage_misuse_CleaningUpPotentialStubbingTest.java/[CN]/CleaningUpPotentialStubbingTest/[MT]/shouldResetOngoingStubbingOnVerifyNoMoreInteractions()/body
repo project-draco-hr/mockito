@@ -1,6 +1,0 @@
-{
-  mock.booleanReturningMethod();
-  IMethods mock2=mock(IMethods.class);
-  verifyNoMoreInteractions(mock2);
-  assertOngoingStubbingIsReset();
-}

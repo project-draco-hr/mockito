@@ -1,4 +1,5 @@
 {
+  reset(mock);
   try {
     when("").thenReturn("");
     fail();

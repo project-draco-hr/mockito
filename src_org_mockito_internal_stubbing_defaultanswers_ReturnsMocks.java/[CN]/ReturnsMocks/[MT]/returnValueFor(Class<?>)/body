@@ -2,5 +2,5 @@
   if (!ClassImposterizer.INSTANCE.canImposterise(clazz)) {
     return null;
   }
-  return mockitoCore.mock(clazz,new MockSettingsImpl().defaultAnswer(this),false);
+  return mockitoCore.mock(clazz,new MockSettingsImpl().defaultAnswer(this));
 }
