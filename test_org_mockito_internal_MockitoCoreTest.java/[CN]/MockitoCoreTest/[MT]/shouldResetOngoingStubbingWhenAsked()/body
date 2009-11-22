@@ -1,0 +1,4 @@
+{
+  core.mock(Object.class,new MockSettingsImpl(),true);
+  assertNull(mockingProgress.pullOngoingStubbing());
+}
