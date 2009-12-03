@@ -1,7 +1,7 @@
 {
-  Object one=new String("1243");
-  Object two=new String("1243");
-  Object three=new String("1243");
+  Object one="1243";
+  Object two="1243";
+  Object three="1243";
   assertNotSame(one,two);
   assertEquals(one,two);
   assertEquals(two,three);
