@@ -1,0 +1,4 @@
+{
+  when(mock.foo(anyVararg())).thenReturn(-1);
+  assertEquals(-1,mock.foo());
+}

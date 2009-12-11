@@ -1,4 +1,0 @@
-{
-  InvocationMatcher m=new InvocationMatcher(new InvocationBuilder().args("foo").toInvocation(),null);
-  assertThat(m.getMatchers(),hasExactlyInOrder(new Equals("foo")));
-}
