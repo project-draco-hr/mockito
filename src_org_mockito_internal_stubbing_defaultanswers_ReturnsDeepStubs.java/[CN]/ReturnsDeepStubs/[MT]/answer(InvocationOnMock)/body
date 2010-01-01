@@ -1,0 +1,5 @@
+{
+  Class<?> clz=invocation.getMethod().getReturnType();
+  if (clz.isPrimitive())   return null;
+  return getMock(invocation);
+}

@@ -1,0 +1,13 @@
+{
+  Class<?> clz=invocation.getMethod().getReturnType();
+  final Object mock=Mockito.mock(clz,this);
+  MockHandlerInterface<Object> handler=new MockUtil().getMockHandler(invocation.getMock());
+  InvocationContainerImpl container=(InvocationContainerImpl)handler.getInvocationContainer();
+  container.addAnswer(new Answer<Object>(){
+    public Object answer(    InvocationOnMock invocation) throws Throwable {
+      return mock;
+    }
+  }
+,false);
+  return mock;
+}
