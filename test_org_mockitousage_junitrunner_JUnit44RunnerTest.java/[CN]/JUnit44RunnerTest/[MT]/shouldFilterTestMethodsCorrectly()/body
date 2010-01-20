@@ -1,0 +1,5 @@
+{
+  MockitoJUnit44Runner runner=new MockitoJUnit44Runner(this.getClass());
+  runner.filter(methodNameContains("shouldInitMocksUsingRunner"));
+  assertEquals(1,runner.testCount());
+}

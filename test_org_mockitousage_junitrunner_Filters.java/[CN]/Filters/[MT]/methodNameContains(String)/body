@@ -1,0 +1,11 @@
+{
+  return new Filter(){
+    @Override public boolean shouldRun(    Description description){
+      return description.getDisplayName().contains(substring);
+    }
+    @Override public String describe(){
+      return null;
+    }
+  }
+;
+}
