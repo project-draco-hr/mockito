@@ -1,6 +1,6 @@
 {
   OutputStream out=new ByteArrayOutputStream();
-  SocketFactory socketFactory=mock(SocketFactory.class,RETURNS_DEEP_STUBS);
+  SocketFactory socketFactory=mock(SocketFactory.class,RETURNS_DEEP_MOCKS);
   when(socketFactory.createSocket().getOutputStream()).thenReturn(out);
   assertSame(out,socketFactory.createSocket().getOutputStream());
 }

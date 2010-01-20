@@ -1,6 +1,6 @@
 {
   int a=32;
-  SocketFactory sf=mock(SocketFactory.class,RETURNS_DEEP_STUBS);
+  SocketFactory sf=mock(SocketFactory.class,RETURNS_DEEP_MOCKS);
   when(sf.createSocket().getPort()).thenReturn(a);
   assertEquals(a,sf.createSocket().getPort());
 }
