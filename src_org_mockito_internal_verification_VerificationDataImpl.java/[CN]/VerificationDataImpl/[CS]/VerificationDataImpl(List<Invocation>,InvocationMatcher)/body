@@ -1,4 +1,5 @@
 {
   this.allInvocations=allInvocations;
   this.wanted=wanted;
+  this.assertWantedIsVerifiable();
 }

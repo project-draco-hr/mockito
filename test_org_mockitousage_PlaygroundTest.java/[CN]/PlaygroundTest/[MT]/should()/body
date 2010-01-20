@@ -1,5 +1,0 @@
-{
-  Boo boo=mock(Boo.class);
-  boo.toString();
-  verify(boo).toString();
-}

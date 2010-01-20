@@ -1,5 +1,0 @@
-{
-  verify(mock).toString();
-  verify(mock).hashCode();
-  verify(mock).equals(null);
-}

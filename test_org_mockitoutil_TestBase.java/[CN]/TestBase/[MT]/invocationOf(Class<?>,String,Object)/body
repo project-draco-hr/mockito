@@ -1,3 +1,7 @@
 {
-  return new Invocation(new Object(),new SerializableMethod(type.getMethod(methodName,new Class[0])),args,1,null);
+  Class[] types=new Class[args.length];
+  for (int i=0; i < args.length; i++) {
+    types[i]=args[i].getClass();
+  }
+  return new Invocation(new Object(),new SerializableMethod(type.getMethod(methodName,types)),args,1,null);
 }

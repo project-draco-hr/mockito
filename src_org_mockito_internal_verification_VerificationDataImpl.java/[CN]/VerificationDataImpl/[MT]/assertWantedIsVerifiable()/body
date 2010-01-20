@@ -1,0 +1,12 @@
+{
+  if (wanted == null) {
+    return;
+  }
+  ObjectMethodsGuru o=new ObjectMethodsGuru();
+  if (o.isToString(wanted.getMethod())) {
+    new Reporter().cannotVerifyToString();
+  }
+  if (o.isEqualsMethod(wanted.getMethod())) {
+    new Reporter().cannotVerifyEqualsOrHashCode();
+  }
+}

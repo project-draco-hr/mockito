@@ -1,0 +1,4 @@
+{
+  InOrder inOrder=inOrder(mock);
+  inOrder.verify(mock).equals(null);
+}

@@ -1,0 +1,4 @@
+{
+  VerificationDataImpl v=new VerificationDataImpl(null,new InvocationBuilder().toInvocationMatcher());
+  v.assertWantedIsVerifiable();
+}

@@ -1,0 +1,3 @@
+{
+  throw new MockitoException(join("Mockito cannot verify toString()","toString() is too often used behind of scenes  (i.e. during String concatenation, in IDE debugging views). " + "Verifying it may give inconsistent or hard to understand results. " + "Not to mention that verifying toString() most likely hints awkward design (hard to explain in a short exception message. Trust me...)","However, it is possible to stub toString(). Stubbing toString() smells a bit funny but there are rare, legitimate use cases."));
+}
