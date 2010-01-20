@@ -1,0 +1,9 @@
+{
+  try {
+    verify(mock).toString();
+    fail();
+  }
+ catch (  MockitoException e) {
+    assertContains("cannot verify",e.getMessage());
+  }
+}

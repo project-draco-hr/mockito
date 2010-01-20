@@ -1,4 +1,0 @@
-{
-  VerificationDataImpl v=new VerificationDataImpl(new LinkedList<Invocation>(),null);
-  v.assertWantedIsVerifiable();
-}

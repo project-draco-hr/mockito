@@ -1,3 +1,0 @@
-{
-  throw new MockitoException(join("Mockito cannot verify equals() and hashCode()","Mockito defines and depends upon a specific implementation of these methods. Redefining them might break Mockito. Not to mention that verifying equals() or hashCode() most likely hints awkward design (hard to explain in a short exception message. Trust me...)"));
-}

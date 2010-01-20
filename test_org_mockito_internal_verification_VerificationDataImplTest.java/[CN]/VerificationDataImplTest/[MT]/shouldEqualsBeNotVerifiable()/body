@@ -1,9 +1,0 @@
-{
-  InvocationMatcher equals=new InvocationMatcher(invocationOf(Object.class,"equals",new Object()));
-  try {
-    new VerificationDataImpl(null,equals);
-    fail();
-  }
- catch (  MockitoException e) {
-  }
-}
