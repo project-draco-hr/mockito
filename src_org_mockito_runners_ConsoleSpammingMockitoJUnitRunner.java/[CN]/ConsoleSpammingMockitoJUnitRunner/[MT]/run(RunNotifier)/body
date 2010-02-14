@@ -6,10 +6,7 @@
     @Override public void testFailure(    Failure failure) throws Exception {
       List<Invocation> unused=new UnusedStubsFinder().find(createdMocks);
       List<Invocation> all=new AllInvocationsFinder().find(createdMocks);
-      List<InvocationMatcher> allMatchers=new LinkedList<InvocationMatcher>();
-      for (      Invocation i : all) {
-        allMatchers.add(new InvocationMatcher(i));
-      }
+      List<InvocationMatcher> allMatchers=InvocationMatcher.createFrom(all);
       new WarningsPrinterImpl(unused,allMatchers,false).print(logger);
     }
   }

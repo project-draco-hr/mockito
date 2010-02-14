@@ -7,10 +7,7 @@
       Throwable throwable=(Throwable)Whitebox.getInternalState(failure,"fThrownException");
       List<Invocation> unused=new UnusedStubsFinder().find(createdMocks);
       List<Invocation> all=new AllInvocationsFinder().find(createdMocks);
-      List<InvocationMatcher> allMatchers=new LinkedList<InvocationMatcher>();
-      for (      Invocation i : all) {
-        allMatchers.add(new InvocationMatcher(i));
-      }
+      List<InvocationMatcher> allMatchers=InvocationMatcher.createFrom(all);
       String warnings=new WarningsPrinterImpl(unused,allMatchers,false).print();
       String newMessage=throwable.getMessage();
       newMessage+=warnings + "\n*** The actual failure is because of: ***\n";
