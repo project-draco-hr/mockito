@@ -1,7 +1,6 @@
 {
   String out="";
-  AllInvocationsFinder finder=new AllInvocationsFinder();
-  List<Invocation> invocations=finder.getAllInvocations(asList(mocks));
+  List<Invocation> invocations=allInvocationsFinder.find(asList(mocks));
   out+=line("********************************");
   out+=line("*** Mockito interactions log ***");
   out+=line("********************************");
@@ -12,14 +11,13 @@
       out+=line(" stubbed: " + i.stubInfo().stubbedAt());
     }
   }
-  invocations=finder.getAllUnusedStubs(asList(mocks));
+  invocations=unusedStubsFinder.find(asList(mocks));
   if (invocations.isEmpty()) {
     return print(out);
   }
   out+=line("********************************");
   out+=line("***       Unused stubs       ***");
   out+=line("********************************");
-  invocations=finder.getAllUnusedStubs(asList(mocks));
   for (  Invocation i : invocations) {
     out+=line(i.toString());
     out+=line(" stubbed: " + i.getLocation());
