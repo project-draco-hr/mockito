@@ -1,0 +1,6 @@
+{
+  RuntimeException ex=new RuntimeException("foo");
+  Failure failure=new Failure(Description.EMPTY,ex);
+  hacker.appendWarnings(failure,"");
+  assertEquals(ex,failure.getException());
+}

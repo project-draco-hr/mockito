@@ -1,4 +1,7 @@
 {
+  if (isEmpty(warnings)) {
+    return;
+  }
   Throwable throwable=(Throwable)Whitebox.getInternalState(failure,"fThrownException");
   String newMessage="contains both: actual test failure *and* Mockito warnings.\n" + warnings + "\n *** The actual failure is because of: ***\n";
   ExceptionIncludingMockitoWarnings e=new ExceptionIncludingMockitoWarnings(newMessage,throwable);
