@@ -1,12 +1,7 @@
 {
   MockingProgress progress=new ThreadSafeMockingProgress();
   final List createdMocks=new LinkedList();
-  progress.setListener(new MockingStartedListener(){
-    public void mockingStarted(    Object mock,    Class classToMock,    MockSettings mockSettings){
-      createdMocks.add(mock);
-    }
-  }
-);
+  progress.setListener(new CollectCreatedMocks(createdMocks));
   RunListener listener=new RunListener(){
     @Override public void testFailure(    final Failure failure) throws Exception {
       Throwable throwable=(Throwable)Whitebox.getInternalState(failure,"fThrownException");
