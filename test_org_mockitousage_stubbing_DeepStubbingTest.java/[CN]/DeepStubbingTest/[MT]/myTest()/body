@@ -1,5 +1,5 @@
 {
-  SocketFactory sf=mock(SocketFactory.class,RETURNS_DEEP_MOCKS);
+  SocketFactory sf=mock(SocketFactory.class,RETURNS_DEEP_STUBS);
   when(sf.createSocket(anyString(),eq(80))).thenReturn(null);
   sf.createSocket("what",80);
 }

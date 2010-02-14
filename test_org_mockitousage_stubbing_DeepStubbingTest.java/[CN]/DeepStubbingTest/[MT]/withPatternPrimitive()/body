@@ -1,6 +1,6 @@
 {
   int a=12, b=23, c=34;
-  SocketFactory sf=mock(SocketFactory.class,RETURNS_DEEP_MOCKS);
+  SocketFactory sf=mock(SocketFactory.class,RETURNS_DEEP_STUBS);
   when(sf.createSocket(eq("stackoverflow.com"),eq(80)).getPort()).thenReturn(a);
   when(sf.createSocket(eq("google.com"),anyInt()).getPort()).thenReturn(b);
   when(sf.createSocket(eq("stackoverflow.com"),eq(8080)).getPort()).thenReturn(c);
