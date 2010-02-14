@@ -1,10 +1,5 @@
 {
-  final StringBuilder sb=new StringBuilder();
-  this.print(new MockitoLogger(){
-    public void log(    Object what){
-      sb.append(what);
-    }
-  }
-);
-  return sb.toString();
+  SimpleMockitoLogger logger=new SimpleMockitoLogger();
+  this.print(logger);
+  return logger.getLoggedInfo();
 }
