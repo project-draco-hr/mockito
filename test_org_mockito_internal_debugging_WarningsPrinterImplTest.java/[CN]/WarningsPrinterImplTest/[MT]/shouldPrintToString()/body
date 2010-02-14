@@ -1,0 +1,6 @@
+{
+  WarningsPrinterImpl printer=spy(new WarningsPrinterImpl(true,finder));
+  String out=printer.print();
+  verify(printer).print((MockitoLogger)notNull());
+  assertNotNull(out);
+}
