@@ -1,4 +1,4 @@
 {
-  this.unusedStubs=new LinkedList(unusedStubs);
-  this.allInvocations=new LinkedList(allInvocations);
+  this.baseUnusedStubs=unusedStubs;
+  this.baseAllInvocations=allInvocations;
 }

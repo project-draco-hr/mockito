@@ -1,4 +1,6 @@
 {
+  List<Invocation> unusedStubs=new LinkedList(this.baseUnusedStubs);
+  List<InvocationMatcher> allInvocations=new LinkedList(this.baseAllInvocations);
   Iterator<Invocation> unusedIterator=unusedStubs.iterator();
   while (unusedIterator.hasNext()) {
     Invocation unused=unusedIterator.next();
