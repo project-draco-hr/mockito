@@ -7,8 +7,8 @@
       Throwable throwable=(Throwable)Whitebox.getInternalState(failure,"fThrownException");
       List<Invocation> unused=new UnusedStubsFinder().find(createdMocks);
       List<Invocation> all=new AllInvocationsFinder().find(createdMocks);
-      List<InvocationMatcher> allMatchers=InvocationMatcher.createFrom(all);
-      String warnings=new WarningsPrinterImpl(unused,allMatchers,false).print();
+      List<InvocationMatcher> allInvocationMatchers=InvocationMatcher.createFrom(all);
+      String warnings=new WarningsPrinterImpl(unused,allInvocationMatchers,false).print();
       String newMessage=throwable.getMessage();
       newMessage+=warnings + "\n*** The actual failure is because of: ***\n";
       newMessage="contains both: actual test failure *and* Mockito warnings.\n" + warnings + "\n *** The actual failure is because of: ***\n";
