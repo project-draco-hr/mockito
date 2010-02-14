@@ -1,0 +1,10 @@
+{
+  final StringBuilder sb=new StringBuilder();
+  this.print(new MockitoLogger(){
+    public void log(    Object what){
+      sb.append(what);
+    }
+  }
+);
+  return sb.toString();
+}

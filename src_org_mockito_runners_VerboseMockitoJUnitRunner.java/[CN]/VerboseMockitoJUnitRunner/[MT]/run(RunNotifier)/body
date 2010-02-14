@@ -1,7 +1,31 @@
 {
   MockingProgress progress=new ThreadSafeMockingProgress();
-  DebuggingInfo debuggingInfo=progress.getDebuggingInfo();
-  beforeRun(notifier,debuggingInfo);
+  final List createdMocks=new LinkedList();
+  progress.setListener(new MockingStartedListener(){
+    public void mockingStarted(    Object mock,    Class classToMock,    MockSettings mockSettings){
+      createdMocks.add(mock);
+    }
+  }
+);
+  RunListener listener=new RunListener(){
+    @Override public void testFailure(    final Failure failure) throws Exception {
+      Throwable throwable=(Throwable)Whitebox.getInternalState(failure,"fThrownException");
+      List<Invocation> unused=new UnusedStubsFinder().find(createdMocks);
+      List<Invocation> all=new AllInvocationsFinder().find(createdMocks);
+      List<InvocationMatcher> allMatchers=new LinkedList<InvocationMatcher>();
+      for (      Invocation i : all) {
+        allMatchers.add(new InvocationMatcher(i));
+      }
+      String warnings=new WarningsPrinterImpl(unused,allMatchers,false).print();
+      String newMessage=throwable.getMessage();
+      newMessage+=warnings + "\n*** The actual failure is because of: ***\n";
+      newMessage="contains both: actual test failure *and* Mockito warnings.\n" + warnings + "\n *** The actual failure is because of: ***\n";
+      ExceptionIncludingMockitoWarnings e=new ExceptionIncludingMockitoWarnings(newMessage,throwable);
+      e.setStackTrace(throwable.getStackTrace());
+      Whitebox.setInternalState(failure,"fThrownException",e);
+    }
+  }
+;
+  notifier.addFirstListener(listener);
   runner.run(notifier);
-  afterRun(debuggingInfo);
 }

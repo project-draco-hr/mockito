@@ -1,0 +1,4 @@
+{
+  String ret=mock.simpleMethod(2);
+  assertEquals("foo",ret);
+}

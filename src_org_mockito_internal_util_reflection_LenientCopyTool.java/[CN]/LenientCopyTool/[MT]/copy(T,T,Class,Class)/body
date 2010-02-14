@@ -1,2 +1,6 @@
 {
+  while (fromClazz != Object.class) {
+    copyValues(from,to,fromClazz);
+    fromClazz=fromClazz.getSuperclass();
+  }
 }
