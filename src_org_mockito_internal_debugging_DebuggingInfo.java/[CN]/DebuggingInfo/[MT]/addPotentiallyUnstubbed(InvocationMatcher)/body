@@ -1,6 +1,0 @@
-{
-  if (!collectingData) {
-    return;
-  }
-  unstubbedInvocations.add(invocationMatcher);
-}

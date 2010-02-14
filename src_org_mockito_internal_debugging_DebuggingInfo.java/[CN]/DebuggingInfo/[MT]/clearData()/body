@@ -1,5 +1,0 @@
-{
-  collectingData=false;
-  unstubbedInvocations.clear();
-  unusedStubs.clear();
-}

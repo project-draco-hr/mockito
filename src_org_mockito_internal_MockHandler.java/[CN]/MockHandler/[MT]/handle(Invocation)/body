@@ -16,11 +16,7 @@
   OngoingStubbingImpl<T> ongoingStubbing=new OngoingStubbingImpl<T>(invocationContainerImpl);
   mockingProgress.reportOngoingStubbing(ongoingStubbing);
   StubbedInvocationMatcher stubbedInvocation=invocationContainerImpl.findAnswerFor(invocation);
-  if (!invocation.isVoid() && stubbedInvocation == null) {
-    mockingProgress.getDebuggingInfo().addPotentiallyUnstubbed(invocationMatcher);
-  }
   if (stubbedInvocation != null) {
-    mockingProgress.getDebuggingInfo().reportUsedStub(invocationMatcher);
     stubbedInvocation.captureArgumentsFrom(invocation);
     return stubbedInvocation.answer(invocation);
   }

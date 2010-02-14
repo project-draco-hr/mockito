@@ -1,9 +1,0 @@
-{
-  Iterator<Invocation> i=unusedStubs.iterator();
-  while (i.hasNext()) {
-    Invocation invocation=i.next();
-    if (invocationMatcher.matches(invocation)) {
-      i.remove();
-    }
-  }
-}

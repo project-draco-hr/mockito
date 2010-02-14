@@ -1,6 +1,0 @@
-{
-  when(mock.simpleMethod()).thenReturn("foo");
-  mock.differentMethod();
-  MockingProgress progress=new ThreadSafeMockingProgress();
-  assertFalse(progress.getDebuggingInfo().hasData());
-}
