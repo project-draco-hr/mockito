@@ -1,0 +1,4 @@
+{
+  person.getAddress().getStreet().getName();
+  verify(person.getAddress().getStreet()).getName();
+}

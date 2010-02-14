@@ -1,0 +1,5 @@
+{
+  if (!isTypeMockable(classToMock)) {
+    new Reporter().cannotMockFinalClass(classToMock);
+  }
+}

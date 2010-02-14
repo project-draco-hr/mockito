@@ -1,5 +1,0 @@
-{
-  if (!ClassImposterizer.INSTANCE.canImposterise(classToMock)) {
-    new Reporter().cannotMockFinalClass(classToMock);
-  }
-}

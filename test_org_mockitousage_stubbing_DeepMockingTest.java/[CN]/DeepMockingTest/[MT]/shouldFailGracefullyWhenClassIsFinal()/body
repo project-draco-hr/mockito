@@ -1,0 +1,5 @@
+{
+  FinalClass value=new FinalClass();
+  given(person.getFinalClass()).willReturn(value);
+  assertEquals(value,person.getFinalClass());
+}
