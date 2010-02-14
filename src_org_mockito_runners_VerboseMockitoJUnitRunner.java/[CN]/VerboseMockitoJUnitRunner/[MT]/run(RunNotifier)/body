@@ -6,11 +6,7 @@
     }
     @Override public void testFailure(    final Failure failure) throws Exception {
       String warnings=warningsCollector.getWarnings();
-      Throwable throwable=(Throwable)Whitebox.getInternalState(failure,"fThrownException");
-      String newMessage="contains both: actual test failure *and* Mockito warnings.\n" + warnings + "\n *** The actual failure is because of: ***\n";
-      ExceptionIncludingMockitoWarnings e=new ExceptionIncludingMockitoWarnings(newMessage,throwable);
-      e.setStackTrace(throwable.getStackTrace());
-      Whitebox.setInternalState(failure,"fThrownException",e);
+      new JUnitFailureHacker().appendWarnings(failure,warnings);
     }
   }
 ;
