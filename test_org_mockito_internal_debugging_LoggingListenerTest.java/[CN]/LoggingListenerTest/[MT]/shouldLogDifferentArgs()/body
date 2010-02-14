@@ -1,0 +1,5 @@
+{
+  LoggingListener listener=new LoggingListener(true,logger);
+  listener.foundStubCalledWithDifferentArgs(new InvocationBuilder().toInvocation(),new InvocationBuilder().toInvocationMatcher());
+  verify(logger).log(notNull());
+}

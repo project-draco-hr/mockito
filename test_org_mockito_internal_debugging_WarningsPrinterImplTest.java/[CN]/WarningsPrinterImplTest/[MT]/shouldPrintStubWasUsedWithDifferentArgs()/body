@@ -1,7 +1,0 @@
-{
-  Invocation stub=new InvocationBuilder().arg("foo").mock(mock).toInvocation();
-  InvocationMatcher wrongArg=new InvocationBuilder().arg("bar").mock(mock).toInvocationMatcher();
-  WarningsPrinterImpl p=new WarningsPrinterImpl(Arrays.<Invocation>asList(stub),Arrays.<InvocationMatcher>asList(wrongArg));
-  p.print(logger);
-  assertContains("different arg",logger.getLoggedInfo());
-}

@@ -1,3 +1,0 @@
-{
-  return "This stubbing was never used:   " + i.getLocation() + "\n";
-}

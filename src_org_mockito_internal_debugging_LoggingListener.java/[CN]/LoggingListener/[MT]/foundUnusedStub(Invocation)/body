@@ -1,0 +1,3 @@
+{
+  logger.log("This stubbing was never used:   " + unused.getLocation() + "\n");
+}

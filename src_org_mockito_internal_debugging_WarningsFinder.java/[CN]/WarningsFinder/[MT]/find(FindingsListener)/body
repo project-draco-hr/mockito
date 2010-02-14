@@ -18,6 +18,6 @@
     findingsListener.foundUnusedStub(i);
   }
   for (  InvocationMatcher i : allInvocations) {
-    findingsListener.foundUstubbed(i);
+    findingsListener.foundUnstubbed(i);
   }
 }

@@ -1,6 +1,7 @@
 {
-  Invocation unusedStub=new InvocationBuilder().simpleMethod().toInvocation();
-  WarningsPrinterImpl p=new WarningsPrinterImpl(asList(unusedStub),Arrays.<InvocationMatcher>asList());
-  p.print(logger);
-  assertContains("never used",logger.getLoggedInfo());
+  WarningsPrinterImpl printer=new WarningsPrinterImpl(true,finder);
+  printer.print(logger);
+  ArgumentCaptor<LoggingListener> arg=ArgumentCaptor.forClass(LoggingListener.class);
+  verify(finder).find(arg.capture());
+  assertEquals(true,arg.getValue().isWarnAboutUnstubbed());
 }

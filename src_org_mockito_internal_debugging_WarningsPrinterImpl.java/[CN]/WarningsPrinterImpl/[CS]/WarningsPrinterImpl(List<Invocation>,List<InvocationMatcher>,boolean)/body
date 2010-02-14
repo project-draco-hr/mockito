@@ -1,5 +1,3 @@
 {
-  this.allInvocations=allInvocations;
-  this.unusedStubs=unusedStubs;
-  this.warnAboutUnstubbed=warnAboutUnstubbed;
+  this(warnAboutUnstubbed,new WarningsFinder(unusedStubs,allInvocations));
 }

@@ -1,0 +1,8 @@
+{
+  WarningsPrinterImpl printer=new WarningsPrinterImpl(false,finder);
+  printer.print(logger);
+  ArgumentCaptor<LoggingListener> arg=ArgumentCaptor.forClass(LoggingListener.class);
+  verify(finder).find(arg.capture());
+  assertEquals(logger,arg.getValue().getLogger());
+  assertEquals(false,arg.getValue().isWarnAboutUnstubbed());
+}

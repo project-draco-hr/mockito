@@ -1,17 +1,3 @@
 {
-  WarningsFinder finder=new WarningsFinder(unusedStubs,allInvocations);
-  finder.find(new FindingsListener(){
-    public void foundStubCalledWithDifferentArgs(    Invocation unused,    InvocationMatcher unstubbed){
-      logger.log(stubbedMethodCalledWithDifferentArguments(unused,unstubbed));
-    }
-    public void foundUnusedStub(    Invocation unused){
-      logger.log(thisStubWasNotUsed(unused));
-    }
-    public void foundUstubbed(    InvocationMatcher unstubbed){
-      if (warnAboutUnstubbed) {
-        logger.log(thisMethodWasNotStubbed(unstubbed));
-      }
-    }
-  }
-);
+  finder.find(new LoggingListener(warnAboutUnstubbed,logger));
 }
