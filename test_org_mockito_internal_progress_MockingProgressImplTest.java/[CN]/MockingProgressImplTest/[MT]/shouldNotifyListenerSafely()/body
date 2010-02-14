@@ -1,0 +1,4 @@
+{
+  mockingProgress.setListener(null);
+  mockingProgress.mockingStarted(null,null,null);
+}

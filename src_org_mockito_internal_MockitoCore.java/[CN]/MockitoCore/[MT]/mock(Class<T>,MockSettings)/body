@@ -1,4 +1,5 @@
 {
-  mockingProgress.validateState();
-  return mockUtil.createMock(classToMock,(MockSettingsImpl)mockSettings);
+  T mock=mockUtil.createMock(classToMock,(MockSettingsImpl)mockSettings);
+  mockingProgress.mockingStarted(mock,classToMock,mockSettings);
+  return mock;
 }

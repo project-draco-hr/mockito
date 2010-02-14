@@ -1,7 +1,24 @@
 {
   MockingProgress progress=new ThreadSafeMockingProgress();
-  DebuggingInfo debuggingInfo=progress.getDebuggingInfo();
-  beforeRun(notifier,debuggingInfo);
+  final List createdMocks=new LinkedList();
+  progress.setListener(new MockingStartedListener(){
+    public void mockingStarted(    Object mock,    Class classToMock,    MockSettings mockSettings){
+      createdMocks.add(mock);
+    }
+  }
+);
+  RunListener listener=new RunListener(){
+    @Override public void testFailure(    Failure failure) throws Exception {
+      List<Invocation> unused=new UnusedStubsFinder().find(createdMocks);
+      List<Invocation> all=new AllInvocationsFinder().find(createdMocks);
+      List<InvocationMatcher> allMatchers=new LinkedList<InvocationMatcher>();
+      for (      Invocation i : all) {
+        allMatchers.add(new InvocationMatcher(i));
+      }
+      new WarningsPrinterImpl(unused,allMatchers,false).print(logger);
+    }
+  }
+;
+  notifier.addListener(listener);
   runner.run(notifier);
-  afterRun(debuggingInfo);
 }
