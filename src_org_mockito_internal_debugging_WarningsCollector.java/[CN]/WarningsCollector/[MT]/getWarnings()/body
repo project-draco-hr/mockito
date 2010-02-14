@@ -1,0 +1,7 @@
+{
+  List<Invocation> unused=new UnusedStubsFinder().find(createdMocks);
+  List<Invocation> all=new AllInvocationsFinder().find(createdMocks);
+  List<InvocationMatcher> allInvocationMatchers=InvocationMatcher.createFrom(all);
+  String warnings=new WarningsPrinterImpl(unused,allInvocationMatchers,false).print();
+  return warnings;
+}

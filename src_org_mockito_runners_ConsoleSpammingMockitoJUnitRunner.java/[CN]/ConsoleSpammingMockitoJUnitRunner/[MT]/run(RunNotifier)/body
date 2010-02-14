@@ -1,13 +1,11 @@
 {
-  MockingProgress progress=new ThreadSafeMockingProgress();
-  final List createdMocks=new LinkedList();
-  progress.setListener(new CollectCreatedMocks(createdMocks));
   RunListener listener=new RunListener(){
+    WarningsCollector warningsCollector;
+    @Override public void testStarted(    Description description) throws Exception {
+      warningsCollector=new WarningsCollector();
+    }
     @Override public void testFailure(    Failure failure) throws Exception {
-      List<Invocation> unused=new UnusedStubsFinder().find(createdMocks);
-      List<Invocation> all=new AllInvocationsFinder().find(createdMocks);
-      List<InvocationMatcher> allMatchers=InvocationMatcher.createFrom(all);
-      new WarningsPrinterImpl(unused,allMatchers,false).print(logger);
+      logger.log(warningsCollector.getWarnings());
     }
   }
 ;
