@@ -4,6 +4,7 @@
     fail();
   }
  catch (  MockitoException e) {
-    assertEquals("Cannot have more than one Mockito annotation on field. For info how to use annotations see examples in javadoc for MockitoAnnotations class.",e.getMessage());
+    assertContains("missingGenericsField",e.getMessage());
+    assertContains("multiple Mockito annotations",e.getMessage());
   }
 }
