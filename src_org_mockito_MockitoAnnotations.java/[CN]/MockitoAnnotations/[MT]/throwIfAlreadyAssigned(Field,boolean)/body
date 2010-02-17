@@ -1,0 +1,5 @@
+{
+  if (alreadyAssigned) {
+    throw new MockitoException("You cannot have more than one Mockito annotation on a field!\n" + "The field '" + field.getName() + "' has multiple Mockito annotations.\n"+ "For info how to use annotations see examples in javadoc for MockitoAnnotations class.");
+  }
+}

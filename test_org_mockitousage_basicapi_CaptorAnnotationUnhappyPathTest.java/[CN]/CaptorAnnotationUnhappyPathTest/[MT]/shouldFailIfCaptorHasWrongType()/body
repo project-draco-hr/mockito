@@ -1,0 +1,10 @@
+{
+  try {
+    MockitoAnnotations.initMocks(this);
+    fail();
+  }
+ catch (  MockitoException e) {
+    assertContains("notACaptorField",e.getMessage());
+    assertContains("wrong type",e.getMessage());
+  }
+}
