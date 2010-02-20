@@ -1,0 +1,11 @@
+{
+  Class<?> clazz=testClass.getClass();
+  Set<Field> mockDependents=new HashSet<Field>();
+  Set<Object> mocks=new HashSet<Object>();
+  while (clazz != Object.class) {
+    mockDependents.addAll(scanForInjection(testClass,clazz));
+    mocks.addAll(scanMocks(testClass,clazz));
+    clazz=clazz.getSuperclass();
+  }
+  new DefaultInjectionEngine().injectMocksOnFields(mockDependents,mocks,testClass);
+}

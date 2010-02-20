@@ -1,0 +1,10 @@
+{
+  AnnotationEngine customizedEngine=new DefaultAnnotationEngine(){
+  }
+;
+  ConfigurationAccess.getConfig().overrideAnnotationEngine(customizedEngine);
+  SimpleTest test=new SimpleTest();
+  MockitoAnnotations.initMocks(test);
+  assertNotNull(test.mock);
+  assertNull(test.tested.dependency);
+}

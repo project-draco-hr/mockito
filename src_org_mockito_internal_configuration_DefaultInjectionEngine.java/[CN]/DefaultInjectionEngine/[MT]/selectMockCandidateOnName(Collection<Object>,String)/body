@@ -1,0 +1,9 @@
+{
+  List<Object> mockNameMatches=new ArrayList<Object>();
+  for (  Object mock : mocks) {
+    if (fieldName.equals(mockUtil.getMockName(mock).toString())) {
+      mockNameMatches.add(mock);
+    }
+  }
+  return mockNameMatches;
+}

@@ -1,0 +1,4 @@
+{
+  MockitoAnnotations.initMocks(this);
+  assertSame(searchTree,otherBaseUnderTest.getSearchTree());
+}

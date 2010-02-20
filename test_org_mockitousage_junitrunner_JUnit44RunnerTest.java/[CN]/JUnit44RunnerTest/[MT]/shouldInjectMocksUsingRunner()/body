@@ -1,0 +1,3 @@
+{
+  assertSame(list,listDependent.getList());
+}

@@ -1,0 +1,5 @@
+{
+  MockitoAnnotations.initMocks(this);
+  assertSame(list,baseUnderTest.getAList());
+  assertSame(map,baseUnderTest.getAMap());
+}

@@ -1,0 +1,3 @@
+Set<Field> testClassFields
+Set<Object> mocks
+Object testClass

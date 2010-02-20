@@ -1,0 +1,4 @@
+{
+  assertNotNull(list);
+  assertSame(list,listDependent.getList());
+}

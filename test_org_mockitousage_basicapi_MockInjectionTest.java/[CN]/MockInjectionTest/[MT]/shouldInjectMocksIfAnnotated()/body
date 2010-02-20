@@ -1,0 +1,4 @@
+{
+  MockitoAnnotations.initMocks(this);
+  assertSame(list,superUnderTest.getAList());
+}

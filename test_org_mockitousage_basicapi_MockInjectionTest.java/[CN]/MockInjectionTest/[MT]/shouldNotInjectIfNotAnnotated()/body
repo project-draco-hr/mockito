@@ -1,0 +1,4 @@
+{
+  MockitoAnnotations.initMocks(this);
+  assertNull(superUnderTestWithoutInjection.getAList());
+}

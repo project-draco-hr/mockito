@@ -1,0 +1,21 @@
+{
+  for (  Field field : testClassFields) {
+    Object fieldInstance=null;
+    boolean wasAccessible=field.isAccessible();
+    field.setAccessible(true);
+    try {
+      fieldInstance=field.get(testClass);
+    }
+ catch (    IllegalAccessException e) {
+      throw new MockitoException("Problems injecting dependencies in " + field.getName(),e);
+    }
+ finally {
+      field.setAccessible(wasAccessible);
+    }
+    Class<?> fieldClass=fieldInstance.getClass();
+    while (fieldClass != Object.class) {
+      injectMockCandidate(fieldClass,mocks,fieldInstance);
+      fieldClass=fieldClass.getSuperclass();
+    }
+  }
+}

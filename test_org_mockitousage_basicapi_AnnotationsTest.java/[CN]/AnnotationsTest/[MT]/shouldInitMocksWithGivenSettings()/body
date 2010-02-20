@@ -1,0 +1,8 @@
+{
+  assertEquals("i have a name",namedAndReturningMocks.toString());
+  assertNotNull(namedAndReturningMocks.iMethodsReturningMethod());
+  assertEquals("returningDefaults",returningDefaults.toString());
+  assertEquals(0,returningDefaults.intReturningMethod());
+  assertTrue(hasExtraInterfaces instanceof List);
+  assertEquals(0,noExtraConfig.intReturningMethod());
+}

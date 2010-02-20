@@ -1,0 +1,9 @@
+{
+  List<Object> mockTypeMatches=new ArrayList<Object>();
+  for (  Object mock : mocks) {
+    if (fieldClass.isAssignableFrom(mock.getClass())) {
+      mockTypeMatches.add(mock);
+    }
+  }
+  return mockTypeMatches;
+}

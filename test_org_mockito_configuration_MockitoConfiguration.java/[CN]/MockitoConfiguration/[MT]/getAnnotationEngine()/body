@@ -1,5 +1,8 @@
 {
-  return new DefaultAnnotationEngine(){
+  if (this.overriddenEngine != null) {
+    return this.overriddenEngine;
+  }
+  return new InjectingAnnotationEngine(){
     @Override public Object createMockFor(    Annotation annotation,    Field field){
       if (annotation instanceof SmartMock) {
         return Mockito.mock(field.getType(),Mockito.RETURNS_SMART_NULLS);

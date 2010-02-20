@@ -1,0 +1,7 @@
+{
+  for (  Class u : undesiredAnnotations) {
+    if (field.isAnnotationPresent(u)) {
+      new Reporter().unsupportedCombinationOfAnnotations(annotation.getSimpleName(),annotation.getClass().getSimpleName());
+    }
+  }
+}

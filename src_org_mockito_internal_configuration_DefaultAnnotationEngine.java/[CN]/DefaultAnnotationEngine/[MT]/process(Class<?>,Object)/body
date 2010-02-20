@@ -1,0 +1,24 @@
+{
+  Field[] fields=clazz.getDeclaredFields();
+  for (  Field field : fields) {
+    boolean alreadyAssigned=false;
+    for (    Annotation annotation : field.getAnnotations()) {
+      Object mock=createMockFor(annotation,field);
+      if (mock != null) {
+        throwIfAlreadyAssigned(field,alreadyAssigned);
+        alreadyAssigned=true;
+        boolean wasAccessible=field.isAccessible();
+        field.setAccessible(true);
+        try {
+          field.set(testClass,mock);
+        }
+ catch (        IllegalAccessException e) {
+          throw new MockitoException("Problems setting field " + field.getName() + " annotated with "+ annotation,e);
+        }
+ finally {
+          field.setAccessible(wasAccessible);
+        }
+      }
+    }
+  }
+}
