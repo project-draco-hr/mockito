@@ -3,7 +3,7 @@
   }
 ;
   ConfigurationAccess.getConfig().overrideAnnotationEngine(customizedEngine);
-  SimpleTest test=new SimpleTest();
+  SimpleTestCase test=new SimpleTestCase();
   MockitoAnnotations.initMocks(test);
   assertNotNull(test.mock);
   assertNull(test.tested.dependency);
