@@ -1,5 +1,0 @@
-{
-  doThrow(new RuntimeException()).when(mock).voidMethod();
-  assertNull(l.get());
-  l.set(getClass());
-}

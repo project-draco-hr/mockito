@@ -1,5 +1,0 @@
-{
-  when(mock.simpleMethod()).thenReturn("foo");
-  assertNull(l.get());
-  l.set(getClass());
-}

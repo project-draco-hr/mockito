@@ -1,5 +1,0 @@
-{
-  System.out.println(mock.simpleMethod());
-  assertNull(l.get());
-  l.set(getClass());
-}
