@@ -1,0 +1,10 @@
+{
+  inOrder.verify(three).simpleMethod(3);
+  try {
+    inOrder.verify(one).simpleMethod(999);
+    fail();
+  }
+ catch (  VerificationInOrderFailure e) {
+    assertContains("Wanted but not invoked",e.getMessage());
+  }
+}
