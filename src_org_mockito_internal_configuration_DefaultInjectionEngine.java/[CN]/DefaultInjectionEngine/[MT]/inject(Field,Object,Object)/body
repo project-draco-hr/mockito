@@ -1,13 +1,8 @@
 {
-  boolean wasAccessible=field.isAccessible();
-  field.setAccessible(true);
   try {
-    field.set(fieldInstance,matchingMock);
+    new FieldSetter(fieldInstance,field).set(matchingMock);
   }
- catch (  IllegalAccessException e) {
+ catch (  Exception e) {
     throw new MockitoException("Problems injecting dependency in " + field.getName(),e);
-  }
- finally {
-    field.setAccessible(wasAccessible);
   }
 }

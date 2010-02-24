@@ -7,16 +7,11 @@
       if (mock != null) {
         throwIfAlreadyAssigned(field,alreadyAssigned);
         alreadyAssigned=true;
-        boolean wasAccessible=field.isAccessible();
-        field.setAccessible(true);
         try {
-          field.set(testClass,mock);
+          new FieldSetter(testClass,field).set(mock);
         }
- catch (        IllegalAccessException e) {
+ catch (        Exception e) {
           throw new MockitoException("Problems setting field " + field.getName() + " annotated with "+ annotation,e);
-        }
- finally {
-          field.setAccessible(wasAccessible);
         }
       }
     }
