@@ -1,0 +1,5 @@
+{
+  SubClass subClass=new SubClass();
+  MockitoAnnotations.initMocks(subClass);
+  assertTrue(isMock(subClass.list));
+}

@@ -1,0 +1,4 @@
+{
+  assertTrue(isMock(spyInSubclass));
+  assertTrue(isMock(spyInBaseclass));
+}
