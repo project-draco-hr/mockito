@@ -1,0 +1,6 @@
+{
+  MockitoAnnotations.initMocks(new Object(){
+    @Spy @Captor ArgumentCaptor captor;
+  }
+);
+}
