@@ -1,0 +1,4 @@
+{
+  FieldReader reader=new FieldReader(new Foo(),Foo.class.getDeclaredField("isNull"));
+  assertTrue(reader.isNull());
+}

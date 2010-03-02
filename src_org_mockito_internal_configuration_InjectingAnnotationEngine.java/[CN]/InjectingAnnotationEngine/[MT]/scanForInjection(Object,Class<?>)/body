@@ -3,6 +3,9 @@
   Field[] fields=clazz.getDeclaredFields();
   for (  Field field : fields) {
     if (null != field.getAnnotation(InjectMock.class)) {
+      if (new FieldReader(testClass,field).isNull()) {
+        new Reporter().injectMockAnnotationFieldIsNull(field.getName());
+      }
       testedFields.add(field);
     }
   }

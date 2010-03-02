@@ -1,7 +1,7 @@
 {
 class FailingSpy {
     @Spy private List mySpy;
-    @SuppressWarnings("unused") public List getMySpy(){
+    public List getMySpy(){
       return mySpy;
     }
   }
