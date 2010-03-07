@@ -2,7 +2,7 @@
   Set<Field> testedFields=new HashSet<Field>();
   Field[] fields=clazz.getDeclaredFields();
   for (  Field field : fields) {
-    if (null != field.getAnnotation(InjectMock.class)) {
+    if (null != field.getAnnotation(InjectMocks.class)) {
       if (new FieldReader(testClass,field).isNull()) {
         new Reporter().injectMockAnnotationFieldIsNull(field.getName());
       }

@@ -1,7 +1,7 @@
 {
   for (  Class annotation : annotations) {
     if (field.isAnnotationPresent(annotation)) {
-      new Reporter().unsupportedCombinationOfAnnotations(annotation.getSimpleName(),InjectMock.class.getSimpleName());
+      new Reporter().unsupportedCombinationOfAnnotations(annotation.getSimpleName(),InjectMocks.class.getSimpleName());
     }
   }
 }

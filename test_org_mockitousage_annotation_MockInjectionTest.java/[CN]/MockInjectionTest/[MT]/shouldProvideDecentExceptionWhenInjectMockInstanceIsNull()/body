@@ -1,6 +1,6 @@
 {
   MockitoAnnotations.initMocks(new Object(){
-    @InjectMock Object iAmNull=null;
+    @InjectMocks Object iAmNull=null;
   }
 );
 }
