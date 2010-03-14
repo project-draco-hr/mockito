@@ -1,7 +1,7 @@
 {
   assertTrue(finderStub.findInvocations(invocations,wanted).isEmpty());
   finderStub.similarToReturn=new InvocationBuilder().toInvocation();
-  checker.check(invocations,wanted,new VerificationModeBuilder().inOrder());
+  checker.check(invocations,wanted,new VerificationModeBuilder().inOrder(),context);
   SmartPrinter printer=new SmartPrinter(wanted,finderStub.similarToReturn,0);
   assertEquals(printer.getWanted(),reporterStub.wantedString);
   assertEquals(printer.getActual(),reporterStub.actual);

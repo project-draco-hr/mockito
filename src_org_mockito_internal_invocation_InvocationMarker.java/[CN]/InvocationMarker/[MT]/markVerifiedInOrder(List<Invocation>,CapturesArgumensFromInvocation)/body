@@ -1,6 +1,0 @@
-{
-  markVerified(chunk,wanted);
-  for (  Invocation i : chunk) {
-    i.markVerifiedInOrder();
-  }
-}

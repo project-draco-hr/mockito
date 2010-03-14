@@ -1,4 +1,4 @@
 {
   finderStub.validMatchingChunkToReturn.add(wanted.getInvocation());
-  checker.check(invocations,wanted,1);
+  checker.check(invocations,wanted,1,context);
 }

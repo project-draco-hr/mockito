@@ -1,10 +1,11 @@
 {
+  InOrderContextImpl context=new InOrderContextImpl();
   InvocationMarker marker=new InvocationMarker();
   Invocation i=new InvocationBuilder().toInvocation();
   InvocationMatcher im=new InvocationBuilder().toInvocationMatcher();
-  assertFalse(i.isVerifiedInOrder());
+  assertFalse(context.isVerified(i));
   assertFalse(i.isVerified());
-  marker.markVerifiedInOrder(Arrays.asList(i),im);
-  assertTrue(i.isVerifiedInOrder());
+  marker.markVerifiedInOrder(Arrays.asList(i),im,context);
+  assertTrue(context.isVerified(i));
   assertTrue(i.isVerified());
 }

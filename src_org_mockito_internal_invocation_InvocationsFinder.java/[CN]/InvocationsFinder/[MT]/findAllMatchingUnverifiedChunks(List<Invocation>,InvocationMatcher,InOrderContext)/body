@@ -1,0 +1,4 @@
+{
+  List<Invocation> unverified=removeVerifiedInOrder(invocations,orderingContext);
+  return ListUtil.filter(unverified,new RemoveNotMatching(wanted));
+}

@@ -1,0 +1,5 @@
+{
+  this.inOrder=inOrder;
+  this.allInvocations=allInvocations;
+  this.wanted=wanted;
+}

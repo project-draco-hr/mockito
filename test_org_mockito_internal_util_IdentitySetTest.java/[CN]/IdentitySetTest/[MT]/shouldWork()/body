@@ -1,0 +1,6 @@
+{
+  Object o=new Object();
+  set.add(o);
+  assertTrue(set.contains(o));
+  assertFalse(set.contains(new Object()));
+}

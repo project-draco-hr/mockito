@@ -1,0 +1,6 @@
+{
+  markVerified(chunk,wanted);
+  for (  Invocation i : chunk) {
+    context.markVerified(i);
+  }
+}

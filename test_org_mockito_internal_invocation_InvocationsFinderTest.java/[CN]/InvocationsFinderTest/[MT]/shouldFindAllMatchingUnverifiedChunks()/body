@@ -1,10 +1,10 @@
 {
-  List<Invocation> allMatching=finder.findAllMatchingUnverifiedChunks(invocations,new InvocationMatcher(simpleMethodInvocation));
+  List<Invocation> allMatching=finder.findAllMatchingUnverifiedChunks(invocations,new InvocationMatcher(simpleMethodInvocation),context);
   assertThat(allMatching,hasExactlyInOrder(simpleMethodInvocation,simpleMethodInvocationTwo));
-  simpleMethodInvocation.markVerifiedInOrder();
-  allMatching=finder.findAllMatchingUnverifiedChunks(invocations,new InvocationMatcher(simpleMethodInvocation));
+  context.markVerified(simpleMethodInvocation);
+  allMatching=finder.findAllMatchingUnverifiedChunks(invocations,new InvocationMatcher(simpleMethodInvocation),context);
   assertThat(allMatching,hasExactlyInOrder(simpleMethodInvocationTwo));
-  simpleMethodInvocationTwo.markVerifiedInOrder();
-  allMatching=finder.findAllMatchingUnverifiedChunks(invocations,new InvocationMatcher(simpleMethodInvocation));
+  context.markVerified(simpleMethodInvocationTwo);
+  allMatching=finder.findAllMatchingUnverifiedChunks(invocations,new InvocationMatcher(simpleMethodInvocation),context);
   assertTrue(allMatching.isEmpty());
 }

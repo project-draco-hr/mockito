@@ -1,0 +1,5 @@
+{
+  Map map=new HashMap();
+  map.put(invocation,"one");
+  assertEquals("one",map.get(invocation));
+}

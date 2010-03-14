@@ -1,7 +1,7 @@
 {
   Invocation invocation=new InvocationBuilder().toInvocation();
-  assertFalse(invocation.isVerifiedInOrder());
+  assertFalse(context.isVerified(invocation));
   finderStub.validMatchingChunkToReturn.addAll(asList(invocation));
-  checker.check(invocations,wanted,1);
-  assertTrue(invocation.isVerifiedInOrder());
+  checker.check(invocations,wanted,1,context);
+  assertTrue(context.isVerified(invocation));
 }
