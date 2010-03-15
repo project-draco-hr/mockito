@@ -1,0 +1,7 @@
+{
+  List<Integer> list=asList(1,null);
+  when(mock.objectReturningMethodNoArgs()).thenAnswer(new ReturnsElementsOf(list));
+  assertEquals(1,mock.objectReturningMethodNoArgs());
+  assertEquals(null,mock.objectReturningMethodNoArgs());
+  assertEquals(null,mock.objectReturningMethodNoArgs());
+}
