@@ -6,7 +6,9 @@
       if (mock == null) {
         reporter.nullPassedToVerifyNoMoreInteractions();
       }
-      mockUtil.getMockHandler(mock).verifyNoMoreInteractions();
+      List<Invocation> invocations=mockUtil.getMockHandler(mock).getInvocationContainer().getInvocations();
+      VerificationDataImpl data=new VerificationDataImpl(invocations,null);
+      VerificationModeFactory.noMoreInteractions().verify(data);
     }
  catch (    NotAMockException e) {
       reporter.notAMockPassedToVerifyNoMoreInteractions();

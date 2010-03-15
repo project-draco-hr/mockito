@@ -1,4 +1,0 @@
-{
-  VerificationDataImpl data=new VerificationDataImpl(invocationContainerImpl.getInvocations(),null);
-  VerificationModeFactory.noMoreInteractions().verify(data);
-}

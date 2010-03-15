@@ -1,0 +1,7 @@
+{
+  List<Invocation> invocations=data.getAllInvocations();
+  Invocation unverified=new InvocationsFinder().findFirstUnverifiedInOrder(data.getOrderingContext(),invocations);
+  if (unverified != null) {
+    new Reporter().noMoreInteractionsWantedInOrder(unverified);
+  }
+}

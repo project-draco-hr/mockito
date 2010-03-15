@@ -1,0 +1,9 @@
+{
+  InOrderContextImpl context=new InOrderContextImpl();
+  assertSame(simpleMethodInvocation,finder.findFirstUnverifiedInOrder(context,invocations));
+  context.markVerified(simpleMethodInvocationTwo);
+  context.markVerified(simpleMethodInvocation);
+  assertSame(differentMethodInvocation,finder.findFirstUnverifiedInOrder(context,invocations));
+  context.markVerified(differentMethodInvocation);
+  assertNull(finder.findFirstUnverifiedInOrder(context,invocations));
+}
