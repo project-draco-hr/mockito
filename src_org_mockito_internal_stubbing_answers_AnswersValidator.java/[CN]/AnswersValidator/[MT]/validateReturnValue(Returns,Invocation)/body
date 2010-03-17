@@ -1,6 +1,6 @@
 {
   if (invocation.isVoid()) {
-    reporter.cannotStubVoidMethodWithAReturnValue();
+    reporter.cannotStubVoidMethodWithAReturnValue(invocation.getMethod().getName());
   }
   if (answer.returnsNull() && invocation.returnsPrimitive()) {
     reporter.wrongTypeOfReturnValue(invocation.printMethodReturnType(),"null",invocation.getMethodName());

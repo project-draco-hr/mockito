@@ -1,3 +1,0 @@
-{
-  throw new MockitoException(join("Cannot stub a void method with a return value!","Voids are usually stubbed with Throwables:","    doThrow(exception).when(mock).someVoidMethod();"));
-}
