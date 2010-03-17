@@ -8,9 +8,11 @@
   InvocationMatcher invocationMatcher=matchersBinder.bindMatchers(mockingProgress.getArgumentMatcherStorage(),invocation);
   mockingProgress.validateState();
   if (verificationMode != null) {
-    VerificationDataImpl data=new VerificationDataImpl(invocationContainerImpl.getInvocations(),invocationMatcher);
-    verificationMode.verify(data);
-    return null;
+    if (verificationMode instanceof MockAwareVerificationMode && ((MockAwareVerificationMode)verificationMode).getMock() == invocation.getMock()) {
+      VerificationDataImpl data=new VerificationDataImpl(invocationContainerImpl.getInvocations(),invocationMatcher);
+      verificationMode.verify(data);
+      return null;
+    }
   }
   invocationContainerImpl.setInvocationForPotentialStubbing(invocationMatcher);
   OngoingStubbingImpl<T> ongoingStubbing=new OngoingStubbingImpl<T>(invocationContainerImpl);

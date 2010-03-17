@@ -1,0 +1,5 @@
+{
+  when(mock.otherMethod()).thenReturn("foo");
+  mockTwo.simpleMethod("foo");
+  verify(mockTwo).simpleMethod(mock.otherMethod());
+}
