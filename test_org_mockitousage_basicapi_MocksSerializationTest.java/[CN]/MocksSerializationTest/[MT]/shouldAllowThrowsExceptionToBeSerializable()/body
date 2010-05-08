@@ -1,0 +1,4 @@
+{
+  Bar mock=mock(Bar.class,new ThrowsException(new RuntimeException()));
+  serializeAndBack(mock);
+}
