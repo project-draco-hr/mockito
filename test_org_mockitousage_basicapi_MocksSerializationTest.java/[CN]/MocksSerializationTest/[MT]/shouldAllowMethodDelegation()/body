@@ -1,0 +1,6 @@
+{
+  Bar barMock=mock(Bar.class,withSettings().serializable());
+  Foo fooMock=mock(Foo.class);
+  when(barMock.doSomething()).thenAnswer(new ThrowsException(new RuntimeException()));
+  serializeAndBack(barMock);
+}
