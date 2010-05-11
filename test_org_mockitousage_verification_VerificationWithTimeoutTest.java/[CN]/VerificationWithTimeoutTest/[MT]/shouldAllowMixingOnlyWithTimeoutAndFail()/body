@@ -1,0 +1,12 @@
+{
+  Thread t1=waitAndExerciseMock(20);
+  t1.start();
+  mock.add("foo");
+  verify(mock,never()).clear();
+  try {
+    verify(mock,timeout(40).only()).clear();
+    fail();
+  }
+ catch (  NoInteractionsWanted e) {
+  }
+}

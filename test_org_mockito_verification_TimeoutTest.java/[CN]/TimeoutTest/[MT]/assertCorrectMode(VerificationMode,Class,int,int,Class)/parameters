@@ -1,0 +1,5 @@
+VerificationMode t
+Class expectedType
+int expectedTimeout
+int expectedTreshold
+Class expectedDelegateType

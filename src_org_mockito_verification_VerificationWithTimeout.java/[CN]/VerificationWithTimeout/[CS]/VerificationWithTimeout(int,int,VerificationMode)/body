@@ -1,0 +1,3 @@
+{
+  this.impl=new VerificationWithTimeoutImpl(treshhold,millis,delegate);
+}

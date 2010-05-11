@@ -1,5 +1,5 @@
 {
   this.treshhold=treshhold;
-  this.max=millis;
+  this.timeout=millis;
   this.delegate=delegate;
 }

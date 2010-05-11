@@ -1,0 +1,6 @@
+{
+  Thread t1=waitAndExerciseMock(20);
+  t1.start();
+  verify(mock,never()).clear();
+  verify(mock,timeout(40).only()).clear();
+}

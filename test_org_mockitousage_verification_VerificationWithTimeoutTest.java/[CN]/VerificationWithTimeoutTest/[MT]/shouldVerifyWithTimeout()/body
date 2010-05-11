@@ -2,5 +2,5 @@
   Thread t=waitAndExerciseMock(20);
   t.start();
   verify(mock,never()).clear();
-  verify(mock,timeout(40)).clear();
+  verify(mock,timeout(40).atLeast(1)).clear();
 }

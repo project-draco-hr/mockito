@@ -3,7 +3,7 @@
   t.start();
   verify(mock,never()).clear();
   try {
-    verify(mock,timeout(20)).clear();
+    verify(mock,timeout(20).atLeastOnce()).clear();
     fail();
   }
  catch (  MockitoAssertionError e) {

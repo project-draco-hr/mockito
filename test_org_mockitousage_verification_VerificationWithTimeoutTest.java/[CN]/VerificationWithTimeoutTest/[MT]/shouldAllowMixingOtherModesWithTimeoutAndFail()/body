@@ -1,0 +1,13 @@
+{
+  Thread t1=waitAndExerciseMock(20);
+  Thread t2=waitAndExerciseMock(20);
+  t1.start();
+  t2.start();
+  verify(mock,timeout(1).never()).clear();
+  try {
+    verify(mock,timeout(100).times(3)).clear();
+    fail();
+  }
+ catch (  TooLittleActualInvocations e) {
+  }
+}
