@@ -2,4 +2,10 @@
   when(mock.otherMethod()).thenReturn("foo");
   mockTwo.simpleMethod("foo");
   verify(mockTwo).simpleMethod(mock.otherMethod());
+  try {
+    verify(mockTwo,never()).simpleMethod(mock.otherMethod());
+    fail();
+  }
+ catch (  NeverWantedButInvoked e) {
+  }
 }
