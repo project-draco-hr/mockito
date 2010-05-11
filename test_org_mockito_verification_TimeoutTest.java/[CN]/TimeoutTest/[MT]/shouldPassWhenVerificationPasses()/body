@@ -1,0 +1,5 @@
+{
+  Timeout t=new Timeout(1,3,mode);
+  doNothing().when(mode).verify(data);
+  t.verify(data);
+}

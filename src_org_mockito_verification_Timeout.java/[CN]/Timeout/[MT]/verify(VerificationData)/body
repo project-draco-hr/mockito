@@ -1,0 +1,18 @@
+{
+  int soFar=0;
+  MockitoAssertionError error=null;
+  while (soFar <= max) {
+    try {
+      delegate.verify(data);
+      return;
+    }
+ catch (    MockitoAssertionError e) {
+      error=e;
+      soFar+=treshhold;
+      sleep(treshhold);
+    }
+  }
+  if (error != null) {
+    throw error;
+  }
+}

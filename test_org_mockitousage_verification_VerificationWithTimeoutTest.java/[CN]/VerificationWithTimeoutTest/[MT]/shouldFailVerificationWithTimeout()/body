@@ -1,0 +1,11 @@
+{
+  Thread t=waitAndExerciseMock(40);
+  t.start();
+  verify(mock,never()).clear();
+  try {
+    verify(mock,timeout(20)).clear();
+    fail();
+  }
+ catch (  MockitoAssertionError e) {
+  }
+}
