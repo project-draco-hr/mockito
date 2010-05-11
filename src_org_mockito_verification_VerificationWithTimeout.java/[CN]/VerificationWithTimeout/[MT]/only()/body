@@ -1,3 +1,0 @@
-{
-  return new VerificationWithTimeout(impl.getTreshhold(),impl.getTimeout(),VerificationModeFactory.only());
-}

@@ -1,6 +1,9 @@
 {
   Thread t=waitAndExerciseMock(20);
   t.start();
-  verify(mock,never()).clear();
-  verify(mock,timeout(40).atLeast(1)).clear();
+  verify(mock,timeout(100)).clear();
+  verify(mock,timeout(100).atLeastOnce()).clear();
+  verify(mock,timeout(100).times(1)).clear();
+  verify(mock).clear();
+  verify(mock,times(1)).clear();
 }

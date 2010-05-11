@@ -1,9 +1,9 @@
 {
-  VerificationWithTimeout t=new VerificationWithTimeout(25,50,mode);
-  assertCorrectMode(t.atLeastOnce(),VerificationWithTimeout.class,50,25,AtLeast.class);
-  assertCorrectMode(t.atLeast(5),VerificationWithTimeout.class,50,25,AtLeast.class);
-  assertCorrectMode(t.times(5),VerificationWithTimeout.class,50,25,Times.class);
-  assertCorrectMode(t.never(),VerificationWithTimeout.class,50,25,Times.class);
-  assertCorrectMode(t.only(),VerificationWithTimeout.class,50,25,Only.class);
-  assertCorrectMode(t.atMost(10),VerificationWithTimeout.class,50,25,AtMost.class);
+  Timeout t=new Timeout(25,50,mode);
+  assertCorrectMode(t.atLeastOnce(),Timeout.class,50,25,AtLeast.class);
+  assertCorrectMode(t.atLeast(5),Timeout.class,50,25,AtLeast.class);
+  assertCorrectMode(t.times(5),Timeout.class,50,25,Times.class);
+  assertCorrectMode(t.never(),Timeout.class,50,25,Times.class);
+  assertCorrectMode(t.only(),Timeout.class,50,25,Only.class);
+  assertCorrectMode(t.atMost(10),Timeout.class,50,25,AtMost.class);
 }

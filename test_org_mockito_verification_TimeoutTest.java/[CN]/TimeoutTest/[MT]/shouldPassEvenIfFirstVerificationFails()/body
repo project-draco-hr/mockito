@@ -1,5 +1,5 @@
 {
-  VerificationWithTimeout t=new VerificationWithTimeout(1,2,mode);
+  Timeout t=new Timeout(1,2,mode);
   doThrow(error).doThrow(error).doNothing().when(mode).verify(data);
   t.verify(data);
 }
