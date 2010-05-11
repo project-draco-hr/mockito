@@ -3,6 +3,5 @@
     Thread.sleep(sleep);
   }
  catch (  InterruptedException ie) {
-    throw new MockitoException("TODO");
   }
 }
