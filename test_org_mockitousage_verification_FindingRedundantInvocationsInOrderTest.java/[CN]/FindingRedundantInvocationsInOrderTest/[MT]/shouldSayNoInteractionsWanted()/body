@@ -1,0 +1,11 @@
+{
+  mock.simpleMethod();
+  InOrder inOrder=inOrder(mock);
+  try {
+    inOrder.verifyNoMoreInteractions();
+    fail();
+  }
+ catch (  VerificationInOrderFailure e) {
+    assertContains("No interactions wanted",e.getMessage());
+  }
+}
