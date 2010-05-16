@@ -1,0 +1,3 @@
+{
+  assertEquals(m.getGenericType(field("nonGeneric")),Object.class);
+}

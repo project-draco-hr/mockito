@@ -1,0 +1,5 @@
+{
+  assertEquals(m.getGenericType(field("one")),String.class);
+  assertEquals(m.getGenericType(field("two")),Integer.class);
+  assertEquals(m.getGenericType(field("map")),Double.class);
+}

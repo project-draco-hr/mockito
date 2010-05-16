@@ -1,6 +1,0 @@
-{
-  if (actual.equals(Double.class)) {
-    return Double.class;
-  }
-  return Object.class;
-}
