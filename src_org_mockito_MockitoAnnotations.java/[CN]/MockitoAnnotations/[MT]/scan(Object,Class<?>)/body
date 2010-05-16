@@ -5,6 +5,6 @@
     if (annotationEngine.getClass() != new DefaultMockitoConfiguration().getAnnotationEngine().getClass()) {
       processAnnotationDeprecatedWay(annotationEngine,testClass,field);
     }
-    annotationEngine.process(clazz,testClass);
   }
+  annotationEngine.process(clazz,testClass);
 }
