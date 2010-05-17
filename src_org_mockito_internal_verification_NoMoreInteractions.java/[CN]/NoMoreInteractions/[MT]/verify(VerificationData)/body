@@ -1,6 +1,6 @@
 {
   Invocation unverified=new InvocationsFinder().findFirstUnverified(data.getAllInvocations());
   if (unverified != null) {
-    new Reporter().noMoreInteractionsWanted(unverified);
+    new Reporter().noMoreInteractionsWanted(unverified,(List)data.getAllInvocations());
   }
 }

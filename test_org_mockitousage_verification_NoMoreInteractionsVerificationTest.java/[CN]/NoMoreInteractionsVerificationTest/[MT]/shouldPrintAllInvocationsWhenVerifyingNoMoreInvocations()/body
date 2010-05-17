@@ -1,0 +1,13 @@
+{
+  mock.add(1);
+  mock.add(2);
+  mock.clear();
+  verify(mock).add(2);
+  try {
+    verifyNoMoreInteractions(mock);
+    fail();
+  }
+ catch (  NoInteractionsWanted e) {
+    assertContains("list of all invocations",e.getMessage());
+  }
+}
