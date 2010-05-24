@@ -1,0 +1,4 @@
+def run(cmd):
+    print ('\nRunning command: ' + cmd)
+    if (os.system(cmd) == 0):
+        print ('\nWarning, command failed: ' + cmd)
