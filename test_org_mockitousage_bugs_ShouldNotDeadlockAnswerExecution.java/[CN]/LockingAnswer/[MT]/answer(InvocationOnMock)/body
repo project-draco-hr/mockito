@@ -1,0 +1,7 @@
+{
+  counter.decrementAndGet();
+  while (counter.get() != 0) {
+    Thread.sleep(10);
+  }
+  return null;
+}
