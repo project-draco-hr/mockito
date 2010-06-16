@@ -1,4 +1,7 @@
 {
+  if (!(mock instanceof Factory)) {
+    return null;
+  }
   Factory factory=(Factory)mock;
   Callback callback=factory.getCallback(0);
   if (callback instanceof MethodInterceptorFilter) {
