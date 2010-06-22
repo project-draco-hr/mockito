@@ -1,0 +1,15 @@
+{
+  final List<Method> methods=new LinkedList<Method>();
+  InvocationHandler handler=new InvocationHandler(){
+    public Object invoke(    Object proxy,    Method method,    Object[] args) throws Throwable {
+      methods.add(method);
+      return null;
+    }
+  }
+;
+  iterable=(MyIterable)Proxy.newProxyInstance(this.getClass().getClassLoader(),new Class[]{MyIterable.class},handler);
+  iterable.iterator();
+  ((Iterable)iterable).iterator();
+  assertEquals(2,methods.size());
+  assertEquals(methods.get(0),methods.get(1));
+}
