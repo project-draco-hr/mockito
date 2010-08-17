@@ -1,5 +1,2 @@
 {
-  mock=spy(new Foo());
-  when(mock.getStuff()).thenReturn("aha!");
-  mock.doSomeThing();
 }
