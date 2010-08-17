@@ -1,0 +1,4 @@
+{
+  ClassForMocking clazzMock=mock(ClassForMocking.class);
+  Mockito.when(clazzMock.isValid()).thenReturn(true);
+}
