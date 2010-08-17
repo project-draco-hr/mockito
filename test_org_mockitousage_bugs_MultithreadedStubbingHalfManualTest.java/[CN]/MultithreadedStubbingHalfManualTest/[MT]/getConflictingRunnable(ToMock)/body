@@ -1,0 +1,17 @@
+{
+  return new Runnable(){
+    public void run(){
+      while (true) {
+        try {
+          Thread.sleep((long)(Math.random() * 10));
+        }
+ catch (        InterruptedException e) {
+        }
+        if (!toMock.getValues(0).isEmpty()) {
+          fail("Shouldn't happen, were just making sure it wasn't optimized away...");
+        }
+      }
+    }
+  }
+;
+}
