@@ -1,4 +1,6 @@
 {
-  int last=invocations.size() - 1;
-  invocations.remove(last);
+synchronized (invocations) {
+    int last=invocations.size() - 1;
+    invocations.remove(last);
+  }
 }
