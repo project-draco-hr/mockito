@@ -1,9 +1,11 @@
 {
-  for (  StubbedInvocationMatcher s : stubbed) {
-    if (s.matches(invocation)) {
-      s.markStubUsed(invocation);
-      invocation.markStubbed(new StubInfo(s));
-      return s;
+synchronized (stubbed) {
+    for (    StubbedInvocationMatcher s : stubbed) {
+      if (s.matches(invocation)) {
+        s.markStubUsed(invocation);
+        invocation.markStubbed(new StubInfo(s));
+        return s;
+      }
     }
   }
   return null;

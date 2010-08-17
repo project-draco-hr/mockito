@@ -3,10 +3,12 @@
   mockingProgress.stubbingCompleted(invocation);
   AnswersValidator answersValidator=new AnswersValidator();
   answersValidator.validate(answer,invocation);
-  if (isConsecutive) {
-    stubbed.getFirst().addAnswer(answer);
-  }
+synchronized (stubbed) {
+    if (isConsecutive) {
+      stubbed.getFirst().addAnswer(answer);
+    }
  else {
-    stubbed.addFirst(new StubbedInvocationMatcher(invocationForStubbing,answer));
+      stubbed.addFirst(new StubbedInvocationMatcher(invocationForStubbing,answer));
+    }
   }
 }
