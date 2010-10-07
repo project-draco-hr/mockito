@@ -1,0 +1,4 @@
+{
+  Foo f=mock(Foo.class);
+  verify(f).bar(any(Long.class));
+}

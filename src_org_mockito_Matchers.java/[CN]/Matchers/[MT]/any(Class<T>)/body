@@ -1,3 +1,3 @@
 {
-  return (T)anyObject();
+  return (T)reportMatcher(Any.ANY).returnFor(clazz);
 }
