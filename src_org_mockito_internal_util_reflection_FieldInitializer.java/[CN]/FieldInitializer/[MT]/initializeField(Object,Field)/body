@@ -1,0 +1,28 @@
+{
+  final AccessibilityChanger changer=new AccessibilityChanger();
+  Constructor<?> constructor=null;
+  try {
+    constructor=field.getType().getDeclaredConstructor();
+    changer.enableAccess(constructor);
+    final Object[] noArg=new Object[0];
+    Object newFieldInstance=constructor.newInstance(noArg);
+    new FieldSetter(testClass,field).set(newFieldInstance);
+  }
+ catch (  NoSuchMethodException e) {
+    throw new MockitoException("Cannot instantiate field \"" + field.getName() + "\", the type "+ field.getType()+ " has no default constructor",e);
+  }
+catch (  InvocationTargetException e) {
+    throw new MockitoException("Cannot instantiate field \"" + field.getName() + "\", the default constructor of type "+ field.getType()+ " has raised an exception : "+ e.getTargetException().toString(),e);
+  }
+catch (  InstantiationException e) {
+    throw new MockitoException("Unexpected InstantiationException for field : \"" + field.getName() + "\"",e);
+  }
+catch (  IllegalAccessException e) {
+    throw new MockitoException("Unexpected IllegalAccessException for field : \"" + field.getName() + "\"",e);
+  }
+ finally {
+    if (constructor != null) {
+      changer.safelyDisableAccess(constructor);
+    }
+  }
+}

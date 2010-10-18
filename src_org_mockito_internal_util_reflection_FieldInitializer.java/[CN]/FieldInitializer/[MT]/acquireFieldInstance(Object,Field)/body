@@ -1,0 +1,8 @@
+{
+  Object fieldInstance=field.get(testClass);
+  if (fieldInstance != null) {
+    return fieldInstance;
+  }
+  initializeField(testClass,field);
+  return field.get(testClass);
+}

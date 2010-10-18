@@ -1,0 +1,5 @@
+{
+  if (Modifier.isAbstract(field.getType().getModifiers())) {
+    throw new MockitoException("Cannot instantiate field \"" + field.getName() + "\", the type "+ field.getType()+ " is an inner class");
+  }
+}

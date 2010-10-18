@@ -1,6 +1,0 @@
-{
-  MockitoAnnotations.initMocks(new Object(){
-    @Spy String spy=null;
-  }
-);
-}

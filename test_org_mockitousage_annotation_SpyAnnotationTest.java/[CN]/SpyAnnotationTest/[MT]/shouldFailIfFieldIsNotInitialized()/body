@@ -1,9 +1,0 @@
-{
-class FailingSpy {
-    @Spy private List mySpy;
-    public List getMySpy(){
-      return mySpy;
-    }
-  }
-  MockitoAnnotations.initMocks(new FailingSpy());
-}

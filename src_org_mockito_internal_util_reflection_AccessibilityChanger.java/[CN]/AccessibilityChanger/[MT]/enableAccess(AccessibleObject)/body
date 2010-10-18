@@ -1,0 +1,4 @@
+{
+  wasAccessible=accessibleObject.isAccessible();
+  accessibleObject.setAccessible(true);
+}

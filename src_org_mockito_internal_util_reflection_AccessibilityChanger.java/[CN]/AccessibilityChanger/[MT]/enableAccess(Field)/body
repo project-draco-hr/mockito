@@ -1,4 +1,0 @@
-{
-  wasAccessible=field.isAccessible();
-  field.setAccessible(true);
-}

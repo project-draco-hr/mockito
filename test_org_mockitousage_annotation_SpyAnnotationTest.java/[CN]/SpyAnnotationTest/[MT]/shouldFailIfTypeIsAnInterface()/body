@@ -1,0 +1,6 @@
+{
+class FailingSpy {
+    @Spy private List spyTypeIsInterface;
+  }
+  MockitoAnnotations.initMocks(new FailingSpy());
+}

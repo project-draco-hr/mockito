@@ -1,0 +1,10 @@
+{
+  if (new FieldReader(testClass,field).isNull()) {
+    checkNotLocal(field);
+    checkNotInner(field);
+    checkNotInterface(field);
+    checkNotAbstract(field);
+  }
+  this.testClass=testClass;
+  this.field=field;
+}

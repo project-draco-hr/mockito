@@ -1,0 +1,6 @@
+{
+class FailingSpy {
+    @Spy private AbstractList spyTypeIsAbstract;
+  }
+  MockitoAnnotations.initMocks(new FailingSpy());
+}

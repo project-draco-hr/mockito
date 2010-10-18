@@ -1,0 +1,4 @@
+{
+  assertNotNull(notInitializedSpy);
+  assertNotNull(notInitializedSpy.getAList());
+}

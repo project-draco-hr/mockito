@@ -1,0 +1,8 @@
+{
+class FailingSpy {
+    @Spy private List spyTypeIsInner;
+class TheInnerClass {
+    }
+  }
+  MockitoAnnotations.initMocks(new FailingSpy());
+}
