@@ -2,5 +2,11 @@
 class FailingSpy {
     @Spy private AbstractList spyTypeIsAbstract;
   }
-  MockitoAnnotations.initMocks(new FailingSpy());
+  try {
+    MockitoAnnotations.initMocks(new FailingSpy());
+    fail();
+  }
+ catch (  Exception e) {
+    Assertions.assertThat(e.getMessage()).contains("abstract class");
+  }
 }

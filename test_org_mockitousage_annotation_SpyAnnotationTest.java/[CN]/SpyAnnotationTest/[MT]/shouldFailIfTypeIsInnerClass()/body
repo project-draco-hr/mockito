@@ -1,8 +1,14 @@
 {
 class FailingSpy {
-    @Spy private List spyTypeIsInner;
+    @Spy private TheInnerClass spyTypeIsInner;
 class TheInnerClass {
     }
   }
-  MockitoAnnotations.initMocks(new FailingSpy());
+  try {
+    MockitoAnnotations.initMocks(new FailingSpy());
+    fail();
+  }
+ catch (  MockitoException e) {
+    Assertions.assertThat(e.getMessage()).contains("inner class");
+  }
 }

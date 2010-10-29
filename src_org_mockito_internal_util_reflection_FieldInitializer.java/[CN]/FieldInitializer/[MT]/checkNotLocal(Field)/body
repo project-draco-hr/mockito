@@ -1,5 +1,5 @@
 {
   if (field.getType().isLocalClass()) {
-    throw new MockitoException("Cannot instantiate field \"" + field.getName() + "\", the type "+ field.getType()+ " is a local class");
+    throw new MockitoException("the type '" + field.getType().getSimpleName() + "' is a local class.");
   }
 }

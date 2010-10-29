@@ -1,5 +1,5 @@
 {
   if (field.getType().isInterface()) {
-    throw new MockitoException("Cannot instantiate field \"" + field.getName() + "\", the type "+ field.getType()+ " is an interface");
+    throw new MockitoException("the type '" + field.getType().getSimpleName() + "' is an interface.");
   }
 }
