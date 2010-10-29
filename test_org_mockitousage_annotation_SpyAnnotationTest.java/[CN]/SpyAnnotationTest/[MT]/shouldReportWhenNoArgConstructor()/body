@@ -1,0 +1,12 @@
+{
+class FailingSpy {
+    @Spy NoValidConstructor noValidConstructor;
+  }
+  try {
+    MockitoAnnotations.initMocks(new FailingSpy());
+    fail();
+  }
+ catch (  Exception e) {
+    Assertions.assertThat(e.getMessage()).contains("default constructor");
+  }
+}
