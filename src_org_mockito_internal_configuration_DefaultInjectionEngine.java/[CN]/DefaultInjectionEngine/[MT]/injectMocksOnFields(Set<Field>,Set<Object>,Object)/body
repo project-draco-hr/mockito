@@ -1,6 +1,12 @@
 {
   for (  Field field : testClassFields) {
-    Object fieldInstance=new FieldInitializer(testClass,field).initialize();
+    Object fieldInstance=null;
+    try {
+      fieldInstance=new FieldInitializer(testClass,field).initialize();
+    }
+ catch (    MockitoException e) {
+      new Reporter().cannotInitializeForInjectMocksAnnotation(field.getName(),e);
+    }
     Class<?> fieldClass=fieldInstance.getClass();
     while (fieldClass != Object.class) {
       injectMockCandidate(fieldClass,mocks,fieldInstance);
