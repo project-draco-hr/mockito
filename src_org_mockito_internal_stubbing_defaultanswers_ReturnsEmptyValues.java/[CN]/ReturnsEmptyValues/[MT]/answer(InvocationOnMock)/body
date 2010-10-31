@@ -1,5 +1,5 @@
 {
-  if (Invocation.isToString(invocation)) {
+  if (new ObjectMethodsGuru().isToString(invocation.getMethod())) {
     Object mock=invocation.getMock();
     MockName name=new MockUtil().getMockName(mock);
     if (name.isSurrogate()) {
