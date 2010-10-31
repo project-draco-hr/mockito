@@ -1,3 +1,0 @@
-{
-  throw new NotAMockException(join("Argument passed to verify() is not a mock!","Examples of correct verifications:","    verify(mock).someMethod();","    verify(mock, times(10)).someMethod();","    verify(mock, atLeastOnce()).someMethod();"));
-}
