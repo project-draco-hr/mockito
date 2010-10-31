@@ -1,5 +1,4 @@
 {
-  ReturnsEmptyValues values=new ReturnsEmptyValues();
   assertEquals(false,values.returnValueFor(Boolean.TYPE));
   assertEquals((char)0,values.returnValueFor(Character.TYPE));
   assertEquals(0,values.returnValueFor(Byte.TYPE));

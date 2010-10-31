@@ -1,0 +1,8 @@
+{
+  Date today=mock(Date.class);
+  Date tomorrow=mock(Date.class);
+  Set<Date> set=new TreeSet<Date>();
+  set.add(today);
+  set.add(tomorrow);
+  assertEquals(2,set.size());
+}

@@ -1,5 +1,4 @@
 {
-  ReturnsEmptyValues values=new ReturnsEmptyValues();
   assertTrue(((Collection)values.returnValueFor(Collection.class)).isEmpty());
   assertTrue(((Set)values.returnValueFor(Set.class)).isEmpty());
   assertTrue(((SortedSet)values.returnValueFor(SortedSet.class)).isEmpty());

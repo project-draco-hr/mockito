@@ -1,0 +1,5 @@
+{
+  Date mock=mock(Date.class);
+  reset(mock);
+  assertEquals(1,mock.compareTo(new Date()));
+}

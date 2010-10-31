@@ -1,0 +1,7 @@
+{
+  Date mock=mock(Date.class);
+  when(mock.compareTo(any(Date.class))).thenReturn(10);
+  mock.compareTo(new Date());
+  assertEquals(10,mock.compareTo(new Date()));
+  verify(mock,atLeastOnce()).compareTo(new Date());
+}
