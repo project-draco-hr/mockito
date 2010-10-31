@@ -1,14 +1,8 @@
 {
-  GlobalConfiguration.validate();
-  if (verificationMode != null) {
-    Location location=verificationMode.getLocation();
-    verificationMode=null;
-    reporter.unfinishedVerificationException(location);
-  }
+  validateMostStuff();
   if (stubbingInProgress != null) {
     Location temp=stubbingInProgress;
     stubbingInProgress=null;
     reporter.unfinishedStubbing(temp);
   }
-  getArgumentMatcherStorage().validateState();
 }

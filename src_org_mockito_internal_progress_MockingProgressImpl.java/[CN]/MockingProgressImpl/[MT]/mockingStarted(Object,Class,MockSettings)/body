@@ -2,5 +2,5 @@
   if (listener != null && listener instanceof MockingStartedListener) {
     ((MockingStartedListener)listener).mockingStarted(mock,classToMock,mockSettings);
   }
-  validateState();
+  validateMostStuff();
 }
