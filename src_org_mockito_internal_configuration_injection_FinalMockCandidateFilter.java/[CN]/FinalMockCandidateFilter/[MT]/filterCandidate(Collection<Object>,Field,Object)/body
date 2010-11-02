@@ -1,0 +1,23 @@
+{
+  if (mocks.size() == 1) {
+    final Object matchingMock=mocks.iterator().next();
+    return new Injecter(){
+      public boolean thenInject(){
+        try {
+          new FieldSetter(fieldInstance,field).set(matchingMock);
+        }
+ catch (        Exception e) {
+          throw new MockitoException("Problems injecting dependency in " + field.getName(),e);
+        }
+        return true;
+      }
+    }
+;
+  }
+  return new Injecter(){
+    public boolean thenInject(){
+      return false;
+    }
+  }
+;
+}
