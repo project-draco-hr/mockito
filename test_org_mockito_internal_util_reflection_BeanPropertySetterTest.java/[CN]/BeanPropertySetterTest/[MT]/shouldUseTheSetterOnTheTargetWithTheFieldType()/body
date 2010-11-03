@@ -1,0 +1,9 @@
+{
+  SomeBean someBean=new SomeBean();
+  Field theField=someBean.getClass().getDeclaredField("theField");
+  File valueToInject=new File("path");
+  boolean injected=new BeanPropertySetter(someBean,theField,true).set(valueToInject);
+  assertTrue(injected);
+  assertTrue(someBean.setTheFieldWasUsed);
+  assertSame(valueToInject,someBean.getTheField());
+}

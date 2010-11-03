@@ -1,0 +1,5 @@
+{
+  this.field=propertyField;
+  this.target=target;
+  this.reportNoSetterFound=reportNoSetterFound;
+}

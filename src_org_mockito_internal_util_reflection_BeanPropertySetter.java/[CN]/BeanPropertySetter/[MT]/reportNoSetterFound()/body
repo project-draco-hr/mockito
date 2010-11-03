@@ -1,0 +1,5 @@
+{
+  if (reportNoSetterFound) {
+    throw new RuntimeException("Problems setting value on object: [" + target + "] for property : ["+ field.getName()+ "], setter not found");
+  }
+}

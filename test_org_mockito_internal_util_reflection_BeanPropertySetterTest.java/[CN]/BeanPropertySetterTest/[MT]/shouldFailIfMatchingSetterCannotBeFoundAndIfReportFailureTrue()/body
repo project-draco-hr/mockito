@@ -1,0 +1,12 @@
+{
+  SomeBeanWithNoSetterMatchingFieldType bean=new SomeBeanWithNoSetterMatchingFieldType();
+  Field theField=bean.getClass().getDeclaredField("theField");
+  File valueToInject=new File("path");
+  try {
+    new BeanPropertySetter(bean,theField,true).set(valueToInject);
+    fail();
+  }
+ catch (  Exception e) {
+    Assertions.assertThat(e.getMessage()).contains("setter not found");
+  }
+}
