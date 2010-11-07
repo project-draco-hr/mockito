@@ -1,5 +1,6 @@
 {
   Answer<Object> answer=new ReturnsSmartNulls();
   Foo smartNull=(Foo)answer.answer(invocationOf(Foo.class,"get"));
-  assertEquals("SmartNull returned by unstubbed get() method on mock",smartNull + "");
+  assertContains("SmartNull returned by",smartNull + "");
+  assertContains("foo.get()",smartNull + "");
 }
