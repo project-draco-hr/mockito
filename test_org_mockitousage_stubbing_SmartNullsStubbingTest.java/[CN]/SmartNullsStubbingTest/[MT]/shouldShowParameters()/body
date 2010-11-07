@@ -1,0 +1,11 @@
+{
+  Foo foo=mock(Foo.class,RETURNS_SMART_NULLS);
+  Bar smartNull=foo.getBarWithParams(10,"yes sir");
+  try {
+    smartNull.boo();
+    fail();
+  }
+ catch (  Exception e) {
+    assertContains("yes sir",e.getMessage());
+  }
+}
