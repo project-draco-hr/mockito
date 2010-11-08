@@ -1,0 +1,17 @@
+{
+  for (  Object m : mocks) {
+    InvocationContainer invocationContainer=new MockUtil().getMockHandler(m).getInvocationContainer();
+    List<Invocation> ins=invocationContainer.getInvocations();
+    for (    Invocation in : ins) {
+      InvocationMarker invocationMarker=new InvocationMarker();
+      if (in.stubInfo() != null) {
+        invocationMarker.markVerified(in,new CapturesArgumensFromInvocation(){
+          public void captureArgumentsFrom(          Invocation i){
+          }
+        }
+);
+      }
+    }
+  }
+  return mocks;
+}
