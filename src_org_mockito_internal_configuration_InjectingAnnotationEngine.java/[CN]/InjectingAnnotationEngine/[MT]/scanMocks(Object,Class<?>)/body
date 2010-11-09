@@ -1,7 +1,7 @@
 {
   Set<Object> mocks=new HashSet<Object>();
   for (  Field field : clazz.getDeclaredFields()) {
-    if (null != field.getAnnotation(Spy.class) || null != field.getAnnotation(org.mockito.Mock.class) || null != field.getAnnotation(Mock.class)) {
+    if (null != field.getAnnotation(Spy.class) || null != field.getAnnotation(org.mockito.Mock.class) || null != field.getAnnotation(org.mockito.MockitoAnnotations.Mock.class)) {
       Object fieldInstance=null;
       boolean wasAccessible=field.isAccessible();
       field.setAccessible(true);
