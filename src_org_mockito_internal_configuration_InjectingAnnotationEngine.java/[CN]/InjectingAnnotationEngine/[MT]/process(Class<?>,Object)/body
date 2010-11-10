@@ -1,11 +1,4 @@
 {
-  delegate.process(context,testClass);
-  spyAnnotationEngine.process(context,testClass);
-  Field[] fields=context.getDeclaredFields();
-  for (  Field field : fields) {
-    if (field.isAnnotationPresent(InjectMocks.class)) {
-      assertNoAnnotations(field,Mock.class,org.mockito.MockitoAnnotations.Mock.class,Captor.class);
-      injectMocks(testClass);
-    }
-  }
+  processIndependentAnnotations(testInstance.getClass(),testInstance);
+  processInjectMocks(testInstance.getClass(),testInstance);
 }

@@ -2,9 +2,13 @@
   if (testClass == null) {
     throw new MockitoException("testClass cannot be null. For info how to use @Mock annotations see examples in javadoc for MockitoAnnotations class");
   }
+  AnnotationEngine annotationEngine=new GlobalConfiguration().getAnnotationEngine();
   Class<?> clazz=testClass.getClass();
-  while (clazz != Object.class) {
-    scan(testClass,clazz);
-    clazz=clazz.getSuperclass();
+  if (annotationEngine.getClass() != new DefaultMockitoConfiguration().getAnnotationEngine().getClass()) {
+    while (clazz != Object.class) {
+      scanDeprecatedWay(annotationEngine,testClass,clazz);
+      clazz=clazz.getSuperclass();
+    }
   }
+  annotationEngine.process(testClass.getClass(),testClass);
 }

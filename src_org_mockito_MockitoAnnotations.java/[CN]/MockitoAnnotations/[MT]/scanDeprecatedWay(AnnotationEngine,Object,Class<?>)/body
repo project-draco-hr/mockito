@@ -1,0 +1,6 @@
+{
+  Field[] fields=clazz.getDeclaredFields();
+  for (  Field field : fields) {
+    processAnnotationDeprecatedWay(annotationEngine,testClass,field);
+  }
+}

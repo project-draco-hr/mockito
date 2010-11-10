@@ -1,0 +1,8 @@
+{
+  Class<?> classContext=clazz;
+  while (classContext != Object.class) {
+    delegate.process(classContext,testInstance);
+    spyAnnotationEngine.process(classContext,testInstance);
+    classContext=classContext.getSuperclass();
+  }
+}

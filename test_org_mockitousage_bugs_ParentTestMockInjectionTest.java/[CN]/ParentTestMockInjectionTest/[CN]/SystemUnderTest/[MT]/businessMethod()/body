@@ -1,0 +1,4 @@
+{
+  daoFromParent.doQuery();
+  daoFromSub.doQuery();
+}

@@ -1,2 +1,2 @@
-Class<?> context
-Object testClass
+Class<?> clazz
+Object testInstance
