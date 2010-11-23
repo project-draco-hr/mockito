@@ -1,11 +1,6 @@
 {
   String text=quoting();
-  if (object == null) {
-    text+="null";
-  }
- else {
-    text+=object.toString();
-  }
+  text+="" + object;
   text+=quoting();
   return text;
 }
