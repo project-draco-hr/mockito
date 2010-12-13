@@ -1,0 +1,3 @@
+{
+  new ConstructorInitializer(field,testClass).initialize(mocks);
+}

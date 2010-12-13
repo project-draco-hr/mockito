@@ -1,0 +1,4 @@
+{
+  when(calculator.countArticles("new")).thenThrow(new IllegalArgumentException());
+  articleManager.updateArticleCounters("new");
+}

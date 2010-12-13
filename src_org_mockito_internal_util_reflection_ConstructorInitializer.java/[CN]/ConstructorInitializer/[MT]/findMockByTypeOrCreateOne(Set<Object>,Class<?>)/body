@@ -1,0 +1,8 @@
+{
+  for (  Object mock : mocks) {
+    if (paramClass.isAssignableFrom(mock.getClass())) {
+      return mock;
+    }
+  }
+  return notMockFoundForClass(paramClass);
+}

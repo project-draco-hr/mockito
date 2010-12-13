@@ -1,0 +1,13 @@
+{
+  final AccessibilityChanger changer=new AccessibilityChanger();
+  changer.enableAccess(field);
+  try {
+    return field.get(testClass) != null;
+  }
+ catch (  Exception e) {
+    return false;
+  }
+ finally {
+    changer.safelyDisableAccess(field);
+  }
+}

@@ -1,0 +1,13 @@
+{
+  try {
+    Object fieldInstance=new FieldInitializer(testClass,field).initialize();
+    Class<?> fieldClass=fieldInstance.getClass();
+    while (fieldClass != Object.class) {
+      injectMockCandidate(fieldClass,mocks,fieldInstance);
+      fieldClass=fieldClass.getSuperclass();
+    }
+  }
+ catch (  Exception e) {
+    new Reporter().cannotInitializeForInjectMocksAnnotation(field.getName(),e);
+  }
+}

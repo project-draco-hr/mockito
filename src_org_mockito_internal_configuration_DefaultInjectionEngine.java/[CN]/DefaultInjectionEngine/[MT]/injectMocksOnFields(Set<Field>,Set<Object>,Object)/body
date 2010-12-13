@@ -1,16 +1,10 @@
 {
   for (  Field field : testClassFields) {
-    Object fieldInstance=null;
-    try {
-      fieldInstance=new FieldInitializer(testClass,field).initialize();
+    if (hasDefaultConstructor(field,testClass) || alreadyInitialized(field,testClass)) {
+      setterInject(mocks,testClass,field);
     }
- catch (    MockitoException e) {
-      new Reporter().cannotInitializeForInjectMocksAnnotation(field.getName(),e);
-    }
-    Class<?> fieldClass=fieldInstance.getClass();
-    while (fieldClass != Object.class) {
-      injectMockCandidate(fieldClass,mocks,fieldInstance);
-      fieldClass=fieldClass.getSuperclass();
+ else {
+      constructorInject(mocks,testClass,field);
     }
   }
 }

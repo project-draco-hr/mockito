@@ -1,0 +1,3 @@
+{
+  articleManager.updateArticleCounters("new");
+}
