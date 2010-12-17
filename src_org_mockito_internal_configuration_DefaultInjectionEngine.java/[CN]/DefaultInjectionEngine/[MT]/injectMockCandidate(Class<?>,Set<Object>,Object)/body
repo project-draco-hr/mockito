@@ -1,5 +1,7 @@
 {
-  for (  Field field : awaitingInjectionClazz.getDeclaredFields()) {
+  Field[] declaredFields=awaitingInjectionClazz.getDeclaredFields();
+  Arrays.sort(declaredFields,supertypesLast);
+  for (  Field field : declaredFields) {
     mockCandidateFilter.filterCandidate(mocks,field,fieldInstance).thenInject();
   }
 }

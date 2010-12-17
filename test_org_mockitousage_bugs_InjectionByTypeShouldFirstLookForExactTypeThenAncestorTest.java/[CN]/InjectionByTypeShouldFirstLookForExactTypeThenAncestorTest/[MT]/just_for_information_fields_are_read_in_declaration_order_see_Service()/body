@@ -1,0 +1,5 @@
+{
+  Field[] declaredFields=Service.class.getDeclaredFields();
+  assertEquals("mockShouldNotGoInHere",declaredFields[0].getName());
+  assertEquals("mockShouldGoInHere",declaredFields[1].getName());
+}
