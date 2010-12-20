@@ -1,15 +1,16 @@
 {
-  for (  Field field : testClassFields) {
-    Object fieldInstance=null;
+  for (  Field field : injectMocksFields) {
+    Set<Object> mocksToBeInjected=new HashSet<Object>(mocks);
+    Object injectMocksFieldInstance=null;
     try {
-      fieldInstance=new FieldInitializer(testClass,field).initialize();
+      injectMocksFieldInstance=new FieldInitializer(testClassInstance,field).initialize();
     }
  catch (    MockitoException e) {
       new Reporter().cannotInitializeForInjectMocksAnnotation(field.getName(),e);
     }
-    Class<?> fieldClass=fieldInstance.getClass();
+    Class<?> fieldClass=injectMocksFieldInstance.getClass();
     while (fieldClass != Object.class) {
-      injectMockCandidate(fieldClass,mocks,fieldInstance);
+      injectMockCandidate(fieldClass,mocksToBeInjected,injectMocksFieldInstance);
       fieldClass=fieldClass.getSuperclass();
     }
   }

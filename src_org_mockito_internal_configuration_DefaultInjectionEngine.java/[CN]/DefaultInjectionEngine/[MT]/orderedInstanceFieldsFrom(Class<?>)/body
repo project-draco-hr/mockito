@@ -1,0 +1,5 @@
+{
+  Field[] declaredFields=awaitingInjectionClazz.getDeclaredFields();
+  Arrays.sort(declaredFields,supertypesLast);
+  return declaredFields;
+}

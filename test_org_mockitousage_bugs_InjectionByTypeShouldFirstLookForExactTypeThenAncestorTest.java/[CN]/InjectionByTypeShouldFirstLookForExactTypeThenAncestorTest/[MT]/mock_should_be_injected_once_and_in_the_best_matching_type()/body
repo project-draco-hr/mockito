@@ -1,4 +1,4 @@
 {
-  assertSame(reference,illegalInjectionExample.mockShouldNotGoInHere);
+  assertSame(REFERENCE,illegalInjectionExample.mockShouldNotGoInHere);
   assertSame(mockedBean,illegalInjectionExample.mockShouldGoInHere);
 }
