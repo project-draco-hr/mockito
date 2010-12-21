@@ -1,0 +1,4 @@
+{
+  assertNull(withNullObjectField.keepMeNull);
+  assertSame(mockedBean,withNullObjectField.injectMePlease);
+}
