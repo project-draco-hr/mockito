@@ -1,0 +1,4 @@
+{
+  assertSame(REFERENCE,reversedOrderService.mockShouldNotGoInHere);
+  assertSame(mockedBean,reversedOrderService.mockShouldGoInHere);
+}
