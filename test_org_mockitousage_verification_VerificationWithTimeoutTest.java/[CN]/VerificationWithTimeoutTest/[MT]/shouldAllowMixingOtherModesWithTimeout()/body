@@ -1,6 +1,6 @@
 {
-  Thread t1=waitAndExerciseMock(20);
-  Thread t2=waitAndExerciseMock(20);
+  Thread t1=waitAndExerciseMock(30);
+  Thread t2=waitAndExerciseMock(30);
   t1.start();
   t2.start();
   verify(mock,timeout(1).never()).clear();
