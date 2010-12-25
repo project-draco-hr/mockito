@@ -1,0 +1,9 @@
+{
+  given(mock.simpleMethod("foo")).willThrow(RuntimeException.class);
+  try {
+    assertEquals("foo",mock.simpleMethod("foo"));
+    fail();
+  }
+ catch (  RuntimeException e) {
+  }
+}

@@ -1,0 +1,10 @@
+{
+  willDoNothing().willThrow(IllegalArgumentException.class).given(mock).voidMethod();
+  mock.voidMethod();
+  try {
+    mock.voidMethod();
+    fail();
+  }
+ catch (  IllegalArgumentException e) {
+  }
+}

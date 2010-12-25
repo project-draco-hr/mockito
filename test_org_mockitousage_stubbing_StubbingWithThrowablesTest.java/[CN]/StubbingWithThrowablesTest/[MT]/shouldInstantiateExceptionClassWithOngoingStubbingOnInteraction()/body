@@ -1,0 +1,4 @@
+{
+  Mockito.doThrow(IllegalArgumentException.class).when(mock).add(null);
+  mock.add(null);
+}
