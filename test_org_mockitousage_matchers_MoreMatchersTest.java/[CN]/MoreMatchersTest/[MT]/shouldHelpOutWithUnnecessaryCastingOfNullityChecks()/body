@@ -1,0 +1,8 @@
+{
+  when(mock.objectArgMethod(isNull(LinkedList.class))).thenReturn("string");
+  when(mock.objectArgMethod(notNull(LinkedList.class))).thenReturn("string");
+  when(mock.objectArgMethod(isNotNull(LinkedList.class))).thenReturn("string");
+  assertEquals("string",mock.objectArgMethod(null));
+  assertEquals("string",mock.objectArgMethod("foo"));
+  assertEquals("string",mock.objectArgMethod("foo"));
+}

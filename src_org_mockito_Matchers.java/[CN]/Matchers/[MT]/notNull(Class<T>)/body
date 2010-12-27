@@ -1,0 +1,3 @@
+{
+  return (T)reportMatcher(NotNull.NOT_NULL).returnNull();
+}
