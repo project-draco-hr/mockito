@@ -9,7 +9,7 @@
   while (it1.hasNext()) {
     MethodInfo method=(MethodInfo)it1.next();
     Method actualMethod=(it2 != null) ? (Method)it2.next() : null;
-    int index=filter.accept(actualMethod);
+    int index=filter.accept(actualMethod,actualMethods);
     if (index >= callbackTypes.length) {
       throw new IllegalArgumentException("Callback filter returned an index that is too large: " + index);
     }
