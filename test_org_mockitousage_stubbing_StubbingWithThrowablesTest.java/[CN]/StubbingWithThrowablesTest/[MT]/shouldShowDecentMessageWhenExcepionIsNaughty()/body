@@ -1,0 +1,4 @@
+{
+  when(mock.add("")).thenThrow(NaughtyException.class);
+  mock.add("");
+}
