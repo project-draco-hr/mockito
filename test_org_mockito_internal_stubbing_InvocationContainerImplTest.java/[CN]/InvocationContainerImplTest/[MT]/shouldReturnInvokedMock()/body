@@ -1,0 +1,4 @@
+{
+  container.setInvocationForPotentialStubbing(new InvocationMatcher(invocation));
+  assertEquals(invocation.getMock(),container.invokedMock());
+}
