@@ -1,0 +1,7 @@
+{
+  MockHandler<?> handler=createHandlerWithListeners(listener1,listener2);
+  stubProgressWithVerification(handler);
+  handler.handle(SOME_INVOCATION);
+  verify(listener1).invoking(SOME_INVOCATION);
+  verify(listener2).invoking(SOME_INVOCATION);
+}

@@ -1,0 +1,8 @@
+{
+  for (  InvocationListener listener : invocationListener) {
+    if (listener.getClass().equals(clazz)) {
+      return false;
+    }
+  }
+  return true;
+}

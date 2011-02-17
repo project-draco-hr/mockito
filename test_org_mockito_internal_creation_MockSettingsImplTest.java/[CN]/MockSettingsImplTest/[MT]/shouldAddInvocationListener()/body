@@ -1,0 +1,6 @@
+{
+  assertTrue(mockSettingsImpl.getInvocationListener().isEmpty());
+  mockSettingsImpl.callback(SOME_LISTENER);
+  assertEquals(1,mockSettingsImpl.getInvocationListener().size());
+  assertSame(SOME_LISTENER,getListener(mockSettingsImpl));
+}

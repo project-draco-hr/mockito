@@ -1,0 +1,6 @@
+{
+  if (doesNotHaveListenerOfClass(LogInvocationsToStdOutListener.class)) {
+    callback(new LogInvocationsToStdOutListener());
+  }
+  return this;
+}

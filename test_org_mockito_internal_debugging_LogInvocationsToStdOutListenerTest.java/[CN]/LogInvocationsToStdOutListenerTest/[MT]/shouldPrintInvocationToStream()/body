@@ -1,0 +1,6 @@
+{
+  LogInvocationsToStdOutListener listener=new LogInvocationsToStdOutListener();
+  listener.printStream=mock(PrintStream.class);
+  listener.invoking(SOME_INVOCATION);
+  verify(listener.printStream).println(SOME_INVOCATION.toString());
+}

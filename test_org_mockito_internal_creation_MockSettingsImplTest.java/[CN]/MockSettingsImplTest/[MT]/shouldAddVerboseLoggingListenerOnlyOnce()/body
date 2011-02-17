@@ -1,0 +1,5 @@
+{
+  assertTrue(mockSettingsImpl.getInvocationListener().isEmpty());
+  mockSettingsImpl.verboseLogging().verboseLogging();
+  assertEquals(1,mockSettingsImpl.getInvocationListener().size());
+}

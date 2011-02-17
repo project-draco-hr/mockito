@@ -1,0 +1,9 @@
+{
+  InvocationListener listener=mock(InvocationListener.class);
+  Foo foo=mock(Foo.class,withSettings().callback(listener));
+  foo.doSomething(SOME_STRING_ARGUMENT);
+  ArgumentCaptor<InvocationOnMock> captor=ArgumentCaptor.forClass(InvocationOnMock.class);
+  verify(listener).invoking(captor.capture());
+  assertSame(foo,captor.getValue().getMock());
+  assertEquals(Foo.class.getMethod("doSomething",String.class),captor.getValue().getMethod());
+}

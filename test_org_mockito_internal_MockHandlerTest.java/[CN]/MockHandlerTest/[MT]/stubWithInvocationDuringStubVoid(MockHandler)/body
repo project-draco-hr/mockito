@@ -1,0 +1,4 @@
+{
+  stubWithPreviouslySetVoidAnswer(handler);
+  stubHandlerStateWithPreviousStubVoidInvocation(handler);
+}

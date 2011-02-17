@@ -1,0 +1,3 @@
+{
+  assertNotContains(new MockUtil().getMockName(mock).toString(),baos.toString());
+}

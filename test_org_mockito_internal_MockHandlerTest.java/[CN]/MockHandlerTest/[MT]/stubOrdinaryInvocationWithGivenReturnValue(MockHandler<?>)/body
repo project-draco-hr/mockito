@@ -1,0 +1,3 @@
+{
+  stubOrdinaryInvocationWithReturnValue(handler,SOME_RETURN_VALUE);
+}

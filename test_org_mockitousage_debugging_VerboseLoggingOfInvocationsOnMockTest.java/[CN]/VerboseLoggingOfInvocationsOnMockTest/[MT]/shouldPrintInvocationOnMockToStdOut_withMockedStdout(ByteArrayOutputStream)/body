@@ -1,0 +1,7 @@
+{
+  Foo foo=mock(Foo.class,withSettings().verboseLogging());
+  foo.doSomething(SOME_STRING_VALUE);
+  assertStreamContainsMockName(foo,baos);
+  assertContains("doSomething",baos.toString());
+  assertContains(SOME_STRING_VALUE,baos.toString());
+}

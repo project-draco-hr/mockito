@@ -1,0 +1,8 @@
+{
+  InvocationListener listener1=mock(InvocationListener.class);
+  InvocationListener listener2=mock(InvocationListener.class);
+  Foo foo=mock(Foo.class,withSettings().callback(listener1).callback(listener2));
+  foo.doSomething(SOME_STRING_ARGUMENT);
+  verify(listener1).invoking(any(Invocation.class));
+  verify(listener2).invoking(any(Invocation.class));
+}

@@ -1,0 +1,3 @@
+{
+  return settings.getInvocationListener().iterator().next();
+}

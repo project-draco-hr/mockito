@@ -1,0 +1,5 @@
+{
+  ByteArrayOutputStream baos=new ByteArrayOutputStream();
+  System.setOut(new PrintStream(baos));
+  return baos;
+}

@@ -1,0 +1,7 @@
+{
+  StubbedInvocationMatcher invocationContainer=mock(StubbedInvocationMatcher.class);
+  given(handler.matchersBinder.bindMatchers(any(ArgumentMatcherStorage.class),any(Invocation.class))).willReturn(invocationContainer);
+  Invocation invocation=mock(Invocation.class);
+  given(invocationContainer.getInvocation()).willReturn(invocation);
+  given(invocation.isVoid()).willReturn(true);
+}
