@@ -1,5 +1,5 @@
 {
-  notifyInvocationListener(invocation);
+  notifyAllInvocationListener(invocation);
   if (invocationContainerImpl.hasAnswersForStubbing()) {
     InvocationMatcher invocationMatcher=matchersBinder.bindMatchers(mockingProgress.getArgumentMatcherStorage(),invocation);
     invocationContainerImpl.setMethodForStubbing(invocationMatcher);

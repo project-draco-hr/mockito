@@ -1,0 +1,6 @@
+{
+  InvocationListener throwingListener=mock(InvocationListener.class);
+  doThrow(new RuntimeException()).when(throwingListener).invoking(SOME_INVOCATION);
+  MockHandler<?> handler=createCorrectlyStubbedHandler(throwingListener);
+  handler.handle(SOME_INVOCATION);
+}
