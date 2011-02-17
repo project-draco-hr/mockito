@@ -1,6 +1,6 @@
 {
   Invocation invocation=new InvocationBuilder().toInvocation();
-  MockHandler handler=new MockHandler();
+  @SuppressWarnings("rawtypes") MockHandler<?> handler=new MockHandler();
   handler.mockingProgress.verificationStarted(VerificationModeFactory.atLeastOnce());
   handler.matchersBinder=new MatchersBinder(){
     public InvocationMatcher bindMatchers(    ArgumentMatcherStorage argumentMatcherStorage,    Invocation invocation){

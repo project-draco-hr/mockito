@@ -1,5 +1,5 @@
 {
-  MockHandler handler=createHandlerWithListeners(listener1,listener2);
+  MockHandler<?> handler=createHandlerWithListeners(listener1,listener2);
   stubWithInvocationDuringStubVoid(handler);
   handler.handle(SOME_INVOCATION);
   verify(listener1).invoking(SOME_INVOCATION);
