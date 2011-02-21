@@ -1,0 +1,10 @@
+{
+  ByteArrayOutputStream baos=setUpStreamAsStdOut();
+  FooImpl fooSpy=mock(FooImpl.class,withSettings().spiedInstance(new FooImpl()).verboseLogging());
+  doCallRealMethod().when(fooSpy).doSomething(SOME_STRING_VALUE);
+  fooSpy.doSomething(SOME_STRING_VALUE);
+  assertStreamContainsClassName(getClass(),baos);
+  assertStreamContainsMockName(fooSpy,baos);
+  assertContains("doSomething",baos.toString());
+  assertContains(SOME_STRING_VALUE,baos.toString());
+}

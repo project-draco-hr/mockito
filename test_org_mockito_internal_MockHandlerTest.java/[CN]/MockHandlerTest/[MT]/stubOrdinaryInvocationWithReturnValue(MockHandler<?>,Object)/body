@@ -1,0 +1,5 @@
+{
+  StubbedInvocationMatcher matcher=mock(StubbedInvocationMatcher.class);
+  given(matcher.answer(any(InvocationOnMock.class))).willReturn(returnValue);
+  stubOrdinaryInvocationWithInvocationMatcher(handler,matcher);
+}

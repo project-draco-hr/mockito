@@ -1,0 +1,8 @@
+{
+  try {
+    listener.invokingWithException(invocation,exception,getStubbingLocationOrNull(invocation));
+  }
+ catch (  RuntimeException e) {
+    throw new MockitoException(StringJoiner.join("An invocation listener threw an exception.","The listener has the class " + listener.getClass().getName()),e);
+  }
+}

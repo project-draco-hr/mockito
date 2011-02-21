@@ -1,0 +1,16 @@
+{
+  ByteArrayOutputStream baos=setUpStreamAsStdOut();
+  Foo foo=mock(Foo.class,withSettings().verboseLogging());
+  doThrow(new ThirdPartyException()).when(foo).doSomething(SOME_STRING_VALUE);
+  try {
+    foo.doSomething(SOME_STRING_VALUE);
+    fail("Exception erwartet.");
+  }
+ catch (  ThirdPartyException e) {
+    assertStreamContainsClassName(getClass(),baos);
+    assertStreamContainsMockName(foo,baos);
+    assertContains("doSomething",baos.toString());
+    assertContains(SOME_STRING_VALUE,baos.toString());
+    assertStreamContainsClassName(ThirdPartyException.class,baos);
+  }
+}

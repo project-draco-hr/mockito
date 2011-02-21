@@ -1,0 +1,12 @@
+{
+  printHeader();
+  printCommonInfos(invocation);
+  printlnIndented("Will return: >" + returnValue + "<"+ ((returnValue == null) ? "" : " (" + returnValue.getClass().getName() + ")"));
+  if (locationOfStubbing == null) {
+    printMethodHasNotBeenStubbed();
+  }
+ else {
+    printMethodHasBeenStubbed(locationOfStubbing);
+  }
+  printFooter();
+}

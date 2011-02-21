@@ -1,7 +1,8 @@
 {
   MockHandler<?> handler=createHandlerWithListeners(listener1,listener2);
   stubOrdinaryInvocationWithDefaultReturnValue(handler);
-  handler.handle(SOME_INVOCATION);
-  verify(listener1).invoking(SOME_INVOCATION);
-  verify(listener2).invoking(SOME_INVOCATION);
+  Invocation invocation=createInvocationWithStubbingLocation(SOME_LOCATION);
+  handler.handle(invocation);
+  verify(listener1).invokingWithReturnValue(invocation,null,SOME_LOCATION);
+  verify(listener2).invokingWithReturnValue(invocation,null,SOME_LOCATION);
 }

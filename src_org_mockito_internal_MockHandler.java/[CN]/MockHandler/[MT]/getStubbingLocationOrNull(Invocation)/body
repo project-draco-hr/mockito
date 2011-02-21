@@ -1,0 +1,3 @@
+{
+  return (invocation.stubInfo() == null) ? null : invocation.stubInfo().stubbedAt();
+}

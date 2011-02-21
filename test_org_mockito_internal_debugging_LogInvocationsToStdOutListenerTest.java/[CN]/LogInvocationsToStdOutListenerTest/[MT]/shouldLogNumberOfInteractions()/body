@@ -1,0 +1,9 @@
+{
+  LogInvocationsToStdOutListener listener=createListenerWithMockedStream();
+  listener.invokingWithException(createInvocationWithLocation(),SOME_EXCEPTION,LOCATION_OF_STUBBING);
+  assertIsPrinted("#1",listener);
+  listener.invokingWithException(createInvocationWithLocation(),SOME_EXCEPTION,OTHER_LOCATION);
+  assertIsPrinted("#2",listener);
+  listener.invokingWithException(createInvocationWithLocation(),SOME_EXCEPTION,LOCATION_OF_STUBBING);
+  assertIsPrinted("#3",listener);
+}

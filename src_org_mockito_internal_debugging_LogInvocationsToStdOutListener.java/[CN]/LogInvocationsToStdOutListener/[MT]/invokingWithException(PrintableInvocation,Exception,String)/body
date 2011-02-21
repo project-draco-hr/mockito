@@ -1,0 +1,12 @@
+{
+  printHeader();
+  printCommonInfos(invocation);
+  printlnIndented("Will throw: " + exception);
+  if (locationOfStubbing == null) {
+    printMethodHasNotBeenStubbed();
+  }
+ else {
+    printMethodHasBeenStubbed(locationOfStubbing);
+  }
+  printFooter();
+}

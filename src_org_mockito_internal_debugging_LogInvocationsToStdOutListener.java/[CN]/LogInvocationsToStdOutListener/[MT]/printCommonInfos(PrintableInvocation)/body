@@ -1,0 +1,4 @@
+{
+  printStream.println(invocation.toString());
+  printlnIndented(invocation.getLocation().toString());
+}

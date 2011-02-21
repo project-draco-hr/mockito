@@ -1,0 +1,9 @@
+{
+  InvocationListener listener1=mock(InvocationListener.class);
+  InvocationListener listener2=mock(InvocationListener.class);
+  Foo foo=mock(Foo.class,withSettings().callback(listener1).callback(listener2));
+  given(foo.giveMeSomeString(SOME_STRING_ARGUMENT)).willReturn(SOME_RETURN_VALUE);
+  foo.giveMeSomeString(SOME_STRING_ARGUMENT);
+  verify(listener1).invokingWithReturnValue(isA(PrintableInvocation.class),eq(SOME_RETURN_VALUE),isA(String.class));
+  verify(listener2).invokingWithReturnValue(isA(PrintableInvocation.class),eq(SOME_RETURN_VALUE),isA(String.class));
+}

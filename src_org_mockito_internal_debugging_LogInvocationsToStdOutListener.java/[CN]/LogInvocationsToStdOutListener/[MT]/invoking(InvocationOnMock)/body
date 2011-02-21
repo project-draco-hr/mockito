@@ -1,3 +1,0 @@
-{
-  printStream.println(invocation.toString());
-}

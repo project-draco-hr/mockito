@@ -1,0 +1,9 @@
+{
+  ArgumentCaptor<String> captor=ArgumentCaptor.forClass(String.class);
+  verify(listener.printStream,atLeastOnce()).println(captor.capture());
+  StringBuffer concatenatedArgs=new StringBuffer();
+  for (  String arg : captor.getAllValues()) {
+    concatenatedArgs.append(arg).append("\n");
+  }
+  return concatenatedArgs.toString();
+}

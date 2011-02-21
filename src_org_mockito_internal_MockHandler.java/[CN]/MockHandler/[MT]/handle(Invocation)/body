@@ -1,34 +1,11 @@
 {
-  notifyAllInvocationListener(invocation);
-  if (invocationContainerImpl.hasAnswersForStubbing()) {
-    InvocationMatcher invocationMatcher=matchersBinder.bindMatchers(mockingProgress.getArgumentMatcherStorage(),invocation);
-    invocationContainerImpl.setMethodForStubbing(invocationMatcher);
-    return null;
+  try {
+    Object returnValue=handleAllTypesOfInvocations(invocation);
+    notifyAllListenerOfInvocationWithReturnValue(invocation,returnValue);
+    return returnValue;
   }
-  VerificationMode verificationMode=mockingProgress.pullVerificationMode();
-  InvocationMatcher invocationMatcher=matchersBinder.bindMatchers(mockingProgress.getArgumentMatcherStorage(),invocation);
-  mockingProgress.validateState();
-  if (verificationMode != null) {
-    if (((MockAwareVerificationMode)verificationMode).getMock() == invocation.getMock()) {
-      VerificationDataImpl data=new VerificationDataImpl(invocationContainerImpl,invocationMatcher);
-      verificationMode.verify(data);
-      return null;
-    }
- else {
-      mockingProgress.verificationStarted(verificationMode);
-    }
-  }
-  invocationContainerImpl.setInvocationForPotentialStubbing(invocationMatcher);
-  OngoingStubbingImpl<T> ongoingStubbing=new OngoingStubbingImpl<T>(invocationContainerImpl);
-  mockingProgress.reportOngoingStubbing(ongoingStubbing);
-  StubbedInvocationMatcher stubbedInvocation=invocationContainerImpl.findAnswerFor(invocation);
-  if (stubbedInvocation != null) {
-    stubbedInvocation.captureArgumentsFrom(invocation);
-    return stubbedInvocation.answer(invocation);
-  }
- else {
-    Object ret=mockSettings.getDefaultAnswer().answer(invocation);
-    invocationContainerImpl.resetInvocationForPotentialStubbing(invocationMatcher);
-    return ret;
+ catch (  Exception e) {
+    notifyAllListenerOfInvocationWithException(invocation,e);
+    throw e;
   }
 }

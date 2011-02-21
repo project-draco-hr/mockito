@@ -1,5 +1,0 @@
-{
-  PrintStream original=System.out;
-  ByteArrayOutputStream baos=setUpStreamAsStdOut();
-  shouldPrintInvocationOnMockToStdOut_withMockedStdout(baos);
-}

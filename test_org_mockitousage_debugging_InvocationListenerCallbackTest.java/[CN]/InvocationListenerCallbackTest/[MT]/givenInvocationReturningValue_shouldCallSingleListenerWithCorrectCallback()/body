@@ -1,0 +1,7 @@
+{
+  InvocationListener listener=mock(InvocationListener.class);
+  Foo foo=mock(Foo.class,withSettings().callback(listener));
+  given(foo.giveMeSomeString(SOME_STRING_ARGUMENT)).willReturn(SOME_RETURN_VALUE);
+  foo.giveMeSomeString(SOME_STRING_ARGUMENT);
+  verify(listener).invokingWithReturnValue(isA(PrintableInvocation.class),eq(SOME_RETURN_VALUE),contains(getClass().getSimpleName().toString()));
+}
