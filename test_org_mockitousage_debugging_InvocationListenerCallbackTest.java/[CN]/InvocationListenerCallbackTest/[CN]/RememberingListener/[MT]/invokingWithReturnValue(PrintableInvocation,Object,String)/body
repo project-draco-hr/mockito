@@ -1,0 +1,5 @@
+{
+  this.invocation=invocation;
+  this.returnValue=returnValue;
+  this.locationOfStubbing=locationOfStubbing;
+}

@@ -1,7 +1,7 @@
 {
-  InvocationListener listener=mock(InvocationListener.class);
+  RememberingListener listener=new RememberingListener();
   Foo foo=mock(Foo.class,withSettings().callback(listener));
   given(foo.giveMeSomeString(SOME_STRING_ARGUMENT)).willReturn(SOME_RETURN_VALUE);
   foo.giveMeSomeString(SOME_STRING_ARGUMENT);
-  verify(listener).invokingWithReturnValue(isA(PrintableInvocation.class),eq(SOME_RETURN_VALUE),contains(getClass().getSimpleName().toString()));
+  assertHasBeenNotified(listener,new InstanceOf(PrintableInvocation.class),new Equals(SOME_RETURN_VALUE),new Contains(getClass().getSimpleName().toString()));
 }
