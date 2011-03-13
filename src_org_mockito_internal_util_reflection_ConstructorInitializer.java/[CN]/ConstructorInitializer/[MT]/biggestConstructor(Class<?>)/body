@@ -1,0 +1,10 @@
+{
+  final List<Constructor<?>> constructors=Arrays.asList(clazz.getConstructors());
+  Collections.sort(constructors,new Comparator<Constructor<?>>(){
+    public int compare(    Constructor<?> o1,    Constructor<?> o2){
+      return o2.getParameterTypes().length - o1.getParameterTypes().length;
+    }
+  }
+);
+  return constructors.get(0);
+}

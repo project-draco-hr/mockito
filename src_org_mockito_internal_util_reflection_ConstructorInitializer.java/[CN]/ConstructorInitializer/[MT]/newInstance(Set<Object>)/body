@@ -1,0 +1,9 @@
+{
+  final Constructor<?> c=biggestConstructor(field.getType());
+  final Object[] args=args(c,mocks);
+  final AccessibilityChanger changer=new AccessibilityChanger();
+  changer.enableAccess(c);
+  final Object instance=c.newInstance(args);
+  changer.safelyDisableAccess(c);
+  return instance;
+}

@@ -1,0 +1,12 @@
+{
+  try {
+    final Object instance=newInstance(mocks);
+    final AccessibilityChanger changer=new AccessibilityChanger();
+    changer.enableAccess(field);
+    field.set(target,instance);
+    changer.safelyDisableAccess(field);
+  }
+ catch (  Exception e) {
+    new Reporter().cannotInitializeForInjectMocksAnnotation(field.getName(),e);
+  }
+}
