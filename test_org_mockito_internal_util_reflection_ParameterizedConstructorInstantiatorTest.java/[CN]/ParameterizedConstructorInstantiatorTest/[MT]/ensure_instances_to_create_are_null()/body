@@ -1,0 +1,7 @@
+{
+  withMultipleConstructor=null;
+  withOneConstructor=null;
+  withNoArgConstructor=null;
+  withThrowingConstructor=null;
+  withVarargConstructor=null;
+}

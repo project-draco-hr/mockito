@@ -1,0 +1,8 @@
+{
+  if (injectionStrategies == null) {
+    injectionStrategies=strategy;
+  }
+ else {
+    injectionStrategies.thenTry(strategy);
+  }
+}

@@ -1,0 +1,10 @@
+{
+  given(resolver.resolveTypeInstances(Matchers.<Class<?>[]>anyVararg())).willReturn(new Object[]{null});
+  try {
+    new ParameterizedConstructorInstantiator(this,field("withThrowingConstructor"),resolver).instantiate();
+    fail();
+  }
+ catch (  MockitoException e) {
+    assertThat(e.getMessage()).contains("constructor").contains("raised an exception");
+  }
+}

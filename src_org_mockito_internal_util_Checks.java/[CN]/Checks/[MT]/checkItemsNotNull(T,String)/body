@@ -1,0 +1,7 @@
+{
+  checkNotNull(iterable,checkedIterable);
+  for (  Object item : iterable) {
+    checkNotNull(item,"item in " + checkedIterable);
+  }
+  return iterable;
+}

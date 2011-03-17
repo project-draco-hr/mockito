@@ -1,0 +1,4 @@
+{
+  this.mocks.addAll(checkNotNull(mocks,"mocks"));
+  return this;
+}

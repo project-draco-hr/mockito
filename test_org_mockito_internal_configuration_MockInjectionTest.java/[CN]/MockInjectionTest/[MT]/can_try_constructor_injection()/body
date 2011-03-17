@@ -1,0 +1,4 @@
+{
+  MockInjection.onField(field("withConstructor"),this).withMocks(oneSetMock()).tryConstructorInjection().apply();
+  assertThat(withConstructor.initializedWithConstructor).isEqualTo(true);
+}

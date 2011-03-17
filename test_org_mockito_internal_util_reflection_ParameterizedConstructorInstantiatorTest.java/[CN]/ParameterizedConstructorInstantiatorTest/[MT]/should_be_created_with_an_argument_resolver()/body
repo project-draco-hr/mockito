@@ -1,0 +1,3 @@
+{
+  new ParameterizedConstructorInstantiator(this,field("whateverForNow"),resolver);
+}

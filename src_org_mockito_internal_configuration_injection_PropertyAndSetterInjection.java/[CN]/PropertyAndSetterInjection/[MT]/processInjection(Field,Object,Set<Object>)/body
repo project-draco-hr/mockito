@@ -1,0 +1,16 @@
+{
+  Set<Object> mocksToBeInjected=new HashSet<Object>(mockCandidates);
+  Object fieldInstanceNeedingInjection=null;
+  try {
+    fieldInstanceNeedingInjection=new FieldInitializer(fieldOwner,field).initialize();
+  }
+ catch (  MockitoException e) {
+    new Reporter().cannotInitializeForInjectMocksAnnotation(field.getName(),e);
+  }
+  Class<?> fieldClass=fieldInstanceNeedingInjection.getClass();
+  while (fieldClass != Object.class) {
+    injectMockCandidate(fieldClass,mocksToBeInjected,fieldInstanceNeedingInjection);
+    fieldClass=fieldClass.getSuperclass();
+  }
+  return false;
+}

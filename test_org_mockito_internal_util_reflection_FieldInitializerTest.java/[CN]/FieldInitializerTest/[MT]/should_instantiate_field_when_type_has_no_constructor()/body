@@ -1,0 +1,4 @@
+{
+  FieldInitializer fieldInitializer=new FieldInitializer(this,field("noConstructor"));
+  assertNotNull(fieldInitializer.initialize());
+}

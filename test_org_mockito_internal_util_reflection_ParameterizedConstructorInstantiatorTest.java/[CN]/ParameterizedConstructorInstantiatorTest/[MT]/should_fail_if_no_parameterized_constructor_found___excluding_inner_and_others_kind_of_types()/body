@@ -1,0 +1,9 @@
+{
+  try {
+    new ParameterizedConstructorInstantiator(this,field("withNoArgConstructor"),resolver).instantiate();
+    fail();
+  }
+ catch (  MockitoException me) {
+    assertThat(me.getMessage()).contains("no parameterized constructor").contains("withNoArgConstructor").contains("NoArgConstructor");
+  }
+}

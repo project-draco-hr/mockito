@@ -1,0 +1,6 @@
+{
+  if (processInjection(onField,fieldOwnedBy,mockCandidates)) {
+    return true;
+  }
+  return relayProcessToNextStrategy(onField,fieldOwnedBy,mockCandidates);
+}

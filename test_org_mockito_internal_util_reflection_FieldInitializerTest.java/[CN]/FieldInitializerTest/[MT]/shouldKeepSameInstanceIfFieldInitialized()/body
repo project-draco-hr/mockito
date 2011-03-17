@@ -1,5 +1,0 @@
-{
-  final StaticClass backupInstance=alreadyInstantiated;
-  FieldInitializer fieldInitializer=new FieldInitializer(this,this.getClass().getDeclaredField("alreadyInstantiated"));
-  assertSame(backupInstance,fieldInitializer.initialize());
-}

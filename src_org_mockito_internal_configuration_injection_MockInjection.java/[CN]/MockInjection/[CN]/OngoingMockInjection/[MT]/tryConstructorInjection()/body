@@ -1,0 +1,4 @@
+{
+  appendStrategy(new ConstructorInjection());
+  return this;
+}

@@ -1,0 +1,5 @@
+{
+  for (  Field field : fields) {
+    injectionStrategies.process(field,fieldOwner,mocks);
+  }
+}

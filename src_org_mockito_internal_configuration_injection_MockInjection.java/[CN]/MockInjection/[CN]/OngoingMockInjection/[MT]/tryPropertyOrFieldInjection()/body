@@ -1,0 +1,4 @@
+{
+  appendStrategy(new PropertyAndSetterInjection());
+  return this;
+}

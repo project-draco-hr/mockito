@@ -1,0 +1,4 @@
+{
+  nextStrategy=strategy;
+  return strategy;
+}

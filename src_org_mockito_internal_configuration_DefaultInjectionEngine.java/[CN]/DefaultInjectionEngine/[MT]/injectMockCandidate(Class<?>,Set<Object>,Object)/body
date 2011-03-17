@@ -1,6 +1,0 @@
-{
-  for (  Field field : orderedInstanceFieldsFrom(awaitingInjectionClazz)) {
-    Object injected=mockCandidateFilter.filterCandidate(mocks,field,fieldInstance).thenInject();
-    mocks.remove(injected);
-  }
-}

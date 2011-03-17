@@ -1,17 +1,3 @@
 {
-  for (  Field field : injectMocksFields) {
-    Set<Object> mocksToBeInjected=new HashSet<Object>(mocks);
-    Object injectMocksFieldInstance=null;
-    try {
-      injectMocksFieldInstance=new FieldInitializer(testClassInstance,field).initialize();
-    }
- catch (    MockitoException e) {
-      new Reporter().cannotInitializeForInjectMocksAnnotation(field.getName(),e);
-    }
-    Class<?> fieldClass=injectMocksFieldInstance.getClass();
-    while (fieldClass != Object.class) {
-      injectMockCandidate(fieldClass,mocksToBeInjected,injectMocksFieldInstance);
-      fieldClass=fieldClass.getSuperclass();
-    }
-  }
+  MockInjection.onFields(needingInjection,testClassInstance).withMocks(mocks).tryConstructorInjection().tryPropertyOrFieldInjection().apply();
 }
