@@ -1,3 +1,10 @@
 {
-  return false;
+  try {
+    SimpleArgumentResolver simpleArgumentResolver=new SimpleArgumentResolver(mockCandidates);
+    FieldInitializationReport report=new FieldInitializer(fieldOwner,field,simpleArgumentResolver).initialize();
+    return report.fieldWasInitialized();
+  }
+ catch (  MockitoException e) {
+    return false;
+  }
 }

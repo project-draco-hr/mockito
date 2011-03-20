@@ -1,4 +1,6 @@
 {
   FieldInitializer fieldInitializer=new FieldInitializer(this,field("privateDefaultConstructor"));
-  assertNotNull(fieldInitializer.initialize());
+  FieldInitializationReport report=fieldInitializer.initialize();
+  assertNotNull(report.fieldInstance());
+  assertTrue(report.fieldWasInitialized());
 }

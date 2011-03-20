@@ -1,7 +1,0 @@
-{
-  final List<Object> args=new ArrayList<Object>(c.getParameterTypes().length);
-  for (  Class<?> paramClass : c.getParameterTypes()) {
-    args.add(findMockByTypeOrCreateOne(mocks,paramClass));
-  }
-  return args.toArray();
-}

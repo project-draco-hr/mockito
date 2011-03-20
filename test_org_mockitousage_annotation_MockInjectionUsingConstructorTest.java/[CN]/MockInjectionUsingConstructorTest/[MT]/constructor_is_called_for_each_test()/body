@@ -1,0 +1,5 @@
+{
+  int number_of_test_before_including_this_one=4;
+  assertEquals(number_of_test_before_including_this_one,articleVisitorInstantiationCount);
+  assertEquals(number_of_test_before_including_this_one,articleVisitorMockInjectedInstances.size());
+}

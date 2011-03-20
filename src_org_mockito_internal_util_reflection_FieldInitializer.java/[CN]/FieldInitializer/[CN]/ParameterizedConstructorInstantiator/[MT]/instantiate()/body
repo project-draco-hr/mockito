@@ -5,13 +5,13 @@
     constructor=biggestConstructor(field.getType());
     checkParameterized(constructor,field);
     changer.enableAccess(constructor);
-    final Object[] args=resolver.resolveTypeInstances(constructor.getParameterTypes());
+    final Object[] args=argResolver.resolveTypeInstances(constructor.getParameterTypes());
     Object newFieldInstance=constructor.newInstance(args);
     new FieldSetter(testClass,field).set(newFieldInstance);
     return field.get(testClass);
   }
  catch (  IllegalArgumentException e) {
-    throw new MockitoException("internal error : resolver provided incorrect types for constructor " + constructor + " of type "+ field.getType().getSimpleName(),e);
+    throw new MockitoException("internal error : argResolver provided incorrect types for constructor " + constructor + " of type "+ field.getType().getSimpleName(),e);
   }
 catch (  InvocationTargetException e) {
     throw new MockitoException("the constructor of type '" + field.getType().getSimpleName() + "' has raised an exception (see the stack trace for cause): "+ e.getTargetException().toString(),e);

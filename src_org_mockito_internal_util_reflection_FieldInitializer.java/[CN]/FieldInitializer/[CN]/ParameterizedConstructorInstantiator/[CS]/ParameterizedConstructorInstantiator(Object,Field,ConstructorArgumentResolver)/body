@@ -1,5 +1,5 @@
 {
   this.testClass=testClass;
   this.field=field;
-  this.resolver=resolver;
+  this.argResolver=argumentResolver;
 }

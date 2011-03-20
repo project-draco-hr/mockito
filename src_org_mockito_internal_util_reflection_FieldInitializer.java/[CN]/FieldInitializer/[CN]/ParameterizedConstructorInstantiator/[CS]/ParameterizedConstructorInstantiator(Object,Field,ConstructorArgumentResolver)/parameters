@@ -1,3 +1,3 @@
 Object testClass
 Field field
-ConstructorArgumentResolver resolver
+ConstructorArgumentResolver argumentResolver
