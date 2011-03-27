@@ -1,6 +1,6 @@
 {
   Object failing=new Object(){
-    @InjectMocks ThrowingConstructor c;
+    @InjectMocks ThrowingConstructor failingConstructor;
   }
 ;
   try {
@@ -8,6 +8,7 @@
     fail();
   }
  catch (  MockitoException e) {
-    assertContains("correct usage of @InjectMocks",e.getMessage());
+    Assertions.assertThat(e.getMessage()).contains("failingConstructor").contains("constructor").contains("threw an exception");
+    Assertions.assertThat(e.getCause()).isInstanceOf(RuntimeException.class);
   }
 }
