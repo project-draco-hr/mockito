@@ -3,7 +3,6 @@
   Constructor<?> constructor=null;
   try {
     constructor=biggestConstructor(field.getType());
-    checkParameterized(constructor,field);
     changer.enableAccess(constructor);
     final Object[] args=argResolver.resolveTypeInstances(constructor.getParameterTypes());
     Object newFieldInstance=constructor.newInstance(args);

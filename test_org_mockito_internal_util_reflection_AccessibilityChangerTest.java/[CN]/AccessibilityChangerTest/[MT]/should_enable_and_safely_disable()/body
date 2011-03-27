@@ -1,0 +1,5 @@
+{
+  AccessibilityChanger changer=new AccessibilityChanger();
+  changer.enableAccess(field("whatever"));
+  changer.safelyDisableAccess(field("whatever"));
+}
