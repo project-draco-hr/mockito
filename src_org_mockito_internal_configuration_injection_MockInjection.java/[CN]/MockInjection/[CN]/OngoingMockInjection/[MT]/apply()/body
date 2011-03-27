@@ -1,5 +1,6 @@
 {
   for (  Field field : fields) {
     injectionStrategies.process(field,fieldOwner,mocks);
+    postInjectionStrategies.process(field,fieldOwner,mocks);
   }
 }

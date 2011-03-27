@@ -1,13 +1,7 @@
 {
   Class<?> classContext=clazz;
   while (classContext != Object.class) {
-    Field[] fields=classContext.getDeclaredFields();
-    for (    Field field : fields) {
-      if (field.isAnnotationPresent(InjectMocks.class)) {
-        assertNoAnnotations(field,Mock.class,MockitoAnnotations.Mock.class,Captor.class);
-        injectMocks(testInstance);
-      }
-    }
+    injectMocks(testInstance);
     classContext=classContext.getSuperclass();
   }
 }

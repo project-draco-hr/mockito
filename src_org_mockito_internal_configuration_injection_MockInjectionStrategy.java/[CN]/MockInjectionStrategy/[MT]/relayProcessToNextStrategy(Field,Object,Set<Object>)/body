@@ -1,3 +1,3 @@
 {
-  return nextStrategy != null && nextStrategy.processInjection(field,fieldOwner,mockCandidates);
+  return nextStrategy != null && nextStrategy.process(field,fieldOwner,mockCandidates);
 }

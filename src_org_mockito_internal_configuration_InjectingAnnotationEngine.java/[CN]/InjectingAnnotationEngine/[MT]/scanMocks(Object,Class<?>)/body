@@ -9,7 +9,7 @@
         fieldInstance=field.get(testClass);
       }
  catch (      IllegalAccessException e) {
-        throw new MockitoException("Problems injecting dependencies in " + field.getName(),e);
+        throw new MockitoException("Problems reading this field dependency " + field.getName() + " for injection",e);
       }
  finally {
         field.setAccessible(wasAccessible);

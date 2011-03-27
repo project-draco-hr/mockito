@@ -1,4 +1,4 @@
 {
-  appendStrategy(new PropertyAndSetterInjection());
+  injectionStrategies.thenTry(new PropertyAndSetterInjection());
   return this;
 }

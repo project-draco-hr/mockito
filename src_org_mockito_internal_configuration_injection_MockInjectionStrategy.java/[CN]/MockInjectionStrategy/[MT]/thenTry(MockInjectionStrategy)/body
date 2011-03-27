@@ -1,4 +1,9 @@
 {
-  nextStrategy=strategy;
+  if (nextStrategy != null) {
+    nextStrategy.thenTry(strategy);
+  }
+ else {
+    nextStrategy=strategy;
+  }
   return strategy;
 }

@@ -1,8 +1,8 @@
 {
   Field[] fields=context.getDeclaredFields();
   for (  Field field : fields) {
-    if (field.isAnnotationPresent(Spy.class)) {
-      assertNoAnnotations(Spy.class,field,Mock.class,org.mockito.MockitoAnnotations.Mock.class,Captor.class);
+    if (field.isAnnotationPresent(Spy.class) && !field.isAnnotationPresent(InjectMocks.class)) {
+      assertNoIncompatibleAnnotations(Spy.class,field,Mock.class,org.mockito.MockitoAnnotations.Mock.class,Captor.class);
       Object instance=null;
       try {
         FieldInitializationReport report=new FieldInitializer(testInstance,field).initialize();

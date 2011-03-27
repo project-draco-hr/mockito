@@ -1,10 +1,11 @@
 {
-  Set<Field> testedFields=new HashSet<Field>();
+  Set<Field> mockDependentFields=new HashSet<Field>();
   Field[] fields=clazz.getDeclaredFields();
   for (  Field field : fields) {
     if (null != field.getAnnotation(InjectMocks.class)) {
-      testedFields.add(field);
+      assertNoAnnotations(field,Mock.class,MockitoAnnotations.Mock.class,Captor.class);
+      mockDependentFields.add(field);
     }
   }
-  return testedFields;
+  return mockDependentFields;
 }

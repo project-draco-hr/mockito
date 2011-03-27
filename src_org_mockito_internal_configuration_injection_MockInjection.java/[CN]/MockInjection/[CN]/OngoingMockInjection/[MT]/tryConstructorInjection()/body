@@ -1,4 +1,4 @@
 {
-  appendStrategy(new ConstructorInjection());
+  injectionStrategies.thenTry(new ConstructorInjection());
   return this;
 }
