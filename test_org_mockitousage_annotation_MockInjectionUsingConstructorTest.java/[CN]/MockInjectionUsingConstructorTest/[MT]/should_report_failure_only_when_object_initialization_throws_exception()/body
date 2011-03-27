@@ -5,6 +5,7 @@ class ATest {
   }
   try {
     MockitoAnnotations.initMocks(new ATest());
+    fail();
   }
  catch (  MockitoException e) {
     Assertions.assertThat(e.getMessage()).contains("failingConstructor").contains("constructor").contains("threw an exception");
