@@ -1,5 +1,5 @@
 {
-  int number_of_test_before_including_this_one=4;
-  assertEquals(number_of_test_before_including_this_one,articleVisitorInstantiationCount);
-  assertEquals(number_of_test_before_including_this_one,articleVisitorMockInjectedInstances.size());
+  int minimum_number_of_test_before=3;
+  Assertions.assertThat(articleVisitorInstantiationCount).isGreaterThan(minimum_number_of_test_before);
+  Assertions.assertThat(articleVisitorMockInjectedInstances.size()).isGreaterThan(minimum_number_of_test_before);
 }

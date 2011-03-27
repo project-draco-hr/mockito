@@ -1,8 +1,4 @@
 {
-class ATest {
-    @Mock Set set;
-    @InjectMocks FailingConstructor failingConstructor;
-  }
   try {
     MockitoAnnotations.initMocks(new ATest());
     fail();
