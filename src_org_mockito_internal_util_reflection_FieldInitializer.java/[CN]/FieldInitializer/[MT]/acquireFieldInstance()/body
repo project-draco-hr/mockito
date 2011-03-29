@@ -1,0 +1,8 @@
+{
+  Object fieldInstance=field.get(fieldOwner);
+  if (fieldInstance != null) {
+    return new FieldInitializationReport(fieldInstance,false);
+  }
+  instantiator.instantiate();
+  return new FieldInitializationReport(field.get(fieldOwner),true);
+}

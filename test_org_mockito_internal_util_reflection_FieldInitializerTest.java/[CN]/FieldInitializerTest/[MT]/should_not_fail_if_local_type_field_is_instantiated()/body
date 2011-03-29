@@ -1,0 +1,9 @@
+{
+class LocalType {
+  }
+class TheTestWithLocalType {
+    @InjectMocks LocalType field=new LocalType();
+  }
+  TheTestWithLocalType testWithLocalType=new TheTestWithLocalType();
+  new FieldInitializer(testWithLocalType,testWithLocalType.getClass().getDeclaredField("field"));
+}

@@ -1,0 +1,4 @@
+{
+  this.fieldInstance=fieldInstance;
+  this.wasInitialized=wasInitialized;
+}

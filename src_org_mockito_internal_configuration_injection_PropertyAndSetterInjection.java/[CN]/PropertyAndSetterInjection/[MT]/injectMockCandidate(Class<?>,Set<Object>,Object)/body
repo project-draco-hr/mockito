@@ -1,0 +1,11 @@
+{
+  boolean injectionOccurred=false;
+  for (  Field field : orderedInstanceFieldsFrom(awaitingInjectionClazz)) {
+    Object injected=mockCandidateFilter.filterCandidate(mocks,field,instance).thenInject();
+    if (injected != null) {
+      injectionOccurred|=true;
+      mocks.remove(injected);
+    }
+  }
+  return injectionOccurred;
+}

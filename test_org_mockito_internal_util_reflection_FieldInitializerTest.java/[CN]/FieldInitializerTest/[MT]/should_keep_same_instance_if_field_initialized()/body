@@ -1,0 +1,7 @@
+{
+  final StaticClass backupInstance=alreadyInstantiated;
+  FieldInitializer fieldInitializer=new FieldInitializer(this,field("alreadyInstantiated"));
+  FieldInitializationReport report=fieldInitializer.initialize();
+  assertSame(backupInstance,report.fieldInstance());
+  assertFalse(report.fieldWasInitialized());
+}

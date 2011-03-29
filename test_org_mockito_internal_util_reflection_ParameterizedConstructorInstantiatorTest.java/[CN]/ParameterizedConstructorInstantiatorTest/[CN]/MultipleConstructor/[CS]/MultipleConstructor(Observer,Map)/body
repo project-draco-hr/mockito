@@ -1,0 +1,5 @@
+{
+  super(observer);
+  this.observer=observer;
+  this.map=map;
+}

@@ -1,0 +1,7 @@
+{
+  List<Object> argumentInstances=new ArrayList<Object>(argTypes.length);
+  for (  Class<?> argType : argTypes) {
+    argumentInstances.add(objectThatIsAssignableFrom(argType));
+  }
+  return argumentInstances.toArray();
+}

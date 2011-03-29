@@ -1,0 +1,4 @@
+{
+  MockInjection.onField(field("withoutConstructor"),this).withMocks(otherKindOfMocks()).tryPropertyOrFieldInjection().apply();
+  assertThat(withoutConstructor.theSet).isNull();
+}

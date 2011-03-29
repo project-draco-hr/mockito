@@ -1,4 +1,0 @@
-{
-  FieldInitializer fieldInitializer=new FieldInitializer(this,this.getClass().getDeclaredField("noDefaultConstructor"));
-  fieldInitializer.initialize();
-}

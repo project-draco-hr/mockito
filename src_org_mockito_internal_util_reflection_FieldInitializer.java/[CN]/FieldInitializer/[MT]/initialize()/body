@@ -2,10 +2,10 @@
   final AccessibilityChanger changer=new AccessibilityChanger();
   changer.enableAccess(field);
   try {
-    return acquireFieldInstance(testClass,field);
+    return acquireFieldInstance();
   }
  catch (  IllegalAccessException e) {
-    throw new MockitoException("Problems injecting dependencies in " + field.getName(),e);
+    throw new MockitoException("Problems initializing field '" + field.getName() + "' of type '"+ field.getType().getSimpleName()+ "'",e);
   }
  finally {
     changer.safelyDisableAccess(field);

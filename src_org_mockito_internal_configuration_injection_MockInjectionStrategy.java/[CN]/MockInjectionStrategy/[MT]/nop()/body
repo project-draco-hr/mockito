@@ -1,0 +1,8 @@
+{
+  return new MockInjectionStrategy(){
+    protected boolean processInjection(    Field field,    Object fieldOwner,    Set<Object> mockCandidates){
+      return false;
+    }
+  }
+;
+}

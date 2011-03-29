@@ -1,0 +1,4 @@
+{
+  postInjectionStrategies.thenTry(new SpyOnInjectedFieldsHandler());
+  return this;
+}

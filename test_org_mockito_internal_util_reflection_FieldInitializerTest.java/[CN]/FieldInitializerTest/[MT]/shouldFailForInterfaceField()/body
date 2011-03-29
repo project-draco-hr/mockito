@@ -1,3 +1,0 @@
-{
-  new FieldInitializer(this,this.getClass().getDeclaredField("interfaceType"));
-}

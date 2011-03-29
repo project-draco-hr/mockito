@@ -1,0 +1,14 @@
+{
+  try {
+    SimpleArgumentResolver simpleArgumentResolver=new SimpleArgumentResolver(mockCandidates);
+    FieldInitializationReport report=new FieldInitializer(fieldOwner,field,simpleArgumentResolver).initialize();
+    return report.fieldWasInitialized();
+  }
+ catch (  MockitoException e) {
+    if (e.getCause() instanceof InvocationTargetException) {
+      Throwable realCause=e.getCause().getCause();
+      new Reporter().fieldInitialisationThrewException(field,realCause);
+    }
+    return false;
+  }
+}

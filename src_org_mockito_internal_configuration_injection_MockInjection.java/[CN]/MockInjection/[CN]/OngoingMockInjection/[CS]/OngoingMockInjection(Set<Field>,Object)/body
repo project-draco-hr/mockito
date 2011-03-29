@@ -1,0 +1,4 @@
+{
+  this.fieldOwner=checkNotNull(fieldOwner,"fieldOwner");
+  this.fields.addAll(checkItemsNotNull(fields,"fields"));
+}

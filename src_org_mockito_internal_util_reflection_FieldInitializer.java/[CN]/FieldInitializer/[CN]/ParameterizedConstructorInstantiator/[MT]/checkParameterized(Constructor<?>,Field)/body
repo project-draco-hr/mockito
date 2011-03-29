@@ -1,0 +1,5 @@
+{
+  if (constructor.getParameterTypes().length == 0) {
+    throw new MockitoException("the field " + field.getName() + " of type "+ field.getType()+ " has no parameterized constructor");
+  }
+}

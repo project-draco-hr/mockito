@@ -1,0 +1,18 @@
+{
+  FieldReader fieldReader=new FieldReader(fieldOwner,field);
+  if (!fieldReader.isNull() && field.isAnnotationPresent(Spy.class)) {
+    try {
+      Object instance=fieldReader.read();
+      if (new MockUtil().isMock(instance)) {
+        Mockito.reset(instance);
+      }
+ else {
+        new FieldSetter(fieldOwner,field).set(Mockito.mock(instance.getClass(),withSettings().spiedInstance(instance).defaultAnswer(Mockito.CALLS_REAL_METHODS).name(field.getName())));
+      }
+    }
+ catch (    Exception e) {
+      throw new MockitoException("Problems initiating spied field " + field.getName(),e);
+    }
+  }
+  return false;
+}

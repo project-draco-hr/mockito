@@ -1,0 +1,22 @@
+{
+  Set<Object> mocksToBeInjected=new HashSet<Object>(mockCandidates);
+  FieldInitializationReport report=null;
+  try {
+    report=new FieldInitializer(fieldOwner,field).initialize();
+  }
+ catch (  MockitoException e) {
+    if (e.getCause() instanceof InvocationTargetException) {
+      Throwable realCause=e.getCause().getCause();
+      new Reporter().fieldInitialisationThrewException(field,realCause);
+    }
+    new Reporter().cannotInitializeForInjectMocksAnnotation(field.getName(),e);
+  }
+  boolean injectionOccurred=false;
+  Class<?> fieldClass=report.fieldClass();
+  Object fieldInstanceNeedingInjection=report.fieldInstance();
+  while (fieldClass != Object.class) {
+    injectionOccurred|=injectMockCandidate(fieldClass,mocksToBeInjected,fieldInstanceNeedingInjection);
+    fieldClass=fieldClass.getSuperclass();
+  }
+  return injectionOccurred;
+}

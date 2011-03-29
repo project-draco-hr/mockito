@@ -1,0 +1,6 @@
+{
+  given(resolver.resolveTypeInstances(Matchers.<Class<?>[]>anyVararg())).willReturn(new Object[]{observer});
+  boolean result=underTest.process(field("whatever"),this,newSetOf(observer));
+  assertTrue(result);
+  assertNotNull(whatever);
+}

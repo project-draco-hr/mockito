@@ -1,0 +1,3 @@
+{
+  MockInjection.onField(field("withConstructor"),this).withMocks(null);
+}

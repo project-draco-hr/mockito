@@ -1,0 +1,30 @@
+{
+  final AccessibilityChanger changer=new AccessibilityChanger();
+  Constructor<?> constructor=null;
+  try {
+    constructor=biggestConstructor(field.getType());
+    checkParameterized(constructor,field);
+    changer.enableAccess(constructor);
+    final Object[] args=argResolver.resolveTypeInstances(constructor.getParameterTypes());
+    Object newFieldInstance=constructor.newInstance(args);
+    new FieldSetter(testClass,field).set(newFieldInstance);
+    return field.get(testClass);
+  }
+ catch (  IllegalArgumentException e) {
+    throw new MockitoException("internal error : argResolver provided incorrect types for constructor " + constructor + " of type "+ field.getType().getSimpleName(),e);
+  }
+catch (  InvocationTargetException e) {
+    throw new MockitoException("the constructor of type '" + field.getType().getSimpleName() + "' has raised an exception (see the stack trace for cause): "+ e.getTargetException().toString(),e);
+  }
+catch (  InstantiationException e) {
+    throw new MockitoException("InstantiationException (see the stack trace for cause): " + e.toString(),e);
+  }
+catch (  IllegalAccessException e) {
+    throw new MockitoException("IllegalAccessException (see the stack trace for cause): " + e.toString(),e);
+  }
+ finally {
+    if (constructor != null) {
+      changer.safelyDisableAccess(constructor);
+    }
+  }
+}

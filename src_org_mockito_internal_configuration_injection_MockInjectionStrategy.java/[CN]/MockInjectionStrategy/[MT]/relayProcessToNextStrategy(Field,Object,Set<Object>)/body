@@ -1,0 +1,3 @@
+{
+  return nextStrategy != null && nextStrategy.process(field,fieldOwner,mockCandidates);
+}

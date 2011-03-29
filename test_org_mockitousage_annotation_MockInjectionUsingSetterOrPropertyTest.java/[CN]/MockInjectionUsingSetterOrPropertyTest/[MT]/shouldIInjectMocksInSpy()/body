@@ -1,0 +1,4 @@
+{
+  assertNotNull(initializedSpy.getAList());
+  assertTrue(mockUtil.isMock(initializedSpy));
+}

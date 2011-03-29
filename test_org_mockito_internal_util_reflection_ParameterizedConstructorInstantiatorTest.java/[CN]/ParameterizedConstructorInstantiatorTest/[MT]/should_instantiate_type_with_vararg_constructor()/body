@@ -1,0 +1,6 @@
+{
+  Observer[] vararg=new Observer[]{};
+  given(resolver.resolveTypeInstances(Matchers.<Class<?>[]>anyVararg())).willReturn(new Object[]{"",vararg});
+  new ParameterizedConstructorInstantiator(this,field("withVarargConstructor"),resolver).instantiate();
+  assertNotNull(withVarargConstructor);
+}

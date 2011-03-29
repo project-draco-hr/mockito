@@ -1,0 +1,3 @@
+{
+  MockInjection.onFields((Set<Field>)null,this);
+}

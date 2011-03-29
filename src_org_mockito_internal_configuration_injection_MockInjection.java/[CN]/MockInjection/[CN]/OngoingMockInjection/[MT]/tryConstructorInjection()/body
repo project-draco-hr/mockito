@@ -1,0 +1,4 @@
+{
+  injectionStrategies.thenTry(new ConstructorInjection());
+  return this;
+}
