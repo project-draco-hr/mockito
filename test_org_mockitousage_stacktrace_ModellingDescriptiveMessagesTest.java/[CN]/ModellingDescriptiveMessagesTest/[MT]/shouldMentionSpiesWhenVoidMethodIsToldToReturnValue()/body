@@ -1,0 +1,4 @@
+{
+  List list=mock(List.class);
+  doReturn("foo").when(list).clear();
+}
