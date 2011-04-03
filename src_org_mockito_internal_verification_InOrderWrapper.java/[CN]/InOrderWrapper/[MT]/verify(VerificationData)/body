@@ -1,5 +1,5 @@
 {
-  List<Invocation> allInvocations=new AllInvocationsFinder().find(inOrder.getMocksToBeVerifiedInOrder());
-  VerificationDataInOrderImpl dataInOrder=new VerificationDataInOrderImpl(inOrder,allInvocations,data.getWanted());
+  List<Invocation> invocations=new VerifiableInvocationsFinder().find(inOrder.getMocksToBeVerifiedInOrder());
+  VerificationDataInOrderImpl dataInOrder=new VerificationDataInOrderImpl(inOrder,invocations,data.getWanted());
   mode.verifyInOrder(dataInOrder);
 }
