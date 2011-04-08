@@ -1,0 +1,5 @@
+{
+  when(mock.forMap(anyMapOf(String.class,String.class))).thenReturn("map");
+  assertEquals("map",mock.forMap(new HashMap<String,String>()));
+  assertEquals("map",mock.forMap(Collections.<String,String>emptyMap()));
+}
