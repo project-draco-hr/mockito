@@ -1,0 +1,5 @@
+{
+  assertFalse(mockSettingsImpl.hasInvocationListeners());
+  mockSettingsImpl.invocationListeners(invocationListener,invocationListener).invocationListeners(invocationListener);
+  Assertions.assertThat(mockSettingsImpl.getInvocationListeners()).containsSequence(invocationListener,invocationListener,invocationListener);
+}

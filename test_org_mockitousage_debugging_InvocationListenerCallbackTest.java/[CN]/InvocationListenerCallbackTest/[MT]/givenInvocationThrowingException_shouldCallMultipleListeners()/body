@@ -1,7 +1,7 @@
 {
   InvocationListener listener1=mock(InvocationListener.class);
   InvocationListener listener2=mock(InvocationListener.class);
-  Foo foo=mock(Foo.class,withSettings().callback(listener1).callback(listener2));
+  Foo foo=mock(Foo.class,withSettings().invocationListeners(listener1).invocationListeners(listener2));
   doThrow(new ThirdPartyException()).when(foo).doSomething(SOME_STRING_ARGUMENT);
   try {
     foo.doSomething(SOME_STRING_ARGUMENT);

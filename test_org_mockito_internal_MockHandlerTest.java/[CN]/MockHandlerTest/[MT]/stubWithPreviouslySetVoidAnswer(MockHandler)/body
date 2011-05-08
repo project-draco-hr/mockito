@@ -1,5 +1,5 @@
 {
-  List<Answer<?>> answers=new ArrayList<Answer<?>>();
+  List<Answer> answers=new ArrayList<Answer>();
   answers.add(new DoesNothing());
   handler.setAnswersForStubbing(answers);
 }

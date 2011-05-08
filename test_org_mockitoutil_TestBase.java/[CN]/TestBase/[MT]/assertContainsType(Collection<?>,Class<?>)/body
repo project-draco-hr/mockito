@@ -1,0 +1,13 @@
+{
+  Assertions.assertThat(list).satisfies(new Condition<Collection<?>>(){
+    @Override public boolean matches(    Collection<?> objects){
+      for (      Object object : objects) {
+        if (clazz.isAssignableFrom(object.getClass())) {
+          return true;
+        }
+      }
+      return false;
+    }
+  }
+);
+}

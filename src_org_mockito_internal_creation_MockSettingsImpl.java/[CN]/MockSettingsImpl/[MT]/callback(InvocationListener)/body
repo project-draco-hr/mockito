@@ -1,5 +1,0 @@
-{
-  validateListener(listener);
-  this.invocationListener.add(listener);
-  return this;
-}

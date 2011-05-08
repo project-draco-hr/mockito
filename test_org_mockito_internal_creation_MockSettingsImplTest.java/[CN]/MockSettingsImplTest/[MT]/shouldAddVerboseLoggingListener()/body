@@ -1,6 +1,5 @@
 {
-  assertTrue(mockSettingsImpl.getInvocationListener().isEmpty());
+  assertFalse(mockSettingsImpl.hasInvocationListeners());
   mockSettingsImpl.verboseLogging();
-  assertEquals(1,mockSettingsImpl.getInvocationListener().size());
-  assertTrue(getListener(mockSettingsImpl) instanceof LogInvocationsToStdOutListener);
+  assertContainsType(mockSettingsImpl.getInvocationListeners(),LogInvocationsToStdOutListener.class);
 }

@@ -1,5 +1,5 @@
 {
-  for (  InvocationListener listener : mockSettings.getInvocationListener()) {
+  for (  InvocationListener listener : mockSettings.getInvocationListeners()) {
     notifyListenerOfInvocationWithException(invocation,exception,listener);
   }
 }

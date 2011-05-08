@@ -1,6 +1,6 @@
 {
-  if (doesNotHaveListenerOfClass(LogInvocationsToStdOutListener.class)) {
-    callback(new LogInvocationsToStdOutListener());
+  if (!invocationListenersContainsType(LogInvocationsToStdOutListener.class)) {
+    invocationListeners(new LogInvocationsToStdOutListener());
   }
   return this;
 }

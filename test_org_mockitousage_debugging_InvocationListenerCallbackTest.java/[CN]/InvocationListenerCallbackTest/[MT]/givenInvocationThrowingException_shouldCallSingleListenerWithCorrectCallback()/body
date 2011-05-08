@@ -1,7 +1,7 @@
 {
   InvocationListener listener=mock(InvocationListener.class);
   RuntimeException expectedException=new ThirdPartyException();
-  Foo foo=mock(Foo.class,withSettings().callback(listener));
+  Foo foo=mock(Foo.class,withSettings().invocationListeners(listener));
   doThrow(expectedException).when(foo).doSomething(SOME_STRING_ARGUMENT);
   try {
     foo.doSomething(SOME_STRING_ARGUMENT);
