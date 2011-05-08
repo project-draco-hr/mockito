@@ -1,3 +1,0 @@
-{
-  assertSame(System.out,new LogInvocationsToStdOutListener().printStream);
-}

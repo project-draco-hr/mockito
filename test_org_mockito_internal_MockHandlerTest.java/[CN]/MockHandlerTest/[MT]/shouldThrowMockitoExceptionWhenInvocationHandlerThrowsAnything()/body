@@ -1,6 +1,6 @@
 {
   InvocationListener throwingListener=mock(InvocationListener.class);
-  doThrow(SOME_EXCEPTION).when(throwingListener).invokingWithReturnValue(any(Invocation.class),any(String.class),any(String.class));
+  doThrow(SOME_EXCEPTION).when(throwingListener).reportInvocation(any(MethodCallReport.class));
   MockHandler<?> handler=createCorrectlyStubbedHandler(throwingListener);
   handler.handle(SOME_INVOCATION);
 }

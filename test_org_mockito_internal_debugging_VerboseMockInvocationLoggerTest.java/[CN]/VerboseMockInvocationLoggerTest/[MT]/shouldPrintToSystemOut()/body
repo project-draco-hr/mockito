@@ -1,0 +1,3 @@
+{
+  assertThat(new VerboseMockInvocationLogger().printStream).isSameAs(System.out);
+}

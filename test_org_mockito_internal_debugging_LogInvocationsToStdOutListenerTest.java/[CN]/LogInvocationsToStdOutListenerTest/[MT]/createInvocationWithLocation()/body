@@ -1,6 +1,0 @@
-{
-  PrintableInvocation invocation=mock(PrintableInvocation.class);
-  Location location=mock(Location.class);
-  given(invocation.getLocation()).willReturn(location);
-  return invocation;
-}

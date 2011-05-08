@@ -1,4 +1,0 @@
-{
-  ctrOfInteractions++;
-  printStream.println("############ Logging method invocation #" + ctrOfInteractions + " on mock/spy ########");
-}

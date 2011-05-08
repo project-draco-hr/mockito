@@ -1,0 +1,4 @@
+{
+  listener.reportInvocation(MethodCallReport.of(invocation,"return value","location of stubbing"));
+  assertThat(printed()).contains(invocation.toString()).contains(invocation.getLocation().toString()).contains("return value").contains("location of stubbing");
+}

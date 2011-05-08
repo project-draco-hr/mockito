@@ -1,9 +1,0 @@
-{
-  LogInvocationsToStdOutListener listener=createListenerWithMockedStream();
-  PrintableInvocation invocation=createInvocationWithLocation();
-  listener.invokingWithReturnValue(invocation,SOME_RETURN_VALUE,LOCATION_OF_STUBBING);
-  assertIsPrinted(invocation.toString(),listener);
-  assertIsPrinted(invocation.getLocation().toString(),listener);
-  assertIsPrinted(SOME_RETURN_VALUE,listener);
-  assertIsPrinted(LOCATION_OF_STUBBING,listener);
-}

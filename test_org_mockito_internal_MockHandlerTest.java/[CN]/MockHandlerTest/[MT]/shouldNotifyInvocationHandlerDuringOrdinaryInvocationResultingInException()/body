@@ -7,7 +7,7 @@
     fail("Exception was not rethrown.");
   }
  catch (  RuntimeException e) {
-    verify(listener1).invokingWithException(invocation,SOME_EXCEPTION,SOME_LOCATION);
-    verify(listener2).invokingWithException(invocation,SOME_EXCEPTION,SOME_LOCATION);
+    verify(listener1).reportInvocation(MethodCallReport.of(invocation,SOME_EXCEPTION,SOME_LOCATION));
+    verify(listener2).reportInvocation(MethodCallReport.of(invocation,SOME_EXCEPTION,SOME_LOCATION));
   }
 }

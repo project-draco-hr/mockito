@@ -1,3 +1,0 @@
-{
-  assertContains(printedString,getEverythingThatWasPrinted(listener));
-}

@@ -1,6 +1,6 @@
 {
   try {
-    listener.invokingWithReturnValue(invocation,returnValue,getStubbingLocationOrNull(invocation));
+    listener.reportInvocation(MethodCallReport.of(invocation,returnValue,getStubbingLocationOrNull(invocation)));
   }
  catch (  RuntimeException e) {
     throw new MockitoException(StringJoiner.join("An invocation listener threw an exception.","The listener has the class " + listener.getClass().getName()),e);

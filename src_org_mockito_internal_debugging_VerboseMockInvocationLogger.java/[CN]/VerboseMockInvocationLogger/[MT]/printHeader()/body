@@ -1,0 +1,4 @@
+{
+  mockInvocationsCounter++;
+  printStream.println("############ Logging method invocation #" + mockInvocationsCounter + " on mock/spy ########");
+}

@@ -1,7 +1,7 @@
 {
   Foo foo=mock(Foo.class,withSettings().verboseLogging());
-  given(foo.giveMeSomeString(ANOTHER_STRING_VALUE)).willReturn(SOME_RETURN_VALUE);
-  foo.giveMeSomeString(OTHER_STRING_VALUE);
-  foo.giveMeSomeString(ANOTHER_STRING_VALUE);
-  foo.doSomething(SOME_STRING_VALUE);
+  given(foo.giveMeSomeString("Apple")).willReturn("earbuds");
+  foo.giveMeSomeString("Shure");
+  foo.giveMeSomeString("Apple");
+  foo.doSomething("Klipsch");
 }

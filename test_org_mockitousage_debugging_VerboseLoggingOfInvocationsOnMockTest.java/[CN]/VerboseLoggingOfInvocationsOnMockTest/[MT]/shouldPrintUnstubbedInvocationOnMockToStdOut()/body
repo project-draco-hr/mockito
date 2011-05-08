@@ -1,9 +1,5 @@
 {
-  ByteArrayOutputStream baos=setUpStreamAsStdOut();
   Foo foo=mock(Foo.class,withSettings().verboseLogging());
-  foo.doSomething(SOME_STRING_VALUE);
-  assertStreamContainsClassName(getClass(),baos);
-  assertStreamContainsMockName(foo,baos);
-  assertContains("doSomething",baos.toString());
-  assertContains(SOME_STRING_VALUE,baos.toString());
+  foo.doSomething("Klipsch");
+  Assertions.assertThat(printed()).contains(getClass().getName()).contains(mockName(foo)).contains("doSomething").contains("Klipsch");
 }

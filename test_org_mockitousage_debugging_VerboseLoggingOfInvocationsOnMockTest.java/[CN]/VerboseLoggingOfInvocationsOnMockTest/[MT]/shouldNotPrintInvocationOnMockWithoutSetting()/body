@@ -1,9 +1,6 @@
 {
-  ByteArrayOutputStream baos=setUpStreamAsStdOut();
   Foo foo=mock(Foo.class,withSettings().verboseLogging());
-  foo.giveMeSomeString(SOME_STRING_VALUE);
-  unrelatedMock.unrelatedMethod(ANOTHER_STRING_VALUE);
-  assertStreamDoesNotContainMockName(unrelatedMock,baos);
-  assertNotContains("unrelatedMethod",baos.toString());
-  assertNotContains(ANOTHER_STRING_VALUE,baos.toString());
+  foo.giveMeSomeString("Klipsch");
+  unrelatedMock.unrelatedMethod("Apple");
+  Assertions.assertThat(printed()).doesNotContain(mockName(unrelatedMock)).doesNotContain("unrelatedMethod").doesNotContain("Apple");
 }

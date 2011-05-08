@@ -1,3 +1,0 @@
-{
-  assertContains(clazz.getName().toString(),baos.toString());
-}

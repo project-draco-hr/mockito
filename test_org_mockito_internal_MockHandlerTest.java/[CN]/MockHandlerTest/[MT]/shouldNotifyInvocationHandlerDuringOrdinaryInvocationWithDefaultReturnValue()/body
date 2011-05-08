@@ -3,6 +3,6 @@
   stubOrdinaryInvocationWithDefaultReturnValue(handler);
   Invocation invocation=createInvocationWithStubbingLocation(SOME_LOCATION);
   handler.handle(invocation);
-  verify(listener1).invokingWithReturnValue(invocation,null,SOME_LOCATION);
-  verify(listener2).invokingWithReturnValue(invocation,null,SOME_LOCATION);
+  verify(listener1).reportInvocation(MethodCallReport.of(invocation,null,SOME_LOCATION));
+  verify(listener2).reportInvocation(MethodCallReport.of(invocation,null,SOME_LOCATION));
 }
