@@ -4,7 +4,8 @@
   creationValidator.validateMockedType(classToMock,settings.getSpiedInstance());
   settings.initiateMockName(classToMock);
   MockHandler<T> mockHandler=new MockHandler<T>(settings);
-  MethodInterceptorFilter filter=new MethodInterceptorFilter(mockHandler,settings);
+  InvocationNotifierHandler<T> invocationNotifierHandler=new InvocationNotifierHandler<T>(mockHandler,settings);
+  MethodInterceptorFilter filter=new MethodInterceptorFilter(invocationNotifierHandler,settings);
   Class<?>[] interfaces=settings.getExtraInterfaces();
   Class<?>[] ancillaryTypes;
   if (settings.isSerializable()) {

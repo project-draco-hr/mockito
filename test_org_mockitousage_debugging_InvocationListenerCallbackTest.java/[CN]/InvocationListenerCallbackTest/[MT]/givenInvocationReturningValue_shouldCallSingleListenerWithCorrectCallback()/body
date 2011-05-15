@@ -1,7 +1,0 @@
-{
-  RememberingListener listener=new RememberingListener();
-  Foo foo=mock(Foo.class,withSettings().invocationListeners(listener));
-  given(foo.giveMeSomeString("argument")).willReturn("returned");
-  foo.giveMeSomeString("argument");
-  assertHasBeenNotified(listener,new InstanceOf(PrintableInvocation.class),new Equals("returned"),new Contains(getClass().getSimpleName()));
-}

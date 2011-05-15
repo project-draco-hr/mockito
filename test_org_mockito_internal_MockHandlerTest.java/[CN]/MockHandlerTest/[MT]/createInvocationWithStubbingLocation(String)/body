@@ -1,7 +1,0 @@
-{
-  Invocation invocation=mock(Invocation.class);
-  StubInfo stubInfo=mock(StubInfo.class);
-  given(invocation.stubInfo()).willReturn(stubInfo);
-  given(stubInfo.stubbedAt()).willReturn(stubbingLocation);
-  return invocation;
-}

@@ -1,4 +1,0 @@
-{
-  printlnIndented("Method has been stubbed.");
-  printlnIndented(locationOfStubbing);
-}

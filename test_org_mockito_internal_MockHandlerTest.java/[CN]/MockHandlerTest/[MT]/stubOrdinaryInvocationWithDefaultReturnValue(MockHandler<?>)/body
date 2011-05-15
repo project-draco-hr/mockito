@@ -1,4 +1,0 @@
-{
-  given(handler.getMockSettings().getDefaultAnswer()).willReturn(SOME_ANSWER);
-  stubOrdinaryInvocationWithInvocationMatcher(handler,null);
-}

@@ -1,5 +1,0 @@
-{
-  handler.mockingProgress=mock(MockingProgress.class);
-  VerificationMode mode=mock(MockAwareVerificationMode.class);
-  given(handler.mockingProgress.pullVerificationMode()).willReturn(mode);
-}

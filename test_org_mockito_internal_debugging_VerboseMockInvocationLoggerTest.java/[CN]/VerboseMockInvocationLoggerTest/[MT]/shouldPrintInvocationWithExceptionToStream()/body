@@ -1,4 +1,0 @@
-{
-  listener.reportInvocation(MethodCallReport.of(invocation,new ThirdPartyException(),"location of stubbing"));
-  assertThat(printed()).contains(invocation.toString()).contains(invocation.getLocation().toString()).contains(ThirdPartyException.class.getName()).contains("location of stubbing");
-}

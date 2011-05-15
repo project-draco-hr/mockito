@@ -1,7 +1,0 @@
-{
-  int result=invocation != null ? invocation.hashCode() : 0;
-  result=31 * result + (returnedValue != null ? returnedValue.hashCode() : 0);
-  result=31 * result + (throwable != null ? throwable.hashCode() : 0);
-  result=31 * result + (locationOfStubbing != null ? locationOfStubbing.hashCode() : 0);
-  return result;
-}

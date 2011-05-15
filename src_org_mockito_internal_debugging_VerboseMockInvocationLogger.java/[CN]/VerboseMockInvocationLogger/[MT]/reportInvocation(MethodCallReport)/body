@@ -1,8 +1,0 @@
-{
-  if (methodCallReport.threwException()) {
-    onCallWithThrowable(methodCallReport.getInvocation(),methodCallReport.getThrowable(),methodCallReport.getLocationOfStubbing());
-  }
- else {
-    onNormalCall(methodCallReport.getInvocation(),methodCallReport.getReturnedValue(),methodCallReport.getLocationOfStubbing());
-  }
-}

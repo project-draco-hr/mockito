@@ -1,0 +1,7 @@
+{
+  Exception computedException=new Exception("computed");
+  given(mockHandler.handle(invocation)).willReturn(computedException);
+  notifier.handle(invocation);
+  verify(listener1).reportInvocation(new NotifiedMethodInvocationReport(invocation,(Object)computedException));
+  verify(listener2).reportInvocation(new NotifiedMethodInvocationReport(invocation,(Object)computedException));
+}

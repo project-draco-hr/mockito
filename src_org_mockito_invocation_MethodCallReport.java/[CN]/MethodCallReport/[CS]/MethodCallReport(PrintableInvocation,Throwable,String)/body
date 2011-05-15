@@ -1,5 +1,0 @@
-{
-  this.invocation=invocation;
-  this.throwable=throwable;
-  this.locationOfStubbing=locationOfStubbing;
-}

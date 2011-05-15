@@ -1,0 +1,4 @@
+{
+  this.invocation=invocation;
+  this.returnedValue=returnedValue;
+}

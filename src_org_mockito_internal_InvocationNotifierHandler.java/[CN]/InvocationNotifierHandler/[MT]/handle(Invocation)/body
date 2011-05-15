@@ -1,0 +1,11 @@
+{
+  try {
+    Object returnedValue=mockHandler.handle(invocation);
+    notifyMethodCall(invocation,returnedValue);
+    return returnedValue;
+  }
+ catch (  Throwable t) {
+    notifyMethodCallException(invocation,t);
+    throw t;
+  }
+}

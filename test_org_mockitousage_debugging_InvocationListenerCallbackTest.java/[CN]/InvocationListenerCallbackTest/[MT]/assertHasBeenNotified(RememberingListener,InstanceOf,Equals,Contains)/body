@@ -1,5 +1,0 @@
-{
-  assertThat(listener.invocation,m);
-  assertThat(listener.returnValue,m2);
-  assertThat(listener.locationOfStubbing,m3);
-}

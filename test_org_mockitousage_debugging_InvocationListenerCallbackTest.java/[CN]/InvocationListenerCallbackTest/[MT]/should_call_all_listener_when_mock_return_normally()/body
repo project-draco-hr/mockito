@@ -1,0 +1,7 @@
+{
+  Foo foo=mock(Foo.class,withSettings().invocationListeners(listener1,listener2));
+  given(foo.giveMeSomeString("herb")).willReturn("rosemary");
+  foo.giveMeSomeString("herb");
+  assertThatHasBeenNotified(listener1,"rosemary",getClass().getSimpleName());
+  assertThatHasBeenNotified(listener2,"rosemary",getClass().getSimpleName());
+}

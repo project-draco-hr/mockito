@@ -1,0 +1,9 @@
+{
+  willThrow(new NullPointerException()).given(customListener).reportInvocation(any(MethodInvocationReport.class));
+  try {
+    notifier.handle(invocation);
+  }
+ catch (  MockitoException me) {
+    assertThat(me.getMessage()).contains("invocation listener").contains("CustomListener").contains("threw an exception").contains("NullPointerException");
+  }
+}
