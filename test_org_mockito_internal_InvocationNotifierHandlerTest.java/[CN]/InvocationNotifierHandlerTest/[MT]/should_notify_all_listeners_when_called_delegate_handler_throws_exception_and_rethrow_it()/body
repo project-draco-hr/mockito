@@ -3,6 +3,7 @@
   given(mockHandler.handle(invocation)).willThrow(parseException);
   try {
     notifier.handle(invocation);
+    fail();
   }
   finally {
     verify(listener1).reportInvocation(new NotifiedMethodInvocationReport(invocation,parseException));
