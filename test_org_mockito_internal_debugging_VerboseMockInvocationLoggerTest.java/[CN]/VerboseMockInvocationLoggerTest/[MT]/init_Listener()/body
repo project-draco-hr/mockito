@@ -1,0 +1,4 @@
+{
+  output=new ByteArrayOutputStream();
+  listener=new VerboseMockInvocationLogger(new PrintStream(output));
+}

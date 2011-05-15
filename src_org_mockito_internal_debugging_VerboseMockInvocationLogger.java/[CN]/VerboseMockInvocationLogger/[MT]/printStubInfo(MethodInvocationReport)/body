@@ -1,0 +1,5 @@
+{
+  if (methodInvocationReport.getLocationOfStubbing() != null) {
+    printlnIndented("stubbed: " + methodInvocationReport.getLocationOfStubbing());
+  }
+}

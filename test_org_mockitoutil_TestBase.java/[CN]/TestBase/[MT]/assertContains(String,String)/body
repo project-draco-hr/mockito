@@ -1,3 +1,3 @@
 {
-  assertTrue("\n" + "This substing:[" + sub + "]\n"+ "should be inside of:["+ string+ "]\n",string.contains(sub));
+  assertTrue("\n" + "This substring:[" + sub + "]\n"+ "should be inside of:["+ string+ "]\n",string.contains(sub));
 }

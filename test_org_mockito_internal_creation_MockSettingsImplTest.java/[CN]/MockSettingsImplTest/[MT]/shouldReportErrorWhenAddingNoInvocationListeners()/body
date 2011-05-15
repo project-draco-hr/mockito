@@ -1,0 +1,8 @@
+{
+  try {
+    mockSettingsImpl.invocationListeners();
+  }
+ catch (  Exception e) {
+    Assertions.assertThat(e.getMessage()).contains("at least one listener");
+  }
+}

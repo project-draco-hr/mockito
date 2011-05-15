@@ -1,0 +1,6 @@
+{
+  given(mockHandler.handle(invocation)).willReturn("returned value");
+  notifier.handle(invocation);
+  verify(listener1).reportInvocation(new NotifiedMethodInvocationReport(invocation,"returned value"));
+  verify(listener2).reportInvocation(new NotifiedMethodInvocationReport(invocation,"returned value"));
+}

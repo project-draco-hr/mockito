@@ -1,0 +1,6 @@
+{
+  if (!invocationListenersContainsType(VerboseMockInvocationLogger.class)) {
+    invocationListeners(new VerboseMockInvocationLogger());
+  }
+  return this;
+}

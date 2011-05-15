@@ -1,0 +1,4 @@
+{
+  listener.reportInvocation(new NotifiedMethodInvocationReport(invocation,"whatever"));
+  assertThat(printed()).doesNotContain("stubbed");
+}

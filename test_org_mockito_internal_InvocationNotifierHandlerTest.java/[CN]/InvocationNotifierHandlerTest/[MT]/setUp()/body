@@ -1,0 +1,3 @@
+{
+  notifier=new InvocationNotifierHandler(mockHandler,(MockSettingsImpl)new MockSettingsImpl().invocationListeners(customListener,listener1,listener2));
+}

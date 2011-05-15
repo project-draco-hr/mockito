@@ -1,0 +1,10 @@
+{
+  if (methodInvocationReport.threwException()) {
+    String message=methodInvocationReport.getThrowable().getMessage() == null ? "" : " with message " + methodInvocationReport.getThrowable().getMessage();
+    printlnIndented("has thrown: " + methodInvocationReport.getThrowable().getClass() + message);
+  }
+ else {
+    String type=(methodInvocationReport.getReturnedValue() == null) ? "" : " (" + methodInvocationReport.getReturnedValue().getClass().getName() + ")";
+    printlnIndented("has returned: \"" + methodInvocationReport.getReturnedValue() + "\""+ type);
+  }
+}

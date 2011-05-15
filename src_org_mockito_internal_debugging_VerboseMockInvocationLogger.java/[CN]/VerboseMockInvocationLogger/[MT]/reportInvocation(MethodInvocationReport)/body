@@ -1,0 +1,7 @@
+{
+  printHeader();
+  printStubInfo(methodInvocationReport);
+  printInvocation(methodInvocationReport.getInvocation());
+  printReturnedValueOrThrowable(methodInvocationReport);
+  printFooter();
+}

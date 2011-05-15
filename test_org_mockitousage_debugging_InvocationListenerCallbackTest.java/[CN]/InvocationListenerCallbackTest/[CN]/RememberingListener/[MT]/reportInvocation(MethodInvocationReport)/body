@@ -1,0 +1,5 @@
+{
+  this.invocation=mcr.getInvocation();
+  this.returnValue=mcr.getReturnedValue();
+  this.locationOfStubbing=mcr.getLocationOfStubbing();
+}

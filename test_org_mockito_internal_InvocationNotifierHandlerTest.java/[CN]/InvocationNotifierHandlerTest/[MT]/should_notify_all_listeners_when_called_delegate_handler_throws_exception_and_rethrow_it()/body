@@ -1,0 +1,11 @@
+{
+  ParseException parseException=new ParseException("",0);
+  given(mockHandler.handle(invocation)).willThrow(parseException);
+  try {
+    notifier.handle(invocation);
+  }
+  finally {
+    verify(listener1).reportInvocation(new NotifiedMethodInvocationReport(invocation,parseException));
+    verify(listener2).reportInvocation(new NotifiedMethodInvocationReport(invocation,parseException));
+  }
+}

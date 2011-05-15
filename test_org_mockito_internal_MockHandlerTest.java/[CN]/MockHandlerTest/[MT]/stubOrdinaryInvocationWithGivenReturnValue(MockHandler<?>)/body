@@ -1,0 +1,3 @@
+{
+  stubOrdinaryInvocationWithInvocationMatcher(handler,stubbedInvocationMatcher);
+}

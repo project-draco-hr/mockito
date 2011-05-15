@@ -1,0 +1,5 @@
+{
+  assertThat(listener.returnValue).isEqualTo(returned);
+  assertThat(listener.invocation).isNotNull();
+  assertThat(listener.locationOfStubbing).contains(getClass().getSimpleName());
+}

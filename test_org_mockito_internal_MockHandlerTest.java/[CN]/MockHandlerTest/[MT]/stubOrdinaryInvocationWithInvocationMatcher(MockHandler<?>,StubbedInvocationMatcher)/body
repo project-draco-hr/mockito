@@ -1,0 +1,4 @@
+{
+  handler.invocationContainerImpl=mock(InvocationContainerImpl.class);
+  given(handler.invocationContainerImpl.findAnswerFor(any(Invocation.class))).willReturn(value);
+}

@@ -1,0 +1,5 @@
+{
+  assertFalse(mockSettingsImpl.hasInvocationListeners());
+  mockSettingsImpl.verboseLogging();
+  assertContainsType(mockSettingsImpl.getInvocationListeners(),VerboseMockInvocationLogger.class);
+}
