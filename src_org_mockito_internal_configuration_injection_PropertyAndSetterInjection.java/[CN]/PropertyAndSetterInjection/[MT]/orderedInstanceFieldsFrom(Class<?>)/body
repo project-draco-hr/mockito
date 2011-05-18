@@ -1,5 +1,6 @@
 {
-  Field[] declaredFields=awaitingInjectionClazz.getDeclaredFields();
-  Arrays.sort(declaredFields,supertypesLast);
+  List<Field> declaredFields=Arrays.asList(awaitingInjectionClazz.getDeclaredFields());
+  declaredFields=ListUtil.filter(declaredFields,notFinalOrStatic);
+  Collections.sort(declaredFields,superTypesLast);
   return declaredFields;
 }
