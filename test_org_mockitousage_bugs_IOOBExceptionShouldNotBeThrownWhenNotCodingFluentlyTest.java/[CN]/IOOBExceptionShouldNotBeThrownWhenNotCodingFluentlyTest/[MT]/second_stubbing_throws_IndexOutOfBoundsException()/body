@@ -4,6 +4,7 @@
   mapOngoingStubbing.thenReturn("first stubbing");
   try {
     mapOngoingStubbing.thenReturn("second stubbing");
+    fail();
   }
  catch (  MockitoException e) {
     assertThat(e.getMessage()).contains("Incorrect use of API detected here").contains(this.getClass().getSimpleName());
