@@ -1,0 +1,4 @@
+{
+  person.getAddress("111 Mock Lane").getStreet();
+  verify(person.getAddress(anyString())).getStreet();
+}
