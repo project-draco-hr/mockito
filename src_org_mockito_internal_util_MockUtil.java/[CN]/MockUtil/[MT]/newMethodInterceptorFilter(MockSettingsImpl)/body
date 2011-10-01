@@ -1,0 +1,5 @@
+{
+  MockHandler<T> mockHandler=new MockHandler<T>(settings);
+  InvocationNotifierHandler<T> invocationNotifierHandler=new InvocationNotifierHandler<T>(mockHandler,settings);
+  return new MethodInterceptorFilter(invocationNotifierHandler,settings);
+}
