@@ -1,0 +1,4 @@
+{
+  Callable<?> callableInRealm=(Callable<?>)this.loadClass(callableCalledInClassLoaderRealm).newInstance();
+  return callableInRealm.call();
+}

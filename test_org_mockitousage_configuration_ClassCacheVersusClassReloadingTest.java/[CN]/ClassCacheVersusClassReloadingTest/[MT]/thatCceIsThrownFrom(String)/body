@@ -1,0 +1,8 @@
+{
+  return new Condition<Throwable>(){
+    @Override public boolean matches(    Throwable throwable){
+      return throwable.getStackTrace()[1].toString().contains(stacktraceElementDescription);
+    }
+  }
+;
+}

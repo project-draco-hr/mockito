@@ -1,0 +1,5 @@
+{
+  Class.forName("org.mockito.Mockito");
+  ConfigurationAccess.getConfig().overrideEnableClassCache(false);
+  return Boolean.TRUE;
+}

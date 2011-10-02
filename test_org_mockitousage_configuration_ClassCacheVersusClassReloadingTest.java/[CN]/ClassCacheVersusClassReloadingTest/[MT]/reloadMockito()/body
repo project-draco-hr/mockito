@@ -1,0 +1,8 @@
+{
+  return new SimplePerRealmReloadingClassLoader.ReloadClassPredicate(){
+    public boolean needReload(    String qualifiedName){
+      return qualifiedName.contains("org.mockito") && !qualifiedName.contains("org.mockito.cglib");
+    }
+  }
+;
+}

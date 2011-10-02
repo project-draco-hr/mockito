@@ -1,0 +1,8 @@
+{
+  return new SimplePerRealmReloadingClassLoader.ReloadClassPredicate(){
+    public boolean needReload(    String qualifiedName){
+      return "org.mockitousage.configuration.ClassCacheVersusClassReloadingTest$DoTheMocking".equals(qualifiedName) || "org.mockitousage.MethodsImpl".equals(qualifiedName);
+    }
+  }
+;
+}

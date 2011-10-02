@@ -1,0 +1,4 @@
+{
+  Class clazz=this.getClass().getClassLoader().loadClass("org.mockitousage.MethodsImpl");
+  return mock(clazz);
+}

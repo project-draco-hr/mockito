@@ -1,0 +1,5 @@
+{
+  prepareMockitoAndDisableObjenesisCache();
+  doInNewChildRealm(testMethodClassLoaderRealm,"org.mockitousage.configuration.ClassCacheVersusClassReloadingTest$DoTheMocking");
+  doInNewChildRealm(testMethodClassLoaderRealm,"org.mockitousage.configuration.ClassCacheVersusClassReloadingTest$DoTheMocking");
+}

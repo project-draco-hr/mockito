@@ -1,0 +1,4 @@
+{
+  super(new URL[]{obtainClassPath(SimplePerRealmReloadingClassLoader.class)},parentClassLoader);
+  this.reloadClassPredicate=reloadClassPredicate;
+}
