@@ -1,0 +1,4 @@
+{
+  String className=SimplePerRealmReloadingClassLoader.class.getName();
+  return obtainClassPath(className);
+}

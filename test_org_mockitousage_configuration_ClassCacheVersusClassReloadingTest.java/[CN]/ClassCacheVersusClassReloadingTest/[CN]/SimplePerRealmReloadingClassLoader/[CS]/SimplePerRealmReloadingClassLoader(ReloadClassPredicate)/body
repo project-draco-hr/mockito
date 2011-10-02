@@ -1,4 +1,4 @@
 {
-  super(new URL[]{obtainClassPath(SimplePerRealmReloadingClassLoader.class)});
+  super(new URL[]{obtainClassPath(),obtainClassPath("org.mockito.Mockito")});
   this.reloadClassPredicate=reloadClassPredicate;
 }

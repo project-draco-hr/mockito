@@ -1,6 +1,6 @@
 {
-  String path=aClass.getName().replace('.','/') + ".class";
-  String url=aClass.getClassLoader().getResource(path).toExternalForm();
+  String path=className.replace('.','/') + ".class";
+  String url=SimplePerRealmReloadingClassLoader.class.getClassLoader().getResource(path).toExternalForm();
   try {
     return new URL(url.substring(0,url.length() - path.length()));
   }
