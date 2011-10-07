@@ -1,19 +1,9 @@
 {
   Set<Object> mocks=new HashSet<Object>();
   for (  Field field : clazz.getDeclaredFields()) {
-    if (null != field.getAnnotation(Spy.class) || null != field.getAnnotation(org.mockito.Mock.class) || null != field.getAnnotation(org.mockito.MockitoAnnotations.Mock.class)) {
-      Object fieldInstance=null;
-      boolean wasAccessible=field.isAccessible();
-      field.setAccessible(true);
-      try {
-        fieldInstance=field.get(testClass);
-      }
- catch (      IllegalAccessException e) {
-        throw new MockitoException("Problems reading this field dependency " + field.getName() + " for injection",e);
-      }
- finally {
-        field.setAccessible(wasAccessible);
-      }
+    FieldReader fieldReader=new FieldReader(testClassInstance,field);
+    if (containsMockOrSpy(field,fieldReader)) {
+      Object fieldInstance=fieldReader.read();
       if (fieldInstance != null) {
         mocks.add(fieldInstance);
       }

@@ -1,0 +1,4 @@
+{
+  assertNotNull(receiver.antena);
+  assertNotNull(receiver.tuner);
+}

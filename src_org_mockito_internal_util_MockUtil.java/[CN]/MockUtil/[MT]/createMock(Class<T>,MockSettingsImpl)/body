@@ -4,16 +4,9 @@
   creationValidator.validateMockedType(classToMock,settings.getSpiedInstance());
   settings.initiateMockName(classToMock);
   MethodInterceptorFilter filter=newMethodInterceptorFilter(settings);
-  Class<?>[] interfaces=settings.getExtraInterfaces();
-  Class<?>[] ancillaryTypes;
-  if (settings.isSerializable()) {
-    ancillaryTypes=interfaces == null ? new Class<?>[]{Serializable.class} : new ArrayUtils().concat(interfaces,Serializable.class);
-  }
- else {
-    ancillaryTypes=interfaces == null ? new Class<?>[0] : interfaces;
-  }
-  Object spiedInstance=settings.getSpiedInstance();
+  Class<?>[] ancillaryTypes=prepareAncillaryTypes(settings);
   T mock=ClassImposterizer.INSTANCE.imposterise(filter,classToMock,ancillaryTypes);
+  Object spiedInstance=settings.getSpiedInstance();
   if (spiedInstance != null) {
     new LenientCopyTool().copyToMock(spiedInstance,mock);
   }
