@@ -7,7 +7,7 @@
     final Object[] noArg=new Object[0];
     Object newFieldInstance=constructor.newInstance(noArg);
     new FieldSetter(testClass,field).set(newFieldInstance);
-    return field.get(testClass);
+    return new FieldInitializationReport(field.get(testClass),true,false);
   }
  catch (  NoSuchMethodException e) {
     throw new MockitoException("the type '" + field.getType().getSimpleName() + "' has no default constructor",e);
