@@ -1,19 +1,10 @@
 {
   MockHandlerInterface<Object> handler=new MockUtil().getMockHandler(invocation.getMock());
   InvocationContainerImpl container=(InvocationContainerImpl)handler.getInvocationContainer();
-  List<StubbedInvocationMatcher> stubbedInvocations=container.getStubbedInvocations();
-  for (  StubbedInvocationMatcher stubbedInvocationMatcher : stubbedInvocations) {
+  for (  StubbedInvocationMatcher stubbedInvocationMatcher : container.getStubbedInvocations()) {
     if (container.getInvocationForStubbing().matches(stubbedInvocationMatcher.getInvocation())) {
       return stubbedInvocationMatcher.answer(invocation);
     }
   }
-  Class<?> clz=invocation.getMethod().getReturnType();
-  final Object mock=Mockito.mock(clz,this);
-  container.addAnswer(new Answer<Object>(){
-    public Object answer(    InvocationOnMock invocation) throws Throwable {
-      return mock;
-    }
-  }
-,false);
-  return mock;
+  return recordDeepStubMock(invocation,container);
 }
