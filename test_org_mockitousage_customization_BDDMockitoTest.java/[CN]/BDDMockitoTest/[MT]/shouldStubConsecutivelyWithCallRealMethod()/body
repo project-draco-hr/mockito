@@ -1,0 +1,6 @@
+{
+  MethodsImpl mock=mock(MethodsImpl.class);
+  willReturn("foo").willCallRealMethod().given(mock).simpleMethod();
+  assertEquals("foo",mock.simpleMethod());
+  assertEquals(null,mock.simpleMethod());
+}
