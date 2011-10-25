@@ -2,9 +2,10 @@
   doInNewChildRealm(testMethodClassLoaderRealm,"org.mockitousage.configuration.ClassCacheVersusClassReloadingTest$DoTheMocking");
   try {
     doInNewChildRealm(testMethodClassLoaderRealm,"org.mockitousage.configuration.ClassCacheVersusClassReloadingTest$DoTheMocking");
-    fail("should have raised a ClasCastException when Objenis Cache is enabled");
+    fail("should have raised a ClassCastException when Objenis Cache is enabled");
   }
- catch (  ClassCastException e) {
-    assertThat(e).satisfies(thatCceIsThrownFrom("org.mockito.internal.creation.jmock.ClassImposterizer.imposterise"));
+ catch (  MockitoException e) {
+    assertThat(e.getMessage()).containsIgnoringCase("classloading").containsIgnoringCase("objenesis").containsIgnoringCase("MockitoConfiguration");
+    assertThat(e.getCause()).satisfies(thatCceIsThrownFrom("java.lang.Class.cast")).satisfies(thatCceIsThrownFrom("org.mockito.internal.creation.jmock.ClassImposterizer.imposterise"));
   }
 }

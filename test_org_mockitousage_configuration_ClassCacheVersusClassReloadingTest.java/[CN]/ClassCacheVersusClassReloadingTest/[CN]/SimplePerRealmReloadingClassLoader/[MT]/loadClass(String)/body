@@ -1,6 +1,7 @@
 {
   if (reloadClassPredicate.needReload(qualifiedName)) {
-    return findClass(qualifiedName);
+    Class<?> foundClass=findClass(qualifiedName);
+    return foundClass;
   }
   return super.loadClass(qualifiedName);
 }
