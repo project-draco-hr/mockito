@@ -1,5 +1,7 @@
 {
   Class<?> clz=invocation.getMethod().getReturnType();
-  if (!new MockCreationValidator().isTypeMockable(clz))   return delegate.answer(invocation);
+  if (!new MockCreationValidator().isTypeMockable(clz)) {
+    return delegate.answer(invocation);
+  }
   return getMock(invocation);
 }

@@ -1,0 +1,10 @@
+{
+  when(person.getAddress(anyString()).getStreet().getName()).thenReturn("deep");
+  person.getAddress("the docks").getStreet().getName();
+  person.getAddress("the docks").getStreet().getName();
+  person.getAddress("the docks").getStreet().getName();
+  person.getAddress("the docks").getStreet(Locale.ITALIAN).getName();
+  verify(person.getAddress("the docks").getStreet(),times(3)).getName();
+  verify(person.getAddress("the docks").getStreet(Locale.CHINESE),never()).getName();
+  verify(person.getAddress("the docks").getStreet(Locale.ITALIAN),atMost(1)).getName();
+}
