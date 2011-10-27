@@ -1,0 +1,3 @@
+{
+  return null != field.getAnnotation(Spy.class) || null != field.getAnnotation(Mock.class) || null != field.getAnnotation(MockitoAnnotations.Mock.class) || mockUtil.isMock(fieldReader.read()) || mockUtil.isSpy(fieldReader.read());
+}

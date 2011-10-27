@@ -7,7 +7,7 @@
     final Object[] args=argResolver.resolveTypeInstances(constructor.getParameterTypes());
     Object newFieldInstance=constructor.newInstance(args);
     new FieldSetter(testClass,field).set(newFieldInstance);
-    return field.get(testClass);
+    return new FieldInitializationReport(field.get(testClass),false,true);
   }
  catch (  IllegalArgumentException e) {
     throw new MockitoException("internal error : argResolver provided incorrect types for constructor " + constructor + " of type "+ field.getType().getSimpleName(),e);

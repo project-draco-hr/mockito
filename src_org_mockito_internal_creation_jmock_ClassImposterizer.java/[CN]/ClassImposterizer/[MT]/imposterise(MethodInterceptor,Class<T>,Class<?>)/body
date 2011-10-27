@@ -4,7 +4,10 @@
     Class<?> proxyClass=createProxyClass(mockedType,ancillaryTypes);
     return mockedType.cast(createProxy(proxyClass,interceptor));
   }
-  finally {
+ catch (  ClassCastException cce) {
+    throw new MockitoException(join("ClassCastException occurred when creating the proxy.","You might experience classloading issues, disabling the Objenesis cache *might* help (see MockitoConfiguration)"),cce);
+  }
+ finally {
     setConstructorsAccessible(mockedType,false);
   }
 }

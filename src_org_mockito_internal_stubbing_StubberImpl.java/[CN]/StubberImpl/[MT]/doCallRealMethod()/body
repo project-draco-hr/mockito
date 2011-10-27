@@ -1,0 +1,4 @@
+{
+  answers.add(new CallsRealMethods());
+  return this;
+}

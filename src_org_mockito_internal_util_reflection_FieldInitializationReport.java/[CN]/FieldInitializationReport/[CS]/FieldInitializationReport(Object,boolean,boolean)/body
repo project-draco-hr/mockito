@@ -1,4 +1,5 @@
 {
   this.fieldInstance=fieldInstance;
   this.wasInitialized=wasInitialized;
+  this.wasInitializedUsingConstructorArgs=wasInitializedUsingConstructorArgs;
 }

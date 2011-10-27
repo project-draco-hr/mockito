@@ -3,4 +3,5 @@
   FieldInitializationReport report=fieldInitializer.initialize();
   assertNotNull(report.fieldInstance());
   assertTrue(report.fieldWasInitialized());
+  assertFalse(report.fieldWasInitializedUsingContructorArgs());
 }

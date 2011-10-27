@@ -1,4 +1,0 @@
-{
-  Class<?>[] items=utils.concat(new Class[]{Serializable.class,Map.class},List.class);
-  Assertions.assertThat(items).containsOnly(Serializable.class,Map.class,List.class);
-}
