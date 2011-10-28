@@ -1,0 +1,11 @@
+{
+  Set<Object> mocks=new HashSet<Object>();
+  for (  Field field : clazz.getDeclaredFields()) {
+    FieldReader fieldReader=new FieldReader(instance,field);
+    Object mockInstance=preparedMock(fieldReader.read(),field);
+    if (mockInstance != null) {
+      mocks.add(mockInstance);
+    }
+  }
+  return mocks;
+}

@@ -1,0 +1,3 @@
+{
+  mockDependentFields.addAll(scan());
+}
