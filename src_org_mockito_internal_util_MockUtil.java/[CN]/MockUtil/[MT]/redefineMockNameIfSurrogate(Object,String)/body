@@ -1,0 +1,5 @@
+{
+  if (getMockName(mock).isSurrogate()) {
+    getMockHandler(mock).getMockSettings().redefineMockName(newName);
+  }
+}

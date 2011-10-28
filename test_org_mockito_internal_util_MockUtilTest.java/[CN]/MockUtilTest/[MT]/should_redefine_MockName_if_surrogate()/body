@@ -1,0 +1,5 @@
+{
+  List mock=Mockito.mock(List.class);
+  mockUtil.redefineMockNameIfSurrogate(mock,"newName");
+  Assertions.assertThat(mockUtil.getMockName(mock).toString()).isEqualTo("newName");
+}
