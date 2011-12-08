@@ -3,8 +3,8 @@
   Set<Field> mockDependentFields=new HashSet<Field>();
   Set<Object> mocks=new HashSet<Object>();
   while (clazz != Object.class) {
-    mockDependentFields.addAll(scanForInjection(testClassInstance,clazz));
-    mocks.addAll(scanMocks(testClassInstance,clazz));
+    new InjectMocksScanner(clazz).addTo(mockDependentFields);
+    new MockScanner(testClassInstance,clazz).addPreparedMocks(mocks);
     clazz=clazz.getSuperclass();
   }
   new DefaultInjectionEngine().injectMocksOnFields(mockDependentFields,mocks,testClassInstance);

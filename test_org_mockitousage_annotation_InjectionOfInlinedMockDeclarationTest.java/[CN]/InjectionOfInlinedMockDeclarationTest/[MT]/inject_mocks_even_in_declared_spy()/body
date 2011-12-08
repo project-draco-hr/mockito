@@ -1,4 +1,4 @@
 {
-  assertNotNull(spiedReceiver.antena);
+  assertNotNull(spiedReceiver.oldAntenna);
   assertNotNull(spiedReceiver.tuner);
 }

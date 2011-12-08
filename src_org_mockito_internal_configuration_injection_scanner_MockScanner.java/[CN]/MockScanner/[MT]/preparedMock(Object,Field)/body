@@ -1,0 +1,10 @@
+{
+  if (isAnnotatedByMockOrSpy(field)) {
+    return instance;
+  }
+ else   if (isMockOrSpy(instance)) {
+    mockUtil.redefineMockNameIfSurrogate(instance,field.getName());
+    return instance;
+  }
+  return null;
+}

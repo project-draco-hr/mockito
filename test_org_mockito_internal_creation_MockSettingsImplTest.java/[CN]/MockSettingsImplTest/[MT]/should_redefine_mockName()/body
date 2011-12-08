@@ -1,0 +1,4 @@
+{
+  mockSettingsImpl.redefineMockName("my name is ...");
+  assertEquals("my name is ...",mockSettingsImpl.getMockName().toString());
+}

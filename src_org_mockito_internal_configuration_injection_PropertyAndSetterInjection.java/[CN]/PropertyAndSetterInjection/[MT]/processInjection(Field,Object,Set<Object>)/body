@@ -1,5 +1,4 @@
 {
-  Set<Object> mocksToBeInjected=new HashSet<Object>(mockCandidates);
   FieldInitializationReport report=null;
   try {
     report=new FieldInitializer(fieldOwner,field).initialize();
@@ -15,7 +14,7 @@
   Class<?> fieldClass=report.fieldClass();
   Object fieldInstanceNeedingInjection=report.fieldInstance();
   while (fieldClass != Object.class) {
-    injectionOccurred|=injectMockCandidate(fieldClass,mocksToBeInjected,fieldInstanceNeedingInjection);
+    injectionOccurred|=injectMockCandidate(fieldClass,new HashSet<Object>(mockCandidates),fieldInstanceNeedingInjection);
     fieldClass=fieldClass.getSuperclass();
   }
   return injectionOccurred;

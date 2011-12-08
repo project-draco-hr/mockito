@@ -1,4 +1,6 @@
 {
-  assertNotNull(receiver.antena);
+  assertNotNull(receiver.oldAntenna);
+  assertNotNull(receiver.satelliteAntenna);
+  assertNotNull(receiver.dvbtAntenna);
   assertNotNull(receiver.tuner);
 }
