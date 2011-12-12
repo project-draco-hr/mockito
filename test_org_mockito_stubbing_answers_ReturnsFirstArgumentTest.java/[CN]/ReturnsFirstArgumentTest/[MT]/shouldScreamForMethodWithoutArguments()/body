@@ -1,0 +1,4 @@
+{
+  when(chain.process()).then(returnFirstArgument());
+  chain.process();
+}

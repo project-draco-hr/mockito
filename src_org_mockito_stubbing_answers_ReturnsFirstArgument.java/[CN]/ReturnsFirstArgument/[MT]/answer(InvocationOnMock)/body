@@ -1,0 +1,7 @@
+{
+  Object[] arguments=invocation.getArguments();
+  if (arguments.length == 0) {
+    throw new MockitoException("Wrong usage of ReturnsFirstArgument. No arguments were passed to the mocked method.");
+  }
+  return arguments[0];
+}
