@@ -1,0 +1,6 @@
+{
+  mockOne.voidMethod();
+  exceptionRule.expect(MockitoException.class);
+  exceptionRule.expectMessage("timesNow is only intended to work with InOrder");
+  verify(mockOne,timesNow(1)).voidMethod();
+}

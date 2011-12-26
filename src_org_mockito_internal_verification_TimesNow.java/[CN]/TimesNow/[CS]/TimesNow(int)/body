@@ -1,0 +1,6 @@
+{
+  if (wantedNumberOfInvocations <= 0) {
+    throw new MockitoException("Negative and zero values are not allowed here");
+  }
+  this.wantedCount=wantedNumberOfInvocations;
+}

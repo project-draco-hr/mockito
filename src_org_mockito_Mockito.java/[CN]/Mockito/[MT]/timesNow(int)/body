@@ -1,0 +1,3 @@
+{
+  return VerificationModeFactory.timesNow(wantedNumberOfInvocations);
+}

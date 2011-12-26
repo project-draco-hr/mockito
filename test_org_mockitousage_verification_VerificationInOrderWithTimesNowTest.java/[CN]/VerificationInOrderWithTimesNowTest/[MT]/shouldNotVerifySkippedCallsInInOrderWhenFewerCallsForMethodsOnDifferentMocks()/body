@@ -1,0 +1,11 @@
+{
+  mockOne.voidMethod();
+  mockTwo.voidMethod();
+  mockTwo.voidMethod();
+  InOrder verifier=inOrder(mockOne,mockTwo);
+  verifier.verify(mockOne,timesNow(1)).voidMethod();
+  verifier.verify(mockTwo,timesNow(1)).voidMethod();
+  exceptionRule.expect(VerificationInOrderFailure.class);
+  exceptionRule.expectMessage("No interactions wanted here");
+  verifier.verifyNoMoreInteractions();
+}

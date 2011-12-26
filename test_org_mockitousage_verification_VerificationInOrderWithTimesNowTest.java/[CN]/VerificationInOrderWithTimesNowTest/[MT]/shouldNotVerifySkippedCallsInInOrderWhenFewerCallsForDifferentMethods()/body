@@ -1,0 +1,11 @@
+{
+  mockOne.oneArg(1);
+  mockOne.voidMethod();
+  mockOne.voidMethod();
+  InOrder verifier=inOrder(mockOne);
+  verifier.verify(mockOne,timesNow(1)).oneArg(1);
+  verifier.verify(mockOne,timesNow(1)).voidMethod();
+  exceptionRule.expect(VerificationInOrderFailure.class);
+  exceptionRule.expectMessage("No interactions wanted here");
+  verifier.verifyNoMoreInteractions();
+}
