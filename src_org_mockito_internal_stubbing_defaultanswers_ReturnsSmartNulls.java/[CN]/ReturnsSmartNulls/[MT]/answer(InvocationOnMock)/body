@@ -4,8 +4,9 @@
     return defaultReturnValue;
   }
   Class<?> type=invocation.getMethod().getReturnType();
-  if (ClassImposterizer.INSTANCE.canImposterise(type)) {
-    return ClassImposterizer.INSTANCE.imposterise(new ThrowingInterceptor(invocation),type);
+  if (!type.isPrimitive() && !Modifier.isFinal(type.getModifiers())) {
+    ThrowingInterceptor handler=new ThrowingInterceptor(invocation);
+    return mockMaker.createMock(type,new Class[0],handler,handler.getMockSettings());
   }
   return null;
 }

@@ -1,5 +1,5 @@
 {
-  if (new ObjectMethodsGuru().isToString(method)) {
+  if (new ObjectMethodsGuru().isToString(nullDereference.getMethod())) {
     return "SmartNull returned by this unstubbed method call on a mock:\n" + invocation.toString();
   }
   new Reporter().smartNullPointerException(invocation.toString(),location);
