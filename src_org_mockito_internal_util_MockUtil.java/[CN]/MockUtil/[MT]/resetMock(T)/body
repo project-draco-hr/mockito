@@ -1,5 +1,6 @@
 {
-  MockHandlerInterface<T> oldMockHandler=getMockHandler(mock);
-  MethodInterceptorFilter newFilter=newMethodInterceptorFilter(oldMockHandler.getMockSettings());
-  ((Factory)mock).setCallback(0,newFilter);
+  InvocationNotifierHandler oldHandler=(InvocationNotifierHandler)mockMaker.getHandler(mock);
+  MockSettingsImpl settings=oldHandler.getMockSettings();
+  InvocationNotifierHandler<T> newHandler=new InvocationNotifierHandler<T>(new MockHandler<T>(settings),settings);
+  mockMaker.resetMock(mock,newHandler,settings);
 }

@@ -1,0 +1,4 @@
+{
+  settings.initiateMockName(typeToMock);
+  return ClassImposterizer.INSTANCE.imposterise(new MethodInterceptorFilter(handler,settings),typeToMock,extraInterfaces);
+}

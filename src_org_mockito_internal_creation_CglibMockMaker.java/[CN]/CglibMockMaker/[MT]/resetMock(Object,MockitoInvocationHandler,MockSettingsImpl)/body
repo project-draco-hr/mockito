@@ -1,0 +1,3 @@
+{
+  ((Factory)mock).setCallback(0,new MethodInterceptorFilter(newHandler,settings));
+}
