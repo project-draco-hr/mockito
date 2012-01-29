@@ -6,7 +6,7 @@
   Class<?> type=invocation.getMethod().getReturnType();
   if (!type.isPrimitive() && !Modifier.isFinal(type.getModifiers())) {
     ThrowingInterceptor handler=new ThrowingInterceptor(invocation);
-    return mockMaker.createMock(type,new Class[0],handler,handler.getMockSettings());
+    return mockMaker.createMock(type,new Class[0],handler,new MockSettingsImpl());
   }
   return null;
 }

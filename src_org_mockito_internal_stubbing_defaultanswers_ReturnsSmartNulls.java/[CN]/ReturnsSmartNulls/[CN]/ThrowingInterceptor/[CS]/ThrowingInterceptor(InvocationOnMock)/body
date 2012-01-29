@@ -1,4 +1,3 @@
 {
-  super(new MockSettingsImpl());
   this.invocation=invocation;
 }
