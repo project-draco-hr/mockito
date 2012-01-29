@@ -1,5 +1,5 @@
 {
-  for (  IMockMaker mockMaker : ServiceLoader.load(IMockMaker.class)) {
+  for (  MockMaker mockMaker : ServiceLoader.load(MockMaker.class)) {
     return mockMaker;
   }
   return new CglibMockMaker();
