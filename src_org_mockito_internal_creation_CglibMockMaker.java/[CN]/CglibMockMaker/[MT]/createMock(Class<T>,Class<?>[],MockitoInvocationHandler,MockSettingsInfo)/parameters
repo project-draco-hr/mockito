@@ -1,4 +1,4 @@
 Class<T> typeToMock
 Class<?>[] extraInterfaces
 MockitoInvocationHandler handler
-MockSettingsImpl settings
+MockSettingsInfo settings

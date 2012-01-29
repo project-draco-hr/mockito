@@ -1,2 +1,2 @@
 MockitoInvocationHandler handler
-MockSettingsImpl mockSettings
+MockSettingsInfo mockSettings
