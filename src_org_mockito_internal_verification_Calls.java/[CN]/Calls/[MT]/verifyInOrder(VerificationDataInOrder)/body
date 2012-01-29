@@ -1,0 +1,8 @@
+{
+  List<Invocation> allInvocations=data.getAllInvocations();
+  InvocationMatcher wanted=data.getWanted();
+  MissingInvocationInOrderChecker missingInvocation=new MissingInvocationInOrderChecker();
+  missingInvocation.check(allInvocations,wanted,this,data.getOrderingContext());
+  NonGreedyNumberOfInvocationsInOrderChecker numberOfCalls=new NonGreedyNumberOfInvocationsInOrderChecker();
+  numberOfCalls.check(allInvocations,wanted,wantedCount,data.getOrderingContext());
+}
