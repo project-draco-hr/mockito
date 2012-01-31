@@ -4,6 +4,6 @@
   File valueToInject=new File("path");
   boolean injected=new BeanPropertySetter(someBean,theField,true).set(valueToInject);
   assertTrue(injected);
-  assertTrue(someBean.setTheFieldWasUsed);
+  assertTrue(someBean.theFieldSetterWasUsed);
   assertSame(valueToInject,someBean.getTheField());
 }

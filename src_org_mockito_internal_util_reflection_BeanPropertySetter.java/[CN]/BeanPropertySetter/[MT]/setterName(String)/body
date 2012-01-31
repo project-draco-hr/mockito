@@ -1,0 +1,3 @@
+{
+  return new StringBuilder(SET_PREFIX).append(fieldName.substring(0,1).toUpperCase(Locale.ENGLISH)).append(fieldName.substring(1)).toString();
+}

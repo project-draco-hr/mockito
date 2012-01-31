@@ -1,0 +1,9 @@
+{
+  BeanWithWeirdFields someBean=new BeanWithWeirdFields();
+  Field theField=someBean.getClass().getDeclaredField("UUID");
+  UUID valueToInject=new UUID(0L,0L);
+  boolean injected=new BeanPropertySetter(someBean,theField,true).set(valueToInject);
+  assertTrue(injected);
+  assertTrue(someBean.theFieldSetterWasUSed);
+  assertSame(valueToInject,someBean.UUID);
+}

@@ -1,4 +1,4 @@
 {
-  setTheFieldWasUsed=true;
+  theFieldSetterWasUsed=true;
   this.theField=theField;
 }

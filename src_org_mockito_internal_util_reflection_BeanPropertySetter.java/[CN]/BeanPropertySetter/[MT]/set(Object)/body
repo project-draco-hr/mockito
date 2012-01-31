@@ -2,18 +2,10 @@
   AccessibilityChanger changer=new AccessibilityChanger();
   Method writeMethod=null;
   try {
-    BeanInfo targetInfo=Introspector.getBeanInfo(target.getClass());
-    PropertyDescriptor[] propertyDescriptors=targetInfo.getPropertyDescriptors();
-    for (    PropertyDescriptor propertyDescriptor : propertyDescriptors) {
-      if (propertyNameMatchFieldName(propertyDescriptor) && propertyTypeMatchFieldType(propertyDescriptor)) {
-        writeMethod=propertyDescriptor.getWriteMethod();
-        if (writeMethod != null) {
-          changer.enableAccess(writeMethod);
-          writeMethod.invoke(target,value);
-          return true;
-        }
-      }
-    }
+    writeMethod=target.getClass().getMethod(setterName(field.getName()),field.getType());
+    changer.enableAccess(writeMethod);
+    writeMethod.invoke(target,value);
+    return true;
   }
  catch (  InvocationTargetException e) {
     throw new RuntimeException("Setter '" + writeMethod + "' of '"+ target+ "' with value '"+ value+ "' threw exception : '"+ e.getTargetException()+ "'",e);
@@ -21,8 +13,8 @@
 catch (  IllegalAccessException e) {
     throw new RuntimeException("Access not authorized on field '" + field + "' of object '"+ target+ "' with value: '"+ value+ "'",e);
   }
-catch (  IntrospectionException e) {
-    throw new RuntimeException("Something went wrong when trying to infer by introspection the setter of property '" + field.getName() + "' on type '"+ target.getClass()+ "'"+ target.getClass(),e);
+catch (  NoSuchMethodException e) {
+    reportNoSetterFound();
   }
  finally {
     if (writeMethod != null) {
