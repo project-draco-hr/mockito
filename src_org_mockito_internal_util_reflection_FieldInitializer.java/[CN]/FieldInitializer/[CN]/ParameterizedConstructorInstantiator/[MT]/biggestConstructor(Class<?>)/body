@@ -1,5 +1,5 @@
 {
-  final List<Constructor<?>> constructors=Arrays.asList(clazz.getDeclaredConstructors());
+  final List<Constructor> constructors=Arrays.asList(clazz.getDeclaredConstructors());
   Collections.sort(constructors,byParameterNumber);
   Constructor<?> constructor=constructors.get(0);
   checkParameterized(constructor,field);
