@@ -1,0 +1,9 @@
+{
+  List<String> result=new ArrayList<String>();
+  BufferedReader lineReader=new BufferedReader(reader);
+  String line;
+  while ((line=lineReader.readLine()) != null) {
+    result.add(line);
+  }
+  return result;
+}

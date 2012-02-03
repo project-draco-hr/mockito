@@ -1,0 +1,7 @@
+{
+  int hash=line.indexOf('#');
+  if (hash != -1) {
+    line=line.substring(0,hash);
+  }
+  return line.trim();
+}

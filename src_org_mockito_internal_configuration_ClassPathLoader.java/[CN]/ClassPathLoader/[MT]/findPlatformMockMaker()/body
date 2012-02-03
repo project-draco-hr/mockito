@@ -1,0 +1,6 @@
+{
+  for (  MockMaker mockMaker : loadImplementations(MockMaker.class)) {
+    return mockMaker;
+  }
+  return new CglibMockMaker();
+}
