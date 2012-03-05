@@ -5,7 +5,7 @@
   }
   Enumeration<URL> resources;
   try {
-    resources=loader.getResources("META-INF/services/" + service.getName());
+    resources=loader.getResources("mockito-extensions/" + service.getName());
   }
  catch (  IOException e) {
     throw new ServiceConfigurationError("Failed to load " + service,e);
