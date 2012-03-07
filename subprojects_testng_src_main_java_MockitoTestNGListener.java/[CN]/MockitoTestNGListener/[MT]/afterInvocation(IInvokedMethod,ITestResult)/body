@@ -1,0 +1,4 @@
+{
+  resetMocks(testResult.getInstance());
+  Mockito.validateMockitoUsage();
+}

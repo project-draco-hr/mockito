@@ -1,0 +1,12 @@
+{
+  Listeners listeners=testInstance.getClass().getAnnotation(Listeners.class);
+  if (listeners == null) {
+    return false;
+  }
+  for (  Class<? extends ITestNGListener> listenerClass : listeners.value()) {
+    if (MockitoTestNGListener.class == listenerClass) {
+      return true;
+    }
+  }
+  return false;
+}
