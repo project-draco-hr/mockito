@@ -1,9 +1,0 @@
-{
-  Set<Object> testInstancesWithMockitoListener=new HashSet<Object>();
-  for (  Object testInstance : allTestInstances(testMethods)) {
-    if (hasMockitoTestNGListener(testInstance)) {
-      testInstancesWithMockitoListener.add(testInstance);
-    }
-  }
-  return testInstancesWithMockitoListener;
-}

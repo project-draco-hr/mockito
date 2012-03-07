@@ -1,0 +1,6 @@
+{
+  assertThat(list).isNull();
+  assertThat(map).isNull();
+  assertThat(captor).isNull();
+  assertThat(someType).isNull();
+}

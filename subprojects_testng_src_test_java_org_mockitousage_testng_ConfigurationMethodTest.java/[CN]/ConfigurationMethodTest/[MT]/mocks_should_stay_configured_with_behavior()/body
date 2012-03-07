@@ -1,0 +1,3 @@
+{
+  assertThat(map.get("the answer to ...")).isEqualTo(42);
+}

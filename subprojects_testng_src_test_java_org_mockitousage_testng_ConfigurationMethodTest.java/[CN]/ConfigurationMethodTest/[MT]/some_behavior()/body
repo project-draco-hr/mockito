@@ -1,0 +1,3 @@
+{
+  when(map.get("the answer to ...")).thenReturn(42);
+}

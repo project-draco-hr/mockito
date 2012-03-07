@@ -1,0 +1,4 @@
+{
+  ListIterator<ITestResult> iterator=failedTestResults.listIterator(failedTestResults.size());
+  return iterator.hasPrevious() ? iterator.previous().getThrowable() : null;
+}

@@ -1,0 +1,8 @@
+{
+  TestNG testNG=new TestNG();
+  testNG.setVerbose(0);
+  testNG.setUseDefaultListeners(false);
+  testNG.addListener(failureRecorder);
+  testNG.setTestClasses(testNGClasses);
+  return testNG;
+}

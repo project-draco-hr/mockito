@@ -1,7 +1,0 @@
-{
-  Set<Object> allTestInstances=new HashSet<Object>();
-  for (  ITestNGMethod testMethod : testMethods) {
-    allTestInstances.add(testMethod.getInstance());
-  }
-  return allTestInstances;
-}

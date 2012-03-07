@@ -1,0 +1,8 @@
+{
+  Class<?> testClass=instance.getClass();
+  Set<Object> instanceMocks=new HashSet<Object>();
+  for (Class<?> clazz=testClass; clazz != Object.class; clazz=clazz.getSuperclass()) {
+    instanceMocks.addAll(instanceMocksIn(instance,clazz));
+  }
+  return instanceMocks;
+}

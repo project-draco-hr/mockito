@@ -1,8 +1,0 @@
-{
-  if (context.getAllTestMethods() == null) {
-    return;
-  }
-  for (  Object instance : allTestInstancesWithMockitoListener(context.getAllTestMethods())) {
-    MockitoAnnotations.initMocks(instance);
-  }
-}

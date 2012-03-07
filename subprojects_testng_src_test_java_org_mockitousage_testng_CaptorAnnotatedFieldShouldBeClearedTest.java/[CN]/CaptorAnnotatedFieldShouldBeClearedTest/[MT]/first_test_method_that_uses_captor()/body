@@ -1,0 +1,6 @@
+{
+  list.add("a");
+  list.add("b");
+  verify(list,times(2)).add(captor.capture());
+  assertThat(captor.getAllValues()).containsOnly("a","b");
+}
