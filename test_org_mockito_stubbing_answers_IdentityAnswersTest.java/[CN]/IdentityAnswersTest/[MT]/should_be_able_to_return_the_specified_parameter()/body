@@ -1,0 +1,4 @@
+{
+  assertThat((String)IdentityAnswers.RETURN_PARAMETER(0).answer(invocationWith("A","B","C")),is("A"));
+  assertThat((String)IdentityAnswers.RETURN_PARAMETER(1).answer(invocationWith("A","B","C")),is("B"));
+}

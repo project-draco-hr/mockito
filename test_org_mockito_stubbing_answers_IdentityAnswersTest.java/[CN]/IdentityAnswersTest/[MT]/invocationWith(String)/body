@@ -1,0 +1,18 @@
+{
+  @SuppressWarnings("serial") InvocationOnMock invocation=new InvocationOnMock(){
+    @Override public Object getMock(){
+      return null;
+    }
+    @Override public Method getMethod(){
+      return null;
+    }
+    @Override public Object[] getArguments(){
+      return parameters;
+    }
+    @Override public Object callRealMethod() throws Throwable {
+      return null;
+    }
+  }
+;
+  return invocation;
+}
