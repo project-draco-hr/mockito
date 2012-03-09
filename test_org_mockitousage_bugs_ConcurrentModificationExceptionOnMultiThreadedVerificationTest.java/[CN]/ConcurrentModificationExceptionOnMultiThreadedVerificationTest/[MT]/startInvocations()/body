@@ -1,0 +1,5 @@
+{
+  for (int i=0; i < nThreads; i++) {
+    fixedThreadPool.submit(new TargetInvoker(i));
+  }
+}

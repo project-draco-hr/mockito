@@ -1,0 +1,4 @@
+{
+  target=Mockito.mock(ITarget.class);
+  fixedThreadPool=Executors.newFixedThreadPool(nThreads);
+}

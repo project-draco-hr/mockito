@@ -1,0 +1,6 @@
+{
+  reset(target);
+  startInvocations();
+  verify(target,timeout(TEST_MILLIS).times(TIMES * nThreads)).targetMethod("arg");
+  verifyNoMoreInteractions(target);
+}
