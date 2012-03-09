@@ -1,0 +1,4 @@
+{
+  this.delegatedInstance=delegatedInstance;
+  return defaultAnswer(new ReturnsDelegate(this.delegatedInstance));
+}

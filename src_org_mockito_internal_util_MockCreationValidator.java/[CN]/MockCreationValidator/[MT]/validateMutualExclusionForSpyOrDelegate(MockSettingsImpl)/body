@@ -1,0 +1,5 @@
+{
+  if (settings.getDelegatedInstance() != null && settings.getSpiedInstance() != null) {
+    new Reporter().spyAndDelegateAreMutuallyExclusive();
+  }
+}

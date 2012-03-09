@@ -1,0 +1,9 @@
+{
+  if (type.isPrimitive()) {
+    return primitiveOf(type);
+  }
+ else   if (Primitives.isPrimitiveWrapper(type)) {
+    return Primitives.primitiveWrapperOf(type);
+  }
+  return null;
+}
