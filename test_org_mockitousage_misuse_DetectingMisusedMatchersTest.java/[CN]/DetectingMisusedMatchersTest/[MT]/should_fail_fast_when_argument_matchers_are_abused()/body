@@ -1,5 +1,5 @@
 {
-  misplacedArgumentMatcher();
+  misplaced_anyObject_argument_matcher();
   try {
     mock(IMethods.class);
     fail();

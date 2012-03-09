@@ -1,0 +1,16 @@
+{
+  try {
+    Observer observer=mock(Observer.class);
+    misplaced_anyInt_argument_matcher();
+    misplaced_anyObject_argument_matcher();
+    misplaced_anyBoolean_argument_matcher();
+    observer.update(null,null);
+    validateMockitoUsage();
+    fail();
+  }
+ catch (  InvalidUseOfMatchersException e) {
+    assertContains("DetectingMisusedMatchersTest.misplaced_anyInt_argument_matcher",e.getMessage());
+    assertContains("DetectingMisusedMatchersTest.misplaced_anyObject_argument_matcher",e.getMessage());
+    assertContains("DetectingMisusedMatchersTest.misplaced_anyBoolean_argument_matcher",e.getMessage());
+  }
+}
