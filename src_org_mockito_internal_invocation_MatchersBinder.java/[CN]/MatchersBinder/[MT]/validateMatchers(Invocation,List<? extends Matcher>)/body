@@ -3,7 +3,8 @@
     int recordedMatchersSize=matchers.size();
     int expectedMatchersSize=invocation.getArgumentsCount();
     if (expectedMatchersSize != recordedMatchersSize) {
-      new Reporter().invalidUseOfMatchers(expectedMatchersSize,(List<LocalizedMatcher>)matchers);
+      List<LocalizedMatcher> lastMatchers=new ArrayList<LocalizedMatcher>((List<LocalizedMatcher>)matchers);
+      new Reporter().invalidUseOfMatchers(expectedMatchersSize,lastMatchers);
     }
   }
 }

@@ -7,5 +7,7 @@
     fail();
   }
  catch (  InvalidUseOfMatchersException e) {
+    assertThat(e.getMessage()).contains("Misplaced argument matcher detected here");
+    e.printStackTrace();
   }
 }

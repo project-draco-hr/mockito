@@ -1,0 +1,10 @@
+{
+  when(mock.threeArgumentMethod(1,"2","3")).thenReturn(null);
+  try {
+    when(mock.threeArgumentMethod(1,eq("2"),"3")).thenReturn(null);
+    fail();
+  }
+ catch (  InvalidUseOfMatchersException e) {
+    assertThat(e.getMessage()).contains("3 matchers expected").contains("1 recorded");
+  }
+}

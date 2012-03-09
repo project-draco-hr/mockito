@@ -1,0 +1,4 @@
+{
+  assertMatchersFoundFor(additionalMatcherName);
+  assertIncorrectUseOfAdditionalMatchers(additionalMatcherName,subMatchersCount);
+}

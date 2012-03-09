@@ -1,6 +1,6 @@
 {
-  assertState(!matcherStack.isEmpty(),"No matchers found for And(?).");
-  And and=new And(popLastArgumentMatchers(2));
+  assertStateFor("And(?)",TWO_SUB_MATCHERS);
+  And and=new And(popLastArgumentMatchers(TWO_SUB_MATCHERS));
   matcherStack.push(new LocalizedMatcher(and));
   return new HandyReturnValues();
 }

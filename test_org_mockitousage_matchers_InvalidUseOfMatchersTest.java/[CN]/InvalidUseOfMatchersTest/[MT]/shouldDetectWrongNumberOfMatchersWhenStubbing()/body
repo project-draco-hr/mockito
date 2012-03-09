@@ -1,9 +1,0 @@
-{
-  Mockito.when(mock.threeArgumentMethod(1,"2","3")).thenReturn(null);
-  try {
-    Mockito.when(mock.threeArgumentMethod(1,eq("2"),"3")).thenReturn(null);
-    fail();
-  }
- catch (  InvalidUseOfMatchersException e) {
-  }
-}
