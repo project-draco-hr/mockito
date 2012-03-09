@@ -1,9 +1,8 @@
 {
-  if (!matchers.isEmpty()) {
-    int recordedMatchersSize=matchers.size();
+  if (!lastMatchers.isEmpty()) {
+    int recordedMatchersSize=lastMatchers.size();
     int expectedMatchersSize=invocation.getArgumentsCount();
     if (expectedMatchersSize != recordedMatchersSize) {
-      List<LocalizedMatcher> lastMatchers=new ArrayList<LocalizedMatcher>((List<LocalizedMatcher>)matchers);
       new Reporter().invalidUseOfMatchers(expectedMatchersSize,lastMatchers);
     }
   }
