@@ -1,0 +1,10 @@
+{
+  IMethods methods=mock(IMethods.class,withSettings().forwardTo(new MethodsImpl()));
+  try {
+    byte b=methods.byteObjectReturningMethod();
+    fail();
+  }
+ catch (  Exception e) {
+    assertThat(e.toString()).doesNotContain("org.mockito");
+  }
+}
