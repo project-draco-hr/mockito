@@ -1,0 +1,9 @@
+{
+  Iterator<Object> iterator=iterator();
+  for (int i=0, objectsLength=array.length; i < objectsLength; i++) {
+    if (iterator.hasNext()) {
+      array[i]=(T)iterator.next();
+    }
+  }
+  return array;
+}

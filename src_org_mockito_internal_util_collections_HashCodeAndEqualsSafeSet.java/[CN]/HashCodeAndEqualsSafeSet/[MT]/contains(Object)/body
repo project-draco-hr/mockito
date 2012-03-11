@@ -1,0 +1,3 @@
+{
+  return backingHashSet.contains(HashCodeAndEqualsMockWrapper.of(mock));
+}

@@ -1,5 +1,5 @@
 {
-  Set<Object> mocks=new HashSet<Object>();
+  Set<Object> mocks=newMockSafeHashSet();
   for (  Field field : clazz.getDeclaredFields()) {
     FieldReader fieldReader=new FieldReader(instance,field);
     Object mockInstance=preparedMock(fieldReader.read(),field);

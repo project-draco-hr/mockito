@@ -1,0 +1,6 @@
+{
+  if (this == o)   return true;
+  if (!(o instanceof HashCodeAndEqualsMockWrapper))   return false;
+  HashCodeAndEqualsMockWrapper that=(HashCodeAndEqualsMockWrapper)o;
+  return mockInstance == that.mockInstance;
+}

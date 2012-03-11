@@ -1,0 +1,15 @@
+{
+  return new Iterator<Object>(){
+    private Iterator<HashCodeAndEqualsMockWrapper> iterator=backingHashSet.iterator();
+    public boolean hasNext(){
+      return iterator.hasNext();
+    }
+    public Object next(){
+      return iterator.next().get();
+    }
+    public void remove(){
+      iterator.remove();
+    }
+  }
+;
+}

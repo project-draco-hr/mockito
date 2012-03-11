@@ -1,0 +1,4 @@
+{
+  T[] array=typedArray.length >= size() ? typedArray : (T[])newInstance(typedArray.getClass().getComponentType(),size());
+  return unwrapTo(array);
+}
