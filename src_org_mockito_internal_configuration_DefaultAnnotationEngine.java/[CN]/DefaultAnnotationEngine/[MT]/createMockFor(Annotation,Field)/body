@@ -1,12 +1,3 @@
 {
-  if (annotation instanceof Mock) {
-    return processAnnotationOn((Mock)annotation,field);
-  }
-  if (annotation instanceof MockitoAnnotations.Mock) {
-    return processAnnotationOn((MockitoAnnotations.Mock)annotation,field);
-  }
-  if (annotation instanceof Captor) {
-    return processAnnotationOn((Captor)annotation,field);
-  }
-  return null;
+  return forAnnotation(annotation).process(annotation,field);
 }

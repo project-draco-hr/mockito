@@ -1,0 +1,11 @@
+{
+  if (annotationProcessorMap.containsKey(annotation.annotationType())) {
+    return (FieldAnnotationProcessor<A>)annotationProcessorMap.get(annotation.annotationType());
+  }
+  return new FieldAnnotationProcessor<A>(){
+    public Object process(    A annotation,    Field field){
+      return null;
+    }
+  }
+;
+}
