@@ -1,0 +1,14 @@
+{
+  return new Filter<InstanceField>(){
+    public boolean isOut(    InstanceField instanceField){
+      Checks.checkNotNull(annotations,"Provide at least one annotation class");
+      for (      Class<? extends Annotation> annotation : annotations) {
+        if (instanceField.isAnnotatedBy(annotation)) {
+          return false;
+        }
+      }
+      return true;
+    }
+  }
+;
+}

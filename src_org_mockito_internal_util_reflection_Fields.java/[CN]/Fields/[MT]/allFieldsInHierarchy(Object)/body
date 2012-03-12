@@ -1,0 +1,7 @@
+{
+  List<InstanceField> instanceFields=new ArrayList<InstanceField>();
+  for (Class<?> clazz=instance.getClass(); clazz != Object.class; clazz=clazz.getSuperclass()) {
+    instanceFields.addAll(instanceFieldsIn(instance,clazz));
+  }
+  return new InstanceFields(instance,instanceFields);
+}

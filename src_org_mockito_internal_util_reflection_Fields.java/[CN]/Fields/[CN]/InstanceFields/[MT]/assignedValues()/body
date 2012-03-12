@@ -1,0 +1,7 @@
+{
+  List<Object> values=new ArrayList<Object>(instanceFields.size());
+  for (  InstanceField instanceField : instanceFields) {
+    values.add(instanceField.read());
+  }
+  return values;
+}
