@@ -1,2 +1,6 @@
 {
+  List<InstanceField> instanceFields=Fields.allFieldsInHierarchy(instance).filter(notAnnotatedBy(Captor.class)).instanceFields();
+  for (  InstanceField instanceField : instanceFields) {
+    new CaptorAnnotationProcessor().process(instanceField.annotation(Captor.class),instanceField.jdkField());
+  }
 }
