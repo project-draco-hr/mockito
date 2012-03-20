@@ -8,7 +8,7 @@
     resources=loader.getResources("mockito-extensions/" + service.getName());
   }
  catch (  IOException e) {
-    throw new ServiceConfigurationError("Failed to load " + service,e);
+    throw new MockitoException("Failed to load " + service,e);
   }
   List<T> result=new ArrayList<T>();
   for (  URL resource : Collections.list(resources)) {
@@ -23,7 +23,7 @@
       }
     }
  catch (    Exception e) {
-      throw new ServiceConfigurationError("Failed to load " + service + " using "+ resource,e);
+      throw new MockitoException("Failed to load " + service + " using "+ resource,e);
     }
  finally {
       closeQuietly(in);
