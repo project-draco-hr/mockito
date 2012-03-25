@@ -1,0 +1,9 @@
+{
+  if (!lastMatchers.isEmpty()) {
+    int recordedMatchersSize=lastMatchers.size();
+    int expectedMatchersSize=invocation.getArgumentsCount();
+    if (expectedMatchersSize != recordedMatchersSize) {
+      new Reporter().invalidUseOfMatchers(expectedMatchersSize,lastMatchers);
+    }
+  }
+}

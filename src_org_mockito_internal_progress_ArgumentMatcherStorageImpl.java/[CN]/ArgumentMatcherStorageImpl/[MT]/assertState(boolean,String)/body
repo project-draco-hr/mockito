@@ -1,6 +1,0 @@
-{
-  if (!toAssert) {
-    matcherStack.clear();
-    throw new InvalidUseOfMatchersException(message);
-  }
-}

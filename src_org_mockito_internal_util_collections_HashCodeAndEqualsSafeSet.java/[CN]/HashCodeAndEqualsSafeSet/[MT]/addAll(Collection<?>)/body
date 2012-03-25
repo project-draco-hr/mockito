@@ -1,0 +1,3 @@
+{
+  return backingHashSet.addAll(asWrappedMocks(mocks));
+}

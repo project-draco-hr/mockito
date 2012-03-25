@@ -1,7 +1,7 @@
 {
   Class<?> clazz=testClassInstance.getClass();
   Set<Field> mockDependentFields=new HashSet<Field>();
-  Set<Object> mocks=new HashSet<Object>();
+  Set<Object> mocks=newMockSafeHashSet();
   while (clazz != Object.class) {
     new InjectMocksScanner(clazz).addTo(mockDependentFields);
     new MockScanner(testClassInstance,clazz).addPreparedMocks(mocks);

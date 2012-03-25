@@ -1,0 +1,6 @@
+{
+  UnmockableHashCodeAndEquals mock1=mock(UnmockableHashCodeAndEquals.class);
+  HashCodeAndEqualsSafeSet mocks=HashCodeAndEqualsSafeSet.of(mock1);
+  assertThat(mocks.toArray()[0]).isSameAs(mock1);
+  assertThat(mocks.toArray(new UnmockableHashCodeAndEquals[0])[0]).isSameAs(mock1);
+}

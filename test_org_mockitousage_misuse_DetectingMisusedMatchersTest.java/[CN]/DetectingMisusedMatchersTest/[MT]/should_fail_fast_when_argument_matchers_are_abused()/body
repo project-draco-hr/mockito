@@ -1,0 +1,10 @@
+{
+  misplaced_anyObject_argument_matcher();
+  try {
+    mock(IMethods.class);
+    fail();
+  }
+ catch (  InvalidUseOfMatchersException e) {
+    assertContains("Misplaced argument matcher",e.getMessage());
+  }
+}

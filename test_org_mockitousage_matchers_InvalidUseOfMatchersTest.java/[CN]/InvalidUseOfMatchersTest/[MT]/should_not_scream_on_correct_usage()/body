@@ -1,0 +1,4 @@
+{
+  mock.simpleMethod(AdditionalMatchers.not(eq("asd")));
+  mock.simpleMethod(AdditionalMatchers.or(eq("jkl"),eq("asd")));
+}

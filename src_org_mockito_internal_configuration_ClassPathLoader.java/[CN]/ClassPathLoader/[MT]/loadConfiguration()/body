@@ -1,5 +1,5 @@
 {
-  Class configClass=null;
+  Class configClass;
   try {
     configClass=(Class)Class.forName("org.mockito.configuration.MockitoConfiguration");
   }

@@ -1,0 +1,7 @@
+{
+  List<String> delegatedList=new ArrayList<String>();
+  delegatedList.add("un");
+  List<String> mock=mock(List.class,withSettings().forwardTo(delegatedList));
+  mock.add("two");
+  assertEquals(2,mock.size());
+}

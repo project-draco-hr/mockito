@@ -1,0 +1,4 @@
+{
+  Method method=invocation.getMethod();
+  return method.invoke(delegatedObject,invocation.getArguments());
+}

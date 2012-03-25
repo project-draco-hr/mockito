@@ -1,0 +1,33 @@
+{
+  ClassLoader loader=Thread.currentThread().getContextClassLoader();
+  if (loader == null) {
+    loader=ClassLoader.getSystemClassLoader();
+  }
+  Enumeration<URL> resources;
+  try {
+    resources=loader.getResources("mockito-extensions/" + service.getName());
+  }
+ catch (  IOException e) {
+    throw new ServiceConfigurationError("Failed to load " + service,e);
+  }
+  List<T> result=new ArrayList<T>();
+  for (  URL resource : Collections.list(resources)) {
+    InputStream in=null;
+    try {
+      in=resource.openStream();
+      for (      String line : readerToLines(new InputStreamReader(in,"UTF-8"))) {
+        String name=stripCommentAndWhitespace(line);
+        if (!name.isEmpty()) {
+          result.add(service.cast(loader.loadClass(name).newInstance()));
+        }
+      }
+    }
+ catch (    Exception e) {
+      throw new ServiceConfigurationError("Failed to load " + service + " using "+ resource,e);
+    }
+ finally {
+      closeQuietly(in);
+    }
+  }
+  return result;
+}

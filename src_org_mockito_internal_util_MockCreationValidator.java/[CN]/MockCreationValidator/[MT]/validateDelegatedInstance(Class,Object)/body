@@ -1,0 +1,8 @@
+{
+  if (classToMock == null || delegatedInstance == null) {
+    return;
+  }
+  if (delegatedInstance.getClass().isAssignableFrom(classToMock)) {
+    new Reporter().mockedTypeIsInconsistentWithDelegatedInstanceType(classToMock,delegatedInstance);
+  }
+}

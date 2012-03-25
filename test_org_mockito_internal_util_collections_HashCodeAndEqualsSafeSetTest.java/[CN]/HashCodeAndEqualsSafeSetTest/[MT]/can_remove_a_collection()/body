@@ -1,0 +1,8 @@
+{
+  HashCodeAndEqualsSafeSet mocks=HashCodeAndEqualsSafeSet.of(mock(UnmockableHashCodeAndEquals.class),mock(Observer.class));
+  HashCodeAndEqualsSafeSet workingSet=new HashCodeAndEqualsSafeSet();
+  workingSet.addAll(mocks);
+  workingSet.add(mock(List.class));
+  assertThat(workingSet.removeAll(mocks)).isTrue();
+  assertThat(workingSet.containsAll(mocks)).isFalse();
+}

@@ -1,0 +1,7 @@
+{
+  if (!(o instanceof HashCodeAndEqualsSafeSet)) {
+    return false;
+  }
+  HashCodeAndEqualsSafeSet that=(HashCodeAndEqualsSafeSet)o;
+  return backingHashSet.equals(that.backingHashSet);
+}

@@ -1,0 +1,3 @@
+String additionalMatcherName
+int expectedSubMatchersCount
+Collection<LocalizedMatcher> matcherStack

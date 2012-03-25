@@ -1,0 +1,9 @@
+{
+  try {
+    mock.simpleMethod(AdditionalMatchers.not("jkl"));
+    fail();
+  }
+ catch (  InvalidUseOfMatchersException e) {
+    assertThat(e.getMessage()).contains("No matchers found for").containsIgnoringCase("Not(?)");
+  }
+}

@@ -1,0 +1,3 @@
+{
+  new HashCodeAndEqualsSafeSet().add(mock(UnmockableHashCodeAndEquals.class));
+}

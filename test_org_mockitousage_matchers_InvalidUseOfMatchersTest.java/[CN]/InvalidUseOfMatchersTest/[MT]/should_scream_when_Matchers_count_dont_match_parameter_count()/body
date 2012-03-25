@@ -1,0 +1,9 @@
+{
+  try {
+    mock.threeArgumentMethod(1,"asd",eq("asd"));
+    fail();
+  }
+ catch (  InvalidUseOfMatchersException e) {
+    assertThat(e.getMessage()).contains("3 matchers expected").contains("1 recorded");
+  }
+}

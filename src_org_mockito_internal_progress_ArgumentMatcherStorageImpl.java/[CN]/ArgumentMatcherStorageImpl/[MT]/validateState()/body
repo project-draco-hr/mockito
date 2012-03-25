@@ -1,7 +1,7 @@
 {
   if (!matcherStack.isEmpty()) {
-    LocalizedMatcher lastMatcher=matcherStack.lastElement();
+    ArrayList lastMatchers=new ArrayList<LocalizedMatcher>(matcherStack);
     matcherStack.clear();
-    new Reporter().misplacedArgumentMatcher(lastMatcher.getLocation());
+    new Reporter().misplacedArgumentMatcher(lastMatchers);
   }
 }

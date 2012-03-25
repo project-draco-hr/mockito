@@ -1,0 +1,7 @@
+{
+  HashCodeAndEqualsSafeSet mocks=new HashCodeAndEqualsSafeSet();
+  UnmockableHashCodeAndEquals mock=mock(UnmockableHashCodeAndEquals.class);
+  mocks.add(mock);
+  mocks.remove(mock);
+  assertThat(mocks.isEmpty()).isTrue();
+}

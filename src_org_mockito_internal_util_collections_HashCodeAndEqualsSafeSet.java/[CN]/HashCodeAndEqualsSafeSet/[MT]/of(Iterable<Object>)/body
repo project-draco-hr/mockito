@@ -1,0 +1,9 @@
+{
+  HashCodeAndEqualsSafeSet hashCodeAndEqualsSafeSet=new HashCodeAndEqualsSafeSet();
+  if (objects != null) {
+    for (    Object mock : objects) {
+      hashCodeAndEqualsSafeSet.add(mock);
+    }
+  }
+  return hashCodeAndEqualsSafeSet;
+}
