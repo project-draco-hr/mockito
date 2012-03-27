@@ -1,9 +1,0 @@
-{
-  List<InstanceField> instanceDeclaredFields=new ArrayList<InstanceField>();
-  Field[] declaredFields=clazz.getDeclaredFields();
-  for (  Field declaredField : declaredFields) {
-    InstanceField instanceField=new InstanceField(declaredField,instance);
-    instanceDeclaredFields.add(instanceField);
-  }
-  return instanceDeclaredFields;
-}

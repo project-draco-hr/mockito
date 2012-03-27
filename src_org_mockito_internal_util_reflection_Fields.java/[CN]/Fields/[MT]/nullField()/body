@@ -1,7 +1,7 @@
 {
   return new Filter<InstanceField>(){
     public boolean isOut(    InstanceField instanceField){
-      return instanceField.isNotNull();
+      return instanceField.isNull();
     }
   }
 ;

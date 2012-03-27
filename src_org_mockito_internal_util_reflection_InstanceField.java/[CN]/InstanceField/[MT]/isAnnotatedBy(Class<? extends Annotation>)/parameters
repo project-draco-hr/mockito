@@ -1,1 +1,1 @@
-Class<? extends Annotation> annotation
+Class<? extends Annotation> annotationClass

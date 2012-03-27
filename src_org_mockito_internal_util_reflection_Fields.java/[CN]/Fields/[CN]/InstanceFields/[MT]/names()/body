@@ -1,0 +1,7 @@
+{
+  List<String> fieldNames=new ArrayList<String>(instanceFields.size());
+  for (  InstanceField instanceField : instanceFields) {
+    fieldNames.add(instanceField.name());
+  }
+  return fieldNames;
+}
