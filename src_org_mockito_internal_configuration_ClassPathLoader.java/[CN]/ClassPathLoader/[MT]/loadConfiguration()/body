@@ -1,7 +1,7 @@
 {
   Class configClass;
   try {
-    configClass=(Class)Class.forName("org.mockito.configuration.MockitoConfiguration");
+    configClass=(Class)Class.forName(MOCKITO_CONFIGURATION_CLASS_NAME);
   }
  catch (  ClassNotFoundException e) {
     return null;
@@ -10,9 +10,9 @@
     return (IMockitoConfiguration)configClass.newInstance();
   }
  catch (  ClassCastException e) {
-    throw new MockitoConfigurationException("\n" + "MockitoConfiguration class must implement org.mockito.configuration.IMockitoConfiguration interface.",e);
+    throw new MockitoConfigurationException("MockitoConfiguration class must implement " + IMockitoConfiguration.class.getName() + " interface.",e);
   }
 catch (  Exception e) {
-    throw new MockitoConfigurationException("\n" + "Unable to instantiate org.mockito.configuration.MockitoConfiguration class. Does it have a safe, no-arg constructor?",e);
+    throw new MockitoConfigurationException("Unable to instantiate " + MOCKITO_CONFIGURATION_CLASS_NAME + " class. Does it have a safe, no-arg constructor?",e);
   }
 }

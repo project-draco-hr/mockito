@@ -17,13 +17,13 @@
       in=resource.openStream();
       for (      String line : readerToLines(new InputStreamReader(in,"UTF-8"))) {
         String name=stripCommentAndWhitespace(line);
-        if (!name.isEmpty()) {
+        if (name.length() != 0) {
           result.add(service.cast(loader.loadClass(name).newInstance()));
         }
       }
     }
  catch (    Exception e) {
-      throw new MockitoException("Failed to load " + service + " using "+ resource,e);
+      throw new MockitoConfigurationException("Failed to load " + service + " using "+ resource,e);
     }
  finally {
       closeQuietly(in);
