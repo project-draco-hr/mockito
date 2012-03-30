@@ -1,0 +1,3 @@
+{
+  return MockitoTestNGListener.class;
+}

@@ -1,0 +1,6 @@
+{
+  Mockito.validateMockitoUsage();
+  if (method.isTestMethod()) {
+    resetMocks(testResult.getInstance());
+  }
+}

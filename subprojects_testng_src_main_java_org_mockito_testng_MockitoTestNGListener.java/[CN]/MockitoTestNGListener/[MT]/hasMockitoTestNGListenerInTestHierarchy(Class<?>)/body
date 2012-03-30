@@ -1,0 +1,8 @@
+{
+  for (Class<?> clazz=testClass; clazz != Object.class; clazz=clazz.getSuperclass()) {
+    if (hasMockitoTestNGListener(clazz)) {
+      return true;
+    }
+  }
+  return false;
+}

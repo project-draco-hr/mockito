@@ -1,0 +1,4 @@
+{
+  this.field=Checks.checkNotNull(field,"field");
+  this.instance=Checks.checkNotNull(instance,"instance");
+}

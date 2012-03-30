@@ -1,0 +1,5 @@
+{
+  if (hasMockitoTestNGListenerInTestHierarchy(testResult.getTestClass().getRealClass())) {
+    beforeTest.applyFor(method,testResult);
+  }
+}

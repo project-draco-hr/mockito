@@ -1,0 +1,6 @@
+{
+  if (fieldReader == null) {
+    fieldReader=new FieldReader(instance,field);
+  }
+  return fieldReader;
+}

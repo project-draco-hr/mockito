@@ -1,0 +1,3 @@
+{
+  new FieldSetter(instance,field).set(value);
+}

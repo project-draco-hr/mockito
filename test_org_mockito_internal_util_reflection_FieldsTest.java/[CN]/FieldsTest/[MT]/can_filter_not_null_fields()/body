@@ -1,0 +1,3 @@
+{
+  assertThat(Fields.declaredFieldsOf(new NullOrNotNullFields()).notNull().names()).containsOnly("c");
+}

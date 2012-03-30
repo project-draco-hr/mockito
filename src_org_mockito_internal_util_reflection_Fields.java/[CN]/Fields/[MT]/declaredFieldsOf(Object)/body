@@ -1,0 +1,5 @@
+{
+  List<InstanceField> instanceFields=new ArrayList<InstanceField>();
+  instanceFields.addAll(instanceFieldsIn(instance,instance.getClass().getDeclaredFields()));
+  return new InstanceFields(instance,instanceFields);
+}

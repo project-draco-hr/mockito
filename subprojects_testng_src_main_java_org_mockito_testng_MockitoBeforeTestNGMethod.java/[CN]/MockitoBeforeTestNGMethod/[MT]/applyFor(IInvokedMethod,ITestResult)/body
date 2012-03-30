@@ -1,0 +1,4 @@
+{
+  initMocks(testResult);
+  reinitCaptors(method,testResult);
+}

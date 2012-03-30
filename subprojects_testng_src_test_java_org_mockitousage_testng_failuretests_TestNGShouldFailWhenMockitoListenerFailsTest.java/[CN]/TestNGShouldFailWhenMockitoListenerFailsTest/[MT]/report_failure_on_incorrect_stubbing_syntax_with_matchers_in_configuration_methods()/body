@@ -1,0 +1,6 @@
+{
+  TestNG testNG=new_TestNG_with_failure_recorder_for(FailingBecauseWrongStubbingSyntaxInConfigurationMethod.class);
+  testNG.run();
+  assertTrue(testNG.hasFailure());
+  assertThat(failureRecorder.lastThrowable()).isInstanceOf(InvalidUseOfMatchersException.class);
+}

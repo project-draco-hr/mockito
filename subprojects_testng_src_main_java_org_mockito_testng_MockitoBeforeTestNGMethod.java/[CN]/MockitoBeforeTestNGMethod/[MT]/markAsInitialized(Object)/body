@@ -1,0 +1,3 @@
+{
+  initializedInstances.put(instance,true);
+}

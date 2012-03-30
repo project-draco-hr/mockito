@@ -1,0 +1,6 @@
+{
+  if (method.isConfigurationMethod()) {
+    return;
+  }
+  initializeCaptors(testResult.getInstance());
+}

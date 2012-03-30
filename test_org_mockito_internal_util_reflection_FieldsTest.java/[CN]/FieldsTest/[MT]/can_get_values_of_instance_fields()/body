@@ -1,0 +1,3 @@
+{
+  assertThat(Fields.declaredFieldsOf(new ValuedFields()).assignedValues()).containsOnly("a","b");
+}

@@ -1,0 +1,3 @@
+{
+  assertThat(Fields.declaredFieldsOf(new HierarchyOfClasses()).names()).containsOnly("b","static_b");
+}

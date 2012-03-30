@@ -1,0 +1,19 @@
+{
+  Set<Object> instanceMocks=new HashSet<Object>();
+  Field[] declaredFields=clazz.getDeclaredFields();
+  for (  Field declaredField : declaredFields) {
+    if (declaredField.isAnnotationPresent(Mock.class) || declaredField.isAnnotationPresent(Spy.class)) {
+      declaredField.setAccessible(true);
+      try {
+        Object fieldValue=declaredField.get(instance);
+        if (fieldValue != null) {
+          instanceMocks.add(fieldValue);
+        }
+      }
+ catch (      IllegalAccessException e) {
+        throw new MockitoException("Could not access field " + declaredField.getName());
+      }
+    }
+  }
+  return instanceMocks;
+}

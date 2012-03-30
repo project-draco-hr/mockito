@@ -1,0 +1,3 @@
+{
+  return Fields.allDeclaredFieldsOf(instance).filter(annotatedBy(Mock.class,Spy.class,MockitoAnnotations.Mock.class)).notNull().assignedValues();
+}

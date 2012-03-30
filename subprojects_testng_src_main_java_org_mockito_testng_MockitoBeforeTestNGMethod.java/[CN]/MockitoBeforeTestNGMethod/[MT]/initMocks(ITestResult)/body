@@ -1,0 +1,7 @@
+{
+  if (alreadyInitialized(testResult.getInstance())) {
+    return;
+  }
+  MockitoAnnotations.initMocks(testResult.getInstance());
+  markAsInitialized(testResult.getInstance());
+}

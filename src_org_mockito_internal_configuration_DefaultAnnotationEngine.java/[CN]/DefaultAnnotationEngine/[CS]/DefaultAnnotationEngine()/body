@@ -1,0 +1,5 @@
+{
+  registerAnnotationProcessor(Mock.class,new MockAnnotationProcessor());
+  registerAnnotationProcessor(MockitoAnnotations.Mock.class,new MockitoAnnotationsMockAnnotationProcessor());
+  registerAnnotationProcessor(Captor.class,new CaptorAnnotationProcessor());
+}

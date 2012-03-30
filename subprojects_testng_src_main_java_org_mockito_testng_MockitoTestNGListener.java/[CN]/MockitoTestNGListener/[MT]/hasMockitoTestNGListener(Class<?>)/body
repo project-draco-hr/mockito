@@ -1,0 +1,12 @@
+{
+  Listeners listeners=clazz.getAnnotation(Listeners.class);
+  if (listeners == null) {
+    return false;
+  }
+  for (  Class<? extends ITestNGListener> listenerClass : listeners.value()) {
+    if (listenerClass() == listenerClass) {
+      return true;
+    }
+  }
+  return false;
+}

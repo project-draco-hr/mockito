@@ -1,0 +1,3 @@
+{
+  return new InstanceFields(instance,ListUtil.filter(instanceFields,withFilter));
+}

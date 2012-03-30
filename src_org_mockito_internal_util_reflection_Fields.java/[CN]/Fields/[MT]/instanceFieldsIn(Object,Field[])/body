@@ -1,0 +1,8 @@
+{
+  List<InstanceField> instanceDeclaredFields=new ArrayList<InstanceField>();
+  for (  Field field : fields) {
+    InstanceField instanceField=new InstanceField(field,instance);
+    instanceDeclaredFields.add(instanceField);
+  }
+  return instanceDeclaredFields;
+}

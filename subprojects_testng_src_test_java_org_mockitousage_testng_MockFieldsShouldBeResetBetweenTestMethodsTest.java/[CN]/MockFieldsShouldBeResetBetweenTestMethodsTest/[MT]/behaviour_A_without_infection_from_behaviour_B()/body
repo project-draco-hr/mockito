@@ -1,0 +1,7 @@
+{
+  assertThat(list.get(0)).isNull();
+  verify(list,never()).add(anyString());
+  given(list.get(0)).willReturn("A");
+  assertThat(list.get(0)).isEqualTo("A");
+  list.add("something else after A");
+}
