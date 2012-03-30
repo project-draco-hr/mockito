@@ -1,0 +1,4 @@
+{
+  this.toInspect=toInspect;
+  this.delegate=delegate;
+}
