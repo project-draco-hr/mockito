@@ -1,5 +1,5 @@
 {
-  InvocationImpl previous=new InvocationBuilder().toInvocation();
+  Invocation previous=new InvocationBuilder().toInvocation();
   finderStub.previousInOrderToReturn=previous;
   checker.check(invocations,wanted,new VerificationModeBuilder().inOrder(),context);
   assertEquals(wanted,reporterStub.wanted);

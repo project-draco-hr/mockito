@@ -14,7 +14,7 @@
       }
     }
   }
-  for (  InvocationImpl i : unusedStubs) {
+  for (  Invocation i : unusedStubs) {
     findingsListener.foundUnusedStub(i);
   }
   for (  InvocationMatcher i : allInvocations) {

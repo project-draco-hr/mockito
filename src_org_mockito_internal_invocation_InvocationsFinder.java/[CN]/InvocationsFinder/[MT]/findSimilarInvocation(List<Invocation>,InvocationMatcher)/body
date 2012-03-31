@@ -1,6 +1,6 @@
 {
   Invocation firstSimilar=null;
-  for (  InvocationImpl invocation : invocations) {
+  for (  Invocation invocation : invocations) {
     if (!wanted.hasSimilarMethod(invocation)) {
       continue;
     }

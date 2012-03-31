@@ -3,7 +3,7 @@
   if (!chunk.isEmpty()) {
     return;
   }
-  InvocationImpl previousInOrder=finder.findPreviousVerifiedInOrder(invocations,context);
+  Invocation previousInOrder=finder.findPreviousVerifiedInOrder(invocations,context);
   if (previousInOrder == null) {
     List<Invocation> actualInvocations=finder.findInvocations(invocations,wanted);
     if (actualInvocations == null || actualInvocations.isEmpty()) {

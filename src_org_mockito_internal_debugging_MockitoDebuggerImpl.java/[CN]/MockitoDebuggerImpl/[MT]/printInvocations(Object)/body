@@ -4,7 +4,7 @@
   out+=line("********************************");
   out+=line("*** Mockito interactions log ***");
   out+=line("********************************");
-  for (  InvocationImpl i : invocations) {
+  for (  Invocation i : invocations) {
     out+=line(i.toString());
     out+=line(" invoked: " + i.getLocation());
     if (i.stubInfo() != null) {
@@ -18,7 +18,7 @@
   out+=line("********************************");
   out+=line("***       Unused stubs       ***");
   out+=line("********************************");
-  for (  InvocationImpl i : invocations) {
+  for (  Invocation i : invocations) {
     out+=line(i.toString());
     out+=line(" stubbed: " + i.getLocation());
   }
