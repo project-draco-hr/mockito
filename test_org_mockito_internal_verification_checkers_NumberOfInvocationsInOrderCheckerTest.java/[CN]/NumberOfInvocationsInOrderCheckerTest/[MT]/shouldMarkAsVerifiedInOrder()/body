@@ -1,5 +1,5 @@
 {
-  InvocationImpl invocation=new InvocationBuilder().toInvocation();
+  Invocation invocation=new InvocationBuilder().toInvocation();
   assertFalse(context.isVerified(invocation));
   finderStub.validMatchingChunkToReturn.addAll(asList(invocation));
   checker.check(invocations,wanted,1,context);

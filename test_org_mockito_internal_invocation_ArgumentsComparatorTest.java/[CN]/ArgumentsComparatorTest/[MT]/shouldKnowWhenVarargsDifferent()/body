@@ -1,6 +1,6 @@
 {
   mock.varargs("1","2");
-  InvocationImpl invocation=getLastInvocation();
+  Invocation invocation=getLastInvocation();
   InvocationMatcher invocationMatcher=new InvocationMatcher(invocation,(List)asList(new Equals("100"),Any.ANY));
   boolean match=comparator.argumentsMatch(invocationMatcher,invocation);
   assertFalse(match);

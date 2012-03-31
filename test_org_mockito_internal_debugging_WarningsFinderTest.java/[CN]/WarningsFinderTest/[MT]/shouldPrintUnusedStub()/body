@@ -1,5 +1,5 @@
 {
-  InvocationImpl unusedStub=new InvocationBuilder().simpleMethod().toInvocation();
+  Invocation unusedStub=new InvocationBuilder().simpleMethod().toInvocation();
   WarningsFinder finder=new WarningsFinder(asList(unusedStub),Arrays.<InvocationMatcher>asList());
   finder.find(listener);
   verify(listener,only()).foundUnusedStub(unusedStub);

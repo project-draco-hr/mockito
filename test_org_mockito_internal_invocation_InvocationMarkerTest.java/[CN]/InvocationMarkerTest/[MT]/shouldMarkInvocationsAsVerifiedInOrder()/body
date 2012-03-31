@@ -1,7 +1,7 @@
 {
   InOrderContextImpl context=new InOrderContextImpl();
   InvocationMarker marker=new InvocationMarker();
-  InvocationImpl i=new InvocationBuilder().toInvocation();
+  Invocation i=new InvocationBuilder().toInvocation();
   InvocationMatcher im=new InvocationBuilder().toInvocationMatcher();
   assertFalse(context.isVerified(i));
   assertFalse(i.isVerified());

@@ -1,5 +1,0 @@
-{
-  for (  InvocationImpl invocation : invocations) {
-    markVerified(invocation,wanted);
-  }
-}

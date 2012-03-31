@@ -1,0 +1,5 @@
+{
+  for (  Invocation invocation : invocations) {
+    markVerified(invocation,wanted);
+  }
+}

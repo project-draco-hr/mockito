@@ -1,5 +1,5 @@
 {
-  InvocationImpl inovcationOnIterface=new InvocationBuilder().method("simpleMethod").toInvocation();
+  Invocation inovcationOnIterface=new InvocationBuilder().method("simpleMethod").toInvocation();
   try {
     validator.validate(new CallsRealMethods(),inovcationOnIterface);
     fail();

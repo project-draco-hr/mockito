@@ -1,6 +1,6 @@
 {
   String out="";
-  List<InvocationImpl> invocations=allInvocationsFinder.find(asList(mocks));
+  List<Invocation> invocations=allInvocationsFinder.find(asList(mocks));
   out+=line("********************************");
   out+=line("*** Mockito interactions log ***");
   out+=line("********************************");

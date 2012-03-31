@@ -1,0 +1,9 @@
+{
+  List<Invocation> actualInvocations=finder.findInvocations(invocations,wanted);
+  int actualCount=actualInvocations.size();
+  if (wantedCount > actualCount) {
+    LocationImpl lastLocation=finder.getLastLocation(actualInvocations);
+    reporter.tooLittleActualInvocations(new AtLeastDiscrepancy(wantedCount,actualCount),wanted,lastLocation);
+  }
+  invocationMarker.markVerified(actualInvocations,wanted);
+}

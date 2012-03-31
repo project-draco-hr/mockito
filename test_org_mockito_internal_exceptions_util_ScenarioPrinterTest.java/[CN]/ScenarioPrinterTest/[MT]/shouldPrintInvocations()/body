@@ -1,6 +1,6 @@
 {
-  InvocationImpl verified=new InvocationBuilder().simpleMethod().verified().toInvocation();
-  InvocationImpl unverified=new InvocationBuilder().differentMethod().toInvocation();
+  Invocation verified=new InvocationBuilder().simpleMethod().verified().toInvocation();
+  Invocation unverified=new InvocationBuilder().differentMethod().toInvocation();
   String out=sp.print((List)asList(verified,unverified));
   assertContains("1. -> at",out);
   assertContains("2. [?]-> at",out);

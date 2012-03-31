@@ -1,5 +1,5 @@
 {
-  InvocationImpl invocationOnInterface=new InvocationBuilder().toInvocation();
+  Invocation invocationOnInterface=new InvocationBuilder().toInvocation();
   try {
     invocationOnInterface.callRealMethod();
     fail();

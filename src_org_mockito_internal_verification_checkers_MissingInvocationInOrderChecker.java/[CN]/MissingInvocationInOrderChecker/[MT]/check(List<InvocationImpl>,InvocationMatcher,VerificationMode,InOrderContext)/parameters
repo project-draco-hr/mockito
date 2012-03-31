@@ -1,4 +1,0 @@
-List<InvocationImpl> invocations
-InvocationMatcher wanted
-VerificationMode mode
-InOrderContext context

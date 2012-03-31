@@ -1,5 +1,5 @@
 {
-  InvocationImpl previous=finder.findPreviousVerifiedInOrder(invocations,context);
+  Invocation previous=finder.findPreviousVerifiedInOrder(invocations,context);
   assertNull(previous);
   context.markVerified(simpleMethodInvocation);
   context.markVerified(simpleMethodInvocationTwo);

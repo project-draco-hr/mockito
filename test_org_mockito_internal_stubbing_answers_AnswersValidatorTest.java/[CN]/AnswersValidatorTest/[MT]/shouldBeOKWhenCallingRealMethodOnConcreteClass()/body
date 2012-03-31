@@ -1,6 +1,6 @@
 {
   ArrayList mock=mock(ArrayList.class);
   mock.clear();
-  InvocationImpl invocationOnClass=getLastInvocation();
+  Invocation invocationOnClass=getLastInvocation();
   validator.validate(new CallsRealMethods(),invocationOnClass);
 }

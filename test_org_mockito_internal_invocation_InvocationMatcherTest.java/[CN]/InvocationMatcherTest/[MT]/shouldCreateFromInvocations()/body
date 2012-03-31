@@ -1,5 +1,5 @@
 {
-  InvocationImpl i=new InvocationBuilder().toInvocation();
+  Invocation i=new InvocationBuilder().toInvocation();
   List<InvocationMatcher> out=InvocationMatcher.createFrom(asList(i));
   assertEquals(1,out.size());
   assertEquals(i,out.get(0).getInvocation());

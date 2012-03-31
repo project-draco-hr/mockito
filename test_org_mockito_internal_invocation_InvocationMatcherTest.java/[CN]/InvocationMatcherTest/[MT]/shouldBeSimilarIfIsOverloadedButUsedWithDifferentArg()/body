@@ -2,6 +2,6 @@
   Method method=IMethods.class.getMethod("simpleMethod",String.class);
   Method overloadedMethod=IMethods.class.getMethod("simpleMethod",Object.class);
   InvocationMatcher invocation=new InvocationBuilder().mock(mock).method(method).arg("foo").toInvocationMatcher();
-  InvocationImpl overloadedInvocation=new InvocationBuilder().mock(mock).method(overloadedMethod).arg("bar").toInvocation();
+  Invocation overloadedInvocation=new InvocationBuilder().mock(mock).method(overloadedMethod).arg("bar").toInvocation();
   assertTrue(invocation.hasSimilarMethod(overloadedInvocation));
 }

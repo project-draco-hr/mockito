@@ -1,5 +1,5 @@
 {
-  InvocationImpl invocation=new InvocationBuilder().toInvocation();
+  Invocation invocation=new InvocationBuilder().toInvocation();
   finderStub.actualToReturn.add(invocation);
   assertFalse(invocation.isVerified());
   checker.check(invocations,wanted,1);

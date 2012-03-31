@@ -1,5 +1,5 @@
 {
-  InvocationImpl invocation=new InvocationBuilder().args("1",100).toInvocation();
+  Invocation invocation=new InvocationBuilder().args("1",100).toInvocation();
   CapturingMatcher capturingMatcher=new CapturingMatcher();
   InvocationMatcher invocationMatcher=new InvocationMatcher(invocation,(List)asList(new Equals("1"),capturingMatcher));
   invocationMatcher.captureArgumentsFrom(invocation);

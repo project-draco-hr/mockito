@@ -1,0 +1,7 @@
+{
+  LinkedList<InvocationMatcher> out=new LinkedList<InvocationMatcher>();
+  for (  Invocation i : invocations) {
+    out.add(new InvocationMatcher(i));
+  }
+  return out;
+}

@@ -1,5 +1,5 @@
 {
-  InvocationImpl invocation=new InvocationBuilder().toInvocation();
+  Invocation invocation=new InvocationBuilder().toInvocation();
   assertFalse(invocation.isVerified());
   try {
     only.verify(new VerificationDataStub(new InvocationBuilder().toInvocationMatcher(),invocation));

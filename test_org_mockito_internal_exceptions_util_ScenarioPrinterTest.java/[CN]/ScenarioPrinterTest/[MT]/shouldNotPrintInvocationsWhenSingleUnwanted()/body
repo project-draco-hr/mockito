@@ -1,5 +1,5 @@
 {
-  InvocationImpl unverified=new InvocationBuilder().differentMethod().toInvocation();
+  Invocation unverified=new InvocationBuilder().differentMethod().toInvocation();
   String out=sp.print((List)asList(unverified));
   assertContains("Actually, above is the only interaction with this mock.",out);
 }

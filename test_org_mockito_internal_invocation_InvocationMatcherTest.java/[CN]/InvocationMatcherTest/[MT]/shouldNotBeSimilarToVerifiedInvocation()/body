@@ -1,4 +1,4 @@
 {
-  InvocationImpl verified=new InvocationBuilder().simpleMethod().verified().toInvocation();
+  Invocation verified=new InvocationBuilder().simpleMethod().verified().toInvocation();
   assertFalse(simpleMethod.hasSimilarMethod(verified));
 }

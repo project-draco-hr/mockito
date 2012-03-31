@@ -1,7 +1,7 @@
 {
   NoMoreInteractions n=new NoMoreInteractions();
-  InvocationImpl i=new InvocationBuilder().seq(1).toInvocation();
-  InvocationImpl i2=new InvocationBuilder().seq(2).toInvocation();
+  Invocation i=new InvocationBuilder().seq(1).toInvocation();
+  Invocation i2=new InvocationBuilder().seq(2).toInvocation();
   context.markVerified(i2);
   n.verifyInOrder(new VerificationDataInOrderImpl(context,asList(i,i2),null));
 }

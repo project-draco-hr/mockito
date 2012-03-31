@@ -1,8 +1,8 @@
 {
-  Set<InvocationImpl> invocationsInOrder=new TreeSet<InvocationImpl>(new SequenceNumberComparator());
+  Set<Invocation> invocationsInOrder=new TreeSet<Invocation>(new SequenceNumberComparator());
   for (  Object mock : mocks) {
     MockHandlerInterface<Object> handler=new MockUtil().getMockHandler(mock);
-    List<InvocationImpl> fromSingleMock=handler.getInvocationContainer().getInvocations();
+    List<Invocation> fromSingleMock=handler.getInvocationContainer().getInvocations();
     invocationsInOrder.addAll(fromSingleMock);
   }
   return new LinkedList<InvocationImpl>(invocationsInOrder);

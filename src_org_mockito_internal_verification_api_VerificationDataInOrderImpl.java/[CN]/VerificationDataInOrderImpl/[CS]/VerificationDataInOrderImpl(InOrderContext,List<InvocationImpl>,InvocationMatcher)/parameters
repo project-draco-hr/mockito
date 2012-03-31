@@ -1,3 +1,0 @@
-InOrderContext inOrder
-List<InvocationImpl> allInvocations
-InvocationMatcher wanted

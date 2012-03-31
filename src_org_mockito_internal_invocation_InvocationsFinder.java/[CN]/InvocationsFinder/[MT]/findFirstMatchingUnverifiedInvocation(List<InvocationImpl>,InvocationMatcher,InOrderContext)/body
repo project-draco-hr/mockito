@@ -1,8 +1,0 @@
-{
-  for (  InvocationImpl invocation : removeVerifiedInOrder(invocations,context)) {
-    if (wanted.matches(invocation)) {
-      return invocation;
-    }
-  }
-  return null;
-}

@@ -1,6 +1,6 @@
 {
-  InvocationImpl toString=new InvocationBuilder().method("toString").toInvocation();
-  InvocationImpl simpleMethod=new InvocationBuilder().simpleMethod().toInvocation();
+  Invocation toString=new InvocationBuilder().method("toString").toInvocation();
+  Invocation simpleMethod=new InvocationBuilder().simpleMethod().toInvocation();
   invocations.add(toString);
   invocations.add(simpleMethod);
   assertTrue(invocations.getAll().contains(simpleMethod));

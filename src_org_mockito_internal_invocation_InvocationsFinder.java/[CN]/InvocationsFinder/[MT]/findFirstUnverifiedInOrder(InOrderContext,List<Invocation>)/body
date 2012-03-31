@@ -1,0 +1,12 @@
+{
+  Invocation candidate=null;
+  for (  Invocation i : orderedInvocations) {
+    if (!context.isVerified(i)) {
+      candidate=candidate != null ? candidate : i;
+    }
+ else {
+      candidate=null;
+    }
+  }
+  return candidate;
+}

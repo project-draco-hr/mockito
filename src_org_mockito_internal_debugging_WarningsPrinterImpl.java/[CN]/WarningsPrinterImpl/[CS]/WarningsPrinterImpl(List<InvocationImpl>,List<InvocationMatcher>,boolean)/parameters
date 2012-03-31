@@ -1,3 +1,0 @@
-List<InvocationImpl> unusedStubs
-List<InvocationMatcher> allInvocations
-boolean warnAboutUnstubbed

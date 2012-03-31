@@ -1,5 +1,5 @@
 {
-  List<InvocationImpl> copiedList;
+  List<Invocation> copiedList;
 synchronized (invocations) {
     copiedList=new LinkedList<InvocationImpl>(invocations);
   }
