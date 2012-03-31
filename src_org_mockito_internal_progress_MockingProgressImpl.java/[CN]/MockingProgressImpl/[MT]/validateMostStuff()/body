@@ -1,7 +1,7 @@
 {
   GlobalConfiguration.validate();
   if (verificationMode != null) {
-    LocationImpl location=verificationMode.getLocation();
+    Location location=verificationMode.getLocation();
     verificationMode=null;
     reporter.unfinishedVerificationException(location);
   }

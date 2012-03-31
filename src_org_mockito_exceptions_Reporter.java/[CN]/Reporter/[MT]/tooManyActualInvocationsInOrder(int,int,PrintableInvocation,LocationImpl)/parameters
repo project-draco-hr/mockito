@@ -1,4 +1,0 @@
-int wantedCount
-int actualCount
-PrintableInvocation wanted
-LocationImpl firstUndesired
