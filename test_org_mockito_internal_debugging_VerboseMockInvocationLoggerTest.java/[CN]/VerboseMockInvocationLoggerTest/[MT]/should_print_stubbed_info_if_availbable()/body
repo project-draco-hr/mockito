@@ -1,5 +1,5 @@
 {
-  invocation.markStubbed(new StubInfo(stubbedInvocation));
+  invocation.markStubbed(new StubInfoImpl(stubbedInvocation));
   listener.reportInvocation(new NotifiedMethodInvocationReport(invocation,"whatever"));
   assertThat(printed()).contains("stubbed").contains(stubbedInvocation.getLocation().toString());
 }
