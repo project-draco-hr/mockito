@@ -5,5 +5,5 @@
     List<Invocation> fromSingleMock=handler.getInvocationContainer().getInvocations();
     invocationsInOrder.addAll(fromSingleMock);
   }
-  return new LinkedList<InvocationImpl>(invocationsInOrder);
+  return new LinkedList<Invocation>(invocationsInOrder);
 }

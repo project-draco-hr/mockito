@@ -1,7 +1,7 @@
 {
   Invocation stub=new InvocationBuilder().arg("foo").mock(mock).toInvocation();
   InvocationMatcher wrongArg=new InvocationBuilder().arg("bar").mock(mock).toInvocationMatcher();
-  WarningsFinder finder=new WarningsFinder(Arrays.<InvocationImpl>asList(stub),Arrays.<InvocationMatcher>asList(wrongArg));
+  WarningsFinder finder=new WarningsFinder(Arrays.<Invocation>asList(stub),Arrays.<InvocationMatcher>asList(wrongArg));
   finder.find(listener);
   verify(listener,only()).foundStubCalledWithDifferentArgs(stub,wrongArg);
 }
