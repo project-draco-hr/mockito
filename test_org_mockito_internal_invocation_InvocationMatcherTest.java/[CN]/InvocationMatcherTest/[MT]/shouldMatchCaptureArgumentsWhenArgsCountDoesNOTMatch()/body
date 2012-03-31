@@ -1,6 +1,6 @@
 {
   mock.varargs();
-  Invocation invocation=getLastInvocation();
+  InvocationImpl invocation=getLastInvocation();
   InvocationMatcher invocationMatcher=new InvocationMatcher(invocation,(List)asList(new LocalizedMatcher(AnyVararg.ANY_VARARG)));
   invocationMatcher.captureArgumentsFrom(invocation);
 }

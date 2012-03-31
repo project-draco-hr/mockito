@@ -1,5 +1,5 @@
 {
-  Invocation overloadedSimpleMethod=new InvocationBuilder().mock(mock).simpleMethod().arg("test").toInvocation();
-  Invocation found=finder.findSimilarInvocation(invocations,new InvocationMatcher(overloadedSimpleMethod));
+  InvocationImpl overloadedSimpleMethod=new InvocationBuilder().mock(mock).simpleMethod().arg("test").toInvocation();
+  InvocationImpl found=finder.findSimilarInvocation(invocations,new InvocationMatcher(overloadedSimpleMethod));
   assertSame(found,simpleMethodInvocation);
 }

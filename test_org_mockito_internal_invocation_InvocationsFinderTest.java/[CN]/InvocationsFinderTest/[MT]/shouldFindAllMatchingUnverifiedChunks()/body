@@ -1,5 +1,5 @@
 {
-  List<Invocation> allMatching=finder.findAllMatchingUnverifiedChunks(invocations,new InvocationMatcher(simpleMethodInvocation),context);
+  List<InvocationImpl> allMatching=finder.findAllMatchingUnverifiedChunks(invocations,new InvocationMatcher(simpleMethodInvocation),context);
   assertThat(allMatching,hasExactlyInOrder(simpleMethodInvocation,simpleMethodInvocationTwo));
   context.markVerified(simpleMethodInvocation);
   allMatching=finder.findAllMatchingUnverifiedChunks(invocations,new InvocationMatcher(simpleMethodInvocation),context);

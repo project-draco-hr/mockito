@@ -1,9 +1,9 @@
 {
-  Invocation invocation=new InvocationBuilder().toInvocation();
+  InvocationImpl invocation=new InvocationBuilder().toInvocation();
   @SuppressWarnings("rawtypes") MockHandler<?> handler=new MockHandler();
   handler.mockingProgress.verificationStarted(VerificationModeFactory.atLeastOnce());
   handler.matchersBinder=new MatchersBinder(){
-    public InvocationMatcher bindMatchers(    ArgumentMatcherStorage argumentMatcherStorage,    Invocation invocation){
+    public InvocationMatcher bindMatchers(    ArgumentMatcherStorage argumentMatcherStorage,    InvocationImpl invocation){
       throw new InvalidUseOfMatchersException();
     }
   }

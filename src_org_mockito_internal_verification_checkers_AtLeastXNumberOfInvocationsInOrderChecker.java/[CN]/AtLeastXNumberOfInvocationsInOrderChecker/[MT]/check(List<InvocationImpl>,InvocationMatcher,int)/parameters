@@ -1,0 +1,3 @@
+List<InvocationImpl> invocations
+InvocationMatcher wanted
+int wantedCount

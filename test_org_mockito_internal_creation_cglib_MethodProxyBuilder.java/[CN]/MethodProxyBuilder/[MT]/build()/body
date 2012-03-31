@@ -6,6 +6,6 @@
     }
   }
 );
-  Invocation i=(Invocation)mock.objectReturningMethodNoArgs();
+  InvocationImpl i=(InvocationImpl)mock.objectReturningMethodNoArgs();
   return new ExposedInvocation(i).getMethodProxy();
 }

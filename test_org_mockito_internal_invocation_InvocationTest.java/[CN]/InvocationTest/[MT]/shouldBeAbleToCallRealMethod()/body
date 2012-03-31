@@ -1,5 +1,5 @@
 {
-  Invocation invocation=invocationOf(Foo.class,"bark",new RealMethod(){
+  InvocationImpl invocation=invocationOf(Foo.class,"bark",new RealMethod(){
     public Object invoke(    Object target,    Object[] arguments) throws Throwable {
       return new Foo().bark();
     }

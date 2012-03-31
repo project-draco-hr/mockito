@@ -1,6 +1,6 @@
 {
   mock.mixedVarargs(1,"1","2");
-  Invocation invocation=getLastInvocation();
+  InvocationImpl invocation=getLastInvocation();
   InvocationMatcher invocationMatcher=new InvocationMatcher(invocation,(List)asList(new Equals(100),AnyVararg.ANY_VARARG));
   boolean match=comparator.argumentsMatch(invocationMatcher,invocation);
   assertFalse(match);

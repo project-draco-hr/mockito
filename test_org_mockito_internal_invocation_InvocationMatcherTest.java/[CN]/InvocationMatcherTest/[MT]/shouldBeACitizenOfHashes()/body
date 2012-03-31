@@ -1,6 +1,6 @@
 {
-  Invocation invocation=new InvocationBuilder().toInvocation();
-  Invocation invocationTwo=new InvocationBuilder().args("blah").toInvocation();
+  InvocationImpl invocation=new InvocationBuilder().toInvocation();
+  InvocationImpl invocationTwo=new InvocationBuilder().args("blah").toInvocation();
   Map map=new HashMap();
   map.put(new InvocationMatcher(invocation),"one");
   map.put(new InvocationMatcher(invocationTwo),"two");

@@ -1,0 +1,10 @@
+{
+  List<InvocationImpl> unverified=removeVerifiedInOrder(invocations,context);
+  List<InvocationImpl> firstChunk=getFirstMatchingChunk(wanted,unverified);
+  if (wantedCount != firstChunk.size()) {
+    return this.findAllMatchingUnverifiedChunks(invocations,wanted,context);
+  }
+ else {
+    return firstChunk;
+  }
+}

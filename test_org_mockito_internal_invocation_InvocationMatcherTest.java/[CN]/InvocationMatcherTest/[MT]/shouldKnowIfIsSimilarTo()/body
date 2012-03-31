@@ -1,6 +1,6 @@
 {
-  Invocation same=new InvocationBuilder().mock(mock).simpleMethod().toInvocation();
+  InvocationImpl same=new InvocationBuilder().mock(mock).simpleMethod().toInvocation();
   assertTrue(simpleMethod.hasSimilarMethod(same));
-  Invocation different=new InvocationBuilder().mock(mock).differentMethod().toInvocation();
+  InvocationImpl different=new InvocationBuilder().mock(mock).differentMethod().toInvocation();
   assertFalse(simpleMethod.hasSimilarMethod(different));
 }

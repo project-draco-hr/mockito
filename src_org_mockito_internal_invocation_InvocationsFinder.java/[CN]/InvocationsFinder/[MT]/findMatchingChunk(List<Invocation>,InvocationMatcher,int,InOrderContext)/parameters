@@ -1,4 +1,0 @@
-List<Invocation> invocations
-InvocationMatcher wanted
-int wantedCount
-InOrderContext context

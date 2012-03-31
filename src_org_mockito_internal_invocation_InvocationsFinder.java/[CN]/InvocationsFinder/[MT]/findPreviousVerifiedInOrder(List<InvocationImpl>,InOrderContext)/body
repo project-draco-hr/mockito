@@ -1,0 +1,9 @@
+{
+  LinkedList<InvocationImpl> verifiedOnly=ListUtil.filter(invocations,new RemoveUnverifiedInOrder(context));
+  if (verifiedOnly.isEmpty()) {
+    return null;
+  }
+ else {
+    return verifiedOnly.getLast();
+  }
+}

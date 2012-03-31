@@ -1,9 +1,9 @@
 {
-  List<Invocation> unusedStubs=new LinkedList(this.baseUnusedStubs);
+  List<InvocationImpl> unusedStubs=new LinkedList(this.baseUnusedStubs);
   List<InvocationMatcher> allInvocations=new LinkedList(this.baseAllInvocations);
-  Iterator<Invocation> unusedIterator=unusedStubs.iterator();
+  Iterator<InvocationImpl> unusedIterator=unusedStubs.iterator();
   while (unusedIterator.hasNext()) {
-    Invocation unused=unusedIterator.next();
+    InvocationImpl unused=unusedIterator.next();
     Iterator<InvocationMatcher> unstubbedIterator=allInvocations.iterator();
     while (unstubbedIterator.hasNext()) {
       InvocationMatcher unstubbed=unstubbedIterator.next();
@@ -14,7 +14,7 @@
       }
     }
   }
-  for (  Invocation i : unusedStubs) {
+  for (  InvocationImpl i : unusedStubs) {
     findingsListener.foundUnusedStub(i);
   }
   for (  InvocationMatcher i : allInvocations) {

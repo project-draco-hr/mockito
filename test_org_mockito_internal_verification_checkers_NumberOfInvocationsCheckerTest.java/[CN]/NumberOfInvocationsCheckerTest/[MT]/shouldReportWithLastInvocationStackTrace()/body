@@ -1,6 +1,6 @@
 {
-  Invocation first=new InvocationBuilder().toInvocation();
-  Invocation second=new InvocationBuilder().toInvocation();
+  InvocationImpl first=new InvocationBuilder().toInvocation();
+  InvocationImpl second=new InvocationBuilder().toInvocation();
   finderStub.actualToReturn.addAll(asList(first,second));
   checker.check(invocations,wanted,100);
   assertSame(second.getLocation(),reporterStub.location);

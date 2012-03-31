@@ -1,7 +1,7 @@
 {
   Date d=mock(Date.class);
   d.compareTo(new Date());
-  Invocation compareTo=this.getLastInvocation();
+  InvocationImpl compareTo=this.getLastInvocation();
   Object result=values.answer(compareTo);
   assertTrue(result != (Object)0);
 }

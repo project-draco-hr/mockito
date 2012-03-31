@@ -1,6 +1,6 @@
 {
   assertTrue(finderStub.actualToReturn.isEmpty());
-  Invocation actualInvocation=new InvocationBuilder().toInvocation();
+  InvocationImpl actualInvocation=new InvocationBuilder().toInvocation();
   finderStub.similarToReturn=actualInvocation;
   checker.check(invocations,wanted);
   assertNotNull(reporterStub.wanted);

@@ -1,5 +1,5 @@
 {
-  List<Invocation> allInvocations=data.getAllInvocations();
+  List<InvocationImpl> allInvocations=data.getAllInvocations();
   InvocationMatcher wanted=data.getWanted();
   MissingInvocationInOrderChecker missingInvocation=new MissingInvocationInOrderChecker();
   missingInvocation.check(allInvocations,wanted,this,data.getOrderingContext());

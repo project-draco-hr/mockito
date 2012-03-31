@@ -1,4 +1,4 @@
 {
-  List<Invocation> chunk=finder.findMatchingChunk(invocations,new InvocationMatcher(simpleMethodInvocation),2,context);
+  List<InvocationImpl> chunk=finder.findMatchingChunk(invocations,new InvocationMatcher(simpleMethodInvocation),2,context);
   assertThat(chunk,hasExactlyInOrder(simpleMethodInvocation,simpleMethodInvocationTwo));
 }

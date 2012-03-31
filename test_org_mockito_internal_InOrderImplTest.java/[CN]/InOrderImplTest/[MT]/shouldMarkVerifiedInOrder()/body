@@ -1,6 +1,6 @@
 {
   InOrderImpl impl=new InOrderImpl((List)asList(mock));
-  Invocation i=new InvocationBuilder().toInvocation();
+  InvocationImpl i=new InvocationBuilder().toInvocation();
   assertFalse(impl.isVerified(i));
   impl.markVerified(i);
   assertTrue(impl.isVerified(i));

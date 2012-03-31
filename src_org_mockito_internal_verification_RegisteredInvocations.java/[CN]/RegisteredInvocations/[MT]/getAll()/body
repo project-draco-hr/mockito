@@ -1,7 +1,7 @@
 {
-  List<Invocation> copiedList;
+  List<InvocationImpl> copiedList;
 synchronized (invocations) {
-    copiedList=new LinkedList<Invocation>(invocations);
+    copiedList=new LinkedList<InvocationImpl>(invocations);
   }
   return ListUtil.filter(copiedList,new RemoveToString());
 }

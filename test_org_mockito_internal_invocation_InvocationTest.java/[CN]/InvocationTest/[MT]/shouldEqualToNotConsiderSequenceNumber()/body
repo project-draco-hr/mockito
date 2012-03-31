@@ -1,5 +1,5 @@
 {
-  Invocation equal=new InvocationBuilder().args(" ").mock("mock").seq(2).toInvocation();
+  InvocationImpl equal=new InvocationBuilder().args(" ").mock("mock").seq(2).toInvocation();
   assertTrue(invocation.equals(equal));
   assertTrue(invocation.getSequenceNumber() != equal.getSequenceNumber());
 }

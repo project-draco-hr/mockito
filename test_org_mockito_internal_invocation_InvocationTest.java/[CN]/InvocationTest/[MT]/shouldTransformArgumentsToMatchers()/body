@@ -1,5 +1,5 @@
 {
-  Invocation i=new InvocationBuilder().args("foo",new String[]{"bar"}).toInvocation();
+  InvocationImpl i=new InvocationBuilder().args("foo",new String[]{"bar"}).toInvocation();
   List matchers=ArgumentsProcessor.argumentsToMatchers(i.getArguments());
   assertEquals(2,matchers.size());
   assertEquals(Equals.class,matchers.get(0).getClass());

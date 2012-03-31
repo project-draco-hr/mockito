@@ -1,0 +1,17 @@
+{
+  List<InvocationImpl> actualInvocations=finder.findInvocations(invocations,wanted);
+  int actualCount=actualInvocations.size();
+  if (wantedCount > actualCount) {
+    LocationImpl lastInvocation=finder.getLastLocation(actualInvocations);
+    reporter.tooLittleActualInvocations(new Discrepancy(wantedCount,actualCount),wanted,lastInvocation);
+  }
+ else   if (wantedCount == 0 && actualCount > 0) {
+    LocationImpl firstUndesired=actualInvocations.get(wantedCount).getLocation();
+    reporter.neverWantedButInvoked(wanted,firstUndesired);
+  }
+ else   if (wantedCount < actualCount) {
+    LocationImpl firstUndesired=actualInvocations.get(wantedCount).getLocation();
+    reporter.tooManyActualInvocations(wantedCount,actualCount,wanted,firstUndesired);
+  }
+  invocationMarker.markVerified(actualInvocations,wanted);
+}

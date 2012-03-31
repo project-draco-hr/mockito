@@ -1,9 +1,9 @@
 {
   InvocationMarker marker=new InvocationMarker();
-  Invocation i=new InvocationBuilder().toInvocation();
+  InvocationImpl i=new InvocationBuilder().toInvocation();
   final ObjectBox box=new ObjectBox();
   CapturesArgumensFromInvocation c=new CapturesArgumensFromInvocation(){
-    public void captureArgumentsFrom(    Invocation i){
+    public void captureArgumentsFrom(    InvocationImpl i){
       box.put(i);
     }
   }

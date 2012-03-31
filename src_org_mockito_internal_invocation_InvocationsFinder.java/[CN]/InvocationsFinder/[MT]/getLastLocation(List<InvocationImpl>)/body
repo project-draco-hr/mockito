@@ -1,0 +1,9 @@
+{
+  if (invocations.isEmpty()) {
+    return null;
+  }
+ else {
+    InvocationImpl last=invocations.get(invocations.size() - 1);
+    return last.getLocation();
+  }
+}

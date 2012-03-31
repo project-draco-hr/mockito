@@ -1,6 +1,6 @@
 {
   InvocationMarker marker=new InvocationMarker();
-  Invocation i=new InvocationBuilder().toInvocation();
+  InvocationImpl i=new InvocationBuilder().toInvocation();
   InvocationMatcher im=new InvocationBuilder().toInvocationMatcher();
   assertFalse(i.isVerified());
   marker.markVerified(Arrays.asList(i),im);

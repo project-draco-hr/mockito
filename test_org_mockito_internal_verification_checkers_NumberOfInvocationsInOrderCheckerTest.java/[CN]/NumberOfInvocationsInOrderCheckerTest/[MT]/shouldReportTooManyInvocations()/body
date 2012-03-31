@@ -1,6 +1,6 @@
 {
-  Invocation first=new InvocationBuilder().toInvocation();
-  Invocation second=new InvocationBuilder().toInvocation();
+  InvocationImpl first=new InvocationBuilder().toInvocation();
+  InvocationImpl second=new InvocationBuilder().toInvocation();
   finderStub.validMatchingChunkToReturn.addAll(asList(first,second));
   try {
     checker.check(invocations,wanted,1,context);
