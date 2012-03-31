@@ -1,5 +1,5 @@
 {
-  Class<?>[] exceptions=this.getMethod().getExceptionTypes();
+  Class<?>[] exceptions=method.getExceptionTypes();
   Class<?> throwableClass=throwable.getClass();
   for (  Class<?> exception : exceptions) {
     if (exception.isAssignableFrom(throwableClass)) {

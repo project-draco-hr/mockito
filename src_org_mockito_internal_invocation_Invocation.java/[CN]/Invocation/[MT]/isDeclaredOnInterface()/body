@@ -1,3 +1,0 @@
-{
-  return this.getMethod().getDeclaringClass().isInterface();
-}

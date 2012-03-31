@@ -1,0 +1,6 @@
+{
+  Invocation invocation=new InvocationBuilder().method("canThrowException").toInvocation();
+  MethodInfo info=new MethodInfo(invocation);
+  assertFalse(info.isValidException(new Exception()));
+  assertTrue(info.isValidException(new CharacterCodingException()));
+}

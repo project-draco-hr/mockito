@@ -1,7 +1,7 @@
 {
   if (!lastMatchers.isEmpty()) {
     int recordedMatchersSize=lastMatchers.size();
-    int expectedMatchersSize=invocation.getArgumentsCount();
+    int expectedMatchersSize=invocation.getArguments().length;
     if (expectedMatchersSize != recordedMatchersSize) {
       new Reporter().invalidUseOfMatchers(expectedMatchersSize,lastMatchers);
     }

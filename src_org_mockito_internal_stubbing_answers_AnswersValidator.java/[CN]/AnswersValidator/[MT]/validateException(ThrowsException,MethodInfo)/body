@@ -6,7 +6,7 @@
   if (throwable instanceof RuntimeException || throwable instanceof Error) {
     return;
   }
-  if (!invocation.isValidException(throwable)) {
+  if (!methodInfo.isValidException(throwable)) {
     reporter.checkedExceptionInvalid(throwable);
   }
 }

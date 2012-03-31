@@ -1,0 +1,11 @@
+{
+  if (methodInfo.isVoid()) {
+    reporter.cannotStubVoidMethodWithAReturnValue(methodInfo.getMethodName());
+  }
+  if (answer.returnsNull() && methodInfo.returnsPrimitive()) {
+    reporter.wrongTypeOfReturnValue(methodInfo.printMethodReturnType(),"null",methodInfo.getMethodName());
+  }
+  if (!answer.returnsNull() && !methodInfo.isValidReturnType(answer.getReturnType())) {
+    reporter.wrongTypeOfReturnValue(methodInfo.printMethodReturnType(),answer.printReturnType(),methodInfo.getMethodName());
+  }
+}

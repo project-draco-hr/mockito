@@ -1,4 +1,5 @@
 {
+  MethodInfo invocation=new MethodInfo(theInvocation);
   if (answer instanceof ThrowsException) {
     validateException((ThrowsException)answer,invocation);
   }
