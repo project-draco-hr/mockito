@@ -1,7 +1,7 @@
 {
   this.invocation=invocation;
   if (matchers.isEmpty()) {
-    this.matchers=invocation.argumentsToMatchers();
+    this.matchers=Invocation.argumentsToMatchers(invocation.getArguments());
   }
  else {
     this.matchers=matchers;

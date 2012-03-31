@@ -1,3 +1,0 @@
-{
-  return new MockUtil().getMockName(mock) + "." + method.getName();
-}
