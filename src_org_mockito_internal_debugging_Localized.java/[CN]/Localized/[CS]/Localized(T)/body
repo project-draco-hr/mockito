@@ -1,4 +1,4 @@
 {
   this.object=object;
-  location=new Location();
+  location=new LocationImpl();
 }

@@ -5,5 +5,5 @@
   this.arguments=ArgumentsProcessor.expandVarArgs(mockitoMethod.isVarArgs(),args);
   this.rawArguments=args;
   this.sequenceNumber=sequenceNumber;
-  this.location=new Location();
+  this.location=new LocationImpl();
 }

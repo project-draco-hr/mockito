@@ -1,0 +1,5 @@
+{
+  String ending=(lastActualInvocation != null) ? lastActualInvocation + "\n" : "\n";
+  String message=join(wanted.toString(),"Wanted " + discrepancy.getPluralizedWantedCount() + ":",new LocationImpl(),"But was " + discrepancy.getPluralizedActualCount() + ":",ending);
+  return message;
+}

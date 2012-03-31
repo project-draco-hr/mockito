@@ -1,7 +1,7 @@
 {
   validateMostStuff();
   if (stubbingInProgress != null) {
-    Location temp=stubbingInProgress;
+    LocationImpl temp=stubbingInProgress;
     stubbingInProgress=null;
     reporter.unfinishedStubbing(temp);
   }

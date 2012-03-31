@@ -5,6 +5,6 @@
     }
   }
 ;
-  String loc=new Location(filterReturningEmptyArray).toString();
+  String loc=new LocationImpl(filterReturningEmptyArray).toString();
   assertEquals("-> at <<unknown line>>",loc);
 }

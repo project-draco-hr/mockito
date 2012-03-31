@@ -1,6 +1,6 @@
 {
   int actualCount=0;
-  Location lastLocation=null;
+  LocationImpl lastLocation=null;
   while (actualCount < wantedCount) {
     Invocation next=finder.findFirstMatchingUnverifiedInvocation(invocations,wanted,context);
     if (next == null) {

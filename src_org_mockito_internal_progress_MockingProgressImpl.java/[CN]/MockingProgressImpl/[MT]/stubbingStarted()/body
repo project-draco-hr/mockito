@@ -1,4 +1,4 @@
 {
   validateState();
-  stubbingInProgress=new Location();
+  stubbingInProgress=new LocationImpl();
 }

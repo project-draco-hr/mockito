@@ -1,3 +1,0 @@
-{
-  throw new NeverWantedButInvoked(join(wanted.toString(),"Never wanted here:",new Location(),"But invoked here:",firstUndesired,""));
-}

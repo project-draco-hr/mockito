@@ -1,5 +1,5 @@
 {
-  Location last=finder.getLastLocation(invocations);
+  LocationImpl last=finder.getLastLocation(invocations);
   assertSame(differentMethodInvocation.getLocation(),last);
   assertNull(finder.getLastLocation(Collections.<Invocation>emptyList()));
 }
