@@ -1,5 +1,5 @@
 {
-  SmartPrinter printer=new SmartPrinter(shortie,multi);
+  SmartPrinter printer=new SmartPrinter(shortie,multi.getInvocation());
   assertContains("\n",printer.getWanted().toString());
   assertContains("\n",printer.getActual().toString());
 }

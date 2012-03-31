@@ -1,7 +1,6 @@
 {
   mock.varargs("first very long argument","second very long argument","another very long argument");
-  multi=getLastInvocation();
-  multi.toString();
+  multi=new InvocationMatcher(getLastInvocation());
   mock.varargs("short arg");
-  shortie=getLastInvocation();
+  shortie=new InvocationMatcher(getLastInvocation());
 }
