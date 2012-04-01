@@ -1,4 +1,3 @@
 {
-  this.wantedCount=wantedCount;
-  this.actualCount=actualCount;
+  super(wantedCount,actualCount);
 }
