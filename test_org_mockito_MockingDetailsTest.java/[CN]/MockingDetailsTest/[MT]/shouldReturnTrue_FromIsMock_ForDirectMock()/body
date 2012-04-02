@@ -1,4 +1,3 @@
 {
-  TestClass mock2=mock(TestClass.class);
   assertTrue(MockingDetails.of(mock2).isMock());
 }

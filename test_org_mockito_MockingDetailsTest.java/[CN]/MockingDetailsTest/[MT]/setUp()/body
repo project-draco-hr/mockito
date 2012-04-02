@@ -1,3 +1,6 @@
 {
   initMocks(this);
+  mock2=mock(TestClass.class);
+  spy2=spy(new TestClass());
+  nonMock=new TestClass();
 }

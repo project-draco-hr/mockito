@@ -1,0 +1,3 @@
+{
+  assertTrue(MockingDetails.of(spy2).isMock());
+}

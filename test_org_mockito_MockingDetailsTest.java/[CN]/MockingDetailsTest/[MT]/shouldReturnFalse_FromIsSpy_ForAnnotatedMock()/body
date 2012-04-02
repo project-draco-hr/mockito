@@ -1,0 +1,3 @@
+{
+  assertFalse(MockingDetails.of(mock1).isSpy());
+}

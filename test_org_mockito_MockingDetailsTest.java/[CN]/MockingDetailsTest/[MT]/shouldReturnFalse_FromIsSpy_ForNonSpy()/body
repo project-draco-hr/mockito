@@ -1,4 +1,0 @@
-{
-  TestClass nonSpy=new TestClass();
-  assertFalse(MockingDetails.of(nonSpy).isSpy());
-}
