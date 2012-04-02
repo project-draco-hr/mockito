@@ -1,4 +1,3 @@
 {
-  TestClass nonMock=new TestClass();
   assertFalse(MockingDetails.of(nonMock).isMock());
 }

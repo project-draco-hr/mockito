@@ -1,4 +1,3 @@
 {
-  TestClass spy2=spy(new TestClass());
   assertTrue(MockingDetails.of(spy2).isSpy());
 }
