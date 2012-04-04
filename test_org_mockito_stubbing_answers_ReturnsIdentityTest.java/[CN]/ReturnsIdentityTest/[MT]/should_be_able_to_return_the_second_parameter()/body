@@ -1,0 +1,3 @@
+{
+  assertThat(new ReturnsIdentity(1).answer(invocationWith("A","B","C"))).isEqualTo("B");
+}

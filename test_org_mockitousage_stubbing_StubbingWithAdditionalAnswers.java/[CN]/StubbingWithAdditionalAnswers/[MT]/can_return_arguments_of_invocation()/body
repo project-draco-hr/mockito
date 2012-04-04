@@ -1,0 +1,8 @@
+{
+  given(iMethods.objectArgMethod(anyObject())).will(returnsFirstArg());
+  given(iMethods.threeArgumentMethod(eq(0),anyObject(),anyString())).will(returnsSecondArg());
+  given(iMethods.threeArgumentMethod(eq(1),anyObject(),anyString())).will(returnsLastArg());
+  assertThat(iMethods.objectArgMethod("first")).isEqualTo("first");
+  assertThat(iMethods.threeArgumentMethod(0,"second","whatever")).isEqualTo("second");
+  assertThat(iMethods.threeArgumentMethod(1,"whatever","last")).isEqualTo("last");
+}

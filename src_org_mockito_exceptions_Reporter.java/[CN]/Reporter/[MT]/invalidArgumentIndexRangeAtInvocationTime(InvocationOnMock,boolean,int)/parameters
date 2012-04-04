@@ -1,0 +1,3 @@
+InvocationOnMock invocation
+boolean willReturnLastParameter
+int argumentIndex

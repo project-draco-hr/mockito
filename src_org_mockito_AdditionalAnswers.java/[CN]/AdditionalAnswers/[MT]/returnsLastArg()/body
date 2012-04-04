@@ -1,0 +1,3 @@
+{
+  return (Answer<T>)RETURNS_LAST_ARGUMENT;
+}

@@ -1,3 +1,0 @@
-{
-  assertThat((String)IdentityAnswers.RETURN_FIRST_PARAMETER.answer(invocationWith("A","B")),is("A"));
-}

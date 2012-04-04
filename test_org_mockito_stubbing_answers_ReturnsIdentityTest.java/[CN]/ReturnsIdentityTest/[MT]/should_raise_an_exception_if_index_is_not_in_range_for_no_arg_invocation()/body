@@ -1,0 +1,9 @@
+{
+  try {
+    new ReturnsIdentity(ReturnsIdentity.LAST_ARGUMENT).answer(new InvocationBuilder().method("simpleMethod").toInvocation());
+    fail();
+  }
+ catch (  Exception e) {
+    assertThat(e.getMessage()).containsIgnoringCase("invalid argument index").containsIgnoringCase("iMethods.simpleMethod").containsIgnoringCase("no arguments").containsIgnoringCase("last parameter wanted");
+  }
+}

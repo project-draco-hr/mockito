@@ -1,0 +1,6 @@
+{
+  if (argumentIndex < -1) {
+    new Reporter().invalidArgumentRangeAtIdentityAnswerCreationTime();
+  }
+  return argumentIndex;
+}

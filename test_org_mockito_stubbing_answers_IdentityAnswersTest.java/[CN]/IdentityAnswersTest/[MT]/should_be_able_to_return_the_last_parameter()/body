@@ -1,4 +1,0 @@
-{
-  assertThat((String)IdentityAnswers.RETURN_LAST_PARAMETER.answer(invocationWith("A")),is("A"));
-  assertThat((String)IdentityAnswers.RETURN_LAST_PARAMETER.answer(invocationWith("A","B")),is("B"));
-}

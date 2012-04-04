@@ -1,0 +1,3 @@
+{
+  this.argumentIndex=checkWithinAllowedRange(argumentIndex);
+}

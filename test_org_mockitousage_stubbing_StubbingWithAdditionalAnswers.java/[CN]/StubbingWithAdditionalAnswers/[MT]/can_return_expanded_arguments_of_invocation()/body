@@ -1,0 +1,4 @@
+{
+  given(iMethods.objectReturningMethod(anyVararg())).will(returnsSecondArg());
+  assertThat(iMethods.objectReturningMethod("bob","alice","carl")).isEqualTo("alice");
+}

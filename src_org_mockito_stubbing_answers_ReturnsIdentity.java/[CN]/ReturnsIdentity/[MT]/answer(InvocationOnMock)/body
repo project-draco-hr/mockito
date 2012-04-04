@@ -1,0 +1,3 @@
+{
+  return willReturnLastArg() ? lastArgumentOf(invocation) : argumentIndexOf(invocation);
+}

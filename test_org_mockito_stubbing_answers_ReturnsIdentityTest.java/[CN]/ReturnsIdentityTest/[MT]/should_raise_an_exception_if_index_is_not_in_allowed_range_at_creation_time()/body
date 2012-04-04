@@ -1,0 +1,9 @@
+{
+  try {
+    new ReturnsIdentity(-30);
+    fail();
+  }
+ catch (  Exception e) {
+    assertThat(e.getMessage()).containsIgnoringCase("argument index").containsIgnoringCase("positive number").contains("1").containsIgnoringCase("last argument");
+  }
+}

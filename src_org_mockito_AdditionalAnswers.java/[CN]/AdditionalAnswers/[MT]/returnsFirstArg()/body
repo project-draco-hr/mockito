@@ -1,0 +1,3 @@
+{
+  return (Answer<T>)RETURNS_FIRST_ARGUMENT;
+}

@@ -1,5 +1,0 @@
-{
-  when(chain.process(anyString(),anyString(),anyString())).then(returnFirstArgument());
-  String result=chain.process("test","other","other");
-  assertEquals("test",result);
-}

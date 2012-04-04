@@ -1,0 +1,3 @@
+{
+  return argumentIndex == LAST_ARGUMENT;
+}
