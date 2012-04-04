@@ -1,15 +1,19 @@
 {
-  MethodInfo invocation=new MethodInfo(theInvocation);
+  MethodInfo methodInfo=new MethodInfo(invocation);
   if (answer instanceof ThrowsException) {
-    validateException((ThrowsException)answer,invocation);
+    validateException((ThrowsException)answer,methodInfo);
   }
   if (answer instanceof Returns) {
-    validateReturnValue((Returns)answer,invocation);
+    validateReturnValue((Returns)answer,methodInfo);
   }
   if (answer instanceof DoesNothing) {
-    validateDoNothing((DoesNothing)answer,invocation);
+    validateDoNothing((DoesNothing)answer,methodInfo);
   }
   if (answer instanceof CallsRealMethods) {
-    validateMockingConcreteClass((CallsRealMethods)answer,invocation);
+    validateMockingConcreteClass((CallsRealMethods)answer,methodInfo);
+  }
+  if (answer instanceof ReturnsIdentity) {
+    ReturnsIdentity returnsIdentity=(ReturnsIdentity)answer;
+    validateReturnArgIdentity(returnsIdentity,invocation);
   }
 }

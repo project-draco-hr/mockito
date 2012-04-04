@@ -1,3 +1,4 @@
 {
-  return willReturnLastArg() ? lastArgumentOf(invocation) : argumentIndexOf(invocation);
+  validateIndexWithinInvocationRange(invocation);
+  return invocation.getArguments()[actualArgumentIndex(invocation)];
 }

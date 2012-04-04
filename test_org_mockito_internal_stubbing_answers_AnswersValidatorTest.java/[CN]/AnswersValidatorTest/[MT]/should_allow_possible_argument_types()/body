@@ -1,0 +1,6 @@
+{
+  validator.validate(new ReturnsIdentity(0),new InvocationBuilder().method("intArgumentReturningInt").argTypes(int.class).arg(1000).toInvocation());
+  validator.validate(new ReturnsIdentity(0),new InvocationBuilder().method("toString").argTypes(String.class).arg("whatever").toInvocation());
+  validator.validate(new ReturnsIdentity(2),new InvocationBuilder().method("varargsObject").argTypes(int.class,Object[].class).args(1000,"Object","Object").toInvocation());
+  validator.validate(new ReturnsIdentity(1),new InvocationBuilder().method("threeArgumentMethod").argTypes(int.class,Object.class,String.class).args(1000,"Object","String").toInvocation());
+}

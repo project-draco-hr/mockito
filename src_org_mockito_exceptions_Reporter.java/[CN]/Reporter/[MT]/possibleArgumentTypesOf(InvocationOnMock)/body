@@ -1,11 +1,17 @@
 {
   Class<?>[] parameterTypes=invocation.getMethod().getParameterTypes();
   if (parameterTypes.length == 0) {
-    return new StringBuilder(" but the method has no arguments.\n");
+    return new StringBuilder("the method has no arguments.\n");
   }
-  StringBuilder stringBuilder=new StringBuilder(" but possible argument indexes for this method are :\n");
+  StringBuilder stringBuilder=new StringBuilder("the possible argument indexes for this method are :\n");
   for (int i=0, parameterTypesLength=parameterTypes.length; i < parameterTypesLength; i++) {
-    stringBuilder.append("    [").append(i).append("] ").append(parameterTypes[i].getSimpleName()).append("\n");
+    stringBuilder.append("    [").append(i);
+    if (invocation.getMethod().isVarArgs() && i == parameterTypesLength - 1) {
+      stringBuilder.append("+] ").append(parameterTypes[i].getComponentType().getSimpleName()).append("  <- Vararg").append("\n");
+    }
+ else {
+      stringBuilder.append("] ").append(parameterTypes[i].getSimpleName()).append("\n");
+    }
   }
   return stringBuilder;
 }

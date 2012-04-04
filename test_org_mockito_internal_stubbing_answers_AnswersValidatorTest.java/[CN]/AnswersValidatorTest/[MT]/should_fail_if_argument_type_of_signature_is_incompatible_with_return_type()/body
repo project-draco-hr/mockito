@@ -1,0 +1,9 @@
+{
+  try {
+    validator.validate(new ReturnsIdentity(2),new InvocationBuilder().method("varargsReturningString").argTypes(Object[].class).args("anyString",new Object(),"anyString").toInvocation());
+    fail();
+  }
+ catch (  WrongTypeOfReturnValue e) {
+    assertThat(e.getMessage()).containsIgnoringCase("argument of type").containsIgnoringCase("Object").containsIgnoringCase("varargsReturningString").containsIgnoringCase("should return").containsIgnoringCase("String").containsIgnoringCase("possible argument indexes");
+  }
+}

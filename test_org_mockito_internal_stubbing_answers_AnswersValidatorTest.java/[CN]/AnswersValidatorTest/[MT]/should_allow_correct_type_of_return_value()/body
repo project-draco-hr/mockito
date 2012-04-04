@@ -1,7 +1,7 @@
 {
   validator.validate(new Returns("one"),new InvocationBuilder().simpleMethod().toInvocation());
   validator.validate(new Returns(false),new InvocationBuilder().method("booleanReturningMethod").toInvocation());
-  validator.validate(new Returns(new Boolean(true)),new InvocationBuilder().method("booleanObjectReturningMethod").toInvocation());
+  validator.validate(new Returns(Boolean.TRUE),new InvocationBuilder().method("booleanObjectReturningMethod").toInvocation());
   validator.validate(new Returns(1),new InvocationBuilder().method("integerReturningMethod").toInvocation());
   validator.validate(new Returns(1L),new InvocationBuilder().method("longReturningMethod").toInvocation());
   validator.validate(new Returns(1L),new InvocationBuilder().method("longObjectReturningMethod").toInvocation());

@@ -1,0 +1,3 @@
+{
+  return invocation.getArguments().length - 1;
+}

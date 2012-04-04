@@ -1,4 +1,0 @@
-{
-  Object[] arguments=invocation.getArguments();
-  return arguments[checkWithinInvocationRange(invocation,arguments.length - 1)];
-}

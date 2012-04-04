@@ -1,10 +1,15 @@
 {
-  @SuppressWarnings("serial") InvocationOnMock invocation=new InvocationOnMock(){
+  return new InvocationOnMock(){
     public Object getMock(){
       return null;
     }
     public Method getMethod(){
-      return null;
+      try {
+        return IMethods.class.getDeclaredMethod("varargsReturningString",Object[].class);
+      }
+ catch (      NoSuchMethodException e) {
+        throw new RuntimeException(e);
+      }
     }
     public Object[] getArguments(){
       return parameters;
@@ -14,5 +19,4 @@
     }
   }
 ;
-  return invocation;
 }

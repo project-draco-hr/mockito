@@ -1,0 +1,9 @@
+{
+  try {
+    validator.validate(new ReturnsIdentity(30),new InvocationBuilder().method("oneArg").arg("A").toInvocation());
+    fail();
+  }
+ catch (  MockitoException e) {
+    assertThat(e.getMessage()).containsIgnoringCase("invalid argument index").containsIgnoringCase("iMethods.oneArg").containsIgnoringCase("[0] String").containsIgnoringCase("position").contains("30");
+  }
+}

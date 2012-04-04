@@ -1,12 +1,14 @@
 {
   if (method == null) {
-    List<Class> argTypes=new LinkedList<Class>();
-    for (    Object arg : args) {
-      if (arg == null) {
-        argTypes.add(Object.class);
-      }
+    if (argTypes == null) {
+      argTypes=new LinkedList<Class<?>>();
+      for (      Object arg : args) {
+        if (arg == null) {
+          argTypes.add(Object.class);
+        }
  else {
-        argTypes.add(arg.getClass());
+          argTypes.add(arg.getClass());
+        }
       }
     }
     try {

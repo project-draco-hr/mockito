@@ -1,0 +1,9 @@
+{
+  try {
+    validator.validate(new ReturnsIdentity(ReturnsIdentity.LAST_ARGUMENT),new InvocationBuilder().simpleMethod().toInvocation());
+    fail();
+  }
+ catch (  MockitoException e) {
+    assertThat(e.getMessage()).containsIgnoringCase("invalid argument index").containsIgnoringCase("iMethods.simpleMethod").containsIgnoringCase("no arguments").containsIgnoringCase("last parameter wanted");
+  }
+}

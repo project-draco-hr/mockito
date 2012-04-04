@@ -1,0 +1,14 @@
+{
+  int actualArgumentIndex=actualArgumentIndex(invocation);
+  if (!invocation.getMethod().isVarArgs()) {
+    return invocation.getMethod().getParameterTypes()[actualArgumentIndex];
+  }
+  Class<?>[] parameterTypes=invocation.getMethod().getParameterTypes();
+  int varargPosition=parameterTypes.length - 1;
+  if (actualArgumentIndex < varargPosition) {
+    return parameterTypes[actualArgumentIndex];
+  }
+ else {
+    return parameterTypes[varargPosition].getComponentType();
+  }
+}

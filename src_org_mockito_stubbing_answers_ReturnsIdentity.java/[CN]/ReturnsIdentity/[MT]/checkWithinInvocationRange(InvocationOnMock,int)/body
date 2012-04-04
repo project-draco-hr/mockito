@@ -1,6 +1,0 @@
-{
-  if (actualArgumentIndex < 0 || invocation.getArguments().length <= actualArgumentIndex) {
-    new Reporter().invalidArgumentIndexRangeAtInvocationTime(invocation,willReturnLastArg(),argumentIndex);
-  }
-  return actualArgumentIndex;
-}

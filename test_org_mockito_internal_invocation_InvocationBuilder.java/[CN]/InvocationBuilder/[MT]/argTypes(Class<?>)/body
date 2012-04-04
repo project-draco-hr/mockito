@@ -1,0 +1,4 @@
+{
+  this.argTypes=asList(argTypes);
+  return this;
+}
