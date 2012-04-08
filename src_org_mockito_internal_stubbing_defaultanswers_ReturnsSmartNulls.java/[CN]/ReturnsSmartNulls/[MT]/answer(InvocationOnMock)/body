@@ -5,8 +5,8 @@
   }
   Class<?> type=invocation.getMethod().getReturnType();
   if (!type.isPrimitive() && !Modifier.isFinal(type.getModifiers())) {
-    ThrowingInterceptor handler=new ThrowingInterceptor(invocation);
-    return mockMaker.createMock(type,new Class[0],handler,new MockSettingsImpl());
+    final Location location=new LocationImpl();
+    return Mockito.mock(type,new ThrowsSmartNullPointer(invocation,location));
   }
   return null;
 }

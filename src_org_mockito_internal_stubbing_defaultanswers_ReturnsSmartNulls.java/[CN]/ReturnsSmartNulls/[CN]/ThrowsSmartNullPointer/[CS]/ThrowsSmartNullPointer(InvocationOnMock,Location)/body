@@ -1,0 +1,4 @@
+{
+  this.unstubbedInvocation=unstubbedInvocation;
+  this.location=location;
+}
