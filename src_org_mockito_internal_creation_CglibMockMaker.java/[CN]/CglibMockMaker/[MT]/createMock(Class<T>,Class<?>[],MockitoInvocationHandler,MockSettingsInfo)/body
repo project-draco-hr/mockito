@@ -1,3 +1,4 @@
 {
-  return ClassImposterizer.INSTANCE.imposterise(new MethodInterceptorFilter(handler,settings),typeToMock,extraInterfaces);
+  MockHandlerInterface mockitoHandler=cast(handler);
+  return ClassImposterizer.INSTANCE.imposterise(new MethodInterceptorFilter(mockitoHandler,settings),typeToMock,extraInterfaces);
 }
