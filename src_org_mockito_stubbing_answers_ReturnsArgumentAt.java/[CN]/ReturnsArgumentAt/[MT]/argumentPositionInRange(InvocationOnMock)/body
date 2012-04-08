@@ -1,0 +1,10 @@
+{
+  int actualArgumentPosition=actualArgumentPosition(invocation);
+  if (actualArgumentPosition < 0) {
+    return false;
+  }
+  if (!invocation.getMethod().isVarArgs()) {
+    return invocation.getArguments().length > actualArgumentPosition;
+  }
+  return true;
+}

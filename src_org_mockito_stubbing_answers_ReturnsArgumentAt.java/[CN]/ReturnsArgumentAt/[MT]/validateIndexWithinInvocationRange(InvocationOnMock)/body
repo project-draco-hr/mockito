@@ -1,0 +1,5 @@
+{
+  if (!argumentPositionInRange(invocation)) {
+    new Reporter().invalidArgumentPositionRangeAtInvocationTime(invocation,returningLastArg(),wantedArgumentPosition);
+  }
+}

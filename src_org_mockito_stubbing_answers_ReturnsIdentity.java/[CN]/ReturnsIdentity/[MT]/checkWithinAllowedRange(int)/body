@@ -1,6 +1,0 @@
-{
-  if (argumentIndex != LAST_ARGUMENT && argumentIndex < 0) {
-    new Reporter().invalidArgumentRangeAtIdentityAnswerCreationTime();
-  }
-  return argumentIndex;
-}

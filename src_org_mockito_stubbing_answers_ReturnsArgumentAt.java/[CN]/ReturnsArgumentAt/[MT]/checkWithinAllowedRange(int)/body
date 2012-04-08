@@ -1,0 +1,6 @@
+{
+  if (argumentPosition != LAST_ARGUMENT && argumentPosition < 0) {
+    new Reporter().invalidArgumentRangeAtIdentityAnswerCreationTime();
+  }
+  return argumentPosition;
+}

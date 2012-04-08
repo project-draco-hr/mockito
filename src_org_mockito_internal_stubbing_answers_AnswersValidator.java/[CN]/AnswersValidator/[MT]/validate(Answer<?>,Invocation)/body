@@ -12,8 +12,8 @@
   if (answer instanceof CallsRealMethods) {
     validateMockingConcreteClass((CallsRealMethods)answer,methodInfo);
   }
-  if (answer instanceof ReturnsIdentity) {
-    ReturnsIdentity returnsIdentity=(ReturnsIdentity)answer;
-    validateReturnArgIdentity(returnsIdentity,invocation);
+  if (answer instanceof ReturnsArgumentAt) {
+    ReturnsArgumentAt returnsArgumentAt=(ReturnsArgumentAt)answer;
+    validateReturnArgIdentity(returnsArgumentAt,invocation);
   }
 }

@@ -1,0 +1,4 @@
+{
+  assertThat(new ReturnsArgumentAt(-1).answer(invocationWith("A"))).isEqualTo("A");
+  assertThat(new ReturnsArgumentAt(-1).answer(invocationWith("A","B"))).isEqualTo("B");
+}

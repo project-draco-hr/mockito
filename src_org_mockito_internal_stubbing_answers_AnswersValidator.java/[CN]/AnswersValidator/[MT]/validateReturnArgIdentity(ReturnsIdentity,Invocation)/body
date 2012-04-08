@@ -1,7 +1,0 @@
-{
-  returnsIdentity.validateIndexWithinInvocationRange(invocation);
-  MethodInfo methodInfo=new MethodInfo(invocation);
-  if (!methodInfo.isValidReturnType(returnsIdentity.returnedTypeOnSignature(invocation))) {
-    new Reporter().wrongTypeOfArgumentToReturn(invocation,methodInfo.printMethodReturnType(),returnsIdentity.returnedTypeOnSignature(invocation),returnsIdentity.wantedArgumentIndex());
-  }
-}

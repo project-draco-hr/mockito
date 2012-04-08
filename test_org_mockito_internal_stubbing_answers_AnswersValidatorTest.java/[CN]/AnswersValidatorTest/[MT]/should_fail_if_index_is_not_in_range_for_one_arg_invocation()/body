@@ -1,6 +1,6 @@
 {
   try {
-    validator.validate(new ReturnsIdentity(30),new InvocationBuilder().method("oneArg").arg("A").toInvocation());
+    validator.validate(new ReturnsArgumentAt(30),new InvocationBuilder().method("oneArg").arg("A").toInvocation());
     fail();
   }
  catch (  MockitoException e) {
