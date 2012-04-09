@@ -1,4 +1,0 @@
-{
-  String name=new MockName("The Hulk",SomeClass.class).toString();
-  assertEquals("The Hulk",name);
-}

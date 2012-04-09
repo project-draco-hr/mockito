@@ -2,6 +2,6 @@
   SomeInterface anonymousInstance=new SomeInterface(){
   }
 ;
-  String name=new MockName(null,anonymousInstance.getClass()).toString();
+  String name=new MockNameImpl(null,anonymousInstance.getClass()).toString();
   assertEquals("someInterface",name);
 }
