@@ -3,8 +3,6 @@
   creationValidator.validateType(classToMock);
   creationValidator.validateExtraInterfaces(classToMock,settings.getExtraInterfaces());
   creationValidator.validateMockedType(classToMock,settings.getSpiedInstance());
-  creationValidator.validateDelegatedInstance(classToMock,settings.getDelegatedInstance());
-  creationValidator.validateMutualExclusionForSpyOrDelegate(settings);
   settings.initiateMockName(classToMock);
   InvocationNotifierHandler<T> mockHandler=new InvocationNotifierHandler<T>(new MockHandler<T>(settings),settings);
   Set<Class> extraInterfaces=prepareAncillaryTypes(settings);

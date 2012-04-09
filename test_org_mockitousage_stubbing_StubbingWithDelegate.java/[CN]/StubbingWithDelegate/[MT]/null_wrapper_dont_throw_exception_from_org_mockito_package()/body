@@ -1,5 +1,5 @@
 {
-  IMethods methods=mock(IMethods.class,withSettings().forwardTo(new MethodsImpl()));
+  IMethods methods=mock(IMethods.class,delegatesTo(new MethodsImpl()));
   try {
     byte b=methods.byteObjectReturningMethod();
     fail();

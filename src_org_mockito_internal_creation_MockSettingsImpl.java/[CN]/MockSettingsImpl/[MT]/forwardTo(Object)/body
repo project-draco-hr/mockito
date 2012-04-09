@@ -1,4 +1,0 @@
-{
-  this.delegatedInstance=delegatedInstance;
-  return defaultAnswer(new ForwardsInvocations(this.delegatedInstance));
-}
