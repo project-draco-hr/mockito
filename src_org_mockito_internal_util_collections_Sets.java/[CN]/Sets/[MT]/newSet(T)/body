@@ -1,0 +1,6 @@
+{
+  if (elements == null) {
+    throw new IllegalArgumentException("Expected an array of elements (or empty array) but received a null.");
+  }
+  return new LinkedHashSet<T>(asList(elements));
+}

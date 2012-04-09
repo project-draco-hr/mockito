@@ -1,0 +1,3 @@
+{
+  return imposterise(interceptor,mockedType,ancillaryTypes.toArray(new Class[ancillaryTypes.size()]));
+}

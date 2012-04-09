@@ -1,4 +1,5 @@
 {
+  MockSettingsImpl settings=(MockSettingsImpl)settingsInfo;
   creationValidator.validateType(classToMock);
   creationValidator.validateExtraInterfaces(classToMock,settings.getExtraInterfaces());
   creationValidator.validateMockedType(classToMock,settings.getSpiedInstance());
@@ -6,7 +7,7 @@
   creationValidator.validateMutualExclusionForSpyOrDelegate(settings);
   settings.initiateMockName(classToMock);
   InvocationNotifierHandler<T> mockHandler=new InvocationNotifierHandler<T>(new MockHandler<T>(settings),settings);
-  Class<?>[] extraInterfaces=prepareAncillaryTypes(settings);
+  Set<Class> extraInterfaces=prepareAncillaryTypes(settings);
   T mock=mockMaker.createMock(classToMock,extraInterfaces,mockHandler,settings);
   Object spiedInstance=settings.getSpiedInstance();
   if (spiedInstance != null) {

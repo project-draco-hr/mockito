@@ -1,5 +1,5 @@
 {
-  T mock=mockUtil.createMock(classToMock,(MockSettingsImpl)mockSettings);
+  T mock=mockUtil.createMock(classToMock,mockSettings);
   mockingProgress.mockingStarted(mock,classToMock,mockSettings);
   return mock;
 }

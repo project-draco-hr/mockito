@@ -1,14 +1,11 @@
 {
-  Class<?>[] interfaces=settings.getExtraInterfaces();
-  Class<?>[] ancillaryTypes;
+  Set<Class> interfaces=settings.getExtraInterfaces();
+  Set<Class> ancillaryTypes=new HashSet<Class>(interfaces);
   if (settings.isSerializable()) {
-    ancillaryTypes=interfaces == null ? new Class<?>[]{Serializable.class} : new ArrayUtils().concat(interfaces,Serializable.class);
-  }
- else {
-    ancillaryTypes=interfaces == null ? new Class<?>[0] : interfaces;
+    ancillaryTypes.add(Serializable.class);
   }
   if (settings.getSpiedInstance() != null) {
-    ancillaryTypes=new ArrayUtils().concat(ancillaryTypes,MockitoSpy.class);
+    ancillaryTypes.add(MockitoSpy.class);
   }
   return ancillaryTypes;
 }

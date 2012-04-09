@@ -1,8 +1,0 @@
-{
-  int interfacesCount=interfaces.length;
-  int appendedCount=clazz.length;
-  Class[] out=new Class[interfacesCount + appendedCount];
-  System.arraycopy(interfaces,0,out,0,interfacesCount);
-  System.arraycopy(clazz,0,out,interfacesCount,appendedCount);
-  return out;
-}

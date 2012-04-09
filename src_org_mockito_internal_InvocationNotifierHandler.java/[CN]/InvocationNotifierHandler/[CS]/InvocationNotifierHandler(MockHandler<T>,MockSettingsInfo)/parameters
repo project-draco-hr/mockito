@@ -1,2 +1,2 @@
 MockHandler<T> mockHandler
-MockSettingsImpl settings
+MockSettingsInfo settings
