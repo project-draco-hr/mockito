@@ -1,7 +1,7 @@
 {
   if (methodsGuru.isToString(invocation.getMethod())) {
     Object mock=invocation.getMock();
-    MockNameImpl name=new MockUtil().getMockName(mock);
+    MockName name=new MockUtil().getMockName(mock);
     if (name.isSurrogate()) {
       return "Mock for " + ClassNameFinder.classNameForMock(mock) + ", hashCode: "+ mock.hashCode();
     }
