@@ -1,6 +1,6 @@
 {
-  if (!(handler instanceof MockHandlerInterface)) {
+  if (!(handler instanceof InternalMockHandler)) {
     throw new MockitoException("At the moment you cannot provide own implementations of MockitoInvocationHandler." + "\nPlease see the javadocs for the MockMaker interface.");
   }
-  return (MockHandlerInterface)handler;
+  return (InternalMockHandler)handler;
 }

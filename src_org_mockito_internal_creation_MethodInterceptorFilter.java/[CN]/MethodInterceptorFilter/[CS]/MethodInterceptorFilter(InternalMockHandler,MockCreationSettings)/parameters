@@ -1,2 +1,2 @@
-MockHandlerInterface handler
+InternalMockHandler handler
 MockCreationSettings mockSettings
