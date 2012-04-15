@@ -1,5 +1,5 @@
 {
-  @SuppressWarnings("rawtypes") MockHandler<?> handler=new MockHandler(mock(MockSettingsImpl.class));
+  @SuppressWarnings("rawtypes") MockHandlerImpl<?> handler=new MockHandlerImpl(mock(MockSettingsImpl.class));
   handler.matchersBinder=mock(MatchersBinder.class);
   given(handler.getMockSettings().getInvocationListeners()).willReturn(Arrays.asList(listener));
   return handler;
