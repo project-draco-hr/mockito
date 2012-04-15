@@ -1,3 +1,0 @@
-{
-  threadSafely().mockingStarted(mock,classToMock,mockSettings);
-}
