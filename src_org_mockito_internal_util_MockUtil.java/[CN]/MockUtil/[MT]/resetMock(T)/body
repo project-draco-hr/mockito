@@ -1,6 +1,6 @@
 {
   InvocationNotifierHandler oldHandler=(InvocationNotifierHandler)getMockHandler(mock);
-  MockSettingsInfo settings=oldHandler.getMockSettings();
+  MockCreationSettings settings=oldHandler.getMockSettings();
   InvocationNotifierHandler<T> newHandler=new InvocationNotifierHandler<T>(new MockHandler<T>(settings),settings);
   mockMaker.resetMock(mock,newHandler,settings);
 }

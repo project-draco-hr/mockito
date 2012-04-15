@@ -1,5 +1,10 @@
 {
-  T mock=mockUtil.createMock(classToMock,mockSettings);
-  mockingProgress.mockingStarted(mock,classToMock,mockSettings);
+  if (!MockSettingsImpl.class.isInstance(settings)) {
+    throw new IllegalArgumentException("Unexpected implementation of '" + settings.getClass().getCanonicalName() + "'\n"+ "At the moment, you cannot provide your own implementations that class.");
+  }
+  MockSettingsImpl impl=MockSettingsImpl.class.cast(settings);
+  MockCreationSettings<T> creationSettings=impl.confirm(typeToMock);
+  T mock=mockUtil.createMock(creationSettings);
+  mockingProgress.mockingStarted(mock,typeToMock,settings);
   return mock;
 }

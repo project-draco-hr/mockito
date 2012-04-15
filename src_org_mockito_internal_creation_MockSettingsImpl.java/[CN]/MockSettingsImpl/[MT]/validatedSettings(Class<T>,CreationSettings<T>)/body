@@ -1,0 +1,11 @@
+{
+  MockCreationValidator validator=new MockCreationValidator();
+  validator.validateType(typeToMock);
+  validator.validateExtraInterfaces(typeToMock,source.getExtraInterfaces());
+  validator.validateMockedType(typeToMock,source.getSpiedInstance());
+  CreationSettings<T> settings=new CreationSettings<T>(source);
+  settings.setMockName(new MockNameImpl(source.getName(),typeToMock));
+  settings.setTypeToMock(typeToMock);
+  settings.setExtraInterfaces(prepareExtraInterfaces(source));
+  return settings;
+}

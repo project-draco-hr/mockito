@@ -1,7 +1,0 @@
-{
-  assertFalse(creationValidator.extraInterfacesValidated);
-  assertFalse(creationValidator.typeValidated);
-  mockUtil.createMock(IMethods.class,new MockSettingsImpl());
-  assertTrue(creationValidator.extraInterfacesValidated);
-  assertTrue(creationValidator.typeValidated);
-}

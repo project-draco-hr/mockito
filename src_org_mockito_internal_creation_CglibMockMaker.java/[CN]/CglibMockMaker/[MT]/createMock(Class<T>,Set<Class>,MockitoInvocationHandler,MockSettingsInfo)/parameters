@@ -1,4 +1,0 @@
-Class<T> typeToMock
-Set<Class> extraInterfaces
-MockitoInvocationHandler handler
-MockSettingsInfo settings

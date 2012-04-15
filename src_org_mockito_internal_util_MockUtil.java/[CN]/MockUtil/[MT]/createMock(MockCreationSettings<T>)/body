@@ -1,0 +1,9 @@
+{
+  InvocationNotifierHandler<T> mockHandler=new InvocationNotifierHandler<T>(new MockHandler<T>(settings),settings);
+  T mock=mockMaker.createMock(settings,mockHandler);
+  Object spiedInstance=settings.getSpiedInstance();
+  if (spiedInstance != null) {
+    new LenientCopyTool().copyToMock(spiedInstance,mock);
+  }
+  return mock;
+}

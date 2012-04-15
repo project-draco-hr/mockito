@@ -1,3 +1,0 @@
-{
-  mockName=new MockNameImpl(newName);
-}

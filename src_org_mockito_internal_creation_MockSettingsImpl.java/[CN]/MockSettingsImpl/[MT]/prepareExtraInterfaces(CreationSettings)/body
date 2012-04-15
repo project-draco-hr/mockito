@@ -1,0 +1,10 @@
+{
+  Set<Class> interfaces=new HashSet<Class>(settings.getExtraInterfaces());
+  if (settings.isSerializable()) {
+    interfaces.add(Serializable.class);
+  }
+  if (settings.getSpiedInstance() != null) {
+    interfaces.add(MockitoSpy.class);
+  }
+  return interfaces;
+}

@@ -1,0 +1,3 @@
+{
+  return validatedSettings(typeToMock,this);
+}

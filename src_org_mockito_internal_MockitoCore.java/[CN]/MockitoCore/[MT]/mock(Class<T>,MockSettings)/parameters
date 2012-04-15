@@ -1,2 +1,2 @@
-Class<T> classToMock
-MockSettings mockSettings
+Class<T> typeToMock
+MockSettings settings

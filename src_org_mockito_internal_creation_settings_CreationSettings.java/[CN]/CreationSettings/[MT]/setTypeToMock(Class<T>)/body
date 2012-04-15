@@ -1,0 +1,4 @@
+{
+  this.typeToMock=typeToMock;
+  return this;
+}

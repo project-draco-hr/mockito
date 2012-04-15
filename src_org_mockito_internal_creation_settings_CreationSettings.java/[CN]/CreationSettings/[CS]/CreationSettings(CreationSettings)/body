@@ -1,0 +1,10 @@
+{
+  this.typeToMock=copy.typeToMock;
+  this.extraInterfaces=copy.extraInterfaces;
+  this.name=copy.name;
+  this.spiedInstance=copy.spiedInstance;
+  this.defaultAnswer=copy.defaultAnswer;
+  this.mockName=copy.mockName;
+  this.serializable=copy.serializable;
+  this.invocationListeners=copy.invocationListeners;
+}

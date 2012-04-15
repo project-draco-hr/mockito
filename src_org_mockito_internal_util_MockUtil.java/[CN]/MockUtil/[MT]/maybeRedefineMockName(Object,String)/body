@@ -1,5 +1,6 @@
 {
-  if (getMockName(mock).isDefault()) {
-    getMockHandler(mock).getMockSettings().redefineMockName(newName);
+  MockName mockName=getMockName(mock);
+  if (mockName.isDefault() && getMockHandler(mock).getMockSettings() instanceof CreationSettings) {
+    ((CreationSettings)getMockHandler(mock).getMockSettings()).setMockName(new MockNameImpl(newName));
   }
 }
