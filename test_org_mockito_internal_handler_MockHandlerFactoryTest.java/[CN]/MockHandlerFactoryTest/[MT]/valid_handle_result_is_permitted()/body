@@ -1,0 +1,8 @@
+{
+  MockCreationSettings settings=(MockCreationSettings)new MockSettingsImpl().defaultAnswer(new Returns(123));
+  InternalMockHandler handler=new MockHandlerFactory().create(settings);
+  mock.intReturningMethod();
+  Invocation invocation=super.getLastInvocation();
+  Object result=handler.handle(invocation);
+  assertEquals(123,result);
+}
