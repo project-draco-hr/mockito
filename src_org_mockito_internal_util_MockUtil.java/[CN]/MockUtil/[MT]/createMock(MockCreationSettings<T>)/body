@@ -1,5 +1,5 @@
 {
-  InvocationNotifierHandler<T> mockHandler=new InvocationNotifierHandler<T>(new MockHandlerImpl<T>(settings),settings);
+  MockHandler mockHandler=new MockHandlerFactory().create(settings);
   T mock=mockMaker.createMock(settings,mockHandler);
   Object spiedInstance=settings.getSpiedInstance();
   if (spiedInstance != null) {
