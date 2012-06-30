@@ -1,3 +1,0 @@
-{
-  return (T)wrapperReturnValues.get(type);
-}

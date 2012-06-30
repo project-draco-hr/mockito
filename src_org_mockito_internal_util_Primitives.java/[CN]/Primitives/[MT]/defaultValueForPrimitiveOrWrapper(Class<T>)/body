@@ -1,0 +1,3 @@
+{
+  return (T)primitiveOrWrapperDefaultValues.get(primitiveOrWrapperType);
+}
