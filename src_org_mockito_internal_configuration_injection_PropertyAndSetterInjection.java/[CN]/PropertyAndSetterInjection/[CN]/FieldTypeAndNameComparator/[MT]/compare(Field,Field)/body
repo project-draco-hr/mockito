@@ -1,0 +1,14 @@
+{
+  Class<?> field1Type=field1.getType();
+  Class<?> field2Type=field2.getType();
+  if (field1Type == field2Type) {
+    return field1.getName().compareTo(field2.getName());
+  }
+  if (field1Type.isAssignableFrom(field2Type)) {
+    return 1;
+  }
+  if (field2Type.isAssignableFrom(field1Type)) {
+    return -1;
+  }
+  return 0;
+}
