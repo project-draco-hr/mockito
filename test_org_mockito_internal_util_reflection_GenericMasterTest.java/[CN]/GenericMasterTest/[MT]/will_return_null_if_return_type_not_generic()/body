@@ -1,0 +1,3 @@
+{
+  assertEquals(null,m.identifyGenericReturnType(method("rawList"),this.getClass()));
+}

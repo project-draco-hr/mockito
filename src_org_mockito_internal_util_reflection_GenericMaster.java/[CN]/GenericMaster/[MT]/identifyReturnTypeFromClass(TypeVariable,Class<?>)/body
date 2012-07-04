@@ -1,0 +1,23 @@
+{
+  Type[] genericInterfaces=onClass.getGenericInterfaces();
+  for (  Type genericInterface : genericInterfaces) {
+    if (genericInterface instanceof ParameterizedType) {
+      ParameterizedType parameterizedType=(ParameterizedType)genericInterface;
+      parameterizedType.getActualTypeArguments();
+      if (parameterizedType.getRawType() instanceof Class) {
+        Class rawType=(Class)parameterizedType.getRawType();
+        TypeVariable[] typeParameters=rawType.getTypeParameters();
+        for (int typeVarPosition=0; typeVarPosition < typeParameters.length; typeVarPosition++) {
+          TypeVariable typeParameter=typeParameters[typeVarPosition];
+          if (typeVariable.equals(typeParameter)) {
+            Type typeVariableValue=parameterizedType.getActualTypeArguments()[typeVarPosition];
+            if (typeVariableValue instanceof Class) {
+              return (Class)typeVariableValue;
+            }
+          }
+        }
+      }
+    }
+  }
+  return null;
+}

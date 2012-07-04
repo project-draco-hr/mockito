@@ -1,0 +1,3 @@
+{
+  return clazz.getMethod(noArgMethod);
+}

@@ -1,0 +1,3 @@
+{
+  assertEquals(Set.class,m.identifyGenericReturnType(method(ListSet.class,"iterator"),ListSet.class));
+}
