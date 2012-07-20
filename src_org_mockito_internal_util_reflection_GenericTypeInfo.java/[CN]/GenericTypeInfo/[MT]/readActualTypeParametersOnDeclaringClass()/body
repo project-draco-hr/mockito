@@ -1,7 +1,0 @@
-{
-  registerTypeVariablesOn(onClass);
-  registerTypeVariablesOn(onClass.getGenericSuperclass());
-  for (  Type genericInterface : onClass.getGenericInterfaces()) {
-    registerTypeVariablesOn(genericInterface);
-  }
-}

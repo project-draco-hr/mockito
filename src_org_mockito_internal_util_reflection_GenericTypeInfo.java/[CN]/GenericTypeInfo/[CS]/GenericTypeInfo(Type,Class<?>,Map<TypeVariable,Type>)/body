@@ -1,6 +1,6 @@
 {
   this.typeToSolve=typeToSolve;
-  this.onClass=onClass;
+  this.clazz=sourceType;
   this.typeVariables=typeVariables;
-  readActualTypeParametersOnDeclaringClass();
+  throw new UnsupportedOperationException("code under (re)factoring");
 }
