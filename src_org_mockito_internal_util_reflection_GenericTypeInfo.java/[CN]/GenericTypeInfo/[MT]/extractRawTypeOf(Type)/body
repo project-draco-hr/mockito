@@ -1,0 +1,15 @@
+{
+  if (type instanceof Class) {
+    return (Class<?>)type;
+  }
+  if (type instanceof ParameterizedType) {
+    return (Class<?>)((ParameterizedType)type).getRawType();
+  }
+  if (type instanceof TypeVariableUpperBounds) {
+    return extractRawTypeOf(((TypeVariableUpperBounds)type).firstBound());
+  }
+  if (type instanceof TypeVariable) {
+    return extractRawTypeOf(typeVariables.get(type));
+  }
+  throw new MockitoException("Raw extraction not managed for : '" + type + "'");
+}

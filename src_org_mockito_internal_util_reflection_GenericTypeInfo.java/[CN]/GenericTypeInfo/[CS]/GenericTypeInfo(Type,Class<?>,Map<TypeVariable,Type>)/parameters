@@ -1,0 +1,3 @@
+Type typeToSolve
+Class<?> onClass
+Map<TypeVariable,Type> typeVariables

@@ -1,0 +1,5 @@
+{
+  Checks.checkNotNull(methodName,"methodName");
+  this.method=pickFirstMatchingMethod(methodName,clazz);
+  return this;
+}

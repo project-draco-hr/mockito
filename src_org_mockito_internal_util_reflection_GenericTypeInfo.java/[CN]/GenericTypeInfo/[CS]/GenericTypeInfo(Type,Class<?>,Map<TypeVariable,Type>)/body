@@ -1,0 +1,6 @@
+{
+  this.typeToSolve=typeToSolve;
+  this.onClass=onClass;
+  this.typeVariables=typeVariables;
+  readActualTypeParametersOnDeclaringClass();
+}

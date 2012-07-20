@@ -1,0 +1,7 @@
+{
+  TypeVariable[] typeParameters=clazz.getTypeParameters();
+  for (  TypeVariable typeParameter : typeParameters) {
+    typeVariables.put(typeParameter,boundsOf(typeParameter));
+    logger.log("For '" + clazz.getCanonicalName() + "' found type variable : { '"+ typeParameter+ "(in '"+ typeParameter.getGenericDeclaration()+ "')"+ "' : '"+ boundsOf(typeParameter)+ "' }");
+  }
+}

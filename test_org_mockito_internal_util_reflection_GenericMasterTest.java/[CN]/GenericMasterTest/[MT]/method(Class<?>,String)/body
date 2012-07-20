@@ -1,3 +1,8 @@
 {
-  return clazz.getMethod(noArgMethod);
+  for (  Method method : clazz.getMethods()) {
+    if (method.getName().contains(noArgMethod)) {
+      return method;
+    }
+  }
+  throw new NoSuchMethodException("method " + noArgMethod + " do not exist in "+ clazz.getSimpleName());
 }

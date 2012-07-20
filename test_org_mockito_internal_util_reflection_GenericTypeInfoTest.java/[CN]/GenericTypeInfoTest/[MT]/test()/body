@@ -1,0 +1,7 @@
+{
+  GenericTypeInfo entrySetGenericTypeInfo=on(MapWithNestedGenerics.class).methodName("entrySet").genericReturnTypeInfo();
+  System.out.println(entrySetGenericTypeInfo);
+  System.out.println("======================================================");
+  GenericTypeInfo iteratorGenericTypeInfo=on(entrySetGenericTypeInfo).methodName("iterator").genericReturnTypeInfo();
+  System.out.println(iteratorGenericTypeInfo);
+}

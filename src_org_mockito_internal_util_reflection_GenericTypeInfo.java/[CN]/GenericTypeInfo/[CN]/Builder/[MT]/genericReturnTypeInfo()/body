@@ -1,0 +1,4 @@
+{
+  Type genericReturnType=method.getGenericReturnType();
+  return new GenericTypeInfo(genericReturnType,clazz,typeVariables);
+}

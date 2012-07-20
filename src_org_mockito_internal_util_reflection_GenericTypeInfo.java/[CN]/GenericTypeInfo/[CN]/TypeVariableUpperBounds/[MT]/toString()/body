@@ -1,0 +1,7 @@
+{
+  final StringBuilder sb=new StringBuilder();
+  sb.append("{firstBound=").append(firstBound);
+  sb.append(", interfaceBounds=").append(Arrays.deepToString(interfaceBounds));
+  sb.append('}');
+  return sb.toString();
+}
