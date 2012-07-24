@@ -1,0 +1,3 @@
+{
+  return Mockito.mock(rawType(),((MockSettingsImpl)withSettings().defaultAnswer(answer)).parameterizedInfo(this));
+}

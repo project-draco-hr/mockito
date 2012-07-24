@@ -1,4 +1,0 @@
-{
-  Checks.checkNotNull(genericTypeInfo,"genericTypeInfo");
-  return new Builder().onClass(genericTypeInfo.asRawType()).withTypeVariables(genericTypeInfo.typeVariables);
-}

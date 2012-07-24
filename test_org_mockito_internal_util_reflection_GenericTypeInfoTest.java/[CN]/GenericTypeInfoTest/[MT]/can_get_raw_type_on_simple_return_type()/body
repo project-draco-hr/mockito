@@ -1,5 +1,0 @@
-{
-  assertThat(on(List.class).methodName("iterator").genericReturnTypeInfo().asRawType()).isEqualTo(Iterator.class);
-  assertThat(on(List.class).methodName("size").genericReturnTypeInfo().asRawType()).isEqualTo(int.class);
-  assertThat(on(Number.class).methodName("toString").genericReturnTypeInfo().asRawType()).isEqualTo(String.class);
-}

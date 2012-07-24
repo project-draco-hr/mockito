@@ -1,4 +1,6 @@
 {
   MockitoGenericMetadata genericMetadata=from(GenericsNest.class).resolveGenericReturnType(firstNamedMethod("paramTypeWithTypeParams",GenericsNest.class));
-  fail("TODO");
+  assertThat(genericMetadata.rawType()).isEqualTo(List.class);
+  Type firstBoundOfE=((MockitoGenericMetadata.BoundedType)typeVariableValue(genericMetadata.actualTypeArguments(),"E")).firstBound();
+  assertThat(from(firstBoundOfE).rawType()).isEqualTo(Comparable.class);
 }

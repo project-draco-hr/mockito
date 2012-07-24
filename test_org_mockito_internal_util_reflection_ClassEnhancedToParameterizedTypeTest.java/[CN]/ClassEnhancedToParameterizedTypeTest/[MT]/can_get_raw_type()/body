@@ -1,5 +1,0 @@
-{
-  assertThat(new ClassEnhancedToParameterizedType(ListOfAnyNumbers.class).getRawType()).isEqualTo(ListOfAnyNumbers.class);
-  assertThat(new ClassEnhancedToParameterizedType(ListOfNumbers.class).getRawType()).isEqualTo(ListOfNumbers.class);
-  assertThat(new ClassEnhancedToParameterizedType(MapWithNestedGenerics.class).getRawType()).isEqualTo(MapWithNestedGenerics.class);
-}

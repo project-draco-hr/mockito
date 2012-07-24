@@ -2,5 +2,6 @@
   this.parameterizedType=parameterizedType;
   this.typeParameters=typeParameters;
   this.contextualActualTypeParameters=source.contextualActualTypeParameters;
+  readTypeParameters();
   readTypeVariables();
 }

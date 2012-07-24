@@ -11,5 +11,5 @@
   if (type instanceof TypeVariable) {
     return extractRawTypeOf(contextualActualTypeParameters.get(type));
   }
-  throw new MockitoException("Raw extraction not managed for : '" + type + "'");
+  throw new MockitoException("Raw extraction not supported for : '" + type + "'");
 }

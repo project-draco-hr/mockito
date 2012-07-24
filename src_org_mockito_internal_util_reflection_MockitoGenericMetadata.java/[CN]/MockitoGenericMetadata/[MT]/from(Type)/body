@@ -1,4 +1,5 @@
 {
+  Checks.checkNotNull(type,"type");
   if (type instanceof Class) {
     return new FromClassMockitoGenericMetadata((Class<?>)type);
   }

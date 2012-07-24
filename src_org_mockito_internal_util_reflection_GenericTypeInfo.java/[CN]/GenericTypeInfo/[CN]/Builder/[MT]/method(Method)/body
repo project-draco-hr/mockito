@@ -1,5 +1,0 @@
-{
-  Checks.checkNotNull(method,"method");
-  this.method=method;
-  return this;
-}

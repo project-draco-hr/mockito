@@ -1,0 +1,7 @@
+{
+  Class<?>[] rawExtraInterfaces=rawExtraInterfaces();
+  if (rawExtraInterfaces.length <= 0) {
+    return super.toMock(answer);
+  }
+  return Mockito.mock(rawType(),((MockSettingsImpl)withSettings().defaultAnswer(answer).extraInterfaces(rawExtraInterfaces)).parameterizedInfo(this));
+}

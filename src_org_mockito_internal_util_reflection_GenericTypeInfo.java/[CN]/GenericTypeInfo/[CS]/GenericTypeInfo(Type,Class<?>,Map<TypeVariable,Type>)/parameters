@@ -1,3 +1,0 @@
-Type typeToSolve
-Class<?> sourceType
-Map<TypeVariable,Type> typeVariables

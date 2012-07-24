@@ -1,6 +1,0 @@
-{
-  if (this == o)   return true;
-  if (o == null || getClass() != o.getClass())   return false;
-  GenericTypeInfo that=(GenericTypeInfo)o;
-  return !(clazz != null ? !clazz.equals(that.clazz) : that.clazz != null) && typeToSolve.equals(that.typeToSolve);
-}

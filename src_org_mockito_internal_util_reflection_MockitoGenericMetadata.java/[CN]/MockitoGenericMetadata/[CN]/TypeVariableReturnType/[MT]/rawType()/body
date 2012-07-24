@@ -1,3 +1,6 @@
 {
-  return extractRawTypeOf(typeVariable);
+  if (rawType == null) {
+    rawType=extractRawTypeOf(typeVariable);
+  }
+  return rawType;
 }

@@ -1,4 +1,0 @@
-{
-  assertThat(on(UpperBoundedTypeWithInterfaces.class).methodName("get").genericReturnTypeInfo().asRawType()).isEqualTo(Comparable.class);
-  assertThat(on(UpperBoundedTypeWithClass.class).methodName("get").genericReturnTypeInfo().asRawType()).isEqualTo(Number.class);
-}

@@ -1,6 +1,6 @@
 {
   MockitoGenericMetadata genericMetadata=from(GenericsNest.class).resolveGenericReturnType(firstNamedMethod("returningK",GenericsNest.class));
   assertThat(genericMetadata.rawType()).isEqualTo(Comparable.class);
-  MockitoGenericMetadata extraInterface1=from(genericMetadata.extraInterfaces().get(0));
-  assertThat(extraInterface1.rawType()).isEqualTo(Cloneable.class);
+  MockitoGenericMetadata extraInterface_0=from(genericMetadata.extraInterfaces().get(0));
+  assertThat(extraInterface_0.rawType()).isEqualTo(Cloneable.class);
 }

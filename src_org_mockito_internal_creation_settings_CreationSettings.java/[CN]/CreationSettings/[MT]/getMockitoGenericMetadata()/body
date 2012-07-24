@@ -1,0 +1,6 @@
+{
+  if (mockitoGenericMetadata == null) {
+    this.mockitoGenericMetadata=MockitoGenericMetadata.from(typeToMock);
+  }
+  return mockitoGenericMetadata;
+}

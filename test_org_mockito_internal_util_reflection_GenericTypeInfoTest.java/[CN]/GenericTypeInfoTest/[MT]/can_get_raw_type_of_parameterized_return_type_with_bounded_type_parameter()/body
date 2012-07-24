@@ -1,3 +1,0 @@
-{
-  assertThat(on(ListOfAnyNumbers.class).methodName("get").genericReturnTypeInfo().asRawType()).isEqualTo(Number.class);
-}

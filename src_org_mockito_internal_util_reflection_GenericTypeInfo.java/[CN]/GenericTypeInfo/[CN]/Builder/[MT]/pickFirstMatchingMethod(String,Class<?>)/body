@@ -1,8 +1,0 @@
-{
-  for (  Method method : clazz.getMethods()) {
-    if (method.getName().contains(methodName)) {
-      return method;
-    }
-  }
-  throw new IllegalStateException("The method : '" + methodName + "' do not exist in '"+ clazz.getSimpleName()+ "'");
-}

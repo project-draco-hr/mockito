@@ -1,5 +1,0 @@
-{
-  int result=typeToSolve.hashCode();
-  result=31 * result + (clazz != null ? clazz.hashCode() : 0);
-  return result;
-}

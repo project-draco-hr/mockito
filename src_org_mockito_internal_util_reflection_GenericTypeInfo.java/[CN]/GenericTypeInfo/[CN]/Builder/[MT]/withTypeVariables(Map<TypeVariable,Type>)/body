@@ -1,4 +1,0 @@
-{
-  this.typeVariables=typeVariables;
-  return this;
-}

@@ -1,6 +1,0 @@
-{
-  this.typeToSolve=typeToSolve;
-  this.clazz=sourceType;
-  this.typeVariables=typeVariables;
-  throw new UnsupportedOperationException("code under (re)factoring");
-}

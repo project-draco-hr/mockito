@@ -1,4 +1,0 @@
-{
-  Checks.checkNotNull(clazz,"clazz");
-  return new Builder().onClass(clazz);
-}

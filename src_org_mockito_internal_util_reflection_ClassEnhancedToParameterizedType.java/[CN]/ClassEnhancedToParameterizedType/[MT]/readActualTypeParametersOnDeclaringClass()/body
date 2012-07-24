@@ -1,7 +1,0 @@
-{
-  registerTypeVariablesOn(clazz);
-  registerTypeVariablesOn(clazz.getGenericSuperclass());
-  for (  Type genericInterface : clazz.getGenericInterfaces()) {
-    registerTypeVariablesOn(genericInterface);
-  }
-}

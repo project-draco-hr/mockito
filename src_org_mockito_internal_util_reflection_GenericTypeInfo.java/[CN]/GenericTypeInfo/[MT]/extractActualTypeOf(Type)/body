@@ -1,9 +1,0 @@
-{
-  if (type instanceof TypeVariableUpperBounds) {
-    return extractActualTypeOf(((TypeVariableUpperBounds)type).firstBound());
-  }
-  if (type instanceof TypeVariable) {
-    return extractActualTypeOf(typeVariables.get(type));
-  }
-  return type;
-}
