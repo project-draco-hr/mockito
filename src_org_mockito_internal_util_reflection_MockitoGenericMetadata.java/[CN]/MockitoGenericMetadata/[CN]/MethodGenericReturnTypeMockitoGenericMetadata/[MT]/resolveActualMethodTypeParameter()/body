@@ -1,0 +1,12 @@
+{
+  if (genericReturnType instanceof TypeVariable) {
+    TypeVariable typeVariable=(TypeVariable)genericReturnType;
+    for (    Type type : typeVariable.getBounds()) {
+      registerTypeVariablesOn(type);
+    }
+    registerTypeVariablesOn(getActualTypeArgumentFor(typeVariable));
+  }
+  if (genericReturnType instanceof ParameterizedType) {
+    registerTypeVariablesOn(genericReturnType);
+  }
+}

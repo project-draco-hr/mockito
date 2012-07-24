@@ -1,0 +1,10 @@
+{
+  LinkedHashMap<TypeVariable,Type> actualTypeArguments=new LinkedHashMap<TypeVariable,Type>();
+  TypeVariable[] typeParameters=rawType().getTypeParameters();
+  for (  TypeVariable typeParameter : typeParameters) {
+    Type actualType=getActualTypeArgumentFor(typeParameter);
+    actualTypeArguments.put(typeParameter,actualType);
+    GenericTypeInfo.logger.log("For '" + rawType().getCanonicalName() + "' returning explicit TypeVariable : { '"+ typeParameter+ "("+ System.identityHashCode(typeParameter)+ ")"+ "' : '"+ actualType+ "' }");
+  }
+  return actualTypeArguments;
+}

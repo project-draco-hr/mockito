@@ -1,0 +1,5 @@
+{
+  assertThat(from(ListOfAnyNumbers.class).rawType()).isEqualTo(ListOfAnyNumbers.class);
+  assertThat(from(ListOfNumbers.class).rawType()).isEqualTo(ListOfNumbers.class);
+  assertThat(from(GenericsNest.class).rawType()).isEqualTo(GenericsNest.class);
+}

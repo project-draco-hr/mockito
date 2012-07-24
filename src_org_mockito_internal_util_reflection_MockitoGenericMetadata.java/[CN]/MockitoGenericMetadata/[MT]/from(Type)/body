@@ -1,0 +1,9 @@
+{
+  if (type instanceof Class) {
+    return new FromClassMockitoGenericMetadata((Class<?>)type);
+  }
+  if (type instanceof ParameterizedType) {
+    return new FromParameterizedTypeMockitoGenericMetadata((ParameterizedType)type);
+  }
+  throw new MockitoException("Type meta-data for this Type (" + type.getClass().getCanonicalName() + ") is not supported : "+ type);
+}

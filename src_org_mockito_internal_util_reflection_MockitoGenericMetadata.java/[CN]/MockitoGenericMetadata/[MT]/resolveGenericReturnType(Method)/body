@@ -1,0 +1,12 @@
+{
+  Type genericReturnType=method.getGenericReturnType();
+  System.out.println("Method '" + method.toGenericString() + "' has return type : "+ genericReturnType.getClass().getInterfaces()[0].getSimpleName()+ " : "+ genericReturnType);
+  if (genericReturnType instanceof Class) {
+    return new NotGenericReturnType(genericReturnType);
+  }
+  if (genericReturnType instanceof ParameterizedType) {
+    ParameterizedType returnType=(ParameterizedType)genericReturnType;
+    return new ParameterizedReturnType(this,method);
+  }
+  return new MethodGenericReturnTypeMockitoGenericMetadata(this,method);
+}

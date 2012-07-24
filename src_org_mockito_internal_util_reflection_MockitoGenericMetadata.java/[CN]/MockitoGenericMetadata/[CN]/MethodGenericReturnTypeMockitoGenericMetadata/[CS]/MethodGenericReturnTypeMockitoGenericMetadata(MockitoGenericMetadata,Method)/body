@@ -1,0 +1,6 @@
+{
+  genericReturnType=method.getGenericReturnType();
+  typeParameters=method.getTypeParameters();
+  this.contextualActualTypeParameters=source.contextualActualTypeParameters;
+  resolveActualMethodTypeParameter();
+}

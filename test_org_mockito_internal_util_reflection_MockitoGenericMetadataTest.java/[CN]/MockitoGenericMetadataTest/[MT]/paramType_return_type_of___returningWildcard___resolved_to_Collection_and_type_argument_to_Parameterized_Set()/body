@@ -1,0 +1,4 @@
+{
+  MockitoGenericMetadata genericMetadata=from(GenericsNest.class).resolveGenericReturnType(firstNamedMethod("returningWildcard",GenericsNest.class));
+  fail("TODO");
+}

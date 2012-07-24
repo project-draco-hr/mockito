@@ -1,0 +1,7 @@
+{
+  if (genericReturnType instanceof TypeVariable) {
+    Type actualTypeArgument=getActualTypeArgumentFor((TypeVariable)genericReturnType);
+    return extractRawTypeOf(actualTypeArgument);
+  }
+  return extractRawTypeOf(genericReturnType);
+}

@@ -1,0 +1,14 @@
+{
+  if (!(classType instanceof ParameterizedType)) {
+    return;
+  }
+  ParameterizedType parameterizedType=(ParameterizedType)classType;
+  TypeVariable[] typeParameters=((Class<?>)parameterizedType.getRawType()).getTypeParameters();
+  Type[] actualTypeArguments=parameterizedType.getActualTypeArguments();
+  for (int i=0; i < actualTypeArguments.length; i++) {
+    TypeVariable typeParameter=typeParameters[i];
+    Type actualTypeArgument=actualTypeArguments[i];
+    contextualActualTypeParameters.put(typeParameter,actualTypeArgument);
+    GenericTypeInfo.logger.log("For '" + parameterizedType + "' found type variable : { '"+ typeParameter+ "("+ System.identityHashCode(typeParameter)+ ")"+ "' : '"+ actualTypeArgument+ "' }");
+  }
+}

@@ -1,0 +1,6 @@
+{
+  parameterizedType=(ParameterizedType)method.getGenericReturnType();
+  typeParameters=method.getTypeParameters();
+  this.contextualActualTypeParameters=source.contextualActualTypeParameters;
+  readTypeVariables();
+}

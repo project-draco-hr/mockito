@@ -1,0 +1,5 @@
+{
+  MockitoGenericMetadata genericMetadata=from(GenericsNest.class).resolveGenericReturnType(firstNamedMethod("get",GenericsNest.class));
+  assertThat(genericMetadata.rawType()).isEqualTo(Set.class);
+  assertThat(genericMetadata.actualTypeArguments().values()).contains(Number.class);
+}
