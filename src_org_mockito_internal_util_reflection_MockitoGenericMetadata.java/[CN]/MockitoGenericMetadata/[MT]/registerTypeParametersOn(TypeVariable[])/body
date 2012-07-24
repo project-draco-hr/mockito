@@ -1,0 +1,6 @@
+{
+  for (  TypeVariable typeParameter : typeParameters) {
+    contextualActualTypeParameters.put(typeParameter,boundsOf(typeParameter));
+    GenericTypeInfo.logger.log("For '" + typeParameter.getGenericDeclaration() + "' found type variable : { '"+ typeParameter+ "("+ System.identityHashCode(typeParameter)+ ")"+ "' : '"+ boundsOf(typeParameter)+ "' }");
+  }
+}

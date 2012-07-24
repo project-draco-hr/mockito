@@ -5,8 +5,10 @@
     return new NotGenericReturnType(genericReturnType);
   }
   if (genericReturnType instanceof ParameterizedType) {
-    ParameterizedType returnType=(ParameterizedType)genericReturnType;
-    return new ParameterizedReturnType(this,method);
+    return new ParameterizedReturnType(this,method.getTypeParameters(),(ParameterizedType)method.getGenericReturnType());
   }
-  return new MethodGenericReturnTypeMockitoGenericMetadata(this,method);
+  if (genericReturnType instanceof TypeVariable) {
+    return new TypeVariableReturnType(this,method.getTypeParameters(),(TypeVariable)genericReturnType);
+  }
+  throw new IllegalStateException("ouch");
 }

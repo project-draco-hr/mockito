@@ -1,0 +1,7 @@
+{
+  Type type=extractActualBoundedTypeOf(typeVariable);
+  if (type instanceof BoundedType) {
+    return Arrays.asList(((BoundedType)type).interfaceBounds());
+  }
+  throw new MockitoException("Cannot extract extra-interfaces from '" + typeVariable + "' : '"+ type+ "'");
+}

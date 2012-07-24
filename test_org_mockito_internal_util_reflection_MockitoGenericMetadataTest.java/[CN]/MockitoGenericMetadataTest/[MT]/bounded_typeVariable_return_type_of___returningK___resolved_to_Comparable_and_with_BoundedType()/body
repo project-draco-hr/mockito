@@ -1,7 +1,6 @@
 {
   MockitoGenericMetadata genericMetadata=from(GenericsNest.class).resolveGenericReturnType(firstNamedMethod("returningK",GenericsNest.class));
   assertThat(genericMetadata.rawType()).isEqualTo(Comparable.class);
-  BoundedType boundedType=(BoundedType)typeVariableValue(genericMetadata.actualTypeArguments(),"T");
-  assertThat(boundedType.firstBound());
-  fail("API design to do");
+  MockitoGenericMetadata extraInterface1=from(genericMetadata.extraInterfaces().get(0));
+  assertThat(extraInterface1.rawType()).isEqualTo(Cloneable.class);
 }
