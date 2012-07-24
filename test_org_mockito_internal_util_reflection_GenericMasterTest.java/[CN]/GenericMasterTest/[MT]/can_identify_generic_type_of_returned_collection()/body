@@ -1,3 +1,0 @@
-{
-  assertEquals(Number.class,m.identifyGenericReturnType(method("numberList"),this.getClass()));
-}

@@ -1,4 +1,0 @@
-{
-  assertEquals(Number.class,m.identifyGenericReturnType(method(HashMapNumberString.class,"keySet"),HashMapNumberString.class));
-  assertEquals(Type.class,m.identifyGenericReturnType(method("typeList"),this.getClass()));
-}

@@ -1,7 +1,0 @@
-{
-  assertEquals(Set.class,m.identifyGenericReturnType(method(ListSet.class,"iterator"),ListSet.class));
-  assertEquals(Number.class,m.identifyGenericReturnType(method(MapNumberString.class,"keySet"),MapNumberString.class));
-  assertEquals(String.class,m.identifyGenericReturnType(method(MapNumberString.class,"values"),MapNumberString.class));
-  assertEquals(String.class,m.identifyGenericReturnType(method(MapNumberString.class,"remove"),MapNumberString.class));
-  assertEquals(Map.Entry.class,m.identifyGenericReturnType(method(MapNumberString.class,"entrySet"),MapNumberString.class));
-}
