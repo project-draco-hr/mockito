@@ -1,6 +1,5 @@
 {
-  Class<?> clz=invocation.getMethod().getReturnType();
-  final Object mock=Mockito.mock(clz,this);
+  final Object mock=createGenericsAwareMock(invocation);
   container.addAnswer(new Answer<Object>(){
     public Object answer(    InvocationOnMock invocation) throws Throwable {
       return mock;
