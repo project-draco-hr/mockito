@@ -1,6 +1,3 @@
 {
-  if (!new MockCreationValidator().isTypeMockable(rawType)) {
-    return null;
-  }
   return Mockito.mock(rawType,mockSettings);
 }
