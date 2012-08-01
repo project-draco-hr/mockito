@@ -1,4 +1,7 @@
 {
   this.defaultAnswer=defaultAnswer;
+  if (defaultAnswer == null) {
+    new Reporter().defaultAnswerDoesNotAcceptNullParameter();
+  }
   return this;
 }
