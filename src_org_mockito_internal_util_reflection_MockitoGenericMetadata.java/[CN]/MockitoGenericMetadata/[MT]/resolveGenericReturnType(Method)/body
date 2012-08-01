@@ -1,6 +1,5 @@
 {
   Type genericReturnType=method.getGenericReturnType();
-  logger.log("Method '" + method.toGenericString() + "' has return type : "+ genericReturnType.getClass().getInterfaces()[0].getSimpleName()+ " : "+ genericReturnType);
   if (genericReturnType instanceof Class) {
     return new NotGenericReturnType(genericReturnType);
   }
@@ -10,8 +9,5 @@
   if (genericReturnType instanceof TypeVariable) {
     return new TypeVariableReturnType(this,method.getTypeParameters(),(TypeVariable)genericReturnType);
   }
-  if (genericReturnType instanceof BoundedType) {
-    return new TypeVariableReturnType(this,method.getTypeParameters(),((BoundedType)genericReturnType).typeVariable());
-  }
-  throw new IllegalStateException("ouch");
+  throw new MockitoException("Ouch, it shouldn't happen, type '" + genericReturnType.getClass().getCanonicalName() + "' on method : '"+ method.toGenericString()+ "' is not supported : "+ genericReturnType);
 }

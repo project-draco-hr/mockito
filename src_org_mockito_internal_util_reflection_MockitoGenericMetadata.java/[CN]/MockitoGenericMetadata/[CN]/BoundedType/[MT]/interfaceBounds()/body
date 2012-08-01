@@ -1,5 +1,0 @@
-{
-  Type[] interfaceBounds=new Type[typeVariable.getBounds().length - 1];
-  System.arraycopy(typeVariable.getBounds(),1,interfaceBounds,0,typeVariable.getBounds().length - 1);
-  return interfaceBounds;
-}
