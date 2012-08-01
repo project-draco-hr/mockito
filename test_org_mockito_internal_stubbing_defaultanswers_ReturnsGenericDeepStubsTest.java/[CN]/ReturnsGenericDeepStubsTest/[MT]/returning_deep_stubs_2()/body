@@ -1,0 +1,8 @@
+{
+  GenericsNest<?> mock=mock(GenericsNest.class,new ReturnsGenericDeepStubs());
+  Cloneable cloneable1=mock.paramTypeWithTypeParams().get(0);
+  Comparable<?> comparable1=mock.paramTypeWithTypeParams().get(0);
+  Cloneable cloneable2=mock.returningK();
+  Comparable<?> comparable2=mock.returningK();
+  Cloneable cloneable3=(Cloneable)mock.typeVarWithTypeParams();
+}

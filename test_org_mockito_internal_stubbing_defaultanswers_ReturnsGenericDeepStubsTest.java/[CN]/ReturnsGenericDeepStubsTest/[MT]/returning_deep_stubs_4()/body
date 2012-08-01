@@ -1,0 +1,5 @@
+{
+  GenericsNest<?> mock=mock(GenericsNest.class,new ReturnsGenericDeepStubs());
+  Number n=mock.returnsNormalType();
+  n.floatValue();
+}

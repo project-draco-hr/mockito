@@ -1,0 +1,4 @@
+{
+  GenericsNest<?> mock=mock(GenericsNest.class,new ReturnsGenericDeepStubs());
+  StringBuilder stringBuilder=mock.twoTypeParams(new StringBuilder()).append(2).append(3);
+}

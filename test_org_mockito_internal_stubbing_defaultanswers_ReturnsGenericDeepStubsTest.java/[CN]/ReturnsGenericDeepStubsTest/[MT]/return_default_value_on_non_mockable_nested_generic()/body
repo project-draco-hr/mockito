@@ -1,0 +1,6 @@
+{
+  GenericsNest<?> genericsNest=mock(GenericsNest.class,new ReturnsGenericDeepStubs());
+  ListOfInteger listOfInteger=mock(ListOfInteger.class,new ReturnsGenericDeepStubs());
+  assertThat(genericsNest.returningNonMockableNestedGeneric().keySet().iterator().next()).isNull();
+  assertThat(listOfInteger.get(25)).isEqualTo(0);
+}
