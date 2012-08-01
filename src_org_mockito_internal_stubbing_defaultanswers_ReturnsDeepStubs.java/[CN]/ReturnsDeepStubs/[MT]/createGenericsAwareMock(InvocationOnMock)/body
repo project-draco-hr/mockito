@@ -3,6 +3,10 @@
   if (genericReturnType instanceof Class) {
     return mock((Class<?>)genericReturnType,this);
   }
-  MockitoGenericMetadata mockitoGenericMetadata=actualParameterizedType(invocation.getMock()).resolveGenericReturnType(invocation.getMethod());
-  return mockitoGenericMetadata.toMock(this);
+  MockitoGenericMetadata returnTypeGenericMetadata=actualParameterizedType(invocation.getMock()).resolveGenericReturnType(invocation.getMethod());
+  Object mock=returnTypeGenericMetadata.toMock(this);
+  if (mock == null) {
+    return delegate.returnValueFor(returnTypeGenericMetadata.rawType());
+  }
+  return mock;
 }
