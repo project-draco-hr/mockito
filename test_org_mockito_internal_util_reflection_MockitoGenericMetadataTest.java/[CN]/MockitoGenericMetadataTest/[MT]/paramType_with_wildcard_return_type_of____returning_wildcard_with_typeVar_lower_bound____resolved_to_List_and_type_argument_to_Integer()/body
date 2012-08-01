@@ -1,7 +1,0 @@
-{
-  MockitoGenericMetadata genericMetadata=from(GenericsNest.class).resolveGenericReturnType(firstNamedMethod("returning_wildcard_with_typeVar_lower_bound",GenericsNest.class));
-  assertThat(genericMetadata.rawType()).isEqualTo(List.class);
-  MockitoGenericMetadata.BoundedType boundedType=(MockitoGenericMetadata.BoundedType)typeVariableValue(genericMetadata.actualTypeArguments(),"E");
-  assertThat(from(boundedType.firstBound()).rawType()).isEqualTo(Comparable.class);
-  assertThat(boundedType.interfaceBounds()).contains(Cloneable.class);
-}

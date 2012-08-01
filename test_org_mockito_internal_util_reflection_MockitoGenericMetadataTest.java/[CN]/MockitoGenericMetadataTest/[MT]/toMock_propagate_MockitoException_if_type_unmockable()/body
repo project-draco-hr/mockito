@@ -1,5 +1,0 @@
-{
-  MockitoGenericMetadata genericMetadata=from(GenericsNest.class).resolveGenericReturnType(firstNamedMethod("returning_wildcard_with_class_lower_bound",GenericsNest.class));
-  MockitoGenericMetadata.BoundedType boundedType=(MockitoGenericMetadata.BoundedType)typeVariableValue(genericMetadata.actualTypeArguments(),"E");
-  from(boundedType.firstBound()).toMock(RETURNS_DEFAULTS);
-}

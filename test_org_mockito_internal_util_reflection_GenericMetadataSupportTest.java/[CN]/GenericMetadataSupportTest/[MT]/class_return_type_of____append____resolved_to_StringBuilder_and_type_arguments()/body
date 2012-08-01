@@ -1,0 +1,5 @@
+{
+  GenericMetadataSupport genericMetadata=from(StringBuilder.class).resolveGenericReturnType(firstNamedMethod("append",StringBuilder.class));
+  assertThat(genericMetadata.rawType()).isEqualTo(StringBuilder.class);
+  assertThat(genericMetadata.actualTypeArguments()).isEmpty();
+}
