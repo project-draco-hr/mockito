@@ -1,0 +1,4 @@
+Set<Object> mocks
+Object instance
+boolean injectionOccurred
+List<Field> orderedInstanceFields

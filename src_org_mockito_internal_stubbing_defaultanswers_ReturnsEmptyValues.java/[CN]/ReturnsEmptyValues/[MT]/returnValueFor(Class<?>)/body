@@ -1,9 +1,6 @@
 {
-  if (type.isPrimitive()) {
-    return primitiveOf(type);
-  }
- else   if (Primitives.isPrimitiveWrapper(type)) {
-    return Primitives.primitiveWrapperOf(type);
+  if (Primitives.isPrimitiveOrWrapper(type)) {
+    return Primitives.defaultValueForPrimitiveOrWrapper(type);
   }
  else   if (type == Collection.class) {
     return new LinkedList<Object>();

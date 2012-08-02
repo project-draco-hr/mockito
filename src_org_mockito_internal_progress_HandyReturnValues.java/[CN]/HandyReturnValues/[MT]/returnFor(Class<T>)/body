@@ -1,6 +1,6 @@
 {
-  if (isPrimitiveWrapper(clazz)) {
-    return primitiveWrapperOf(clazz);
+  if (isPrimitiveOrWrapper(clazz)) {
+    return defaultValueForPrimitiveOrWrapper(clazz);
   }
-  return primitiveValueOrNullFor(clazz);
+  return null;
 }

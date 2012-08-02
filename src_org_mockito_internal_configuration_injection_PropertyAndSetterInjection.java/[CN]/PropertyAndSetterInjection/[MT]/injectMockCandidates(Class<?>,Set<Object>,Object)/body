@@ -1,0 +1,7 @@
+{
+  boolean injectionOccurred=false;
+  List<Field> orderedInstanceFields=orderedInstanceFieldsFrom(awaitingInjectionClazz);
+  injectionOccurred|=injectMockCandidatesOnFields(mocks,instance,injectionOccurred,orderedInstanceFields);
+  injectionOccurred|=injectMockCandidatesOnFields(mocks,instance,injectionOccurred,orderedInstanceFields);
+  return injectionOccurred;
+}

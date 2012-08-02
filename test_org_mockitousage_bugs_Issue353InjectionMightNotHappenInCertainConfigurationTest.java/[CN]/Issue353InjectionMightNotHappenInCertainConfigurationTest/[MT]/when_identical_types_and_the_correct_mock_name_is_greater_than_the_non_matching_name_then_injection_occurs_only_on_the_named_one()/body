@@ -1,0 +1,5 @@
+{
+  assertThat("stringString_that_matches_field".compareTo("mockStringInteger_was_not_injected")).isGreaterThanOrEqualTo(1);
+  assertSame(stringString_that_matches_field,fooService.stringString_that_matches_field);
+  assertSame(mockStringInteger_was_not_injected,fooService.stringInteger_field);
+}
