@@ -3,7 +3,6 @@
   validator.validateType(typeToMock);
   validator.validateExtraInterfaces(typeToMock,source.getExtraInterfaces());
   validator.validateMockedType(typeToMock,source.getSpiedInstance());
-  validator.validateSerializable(typeToMock,source.isSerializable());
   CreationSettings<T> settings=new CreationSettings<T>(source);
   settings.setMockName(new MockNameImpl(source.getName(),typeToMock));
   settings.setTypeToMock(typeToMock);

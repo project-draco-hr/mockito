@@ -7,4 +7,5 @@
   this.mockName=copy.mockName;
   this.serializable=copy.serializable;
   this.invocationListeners=copy.invocationListeners;
+  this.stubOnly=copy.stubOnly;
 }
