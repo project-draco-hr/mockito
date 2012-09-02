@@ -10,9 +10,9 @@
  catch (        InterruptedException e) {
           throw new RuntimeException(e);
         }
-        container.setInvocationForPotentialStubbing(new InvocationMatcher(invocation));
-        container.addAnswer(new Returns("foo"));
-        container.findAnswerFor(invocation);
+        c.setInvocationForPotentialStubbing(new InvocationMatcher(invocation));
+        c.addAnswer(new Returns("foo"));
+        c.findAnswerFor(invocation);
       }
     }
 ;

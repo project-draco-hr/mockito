@@ -9,7 +9,7 @@
   mockingProgress.validateState();
   if (verificationMode != null) {
     if (((MockAwareVerificationMode)verificationMode).getMock() == invocation.getMock()) {
-      VerificationDataImpl data=new VerificationDataImpl(invocationContainerImpl,invocationMatcher);
+      VerificationDataImpl data=createVerificationData(invocationContainerImpl,invocationMatcher);
       verificationMode.verify(data);
       return null;
     }

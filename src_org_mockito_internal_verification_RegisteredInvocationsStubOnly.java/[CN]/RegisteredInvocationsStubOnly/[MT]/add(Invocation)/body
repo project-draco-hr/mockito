@@ -1,0 +1,3 @@
+{
+  this.lastInvocation.set(invocation);
+}

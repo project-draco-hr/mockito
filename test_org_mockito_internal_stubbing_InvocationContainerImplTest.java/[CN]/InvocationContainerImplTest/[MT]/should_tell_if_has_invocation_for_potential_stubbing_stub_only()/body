@@ -1,0 +1,6 @@
+{
+  containerStubOnly.setInvocationForPotentialStubbing(new InvocationBuilder().toInvocationMatcher());
+  assertTrue(containerStubOnly.hasInvocationForPotentialStubbing());
+  containerStubOnly.addAnswer(new ReturnsEmptyValues());
+  assertFalse(containerStubOnly.hasInvocationForPotentialStubbing());
+}
