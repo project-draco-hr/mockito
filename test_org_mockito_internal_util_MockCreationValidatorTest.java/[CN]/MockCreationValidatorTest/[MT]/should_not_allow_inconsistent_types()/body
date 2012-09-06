@@ -1,0 +1,3 @@
+{
+  validator.validateMockedType(List.class,new ArrayList());
+}

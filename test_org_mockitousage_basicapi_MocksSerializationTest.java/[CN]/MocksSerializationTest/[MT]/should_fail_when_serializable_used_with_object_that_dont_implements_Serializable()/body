@@ -1,0 +1,9 @@
+{
+  try {
+    serializeMock(mock(Observable.class,withSettings().serializable()));
+    fail();
+  }
+ catch (  MockitoException e) {
+    Assertions.assertThat(e.getMessage()).contains(Observable.class.getSimpleName()).contains("serializable()").contains("implement Serializable");
+  }
+}
