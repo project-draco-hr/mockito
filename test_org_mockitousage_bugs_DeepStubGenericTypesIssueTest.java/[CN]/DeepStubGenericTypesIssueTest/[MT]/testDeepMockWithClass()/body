@@ -1,4 +1,0 @@
-{
-  final ListSet mock=Mockito.mock(ListSet.class,Mockito.RETURNS_DEEP_STUBS);
-  final Set mock2=mock.get(0);
-}
