@@ -1,0 +1,5 @@
+{
+  if (serializable && !classToMock.isInterface() && !(Serializable.class.isAssignableFrom(classToMock))) {
+    new Reporter().serializableWontWorkForObjectsThatDontImplementSerializable(classToMock);
+  }
+}

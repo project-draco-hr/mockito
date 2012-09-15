@@ -1,8 +1,0 @@
-{
-  try {
-    validator.validateMockedType(List.class,new ArrayList());
-    fail();
-  }
- catch (  MockitoException e) {
-  }
-}

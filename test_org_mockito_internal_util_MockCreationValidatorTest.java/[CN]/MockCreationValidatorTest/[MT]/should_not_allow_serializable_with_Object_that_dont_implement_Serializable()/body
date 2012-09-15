@@ -1,0 +1,4 @@
+{
+  boolean serializable=true;
+  validator.validateSerializable(Observable.class,serializable);
+}

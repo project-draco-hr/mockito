@@ -1,0 +1,7 @@
+{
+  JUnitCore runner=new JUnitCore();
+  runner.addListener(new TextListener(System.out));
+  Result result=runner.run(TestClassWithoutTestMethod.class);
+  assertEquals(1,result.getFailureCount());
+  assertFalse(result.wasSuccessful());
+}
