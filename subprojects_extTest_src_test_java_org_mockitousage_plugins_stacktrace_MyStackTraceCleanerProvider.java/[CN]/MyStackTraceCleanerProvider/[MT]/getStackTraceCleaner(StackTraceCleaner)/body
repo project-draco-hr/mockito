@@ -1,0 +1,11 @@
+{
+  return new StackTraceCleaner(){
+    public boolean isOut(    StackTraceElement candidate){
+      if (ENABLED && candidate.getMethodName().contains("excludeMe")) {
+        return true;
+      }
+      return defaultCleaner.isOut(candidate);
+    }
+  }
+;
+}
