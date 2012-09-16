@@ -1,7 +1,0 @@
-{
-  if (this.lastInvocation.get() == null) {
-    return Collections.emptyList();
-  }
-  List<Invocation> copiedList=Collections.singletonList(this.lastInvocation.get());
-  return ListUtil.filter(copiedList,new RemoveToString());
-}
