@@ -1,3 +1,5 @@
 {
-  invocations.add(invocation);
+synchronized (invocations) {
+    invocations.add(invocation);
+  }
 }

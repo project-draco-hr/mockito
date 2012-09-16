@@ -1,3 +1,5 @@
 {
-  return invocations.isEmpty();
+synchronized (invocations) {
+    return invocations.isEmpty();
+  }
 }
