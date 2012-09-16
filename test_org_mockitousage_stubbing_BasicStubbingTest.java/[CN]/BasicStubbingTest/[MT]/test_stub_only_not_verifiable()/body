@@ -9,6 +9,6 @@
     verify(localMock,atLeastOnce()).objectReturningMethod(eq(200));
     fail();
   }
- catch (  NotAMockException e) {
+ catch (  CannotVerifyStubOnlyMock e) {
   }
 }
