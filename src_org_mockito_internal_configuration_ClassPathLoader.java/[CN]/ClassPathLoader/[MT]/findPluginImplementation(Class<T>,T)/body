@@ -1,0 +1,6 @@
+{
+  for (  T plugin : loadImplementations(pluginType)) {
+    return plugin;
+  }
+  return defaultPlugin;
+}

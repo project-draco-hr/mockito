@@ -1,0 +1,4 @@
+{
+  Matcher<Number> matcher=equalsWithDelta(null);
+  assertThat(matcher.matches(null)).isTrue();
+}

@@ -8,4 +8,5 @@
   this.serializable=copy.serializable;
   this.invocationListeners=copy.invocationListeners;
   this.mockitoGenericMetadata=copy.mockitoGenericMetadata;
+  this.stubOnly=copy.stubOnly;
 }

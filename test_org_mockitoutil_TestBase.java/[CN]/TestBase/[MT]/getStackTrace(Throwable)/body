@@ -1,0 +1,10 @@
+{
+  ByteArrayOutputStream out=new ByteArrayOutputStream();
+  e.printStackTrace(new PrintStream(out));
+  try {
+    out.close();
+  }
+ catch (  IOException ex) {
+  }
+  return out.toString();
+}

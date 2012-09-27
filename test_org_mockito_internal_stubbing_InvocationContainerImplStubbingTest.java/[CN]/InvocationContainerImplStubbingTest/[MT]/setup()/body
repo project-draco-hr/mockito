@@ -1,0 +1,8 @@
+{
+  state=new MockingProgressImpl();
+  invocationContainerImpl=new InvocationContainerImpl(state,new MockSettingsImpl());
+  invocationContainerImpl.setInvocationForPotentialStubbing(new InvocationBuilder().toInvocationMatcher());
+  invocationContainerImplStubOnly=new InvocationContainerImpl(state,new MockSettingsImpl().stubOnly());
+  invocationContainerImplStubOnly.setInvocationForPotentialStubbing(new InvocationBuilder().toInvocationMatcher());
+  simpleMethod=new InvocationBuilder().simpleMethod().toInvocation();
+}

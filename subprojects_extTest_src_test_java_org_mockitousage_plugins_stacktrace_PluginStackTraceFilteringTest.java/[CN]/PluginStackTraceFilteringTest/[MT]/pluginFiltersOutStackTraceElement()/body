@@ -1,0 +1,12 @@
+{
+  try {
+    MyStackTraceCleanerProvider.ENABLED=true;
+    verifyMock_x();
+    fail();
+  }
+ catch (  WantedButNotInvoked e) {
+    String trace=getStackTrace(e);
+    assertContains("verifyMock_x",trace);
+    assertNotContains("verify_excludeMe_x",trace);
+  }
+}

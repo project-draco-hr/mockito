@@ -1,0 +1,7 @@
+{
+synchronized (invocations) {
+    if (!invocations.isEmpty()) {
+      invocations.removeLast();
+    }
+  }
+}

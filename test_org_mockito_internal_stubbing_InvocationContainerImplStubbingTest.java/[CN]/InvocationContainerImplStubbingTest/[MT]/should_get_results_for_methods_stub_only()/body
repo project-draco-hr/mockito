@@ -1,0 +1,14 @@
+{
+  invocationContainerImplStubOnly.setInvocationForPotentialStubbing(new InvocationMatcher(simpleMethod));
+  invocationContainerImplStubOnly.addAnswer(new Returns("simpleMethod"));
+  Invocation differentMethod=new InvocationBuilder().differentMethod().toInvocation();
+  invocationContainerImplStubOnly.setInvocationForPotentialStubbing(new InvocationMatcher(differentMethod));
+  invocationContainerImplStubOnly.addAnswer(new ThrowsException(new MyException()));
+  assertEquals("simpleMethod",invocationContainerImplStubOnly.answerTo(simpleMethod));
+  try {
+    invocationContainerImplStubOnly.answerTo(differentMethod);
+    fail();
+  }
+ catch (  MyException e) {
+  }
+}

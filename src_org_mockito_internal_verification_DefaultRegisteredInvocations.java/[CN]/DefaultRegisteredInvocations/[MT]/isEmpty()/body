@@ -1,0 +1,5 @@
+{
+synchronized (invocations) {
+    return invocations.isEmpty();
+  }
+}
