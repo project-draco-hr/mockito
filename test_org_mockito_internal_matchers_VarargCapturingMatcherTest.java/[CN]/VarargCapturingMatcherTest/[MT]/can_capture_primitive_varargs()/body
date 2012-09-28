@@ -1,0 +1,5 @@
+{
+  VarargCapturingMatcher m=new VarargCapturingMatcher();
+  m.captureFrom(new int[]{1,2,3});
+  assertThat(m.getLastVarargs()).containsSequence(1,2,3);
+}

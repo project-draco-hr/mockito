@@ -1,9 +1,13 @@
 {
-  int k=0;
-  for (  Matcher m : matchers) {
-    if (m instanceof CapturesArguments && i.getArguments().length > k) {
-      ((CapturesArguments)m).captureFrom(i.getArguments()[k]);
+  for (int position=0; position < matchers.size(); position++) {
+    Matcher m=matchers.get(position);
+    if (m instanceof CapturesArguments && invocation.getArguments().length > position) {
+      if (isVariableArgument(invocation,position) && isVarargMatcher(m)) {
+        ((CapturesArguments)m).captureFrom(invocation.getRawArguments()[position]);
+      }
+ else {
+        ((CapturesArguments)m).captureFrom(invocation.getArguments()[position]);
+      }
     }
-    k++;
   }
 }

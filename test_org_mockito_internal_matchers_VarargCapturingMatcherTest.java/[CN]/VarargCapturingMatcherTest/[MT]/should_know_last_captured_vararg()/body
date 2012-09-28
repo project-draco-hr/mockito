@@ -1,0 +1,6 @@
+{
+  VarargCapturingMatcher m=new VarargCapturingMatcher();
+  m.captureFrom(new Object[]{"foo","bar"});
+  m.captureFrom(new Object[]{"fool","bard"});
+  assertThat(m.getLastVarargs()).containsSequence("fool","bard");
+}

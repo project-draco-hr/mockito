@@ -1,0 +1,10 @@
+{
+  IMethods mock=mock(IMethods.class);
+  ArgumentCaptor<String> argumentCaptor=ArgumentCaptor.forClass(String.class);
+  mock.mixedVarargs(42,"a","b","c");
+  mock.mixedVarargs(42,"again ?!");
+  verify(mock,times(2)).mixedVarargs(any(),argumentCaptor.captureVararg());
+  List<List<String>> allVarargsValues=argumentCaptor.getAllVarargsValues();
+  Assertions.assertThat(allVarargsValues.get(0)).containsExactly("a","b","c");
+  Assertions.assertThat(allVarargsValues.get(1)).containsExactly("again ?!");
+}

@@ -1,0 +1,8 @@
+{
+  return new HandyReturnValues(){
+    @Override public <T>T returnFor(    Class<T> clazz){
+      return (T)expected;
+    }
+  }
+;
+}

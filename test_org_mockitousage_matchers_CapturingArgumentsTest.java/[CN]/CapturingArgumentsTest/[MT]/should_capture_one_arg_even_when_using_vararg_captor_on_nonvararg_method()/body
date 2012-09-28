@@ -1,0 +1,7 @@
+{
+  IMethods mock=mock(IMethods.class);
+  ArgumentCaptor<String> argumentCaptor=ArgumentCaptor.forClass(String.class);
+  mock.simpleMethod("a",2);
+  verify(mock).simpleMethod(argumentCaptor.captureVararg(),eq(2));
+  Assertions.assertThat(argumentCaptor.getVarargsValues()).containsExactly("a");
+}

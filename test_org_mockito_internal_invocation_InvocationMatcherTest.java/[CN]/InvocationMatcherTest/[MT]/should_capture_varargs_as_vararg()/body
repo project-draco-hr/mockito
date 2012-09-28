@@ -1,0 +1,8 @@
+{
+  mock.mixedVarargs(1,"a","b");
+  Invocation invocation=getLastInvocation();
+  VarargCapturingMatcher varargCapturingMatcher=new VarargCapturingMatcher();
+  InvocationMatcher invocationMatcher=new InvocationMatcher(invocation,(List)asList(new Equals(1),new LocalizedMatcher(varargCapturingMatcher)));
+  invocationMatcher.captureArgumentsFrom(invocation);
+  Assertions.assertThat(varargCapturingMatcher.getLastVarargs()).containsExactly("a","b");
+}

@@ -1,0 +1,7 @@
+{
+  Matcher actualMatcher=matcher;
+  if (actualMatcher instanceof MatcherDecorator) {
+    actualMatcher=((MatcherDecorator)actualMatcher).getActualMatcher();
+  }
+  return actualMatcher instanceof VarargMatcher;
+}
