@@ -1,0 +1,7 @@
+{
+  List<?> value=Collections.emptyList();
+  when(imethodsMock.objectReturningMethodNoArgs()).thenReturn(value);
+  ByteArrayOutputStream serialized=serializeMock(imethodsMock);
+  IMethods readObject=deserializeMock(serialized,IMethods.class);
+  assertEquals(value,readObject.objectReturningMethodNoArgs());
+}

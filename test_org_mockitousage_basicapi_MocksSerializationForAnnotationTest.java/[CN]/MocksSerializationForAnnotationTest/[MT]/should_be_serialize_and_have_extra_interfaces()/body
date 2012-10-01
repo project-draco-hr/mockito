@@ -1,0 +1,3 @@
+{
+  serializeAndBack((List)imethodsWithExtraInterfacesMock);
+}

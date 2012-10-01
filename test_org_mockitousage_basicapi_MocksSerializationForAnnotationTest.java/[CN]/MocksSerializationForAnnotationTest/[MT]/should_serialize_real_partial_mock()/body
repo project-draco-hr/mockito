@@ -1,0 +1,6 @@
+{
+  when(anyMock.matches(anyObject())).thenCallRealMethod();
+  ByteArrayOutputStream serialized=serializeMock(anyMock);
+  Any readObject=deserializeMock(serialized,Any.class);
+  readObject.matches("");
+}

@@ -1,0 +1,5 @@
+{
+  invocation.getArguments();
+  invocation.getMock();
+  return string;
+}

@@ -1,0 +1,4 @@
+{
+  bar=new Bar();
+  bar.foo=this;
+}

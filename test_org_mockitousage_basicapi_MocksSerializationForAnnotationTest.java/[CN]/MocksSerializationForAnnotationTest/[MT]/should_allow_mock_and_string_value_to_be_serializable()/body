@@ -1,0 +1,7 @@
+{
+  String value="value";
+  when(imethodsMock.stringReturningMethod()).thenReturn(value);
+  ByteArrayOutputStream serialized=serializeMock(imethodsMock);
+  IMethods readObject=deserializeMock(serialized,IMethods.class);
+  assertEquals(value,readObject.stringReturningMethod());
+}

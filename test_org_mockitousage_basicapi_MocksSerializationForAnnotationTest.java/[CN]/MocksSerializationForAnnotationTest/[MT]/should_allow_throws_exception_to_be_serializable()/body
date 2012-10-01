@@ -1,0 +1,4 @@
+{
+  when(barMock.doSomething()).thenAnswer(new ThrowsException(new RuntimeException()));
+  serializeAndBack(barMock);
+}

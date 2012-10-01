@@ -1,0 +1,6 @@
+{
+  when(imethodsMock.booleanReturningMethod()).thenReturn(true);
+  ByteArrayOutputStream serialized=serializeMock(imethodsMock);
+  IMethods readObject=deserializeMock(serialized,IMethods.class);
+  assertTrue(readObject.booleanReturningMethod());
+}
