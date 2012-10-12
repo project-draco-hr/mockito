@@ -1,5 +1,5 @@
 {
-  TestNG testNG=new_TestNG_with_failure_recorder_for(FailingBecauseIncorrectStubbingSyntax.class);
+  TestNG testNG=new_TestNG_with_failure_recorder_for(FailingOnPurposeBecauseIncorrectStubbingSyntax.class);
   testNG.run();
   assertTrue(testNG.hasFailure());
   assertThat(failureRecorder.lastThrowable()).isInstanceOf(InvalidUseOfMatchersException.class);
