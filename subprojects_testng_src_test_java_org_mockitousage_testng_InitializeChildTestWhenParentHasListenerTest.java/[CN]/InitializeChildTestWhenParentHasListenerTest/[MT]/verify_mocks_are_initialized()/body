@@ -1,4 +1,5 @@
 {
   assertThat(childMockField).isNotNull();
   assertThat(parentMockField).isNotNull();
+  fail();
 }

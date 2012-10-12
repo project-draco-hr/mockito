@@ -1,4 +1,0 @@
-{
-  articleVisitorInstantiationCount++;
-  articleVisitorMockInjectedInstances.add(calculator);
-}

@@ -1,5 +1,0 @@
-{
-  int minimum_number_of_test_before=3;
-  Assertions.assertThat(articleVisitorInstantiationCount).isGreaterThan(minimum_number_of_test_before);
-  Assertions.assertThat(articleVisitorMockInjectedInstances.size()).isGreaterThan(minimum_number_of_test_before);
-}

@@ -1,0 +1,6 @@
+{
+  JUnitCore jUnitCore=new JUnitCore();
+  jUnitCore.addListener(new TextListener(System.out));
+  jUnitCore.run(junit_test_with_3_tests_methods.class);
+  assertThat(junit_test_with_3_tests_methods.constructor_instantiation).isEqualTo(3);
+}
