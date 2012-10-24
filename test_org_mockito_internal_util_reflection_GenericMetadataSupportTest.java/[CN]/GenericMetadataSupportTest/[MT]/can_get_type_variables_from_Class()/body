@@ -1,7 +1,7 @@
 {
-  assertThat(from(GenericsNest.class).actualTypeArguments().keySet()).hasSize(1).onProperty("name").contains("K");
-  assertThat(from(ListOfNumbers.class).actualTypeArguments().keySet()).isEmpty();
-  assertThat(from(ListOfAnyNumbers.class).actualTypeArguments().keySet()).hasSize(1).onProperty("name").contains("N");
-  assertThat(from(Map.class).actualTypeArguments().keySet()).hasSize(2).onProperty("name").contains("K","V");
-  assertThat(from(Serializable.class).actualTypeArguments().keySet()).isEmpty();
+  assertThat(inferFrom(GenericsNest.class).actualTypeArguments().keySet()).hasSize(1).onProperty("name").contains("K");
+  assertThat(inferFrom(ListOfNumbers.class).actualTypeArguments().keySet()).isEmpty();
+  assertThat(inferFrom(ListOfAnyNumbers.class).actualTypeArguments().keySet()).hasSize(1).onProperty("name").contains("N");
+  assertThat(inferFrom(Map.class).actualTypeArguments().keySet()).hasSize(2).onProperty("name").contains("K","V");
+  assertThat(inferFrom(Serializable.class).actualTypeArguments().keySet()).isEmpty();
 }

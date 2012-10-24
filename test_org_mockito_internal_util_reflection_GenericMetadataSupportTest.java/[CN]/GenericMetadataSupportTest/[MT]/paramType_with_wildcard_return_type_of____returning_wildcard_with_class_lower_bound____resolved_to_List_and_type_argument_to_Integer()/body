@@ -1,5 +1,5 @@
 {
-  GenericMetadataSupport genericMetadata=from(GenericsNest.class).resolveGenericReturnType(firstNamedMethod("returning_wildcard_with_class_lower_bound",GenericsNest.class));
+  GenericMetadataSupport genericMetadata=inferFrom(GenericsNest.class).resolveGenericReturnType(firstNamedMethod("returning_wildcard_with_class_lower_bound",GenericsNest.class));
   assertThat(genericMetadata.rawType()).isEqualTo(List.class);
   GenericMetadataSupport.BoundedType boundedType=(GenericMetadataSupport.BoundedType)typeVariableValue(genericMetadata.actualTypeArguments(),"E");
   assertThat(boundedType.firstBound()).isEqualTo(Integer.class);

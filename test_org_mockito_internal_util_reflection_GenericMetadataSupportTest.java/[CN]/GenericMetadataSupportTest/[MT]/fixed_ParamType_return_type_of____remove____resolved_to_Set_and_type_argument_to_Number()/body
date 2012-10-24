@@ -1,5 +1,5 @@
 {
-  GenericMetadataSupport genericMetadata=from(GenericsNest.class).resolveGenericReturnType(firstNamedMethod("remove",GenericsNest.class));
+  GenericMetadataSupport genericMetadata=inferFrom(GenericsNest.class).resolveGenericReturnType(firstNamedMethod("remove",GenericsNest.class));
   assertThat(genericMetadata.rawType()).isEqualTo(Set.class);
   assertThat(genericMetadata.actualTypeArguments().values()).contains(Number.class);
 }

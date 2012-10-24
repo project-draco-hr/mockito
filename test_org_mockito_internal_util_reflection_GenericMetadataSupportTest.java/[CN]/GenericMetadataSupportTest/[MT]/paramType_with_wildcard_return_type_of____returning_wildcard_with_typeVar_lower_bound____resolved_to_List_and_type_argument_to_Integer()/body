@@ -1,7 +1,7 @@
 {
-  GenericMetadataSupport genericMetadata=from(GenericsNest.class).resolveGenericReturnType(firstNamedMethod("returning_wildcard_with_typeVar_lower_bound",GenericsNest.class));
+  GenericMetadataSupport genericMetadata=inferFrom(GenericsNest.class).resolveGenericReturnType(firstNamedMethod("returning_wildcard_with_typeVar_lower_bound",GenericsNest.class));
   assertThat(genericMetadata.rawType()).isEqualTo(List.class);
   GenericMetadataSupport.BoundedType boundedType=(GenericMetadataSupport.BoundedType)typeVariableValue(genericMetadata.actualTypeArguments(),"E");
-  assertThat(from(boundedType.firstBound()).rawType()).isEqualTo(Comparable.class);
+  assertThat(inferFrom(boundedType.firstBound()).rawType()).isEqualTo(Comparable.class);
   assertThat(boundedType.interfaceBounds()).contains(Cloneable.class);
 }

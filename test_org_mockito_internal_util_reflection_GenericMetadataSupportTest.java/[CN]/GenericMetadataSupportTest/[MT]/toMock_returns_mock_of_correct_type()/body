@@ -1,5 +1,5 @@
 {
-  GenericMetadataSupport genericMetadata=from(GenericsNest.class).resolveGenericReturnType(firstNamedMethod("returningK",GenericsNest.class));
+  GenericMetadataSupport genericMetadata=inferFrom(GenericsNest.class).resolveGenericReturnType(firstNamedMethod("returningK",GenericsNest.class));
   assertThat(genericMetadata.toMock(RETURNS_DEFAULTS)).isInstanceOf(Comparable.class);
   assertThat(genericMetadata.toMock(RETURNS_DEFAULTS)).isInstanceOf(Cloneable.class);
 }
