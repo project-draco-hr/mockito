@@ -1,5 +1,5 @@
 {
-  GenericsNest<?> mock=mock(GenericsNest.class,new ReturnsGenericDeepStubs());
+  GenericsNest<?> mock=mock(GenericsNest.class,RETURNS_DEEP_STUBS);
   Number the_raw_type_that_should_be_returned=mock.returnsNormalType();
   the_raw_type_that_should_be_returned.floatValue();
 }

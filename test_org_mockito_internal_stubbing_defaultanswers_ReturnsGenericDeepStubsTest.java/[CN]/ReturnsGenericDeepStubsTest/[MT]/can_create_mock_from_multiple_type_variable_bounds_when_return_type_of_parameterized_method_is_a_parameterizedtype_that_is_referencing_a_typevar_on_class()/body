@@ -1,5 +1,5 @@
 {
-  GenericsNest<?> mock=mock(GenericsNest.class,new ReturnsGenericDeepStubs());
+  GenericsNest<?> mock=mock(GenericsNest.class,RETURNS_DEEP_STUBS);
   Cloneable cloneable_bound_that_is_declared_on_typevar_K_in_the_class_which_is_referenced_by_typevar_O_declared_on_the_method=mock.paramTypeWithTypeParams().get(0);
   Comparable<?> comparable_bound_that_is_declared_on_typevar_K_in_the_class_which_is_referenced_by_typevar_O_declared_on_the_method=mock.paramTypeWithTypeParams().get(0);
 }
