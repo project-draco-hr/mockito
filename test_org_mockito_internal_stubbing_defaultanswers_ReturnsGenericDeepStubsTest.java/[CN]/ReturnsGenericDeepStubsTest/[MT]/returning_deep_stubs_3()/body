@@ -1,6 +1,0 @@
-{
-  GenericsNest<?> mock=mock(GenericsNest.class,new ReturnsGenericDeepStubs());
-  List<? super Integer> objects=mock.returningWildcard();
-  Number n=(Number)mock.returningWildcard().get(45);
-  n.floatValue();
-}

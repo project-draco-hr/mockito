@@ -1,0 +1,5 @@
+{
+  GenericsNest<?> mock=mock(GenericsNest.class,new ReturnsGenericDeepStubs());
+  Cloneable cloneable_bound_of_typevar_K=mock.returningK();
+  Comparable<?> comparable_bound_of_typevar_K=mock.returningK();
+}
