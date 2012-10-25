@@ -1,0 +1,7 @@
+{
+  WildCardBoundedType wildCardBoundedType=new WildCardBoundedType(wildCard);
+  if (wildCardBoundedType.firstBound() instanceof TypeVariable) {
+    return boundsOf((TypeVariable)wildCardBoundedType.firstBound());
+  }
+  return wildCardBoundedType;
+}

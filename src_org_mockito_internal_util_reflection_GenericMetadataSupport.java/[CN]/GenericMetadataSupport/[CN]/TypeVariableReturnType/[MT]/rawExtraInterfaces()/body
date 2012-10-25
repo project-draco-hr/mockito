@@ -1,0 +1,11 @@
+{
+  List<Type> extraInterfaces=extraInterfaces();
+  List<Class<?>> rawExtraInterfaces=new ArrayList<Class<?>>();
+  for (  Type extraInterface : extraInterfaces) {
+    Class<?> rawInterface=extractRawTypeOf(extraInterface);
+    if (!rawType().equals(rawInterface)) {
+      rawExtraInterfaces.add(rawInterface);
+    }
+  }
+  return rawExtraInterfaces.toArray(new Class[rawExtraInterfaces.size()]);
+}

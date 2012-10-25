@@ -1,0 +1,7 @@
+{
+  GenericMetadataSupport genericMetadata=inferFrom(GenericsNest.class).resolveGenericReturnType(firstNamedMethod("values",GenericsNest.class));
+  assertThat(genericMetadata.rawType()).isEqualTo(Collection.class);
+  GenericMetadataSupport fromTypeVariableE=inferFrom(typeVariableValue(genericMetadata.actualTypeArguments(),"E"));
+  assertThat(fromTypeVariableE.rawType()).isEqualTo(Set.class);
+  assertThat(fromTypeVariableE.actualTypeArguments().values()).contains(Number.class);
+}

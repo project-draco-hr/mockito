@@ -1,0 +1,4 @@
+{
+  GenericsNest<?> mock=mock(GenericsNest.class,RETURNS_DEEP_STUBS);
+  StringBuilder stringBuilder_assignment_that_should_throw_a_CCE=mock.twoTypeParams(new StringBuilder()).append(2).append(3);
+}

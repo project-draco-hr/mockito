@@ -1,0 +1,5 @@
+{
+  Type[] lowerBounds=wildcard.getLowerBounds();
+  Type[] upperBounds=wildcard.getUpperBounds();
+  return lowerBounds.length != 0 ? lowerBounds[0] : upperBounds[0];
+}

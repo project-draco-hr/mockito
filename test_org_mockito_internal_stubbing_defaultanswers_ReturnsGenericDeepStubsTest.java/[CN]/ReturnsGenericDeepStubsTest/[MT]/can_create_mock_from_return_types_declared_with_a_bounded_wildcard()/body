@@ -1,0 +1,6 @@
+{
+  GenericsNest<?> mock=mock(GenericsNest.class,RETURNS_DEEP_STUBS);
+  List<? super Integer> objects=mock.returningWildcard();
+  Number type_that_is_the_upper_bound_of_the_wildcard=(Number)mock.returningWildcard().get(45);
+  type_that_is_the_upper_bound_of_the_wildcard.floatValue();
+}

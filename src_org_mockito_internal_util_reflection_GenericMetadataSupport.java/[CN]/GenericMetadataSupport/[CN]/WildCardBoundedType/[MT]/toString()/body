@@ -1,0 +1,6 @@
+{
+  final StringBuilder sb=new StringBuilder();
+  sb.append("{firstBound=").append(firstBound());
+  sb.append(", interfaceBounds=[]}");
+  return sb.toString();
+}

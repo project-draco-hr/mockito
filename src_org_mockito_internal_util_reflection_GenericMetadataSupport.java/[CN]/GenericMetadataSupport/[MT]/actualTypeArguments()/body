@@ -1,0 +1,9 @@
+{
+  TypeVariable[] typeParameters=rawType().getTypeParameters();
+  LinkedHashMap<TypeVariable,Type> actualTypeArguments=new LinkedHashMap<TypeVariable,Type>();
+  for (  TypeVariable typeParameter : typeParameters) {
+    Type actualType=getActualTypeArgumentFor(typeParameter);
+    actualTypeArguments.put(typeParameter,actualType);
+  }
+  return actualTypeArguments;
+}

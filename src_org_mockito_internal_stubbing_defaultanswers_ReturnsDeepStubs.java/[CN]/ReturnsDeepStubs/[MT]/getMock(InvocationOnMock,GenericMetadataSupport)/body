@@ -1,0 +1,10 @@
+{
+  InternalMockHandler<Object> handler=new MockUtil().getMockHandler(invocation.getMock());
+  InvocationContainerImpl container=(InvocationContainerImpl)handler.getInvocationContainer();
+  for (  StubbedInvocationMatcher stubbedInvocationMatcher : container.getStubbedInvocations()) {
+    if (container.getInvocationForStubbing().matches(stubbedInvocationMatcher.getInvocation())) {
+      return stubbedInvocationMatcher.answer(invocation);
+    }
+  }
+  return recordDeepStubMock(createNewDeepStubMock(returnTypeGenericMetadata),container);
+}

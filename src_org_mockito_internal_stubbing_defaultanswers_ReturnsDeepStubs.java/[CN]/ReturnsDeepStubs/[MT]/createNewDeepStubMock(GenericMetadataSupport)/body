@@ -1,0 +1,3 @@
+{
+  return mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata));
+}

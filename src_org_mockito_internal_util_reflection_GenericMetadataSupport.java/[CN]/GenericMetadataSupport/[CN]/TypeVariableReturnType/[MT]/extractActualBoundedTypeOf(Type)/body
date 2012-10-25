@@ -1,0 +1,13 @@
+{
+  if (type instanceof TypeVariable) {
+    return extractActualBoundedTypeOf(contextualActualTypeParameters.get(type));
+  }
+  if (type instanceof BoundedType) {
+    Type actualFirstBound=extractActualBoundedTypeOf(((BoundedType)type).firstBound());
+    if (!(actualFirstBound instanceof BoundedType)) {
+      return type;
+    }
+    return actualFirstBound;
+  }
+  return type;
+}

@@ -1,0 +1,13 @@
+{
+  Type type=extractActualBoundedTypeOf(typeVariable);
+  if (type instanceof BoundedType) {
+    return Arrays.asList(((BoundedType)type).interfaceBounds());
+  }
+  if (type instanceof ParameterizedType) {
+    return Collections.singletonList(type);
+  }
+  if (type instanceof Class) {
+    return Collections.emptyList();
+  }
+  throw new MockitoException("Cannot extract extra-interfaces from '" + typeVariable + "' : '"+ type+ "'");
+}

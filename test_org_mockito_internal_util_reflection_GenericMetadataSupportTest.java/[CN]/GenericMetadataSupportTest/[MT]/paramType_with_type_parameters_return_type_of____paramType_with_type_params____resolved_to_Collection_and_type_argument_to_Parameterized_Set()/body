@@ -1,0 +1,6 @@
+{
+  GenericMetadataSupport genericMetadata=inferFrom(GenericsNest.class).resolveGenericReturnType(firstNamedMethod("paramType_with_type_params",GenericsNest.class));
+  assertThat(genericMetadata.rawType()).isEqualTo(List.class);
+  Type firstBoundOfE=((GenericMetadataSupport.TypeVarBoundedType)typeVariableValue(genericMetadata.actualTypeArguments(),"E")).firstBound();
+  assertThat(inferFrom(firstBoundOfE).rawType()).isEqualTo(Comparable.class);
+}

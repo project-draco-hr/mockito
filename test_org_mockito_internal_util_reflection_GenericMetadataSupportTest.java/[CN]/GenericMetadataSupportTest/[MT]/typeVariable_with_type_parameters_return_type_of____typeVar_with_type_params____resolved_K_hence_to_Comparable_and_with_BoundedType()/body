@@ -1,0 +1,6 @@
+{
+  GenericMetadataSupport genericMetadata=inferFrom(GenericsNest.class).resolveGenericReturnType(firstNamedMethod("typeVar_with_type_params",GenericsNest.class));
+  assertThat(genericMetadata.rawType()).isEqualTo(Comparable.class);
+  GenericMetadataSupport extraInterface_0=inferFrom(genericMetadata.extraInterfaces().get(0));
+  assertThat(extraInterface_0.rawType()).isEqualTo(Cloneable.class);
+}

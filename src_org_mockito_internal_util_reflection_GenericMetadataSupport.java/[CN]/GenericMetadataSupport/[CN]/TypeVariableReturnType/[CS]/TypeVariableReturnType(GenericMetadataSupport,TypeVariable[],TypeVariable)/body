@@ -1,0 +1,7 @@
+{
+  this.typeParameters=typeParameters;
+  this.typeVariable=typeVariable;
+  this.contextualActualTypeParameters=source.contextualActualTypeParameters;
+  readTypeParameters();
+  readTypeVariables();
+}

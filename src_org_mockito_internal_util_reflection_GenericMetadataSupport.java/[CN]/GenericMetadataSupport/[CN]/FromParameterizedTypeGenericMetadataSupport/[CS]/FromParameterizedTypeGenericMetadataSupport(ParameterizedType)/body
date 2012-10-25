@@ -1,0 +1,4 @@
+{
+  this.parameterizedType=parameterizedType;
+  readActualTypeParameters();
+}
