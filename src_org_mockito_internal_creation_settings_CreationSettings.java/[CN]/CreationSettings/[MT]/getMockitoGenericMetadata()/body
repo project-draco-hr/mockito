@@ -1,6 +1,0 @@
-{
-  if (mockitoGenericMetadata == null) {
-    this.mockitoGenericMetadata=GenericMetadataSupport.inferFrom(typeToMock);
-  }
-  return mockitoGenericMetadata;
-}

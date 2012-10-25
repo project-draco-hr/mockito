@@ -1,4 +1,0 @@
-{
-  this.mockitoGenericMetadata=mockitoGenericMetadata;
-  return this;
-}

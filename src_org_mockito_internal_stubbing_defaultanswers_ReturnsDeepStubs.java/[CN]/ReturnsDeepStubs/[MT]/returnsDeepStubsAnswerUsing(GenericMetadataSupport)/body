@@ -1,0 +1,8 @@
+{
+  return new ReturnsDeepStubs(){
+    @Override protected GenericMetadataSupport actualParameterizedType(    Object mock){
+      return returnTypeGenericMetadata;
+    }
+  }
+;
+}

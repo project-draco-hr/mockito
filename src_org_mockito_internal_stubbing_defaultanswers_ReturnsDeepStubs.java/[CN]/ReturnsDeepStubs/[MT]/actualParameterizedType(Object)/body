@@ -1,4 +1,4 @@
 {
   CreationSettings mockSettings=(CreationSettings)new MockUtil().getMockHandler(mock).getMockSettings();
-  return mockSettings.getMockitoGenericMetadata();
+  return GenericMetadataSupport.inferFrom(mockSettings.getTypeToMock());
 }

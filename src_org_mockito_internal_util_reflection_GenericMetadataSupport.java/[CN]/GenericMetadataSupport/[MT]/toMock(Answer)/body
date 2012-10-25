@@ -1,3 +1,0 @@
-{
-  return createMock(rawType(),((MockSettingsImpl)withSettings().defaultAnswer(answer)).parameterizedInfo(this));
-}
