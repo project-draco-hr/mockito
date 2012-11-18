@@ -1,0 +1,4 @@
+{
+  ByteArrayOutputStream os=serializeMock(obj);
+  return (T)deserializeMock(os,Object.class);
+}

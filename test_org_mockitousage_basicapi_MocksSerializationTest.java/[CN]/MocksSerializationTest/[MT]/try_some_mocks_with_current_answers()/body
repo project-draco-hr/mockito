@@ -1,0 +1,4 @@
+{
+  IMethods iMethods=mock(IMethods.class,RETURNS_DEEP_STUBS);
+  serializeAndBack(iMethods);
+}
