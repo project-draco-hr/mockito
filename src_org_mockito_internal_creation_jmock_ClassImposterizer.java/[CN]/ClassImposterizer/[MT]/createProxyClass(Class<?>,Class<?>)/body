@@ -25,6 +25,7 @@
  else {
     enhancer.setNamingPolicy(MockitoNamingPolicy.INSTANCE);
   }
+  enhancer.setSerialVersionUID(42L);
   try {
     return enhancer.createClass();
   }

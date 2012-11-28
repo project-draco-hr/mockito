@@ -1,0 +1,15 @@
+{
+  if (Boolean.TRUE.equals(currentlySerializing.get(proxy))) {
+    return proxy;
+  }
+  currentlySerializing.put(proxy,true);
+  try {
+    return new AcrossJVMMockSerializationProxy(proxy);
+  }
+ catch (  IOException ioe) {
+    throw new NotSerializableException(proxy.getClass().getCanonicalName());
+  }
+ finally {
+    currentlySerializing.remove(proxy);
+  }
+}

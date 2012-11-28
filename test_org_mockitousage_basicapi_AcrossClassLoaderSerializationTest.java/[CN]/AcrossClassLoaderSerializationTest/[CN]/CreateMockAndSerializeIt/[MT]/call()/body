@@ -1,0 +1,4 @@
+{
+  IMethods mock=Mockito.mock(IMethods.class,Mockito.withSettings().serializable());
+  return SimpleSerializationUtil.serializeMock(mock).toByteArray();
+}

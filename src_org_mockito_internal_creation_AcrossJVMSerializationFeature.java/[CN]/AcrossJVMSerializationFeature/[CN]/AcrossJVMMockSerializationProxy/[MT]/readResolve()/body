@@ -1,0 +1,16 @@
+{
+  try {
+    ByteArrayInputStream bis=new ByteArrayInputStream(serializedMock);
+    ObjectInputStream mockitoMockObjectInputStream=new MockitoMockObjectInputStream(bis,typeToMock,extraInterfaces);
+    Object object=mockitoMockObjectInputStream.readObject();
+    bis.close();
+    mockitoMockObjectInputStream.close();
+    return object;
+  }
+ catch (  IOException ioe) {
+    throw new InvalidObjectException("For some reason mock cannot ve dematerialized : " + ioe.toString() + "\n"+ StringJoiner.join(ioe.getStackTrace()));
+  }
+catch (  ClassNotFoundException cce) {
+    throw new InvalidObjectException("For some reason Mockito Mock class cannot be found : " + cce.toString());
+  }
+}

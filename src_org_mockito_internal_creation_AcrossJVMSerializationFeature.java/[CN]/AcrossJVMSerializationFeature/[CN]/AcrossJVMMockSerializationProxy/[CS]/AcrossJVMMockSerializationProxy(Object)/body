@@ -1,0 +1,11 @@
+{
+  MockCreationSettings mockSettings=new MockUtil().getMockHandler(proxy).getMockSettings();
+  ByteArrayOutputStream out=new ByteArrayOutputStream();
+  ObjectOutputStream objectOutputStream=new MockitoMockObjectOutputStream(out);
+  objectOutputStream.writeObject(proxy);
+  objectOutputStream.close();
+  out.close();
+  this.serializedMock=out.toByteArray();
+  this.typeToMock=mockSettings.getTypeToMock();
+  this.extraInterfaces=mockSettings.getExtraInterfaces();
+}

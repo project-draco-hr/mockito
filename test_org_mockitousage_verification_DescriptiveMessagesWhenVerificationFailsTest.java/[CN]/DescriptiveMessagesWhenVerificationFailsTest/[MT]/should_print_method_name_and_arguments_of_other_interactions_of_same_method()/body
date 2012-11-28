@@ -1,0 +1,14 @@
+{
+  try {
+    mock.forByte((byte)25);
+    mock.forByte((byte)12);
+    verify(mock).forByte((byte)42);
+    fail();
+  }
+ catch (  WantedButNotInvoked e) {
+    System.out.println(e);
+    assertContains("iMethods.forByte(42)",e.getMessage());
+    assertContains("iMethods.forByte(25)",e.getMessage());
+    assertContains("iMethods.forByte(12)",e.getMessage());
+  }
+}

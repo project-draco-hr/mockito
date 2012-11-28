@@ -1,0 +1,8 @@
+{
+  if (Factory.class.isAssignableFrom(cl)) {
+    writeObject("MockitoProxyMarker");
+  }
+ else {
+    writeObject("");
+  }
+}

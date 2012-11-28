@@ -1,0 +1,3 @@
+{
+  settings.getExtraInterfaces().add(AcrossJVMMockitoMockSerilizable.class);
+}

@@ -1,0 +1,9 @@
+{
+  byte[] bytes=create_mock_and_Serialize_it();
+  System.out.println(new String(bytes));
+  FileOutputStream outputStream=new FileOutputStream("acrossJVM",false);
+  outputStream.write(bytes);
+  outputStream.close();
+  Object the_deserialized_mock=read_stream_and_deserialize_it(bytes);
+  System.out.println(the_deserialized_mock);
+}
