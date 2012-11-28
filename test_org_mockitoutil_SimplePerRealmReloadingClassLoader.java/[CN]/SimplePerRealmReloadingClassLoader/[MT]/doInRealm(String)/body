@@ -1,0 +1,8 @@
+{
+  Object instance=this.loadClass(callableCalledInClassLoaderRealm).getConstructor().newInstance();
+  if (instance instanceof Callable) {
+    Callable<?> callableInRealm=(Callable<?>)instance;
+    return callableInRealm.call();
+  }
+  throw new IllegalArgumentException("qualified name '" + callableCalledInClassLoaderRealm + "' should represent a class implementing Callable");
+}
