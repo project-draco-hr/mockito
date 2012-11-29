@@ -1,0 +1,11 @@
+{
+  for (  T plugin : loadImplementations(pluginType)) {
+    return plugin;
+  }
+  try {
+    return pluginType.cast(Class.forName(defaultPluginClassName).newInstance());
+  }
+ catch (  Exception e) {
+    throw new MockitoException("Failed to load default " + pluginType,e);
+  }
+}

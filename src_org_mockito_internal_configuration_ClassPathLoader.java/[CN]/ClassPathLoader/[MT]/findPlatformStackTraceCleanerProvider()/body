@@ -1,0 +1,3 @@
+{
+  return findPluginImplementation(StackTraceCleanerProvider.class,DEFAULT_STACK_TRACE_CLEANER_PROVIDER_CLASS);
+}
