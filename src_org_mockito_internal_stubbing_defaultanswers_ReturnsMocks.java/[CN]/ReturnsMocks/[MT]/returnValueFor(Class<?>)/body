@@ -1,5 +1,5 @@
 {
-  if (!ClassImposterizer.INSTANCE.canImposterise(clazz)) {
+  if (!mockitoCore.isTypeMockable(clazz)) {
     return null;
   }
   return mockitoCore.mock(clazz,new MockSettingsImpl().defaultAnswer(this));

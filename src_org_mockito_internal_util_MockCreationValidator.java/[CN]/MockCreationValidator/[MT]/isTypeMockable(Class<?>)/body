@@ -1,3 +1,0 @@
-{
-  return ClassImposterizer.INSTANCE.canImposterise(clz);
-}

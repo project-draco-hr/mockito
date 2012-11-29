@@ -1,6 +1,0 @@
-{
-  assertFalse(ClassImposterizer.INSTANCE.canImposterise(FinalClass.class));
-  assertFalse(ClassImposterizer.INSTANCE.canImposterise(int.class));
-  assertTrue(ClassImposterizer.INSTANCE.canImposterise(SomeClass.class));
-  assertTrue(ClassImposterizer.INSTANCE.canImposterise(SomeInterface.class));
-}

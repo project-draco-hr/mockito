@@ -1,0 +1,3 @@
+{
+  return mockUtil.isTypeMockable(typeToMock);
+}

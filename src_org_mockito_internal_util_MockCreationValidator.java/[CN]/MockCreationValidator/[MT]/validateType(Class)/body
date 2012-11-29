@@ -1,5 +1,5 @@
 {
-  if (!isTypeMockable(classToMock)) {
+  if (!mockUtil.isTypeMockable(classToMock)) {
     new Reporter().cannotMockFinalClass(classToMock);
   }
 }
