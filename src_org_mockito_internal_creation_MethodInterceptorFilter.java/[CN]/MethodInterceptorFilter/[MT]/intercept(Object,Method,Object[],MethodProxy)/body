@@ -5,8 +5,8 @@
  else   if (objectMethodsGuru.isHashCodeMethod(method)) {
     return hashCodeForMock(proxy);
   }
- else   if (new AcrossJVMSerializationFeature().isWriteReplace(method)) {
-    return new AcrossJVMSerializationFeature().writeReplace(proxy);
+ else   if (acrossJVMSerializationFeature.isWriteReplace(method)) {
+    return acrossJVMSerializationFeature.writeReplace(proxy);
   }
   MockitoMethodProxy mockitoMethodProxy=createMockitoMethodProxy(methodProxy);
   cglibHacker.setMockitoNamingPolicy(mockitoMethodProxy);

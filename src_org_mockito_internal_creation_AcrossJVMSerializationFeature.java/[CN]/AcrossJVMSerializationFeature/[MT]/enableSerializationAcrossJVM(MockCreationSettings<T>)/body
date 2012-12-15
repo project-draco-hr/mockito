@@ -1,3 +1,5 @@
 {
-  settings.getExtraInterfaces().add(AcrossJVMMockitoMockSerilizable.class);
+  if (settings.isSerializable()) {
+    settings.getExtraInterfaces().add(AcrossJVMMockitoMockSerilizable.class);
+  }
 }

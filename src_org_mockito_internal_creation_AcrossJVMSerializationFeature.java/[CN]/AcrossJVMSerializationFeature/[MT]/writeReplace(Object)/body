@@ -1,15 +1,19 @@
 {
-  if (Boolean.TRUE.equals(currentlySerializing.get(proxy))) {
-    return proxy;
-  }
-  currentlySerializing.put(proxy,true);
   try {
+    mutex.lock();
+    if (isCurrentlySerializing()) {
+      System.out.println("[" + returningProxyCounter.getAndIncrement() + "] retuning proxy");
+      return proxy;
+    }
+    markMockAsSerializing();
+    System.out.println("[" + returningWrapperCounter.getAndIncrement() + "] returning wrapper");
     return new AcrossJVMMockSerializationProxy(proxy);
   }
  catch (  IOException ioe) {
     throw new NotSerializableException(proxy.getClass().getCanonicalName());
   }
  finally {
-    currentlySerializing.remove(proxy);
+    unmarkMockAsSerializing();
+    mutex.unlock();
   }
 }

@@ -1,7 +1,7 @@
 {
   try {
     MockitoAnnotations.initMocks(new FailTestClass());
-    fail();
+    fail("should have thrown an exception to say the object is not serializable");
   }
  catch (  MockitoException e) {
     Assertions.assertThat(e.getMessage()).contains(Observable.class.getSimpleName()).contains("serializable()").contains("implement Serializable");

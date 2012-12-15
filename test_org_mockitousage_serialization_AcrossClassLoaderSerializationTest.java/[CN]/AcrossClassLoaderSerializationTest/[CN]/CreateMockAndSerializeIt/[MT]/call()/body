@@ -1,0 +1,5 @@
+{
+  IMethods mock=Mockito.mock(IMethods.class,Mockito.withSettings().serializable());
+  mock.linkedListReturningMethod();
+  return SimpleSerializationUtil.serializeMock(mock).toByteArray();
+}

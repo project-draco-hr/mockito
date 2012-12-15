@@ -1,0 +1,32 @@
+{
+  final IMethods iMethods=mock(IMethods.class,withSettings().serializable());
+  int iterations=1;
+  int threadingFactor=100;
+  for (int i=0; i <= iterations; i++) {
+    List<Future> futures=new ArrayList<Future>(threadingFactor);
+    final CyclicBarrier barrier=new CyclicBarrier(threadingFactor);
+    for (int j=0; j < threadingFactor; j++) {
+      final int finalJ=j;
+      futures.add(executorService.submit(new Callable<Object>(){
+        public Object call() throws Exception {
+          System.out.println("[" + finalJ + "] waiting here");
+          barrier.await();
+          System.out.println("[" + finalJ + "] serializing now");
+          iMethods.arrayReturningMethod();
+          return read_stream_and_deserialize_it_in_class_loader_B(SimpleSerializationUtil.serializeMock(iMethods).toByteArray());
+        }
+      }
+));
+      executorService.submit(new Callable<Object>(){
+        public Object call() throws Exception {
+          barrier.await();
+          return iMethods.longObjectReturningMethod();
+        }
+      }
+);
+    }
+    for (    Future future : futures) {
+      future.get();
+    }
+  }
+}
