@@ -1,25 +1,24 @@
 {
+  int iterations=2;
+  int threadingFactor=200;
+  final ExecutorService executorService=Executors.newFixedThreadPool(threadingFactor);
   final IMethods iMethods=mock(IMethods.class,withSettings().serializable());
-  int iterations=1;
-  int threadingFactor=100;
   for (int i=0; i <= iterations; i++) {
     List<Future> futures=new ArrayList<Future>(threadingFactor);
-    final CyclicBarrier barrier=new CyclicBarrier(threadingFactor);
+    final CyclicBarrier barrier_that_will_wait_until_threads_are_ready=new CyclicBarrier(threadingFactor);
     for (int j=0; j < threadingFactor; j++) {
-      final int finalJ=j;
       futures.add(executorService.submit(new Callable<Object>(){
         public Object call() throws Exception {
-          System.out.println("[" + finalJ + "] waiting here");
-          barrier.await();
-          System.out.println("[" + finalJ + "] serializing now");
+          barrier_that_will_wait_until_threads_are_ready.await();
           iMethods.arrayReturningMethod();
-          return read_stream_and_deserialize_it_in_class_loader_B(SimpleSerializationUtil.serializeMock(iMethods).toByteArray());
+          byte[] mockBytes=SimpleSerializationUtil.serializeMock(iMethods).toByteArray();
+          return read_stream_and_deserialize_it_in_class_loader_B(mockBytes);
         }
       }
 ));
       executorService.submit(new Callable<Object>(){
         public Object call() throws Exception {
-          barrier.await();
+          barrier_that_will_wait_until_threads_are_ready.await();
           return iMethods.longObjectReturningMethod();
         }
       }

@@ -1,11 +1,11 @@
 {
   try {
     ByteArrayInputStream bis=new ByteArrayInputStream(serializedMock);
-    ObjectInputStream mockitoMockObjectInputStream=new MockitoMockObjectInputStream(bis,typeToMock,extraInterfaces);
-    Object object=mockitoMockObjectInputStream.readObject();
+    ObjectInputStream objectInputStream=new MockitoMockObjectInputStream(bis,typeToMock,extraInterfaces);
+    Object deserializedMock=objectInputStream.readObject();
     bis.close();
-    mockitoMockObjectInputStream.close();
-    return object;
+    objectInputStream.close();
+    return deserializedMock;
   }
  catch (  IOException ioe) {
     throw new InvalidObjectException("For some reason mock cannot ve dematerialized : " + ioe.toString() + "\n"+ StringJoiner.join(ioe.getStackTrace()));

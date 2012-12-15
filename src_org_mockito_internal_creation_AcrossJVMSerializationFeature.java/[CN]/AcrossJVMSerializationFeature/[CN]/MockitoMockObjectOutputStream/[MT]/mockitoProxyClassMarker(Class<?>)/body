@@ -1,0 +1,8 @@
+{
+  if (Factory.class.isAssignableFrom(cl)) {
+    return "MockitoProxyMarker";
+  }
+ else {
+    return "";
+  }
+}
