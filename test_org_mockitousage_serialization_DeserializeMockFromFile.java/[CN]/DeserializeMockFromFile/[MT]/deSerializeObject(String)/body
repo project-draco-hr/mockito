@@ -1,0 +1,28 @@
+{
+  InputStream is=null;
+  ObjectInputStream ois=null;
+  Object returnObject=null;
+  try {
+    is=new BufferedInputStream(new FileInputStream(filename));
+    ois=new ObjectInputStream(is);
+    returnObject=ois.readObject();
+  }
+ catch (  Exception e) {
+    e.printStackTrace();
+  }
+ finally {
+    try {
+      if (is != null)       is.close();
+    }
+ catch (    Exception e) {
+      e.printStackTrace();
+    }
+    try {
+      if (ois != null)       ois.close();
+    }
+ catch (    Exception e) {
+      e.printStackTrace();
+    }
+  }
+  return returnObject;
+}

@@ -1,0 +1,3 @@
+{
+  return methodProxy.invokeSuper(o,objects);
+}

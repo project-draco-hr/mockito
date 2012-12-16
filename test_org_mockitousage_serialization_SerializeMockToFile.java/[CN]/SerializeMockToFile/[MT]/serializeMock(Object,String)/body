@@ -1,0 +1,26 @@
+{
+  OutputStream os=null;
+  ObjectOutputStream oos=null;
+  try {
+    os=new BufferedOutputStream(new FileOutputStream(filename,false));
+    oos=new ObjectOutputStream(os);
+    oos.writeObject(obj);
+  }
+ catch (  Exception e) {
+    e.printStackTrace();
+  }
+ finally {
+    try {
+      if (os != null)       os.close();
+    }
+ catch (    Exception e) {
+      e.printStackTrace();
+    }
+    try {
+      if (oos != null)       oos.close();
+    }
+ catch (    Exception e) {
+      e.printStackTrace();
+    }
+  }
+}
