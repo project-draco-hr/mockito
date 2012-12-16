@@ -1,5 +1,5 @@
 {
-  IMethods mock=Mockito.mock(IMethods.class,Mockito.withSettings().serializable());
-  mock.linkedListReturningMethod();
+  AClassToBeMockedInThisTestOnlyAndInCallablesOnly mock=Mockito.mock(AClassToBeMockedInThisTestOnlyAndInCallablesOnly.class,Mockito.withSettings().serializable());
+  mock.returningSomething();
   return SimpleSerializationUtil.serializeMock(mock).toByteArray();
 }
