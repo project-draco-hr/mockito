@@ -1,4 +1,6 @@
 {
+class NonSerializableInnerClassThatHaveAHiddenOneArgConstructor {
+  }
   boolean serializable=true;
-  validator.validateSerializable(Observable.class,serializable);
+  validator.validateSerializable(NonSerializableInnerClassThatHaveAHiddenOneArgConstructor.class,serializable);
 }
