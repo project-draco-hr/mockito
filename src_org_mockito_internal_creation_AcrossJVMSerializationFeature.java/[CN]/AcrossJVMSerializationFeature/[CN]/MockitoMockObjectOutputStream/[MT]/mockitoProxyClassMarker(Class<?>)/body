@@ -1,8 +1,8 @@
 {
   if (mockUtil.isMock(cl)) {
-    return "MockitoProxyMarker";
+    return MOCKITO_PROXY_MARKER;
   }
  else {
-    return "";
+    return NOTHING;
   }
 }
