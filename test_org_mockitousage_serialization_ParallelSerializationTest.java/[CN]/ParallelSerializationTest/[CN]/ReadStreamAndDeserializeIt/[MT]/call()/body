@@ -1,4 +1,0 @@
-{
-  ByteArrayInputStream unserialize=new ByteArrayInputStream(bytes);
-  return SimpleSerializationUtil.deserializeMock(unserialize,IMethods.class);
-}

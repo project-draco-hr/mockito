@@ -11,8 +11,7 @@
         public Object call() throws Exception {
           barrier_that_will_wait_until_threads_are_ready.await();
           iMethods.arrayReturningMethod();
-          byte[] mockBytes=SimpleSerializationUtil.serializeMock(iMethods).toByteArray();
-          return read_stream_and_deserialize_it_in_class_loader_B(mockBytes);
+          return SimpleSerializationUtil.serializeMock(iMethods).toByteArray();
         }
       }
 ));
