@@ -2,7 +2,6 @@
   if (notMarkedAsAMockitoMock(readObject())) {
     return super.resolveClass(desc);
   }
-  ClassImposterizer.INSTANCE.canImposterise(typeToMock);
   ClassImposterizer.INSTANCE.setConstructorsAccessible(typeToMock,true);
   Class<?> proxyClass=ClassImposterizer.INSTANCE.createProxyClass(typeToMock,extraInterfaces.toArray(new Class[extraInterfaces.size()]));
   hackClassNameToMatchNewlyCreatedClass(desc,proxyClass);
