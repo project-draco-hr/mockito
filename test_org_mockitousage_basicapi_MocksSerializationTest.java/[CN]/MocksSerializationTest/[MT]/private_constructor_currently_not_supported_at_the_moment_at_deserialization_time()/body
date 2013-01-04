@@ -4,6 +4,6 @@
     SimpleSerializationUtil.serializeAndBack(mockWithPrivateConstructor);
   }
  catch (  ObjectStreamException e) {
-    Assertions.assertThat(e.getMessage()).contains("no valid constructor");
+    Assertions.assertThat(e.toString()).contains("no valid constructor");
   }
 }

@@ -8,9 +8,10 @@
     return new AcrossJVMMockSerializationProxy(mockitoMock);
   }
  catch (  IOException ioe) {
+    MockUtil mockUtil=new MockUtil();
     MockName mockName=mockUtil.getMockName(mockitoMock);
     String mockedType=mockUtil.getMockSettings(mockitoMock).getTypeToMock().getCanonicalName();
-    throw new MockitoSerializationIssue(join("The mock '" + mockName + "' of type '"+ mockedType+ "'","The Java Standard Serialization reported an '" + ioe.getClass().getSimpleName() + "' saying : "+ ioe.getMessage()),ioe);
+    throw new MockitoSerializationIssue(join("The mock '" + mockName + "' of type '"+ mockedType+ "'","The Java Standard Serialization reported an '" + ioe.getClass().getSimpleName() + "' saying :","  " + ioe.getMessage()),ioe);
   }
  finally {
     mockReplacementCompleted();
