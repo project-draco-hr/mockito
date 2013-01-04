@@ -1,6 +1,0 @@
-{
-  InputStream unserialize=new ByteArrayInputStream(serialized.toByteArray());
-  Object readObject=new ObjectInputStream(unserialize).readObject();
-  assertNotNull(readObject);
-  return type.cast(readObject);
-}

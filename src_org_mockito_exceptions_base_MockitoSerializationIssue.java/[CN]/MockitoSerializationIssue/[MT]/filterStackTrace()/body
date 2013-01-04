@@ -1,0 +1,5 @@
+{
+  unfilteredStackTrace=super.getStackTrace();
+  ConditionalStackTraceFilter filter=new ConditionalStackTraceFilter();
+  filter.filter(this);
+}

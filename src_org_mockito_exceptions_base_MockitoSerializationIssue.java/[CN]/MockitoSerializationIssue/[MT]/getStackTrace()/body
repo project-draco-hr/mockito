@@ -1,0 +1,4 @@
+{
+  filterStackTrace();
+  return super.getStackTrace();
+}

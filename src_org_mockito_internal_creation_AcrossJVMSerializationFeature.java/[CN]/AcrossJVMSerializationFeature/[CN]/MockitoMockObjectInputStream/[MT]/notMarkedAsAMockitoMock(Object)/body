@@ -1,0 +1,3 @@
+{
+  return !MOCKITO_PROXY_MARKER.equals(marker);
+}

@@ -1,0 +1,11 @@
+{
+  if (reloadClassPredicate.acceptReloadOf(qualifiedClassName)) {
+    if (!classHashMap.containsKey(qualifiedClassName)) {
+      Class<?> foundClass=findClass(qualifiedClassName);
+      saveFoundClass(qualifiedClassName,foundClass);
+      return foundClass;
+    }
+    return classHashMap.get(qualifiedClassName);
+  }
+  return useParentClassLoaderFor(qualifiedClassName);
+}

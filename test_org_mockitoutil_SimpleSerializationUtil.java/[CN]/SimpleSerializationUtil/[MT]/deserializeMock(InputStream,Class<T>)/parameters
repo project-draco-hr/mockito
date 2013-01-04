@@ -1,0 +1,2 @@
+InputStream unserialize
+Class<T> type

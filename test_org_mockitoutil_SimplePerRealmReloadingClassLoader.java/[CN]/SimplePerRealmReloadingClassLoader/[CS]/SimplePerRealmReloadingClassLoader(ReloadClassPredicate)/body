@@ -1,0 +1,4 @@
+{
+  super(getPossibleClassPathsUrls());
+  this.reloadClassPredicate=reloadClassPredicate;
+}

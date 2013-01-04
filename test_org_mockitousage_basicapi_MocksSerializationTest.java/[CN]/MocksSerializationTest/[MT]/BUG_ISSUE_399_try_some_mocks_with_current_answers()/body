@@ -1,0 +1,5 @@
+{
+  IMethods iMethods=mock(IMethods.class,withSettings().serializable().defaultAnswer(RETURNS_DEEP_STUBS));
+  when(iMethods.iMethodsReturningMethod().linkedListReturningMethod().contains(anyString())).thenReturn(false);
+  serializeAndBack(iMethods);
+}
