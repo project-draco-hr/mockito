@@ -1,0 +1,9 @@
+{
+  AClassWithPrivateNoArgConstructor mockWithPrivateConstructor=Mockito.mock(AClassWithPrivateNoArgConstructor.class,Mockito.withSettings().serializable());
+  try {
+    SimpleSerializationUtil.serializeAndBack(mockWithPrivateConstructor);
+  }
+ catch (  ObjectStreamException e) {
+    Assertions.assertThat(e.toString()).contains("no valid constructor");
+  }
+}

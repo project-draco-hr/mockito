@@ -1,0 +1,4 @@
+{
+  InputStream unserialize=new ByteArrayInputStream(serialized.toByteArray());
+  return deserializeMock(unserialize,type);
+}

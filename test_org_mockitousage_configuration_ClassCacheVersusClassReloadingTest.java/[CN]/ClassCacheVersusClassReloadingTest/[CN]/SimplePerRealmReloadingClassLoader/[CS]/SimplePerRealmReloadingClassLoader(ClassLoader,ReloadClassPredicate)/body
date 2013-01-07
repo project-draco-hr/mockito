@@ -1,4 +1,0 @@
-{
-  super(new URL[]{obtainClassPath(),obtainClassPath("org.mockito.Mockito")},parentClassLoader);
-  this.reloadClassPredicate=reloadClassPredicate;
-}

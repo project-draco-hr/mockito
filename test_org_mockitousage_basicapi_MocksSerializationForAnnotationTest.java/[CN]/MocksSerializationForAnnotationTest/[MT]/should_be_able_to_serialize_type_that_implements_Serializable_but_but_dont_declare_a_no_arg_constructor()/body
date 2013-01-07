@@ -1,0 +1,5 @@
+{
+  TestClassThatHoldValidField testClass=new TestClassThatHoldValidField();
+  MockitoAnnotations.initMocks(testClass);
+  serializeAndBack(testClass.serializableAndNoDefaultConstructor);
+}

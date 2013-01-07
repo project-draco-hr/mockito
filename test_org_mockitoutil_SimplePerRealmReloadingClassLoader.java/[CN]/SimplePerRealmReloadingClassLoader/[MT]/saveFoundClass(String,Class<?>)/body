@@ -1,0 +1,3 @@
+{
+  classHashMap.put(qualifiedClassName,foundClass);
+}

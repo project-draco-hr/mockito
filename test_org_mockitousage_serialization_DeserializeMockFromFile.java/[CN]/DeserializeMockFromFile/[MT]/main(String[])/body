@@ -1,0 +1,5 @@
+{
+  Observable o=(Observable)deSerializeObject("mockito_mock.ser");
+  Mockito.verify(o).addObserver(null);
+  Mockito.verify(o).countObservers();
+}

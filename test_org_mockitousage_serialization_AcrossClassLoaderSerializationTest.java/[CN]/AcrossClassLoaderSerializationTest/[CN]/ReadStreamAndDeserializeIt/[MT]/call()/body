@@ -1,0 +1,4 @@
+{
+  ByteArrayInputStream to_unserialize=new ByteArrayInputStream(bytes);
+  return SimpleSerializationUtil.deserializeMock(to_unserialize,AClassToBeMockedInThisTestOnlyAndInCallablesOnly.class);
+}

@@ -1,0 +1,11 @@
+{
+  ByteArrayOutputStream out=new ByteArrayOutputStream();
+  ObjectOutputStream objectOutputStream=new MockitoMockObjectOutputStream(out);
+  objectOutputStream.writeObject(mockitoMock);
+  objectOutputStream.close();
+  out.close();
+  MockCreationSettings mockSettings=new MockUtil().getMockSettings(mockitoMock);
+  this.serializedMock=out.toByteArray();
+  this.typeToMock=mockSettings.getTypeToMock();
+  this.extraInterfaces=mockSettings.getExtraInterfaces();
+}

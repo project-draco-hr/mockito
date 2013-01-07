@@ -1,0 +1,3 @@
+{
+  return (byte[])new SimplePerRealmReloadingClassLoader(this.getClass().getClassLoader(),isolating_test_classes()).doInRealm("org.mockitousage.serialization.AcrossClassLoaderSerializationTest$CreateMockAndSerializeIt");
+}
