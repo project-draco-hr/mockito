@@ -1,0 +1,36 @@
+{
+  int random=new Random().nextInt(10);
+switch (random) {
+case 0:
+    iMethods.arrayReturningMethod();
+  break;
+case 1:
+iMethods.longObjectReturningMethod();
+break;
+case 2:
+iMethods.linkedListReturningMethod();
+break;
+case 3:
+iMethods.iMethodsReturningMethod();
+break;
+case 4:
+iMethods.canThrowException();
+break;
+case 5:
+iMethods.differentMethod();
+break;
+case 6:
+iMethods.voidMethod();
+break;
+case 7:
+iMethods.varargsString(1,"");
+break;
+case 8:
+iMethods.forMap(null);
+break;
+case 9:
+iMethods.throwsNothing(false);
+break;
+default :
+}
+}
