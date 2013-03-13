@@ -6,6 +6,6 @@
     return f.get(target);
   }
  catch (  Exception e) {
-    throw new RuntimeException("Unable to set internal state on a private field. Please report to mockito mailing list.",e);
+    throw new RuntimeException("Unable to get internal state on a private field. Please report to mockito mailing list.",e);
   }
 }
