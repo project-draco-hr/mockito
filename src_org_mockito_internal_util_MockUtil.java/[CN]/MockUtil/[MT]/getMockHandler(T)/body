@@ -3,7 +3,8 @@
     throw new NotAMockException("Argument should be a mock, but is null!");
   }
   if (isMockitoMock(mock)) {
-    return (InternalMockHandler)mockMaker.getHandler(mock);
+    MockHandler handler=mockMaker.getHandler(mock);
+    return (InternalMockHandler)handler;
   }
  else {
     throw new NotAMockException("Argument should be a mock, but is: " + mock.getClass());

@@ -1,5 +1,5 @@
 {
-  if (mockUtil.isMock(cl)) {
+  if (AcrossJVMMockitoMockSerializable.class.isAssignableFrom(cl)) {
     return MOCKITO_PROXY_MARKER;
   }
  else {

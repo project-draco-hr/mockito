@@ -3,7 +3,4 @@
   assertFalse(mockUtil.isSpy(Mockito.mock(List.class)));
   assertTrue(mockUtil.isSpy(Mockito.spy(new ArrayList())));
   assertFalse(mockUtil.isSpy((Class)null));
-  assertFalse(mockUtil.isSpy(String.class));
-  assertFalse(mockUtil.isSpy(Mockito.mock(List.class).getClass()));
-  assertTrue(mockUtil.isSpy(Mockito.spy(new ArrayList()).getClass()));
 }

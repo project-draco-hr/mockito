@@ -1,3 +1,0 @@
-{
-  return mockClass != null && MockitoMock.class.isAssignableFrom(mockClass);
-}
