@@ -5,7 +5,7 @@
   this.spiedInstance=copy.spiedInstance;
   this.defaultAnswer=copy.defaultAnswer;
   this.mockName=copy.mockName;
-  this.serializable=copy.serializable;
+  this.serializableMode=copy.serializableMode;
   this.invocationListeners=copy.invocationListeners;
   this.stubOnly=copy.stubOnly;
 }

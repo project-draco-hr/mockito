@@ -1,5 +1,5 @@
 {
-  AClassToBeMockedInThisTestOnlyAndInCallablesOnly mock=Mockito.mock(AClassToBeMockedInThisTestOnlyAndInCallablesOnly.class,Mockito.withSettings().serializable());
+  AClassToBeMockedInThisTestOnlyAndInCallablesOnly mock=Mockito.mock(AClassToBeMockedInThisTestOnlyAndInCallablesOnly.class,Mockito.withSettings().serializable(SerializableMode.ACROSS_CLASSLOADERS));
   mock.returningSomething();
   return SimpleSerializationUtil.serializeMock(mock).toByteArray();
 }

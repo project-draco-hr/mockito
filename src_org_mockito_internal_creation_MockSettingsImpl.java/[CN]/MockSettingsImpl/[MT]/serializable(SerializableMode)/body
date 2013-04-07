@@ -1,0 +1,4 @@
+{
+  this.serializableMode=mode;
+  return this;
+}

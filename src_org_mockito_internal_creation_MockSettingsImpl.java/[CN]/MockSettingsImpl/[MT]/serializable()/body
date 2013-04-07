@@ -1,4 +1,3 @@
 {
-  this.serializable=true;
-  return this;
+  return serializable(SerializableMode.BASIC);
 }
