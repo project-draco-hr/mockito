@@ -2,6 +2,7 @@
   IMethods mock=mock(IMethods.class);
   ArgumentCaptor<Byte> argumentCaptor=ArgumentCaptor.forClass(byte.class);
   mock.varargsbyte((byte)1,(byte)2);
-  verify(mock).varargsbyte(argumentCaptor.captureVararg());
-  Assertions.assertThat(argumentCaptor.getVarargsValues()).containsExactly((byte)1,(byte)2);
+  verify(mock).varargsbyte(argumentCaptor.capture());
+  assertEquals((byte)2,(byte)argumentCaptor.getValue());
+  Assertions.assertThat(argumentCaptor.getAllValues()).containsExactly((byte)1,(byte)2);
 }

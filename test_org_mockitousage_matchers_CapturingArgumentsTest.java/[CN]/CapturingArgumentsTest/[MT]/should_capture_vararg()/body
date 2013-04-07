@@ -2,6 +2,6 @@
   IMethods mock=mock(IMethods.class);
   ArgumentCaptor<String> argumentCaptor=ArgumentCaptor.forClass(String.class);
   mock.mixedVarargs(42,"a","b","c");
-  verify(mock).mixedVarargs(any(),argumentCaptor.captureVararg());
-  Assertions.assertThat(argumentCaptor.getVarargsValues()).containsExactly("a","b","c");
+  verify(mock).mixedVarargs(any(),argumentCaptor.capture());
+  Assertions.assertThat(argumentCaptor.getAllValues()).containsExactly("a","b","c");
 }

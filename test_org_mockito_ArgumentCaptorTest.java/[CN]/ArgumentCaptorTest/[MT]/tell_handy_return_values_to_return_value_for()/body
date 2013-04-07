@@ -3,7 +3,5 @@
   ArgumentCaptor<Object> argumentCaptor=ArgumentCaptor.forClass(Object.class);
   argumentCaptor.handyReturnValues=will_return(expected);
   Object returned=argumentCaptor.capture();
-  Object returned_for_vararg=argumentCaptor.captureVararg();
   assertEquals(expected,returned);
-  assertEquals(expected,returned_for_vararg);
 }
