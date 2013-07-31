@@ -1,3 +1,4 @@
 int pollingPeriod
-int timeoutMillis
+int durationMillis
 VerificationMode delegate
+boolean returnOnSuccess

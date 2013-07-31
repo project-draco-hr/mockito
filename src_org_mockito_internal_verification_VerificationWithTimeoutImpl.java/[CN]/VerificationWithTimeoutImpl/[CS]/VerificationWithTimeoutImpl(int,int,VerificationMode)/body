@@ -1,5 +1,0 @@
-{
-  this.pollingPeriod=pollingPeriod;
-  this.timeoutMillis=timeoutMillis;
-  this.delegate=delegate;
-}

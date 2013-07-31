@@ -1,0 +1,6 @@
+{
+  this.pollingPeriod=pollingPeriod;
+  this.durationMillis=durationMillis;
+  this.delegate=delegate;
+  this.returnOnSuccess=returnOnSuccess;
+}

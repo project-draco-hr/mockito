@@ -1,0 +1,3 @@
+{
+  return !(verificationMode instanceof AtMost || verificationMode instanceof NoMoreInteractions);
+}
