@@ -1,0 +1,7 @@
+{
+  Thread t=waitAndExerciseMock(50);
+  t.start();
+  long startTime=System.currentTimeMillis();
+  verify(mock,after(100).atMost(1)).clear();
+  assertTrue(System.currentTimeMillis() - startTime >= 100);
+}

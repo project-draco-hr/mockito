@@ -1,0 +1,5 @@
+{
+  Thread t=waitAndExerciseMock(20);
+  t.start();
+  verify(mock,after(100).atLeast(1)).clear();
+}

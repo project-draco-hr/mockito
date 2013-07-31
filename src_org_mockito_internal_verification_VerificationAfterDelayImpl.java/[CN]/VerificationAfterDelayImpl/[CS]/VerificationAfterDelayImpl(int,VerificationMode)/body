@@ -1,0 +1,4 @@
+{
+  this.delayMillis=delayMillis;
+  this.delegate=delegate;
+}

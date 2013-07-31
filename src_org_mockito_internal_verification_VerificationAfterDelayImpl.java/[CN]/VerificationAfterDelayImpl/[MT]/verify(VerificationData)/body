@@ -1,0 +1,11 @@
+{
+  long startTime=System.currentTimeMillis();
+  while (System.currentTimeMillis() - startTime <= delayMillis) {
+    try {
+      Thread.sleep(delayMillis);
+    }
+ catch (    InterruptedException ie) {
+    }
+  }
+  delegate.verify(data);
+}
