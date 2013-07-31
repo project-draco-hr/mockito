@@ -1,3 +1,0 @@
-{
-  return new Timeout(impl.getTreshhold(),impl.getTimeout(),VerificationModeFactory.atLeast(minNumberOfInvocations));
-}

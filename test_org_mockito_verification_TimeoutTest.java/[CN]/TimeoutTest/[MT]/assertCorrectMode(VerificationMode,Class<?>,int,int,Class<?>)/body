@@ -1,0 +1,6 @@
+{
+  assertEquals(expectedType,t.getClass());
+  assertEquals(expectedTimeout,((Timeout)t).wrappedVerification.getTimeout());
+  assertEquals(expectedPollingPeriod,((Timeout)t).wrappedVerification.getPollingPeriod());
+  assertEquals(expectedDelegateType,((Timeout)t).wrappedVerification.getDelegate().getClass());
+}

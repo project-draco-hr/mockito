@@ -1,6 +1,0 @@
-{
-  assertEquals(expectedType,t.getClass());
-  assertEquals(expectedTimeout,((Timeout)t).impl.getTimeout());
-  assertEquals(expectedTreshold,((Timeout)t).impl.getTreshhold());
-  assertEquals(expectedDelegateType,((Timeout)t).impl.getDelegate().getClass());
-}

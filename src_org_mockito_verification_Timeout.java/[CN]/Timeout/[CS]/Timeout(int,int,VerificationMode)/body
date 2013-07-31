@@ -1,3 +1,3 @@
 {
-  this.impl=new VerificationWithTimeoutImpl(treshhold,millis,delegate);
+  super(new VerificationWithTimeoutImpl(pollingPeriod,millis,delegate));
 }
