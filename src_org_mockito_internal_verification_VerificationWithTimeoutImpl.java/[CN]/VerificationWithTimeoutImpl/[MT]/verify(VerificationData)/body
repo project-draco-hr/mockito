@@ -1,15 +1,14 @@
 {
-  int soFar=0;
   MockitoAssertionError error=null;
-  while (soFar <= timeout) {
+  long startTime=System.currentTimeMillis();
+  while (System.currentTimeMillis() - startTime <= timeoutMillis) {
     try {
       delegate.verify(data);
       return;
     }
  catch (    MockitoAssertionError e) {
       error=e;
-      soFar+=treshhold;
-      sleep(treshhold);
+      sleep(pollingPeriod);
     }
   }
   if (error != null) {

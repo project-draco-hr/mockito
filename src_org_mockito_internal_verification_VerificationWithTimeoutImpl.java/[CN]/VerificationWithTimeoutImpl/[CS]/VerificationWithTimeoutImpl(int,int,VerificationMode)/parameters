@@ -1,3 +1,3 @@
-int treshhold
-int millis
+int pollingPeriod
+int timeoutMillis
 VerificationMode delegate
