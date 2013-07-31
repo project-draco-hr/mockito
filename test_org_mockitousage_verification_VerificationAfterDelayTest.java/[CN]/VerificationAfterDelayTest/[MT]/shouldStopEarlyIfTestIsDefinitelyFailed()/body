@@ -1,0 +1,6 @@
+{
+  Thread t=waitAndExerciseMock(50);
+  t.start();
+  expected.expect(MockitoAssertionError.class);
+  verify(mock,after(10000).never()).clear();
+}

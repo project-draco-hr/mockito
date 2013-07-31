@@ -1,11 +1,22 @@
 {
+  MockitoAssertionError error=null;
   long startTime=System.currentTimeMillis();
   while (System.currentTimeMillis() - startTime <= delayMillis) {
     try {
-      Thread.sleep(delayMillis);
+      delegate.verify(data);
+      error=null;
     }
- catch (    InterruptedException ie) {
+ catch (    MockitoAssertionError e) {
+      if (canRecoverFromFailure(delegate)) {
+        error=e;
+        sleep(pollingPeriod);
+      }
+ else {
+        throw e;
+      }
     }
   }
-  delegate.verify(data);
+  if (error != null) {
+    throw error;
+  }
 }

@@ -1,4 +1,5 @@
 {
+  this.pollingPeriod=pollingPeriod;
   this.delayMillis=delayMillis;
   this.delegate=delegate;
 }
