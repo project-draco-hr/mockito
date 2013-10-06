@@ -1,6 +1,0 @@
-{
-  reset(target);
-  startInvocations();
-  verify(target,timeout(TEST_TIMEOUT_MILLIS * 2).times(TIMES * nThreads)).targetMethod("arg");
-  verifyNoMoreInteractions(target);
-}
