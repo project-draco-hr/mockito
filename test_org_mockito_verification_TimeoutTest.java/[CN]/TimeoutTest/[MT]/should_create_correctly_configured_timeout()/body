@@ -1,0 +1,7 @@
+{
+  Timeout t=new Timeout(25,50,mode);
+  assertTimeoutCorrectlyConfigured(t.atLeastOnce(),Timeout.class,50,25,AtLeast.class);
+  assertTimeoutCorrectlyConfigured(t.atLeast(5),Timeout.class,50,25,AtLeast.class);
+  assertTimeoutCorrectlyConfigured(t.times(5),Timeout.class,50,25,Times.class);
+  assertTimeoutCorrectlyConfigured(t.only(),Timeout.class,50,25,Only.class);
+}
