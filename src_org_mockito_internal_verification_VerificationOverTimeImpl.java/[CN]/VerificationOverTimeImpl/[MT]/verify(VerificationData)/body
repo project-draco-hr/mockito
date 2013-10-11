@@ -14,7 +14,7 @@
  catch (    MockitoAssertionError e) {
       if (canRecoverFromFailure(delegate)) {
         error=e;
-        sleep(pollingPeriod);
+        sleep(pollingPeriodMillis);
       }
  else {
         throw e;
