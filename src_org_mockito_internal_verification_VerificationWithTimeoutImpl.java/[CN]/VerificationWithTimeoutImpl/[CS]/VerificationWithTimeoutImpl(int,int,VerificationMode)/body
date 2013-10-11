@@ -1,5 +1,5 @@
 {
-  this.treshhold=treshhold;
-  this.timeout=millis;
+  this.pollingPeriod=pollingPeriod;
+  this.timeoutMillis=timeoutMillis;
   this.delegate=delegate;
 }
