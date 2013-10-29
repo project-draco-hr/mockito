@@ -1,6 +1,7 @@
 {
   for (  Method method : clazz.getMethods()) {
-    if (method.getName().contains(methodName)) {
+    boolean protect_against_different_jdk_ordering_avoiding_bridge_methods=!method.isBridge();
+    if (method.getName().contains(methodName) && protect_against_different_jdk_ordering_avoiding_bridge_methods) {
       return method;
     }
   }
