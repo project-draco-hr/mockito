@@ -1,0 +1,20 @@
+{
+  if (name.equals("test.TestedClass2")) {
+    try {
+      File file=new File("test-resources/multiple-interfaces/TestedClass2.class");
+      byte[] bytes=new byte[(int)file.length()];
+      FileInputStream fileInputStream=new FileInputStream(file);
+      try {
+        fileInputStream.read(bytes);
+        return defineClass("test.TestedClass2",bytes,0,bytes.length);
+      }
+  finally {
+        fileInputStream.close();
+      }
+    }
+ catch (    IOException e) {
+      throw new ClassNotFoundException("Cannot create class: TestedClass1.class",e);
+    }
+  }
+  return super.loadClass(name);
+}

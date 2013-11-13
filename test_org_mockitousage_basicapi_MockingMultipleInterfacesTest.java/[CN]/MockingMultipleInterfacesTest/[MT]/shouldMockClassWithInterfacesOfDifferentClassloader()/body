@@ -1,0 +1,11 @@
+{
+  Class<?> interface1=new ClassLoader1().loadClass("test.TestedClass1");
+  Class<?> interface2=new Classloader2().loadClass("test.TestedClass2");
+  try {
+    Object mocked=Mockito.mock(interface1,Mockito.withSettings().extraInterfaces(interface2));
+    assertTrue(interface2.isInstance(mocked));
+  }
+ catch (  MockitoException e) {
+    fail("Cannot mock interfaces with different classloaders");
+  }
+}
