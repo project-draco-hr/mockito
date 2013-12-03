@@ -1,0 +1,4 @@
+{
+  ClassLoader cl=isolatedClassLoader().build();
+  cl.loadClass("org.mockito.Mockito");
+}

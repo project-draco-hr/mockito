@@ -1,0 +1,10 @@
+{
+  String path=className.replace('.','/') + ".class";
+  String url=ClassLoaders.class.getClassLoader().getResource(path).toExternalForm();
+  try {
+    return new URL(url.substring(0,url.length() - path.length()));
+  }
+ catch (  MalformedURLException e) {
+    throw new RuntimeException("Classloader couldn't obtain a proper classpath URL",e);
+  }
+}

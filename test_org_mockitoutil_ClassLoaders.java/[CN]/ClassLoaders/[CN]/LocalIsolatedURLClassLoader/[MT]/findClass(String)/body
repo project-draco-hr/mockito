@@ -1,0 +1,4 @@
+{
+  if (classShouldBePrivate(name))   return super.findClass(name);
+  throw new ClassNotFoundException("Can only load classes with prefix : " + privateCopyPrefixes);
+}
