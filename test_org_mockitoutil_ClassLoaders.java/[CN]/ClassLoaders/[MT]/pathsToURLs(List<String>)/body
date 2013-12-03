@@ -1,0 +1,8 @@
+{
+  ArrayList<URL> urls=new ArrayList<URL>(codeSourceUrls.size());
+  for (  String codeSourceUrl : codeSourceUrls) {
+    URL url=pathToUrl(codeSourceUrl);
+    urls.add(url);
+  }
+  return urls;
+}

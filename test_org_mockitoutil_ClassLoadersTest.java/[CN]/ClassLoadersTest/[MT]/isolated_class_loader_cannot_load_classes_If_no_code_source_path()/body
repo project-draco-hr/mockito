@@ -1,0 +1,9 @@
+{
+  ClassLoader cl=isolatedClassLoader().withPrivateCopyOf("org.mockitoutil.IsolatedClassLoaderBuilderTest$ClassUsingInterface1").build();
+  try {
+    cl.loadClass("org.mockitoutil.IsolatedClassLoaderBuilderTest$ClassUsingInterface1");
+  }
+ catch (  ClassNotFoundException e) {
+    assertThat(e.getMessage()).contains("org.mockitoutil.IsolatedClassLoaderBuilderTest$ClassUsingInterface1");
+  }
+}

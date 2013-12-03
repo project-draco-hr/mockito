@@ -1,0 +1,4 @@
+{
+  codeSourceUrls.addAll(pathsToURLs(urls));
+  return this;
+}

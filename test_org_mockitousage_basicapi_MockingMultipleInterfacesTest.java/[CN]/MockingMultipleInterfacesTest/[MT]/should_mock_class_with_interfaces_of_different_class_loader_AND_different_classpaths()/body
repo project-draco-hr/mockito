@@ -1,0 +1,11 @@
+{
+  Class<?> interface1=isolatedClassLoader().withCodeSourceUrls("test-resources/multiple-classpaths/cp1").withPrivateCopyOf("test.TestedClass1").build().loadClass("test.TestedClass1");
+  Class<?> interface2=isolatedClassLoader().withCodeSourceUrls("test-resources/multiple-classpaths/cp2").withPrivateCopyOf("test.TestedClass2").build().loadClass("test.TestedClass2");
+  try {
+    Object mocked=mock(interface1,withSettings().extraInterfaces(interface2));
+    assertTrue("mock should be assignable from interface2 type",interface2.isInstance(mocked));
+  }
+ catch (  MockitoException e) {
+    fail("Couldn't mock interfaces with different class loaders and different classpaths");
+  }
+}
