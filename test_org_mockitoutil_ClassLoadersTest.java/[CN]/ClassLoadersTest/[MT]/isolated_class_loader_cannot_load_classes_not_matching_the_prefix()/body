@@ -2,6 +2,7 @@
   ClassLoader cl=isolatedClassLoader().withCurrentCodeSourceUrls().withPrivateCopyOf(CLASS_NAME_USING_INTERFACE).build();
   try {
     cl.loadClass(CLASS_NAME_USING_INTERFACE);
+    fail();
   }
  catch (  NoClassDefFoundError e) {
     assertThat(e.getMessage()).contains("org/mockitoutil/ClassLoadersTest$Interface1");

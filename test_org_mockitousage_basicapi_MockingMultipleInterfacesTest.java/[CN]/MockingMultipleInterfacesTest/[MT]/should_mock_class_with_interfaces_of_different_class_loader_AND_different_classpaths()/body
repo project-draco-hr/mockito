@@ -1,11 +1,6 @@
 {
   Class<?> interface1=inMemoryClassLoader().withClassDefinition("test.Interface1",makeMarkerInterface("test.Interface1")).build().loadClass("test.Interface1");
   Class<?> interface2=inMemoryClassLoader().withClassDefinition("test.Interface2",makeMarkerInterface("test.Interface2")).build().loadClass("test.Interface2");
-  try {
-    Object mocked=mock(interface1,withSettings().extraInterfaces(interface2));
-    assertTrue("mock should be assignable from interface2 type",interface2.isInstance(mocked));
-  }
- catch (  MockitoException e) {
-    fail("Couldn't mock interfaces with different class loaders and different classpaths");
-  }
+  Object mocked=mock(interface1,withSettings().extraInterfaces(interface2));
+  assertThat(interface2.isInstance(mocked)).describedAs("mock should be assignable from interface2 type").isTrue();
 }

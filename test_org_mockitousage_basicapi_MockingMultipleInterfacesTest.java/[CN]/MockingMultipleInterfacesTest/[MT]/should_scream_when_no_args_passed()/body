@@ -4,6 +4,6 @@
     fail();
   }
  catch (  MockitoException e) {
-    assertContains("extraInterfaces() requires at least one interface",e.getMessage());
+    assertThat(e.getMessage()).contains("extraInterfaces() requires at least one interface");
   }
 }

@@ -4,6 +4,6 @@
     fail();
   }
  catch (  MockitoException e) {
-    assertContains("Foo which is not an interface",e.getMessage());
+    assertThat(e.getMessage()).contains("Foo which is not an interface");
   }
 }

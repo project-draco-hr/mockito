@@ -4,6 +4,6 @@
     fail();
   }
  catch (  MockitoException e) {
-    assertContains("You mocked following type: IMethods",e.getMessage());
+    assertThat(e.getMessage()).contains("You mocked following type: IMethods");
   }
 }

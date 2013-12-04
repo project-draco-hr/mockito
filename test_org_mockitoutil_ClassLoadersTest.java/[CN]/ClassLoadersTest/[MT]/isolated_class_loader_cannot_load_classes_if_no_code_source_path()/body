@@ -2,6 +2,7 @@
   ClassLoader cl=isolatedClassLoader().withPrivateCopyOf(CLASS_NAME_USING_INTERFACE).build();
   try {
     cl.loadClass(CLASS_NAME_USING_INTERFACE);
+    fail();
   }
  catch (  ClassNotFoundException e) {
     assertThat(e.getMessage()).contains(CLASS_NAME_USING_INTERFACE);

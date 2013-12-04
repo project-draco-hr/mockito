@@ -4,6 +4,6 @@
     fail();
   }
  catch (  MockitoException e) {
-    assertContains("extraInterfaces() does not accept null parameters",e.getMessage());
+    assertThat(e.getMessage()).contains("extraInterfaces() does not accept null parameters");
   }
 }
