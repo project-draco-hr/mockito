@@ -1,4 +1,4 @@
 {
-  ClassLoader cl=isolatedClassLoader().withCurrentCodeSourceUrls().withPrivateCopyOf("org.mockitoutil.IsolatedClassLoaderBuilderTest$ClassUsingInterface1").withPrivateCopyOf("org.mockitoutil.IsolatedClassLoaderBuilderTest$Interface1").build();
+  ClassLoader cl=isolatedClassLoader().withCurrentCodeSourceUrls().withPrivateCopyOf("org.mockitoutil.ClassLoadersTest$ClassUsingInterface1").withPrivateCopyOf("org.mockitoutil.ClassLoadersTest$Interface1").build();
   assertThat(cl.getParent()).isNull();
 }

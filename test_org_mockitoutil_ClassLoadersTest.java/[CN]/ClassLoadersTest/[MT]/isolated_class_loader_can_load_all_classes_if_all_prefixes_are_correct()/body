@@ -1,0 +1,7 @@
+{
+  ClassLoader cl=isolatedClassLoader().withCurrentCodeSourceUrls().withPrivateCopyOf("org.mockitoutil.ClassLoadersTest$ClassUsingInterface1").withPrivateCopyOf("org.mockitoutil.ClassLoadersTest$Interface1").build();
+  Class<?> aClass=cl.loadClass("org.mockitoutil.ClassLoadersTest$ClassUsingInterface1");
+  assertThat(aClass).isNotNull();
+  assertThat(aClass.getClassLoader()).isEqualTo(cl);
+  assertThat(aClass.getInterfaces()[0].getClassLoader()).isEqualTo(cl);
+}
