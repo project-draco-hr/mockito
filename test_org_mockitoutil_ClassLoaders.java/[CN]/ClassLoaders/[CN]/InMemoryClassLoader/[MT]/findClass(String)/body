@@ -1,0 +1,7 @@
+{
+  byte[] classDefinition=inMemoryClassObjects.get(name);
+  if (classDefinition != null) {
+    return defineClass(name,classDefinition,0,classDefinition.length);
+  }
+  throw new ClassNotFoundException(name);
+}

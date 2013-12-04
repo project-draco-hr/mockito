@@ -1,0 +1,9 @@
+{
+  ClassLoader cl=ClassLoaders.inMemoryClassLoader().withClassDefinition("yop.Dude",SimpleClassGenerator.makeMarkerInterface("yop.Dude")).build();
+  try {
+    cl.loadClass("not.Defined");
+  }
+ catch (  ClassNotFoundException e) {
+    assertThat(e.getMessage()).contains("not.Defined");
+  }
+}

@@ -1,0 +1,7 @@
+{
+  ClassLoader cl=ClassLoaders.inMemoryClassLoader().withClassDefinition("yop.Dude",SimpleClassGenerator.makeMarkerInterface("yop.Dude")).build();
+  Class<?> aClass=cl.loadClass("yop.Dude");
+  assertThat(aClass).isNotNull();
+  assertThat(aClass.getClassLoader()).isEqualTo(cl);
+  assertThat(aClass.getName()).isEqualTo("yop.Dude");
+}

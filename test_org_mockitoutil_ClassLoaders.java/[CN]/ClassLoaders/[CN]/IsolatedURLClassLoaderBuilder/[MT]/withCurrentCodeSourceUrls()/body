@@ -1,0 +1,4 @@
+{
+  codeSourceUrls.add(obtainClassPathOf(ClassLoaders.class.getName()));
+  return this;
+}

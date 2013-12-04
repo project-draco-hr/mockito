@@ -1,0 +1,4 @@
+{
+  inMemoryClassObjects.put(name,classDefinition);
+  return this;
+}
