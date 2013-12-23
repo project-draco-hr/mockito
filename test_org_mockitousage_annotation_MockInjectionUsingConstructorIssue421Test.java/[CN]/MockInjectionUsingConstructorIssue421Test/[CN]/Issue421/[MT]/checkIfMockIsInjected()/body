@@ -1,0 +1,3 @@
+{
+  assertThat(new MockUtil().isMock(calculator)).isTrue();
+}
