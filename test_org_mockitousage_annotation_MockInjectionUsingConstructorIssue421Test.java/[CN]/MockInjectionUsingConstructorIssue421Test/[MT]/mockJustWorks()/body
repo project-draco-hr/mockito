@@ -1,0 +1,3 @@
+{
+  issue421.checkIfMockIsInjected();
+}
