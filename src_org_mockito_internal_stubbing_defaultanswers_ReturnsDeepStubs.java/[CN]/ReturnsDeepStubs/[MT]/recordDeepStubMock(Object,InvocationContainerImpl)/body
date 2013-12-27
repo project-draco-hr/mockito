@@ -1,5 +1,5 @@
 {
-  container.addAnswer(new Answer<Object>(){
+  container.addAnswer(new SerializableAnswer(){
     public Object answer(    InvocationOnMock invocation) throws Throwable {
       return mock;
     }

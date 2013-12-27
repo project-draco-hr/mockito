@@ -1,0 +1,7 @@
+{
+  ByteArrayOutputStream serializationStream=new ByteArrayOutputStream();
+  ObjectOutputStream objectOutputStream=new ObjectOutputStream(serializationStream);
+  objectOutputStream.writeObject(sampleClass);
+  objectOutputStream.close();
+  return serializationStream;
+}
