@@ -1,5 +1,0 @@
-{
-  ByteArrayInputStream deserializationStream=new ByteArrayInputStream(serializationStream.toByteArray());
-  ObjectInputStream is=new ObjectInputStream(deserializationStream);
-  return is.readObject();
-}
