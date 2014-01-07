@@ -1,0 +1,7 @@
+{
+  Date d=mock(Date.class);
+  d.compareTo(d);
+  Invocation compareTo=this.getLastInvocation();
+  Object result=values.answer(compareTo);
+  assertEquals(0,result);
+}
