@@ -1,0 +1,8 @@
+{
+  Map map=Mockito.mock(Map.class,withSettings().defaultAnswer(Mockito.RETURNS_DEEP_STUBS).serializable());
+  Mockito.when(map.entrySet().contains(Matchers.anyString())).thenReturn(STUBBED_BOOLEAN_VALUE);
+  Object o=SimpleSerializationUtil.serializeAndBack(map);
+  assertThat(o).isInstanceOf(Map.class);
+  Map deserializedMap=(Map)o;
+  assertThat(deserializedMap.entrySet().contains("Something")).isEqualTo(STUBBED_BOOLEAN_VALUE);
+}
