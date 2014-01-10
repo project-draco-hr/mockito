@@ -1,6 +1,7 @@
 {
   GenericMetadataSupport returnTypeGenericMetadata=actualParameterizedType(invocation.getMock()).resolveGenericReturnType(invocation.getMethod());
   Class<?> rawType=returnTypeGenericMetadata.rawType();
+  instantiateFieldsIfNeeded();
   if (!mockitoCore.isTypeMockable(rawType)) {
     return delegate.returnValueFor(rawType);
   }
