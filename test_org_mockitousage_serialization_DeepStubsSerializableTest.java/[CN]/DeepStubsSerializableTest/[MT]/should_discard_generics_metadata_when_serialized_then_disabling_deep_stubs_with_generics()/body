@@ -1,0 +1,6 @@
+{
+  ListContainer deep_stubbed=mock(ListContainer.class,withSettings().defaultAnswer(RETURNS_DEEP_STUBS).serializable());
+  when(deep_stubbed.iterator().hasNext()).thenReturn(true);
+  ListContainer deserialized_deep_stub=serializeAndBack(deep_stubbed);
+  when(deserialized_deep_stub.iterator().next().get(42)).thenReturn("no");
+}

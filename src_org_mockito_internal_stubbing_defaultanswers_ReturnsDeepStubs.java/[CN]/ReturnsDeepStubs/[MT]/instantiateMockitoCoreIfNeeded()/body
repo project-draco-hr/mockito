@@ -1,5 +1,0 @@
-{
-  if (mockitoCore == null) {
-    mockitoCore=new MockitoCore();
-  }
-}

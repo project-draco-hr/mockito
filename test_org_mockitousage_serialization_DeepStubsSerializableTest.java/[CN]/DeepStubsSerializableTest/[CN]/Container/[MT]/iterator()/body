@@ -1,0 +1,13 @@
+{
+  return new Iterator<E>(){
+    @Override public boolean hasNext(){
+      return true;
+    }
+    @Override public E next(){
+      return e;
+    }
+    @Override public void remove(){
+    }
+  }
+;
+}

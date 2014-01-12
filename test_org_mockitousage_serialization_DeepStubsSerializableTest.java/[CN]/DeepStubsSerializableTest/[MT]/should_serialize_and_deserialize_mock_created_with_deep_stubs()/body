@@ -1,0 +1,8 @@
+{
+  SampleClass sampleClass=mock(SampleClass.class,withSettings().defaultAnswer(RETURNS_DEEP_STUBS).serializable());
+  when(sampleClass.getSample().isFalse()).thenReturn(true);
+  when(sampleClass.getSample().number()).thenReturn(999);
+  SampleClass deserializedSample=serializeAndBack(sampleClass);
+  assertThat(deserializedSample.getSample().isFalse()).isEqualTo(true);
+  assertThat(deserializedSample.getSample().number()).isEqualTo(999);
+}

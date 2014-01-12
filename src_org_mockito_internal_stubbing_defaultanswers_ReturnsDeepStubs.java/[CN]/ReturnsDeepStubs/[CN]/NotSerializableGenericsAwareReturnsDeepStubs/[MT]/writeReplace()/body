@@ -1,0 +1,3 @@
+{
+  return Mockito.RETURNS_DEEP_STUBS;
+}
