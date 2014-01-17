@@ -1,0 +1,5 @@
+{
+  actualTypeArguments=fromArrayToArrayOfClass(parameterizedType.getActualTypeArguments());
+  rawType=(Class)parameterizedType.getRawType();
+  ownerType=(Class)parameterizedType.getOwnerType();
+}

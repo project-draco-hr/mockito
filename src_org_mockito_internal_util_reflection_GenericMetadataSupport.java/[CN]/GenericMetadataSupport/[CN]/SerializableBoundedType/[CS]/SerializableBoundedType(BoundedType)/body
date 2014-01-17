@@ -1,0 +1,4 @@
+{
+  this.firstBound=new SerializableBound(boundedType.firstBound());
+  this.interfaceBounds=convertToSerializableArray(boundedType);
+}

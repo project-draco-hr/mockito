@@ -1,0 +1,7 @@
+{
+  SerializableBound[] bounds=new SerializableBound[typeVariable.getBounds().length];
+  for (int i=0; i < typeVariable.getBounds().length; i++) {
+    bounds[i]=new SerializableBound(typeVariable.getBounds()[i]);
+  }
+  return bounds;
+}

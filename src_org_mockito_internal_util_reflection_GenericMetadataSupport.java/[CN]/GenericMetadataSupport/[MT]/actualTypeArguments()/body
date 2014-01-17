@@ -3,7 +3,7 @@
   LinkedHashMap<TypeVariable,Type> actualTypeArguments=new LinkedHashMap<TypeVariable,Type>();
   for (  TypeVariable typeParameter : typeParameters) {
     Type actualType=getActualTypeArgumentFor(typeParameter);
-    actualTypeArguments.put(typeParameter,actualType);
+    actualTypeArguments.put(new SerializableTypeVariable(typeParameter),actualType);
   }
   return actualTypeArguments;
 }

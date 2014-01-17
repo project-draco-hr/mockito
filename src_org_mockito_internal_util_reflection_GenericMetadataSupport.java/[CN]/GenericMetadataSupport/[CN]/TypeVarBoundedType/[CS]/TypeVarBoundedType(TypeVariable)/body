@@ -1,3 +1,3 @@
 {
-  this.typeVariable=typeVariable;
+  this.typeVariable=new SerializableTypeVariable(typeVariable);
 }

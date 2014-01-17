@@ -1,0 +1,8 @@
+{
+  if (type instanceof Class) {
+    classBound=(Class)type;
+  }
+ else   if (type instanceof ParameterizedType) {
+    serializableParameterizedType=new SerializableParameterizedType((ParameterizedType)type);
+  }
+}

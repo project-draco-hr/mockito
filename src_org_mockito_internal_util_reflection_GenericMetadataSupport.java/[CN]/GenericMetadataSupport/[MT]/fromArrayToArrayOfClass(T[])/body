@@ -1,0 +1,7 @@
+{
+  Class[] elements=new Class[objects.length];
+  for (int i=0; i < objects.length; i++) {
+    elements[i]=objects[i].getClass();
+  }
+  return elements;
+}
