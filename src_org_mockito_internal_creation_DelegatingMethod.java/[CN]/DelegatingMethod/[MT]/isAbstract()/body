@@ -1,0 +1,3 @@
+{
+  return (method.getModifiers() & Modifier.ABSTRACT) != 0;
+}
