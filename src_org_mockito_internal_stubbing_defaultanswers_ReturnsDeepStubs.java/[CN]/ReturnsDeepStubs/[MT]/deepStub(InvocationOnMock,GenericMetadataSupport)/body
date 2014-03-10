@@ -6,5 +6,5 @@
       return stubbedInvocationMatcher.answer(invocation);
     }
   }
-  return recordDeepStubMock(createNewDeepStubMock(returnTypeGenericMetadata),container);
+  return recordDeepStubAnswer(newDeepStubMock(returnTypeGenericMetadata),container);
 }

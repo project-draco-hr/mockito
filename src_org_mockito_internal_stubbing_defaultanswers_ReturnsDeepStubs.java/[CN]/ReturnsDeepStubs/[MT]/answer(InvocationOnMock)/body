@@ -4,5 +4,5 @@
   if (!mockitoCore().isTypeMockable(rawType)) {
     return delegate().returnValueFor(rawType);
   }
-  return makeDeepMock(invocation,returnTypeGenericMetadata);
+  return deepStub(invocation,returnTypeGenericMetadata);
 }

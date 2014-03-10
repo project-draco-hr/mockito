@@ -1,8 +1,0 @@
-{
-  if (mockitoCore == null) {
-    mockitoCore=new MockitoCore();
-  }
-  if (delegate == null) {
-    delegate=new ReturnsEmptyValues();
-  }
-}

@@ -1,4 +1,4 @@
 {
-  MockSettings mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings();
+  MockSettings mockSettings=returnTypeGenericMetadata.hasRawExtraInterfaces() ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings();
   return mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata));
 }

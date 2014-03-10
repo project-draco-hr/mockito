@@ -1,0 +1,4 @@
+{
+  container.addAnswer(new DeeplyStubbedAnswer(mock),false);
+  return mock;
+}
