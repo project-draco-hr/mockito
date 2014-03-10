@@ -3,5 +3,5 @@
   if (wildCardBoundedType.firstBound() instanceof TypeVariable) {
     return boundsOf((TypeVariable)wildCardBoundedType.firstBound());
   }
-  return new SerializableBoundedType(wildCardBoundedType);
+  return wildCardBoundedType;
 }

@@ -2,5 +2,5 @@
   if (typeParameter.getBounds()[0] instanceof TypeVariable) {
     return boundsOf((TypeVariable)typeParameter.getBounds()[0]);
   }
-  return new SerializableBoundedType(new TypeVarBoundedType(typeParameter));
+  return new TypeVarBoundedType(typeParameter);
 }

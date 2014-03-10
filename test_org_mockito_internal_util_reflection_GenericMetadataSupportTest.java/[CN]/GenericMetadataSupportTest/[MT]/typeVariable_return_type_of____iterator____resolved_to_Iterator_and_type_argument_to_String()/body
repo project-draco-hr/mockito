@@ -1,0 +1,5 @@
+{
+  GenericMetadataSupport genericMetadata=inferFrom(StringList.class).resolveGenericReturnType(firstNamedMethod("iterator",StringList.class));
+  assertThat(genericMetadata.rawType()).isEqualTo(Iterator.class);
+  assertThat(genericMetadata.actualTypeArguments().values()).contains(String.class);
+}

@@ -1,5 +1,0 @@
-{
-  this.genericDeclaration=(Class)typeVariable.getGenericDeclaration();
-  this.name=typeVariable.getName();
-  this.bounds=convertToSerializableArray(typeVariable);
-}

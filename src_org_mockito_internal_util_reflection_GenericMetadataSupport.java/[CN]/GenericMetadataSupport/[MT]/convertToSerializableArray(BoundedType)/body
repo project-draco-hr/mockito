@@ -1,7 +1,0 @@
-{
-  SerializableBound[] bounds=new SerializableBound[boundedType.interfaceBounds().length];
-  for (int i=0; i < boundedType.interfaceBounds().length; i++) {
-    bounds[i]=new SerializableBound(boundedType.interfaceBounds()[i]);
-  }
-  return bounds;
-}

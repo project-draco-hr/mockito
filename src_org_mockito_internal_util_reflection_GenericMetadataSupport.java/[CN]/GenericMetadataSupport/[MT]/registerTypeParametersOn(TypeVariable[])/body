@@ -1,5 +1,5 @@
 {
-  for (  TypeVariable typeParameter : typeParameters) {
-    contextualActualTypeParameters.put(new SerializableTypeVariable(typeParameter),boundsOf(typeParameter));
+  for (  TypeVariable typeVariable : typeParameters) {
+    registerTypeVariableIfNotPresent(typeVariable);
   }
 }

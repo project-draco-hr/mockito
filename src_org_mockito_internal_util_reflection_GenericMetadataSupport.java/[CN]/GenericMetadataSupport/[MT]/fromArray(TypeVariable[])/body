@@ -1,7 +1,0 @@
-{
-  SerializableTypeVariable[] serializableTypeVariables=new SerializableTypeVariable[typeVariables.length];
-  for (int i=0; i < typeVariables.length; i++) {
-    serializableTypeVariables[i]=new SerializableTypeVariable(typeVariables[i]);
-  }
-  return serializableTypeVariables;
-}

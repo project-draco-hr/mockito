@@ -8,15 +8,11 @@
   for (int i=0; i < actualTypeArguments.length; i++) {
     TypeVariable typeParameter=typeParameters[i];
     Type actualTypeArgument=actualTypeArguments[i];
-    SerializableTypeVariable serializableTypeVariable=new SerializableTypeVariable(typeParameter);
     if (actualTypeArgument instanceof WildcardType) {
-      contextualActualTypeParameters.put(serializableTypeVariable,boundsOf((WildcardType)actualTypeArgument));
-    }
- else     if (actualTypeArgument instanceof ParameterizedType) {
-      contextualActualTypeParameters.put(serializableTypeVariable,new SerializableParameterizedType((ParameterizedType)actualTypeArgument));
+      contextualActualTypeParameters.put(typeParameter,boundsOf((WildcardType)actualTypeArgument));
     }
  else {
-      contextualActualTypeParameters.put(serializableTypeVariable,actualTypeArgument);
+      contextualActualTypeParameters.put(typeParameter,actualTypeArgument);
     }
   }
 }

@@ -2,4 +2,5 @@
   assertThat(inferFrom(ListOfAnyNumbers.class).rawType()).isEqualTo(ListOfAnyNumbers.class);
   assertThat(inferFrom(ListOfNumbers.class).rawType()).isEqualTo(ListOfNumbers.class);
   assertThat(inferFrom(GenericsNest.class).rawType()).isEqualTo(GenericsNest.class);
+  assertThat(inferFrom(StringList.class).rawType()).isEqualTo(StringList.class);
 }
