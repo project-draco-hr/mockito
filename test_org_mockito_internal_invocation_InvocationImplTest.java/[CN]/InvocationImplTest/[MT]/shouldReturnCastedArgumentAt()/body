@@ -1,0 +1,6 @@
+{
+  int argument=42;
+  Invocation invocationOnInterface=new InvocationBuilder().method("twoArgumentMethod").argTypes(int.class,int.class).args(1,argument).toInvocation();
+  int secondArgument=invocationOnInterface.getArgumentAt(1,int.class);
+  assertTrue(secondArgument == argument);
+}
