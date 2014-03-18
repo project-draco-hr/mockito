@@ -1,0 +1,4 @@
+{
+  mock.booleanObjectReturningMethod();
+  then(mock).should().booleanObjectReturningMethod();
+}
