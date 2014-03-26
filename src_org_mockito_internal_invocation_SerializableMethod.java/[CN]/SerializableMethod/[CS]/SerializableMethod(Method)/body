@@ -5,4 +5,5 @@
   returnType=method.getReturnType();
   exceptionTypes=method.getExceptionTypes();
   isVarArgs=method.isVarArgs();
+  isAbstract=(method.getModifiers() & Modifier.ABSTRACT) != 0;
 }
