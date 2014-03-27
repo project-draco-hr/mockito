@@ -1,7 +1,0 @@
-{
-  Bike bike=new Bike();
-  Person person=mock(Person.class);
-  person.ride(bike);
-  person.ride(bike);
-  then(person).verify(times(2)).ride(bike);
-}
