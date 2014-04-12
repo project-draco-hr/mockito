@@ -1,5 +1,5 @@
 {
-  MockitoAssertionError error=null;
+  AssertionError error=null;
   long startTime=System.currentTimeMillis();
   while (System.currentTimeMillis() - startTime <= durationMillis) {
     try {
@@ -12,13 +12,10 @@
       }
     }
  catch (    MockitoAssertionError e) {
-      if (canRecoverFromFailure(delegate)) {
-        error=e;
-        sleep(pollingPeriodMillis);
-      }
- else {
-        throw e;
-      }
+      error=handleVerifyException(e);
+    }
+catch (    ArgumentsAreDifferent e) {
+      error=handleVerifyException(e);
     }
   }
   if (error != null) {

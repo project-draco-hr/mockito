@@ -1,0 +1,9 @@
+{
+  if (canRecoverFromFailure(delegate)) {
+    sleep(pollingPeriodMillis);
+    return e;
+  }
+ else {
+    throw e;
+  }
+}

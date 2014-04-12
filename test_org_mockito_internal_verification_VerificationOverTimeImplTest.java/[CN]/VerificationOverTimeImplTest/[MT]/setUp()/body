@@ -1,0 +1,4 @@
+{
+  initMocks(this);
+  impl=new VerificationOverTimeImpl(10,1000,delegate,true);
+}

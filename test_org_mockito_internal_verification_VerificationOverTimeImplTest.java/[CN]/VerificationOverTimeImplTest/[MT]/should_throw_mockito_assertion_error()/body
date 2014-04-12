@@ -1,0 +1,6 @@
+{
+  MockitoAssertionError toBeThrown=new MockitoAssertionError("message");
+  exception.expect(is(toBeThrown));
+  doThrow(toBeThrown).when(delegate).verify(null);
+  impl.verify(null);
+}

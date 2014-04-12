@@ -1,0 +1,6 @@
+{
+  RuntimeException toBeThrown=new RuntimeException();
+  exception.expect(is(toBeThrown));
+  doThrow(toBeThrown).when(delegate).verify(null);
+  impl.verify(null);
+}

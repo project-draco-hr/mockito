@@ -1,0 +1,4 @@
+{
+  impl.verify(null);
+  verify(delegate).verify(null);
+}
