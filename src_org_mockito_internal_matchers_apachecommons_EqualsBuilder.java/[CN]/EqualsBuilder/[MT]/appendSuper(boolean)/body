@@ -1,7 +1,4 @@
 {
-  if (isEquals == false) {
-    return this;
-  }
-  isEquals=superEquals;
+  isEquals&=superEquals;
   return this;
 }

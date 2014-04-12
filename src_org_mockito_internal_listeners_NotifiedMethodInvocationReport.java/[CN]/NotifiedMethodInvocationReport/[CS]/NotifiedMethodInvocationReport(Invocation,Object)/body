@@ -1,4 +1,5 @@
 {
   this.invocation=invocation;
   this.returnedValue=returnedValue;
+  this.throwable=null;
 }

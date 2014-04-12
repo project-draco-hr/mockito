@@ -2,8 +2,5 @@
   if (this == o)   return true;
   if (o == null || getClass() != o.getClass())   return false;
   NotifiedMethodInvocationReport that=(NotifiedMethodInvocationReport)o;
-  if (invocation != null ? !invocation.equals(that.invocation) : that.invocation != null)   return false;
-  if (returnedValue != null ? !returnedValue.equals(that.returnedValue) : that.returnedValue != null)   return false;
-  if (throwable != null ? !throwable.equals(that.throwable) : that.throwable != null)   return false;
-  return true;
+  return areEqual(invocation,that.invocation) && areEqual(returnedValue,that.returnedValue) && areEqual(throwable,that.throwable);
 }

@@ -1,6 +1,3 @@
 {
-  String text=quoting();
-  text+="" + object;
-  text+=quoting();
-  return text;
+  return quoting() + object + quoting();
 }

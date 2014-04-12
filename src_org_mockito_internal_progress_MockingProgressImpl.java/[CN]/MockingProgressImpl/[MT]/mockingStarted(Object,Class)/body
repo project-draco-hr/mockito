@@ -1,5 +1,5 @@
 {
-  if (listener != null && listener instanceof MockingStartedListener) {
+  if (listener instanceof MockingStartedListener) {
     ((MockingStartedListener)listener).mockingStarted(mock,classToMock);
   }
   validateMostStuff();

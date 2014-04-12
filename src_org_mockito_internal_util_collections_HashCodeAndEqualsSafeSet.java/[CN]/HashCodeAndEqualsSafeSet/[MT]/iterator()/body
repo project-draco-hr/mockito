@@ -1,6 +1,6 @@
 {
   return new Iterator<Object>(){
-    private Iterator<HashCodeAndEqualsMockWrapper> iterator=backingHashSet.iterator();
+    private final Iterator<HashCodeAndEqualsMockWrapper> iterator=backingHashSet.iterator();
     public boolean hasNext(){
       return iterator.hasNext();
     }

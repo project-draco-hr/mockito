@@ -2,5 +2,5 @@
   if (clazz.isPrimitive()) {
     return clazz;
   }
-  return (Class<T>)primitiveTypes.get(clazz);
+  return (Class<T>)PRIMITIVE_TYPES.get(clazz);
 }

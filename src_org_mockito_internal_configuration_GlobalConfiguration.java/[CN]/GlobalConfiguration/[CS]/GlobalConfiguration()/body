@@ -1,5 +1,5 @@
 {
-  if (globalConfiguration.get() == null) {
-    globalConfiguration.set(createConfig());
+  if (GLOBAL_CONFIGURATION.get() == null) {
+    GLOBAL_CONFIGURATION.set(createConfig());
   }
 }
