@@ -3,11 +3,7 @@
     @Override public void run(){
       mock.add("0");
       mock.add("1");
-      try {
-        Thread.sleep(100);
-      }
- catch (      InterruptedException ignored) {
-      }
+      VerificationWithTimeoutTest.this.sleep(100);
       mock.add("2");
     }
   }
