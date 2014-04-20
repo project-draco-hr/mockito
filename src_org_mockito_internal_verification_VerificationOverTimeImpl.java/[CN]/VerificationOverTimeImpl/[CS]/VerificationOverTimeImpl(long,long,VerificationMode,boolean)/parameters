@@ -1,4 +1,4 @@
-int pollingPeriodMillis
-int durationMillis
+long pollingPeriodMillis
+long durationMillis
 VerificationMode delegate
 boolean returnOnSuccess

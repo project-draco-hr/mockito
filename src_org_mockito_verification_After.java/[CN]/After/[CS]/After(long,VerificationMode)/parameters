@@ -1,2 +1,2 @@
-int delayMillis
+long delayMillis
 VerificationMode verificationMode

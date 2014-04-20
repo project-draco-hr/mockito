@@ -1,5 +1,5 @@
 VerificationMode t
 Class<?> expectedType
-int expectedTimeout
-int expectedPollingPeriod
+long expectedTimeout
+long expectedPollingPeriod
 Class<?> expectedDelegateType

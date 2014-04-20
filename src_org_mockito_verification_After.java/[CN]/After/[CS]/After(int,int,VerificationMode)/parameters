@@ -1,3 +1,0 @@
-int pollingPeriod
-int delayMillis
-VerificationMode verificationMode
