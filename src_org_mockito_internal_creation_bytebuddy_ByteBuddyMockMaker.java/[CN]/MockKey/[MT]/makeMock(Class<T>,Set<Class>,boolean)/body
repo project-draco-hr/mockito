@@ -3,5 +3,11 @@
   if (acrossClassLoaderSerialization) {
     builder=builder.defineMethod("writeReplace",Object.class,Collections.<Class<?>>emptyList(),MemberVisibility.PRIVATE).throwing(ObjectStreamException.class).intercept(MethodDelegation.to(MethodDelegation.to(MethodInterceptor.ForWriteReplace.class)));
   }
-  return builder.make().load(ClassLoader.getSystemClassLoader(),ClassLoadingStrategy.Default.INJECTION).getLoaded();
+  Class<?>[] allMockedTypes=new Class<?>[interfaces.size() + 1];
+  allMockedTypes[0]=mockType;
+  int index=1;
+  for (  Class<?> type : interfaces) {
+    allMockedTypes[index++]=type;
+  }
+  return builder.make().load(SearchingClassLoader.combineLoadersOf(allMockedTypes),ClassLoadingStrategy.Default.INJECTION).getLoaded();
 }
