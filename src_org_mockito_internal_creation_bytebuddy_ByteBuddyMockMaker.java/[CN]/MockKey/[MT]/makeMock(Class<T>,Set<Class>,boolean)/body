@@ -1,0 +1,7 @@
+{
+  DynamicType.Builder<T> builder=byteBuddy.subclass(mockType).name(nameFor(mockType)).implement(interfaces.toArray(new Class<?>[interfaces.size()])).method(any()).intercept(MethodDelegation.toInstanceField(MethodInterceptor.class,"mockitoInterceptor")).implement(MethodInterceptor.Access.class).intercept(FieldAccessor.ofBeanProperty()).method(isHashCode()).intercept(MethodDelegation.to(MethodInterceptor.ForHashCode.class)).method(isEquals()).intercept(MethodDelegation.to(MethodInterceptor.ForEquals.class));
+  if (acrossClassLoaderSerialization) {
+    builder=builder.defineMethod("writeReplace",Object.class,Collections.<Class<?>>emptyList(),MemberVisibility.PRIVATE).throwing(ObjectStreamException.class).intercept(MethodDelegation.to(MethodDelegation.to(MethodInterceptor.ForWriteReplace.class)));
+  }
+  return builder.make().load(ClassLoader.getSystemClassLoader(),ClassLoadingStrategy.Default.INJECTION).getLoaded();
+}

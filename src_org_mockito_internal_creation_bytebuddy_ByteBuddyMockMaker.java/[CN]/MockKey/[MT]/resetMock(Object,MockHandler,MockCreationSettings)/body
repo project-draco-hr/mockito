@@ -1,0 +1,3 @@
+{
+  ((MethodInterceptor.Access)mock).setMockitoInterceptor(new MethodInterceptor(asInternalMockHandler(newHandler),settings));
+}

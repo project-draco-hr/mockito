@@ -1,0 +1,7 @@
+{
+  Class<? extends T> mockedType=getOrMakeMock(settings.getTypeToMock(),settings.getExtraInterfaces(),settings.getSerializableMode() == SerializableMode.ACROSS_CLASSLOADERS);
+  T mock=silentConstructor.instantiate(mockedType);
+  MethodInterceptor.Access access=(MethodInterceptor.Access)mock;
+  access.setMockitoInterceptor(new MethodInterceptor(asInternalMockHandler(handler),settings));
+  return mock;
+}

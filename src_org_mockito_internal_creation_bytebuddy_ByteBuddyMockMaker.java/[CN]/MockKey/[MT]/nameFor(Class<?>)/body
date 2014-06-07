@@ -1,0 +1,7 @@
+{
+  String typeName=type.getName();
+  if (typeName.startsWith("java.") || type.getPackage().isSealed()) {
+    typeName="codegen." + typeName;
+  }
+  return String.format("%s$%s$%d",typeName,"MockitoMock",Math.abs(random.nextInt()));
+}

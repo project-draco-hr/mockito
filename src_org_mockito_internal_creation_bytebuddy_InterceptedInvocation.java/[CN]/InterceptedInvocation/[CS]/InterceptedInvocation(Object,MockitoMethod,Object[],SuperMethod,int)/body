@@ -1,0 +1,9 @@
+{
+  this.mock=mock;
+  this.mockitoMethod=mockitoMethod;
+  this.arguments=ArgumentsProcessor.expandVarArgs(mockitoMethod.isVarArgs(),arguments);
+  this.rawArguments=arguments;
+  this.superMethod=superMethod;
+  this.sequenceNumber=sequenceNumber;
+  location=new LocationImpl();
+}

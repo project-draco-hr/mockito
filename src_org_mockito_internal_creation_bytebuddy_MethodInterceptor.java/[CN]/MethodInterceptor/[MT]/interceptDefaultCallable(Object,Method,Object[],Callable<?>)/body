@@ -1,0 +1,3 @@
+{
+  return doIntercept(mock,method,arguments,new InterceptedInvocation.SuperMethod.FromCallable(superCall));
+}

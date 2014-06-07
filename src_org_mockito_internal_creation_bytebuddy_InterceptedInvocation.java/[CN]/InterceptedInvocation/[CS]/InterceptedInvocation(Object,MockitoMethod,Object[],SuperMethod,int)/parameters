@@ -1,0 +1,5 @@
+Object mock
+MockitoMethod mockitoMethod
+Object[] arguments
+SuperMethod superMethod
+int sequenceNumber
