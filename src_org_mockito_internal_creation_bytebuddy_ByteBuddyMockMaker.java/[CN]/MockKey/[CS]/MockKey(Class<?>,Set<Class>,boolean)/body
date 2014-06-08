@@ -1,6 +1,6 @@
 {
-  this.mockType=mockType;
+  this.mockedType=mockedType;
   this.types=new HashSet<Class>(interfaces);
-  types.add(mockType);
+  types.add(mockedType);
   this.acrossClassLoaderSerialization=acrossClassLoaderSerialization;
 }

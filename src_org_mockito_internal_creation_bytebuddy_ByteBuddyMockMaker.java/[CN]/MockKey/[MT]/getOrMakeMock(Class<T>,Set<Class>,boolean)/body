@@ -1,9 +1,14 @@
 {
-  MockKey mockKey=new MockKey(mockType,interfaces,acrossClassLoaderSerialization);
-  @SuppressWarnings("unchecked") Class<? extends T> mockedType=(Class<? extends T>)previousClasses.get(mockKey);
-  if (mockedType == null) {
-    mockedType=makeMock(mockType,interfaces,acrossClassLoaderSerialization);
-    previousClasses.put(mockKey,mockedType);
+  MockKey mockKey=new MockKey(mockedType,interfaces,acrossClassLoaderSerialization);
+  @SuppressWarnings("unchecked") Class<? extends T> mockType=(Class<? extends T>)previousClasses.get(mockKey);
+  if (mockType == null) {
+    try {
+      mockType=makeMock(mockedType,interfaces,acrossClassLoaderSerialization);
+    }
+ catch (    Exception e) {
+      prettify(mockedType,e);
+    }
+    previousClasses.put(mockKey,mockType);
   }
-  return mockedType;
+  return mockType;
 }
