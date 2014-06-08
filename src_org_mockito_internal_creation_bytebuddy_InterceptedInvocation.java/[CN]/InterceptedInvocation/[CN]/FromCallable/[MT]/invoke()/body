@@ -1,3 +1,9 @@
 {
-  return callable.call();
+  try {
+    return callable.call();
+  }
+ catch (  Throwable t) {
+    new ConditionalStackTraceFilter().filter(t);
+    throw t;
+  }
 }
