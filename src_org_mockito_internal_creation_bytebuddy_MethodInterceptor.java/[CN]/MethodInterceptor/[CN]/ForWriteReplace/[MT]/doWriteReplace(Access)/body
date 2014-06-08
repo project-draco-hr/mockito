@@ -1,4 +1,3 @@
 {
-  AcrossJVMSerializationFeature feature=thiz.getMockitoInterceptor().getAcrossJVMSerializationFeature();
-  return feature.writeReplace(thiz);
+  return thiz.getMockitoInterceptor().getAcrossJVMSerializationFeature().writeReplace(thiz);
 }
