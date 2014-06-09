@@ -1,7 +1,7 @@
 {
-  DynamicType.Builder<T> builder=byteBuddy.subclass(mockedType,ConstructorStrategy.Default.NO_CONSTRUCTORS).name(nameFor(mockedType)).implement(interfaces.toArray(new Class<?>[interfaces.size()])).method(any()).intercept(MethodDelegation.toInstanceField(MethodInterceptor.class,"mockitoInterceptor").filter(isDeclaredBy(MethodInterceptor.class))).implement(MethodInterceptor.Access.class).intercept(FieldAccessor.ofBeanProperty()).method(isHashCode()).intercept(MethodDelegation.to(MethodInterceptor.ForHashCode.class)).method(isEquals()).intercept(MethodDelegation.to(MethodInterceptor.ForEquals.class));
+  DynamicType.Builder<T> builder=byteBuddy.subclass(mockedType,ConstructorStrategy.Default.NO_CONSTRUCTORS).name(nameFor(mockedType)).implement(interfaces.toArray(new Class<?>[interfaces.size()])).method(any()).intercept(MethodDelegation.toInstanceField(MethodInterceptor.class,"mockitoInterceptor").filter(isDeclaredBy(MethodInterceptor.class))).implement(MethodInterceptor.Access.class).intercept(FieldAccessor.ofBeanProperty()).method(isHashCode()).intercept(MethodDelegation.to(MethodInterceptor.ForHashCode.class)).method(isEquals()).intercept(MethodDelegation.to(MethodInterceptor.ForEquals.class)).defineField("serialVersionUID",long.class,Ownership.STATIC,Visibility.PRIVATE,FieldManifestation.FINAL);
   if (acrossClassLoaderSerialization) {
-    builder=builder.defineMethod("writeReplace",Object.class,Collections.<Class<?>>emptyList(),Visibility.PRIVATE).throwing(ObjectStreamException.class).intercept(MethodDelegation.to(MethodInterceptor.ForWriteReplace.class));
+    builder=builder.implement(AcrossJVMSerializationFeature.AcrossJVMMockitoMockSerializable.class).intercept(MethodDelegation.to(MethodInterceptor.ForWriteReplace.class));
   }
   Class<?>[] allMockedTypes=new Class<?>[interfaces.size() + 1];
   allMockedTypes[0]=mockedType;
