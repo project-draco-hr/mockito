@@ -5,6 +5,6 @@
     fail();
   }
  catch (  MissingMethodInvocationException e) {
-    assertThat(e.getMessage()).contains("the parent of the mocked class is not public.").contains("It is a limitation of the mock engine");
+    Assertions.assertThat(e.getMessage()).contains("the parent of the mocked class is not public.").contains("It is a limitation of the mock engine");
   }
 }
