@@ -1,5 +1,0 @@
-import shutil
-import os
-import os.path
-if (__name__ == '__main__'):
-    go('..')

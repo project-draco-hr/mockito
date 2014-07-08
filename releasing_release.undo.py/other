@@ -1,8 +1,0 @@
-import os
-import shutil
-ver = raw_input('Specify the version to try to delete, e.g. 1.9:')
-branch = ('https://mockito.googlecode.com/svn/branches/' + ver)
-tag = ('https://mockito.googlecode.com/svn/tags/' + ver)
-run(('svn delete -m "removed botched branch" ' + branch))
-run(('svn delete -m "removed botched tag" ' + tag))
-shutil.rmtree('../../mockito-1.8.5', 1)

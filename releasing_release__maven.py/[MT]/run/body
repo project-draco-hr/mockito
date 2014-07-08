@@ -1,3 +1,0 @@
-def run(cmd):
-    print ('\nRunning command: ' + cmd)
-    assert (os.system(cmd) == 0), ('\nCommand failed: ' + cmd)
