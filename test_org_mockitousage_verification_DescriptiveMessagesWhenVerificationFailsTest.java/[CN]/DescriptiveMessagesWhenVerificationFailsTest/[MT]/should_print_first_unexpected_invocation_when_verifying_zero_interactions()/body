@@ -8,7 +8,7 @@
  catch (  NoInteractionsWanted e) {
     String expected="\n" + "No interactions wanted here:" + "\n"+ "-> at";
     assertContains(expected,e.getMessage());
-    String expectedCause="\n" + "But found this interaction:" + "\n"+ "-> at";
+    String expectedCause="\n" + "But found this interaction on mock '" + mock + "':"+ "\n"+ "-> at";
     assertContains(expectedCause,e.getMessage());
   }
 }
