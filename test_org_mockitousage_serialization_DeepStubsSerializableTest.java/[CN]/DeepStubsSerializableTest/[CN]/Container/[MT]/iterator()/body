@@ -1,12 +1,12 @@
 {
   return new Iterator<E>(){
-    @Override public boolean hasNext(){
+    public boolean hasNext(){
       return true;
     }
-    @Override public E next(){
+    public E next(){
       return e;
     }
-    @Override public void remove(){
+    public void remove(){
     }
   }
 ;
