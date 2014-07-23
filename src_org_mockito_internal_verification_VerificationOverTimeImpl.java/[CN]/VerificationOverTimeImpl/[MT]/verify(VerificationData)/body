@@ -1,7 +1,7 @@
 {
   AssertionError error=null;
   long startTime=System.currentTimeMillis();
-  while (System.currentTimeMillis() - startTime <= durationMillis) {
+  while (durationChecker.isVerificationStillInProgress(startTime)) {
     try {
       delegate.verify(data);
       if (returnOnSuccess) {
