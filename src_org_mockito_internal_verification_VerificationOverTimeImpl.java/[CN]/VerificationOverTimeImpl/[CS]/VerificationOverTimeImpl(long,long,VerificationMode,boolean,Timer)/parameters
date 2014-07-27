@@ -2,4 +2,4 @@ long pollingPeriodMillis
 long durationMillis
 VerificationMode delegate
 boolean returnOnSuccess
-DurationChecker durationChecker
+Timer timer

@@ -1,4 +1,4 @@
 long pollingPeriodMillis
 long millis
 VerificationMode delegate
-DurationChecker durationChecker
+Timer timer

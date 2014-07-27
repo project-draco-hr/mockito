@@ -3,5 +3,5 @@
   this.durationMillis=durationMillis;
   this.delegate=delegate;
   this.returnOnSuccess=returnOnSuccess;
-  this.durationChecker=durationChecker;
+  this.timer=timer;
 }

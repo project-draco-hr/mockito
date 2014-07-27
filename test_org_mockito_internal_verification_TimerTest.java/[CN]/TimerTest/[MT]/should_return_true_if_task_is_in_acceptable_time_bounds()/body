@@ -1,0 +1,7 @@
+{
+  long duration=10000L;
+  long now=System.currentTimeMillis();
+  Timer timer=new Timer(duration);
+  boolean isTimeUp=timer.isUp(now);
+  assertThat(isTimeUp,is(true));
+}

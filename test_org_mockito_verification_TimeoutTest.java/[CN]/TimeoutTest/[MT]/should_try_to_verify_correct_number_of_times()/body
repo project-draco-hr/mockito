@@ -1,7 +1,7 @@
 {
-  Timeout t=new Timeout(10,50,mode,durationChecker);
+  Timeout t=new Timeout(10,50,mode,timer);
   doThrow(error).when(mode).verify(data);
-  when(durationChecker.isVerificationStillInProgress(anyLong())).thenReturn(true,true,true,true,true,false);
+  when(timer.isUp(anyLong())).thenReturn(true,true,true,true,true,false);
   try {
     t.verify(data);
     fail();

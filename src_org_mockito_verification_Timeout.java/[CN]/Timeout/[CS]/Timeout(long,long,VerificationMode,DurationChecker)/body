@@ -1,3 +1,0 @@
-{
-  super(new VerificationOverTimeImpl(pollingPeriodMillis,millis,delegate,true,durationChecker));
-}

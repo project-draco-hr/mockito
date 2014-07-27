@@ -1,0 +1,7 @@
+{
+  long duration=0L;
+  Timer timer=new Timer(duration);
+  long timeFromPast=generate_time_from_past();
+  boolean isTimeUp=timer.isUp(timeFromPast);
+  assertThat(isTimeUp,is(false));
+}
