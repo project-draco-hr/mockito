@@ -13,7 +13,7 @@ synchronized (mockedType) {
  catch (      Exception e) {
         prettify(mockedType,e);
       }
-      PREVIOUS_CLASSES.put(mockKey,mockType);
+      PREVIOUSLY_GENERATED_MOCK_CLASSES.put(mockKey,mockType);
     }
   }
   return mockType;

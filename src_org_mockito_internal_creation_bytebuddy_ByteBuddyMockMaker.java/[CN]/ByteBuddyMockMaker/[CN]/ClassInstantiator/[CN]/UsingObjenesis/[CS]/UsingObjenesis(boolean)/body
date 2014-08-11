@@ -1,0 +1,3 @@
+{
+  this.objenesis=new ObjenesisStd(useClassCache);
+}

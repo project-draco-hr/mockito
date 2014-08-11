@@ -1,8 +1,0 @@
-{
-  try {
-    return new SilentConstructor.UsingObjenesis(new ObjenesisStd(new GlobalConfiguration().enableClassCache()));
-  }
- catch (  Throwable throwable) {
-    return SilentConstructor.Unavailable.INSTANCE;
-  }
-}

@@ -1,0 +1,10 @@
+{
+  try {
+    Class<?> objenesisClassLoader=Class.forName("org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker$ClassInstantiator$UsingObjenesis");
+    Constructor<?> usingClassCacheConstructor=objenesisClassLoader.getDeclaredConstructor(boolean.class);
+    return ClassInstantiator.class.cast(usingClassCacheConstructor.newInstance(new GlobalConfiguration().enableClassCache()));
+  }
+ catch (  Throwable throwable) {
+    throw new IllegalStateException(join("Mockito could not create mock: Objenesis is missing on the classpath.","Please add Objenesis on the classpath.",""));
+  }
+}

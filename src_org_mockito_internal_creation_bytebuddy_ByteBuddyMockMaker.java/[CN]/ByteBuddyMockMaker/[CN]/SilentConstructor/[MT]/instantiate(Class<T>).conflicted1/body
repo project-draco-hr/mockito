@@ -1,3 +1,0 @@
-{
-  throw new MockitoException("Could not create mock: Objenesis is missing on the class path");
-}
