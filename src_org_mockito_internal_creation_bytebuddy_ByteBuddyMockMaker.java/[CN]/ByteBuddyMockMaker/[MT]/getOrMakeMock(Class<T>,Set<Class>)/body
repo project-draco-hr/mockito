@@ -10,8 +10,8 @@ synchronized (mockedType) {
       try {
         mockType=new ByteBuddyMockBytecodeGenerator().generateMockClass(mockedType,interfaces);
       }
- catch (      Exception e) {
-        prettify(mockedType,e);
+ catch (      Exception generationFailed) {
+        prettifyFailure(mockedType,generationFailed);
       }
       PREVIOUSLY_GENERATED_MOCK_CLASSES.put(mockKey,mockType);
     }

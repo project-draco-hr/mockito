@@ -4,7 +4,7 @@
   }
   Class<? extends T> mockedType=getOrMakeMock(settings.getTypeToMock(),settings.getExtraInterfaces());
   T mock=classInstantiator.instantiate(mockedType);
-  MethodInterceptor.Access access=(MethodInterceptor.Access)mock;
-  access.setMockitoInterceptor(new MethodInterceptor(asInternalMockHandler(handler),settings));
+  MockitoMethodInterceptor.MockAccess mockAccess=(MockitoMethodInterceptor.MockAccess)mock;
+  mockAccess.setMockitoInterceptor(new MockitoMethodInterceptor(asInternalMockHandler(handler),settings));
   return mock;
 }
