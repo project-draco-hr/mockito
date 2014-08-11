@@ -1,0 +1,4 @@
+{
+  ClassLoader cl=excludingClassLoader().withCodeSourceUrlOf(Mockito.class).build();
+  cl.loadClass("org.mockito.Mockito");
+}

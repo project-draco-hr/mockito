@@ -1,0 +1,4 @@
+{
+  if (classShouldBePrivate(name))   throw new ClassNotFoundException("classes with prefix : " + privateCopyPrefixes + " are excluded");
+  return super.findClass(name);
+}

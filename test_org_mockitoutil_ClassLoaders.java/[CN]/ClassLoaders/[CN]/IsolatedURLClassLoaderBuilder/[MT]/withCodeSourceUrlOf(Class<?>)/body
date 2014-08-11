@@ -1,0 +1,6 @@
+{
+  for (  Class<?> clazz : classes) {
+    codeSourceUrls.add(obtainClassPathOf(clazz.getName()));
+  }
+  return this;
+}

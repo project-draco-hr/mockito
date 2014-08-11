@@ -1,0 +1,11 @@
+{
+  ClassLoader cl=excludingClassLoader().withCodeSourceUrlOf(Mockito.class).without("org.mockito.BDDMockito").build();
+  cl.loadClass("org.mockito.Mockito");
+  try {
+    cl.loadClass("org.mockito.BDDMockito");
+    fail("should have raise a ClassNotFoundException");
+  }
+ catch (  ClassNotFoundException e) {
+    assertThat(e.getMessage()).contains("org.mockito.BDDMockito");
+  }
+}

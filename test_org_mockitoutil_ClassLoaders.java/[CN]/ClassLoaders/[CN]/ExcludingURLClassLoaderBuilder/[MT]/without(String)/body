@@ -1,0 +1,4 @@
+{
+  privateCopyPrefixes.addAll(asList(privatePrefixes));
+  return this;
+}
