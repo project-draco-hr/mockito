@@ -1,6 +1,5 @@
 {
   int result=mockedType.hashCode();
   result=31 * result + types.hashCode();
-  result=31 * result + (acrossClassLoaderSerialization ? 1 : 0);
   return result;
 }

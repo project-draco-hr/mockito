@@ -1,5 +1,5 @@
 {
-  MockKey<T> mockKey=new MockKey<T>(mockedType,interfaces,acrossClassLoaderSerialization);
+  MockKey<T> mockKey=new MockKey<T>(mockedType,interfaces);
   Class<? extends T> mockType=lookup(mockKey);
   if (mockType == null) {
 synchronized (mockedType) {
@@ -8,7 +8,7 @@ synchronized (mockedType) {
         return mockType;
       }
       try {
-        mockType=makeMock(mockedType,interfaces,acrossClassLoaderSerialization);
+        mockType=new ByteBuddyMockBytecodeGenerator().generateMockClass(mockedType,interfaces);
       }
  catch (      Exception e) {
         prettify(mockedType,e);

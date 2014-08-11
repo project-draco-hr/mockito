@@ -1,5 +1,8 @@
 {
-  Class<? extends T> mockedType=getOrMakeMock(settings.getTypeToMock(),settings.getExtraInterfaces(),settings.getSerializableMode() == SerializableMode.ACROSS_CLASSLOADERS);
+  if (settings.getSerializableMode() == SerializableMode.ACROSS_CLASSLOADERS) {
+    throw new MockitoException("Serialization across classloaders not yet supported with ByteBuddy");
+  }
+  Class<? extends T> mockedType=getOrMakeMock(settings.getTypeToMock(),settings.getExtraInterfaces());
   T mock=silentConstructor.instantiate(mockedType);
   MethodInterceptor.Access access=(MethodInterceptor.Access)mock;
   access.setMockitoInterceptor(new MethodInterceptor(asInternalMockHandler(handler),settings));

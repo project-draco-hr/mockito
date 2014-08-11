@@ -1,3 +1,2 @@
 Class<T> mockedType
 Set<Class> interfaces
-boolean acrossClassLoaderSerialization
