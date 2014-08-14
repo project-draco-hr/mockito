@@ -1,6 +1,0 @@
-{
-  if (!avoidingClassLeakCache.containsKey(mockedType.getClassLoader())) {
-    avoidingClassLeakCache.put(mockedType.getClassLoader(),new ConcurrentHashMap<MockKey,WeakReference<Class>>());
-  }
-  return avoidingClassLeakCache.get(mockedType.getClassLoader());
-}

@@ -1,0 +1,3 @@
+{
+  return handler.handle(new InterceptedInvocation(mock,createMockitoMethod(invokedMethod),arguments,superMethod,SequenceNumber.next()));
+}

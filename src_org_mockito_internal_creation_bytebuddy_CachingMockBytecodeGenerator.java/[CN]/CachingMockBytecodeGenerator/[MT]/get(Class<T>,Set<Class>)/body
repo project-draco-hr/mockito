@@ -1,0 +1,10 @@
+{
+  avoidingClassLeakCacheLock.lock();
+  try {
+    Class generatedMockClass=mockCachePerClassLoaderOf(mockedType).getOrGenerateMockClass(mockedType,interfaces);
+    return generatedMockClass;
+  }
+  finally {
+    avoidingClassLeakCacheLock.unlock();
+  }
+}

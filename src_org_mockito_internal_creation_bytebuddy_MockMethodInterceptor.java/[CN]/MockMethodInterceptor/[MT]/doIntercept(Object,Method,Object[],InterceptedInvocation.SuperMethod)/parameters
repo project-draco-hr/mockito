@@ -1,0 +1,4 @@
+Object mock
+Method invokedMethod
+Object[] arguments
+InterceptedInvocation.SuperMethod superMethod

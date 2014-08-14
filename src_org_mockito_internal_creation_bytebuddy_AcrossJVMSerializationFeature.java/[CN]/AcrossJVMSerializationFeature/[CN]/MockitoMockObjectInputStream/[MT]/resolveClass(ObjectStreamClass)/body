@@ -2,7 +2,7 @@
   if (notMarkedAsAMockitoMock(readObject())) {
     return super.resolveClass(desc);
   }
-  Class<?> proxyClass=new CachingBytecodeGenerator().get(typeToMock,extraInterfaces);
+  Class<?> proxyClass=new CachingMockBytecodeGenerator().get(typeToMock,extraInterfaces);
   hackClassNameToMatchNewlyCreatedClass(desc,proxyClass);
   return proxyClass;
 }

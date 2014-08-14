@@ -1,4 +1,4 @@
 {
   classInstantiator=initializeClassInstantiator();
-  cachingBytecodeGenerator=new CachingBytecodeGenerator();
+  cachingMockBytecodeGenerator=new CachingMockBytecodeGenerator();
 }

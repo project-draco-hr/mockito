@@ -1,0 +1,6 @@
+{
+  if (!avoidingClassLeakageCache.containsKey(mockedType.getClassLoader())) {
+    avoidingClassLeakageCache.put(mockedType.getClassLoader(),new CachedBytecodeGenerator(mockBytecodeGenerator));
+  }
+  return avoidingClassLeakageCache.get(mockedType.getClassLoader());
+}

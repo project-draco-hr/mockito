@@ -1,10 +1,10 @@
 {
   if (settings.getSerializableMode() == SerializableMode.ACROSS_CLASSLOADERS) {
-    throw new MockitoException("Serialization across classloaders not yet supported with ByteBuddy");
+    throw new MockitoException("Serialization across classloaders not yet supported with ByteBuddyMockMaker");
   }
-  Class<? extends T> mockedType=cachingBytecodeGenerator.get(settings.getTypeToMock(),settings.getExtraInterfaces());
+  Class<? extends T> mockedType=cachingMockBytecodeGenerator.get(settings.getTypeToMock(),settings.getExtraInterfaces());
   T mock=classInstantiator.instantiate(mockedType);
-  MockitoMethodInterceptor.MockAccess mockAccess=(MockitoMethodInterceptor.MockAccess)mock;
-  mockAccess.setMockitoInterceptor(new MockitoMethodInterceptor(asInternalMockHandler(handler),settings));
-  return settings.getTypeToMock().cast(mock);
+  MockMethodInterceptor.MockAccess mockAccess=(MockMethodInterceptor.MockAccess)mock;
+  mockAccess.setMockitoInterceptor(new MockMethodInterceptor(asInternalMockHandler(handler),settings));
+  return ensureMockIsAssignableToMockedType(settings,mock);
 }

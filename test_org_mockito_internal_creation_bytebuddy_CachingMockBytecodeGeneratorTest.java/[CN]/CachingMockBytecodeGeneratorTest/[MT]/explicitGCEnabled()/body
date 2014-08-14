@@ -1,0 +1,10 @@
+{
+  List<String> inputArguments=ManagementFactory.getRuntimeMXBean().getInputArguments();
+  for (  String inputArgument : inputArguments) {
+    if (inputArgument.contains("-XX:+DisableExplicitGC")) {
+      return false;
+    }
+  }
+  ;
+  return true;
+}
