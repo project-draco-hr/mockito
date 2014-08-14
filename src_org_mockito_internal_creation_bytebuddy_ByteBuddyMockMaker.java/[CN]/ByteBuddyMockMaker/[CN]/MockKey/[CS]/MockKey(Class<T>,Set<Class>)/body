@@ -1,5 +1,0 @@
-{
-  this.mockedType=mockedType;
-  this.types=new HashSet<Class>(interfaces);
-  types.add(mockedType);
-}

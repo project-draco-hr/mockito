@@ -1,0 +1,3 @@
+ConcurrentHashMap<MockKey,WeakReference<Class>> mockCache
+Class<T> mockedType
+Set<Class> interfaces

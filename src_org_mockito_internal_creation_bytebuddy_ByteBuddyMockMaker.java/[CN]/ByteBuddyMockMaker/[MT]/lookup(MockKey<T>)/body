@@ -1,3 +1,0 @@
-{
-  return (Class<? extends T>)PREVIOUSLY_GENERATED_MOCK_CLASSES.get(mockKey);
-}
