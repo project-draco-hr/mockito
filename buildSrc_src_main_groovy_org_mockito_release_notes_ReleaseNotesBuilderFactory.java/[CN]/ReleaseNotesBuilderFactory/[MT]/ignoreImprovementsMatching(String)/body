@@ -1,0 +1,4 @@
+{
+  this.ignorePattern=pattern;
+  return this;
+}
