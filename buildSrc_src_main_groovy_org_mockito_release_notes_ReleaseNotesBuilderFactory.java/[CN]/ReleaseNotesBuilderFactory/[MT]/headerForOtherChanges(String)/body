@@ -1,4 +1,0 @@
-{
-  this.headerForOtherChanges=headerForOtherChanges;
-  return this;
-}
