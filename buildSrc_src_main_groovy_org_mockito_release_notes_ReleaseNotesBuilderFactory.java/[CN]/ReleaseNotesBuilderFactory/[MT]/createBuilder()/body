@@ -1,6 +1,6 @@
 {
   Collection<String> labelsToShowSeparately=labelToHeaderMapping.keySet();
   ChangeSetSegregator segregator=new ChangeSetSegregator(labelsToShowSeparately,labelsToIgnore);
-  ImprovementsPrinter improvementsPrinter=new ImprovementsPrinter(segregator,labelToHeaderMapping);
+  ImprovementsPrinter improvementsPrinter=new ImprovementsPrinter(segregator,labelToHeaderMapping,headerForOtherChanges);
   return new DefaultReleaseNotesBuilder(project,gitHubToken,ignorePattern,improvementsPrinter);
 }
