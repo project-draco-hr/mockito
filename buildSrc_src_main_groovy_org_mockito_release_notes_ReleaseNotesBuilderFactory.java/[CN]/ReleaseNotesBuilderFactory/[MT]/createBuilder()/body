@@ -1,3 +1,6 @@
 {
-  return new DefaultReleaseNotesBuilder(project,gitHubToken,ignorePattern);
+  Collection<String> labelsToShowSeparately=labelToHeaderMapping.keySet();
+  ChangeSetSegregator segregator=new ChangeSetSegregator(labelsToShowSeparately,labelsToIgnore);
+  ImprovementsPrinter improvementsPrinter=new ImprovementsPrinter(segregator,labelToHeaderMapping);
+  return new DefaultReleaseNotesBuilder(project,gitHubToken,ignorePattern,improvementsPrinter);
 }
