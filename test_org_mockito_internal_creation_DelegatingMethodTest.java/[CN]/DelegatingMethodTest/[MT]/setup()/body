@@ -1,0 +1,5 @@
+{
+  someMethod=Something.class.getMethod("someMethod",Object.class);
+  otherMethod=Something.class.getMethod("otherMethod",Object.class);
+  delegatingMethod=new DelegatingMethod(someMethod);
+}

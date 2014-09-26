@@ -1,3 +1,18 @@
 {
-  return method.equals(obj);
+  if (this == o) {
+    return true;
+  }
+  if (!(o instanceof DelegatingMethod)) {
+    if (o instanceof Method) {
+      if (method != null ? !method.equals(o) : o != null) {
+        return false;
+      }
+      return true;
+    }
+  }
+  DelegatingMethod that=(DelegatingMethod)o;
+  if (method != null ? !method.equals(that.method) : that.method != null) {
+    return false;
+  }
+  return true;
 }
