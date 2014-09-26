@@ -1,3 +1,12 @@
 {
-  return method.equals(obj);
+  if (this == o) {
+    return true;
+  }
+  if (o instanceof DelegatingMethod) {
+    DelegatingMethod that=(DelegatingMethod)o;
+    return method.equals(that.method);
+  }
+ else {
+    return method.equals(o);
+  }
 }

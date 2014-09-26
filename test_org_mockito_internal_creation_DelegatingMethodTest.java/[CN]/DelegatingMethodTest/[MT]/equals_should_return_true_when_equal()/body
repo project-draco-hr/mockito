@@ -1,0 +1,4 @@
+{
+  DelegatingMethod equal=new DelegatingMethod(someMethod);
+  assertTrue(delegatingMethod.equals(equal));
+}

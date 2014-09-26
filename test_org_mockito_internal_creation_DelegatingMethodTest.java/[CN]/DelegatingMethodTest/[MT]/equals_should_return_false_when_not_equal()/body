@@ -1,0 +1,4 @@
+{
+  DelegatingMethod notEqual=new DelegatingMethod(otherMethod);
+  assertFalse(delegatingMethod.equals(notEqual));
+}
