@@ -1,7 +1,7 @@
 {
   Timeout t=new Timeout(10,50,mode,timer);
   doThrow(error).when(mode).verify(data);
-  when(timer.isUp(anyLong())).thenReturn(true,true,true,true,true,false);
+  when(timer.isCounting()).thenReturn(true,true,true,true,true,false);
   try {
     t.verify(data);
     fail();

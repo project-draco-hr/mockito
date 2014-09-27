@@ -1,6 +1,9 @@
 {
   Timeout t=new Timeout(1,3,mode,timer);
-  when(timer.isUp(anyLong())).thenReturn(true,true,true,false);
+  when(timer.isCounting()).thenReturn(true);
   doNothing().when(mode).verify(data);
   t.verify(data);
+  InOrder inOrder=inOrder(timer);
+  inOrder.verify(timer).start();
+  inOrder.verify(timer).isCounting();
 }
