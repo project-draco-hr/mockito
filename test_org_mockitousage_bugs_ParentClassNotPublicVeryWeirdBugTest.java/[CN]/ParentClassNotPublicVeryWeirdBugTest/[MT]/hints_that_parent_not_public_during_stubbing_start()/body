@@ -1,0 +1,11 @@
+{
+  ClassForMocking clazzMock=mock(ClassForMocking.class);
+  mock(List.class).clear();
+  try {
+    when(clazzMock.isValid()).thenReturn(true);
+    fail();
+  }
+ catch (  MockitoException e) {
+    Assertions.assertThat(e.getMessage()).contains(MockitoLimitations.NON_PUBLIC_PARENT);
+  }
+}

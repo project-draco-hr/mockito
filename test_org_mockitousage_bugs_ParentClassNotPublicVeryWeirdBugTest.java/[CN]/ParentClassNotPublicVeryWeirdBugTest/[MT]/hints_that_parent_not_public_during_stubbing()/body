@@ -1,0 +1,10 @@
+{
+  ClassForMocking clazzMock=mock(ClassForMocking.class);
+  try {
+    when(clazzMock.isValid()).thenReturn(true);
+    fail();
+  }
+ catch (  MissingMethodInvocationException e) {
+    Assertions.assertThat(e.getMessage()).contains(MockitoLimitations.NON_PUBLIC_PARENT);
+  }
+}
