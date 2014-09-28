@@ -5,7 +5,7 @@
     when(clazzMock.isValid()).thenReturn(true);
     fail();
   }
- catch (  MockitoException e) {
+ catch (  CannotStubVoidMethodWithReturnValue e) {
     Assertions.assertThat(e.getMessage()).contains(MockitoLimitations.NON_PUBLIC_PARENT);
   }
 }
