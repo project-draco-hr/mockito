@@ -1,4 +1,0 @@
-{
-  ClassForMocking clazzMock=mock(ClassForMocking.class);
-  when(clazzMock.isValid()).thenReturn(true);
-}
