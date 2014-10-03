@@ -1,0 +1,10 @@
+{
+  return new Statement(){
+    @Override public void evaluate() throws Throwable {
+      MockitoAnnotations.initMocks(object);
+      base.evaluate();
+      Mockito.validateMockitoUsage();
+    }
+  }
+;
+}

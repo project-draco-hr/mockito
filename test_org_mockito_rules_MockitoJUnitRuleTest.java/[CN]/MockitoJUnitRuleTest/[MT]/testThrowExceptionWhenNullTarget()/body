@@ -1,0 +1,9 @@
+{
+  try {
+    new MockitoJUnitRule(null);
+    fail();
+  }
+ catch (  NullPointerException e) {
+    assertEquals("valid message","Rule target should not be null",e.getMessage());
+  }
+}

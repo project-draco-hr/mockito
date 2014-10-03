@@ -1,0 +1,4 @@
+{
+  checkNotNull(object,"Rule target");
+  this.jUnitRule=new JUnitRule(object);
+}

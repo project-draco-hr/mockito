@@ -1,0 +1,5 @@
+{
+  jUnitRule.apply(new DummyStatement(),Description.EMPTY).evaluate();
+  assertNotNull("",injectTestCase.getInjected());
+  assertNotNull("",injectTestCase.getInjectInto());
+}

@@ -1,0 +1,5 @@
+{
+  InjectTestCase injectTestCase=new InjectTestCase();
+  MockitoAnnotations.initMocks(injectTestCase);
+  injectTestCase.unfinishedStubbingThrowsException();
+}
