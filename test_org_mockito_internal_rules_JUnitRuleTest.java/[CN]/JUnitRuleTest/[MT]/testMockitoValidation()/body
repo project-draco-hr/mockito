@@ -1,7 +1,7 @@
 {
   try {
-    jUnitRule.apply(new UnfinishedStubbingStatement(),Description.EMPTY).evaluate();
-    fail("Should detect unvalid Mockito usage");
+    jUnitRule.apply(new UnfinishedStubbingStatement(),injectTestCase).evaluate();
+    fail("Should detect invalid Mockito usage");
   }
  catch (  UnfinishedStubbingException e) {
   }

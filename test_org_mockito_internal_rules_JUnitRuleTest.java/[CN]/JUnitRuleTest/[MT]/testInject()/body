@@ -1,5 +1,6 @@
 {
-  jUnitRule.apply(new DummyStatement(),Description.EMPTY).evaluate();
-  assertNotNull("",injectTestCase.getInjected());
-  assertNotNull("",injectTestCase.getInjectInto());
+  jUnitRule.apply(new DummyStatement(),injectTestCase).evaluate();
+  assertNotNull("@Mock mock object created",injectTestCase.getInjected());
+  assertNotNull("@InjectMocks object created",injectTestCase.getInjectInto());
+  assertNotNull("Mock injected into the object",injectTestCase.getInjectInto().getInjected());
 }

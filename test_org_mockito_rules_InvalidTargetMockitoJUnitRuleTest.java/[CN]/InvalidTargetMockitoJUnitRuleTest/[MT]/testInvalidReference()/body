@@ -1,0 +1,4 @@
+{
+  assertNull("Mock not created",injected);
+  assertNull("Test object not created",injectInto);
+}

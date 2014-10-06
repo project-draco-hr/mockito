@@ -1,4 +1,3 @@
 {
-  checkNotNull(targetTest,"Mockito JUnit rule target");
-  this.jUnitRule=new JUnitRule(targetTest);
+  this();
 }
