@@ -8,7 +8,7 @@
     return mockedType.cast(proxyInstance);
   }
  catch (  ClassCastException cce) {
-    throw new MockitoException(join("ClassCastException occurred while creating the mockito proxy :","  class to imposterize : '" + mockedType.getCanonicalName() + "', loaded by classloader : '"+ mockedType.getClassLoader()+ "'","  imposterizing class : '" + proxyClass.getCanonicalName() + "', loaded by classloader : '"+ proxyClass.getClassLoader()+ "'","  proxy instance class : '" + proxyInstance.getClass().getCanonicalName() + "', loaded by classloader : '"+ proxyInstance.getClass().getClassLoader()+ "'","","You might experience classloading issues, disabling the Objenesis cache *might* help (see MockitoConfiguration)"),cce);
+    throw new MockitoException(join("ClassCastException occurred while creating the mockito proxy :","  class to imposterize : '" + describeClass(mockedType),"  imposterizing class : '" + describeClass(proxyClass),"  proxy instance class : '" + describeClass(proxyInstance),"","You might experience classloading issues, disabling the Objenesis cache *might* help (see MockitoConfiguration)"),cce);
   }
  finally {
     setConstructorsAccessible(mockedType,false);
