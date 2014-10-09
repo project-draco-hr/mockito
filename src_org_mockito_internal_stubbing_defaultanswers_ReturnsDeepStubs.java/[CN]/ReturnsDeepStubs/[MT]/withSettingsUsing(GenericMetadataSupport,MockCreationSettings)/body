@@ -1,4 +1,4 @@
 {
   MockSettings mockSettings=returnTypeGenericMetadata.hasRawExtraInterfaces() ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings();
-  return mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata));
+  return propagateSerializationSettings(mockSettings,parentMockSettings).defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata));
 }

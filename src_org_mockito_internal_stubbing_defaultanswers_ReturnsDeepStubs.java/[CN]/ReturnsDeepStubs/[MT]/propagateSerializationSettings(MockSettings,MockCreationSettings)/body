@@ -1,0 +1,3 @@
+{
+  return mockSettings.serializable(parentMockSettings.getSerializableMode());
+}

@@ -1,0 +1,4 @@
+{
+  MockCreationSettings parentMockSettings=new MockUtil().getMockSettings(parentMock);
+  return mockitoCore().mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata,parentMockSettings));
+}
