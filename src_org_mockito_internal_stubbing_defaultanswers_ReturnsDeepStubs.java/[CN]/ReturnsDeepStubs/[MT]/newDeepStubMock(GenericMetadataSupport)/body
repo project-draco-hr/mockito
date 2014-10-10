@@ -1,3 +1,0 @@
-{
-  return mockitoCore().mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata));
-}
