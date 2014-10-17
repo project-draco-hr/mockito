@@ -6,6 +6,6 @@
   }
  catch (  MockitoException e) {
     assertThat(e.getMessage()).containsIgnoringCase("classloading").containsIgnoringCase("objenesis").containsIgnoringCase("MockitoConfiguration");
-    assertThat(e.getCause()).satisfies(thatCceIsThrownFrom("java.lang.Class.cast")).satisfies(thatCceIsThrownFrom("org.mockito.internal.creation.jmock.ClassImposterizer.imposterise"));
+    assertThat(e.getCause()).satisfies(thatCceIsThrownFrom("java.lang.Class.cast")).satisfies(thatCceIsThrownFrom("org.mockito.internal.creation.cglib.ClassImposterizer.imposterise"));
   }
 }

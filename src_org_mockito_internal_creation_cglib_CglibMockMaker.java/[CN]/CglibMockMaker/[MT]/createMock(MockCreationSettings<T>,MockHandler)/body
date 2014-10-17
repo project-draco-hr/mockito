@@ -1,5 +1,5 @@
 {
   InternalMockHandler mockitoHandler=cast(handler);
   new AcrossJVMSerializationFeature().enableSerializationAcrossJVM(settings);
-  return new CglibClassImposterizer(new InstantiatorProvider().getInstantiator()).imposterise(new MethodInterceptorFilter(mockitoHandler,settings),settings.getTypeToMock(),settings.getExtraInterfaces());
+  return new ClassImposterizer(new InstantiatorProvider().getInstantiator()).imposterise(new MethodInterceptorFilter(mockitoHandler,settings),settings.getTypeToMock(),settings.getExtraInterfaces());
 }
