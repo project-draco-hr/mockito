@@ -1,5 +1,5 @@
 {
   InternalMockHandler mockitoHandler=cast(handler);
   new AcrossJVMSerializationFeature().enableSerializationAcrossJVM(settings);
-  return new ClassImposterizer(new CachingObjenesisInstanceFactory()).imposterise(new MethodInterceptorFilter(mockitoHandler,settings),settings.getTypeToMock(),settings.getExtraInterfaces());
+  return new ClassImposterizer(new CachingObjenesisInstantiator()).imposterise(new MethodInterceptorFilter(mockitoHandler,settings),settings.getTypeToMock(),settings.getExtraInterfaces());
 }
