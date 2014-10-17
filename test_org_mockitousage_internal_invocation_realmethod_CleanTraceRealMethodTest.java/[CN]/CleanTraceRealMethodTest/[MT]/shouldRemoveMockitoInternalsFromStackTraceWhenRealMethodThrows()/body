@@ -1,5 +1,5 @@
 {
-  FilteredCGLIBProxyRealMethod realMethod=new FilteredCGLIBProxyRealMethod(new RealMethod(){
+  CleanTraceRealMethod realMethod=new CleanTraceRealMethod(new RealMethod(){
     public Object invoke(    Object target,    Object[] arguments) throws Throwable {
       return new Foo().throwSomething();
     }
