@@ -5,6 +5,6 @@
   }
  catch (  Exception e) {
   }
-  ClassWithDodgyConstructor mock=ClassImposterizer.INSTANCE.imposterise(new MethodInterceptorStub(),ClassWithDodgyConstructor.class);
+  ClassWithDodgyConstructor mock=ClassImposterizer.INSTANCE.imposterise(new ObjenesisInstanceFactory(),new MethodInterceptorStub(),ClassWithDodgyConstructor.class);
   assertNotNull(mock);
 }

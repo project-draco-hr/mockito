@@ -1,6 +1,6 @@
 {
-  SomeClass mockOne=ClassImposterizer.INSTANCE.imposterise(new MethodInterceptorStub(),SomeClass.class);
-  SomeClass mockTwo=ClassImposterizer.INSTANCE.imposterise(new MethodInterceptorStub(),SomeClass.class);
+  SomeClass mockOne=ClassImposterizer.INSTANCE.imposterise(new ObjenesisInstanceFactory(),new MethodInterceptorStub(),SomeClass.class);
+  SomeClass mockTwo=ClassImposterizer.INSTANCE.imposterise(new ObjenesisInstanceFactory(),new MethodInterceptorStub(),SomeClass.class);
   Factory cglibFactoryOne=(Factory)mockOne;
   Factory cglibFactoryTwo=(Factory)mockTwo;
   assertNotSame(cglibFactoryOne.getCallback(0),cglibFactoryTwo.getCallback(0));

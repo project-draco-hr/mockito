@@ -1,0 +1,4 @@
+{
+  OtherClass mock=ClassImposterizer.INSTANCE.imposterise(new ConstructorInstanceFactory(),new MethodInterceptorStub(),OtherClass.class);
+  assertNotNull(mock);
+}
