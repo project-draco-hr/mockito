@@ -2,7 +2,7 @@
   if (notMarkedAsAMockitoMock(readObject())) {
     return super.resolveClass(desc);
   }
-  DefaultClassImposterizer imposterizer=new DefaultClassImposterizer(new InstantiatorProvider().getInstantiator());
+  CglibClassImposterizer imposterizer=new CglibClassImposterizer(new InstantiatorProvider().getInstantiator());
   imposterizer.setConstructorsAccessible(typeToMock,true);
   Class<?> proxyClass=imposterizer.createProxyClass(typeToMock,extraInterfaces.toArray(new Class[extraInterfaces.size()]));
   hackClassNameToMatchNewlyCreatedClass(desc,proxyClass);

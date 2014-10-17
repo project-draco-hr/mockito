@@ -1,5 +1,5 @@
 {
-  imposterizer=new DefaultClassImposterizer(new ConstructorInstantiator());
+  imposterizer=new CglibClassImposterizer(new ConstructorInstantiator());
   OtherClass mock=imposterizer.imposterise(new MethodInterceptorStub(),OtherClass.class);
   assertNotNull(mock);
 }
