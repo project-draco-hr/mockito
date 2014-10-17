@@ -1,5 +1,5 @@
 {
-  Factory proxy=factory.newInstance(proxyClass);
+  Factory proxy=instanceFactory.newInstance(proxyClass);
   proxy.setCallbacks(new Callback[]{interceptor,SerializableNoOp.SERIALIZABLE_INSTANCE});
   return proxy;
 }

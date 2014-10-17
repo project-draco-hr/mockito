@@ -1,4 +1,3 @@
-InstanceFactory factory
 MethodInterceptor interceptor
 Class<T> mockedType
 Collection<Class> ancillaryTypes

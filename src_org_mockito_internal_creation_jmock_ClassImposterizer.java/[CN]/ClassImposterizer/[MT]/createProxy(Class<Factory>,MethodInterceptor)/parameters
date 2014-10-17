@@ -1,3 +1,2 @@
-InstanceFactory factory
 Class<Factory> proxyClass
 MethodInterceptor interceptor
