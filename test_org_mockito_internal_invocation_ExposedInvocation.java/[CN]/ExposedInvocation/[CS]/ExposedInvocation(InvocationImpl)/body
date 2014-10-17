@@ -1,3 +1,0 @@
-{
-  methodProxy=((HasCGLIBMethodProxy)toBeExposed.realMethod).getMethodProxy();
-}

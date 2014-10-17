@@ -1,6 +1,5 @@
 {
   try {
-    MethodProxy methodProxy=mockitoMethodProxy.getMethodProxy();
     Field createInfoField=reflectOnCreateInfo(methodProxy);
     createInfoField.setAccessible(true);
     Object createInfo=createInfoField.get(methodProxy);

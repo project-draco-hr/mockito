@@ -1,3 +1,0 @@
-{
-  filter.cglibHacker=Mockito.mock(CGLIBHacker.class);
-}

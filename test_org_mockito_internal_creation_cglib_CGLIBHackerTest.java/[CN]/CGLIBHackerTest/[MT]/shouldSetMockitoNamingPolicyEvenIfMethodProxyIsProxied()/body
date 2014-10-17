@@ -1,5 +1,5 @@
 {
-  MockitoMethodProxy proxiedMethodProxy=spy(new MethodProxyBuilder().build());
+  MethodProxy proxiedMethodProxy=spy(MethodProxy.create(null,null,null,null,null));
   new CGLIBHacker().setMockitoNamingPolicy(proxiedMethodProxy);
   Object realMethodProxy=Whitebox.invokeMethod(proxiedMethodProxy,"getMethodProxy",new Object[0]);
   Object createInfo=Whitebox.getInternalState(realMethodProxy,"createInfo");
