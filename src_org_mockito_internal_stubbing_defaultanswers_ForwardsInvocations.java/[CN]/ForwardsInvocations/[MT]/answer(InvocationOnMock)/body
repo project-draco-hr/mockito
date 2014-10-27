@@ -1,4 +1,9 @@
 {
   Method method=invocation.getMethod();
-  return method.invoke(delegatedObject,invocation.getArguments());
+  try {
+    return method.invoke(delegatedObject,invocation.getArguments());
+  }
+ catch (  InvocationTargetException e) {
+    throw e.getCause();
+  }
 }
