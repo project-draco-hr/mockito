@@ -5,6 +5,6 @@
     fail();
   }
  catch (  MockitoException e) {
-    assertThat(e.toString()).contains("Incompatible return type on delegate method");
+    assertThat(e.toString()).contains("Methods called on delegated instance must have compatible return type");
   }
 }
