@@ -1,0 +1,10 @@
+{
+  List<String> mock=mock(List.class,delegatesTo(new FakeList<>()));
+  try {
+    mock.isEmpty();
+    fail();
+  }
+ catch (  MockitoException e) {
+    assertThat(e.toString()).contains("Method not found on delegate");
+  }
+}

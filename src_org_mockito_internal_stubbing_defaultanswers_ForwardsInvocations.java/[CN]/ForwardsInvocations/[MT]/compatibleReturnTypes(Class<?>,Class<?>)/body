@@ -1,0 +1,3 @@
+{
+  return superType.equals(subType) || superType.isAssignableFrom(subType);
+}

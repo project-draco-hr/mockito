@@ -1,0 +1,10 @@
+{
+  List<String> mock=mock(List.class,delegatesTo(new FakeListWithWrongMethods<>()));
+  try {
+    mock.size();
+    fail();
+  }
+ catch (  MockitoException e) {
+    assertThat(e.toString()).contains("Incompatible return type on delegate method");
+  }
+}

@@ -1,0 +1,8 @@
+{
+  if (mockMethod.getDeclaringClass().isAssignableFrom(delegatedObject.getClass())) {
+    return mockMethod;
+  }
+ else {
+    return delegatedObject.getClass().getMethod(mockMethod.getName(),mockMethod.getParameterTypes());
+  }
+}

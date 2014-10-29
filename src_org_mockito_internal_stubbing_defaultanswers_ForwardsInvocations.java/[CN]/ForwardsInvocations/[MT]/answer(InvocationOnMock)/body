@@ -1,9 +1,16 @@
 {
-  Method method=invocation.getMethod();
+  Method mockMethod=invocation.getMethod();
   try {
-    return method.invoke(delegatedObject,invocation.getArguments());
+    Method delegateMethod=getDelegateMethod(mockMethod);
+    if (!compatibleReturnTypes(mockMethod.getReturnType(),delegateMethod.getReturnType())) {
+      throw new MockitoException("Incompatible return type on delegate method: " + delegateMethod);
+    }
+    return delegateMethod.invoke(delegatedObject,invocation.getArguments());
   }
- catch (  InvocationTargetException e) {
+ catch (  NoSuchMethodException e) {
+    throw new MockitoException("Method not found on delegate: " + mockMethod,e);
+  }
+catch (  InvocationTargetException e) {
     throw e.getCause();
   }
 }
