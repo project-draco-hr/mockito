@@ -1,5 +1,5 @@
 {
-  List<String> mock=mock(List.class,delegatesTo(new FakeList<>()));
+  List<String> mock=mock(List.class,delegatesTo(new FakeList<String>()));
   List<String> subList=mock.subList(0,0);
   assertThat(subList.isEmpty());
 }

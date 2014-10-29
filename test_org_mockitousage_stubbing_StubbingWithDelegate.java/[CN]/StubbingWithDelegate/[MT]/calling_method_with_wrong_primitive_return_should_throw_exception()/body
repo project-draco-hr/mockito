@@ -1,5 +1,5 @@
 {
-  List<String> mock=mock(List.class,delegatesTo(new FakeListWithWrongMethods<>()));
+  List<String> mock=mock(List.class,delegatesTo(new FakeListWithWrongMethods<String>()));
   try {
     mock.size();
     fail();
