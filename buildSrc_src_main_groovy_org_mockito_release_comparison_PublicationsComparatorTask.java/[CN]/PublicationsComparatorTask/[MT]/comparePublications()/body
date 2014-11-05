@@ -1,0 +1,12 @@
+{
+  getLogger().lifecycle("{} - about to compare publications",getPath());
+  boolean poms=pomComparator.areEqual();
+  if (!poms) {
+    getLogger().lifecycle("{} - pom files are not equal",getPath());
+  }
+  boolean jars=sourceJarComparator.areEqual();
+  if (!jars) {
+    getLogger().lifecycle("{} - source jars are not equal",getPath());
+  }
+  this.publicationsEqual=jars && poms;
+}
