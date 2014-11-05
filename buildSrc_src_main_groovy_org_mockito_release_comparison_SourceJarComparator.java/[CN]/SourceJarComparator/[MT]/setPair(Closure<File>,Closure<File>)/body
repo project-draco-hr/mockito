@@ -1,0 +1,6 @@
+{
+  notNull(left,"source jar file to compare",right,"source jar file to compare");
+  this.left=left;
+  this.right=right;
+  return this;
+}
