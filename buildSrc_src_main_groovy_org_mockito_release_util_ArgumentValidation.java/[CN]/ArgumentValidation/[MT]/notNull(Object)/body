@@ -1,0 +1,18 @@
+{
+  if (targets.length % 2 != 0) {
+    throw new IllegalArgumentException("notNull method requires pairs of argument + message");
+  }
+  boolean nullFound=false;
+  for (  Object t : targets) {
+    if (t == null) {
+      nullFound=true;
+      continue;
+    }
+    if (nullFound) {
+      if (!(t instanceof String)) {
+        throw new IllegalArgumentException("notNull method requires pairs of argument + message");
+      }
+      throw new IllegalArgumentException(((String)t).concat(" cannot be null."));
+    }
+  }
+}
