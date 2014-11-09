@@ -1,0 +1,8 @@
+{
+  if (notMarkedAsAMockitoMock(readObject())) {
+    return super.resolveClass(desc);
+  }
+  Class<?> proxyClass=new ByteBuddyMockMaker().getOrMakeMock(typeToMock,extraInterfaces);
+  hackClassNameToMatchNewlyCreatedClass(desc,proxyClass);
+  return proxyClass;
+}
