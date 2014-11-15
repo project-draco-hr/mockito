@@ -1,2 +1,2 @@
-Closure<File> left
-Closure<File> right
+Closure<File> file1
+Closure<File> file2
