@@ -1,8 +1,0 @@
-{
-  try {
-    return MessageDigest.getInstance(algorithm);
-  }
- catch (  NoSuchAlgorithmException e) {
-    throw UncheckedException.throwAsUncheckedException(e);
-  }
-}
