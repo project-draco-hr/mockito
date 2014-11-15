@@ -1,7 +1,7 @@
 {
   final File file1=this.file1.call();
   final File file2=this.file2.call();
-  notNull(file1,"source jar file to compare",file2,"source jar file to compare");
+  notNull(file1,"zip/jar file to compare",file2,"zip/jar file to compare");
   FileHasher hasher=new FileHasher();
   final byte[] hash1=hasher.hash(file1);
   final byte[] hash2=hasher.hash(file2);
