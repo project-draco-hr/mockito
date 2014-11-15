@@ -2,7 +2,7 @@
   final File file1=this.file1.call();
   final File file2=this.file2.call();
   notNull(file1,"zip/jar file to compare",file2,"zip/jar file to compare");
-  final boolean equals=new ZipCompare().compareZips(file1.getAbsolutePath(),file2.getAbsolutePath());
+  final boolean equals=zipCompare.compareZips(file1.getAbsolutePath(),file2.getAbsolutePath());
   return new Result(){
     public boolean areEqual(){
       return equals;
