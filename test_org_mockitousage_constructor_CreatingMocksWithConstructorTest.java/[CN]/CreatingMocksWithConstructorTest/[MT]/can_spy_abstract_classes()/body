@@ -1,0 +1,4 @@
+{
+  AbstractMessage mock=spy(AbstractMessage.class);
+  assertEquals("hey!",mock.getMessage());
+}

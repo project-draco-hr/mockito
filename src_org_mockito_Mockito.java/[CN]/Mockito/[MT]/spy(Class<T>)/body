@@ -1,0 +1,3 @@
+{
+  return MOCKITO_CORE.mock(classToSpy,withSettings().useConstructor().defaultAnswer(CALLS_REAL_METHODS));
+}
