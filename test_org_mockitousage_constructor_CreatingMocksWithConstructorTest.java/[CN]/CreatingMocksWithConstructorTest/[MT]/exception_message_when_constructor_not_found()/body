@@ -1,0 +1,10 @@
+{
+  try {
+    spy(HasConstructor.class);
+    fail();
+  }
+ catch (  MockitoException e) {
+    assertEquals("Unable to create mock instance of type 'HasConstructor'",e.getMessage());
+    assertContains("Please ensure it has parameter-less constructor",e.getCause().getMessage());
+  }
+}
