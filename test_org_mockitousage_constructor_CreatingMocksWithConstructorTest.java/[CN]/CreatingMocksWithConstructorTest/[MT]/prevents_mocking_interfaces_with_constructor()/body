@@ -1,8 +1,0 @@
-{
-  try {
-    mock(IMethods.class,withSettings().useConstructor());
-    fail();
-  }
- catch (  MockitoException e) {
-  }
-}

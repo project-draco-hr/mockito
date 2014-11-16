@@ -1,0 +1,4 @@
+{
+  mock(IMethods.class,withSettings().useConstructor());
+  spy(IMethods.class);
+}
