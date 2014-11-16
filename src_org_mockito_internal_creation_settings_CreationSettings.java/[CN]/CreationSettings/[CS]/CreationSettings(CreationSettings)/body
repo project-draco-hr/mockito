@@ -8,4 +8,5 @@
   this.serializableMode=copy.serializableMode;
   this.invocationListeners=copy.invocationListeners;
   this.stubOnly=copy.stubOnly;
+  this.useConstructor=copy.isUsingConstructor();
 }

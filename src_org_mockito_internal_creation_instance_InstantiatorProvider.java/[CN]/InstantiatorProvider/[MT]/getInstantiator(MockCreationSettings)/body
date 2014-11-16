@@ -1,0 +1,8 @@
+{
+  if (settings.isUsingConstructor()) {
+    return new ConstructorInstantiator();
+  }
+ else {
+    return INSTANCE;
+  }
+}
