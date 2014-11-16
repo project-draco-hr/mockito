@@ -1,0 +1,8 @@
+{
+  try {
+    return cls.newInstance();
+  }
+ catch (  Exception e) {
+    throw new InstantationException("Unable to create mock instance of '" + cls.getSimpleName() + "'.\nPlease ensure it has parameter-less constructor.",e);
+  }
+}

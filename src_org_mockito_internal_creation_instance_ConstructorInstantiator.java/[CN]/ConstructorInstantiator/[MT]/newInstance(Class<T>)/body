@@ -1,12 +1,6 @@
 {
-  try {
-    if (outerClassInstance == null) {
-      return cls.newInstance();
-    }
-    Constructor<T> c=cls.getDeclaredConstructor(outerClassInstance.getClass());
-    return c.newInstance(outerClassInstance);
+  if (outerClassInstance == null) {
+    return noArgConstructor(cls);
   }
- catch (  Exception e) {
-    throw new InstantationException("Unable to create mock instance of '" + cls.getSimpleName() + "'.\nPlease ensure it has parameter-less constructor.",e);
-  }
+  return withOuterClass(cls);
 }
