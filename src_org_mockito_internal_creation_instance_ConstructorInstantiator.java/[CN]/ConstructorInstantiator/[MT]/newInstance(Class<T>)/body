@@ -2,5 +2,5 @@
   if (outerClassInstance == null) {
     return noArgConstructor(cls);
   }
-  return withOuterClass(cls);
+  return withParams(cls,outerClassInstance);
 }
