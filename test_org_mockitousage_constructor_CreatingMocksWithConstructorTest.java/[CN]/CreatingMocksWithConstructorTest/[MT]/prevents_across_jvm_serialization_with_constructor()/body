@@ -1,3 +1,9 @@
 {
-  fail();
+  try {
+    mock(AbstractMessage.class,withSettings().useConstructor().serializable(SerializableMode.ACROSS_CLASSLOADERS));
+    fail();
+  }
+ catch (  MockitoException e) {
+    assertEquals("Mocks instantiated with constructor cannot be combined with " + SerializableMode.ACROSS_CLASSLOADERS + " serialization mode.",e.getMessage());
+  }
 }

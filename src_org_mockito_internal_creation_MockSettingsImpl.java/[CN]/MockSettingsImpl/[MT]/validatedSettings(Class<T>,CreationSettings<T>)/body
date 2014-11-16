@@ -4,6 +4,7 @@
   validator.validateExtraInterfaces(typeToMock,source.getExtraInterfaces());
   validator.validateMockedType(typeToMock,source.getSpiedInstance());
   validator.validateSerializable(typeToMock,source.isSerializable());
+  validator.validateConstructorUse(source.isUsingConstructor(),source.getSerializableMode());
   CreationSettings<T> settings=new CreationSettings<T>(source);
   settings.setMockName(new MockNameImpl(source.getName(),typeToMock));
   settings.setTypeToMock(typeToMock);
