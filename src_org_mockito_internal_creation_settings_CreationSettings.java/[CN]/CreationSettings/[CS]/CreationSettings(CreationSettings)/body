@@ -9,4 +9,5 @@
   this.invocationListeners=copy.invocationListeners;
   this.stubOnly=copy.stubOnly;
   this.useConstructor=copy.isUsingConstructor();
+  this.outerClassInstance=copy.getOuterClassInstance();
 }

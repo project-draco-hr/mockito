@@ -1,0 +1,4 @@
+{
+  this.outerClassInstance=outerClassInstance;
+  return this;
+}

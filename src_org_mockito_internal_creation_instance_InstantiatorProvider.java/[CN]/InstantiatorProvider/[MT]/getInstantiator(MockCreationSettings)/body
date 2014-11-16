@@ -1,6 +1,6 @@
 {
   if (settings.isUsingConstructor()) {
-    return new ConstructorInstantiator();
+    return new ConstructorInstantiator(settings.getOuterClassInstance());
   }
  else {
     return INSTANCE;
