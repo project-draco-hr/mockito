@@ -1,4 +1,0 @@
-{
-  injectTestCase=new InjectTestCase();
-  jUnitRule=new JUnitRule();
-}
