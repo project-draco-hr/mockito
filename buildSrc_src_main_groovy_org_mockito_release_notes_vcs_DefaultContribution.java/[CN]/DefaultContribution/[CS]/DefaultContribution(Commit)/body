@@ -1,5 +1,5 @@
 {
-  email=commit.getEmail();
+  authorId=commit.getAuthorId();
   author=commit.getAuthor();
   commits.add(commit);
 }
