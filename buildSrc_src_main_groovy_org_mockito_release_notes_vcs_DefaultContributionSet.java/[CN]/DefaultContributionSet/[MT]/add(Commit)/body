@@ -1,5 +1,5 @@
 {
-  if (commit.getMessage().contains("[ci skip]")) {
+  if (ignoreCommit.isTrue(commit)) {
     return;
   }
   commits.add(commit);

@@ -1,3 +1,4 @@
 {
   this.logProvider=logProvider;
+  this.ignoredCommit=ignoredCommit;
 }

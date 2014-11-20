@@ -1,0 +1,2 @@
+GitLogProvider logProvider
+Predicate<Commit> ignoredCommit
