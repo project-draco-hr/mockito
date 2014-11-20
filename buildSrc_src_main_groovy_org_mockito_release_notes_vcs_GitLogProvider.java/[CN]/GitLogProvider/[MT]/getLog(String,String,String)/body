@@ -1,0 +1,4 @@
+{
+  runner.run("git","fetch","origin","+refs/tags/" + fromRev + ":refs/tags/"+ fromRev);
+  return runner.run("git","log",format,fromRev + ".." + toRev);
+}
