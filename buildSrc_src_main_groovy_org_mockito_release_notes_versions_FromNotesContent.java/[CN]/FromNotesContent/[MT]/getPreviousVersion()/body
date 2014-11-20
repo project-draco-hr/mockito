@@ -1,0 +1,8 @@
+{
+  Pattern p=Pattern.compile("(?s)^### (.+?) .*");
+  Matcher m=p.matcher(releaseNotesContent);
+  if (!m.matches()) {
+    throw new ReleaseNotesException("Unable to parse previous version from release notes content: " + releaseNotesContent);
+  }
+  return m.group(1);
+}

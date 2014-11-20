@@ -1,0 +1,3 @@
+{
+  return Versions.previousFromNotesContent(releaseNotesContent);
+}
