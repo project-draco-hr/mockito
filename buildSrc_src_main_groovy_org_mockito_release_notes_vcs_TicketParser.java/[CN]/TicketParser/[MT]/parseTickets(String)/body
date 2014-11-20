@@ -1,0 +1,10 @@
+{
+  Set<String> tickets=new LinkedHashSet<String>();
+  Pattern ticket=Pattern.compile("#\\d+");
+  Matcher m=ticket.matcher(message);
+  while (m.find()) {
+    String ticketId=m.group().substring(1);
+    tickets.add(ticketId);
+  }
+  return tickets;
+}
