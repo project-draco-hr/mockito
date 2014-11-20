@@ -1,0 +1,4 @@
+int id
+String title
+String url
+Collection<String> labels

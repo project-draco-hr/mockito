@@ -1,0 +1,3 @@
+String gitHubAuthToken
+Collection<String> ticketIds
+DefaultImprovements improvements

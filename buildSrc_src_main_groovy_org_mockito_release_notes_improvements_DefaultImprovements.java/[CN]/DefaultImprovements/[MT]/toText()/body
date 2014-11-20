@@ -1,3 +1,10 @@
 {
-  return null;
+  if (improvements.isEmpty()) {
+    return "* No notable improvements. See the commits for detailed changes.";
+  }
+  StringBuilder sb=new StringBuilder("* Improvements: ").append(improvements.size());
+  for (  Improvement i : improvements) {
+    sb.append("\n  * ").append(i.toText());
+  }
+  return sb.toString();
 }
