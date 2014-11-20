@@ -1,0 +1,13 @@
+{
+  if (commit.getMessage().contains("[ci skip]")) {
+    return;
+  }
+  commits.add(commit);
+  DefaultContribution c=contributions.get(commit.getEmail());
+  if (c == null) {
+    contributions.put(commit.getEmail(),c=new DefaultContribution(commit));
+  }
+ else {
+    c.add(commit);
+  }
+}

@@ -1,5 +1,0 @@
-{
-  email=commit.email;
-  author=commit.author;
-  commits.add(commit);
-}

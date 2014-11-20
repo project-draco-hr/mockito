@@ -1,0 +1,3 @@
+{
+  return Integer.valueOf(commits.size()).compareTo(other.getCommits().size());
+}

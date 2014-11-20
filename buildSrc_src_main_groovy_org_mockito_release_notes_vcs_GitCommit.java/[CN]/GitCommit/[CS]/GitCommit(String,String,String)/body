@@ -1,0 +1,5 @@
+{
+  this.email=email;
+  this.author=author;
+  this.message=message;
+}
