@@ -1,3 +1,7 @@
 {
-  return null;
+  String out=System.getenv(envVariableName);
+  if (out == null) {
+    throw new ReleaseNotesException("Environmental variable '" + envVariableName + "' is missing.");
+  }
+  return out;
 }
