@@ -1,0 +1,6 @@
+{
+  SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd HH:mm z");
+  format.setTimeZone(TimeZone.getTimeZone("UTC"));
+  String now=format.format(date);
+  return "### " + version + " ("+ now+ ")"+ "\n\n"+ contributions.toText()+ "\n"+ improvements.toText()+ "\n\n";
+}

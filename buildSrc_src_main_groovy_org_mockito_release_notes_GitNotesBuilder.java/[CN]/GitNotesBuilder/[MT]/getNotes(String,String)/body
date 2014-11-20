@@ -1,0 +1,8 @@
+{
+  LOG.info("Getting release notes between {} and {}",fromRevision,toRevision);
+  ContributionsProvider contributionsProvider=Vcs.getGitProvider(Exec.getGradleProcessRunner(project));
+  ContributionSet contributions=contributionsProvider.getContributionsBetween(fromRevision,toRevision);
+  ImprovementsProvider improvementsProvider=Improvements.getGitHubProvider(authTokenEnvVar);
+  ImprovementSet improvements=improvementsProvider.getImprovements(contributions);
+  return new NotesPrinter().printNotes(project.getVersion().toString(),new Date(),contributions,improvements);
+}
