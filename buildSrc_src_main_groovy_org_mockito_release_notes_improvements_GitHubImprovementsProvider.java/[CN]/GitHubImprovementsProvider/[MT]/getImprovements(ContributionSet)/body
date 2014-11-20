@@ -1,0 +1,5 @@
+{
+  LOGGER.info("Parsing {} commits",contributions.getAllCommits());
+  Set<String> ticketIds=findTickets(contributions);
+  return new GitHubTicketFetcher().fetchTickets(ticketIds);
+}

@@ -1,0 +1,4 @@
+int id
+String title
+URL url
+Set<String> labels

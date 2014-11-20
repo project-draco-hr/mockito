@@ -1,0 +1,24 @@
+{
+  if (ticketIds.isEmpty()) {
+    return new DefaultImprovements();
+  }
+  try {
+    LOG.info("Querying GitHub API for {} tickets",ticketIds.size());
+    RtGithub github=new RtGithub(gitHubToken);
+    Repo repo=github.repos().get(new Coordinates.Simple("mockito/mockito"));
+    Issues issues=repo.issues();
+    DefaultImprovements out=new DefaultImprovements();
+    for (    String ticketId : ticketIds) {
+      LOG.info(" #{}",ticketId);
+      Issue i=issues.get(Integer.parseInt(ticketId));
+      Issue.Smart issue=new Issue.Smart(i);
+      if (issue.exists() && !issue.isOpen()) {
+        out.add(new Improvement(issue.number(),issue.title(),issue.htmlUrl(),labels(issue.labels())));
+      }
+    }
+    return out;
+  }
+ catch (  Exception e) {
+    throw new RuntimeException("Problems fetching " + ticketIds.size() + " from GitHub",e);
+  }
+}

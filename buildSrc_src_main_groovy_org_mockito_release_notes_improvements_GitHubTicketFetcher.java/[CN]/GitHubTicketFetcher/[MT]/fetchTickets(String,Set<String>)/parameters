@@ -1,0 +1,2 @@
+String gitHubToken
+Set<String> ticketIds

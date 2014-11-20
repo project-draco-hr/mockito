@@ -1,0 +1,7 @@
+{
+  Set<String> out=new HashSet<String>();
+  for (  Label label : labels.iterate()) {
+    out.add(label.name());
+  }
+  return out;
+}
