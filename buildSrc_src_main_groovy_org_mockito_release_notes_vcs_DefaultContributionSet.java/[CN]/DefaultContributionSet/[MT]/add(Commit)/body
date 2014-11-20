@@ -3,9 +3,9 @@
     return;
   }
   commits.add(commit);
-  DefaultContribution c=contributions.get(commit.getAuthorId());
+  Contribution c=contributions.get(commit.getAuthorId());
   if (c == null) {
-    contributions.put(commit.getAuthorId(),new DefaultContribution(commit));
+    contributions.put(commit.getAuthorId(),new Contribution(commit));
   }
  else {
     c.add(commit);
