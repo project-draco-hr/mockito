@@ -1,4 +1,0 @@
-{
-  this.labelsToIgnore=labelsToIgnore;
-  return this;
-}

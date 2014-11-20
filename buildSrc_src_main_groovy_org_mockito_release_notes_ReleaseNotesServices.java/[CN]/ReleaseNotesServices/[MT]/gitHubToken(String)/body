@@ -1,4 +1,0 @@
-{
-  this.gitHubToken=gitHubToken;
-  return this;
-}

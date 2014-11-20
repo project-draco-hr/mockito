@@ -1,9 +1,0 @@
-{
-  Collection<String> labelsToShowSeparately=labelToHeaderMapping.keySet();
-  ImprovementSetSegregator segregator=new ImprovementSetSegregator(labelsToShowSeparately,labelsToIgnore);
-  ImprovementsPrinter improvementsPrinter=new ImprovementsPrinter(segregator,labelToHeaderMapping,headerForOtherImprovements);
-  if (gitHubToken == null) {
-    throw new GradleException("GitHub token not provided");
-  }
-  return new DefaultReleaseNotesBuilder(project,gitHubToken,ignorePattern,improvementsPrinter);
-}
