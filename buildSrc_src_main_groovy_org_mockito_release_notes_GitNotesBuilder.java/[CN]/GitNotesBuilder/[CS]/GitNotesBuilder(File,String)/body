@@ -1,4 +1,4 @@
 {
+  this.workDir=workDir;
   this.authTokenEnvVar=authTokenEnvVar;
-  this.project=project;
 }
