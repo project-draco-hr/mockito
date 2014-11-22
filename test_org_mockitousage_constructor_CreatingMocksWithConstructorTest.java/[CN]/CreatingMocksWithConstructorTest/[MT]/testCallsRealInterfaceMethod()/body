@@ -1,0 +1,4 @@
+{
+  List<String> list=mock(List.class,withSettings().defaultAnswer(CALLS_REAL_METHODS));
+  assertNull(list.get(1));
+}

@@ -1,0 +1,4 @@
+{
+  AbstractThing thing=spy(AbstractThing.class);
+  assertEquals("abstract null",thing.fullName());
+}

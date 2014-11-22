@@ -1,0 +1,5 @@
+{
+  AbstractThing thing=spy(AbstractThing.class);
+  when(thing.name()).thenReturn("me");
+  assertEquals("abstract me",thing.fullName());
+}
