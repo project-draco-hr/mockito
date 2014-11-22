@@ -1,6 +1,6 @@
 {
   if (Modifier.isAbstract(invocation.getMethod().getModifiers())) {
-    return new GloballyConfiguredAnswer().answer(invocation);
+    return Answers.CALLS_REAL_METHODS.get().answer(invocation);
   }
   return invocation.callRealMethod();
 }
