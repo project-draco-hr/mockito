@@ -1,0 +1,16 @@
+{
+  InputStream response=new URL(url).openStream();
+  String content=IOUtil.readStream(response);
+  List<JSONObject> issues=(List)JSONValue.parse(content);
+  for (  JSONObject issue : issues) {
+    long id=(Long)issue.get("number");
+    if (tickets.remove(id)) {
+      String issueUrl=(String)issue.get("html_url");
+      String title=(String)issue.get("title");
+      improvements.add(new Improvement(id,title,issueUrl,new HashSet()));
+      if (tickets.isEmpty()) {
+        return;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  BufferedReader r=null;
+  try {
+    r=new BufferedReader(new InputStreamReader(is));
+    return readNow(is);
+  }
+ catch (  Exception e) {
+    throw new RuntimeException("Problems reading stream",e);
+  }
+ finally {
+    close(r);
+  }
+}
