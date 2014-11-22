@@ -3,8 +3,8 @@
     return;
   }
   LOG.info("Querying GitHub API for {} tickets",ticketIds.size());
-  String url="https://api.github.com/repos/mockito/mockito/issues?access_token=" + gitHubAuthToken;
-  url+="&state=closed";
+  String url="https://api.github.com/repos/mockito/mockito/issues?access_token=" + authToken;
+  url+="&state=closed&filter=all";
   Set<Long> tickets=new HashSet<Long>();
   for (  String id : ticketIds) {
     tickets.add(Long.parseLong(id));
