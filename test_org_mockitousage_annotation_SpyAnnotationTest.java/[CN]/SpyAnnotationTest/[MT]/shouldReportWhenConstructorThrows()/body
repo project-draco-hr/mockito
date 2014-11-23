@@ -6,7 +6,7 @@ class FailingSpy {
     MockitoAnnotations.initMocks(new FailingSpy());
     fail();
   }
- catch (  Exception e) {
-    Assertions.assertThat(e.getMessage()).contains("raised an exception");
+ catch (  MockitoException e) {
+    Assertions.assertThat(e.getMessage()).contains("Unable to create mock instance");
   }
 }

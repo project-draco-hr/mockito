@@ -1,0 +1,8 @@
+{
+class WithSpy {
+    @Spy List<String> list;
+  }
+  WithSpy withSpy=new WithSpy();
+  MockitoAnnotations.initMocks(withSpy);
+  assertEquals(0,withSpy.list.size());
+}
