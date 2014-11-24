@@ -1,9 +1,4 @@
 {
-  BufferedReader r=new BufferedReader(new InputStreamReader(is));
-  StringBuilder sb=new StringBuilder();
-  String line;
-  while (null != (line=r.readLine())) {
-    sb.append(line).append("\n");
-  }
-  return sb.toString();
+  java.util.Scanner s=new java.util.Scanner(is).useDelimiter("\\A");
+  return s.hasNext() ? s.next() : "";
 }
