@@ -1,0 +1,12 @@
+{
+class Outer {
+class Inner {
+    }
+  }
+class WithSpy {
+    @Spy private Outer.Inner inner;
+  }
+  shouldThrow.expect(MockitoException.class);
+  shouldThrow.expectMessage("Cannot spy inner class ");
+  MockitoAnnotations.initMocks(new WithSpy());
+}

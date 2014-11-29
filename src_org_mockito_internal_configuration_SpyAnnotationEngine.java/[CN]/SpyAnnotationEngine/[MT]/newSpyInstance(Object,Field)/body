@@ -1,0 +1,32 @@
+{
+  MockSettings settings=withSettings().defaultAnswer(Mockito.CALLS_REAL_METHODS).name(field.getName());
+  Class<?> type=field.getType();
+  if (type.isInterface()) {
+    return Mockito.mock(type,settings.useConstructor());
+  }
+  try {
+    if (!Modifier.isStatic(type.getModifiers())) {
+      Class<?> enclosing=type.getEnclosingClass();
+      if (enclosing != null) {
+        if (!enclosing.isInstance(testInstance)) {
+          throw new MockitoException("Cannot spy inner " + type);
+        }
+        if (Modifier.isPrivate(type.getDeclaredConstructor(enclosing).getModifiers())) {
+          throw new MockitoException("Cannot spy inner " + type + " with private constructor");
+        }
+        return Mockito.mock(type,settings.useConstructor().outerInstance(testInstance));
+      }
+    }
+    Constructor<?> constructor=type.getDeclaredConstructor();
+    if (Modifier.isPrivate(constructor.getModifiers())) {
+      constructor.setAccessible(true);
+      return Mockito.mock(type,settings.spiedInstance(constructor.newInstance()));
+    }
+ else {
+      return Mockito.mock(type,settings.useConstructor());
+    }
+  }
+ catch (  NoSuchMethodException noDefaultConstructor) {
+    throw new MockitoException("0-arg constructor is required to spy " + type);
+  }
+}
