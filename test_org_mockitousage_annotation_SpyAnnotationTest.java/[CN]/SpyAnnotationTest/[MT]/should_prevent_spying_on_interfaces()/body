@@ -1,0 +1,13 @@
+{
+class WithSpy {
+    @Spy List<String> list;
+  }
+  WithSpy withSpy=new WithSpy();
+  try {
+    MockitoAnnotations.initMocks(withSpy);
+    fail();
+  }
+ catch (  MockitoException e) {
+    Assertions.assertThat(e.getMessage()).contains("is an interface and it cannot be spied on");
+  }
+}

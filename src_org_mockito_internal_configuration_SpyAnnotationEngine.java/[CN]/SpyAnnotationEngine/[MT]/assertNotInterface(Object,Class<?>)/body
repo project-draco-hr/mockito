@@ -1,0 +1,6 @@
+{
+  type=testInstance != null ? testInstance.getClass() : type;
+  if (type.isInterface()) {
+    throw new MockitoException("Type '" + type.getSimpleName() + "' is an interface and it cannot be spied on.");
+  }
+}

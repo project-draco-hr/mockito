@@ -4,26 +4,27 @@
   if (type.isInterface()) {
     return Mockito.mock(type,settings.useConstructor());
   }
-  try {
-    if (!Modifier.isStatic(type.getModifiers())) {
-      Class<?> enclosing=type.getEnclosingClass();
-      if (enclosing != null) {
-        if (!enclosing.isInstance(testInstance)) {
-          throw new MockitoException("Unable to initialize @Spy annotated field '" + field.getName() + "'."+ "\nIf you are mocking an inner class please ensure the instance of the outer class is supplied via withSettings().outerInstance()"+ "\nThe outer class is: '"+ enclosing.getSimpleName()+ "'");
-        }
-        return Mockito.mock(type,settings.useConstructor().outerInstance(testInstance));
+  if (!Modifier.isStatic(type.getModifiers())) {
+    Class<?> enclosing=type.getEnclosingClass();
+    if (enclosing != null) {
+      if (!enclosing.isInstance(testInstance)) {
+        throw new MockitoException("If you are mocking an inner class please ensure the instance of the outer class is supplied via withSettings().outerInstance()" + "\nThe outer class is: '" + enclosing.getSimpleName() + "'");
       }
-    }
-    Constructor<?> constructor=type.getDeclaredConstructor();
-    if (Modifier.isPrivate(constructor.getModifiers())) {
-      constructor.setAccessible(true);
-      return Mockito.mock(type,settings.spiedInstance(constructor.newInstance()));
-    }
- else {
-      return Mockito.mock(type,settings.useConstructor());
+      return Mockito.mock(type,settings.useConstructor().outerInstance(testInstance));
     }
   }
- catch (  NoSuchMethodException noDefaultConstructor) {
-    throw new MockitoException("Unable to initialize @Spy annotated field '" + field.getName() + "'. Please ensure that the type '"+ type.getSimpleName()+ "' has 0-arg constructor.");
+  Constructor<?> constructor;
+  try {
+    constructor=type.getDeclaredConstructor();
+  }
+ catch (  NoSuchMethodException e) {
+    throw new MockitoException("Please ensure that the type '" + type.getSimpleName() + "' has 0-arg constructor.");
+  }
+  if (Modifier.isPrivate(constructor.getModifiers())) {
+    constructor.setAccessible(true);
+    return Mockito.mock(type,settings.spiedInstance(constructor.newInstance()));
+  }
+ else {
+    return Mockito.mock(type,settings.useConstructor());
   }
 }

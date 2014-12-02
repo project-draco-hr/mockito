@@ -7,6 +7,7 @@
       Object instance;
       try {
         instance=field.get(testInstance);
+        assertNotInterface(instance,field.getType());
         if (new MockUtil().isMock(instance)) {
           Mockito.reset(instance);
         }
@@ -17,11 +18,8 @@
           field.set(testInstance,newSpyInstance(testInstance,field));
         }
       }
- catch (      MockitoException e) {
-        throw e;
-      }
-catch (      Exception e) {
-        throw new MockitoException("Problems initiating @Spy annotated field '" + field.getName() + "'",e);
+ catch (      Exception e) {
+        throw new MockitoException("Unable to initialize @Spy annotated field '" + field.getName() + "'.\n"+ e.getMessage(),e);
       }
     }
   }

@@ -1,4 +1,0 @@
-{
-  assertNotNull(staticTypeWithNoArgConstructor);
-  assertNotNull(staticTypeWithoutDefinedConstructor);
-}

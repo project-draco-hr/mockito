@@ -1,8 +1,8 @@
 {
 class WithSpy {
-    @Spy List<String> list;
+    @Spy List<String> list=new LinkedList<String>();
   }
   WithSpy withSpy=new WithSpy();
   MockitoAnnotations.initMocks(withSpy);
-  assertEquals(0,withSpy.list.size());
+  verify(withSpy.list,never()).clear();
 }
