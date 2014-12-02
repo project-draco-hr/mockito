@@ -4,7 +4,7 @@
     if (field.isAnnotationPresent(Spy.class) && !field.isAnnotationPresent(InjectMocks.class)) {
       assertNoIncompatibleAnnotations(Spy.class,field,Mock.class,org.mockito.MockitoAnnotations.Mock.class,Captor.class);
       field.setAccessible(true);
-      Object instance=null;
+      Object instance;
       try {
         instance=field.get(testInstance);
         if (new MockUtil().isMock(instance)) {
@@ -17,14 +17,8 @@
           field.set(testInstance,newSpyInstance(testInstance,field));
         }
       }
- catch (      IllegalAccessException e) {
-        throw new MockitoException("Problems initiating spied field " + field.getName(),e);
-      }
-catch (      InstantiationException e) {
-        throw new MockitoException("Problems initiating spied field " + field.getName(),e);
-      }
-catch (      InvocationTargetException e) {
-        throw new MockitoException("Problems initiating spied field " + field.getName(),e);
+ catch (      Exception e) {
+        throw new MockitoException("Problems initiating @Spy annotated field '" + field.getName() + "'",e);
       }
     }
   }
