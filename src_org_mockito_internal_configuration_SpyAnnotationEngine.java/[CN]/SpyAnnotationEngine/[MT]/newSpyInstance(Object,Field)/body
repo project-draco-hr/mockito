@@ -27,6 +27,6 @@
     }
   }
  catch (  NoSuchMethodException noDefaultConstructor) {
-    throw new MockitoException("0-arg constructor is required to spy " + type);
+    throw new MockitoException("Unable to initialize @Spy annotated field '" + field.getName() + "'. Please ensure that the type '"+ type.getSimpleName()+ "' has 0-arg constructor.");
   }
 }

@@ -17,7 +17,10 @@
           field.set(testInstance,newSpyInstance(testInstance,field));
         }
       }
- catch (      Exception e) {
+ catch (      MockitoException e) {
+        throw e;
+      }
+catch (      Exception e) {
         throw new MockitoException("Problems initiating @Spy annotated field '" + field.getName() + "'",e);
       }
     }

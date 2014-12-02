@@ -7,6 +7,6 @@ class FailingSpy {
     fail();
   }
  catch (  MockitoException e) {
-    Assertions.assertThat(e.getMessage()).contains("0-arg constructor is required");
+    Assertions.assertThat(e.getMessage()).contains("0-arg constructor");
   }
 }
