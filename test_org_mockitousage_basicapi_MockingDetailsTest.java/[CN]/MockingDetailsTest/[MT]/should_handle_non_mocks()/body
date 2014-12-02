@@ -1,0 +1,6 @@
+{
+  assertFalse(mockingDetails("non mock").isSpy());
+  assertFalse(mockingDetails("non mock").isMock());
+  assertFalse(mockingDetails(null).isSpy());
+  assertFalse(mockingDetails(null).isMock());
+}

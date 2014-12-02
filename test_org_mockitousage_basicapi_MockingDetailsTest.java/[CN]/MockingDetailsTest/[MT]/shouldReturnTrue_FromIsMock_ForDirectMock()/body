@@ -1,3 +1,0 @@
-{
-  assertTrue(mockingDetails(mock2).isMock());
-}

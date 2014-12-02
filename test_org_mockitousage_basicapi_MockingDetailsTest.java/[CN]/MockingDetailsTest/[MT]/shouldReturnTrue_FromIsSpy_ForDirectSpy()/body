@@ -1,3 +1,0 @@
-{
-  assertTrue(mockingDetails(spy2).isSpy());
-}

@@ -1,0 +1,6 @@
+{
+  assertTrue(mockingDetails(annotatedMock).isMock());
+  assertTrue(mockingDetails(mock(TestClass.class)).isMock());
+  assertFalse(mockingDetails(annotatedMock).isSpy());
+  assertFalse(mockingDetails(mock(TestClass.class)).isSpy());
+}

@@ -1,0 +1,10 @@
+{
+  assertTrue(mockingDetails(annotatedSpy).isMock());
+  assertTrue(mockingDetails(spy(new TestClass())).isMock());
+  assertTrue(mockingDetails(spy(TestClass.class)).isMock());
+  assertTrue(mockingDetails(mock(TestClass.class,withSettings().defaultAnswer(Mockito.CALLS_REAL_METHODS))).isMock());
+  assertTrue(mockingDetails(annotatedSpy).isSpy());
+  assertTrue(mockingDetails(spy(new TestClass())).isSpy());
+  assertTrue(mockingDetails(spy(TestClass.class)).isSpy());
+  assertTrue(mockingDetails(mock(TestClass.class,withSettings().defaultAnswer(Mockito.CALLS_REAL_METHODS))).isSpy());
+}
