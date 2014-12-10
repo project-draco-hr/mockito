@@ -1,3 +1,11 @@
 {
-  fail();
+  when(switcher.isEnabled(anyString())).thenThrow(new RuntimeException("Boo!"));
+  try {
+    finder.findPluginClass((Iterable)asList(new File("xxx").toURI().toURL()));
+    fail();
+  }
+ catch (  Exception e) {
+    assertContains("xxx",e.getMessage());
+    e.getCause().getMessage().equals("Boo!");
+  }
 }
