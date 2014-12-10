@@ -1,0 +1,7 @@
+{
+  List<T> out=new LinkedList<T>();
+  while (in.hasMoreElements()) {
+    out.add(in.nextElement());
+  }
+  return out;
+}
