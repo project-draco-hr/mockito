@@ -1,3 +1,0 @@
-{
-  assertEquals(Arrays.asList("a"),ClassPathLoader.readerToLines(new StringReader("a")));
-}

@@ -1,0 +1,3 @@
+{
+  assertEquals("a",PluginLoader.stripCommentAndWhitespace(" a #b"));
+}

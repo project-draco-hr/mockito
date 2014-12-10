@@ -1,3 +1,0 @@
-{
-  return findPluginImplementation(MockMaker.class,DEFAULT_MOCK_MAKER_CLASS);
-}
