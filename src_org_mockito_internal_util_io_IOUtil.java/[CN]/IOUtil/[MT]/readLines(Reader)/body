@@ -8,7 +8,7 @@
     }
   }
  catch (  IOException e) {
-    throw new MockitoException("Problems reading from: " + reader);
+    throw new MockitoException("Problems reading from: " + reader,e);
   }
   return out;
 }

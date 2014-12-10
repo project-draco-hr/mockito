@@ -5,7 +5,7 @@
     pw.write(text);
   }
  catch (  Exception e) {
-    throw new MockitoException("Problems writing text to file: " + output);
+    throw new MockitoException("Problems writing text to file: " + output,e);
   }
  finally {
     close(pw);

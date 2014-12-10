@@ -4,7 +4,7 @@
       closeable.close();
     }
  catch (    IOException e) {
-      throw new MockitoException("Problems closing stream: " + closeable);
+      throw new MockitoException("Problems closing stream: " + closeable,e);
     }
   }
 }
