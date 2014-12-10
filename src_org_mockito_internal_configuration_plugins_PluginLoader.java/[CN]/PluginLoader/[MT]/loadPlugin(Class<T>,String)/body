@@ -1,5 +1,6 @@
 {
-  for (  T plugin : loadImplementations(pluginType)) {
+  T plugin=loadImpl(pluginType);
+  if (plugin != null) {
     return plugin;
   }
   try {
