@@ -1,0 +1,6 @@
+{
+  if (explosive.get() != null) {
+    throw new RuntimeException("Ka-boom!");
+  }
+  return super.createMock(settings,handler);
+}

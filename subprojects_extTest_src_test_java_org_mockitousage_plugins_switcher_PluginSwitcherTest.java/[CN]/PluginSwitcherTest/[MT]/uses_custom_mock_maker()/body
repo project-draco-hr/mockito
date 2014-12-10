@@ -1,0 +1,9 @@
+{
+  MyMockMaker.explosive.set(new Object());
+  try {
+    mock(List.class);
+    fail();
+  }
+ catch (  Exception e) {
+  }
+}

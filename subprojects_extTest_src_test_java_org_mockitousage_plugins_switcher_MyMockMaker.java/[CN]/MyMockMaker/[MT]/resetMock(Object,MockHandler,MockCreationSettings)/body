@@ -1,0 +1,3 @@
+{
+  super.resetMock(mock,newHandler,settings);
+}
