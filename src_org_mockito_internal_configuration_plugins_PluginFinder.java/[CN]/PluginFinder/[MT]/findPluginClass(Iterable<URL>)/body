@@ -1,0 +1,23 @@
+{
+  for (  URL resource : resources) {
+    InputStream s=null;
+    try {
+      s=resource.openStream();
+      String pluginClassName=new PluginFileReader().readPluginClass(s);
+      if (pluginClassName == null) {
+        continue;
+      }
+      if (!pluginSwitcher.isEnabled(pluginClassName)) {
+        continue;
+      }
+      return pluginClassName;
+    }
+ catch (    Exception e) {
+      throw new MockitoException("Problems reading plugin implementation from: " + resource,e);
+    }
+ finally {
+      IOUtil.closeQuietly(s);
+    }
+  }
+  return null;
+}

@@ -1,5 +1,5 @@
 {
-  for (  String line : IOUtil.readLines(reader)) {
+  for (  String line : IOUtil.readLines(input)) {
     String stripped=stripCommentAndWhitespace(line);
     if (stripped.length() > 0) {
       return stripped;

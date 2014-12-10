@@ -11,24 +11,16 @@
     throw new MockitoException("Failed to load " + service,e);
   }
   List<T> result=new ArrayList<T>();
-  for (  URL resource : Collections.list(resources)) {
-    try {
-      InputStream in=resource.openStream();
-      InputStreamReader reader=new InputStreamReader(in,"UTF-8");
-      String className=new PluginFileReader().readPluginClass(reader);
-      if (className == null) {
-        continue;
-      }
-      if (!pluginSwitcher.isEnabled(className)) {
-        continue;
-      }
-      Class<?> pluginClass=loader.loadClass(className);
+  try {
+    String foundPluginClass=new PluginFinder(pluginSwitcher).findPluginClass(Iterables.toIterable(resources));
+    if (foundPluginClass != null) {
+      Class<?> pluginClass=loader.loadClass(foundPluginClass);
       Object plugin=pluginClass.newInstance();
       result.add(service.cast(plugin));
     }
- catch (    Exception e) {
-      throw new MockitoConfigurationException("Failed to load " + service + " using "+ resource,e);
-    }
+    return result;
   }
-  return result;
+ catch (  Exception e) {
+    throw new MockitoConfigurationException("Failed to load " + service + " implementation declared in "+ resources,e);
+  }
 }

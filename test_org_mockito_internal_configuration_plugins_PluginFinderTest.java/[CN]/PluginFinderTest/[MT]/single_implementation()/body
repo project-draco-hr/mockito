@@ -1,0 +1,5 @@
+{
+  File f=tmp.newFile();
+  IOUtil.writeText("  foo.Foo  ",f);
+  assertEquals("foo.Foo",finder.findPluginClass((Iterable)asList(f.toURI().toURL())));
+}

@@ -1,0 +1,3 @@
+{
+  assertNull(finder.findPluginClass((Iterable)asList()));
+}
