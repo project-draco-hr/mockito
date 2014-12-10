@@ -1,0 +1,10 @@
+{
+  List<String> lines=readerToLines(reader);
+  for (  String line : lines) {
+    String stripped=stripCommentAndWhitespace(line);
+    if (stripped.length() > 0) {
+      return stripped;
+    }
+  }
+  return null;
+}

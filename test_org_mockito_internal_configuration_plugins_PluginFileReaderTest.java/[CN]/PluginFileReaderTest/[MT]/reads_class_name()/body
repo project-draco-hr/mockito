@@ -1,0 +1,7 @@
+{
+  assertEquals("java.lang.String",reader.readPluginClass(new StringReader("java.lang.String")));
+  assertEquals("x",reader.readPluginClass(new StringReader("x")));
+  assertEquals("x y z",reader.readPluginClass(new StringReader(" x y z ")));
+  assertEquals("foo.Foo",reader.readPluginClass(new StringReader(" #my class\n  foo.Foo \n #other class ")));
+  assertEquals("foo.Foo",reader.readPluginClass(new StringReader("foo.Foo  # cool class")));
+}
