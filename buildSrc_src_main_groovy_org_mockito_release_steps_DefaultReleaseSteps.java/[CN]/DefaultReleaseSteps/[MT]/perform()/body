@@ -9,7 +9,7 @@
     }
  catch (    Throwable t) {
       rollback(attempted);
-      throw new RuntimeException("Release failed. Rollback was performed.",t);
+      throw new RuntimeException("Release failed at step " + attempted.size() + " ("+ step.getDescription()+ "). Rollback was performed.",t);
     }
   }
 }
