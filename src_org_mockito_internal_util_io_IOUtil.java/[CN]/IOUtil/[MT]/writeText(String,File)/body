@@ -1,0 +1,13 @@
+{
+  PrintWriter pw=null;
+  try {
+    pw=new PrintWriter(new FileWriter(output));
+    pw.write(text);
+  }
+ catch (  Exception e) {
+    throw new MockitoException("Problems writing text to file: " + output);
+  }
+ finally {
+    close(pw);
+  }
+}

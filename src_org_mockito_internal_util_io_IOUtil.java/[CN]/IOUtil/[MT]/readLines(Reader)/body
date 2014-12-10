@@ -1,0 +1,14 @@
+{
+  List<String> out=new LinkedList<String>();
+  BufferedReader r=new BufferedReader(reader);
+  String line;
+  try {
+    while ((line=r.readLine()) != null) {
+      out.add(line);
+    }
+  }
+ catch (  IOException e) {
+    throw new MockitoException("Problems reading from: " + reader);
+  }
+  return out;
+}

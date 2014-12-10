@@ -1,0 +1,7 @@
+{
+  try {
+    close(closeable);
+  }
+ catch (  MockitoException ignored) {
+  }
+}
