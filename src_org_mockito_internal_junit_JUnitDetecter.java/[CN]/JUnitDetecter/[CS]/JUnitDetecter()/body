@@ -1,0 +1,9 @@
+{
+  try {
+    Class.forName("junit.framework.ComparisonFailure");
+    hasJUnit=true;
+  }
+ catch (  Throwable t) {
+    hasJUnit=false;
+  }
+}
