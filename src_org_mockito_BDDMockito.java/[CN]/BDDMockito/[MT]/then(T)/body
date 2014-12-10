@@ -1,3 +1,3 @@
 {
-  return new Then<T>(mock);
+  return new ThenImpl<T>(mock);
 }
