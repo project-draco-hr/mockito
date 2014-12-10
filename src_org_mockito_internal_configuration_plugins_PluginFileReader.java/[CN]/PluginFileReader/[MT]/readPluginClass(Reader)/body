@@ -1,16 +1,9 @@
 {
-  BufferedReader lineReader=new BufferedReader(reader);
-  try {
-    String line;
-    while ((line=lineReader.readLine()) != null) {
-      String stripped=stripCommentAndWhitespace(line);
-      if (stripped.length() > 0) {
-        return stripped;
-      }
+  for (  String line : IOUtil.readLines(reader)) {
+    String stripped=stripCommentAndWhitespace(line);
+    if (stripped.length() > 0) {
+      return stripped;
     }
-    return null;
   }
-  finally {
-    closeQuietly(lineReader);
-  }
+  return null;
 }
