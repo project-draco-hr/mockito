@@ -12,7 +12,7 @@
   }
   List<T> result=new ArrayList<T>();
   try {
-    String foundPluginClass=new PluginFinder(pluginSwitcher).findPluginClass(Iterables.toIterable(resources));
+    String foundPluginClass=new PluginFinder(pluginSwitch).findPluginClass(Iterables.toIterable(resources));
     if (foundPluginClass != null) {
       Class<?> pluginClass=loader.loadClass(foundPluginClass);
       Object plugin=pluginClass.newInstance();

@@ -1,0 +1,4 @@
+{
+  mock(List.class);
+  assertEquals(MyPluginSwitch.invokedFor,asList(MyMockMaker.class.getName(),MyStackTraceCleanerProvider.class.getName()));
+}

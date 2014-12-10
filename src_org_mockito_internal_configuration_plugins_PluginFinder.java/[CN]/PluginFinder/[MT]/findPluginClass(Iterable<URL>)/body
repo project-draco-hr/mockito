@@ -7,7 +7,7 @@
       if (pluginClassName == null) {
         continue;
       }
-      if (!pluginSwitcher.isEnabled(pluginClassName)) {
+      if (!pluginSwitch.isEnabled(pluginClassName)) {
         continue;
       }
       return pluginClassName;
