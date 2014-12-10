@@ -15,8 +15,8 @@
     InputStream in=null;
     try {
       in=resource.openStream();
-      for (      String line : readerToLines(new InputStreamReader(in,"UTF-8"))) {
-        String name=stripCommentAndWhitespace(line);
+      for (      String line : reader.readerToLines(new InputStreamReader(in,"UTF-8"))) {
+        String name=reader.stripCommentAndWhitespace(line);
         if (name.length() != 0) {
           result.add(service.cast(loader.loadClass(name).newInstance()));
         }
@@ -26,7 +26,7 @@
       throw new MockitoConfigurationException("Failed to load " + service + " using "+ resource,e);
     }
  finally {
-      closeQuietly(in);
+      reader.closeQuietly(in);
     }
   }
   return result;

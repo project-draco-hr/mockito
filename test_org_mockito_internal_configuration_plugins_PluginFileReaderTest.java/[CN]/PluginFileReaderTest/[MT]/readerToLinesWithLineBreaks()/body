@@ -1,0 +1,3 @@
+{
+  assertEquals(Arrays.asList("a","b","c"),reader.readerToLines(new StringReader("a\nb\nc")));
+}

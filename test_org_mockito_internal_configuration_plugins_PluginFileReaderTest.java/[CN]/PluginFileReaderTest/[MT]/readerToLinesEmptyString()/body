@@ -1,0 +1,3 @@
+{
+  assertEquals(Collections.emptyList(),reader.readerToLines(new StringReader("")));
+}
