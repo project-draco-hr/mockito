@@ -1,0 +1,15 @@
+{
+  System.out.println("Release failed. Rolling back " + attempted.size() + " release steps.");
+  LinkedList<ReleaseStep> targets=new LinkedList<ReleaseStep>();
+  while (!targets.isEmpty()) {
+    ReleaseStep s=targets.removeLast();
+    Operation r=s.getRollback();
+    if (r != null) {
+      System.out.println("Rolling back step " + (targets.size() + 1) + " ("+ s.getDescription()+ ")");
+      r.perform();
+    }
+ else {
+      System.out.println("No rollback for step " + (targets.size() + 1) + " ("+ s.getDescription()+ ")");
+    }
+  }
+}

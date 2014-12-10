@@ -1,8 +1,15 @@
 {
   System.out.println("Performing " + steps.size() + " release steps");
-  int i=1;
+  List<ReleaseStep> attempted=new LinkedList<ReleaseStep>();
   for (  ReleaseStep step : steps) {
-    System.out.println("Step " + (i++) + ": "+ step.getDescription());
-    step.perform();
+    attempted.add(step);
+    System.out.println("Step " + attempted.size() + ": "+ step.getDescription());
+    try {
+      step.perform();
+    }
+ catch (    Throwable t) {
+      rollback(attempted);
+      throw new RuntimeException("Release failed. Rollback was performed.",t);
+    }
   }
 }
