@@ -19,6 +19,9 @@
       if (className == null) {
         continue;
       }
+      if (!pluginSwitcher.isEnabled(className)) {
+        continue;
+      }
       Class<?> pluginClass=loader.loadClass(className);
       Object plugin=pluginClass.newInstance();
       result.add(service.cast(plugin));

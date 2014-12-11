@@ -1,0 +1,4 @@
+{
+  invokedFor.add(pluginClassName);
+  return true;
+}
