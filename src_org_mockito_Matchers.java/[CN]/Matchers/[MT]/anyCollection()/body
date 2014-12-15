@@ -1,3 +1,3 @@
 {
-  return reportMatcher(Any.ANY).returnList();
+  return reportMatcher(new InstanceOf(Collection.class)).returnList();
 }

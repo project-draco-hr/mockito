@@ -7,12 +7,12 @@
   when(mock.forLong(anyLong())).thenReturn("5");
   when(mock.forFloat(anyFloat())).thenReturn("6");
   when(mock.forDouble(anyDouble())).thenReturn("7");
-  assertEquals("0",mock.forInteger(null));
-  assertEquals("1",mock.forCharacter(null));
-  assertEquals("2",mock.forShort(null));
-  assertEquals("3",mock.forByte(null));
-  assertEquals("4",mock.forBoolean(null));
-  assertEquals("5",mock.forLong(null));
-  assertEquals("6",mock.forFloat(null));
-  assertEquals("7",mock.forDouble(null));
+  assertEquals(null,mock.forInteger(null));
+  assertEquals(null,mock.forCharacter(null));
+  assertEquals(null,mock.forShort(null));
+  assertEquals(null,mock.forByte(null));
+  assertEquals(null,mock.forBoolean(null));
+  assertEquals(null,mock.forLong(null));
+  assertEquals(null,mock.forFloat(null));
+  assertEquals(null,mock.forDouble(null));
 }

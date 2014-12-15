@@ -1,6 +1,6 @@
 {
-  when(mock.oneArg(anyString())).thenReturn("1");
-  assertEquals("1",mock.oneArg(""));
-  assertEquals("1",mock.oneArg("any string"));
-  assertEquals(null,mock.oneArg((Object)null));
+  when(mock.oneArg(anyString())).thenReturn("matched");
+  assertEquals("matched",mock.oneArg(""));
+  assertEquals("matched",mock.oneArg("any string"));
+  assertEquals(null,mock.oneArg((String)null));
 }

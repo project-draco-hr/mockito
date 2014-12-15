@@ -1,6 +1,6 @@
 {
-  when(mock.forCollection(anyCollection())).thenReturn("x");
-  assertEquals("x",mock.forCollection(null));
-  assertEquals("x",mock.forCollection(Arrays.asList("x","y")));
-  verify(mock,times(2)).forCollection(anyCollection());
+  when(mock.forCollection(anyCollection())).thenReturn("matched");
+  assertEquals("matched",mock.forCollection(Arrays.asList("x","y")));
+  assertEquals(null,mock.forCollection(null));
+  verify(mock,times(1)).forCollection(anyCollection());
 }
