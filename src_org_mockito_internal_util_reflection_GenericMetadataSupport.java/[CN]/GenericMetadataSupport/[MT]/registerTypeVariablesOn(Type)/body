@@ -11,7 +11,7 @@
     if (actualTypeArgument instanceof WildcardType) {
       contextualActualTypeParameters.put(typeParameter,boundsOf((WildcardType)actualTypeArgument));
     }
- else {
+ else     if (typeParameter != actualTypeArgument) {
       contextualActualTypeParameters.put(typeParameter,actualTypeArgument);
     }
   }
