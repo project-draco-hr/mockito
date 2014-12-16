@@ -1,0 +1,3 @@
+{
+  assertThat(inferFrom(MyClass2.class).resolveGenericReturnType(MyClass2.class.getMethod("getNested")).rawType()).isEqualTo(MyClass3.class);
+}
