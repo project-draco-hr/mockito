@@ -1,0 +1,4 @@
+{
+  this.previousUser=previousUser;
+  this.previousEmail=previousEmail;
+}
