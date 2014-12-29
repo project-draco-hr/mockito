@@ -1,6 +1,6 @@
 {
   System.out.println("Performing " + steps.size() + " release steps");
-  List<ReleaseStep> attempted=new LinkedList<ReleaseStep>();
+  LinkedList<ReleaseStep> attempted=new LinkedList<ReleaseStep>();
   for (  ReleaseStep step : steps) {
     attempted.add(step);
     System.out.println("Step " + attempted.size() + ": "+ step.getDescription());
@@ -10,6 +10,14 @@
  catch (    Throwable t) {
       rollback(attempted);
       throw new RuntimeException("Release failed at step " + attempted.size() + " ("+ step.getDescription()+ "). Rollback was performed.",t);
+    }
+  }
+  while (!attempted.isEmpty()) {
+    ReleaseStep step=attempted.removeLast();
+    Operation cleanup=step.getCleanup();
+    if (cleanup != null) {
+      System.out.println("Found cleanup operation for step " + (attempted.size() + 1) + " ("+ step.getDescription()+ ")");
+      cleanup.perform();
     }
   }
 }
