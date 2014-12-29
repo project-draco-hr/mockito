@@ -1,4 +1,5 @@
 {
   this.previousUser=previousUser;
   this.previousEmail=previousEmail;
+  this.runner=runner;
 }

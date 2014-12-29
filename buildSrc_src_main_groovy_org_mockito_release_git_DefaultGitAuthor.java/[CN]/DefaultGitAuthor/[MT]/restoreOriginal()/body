@@ -1,2 +1,14 @@
 {
+  if (!previousUser.isEmpty()) {
+    runner.run("git","config","--local","user.name",previousUser);
+  }
+ else {
+    runner.run("git","config","--local","--unset","user.name");
+  }
+  if (!previousEmail.isEmpty()) {
+    runner.run("git","config","--local","user.email",previousEmail);
+  }
+ else {
+    runner.run("git","config","--local","--unset","user.email");
+  }
 }
