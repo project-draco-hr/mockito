@@ -1,0 +1,7 @@
+{
+  return new GitAuthor(){
+    public void restoreOriginal(){
+    }
+  }
+;
+}
