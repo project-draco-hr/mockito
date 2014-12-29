@@ -1,0 +1,11 @@
+{
+  if (rollback != null) {
+    rollback.perform();
+  }
+ else   if (cleanup != null) {
+    cleanup.perform();
+  }
+ else {
+    System.out.println("No rollback or cleanup operation found for step '" + description + "'");
+  }
+}
