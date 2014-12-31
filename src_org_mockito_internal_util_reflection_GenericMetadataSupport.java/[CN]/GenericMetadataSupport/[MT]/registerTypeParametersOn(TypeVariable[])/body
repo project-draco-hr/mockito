@@ -1,5 +1,5 @@
 {
-  for (  TypeVariable typeVariable : typeParameters) {
-    registerTypeVariableIfNotPresent(typeVariable);
+  for (  TypeVariable type : typeParameters) {
+    registerTypeVariableIfNotPresent(type);
   }
 }
