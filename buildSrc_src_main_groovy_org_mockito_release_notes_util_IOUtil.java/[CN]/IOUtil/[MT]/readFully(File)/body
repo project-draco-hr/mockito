@@ -1,0 +1,8 @@
+{
+  try {
+    return readNow(new FileInputStream(input));
+  }
+ catch (  Exception e) {
+    throw new RuntimeException("Problems reading file: " + input,e);
+  }
+}
