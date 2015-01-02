@@ -1,0 +1,8 @@
+{
+  VersionBumper bumper=new VersionBumper();
+  version=bumper.incrementVersion(this.version);
+  String content=IOUtil.readFully(versionFile);
+  String updated=content.replaceAll("(?m)^version=(.*?)\n","version=" + version + "\n");
+  IOUtil.writeFile(versionFile,updated);
+  return version;
+}

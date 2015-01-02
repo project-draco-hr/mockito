@@ -1,0 +1,7 @@
+{
+  this.versionFile=versionFile;
+  this.version=readVersion(versionFile);
+  if (version == null) {
+    throw new IllegalArgumentException("Missing 'version=' property in file: " + versionFile);
+  }
+}

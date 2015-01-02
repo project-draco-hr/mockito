@@ -1,3 +1,0 @@
-{
-  return new DefaultVersionTool(new VersionBumper());
-}
