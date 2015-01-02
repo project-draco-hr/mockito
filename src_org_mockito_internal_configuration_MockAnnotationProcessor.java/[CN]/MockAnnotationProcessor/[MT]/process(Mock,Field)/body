@@ -12,6 +12,6 @@
   if (annotation.serializable()) {
     mockSettings.serializable();
   }
-  mockSettings.defaultAnswer(annotation.answer().get());
+  mockSettings.defaultAnswer(annotation.answer());
   return Mockito.mock(field.getType(),mockSettings);
 }

@@ -1,6 +1,6 @@
 {
   if (Modifier.isAbstract(invocation.getMethod().getModifiers())) {
-    return Answers.RETURNS_DEFAULTS.get().answer(invocation);
+    return RETURNS_DEFAULTS.answer(invocation);
   }
   return invocation.callRealMethod();
 }
