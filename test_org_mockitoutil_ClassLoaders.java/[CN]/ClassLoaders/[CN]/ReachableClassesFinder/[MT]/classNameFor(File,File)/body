@@ -1,0 +1,4 @@
+{
+  String temp=file.getAbsolutePath().substring(root.getAbsolutePath().length() + 1).replace('/','.');
+  return temp.subSequence(0,temp.indexOf(".class")).toString();
+}

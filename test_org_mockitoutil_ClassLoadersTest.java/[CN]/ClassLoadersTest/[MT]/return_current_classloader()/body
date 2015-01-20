@@ -1,0 +1,3 @@
+{
+  assertThat(currentClassLoader()).isEqualTo(this.getClass().getClassLoader());
+}

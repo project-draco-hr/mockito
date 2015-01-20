@@ -1,0 +1,6 @@
+{
+  for (  String filter : packageFilters) {
+    if (qualifiedName.contains(filter))     return false;
+  }
+  return true;
+}

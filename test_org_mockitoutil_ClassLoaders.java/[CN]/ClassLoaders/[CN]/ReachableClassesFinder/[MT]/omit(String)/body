@@ -1,0 +1,4 @@
+{
+  this.qualifiedNameSubstring.addAll(Arrays.asList(qualifiedNameSubstring));
+  return this;
+}

@@ -1,2 +1,3 @@
+ClassLoader classLoader
 URL[] urls
 ArrayList<String> privateCopyPrefixes

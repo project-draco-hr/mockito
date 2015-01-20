@@ -1,0 +1,3 @@
+{
+  return new MemURLConnection(url,inMemoryClassLoader);
+}

@@ -1,0 +1,6 @@
+{
+  String qualifiedName=uri.getSchemeSpecificPart();
+  if (excludes(qualifiedName,qualifiedNameSubstring)) {
+    classes.add(qualifiedName);
+  }
+}

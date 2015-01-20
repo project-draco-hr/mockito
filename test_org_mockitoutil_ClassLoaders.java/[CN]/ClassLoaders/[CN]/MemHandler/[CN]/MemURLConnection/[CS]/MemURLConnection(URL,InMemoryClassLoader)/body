@@ -1,0 +1,5 @@
+{
+  super(url);
+  this.inMemoryClassLoader=inMemoryClassLoader;
+  qualifiedName=url.getPath();
+}
