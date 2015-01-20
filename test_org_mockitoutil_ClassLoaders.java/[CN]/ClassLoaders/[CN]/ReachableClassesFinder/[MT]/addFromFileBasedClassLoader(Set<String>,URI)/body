@@ -1,0 +1,4 @@
+{
+  File root=new File(uri);
+  classes.addAll(findClassQualifiedNames(root,root,qualifiedNameSubstring));
+}

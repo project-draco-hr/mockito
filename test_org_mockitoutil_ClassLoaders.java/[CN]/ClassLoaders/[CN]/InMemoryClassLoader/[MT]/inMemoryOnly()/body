@@ -1,0 +1,19 @@
+{
+  final Set<String> names=inMemoryClassObjects.keySet();
+  return new Enumeration<URL>(){
+    private final MemHandler memHandler=new MemHandler(InMemoryClassLoader.this);
+    private final Iterator<String> it=names.iterator();
+    public boolean hasMoreElements(){
+      return it.hasNext();
+    }
+    public URL nextElement(){
+      try {
+        return new URL(null,SCHEME + ":" + it.next(),memHandler);
+      }
+ catch (      MalformedURLException rethrown) {
+        throw new IllegalStateException(rethrown);
+      }
+    }
+  }
+;
+}

@@ -1,0 +1,19 @@
+{
+  if (file.isDirectory()) {
+    File[] files=file.listFiles();
+    Set<String> classes=new HashSet<String>();
+    for (    File children : files) {
+      classes.addAll(findClassQualifiedNames(root,children,packageFilters));
+    }
+    return classes;
+  }
+ else {
+    if (file.getName().endsWith(".class")) {
+      String qualifiedName=classNameFor(root,file);
+      if (excludes(qualifiedName,packageFilters)) {
+        return Collections.singleton(qualifiedName);
+      }
+    }
+  }
+  return Collections.emptySet();
+}

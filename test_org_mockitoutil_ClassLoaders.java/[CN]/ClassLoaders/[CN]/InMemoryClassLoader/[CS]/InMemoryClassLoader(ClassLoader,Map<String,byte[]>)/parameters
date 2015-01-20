@@ -1,0 +1,2 @@
+ClassLoader parent
+Map<String,byte[]> inMemoryClassObjects

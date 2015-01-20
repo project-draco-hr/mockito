@@ -1,0 +1,6 @@
+{
+  assertThat(jdkClassLoader()).isNotEqualTo(Mockito.class.getClassLoader());
+  assertThat(jdkClassLoader()).isNotEqualTo(ClassLoaders.class.getClassLoader());
+  assertThat(jdkClassLoader()).isEqualTo(Number.class.getClassLoader());
+  assertThat(jdkClassLoader()).isEqualTo(null);
+}
