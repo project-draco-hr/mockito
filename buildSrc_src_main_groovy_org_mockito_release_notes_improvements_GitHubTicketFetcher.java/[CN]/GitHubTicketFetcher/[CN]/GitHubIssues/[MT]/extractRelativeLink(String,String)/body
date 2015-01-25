@@ -1,0 +1,11 @@
+{
+  if (linkHeader == null) {
+    return null;
+  }
+  for (  String linkRel : linkHeader.split(",")) {
+    if (linkRel.contains("rel=\"" + relativeType + "\"")) {
+      return linkRel.substring(linkRel.indexOf("http"),linkRel.indexOf(">; rel=\"" + relativeType + "\""));
+    }
+  }
+  return RELATIVE_LINK_NOT_FOUND;
+}

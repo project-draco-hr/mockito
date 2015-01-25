@@ -1,0 +1,18 @@
+{
+  if (tickets.isEmpty()) {
+    return Collections.emptyList();
+  }
+  ArrayList<Improvement> pagedImprovements=new ArrayList<>();
+  for (  JSONObject issue : issues) {
+    long id=(Long)issue.get("number");
+    if (tickets.remove(id)) {
+      String issueUrl=(String)issue.get("html_url");
+      String title=(String)issue.get("title");
+      pagedImprovements.add(new Improvement(id,title,issueUrl,new HashSet<String>()));
+      if (tickets.isEmpty()) {
+        return pagedImprovements;
+      }
+    }
+  }
+  return pagedImprovements;
+}

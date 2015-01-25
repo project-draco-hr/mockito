@@ -1,0 +1,10 @@
+{
+  if (page.isEmpty()) {
+    return tickets;
+  }
+  Long highestId=(Long)page.get(0).get("number");
+  while (!tickets.isEmpty() && tickets.peek() > highestId) {
+    tickets.poll();
+  }
+  return tickets;
+}

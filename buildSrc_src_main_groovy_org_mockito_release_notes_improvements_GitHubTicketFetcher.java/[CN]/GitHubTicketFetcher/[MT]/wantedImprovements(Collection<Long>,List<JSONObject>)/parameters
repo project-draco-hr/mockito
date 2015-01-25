@@ -1,0 +1,2 @@
+Collection<Long> tickets
+List<JSONObject> issues

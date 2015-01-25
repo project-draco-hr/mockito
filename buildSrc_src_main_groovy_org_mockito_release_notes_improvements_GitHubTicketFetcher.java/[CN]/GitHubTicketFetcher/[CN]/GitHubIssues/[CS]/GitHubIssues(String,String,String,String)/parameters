@@ -1,0 +1,4 @@
+String authToken
+String state
+String filter
+String direction

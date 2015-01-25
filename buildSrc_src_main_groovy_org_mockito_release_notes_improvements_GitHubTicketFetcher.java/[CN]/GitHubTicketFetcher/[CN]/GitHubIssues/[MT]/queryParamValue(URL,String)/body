@@ -1,0 +1,9 @@
+{
+  String query=url.getQuery();
+  for (  String param : query.split("&")) {
+    if (param.startsWith(page)) {
+      return param.substring(param.indexOf('=') + 1,param.length());
+    }
+  }
+  return "N/A";
+}

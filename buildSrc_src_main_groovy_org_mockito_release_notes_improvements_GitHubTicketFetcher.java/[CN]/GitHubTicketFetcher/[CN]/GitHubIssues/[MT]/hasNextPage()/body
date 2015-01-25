@@ -1,0 +1,3 @@
+{
+  return !RELATIVE_LINK_NOT_FOUND.equals(nextPageUrl);
+}
