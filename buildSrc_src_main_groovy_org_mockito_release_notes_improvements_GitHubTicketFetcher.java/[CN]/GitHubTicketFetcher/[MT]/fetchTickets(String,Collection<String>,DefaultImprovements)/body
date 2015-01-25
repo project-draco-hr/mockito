@@ -3,14 +3,13 @@
     return;
   }
   LOG.info("Querying GitHub API for {} tickets",ticketIds.size());
-  String url="https://api.github.com/repos/mockito/mockito/issues?access_token=" + authToken;
-  url+="&state=closed&filter=all";
-  Set<Long> tickets=new HashSet<Long>();
-  for (  String id : ticketIds) {
-    tickets.add(Long.parseLong(id));
-  }
+  Queue<Long> tickets=queuedTicketNumbers(ticketIds);
   try {
-    fetch(tickets,improvements,url);
+    GitHubIssues issues=GitHubIssues.authenticatingWith(authToken).state("closed").filter("all").direction("desc").browse();
+    while (!tickets.isEmpty() && issues.hasNextPage()) {
+      List<JSONObject> page=issues.nextPage();
+      improvements.addAll(wantedImprovements(dropTicketsAboveMaxInPage(tickets,page),page));
+    }
   }
  catch (  Exception e) {
     throw new RuntimeException("Problems fetching " + ticketIds.size() + " from GitHub",e);

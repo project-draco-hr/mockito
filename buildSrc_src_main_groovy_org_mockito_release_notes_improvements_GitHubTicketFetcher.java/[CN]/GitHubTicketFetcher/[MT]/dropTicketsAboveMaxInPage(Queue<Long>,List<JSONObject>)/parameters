@@ -1,0 +1,2 @@
+Queue<Long> tickets
+List<JSONObject> page
