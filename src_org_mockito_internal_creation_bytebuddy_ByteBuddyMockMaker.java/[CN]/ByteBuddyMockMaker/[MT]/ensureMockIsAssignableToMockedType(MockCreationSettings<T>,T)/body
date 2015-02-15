@@ -1,9 +1,4 @@
 {
   Class<T> typeToMock=settings.getTypeToMock();
-  try {
-    return typeToMock.cast(mock);
-  }
- catch (  ClassCastException cce) {
-    throw new MockitoException(join("ClassCastException occurred while creating the mockito mock :","  class to mock : '" + typeToMock.getCanonicalName() + "', loaded by classloader : '"+ typeToMock.getClassLoader()+ "'","  imposterizing class : '" + mock.getClass().getCanonicalName() + "', loaded by classloader : '"+ mock.getClass().getClassLoader()+ "'","","You might experience classloading issues, please ask the mockito mailing-list.",""),cce);
-  }
+  return typeToMock.cast(mock);
 }
