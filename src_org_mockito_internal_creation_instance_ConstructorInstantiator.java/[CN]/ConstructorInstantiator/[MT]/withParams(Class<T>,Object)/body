@@ -3,7 +3,7 @@
     for (    Constructor<?> constructor : cls.getDeclaredConstructors()) {
       Class<?>[] types=constructor.getParameterTypes();
       if (paramsMatch(types,params)) {
-        return (T)constructor.newInstance(params);
+        return invokeConstructor(constructor,params);
       }
     }
   }

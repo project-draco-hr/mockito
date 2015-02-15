@@ -1,3 +1,3 @@
 {
-  return new InstantationException("Unable to create instance of '" + cls.getSimpleName() + "'.\nPlease ensure that the outer instance has correct type and that the target class has 0-arg constructor.",e);
+  return new InstantiationException(join("Unable to create instance of '" + cls.getSimpleName() + "'.","Please ensure that the outer instance has correct type and that the target class has 0-arg constructor."),e);
 }

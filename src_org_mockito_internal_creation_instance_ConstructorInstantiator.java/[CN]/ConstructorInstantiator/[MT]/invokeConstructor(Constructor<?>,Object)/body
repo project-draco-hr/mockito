@@ -1,0 +1,5 @@
+{
+  AccessibilityChanger accessibility=new AccessibilityChanger();
+  accessibility.enableAccess(constructor);
+  return (T)constructor.newInstance(params);
+}

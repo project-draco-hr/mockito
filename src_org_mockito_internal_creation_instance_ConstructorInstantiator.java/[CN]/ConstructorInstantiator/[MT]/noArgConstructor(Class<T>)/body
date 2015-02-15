@@ -1,8 +1,8 @@
 {
   try {
-    return cls.newInstance();
+    return invokeConstructor(cls.getDeclaredConstructor());
   }
  catch (  Throwable t) {
-    throw new InstantationException("Unable to create instance of '" + cls.getSimpleName() + "'.\nPlease ensure it has 0-arg constructor which invokes cleanly.",t);
+    throw new InstantiationException(join("Unable to create instance of '" + cls.getSimpleName() + "'.","Please ensure it has 0-arg constructor which invokes cleanly."),t);
   }
 }
