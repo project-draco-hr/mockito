@@ -1,5 +1,5 @@
 {
   this.handler=handler;
   this.mockCreationSettings=mockCreationSettings;
-  acrossJVMSerializationFeature=new AcrossJVMSerializationFeature();
+  serializationSupport=new ByteBuddyCrossClassLoaderSerializationSupport();
 }

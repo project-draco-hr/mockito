@@ -1,0 +1,8 @@
+{
+  if (CrossClassLoaderSerializableMock.class.isAssignableFrom(cl)) {
+    return MOCKITO_PROXY_MARKER;
+  }
+ else {
+    return NOTHING;
+  }
+}

@@ -1,0 +1,3 @@
+{
+  return cachingMockBytecodeGenerator.get(mockFeatures);
+}

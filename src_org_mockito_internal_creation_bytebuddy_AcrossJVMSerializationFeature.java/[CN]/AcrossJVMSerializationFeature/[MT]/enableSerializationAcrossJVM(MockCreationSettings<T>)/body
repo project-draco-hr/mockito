@@ -1,5 +1,0 @@
-{
-  if (settings.getSerializableMode() == SerializableMode.ACROSS_CLASSLOADERS) {
-    settings.getExtraInterfaces().add(AcrossJVMMockitoMockSerializable.class);
-  }
-}

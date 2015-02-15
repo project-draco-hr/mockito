@@ -1,8 +1,0 @@
-{
-  try {
-    return generator.generateMockClass(mockedType,interfaces);
-  }
- catch (  Exception bytecodeGenerationFailed) {
-    throw prettifyFailure(mockedType,bytecodeGenerationFailed);
-  }
-}

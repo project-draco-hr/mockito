@@ -1,8 +1,5 @@
 {
-  if (settings.getSerializableMode() == SerializableMode.ACROSS_CLASSLOADERS) {
-    throw new MockitoException("Serialization across classloaders not yet supported with ByteBuddyMockMaker");
-  }
-  Class<? extends T> mockedProxyType=cachingMockBytecodeGenerator.get(settings.getTypeToMock(),settings.getExtraInterfaces());
+  Class<T> mockedProxyType=createProxyClass(mockWithFeaturesFrom(settings));
   Instantiator instantiator=new InstantiatorProvider().getInstantiator(settings);
   T mockInstance=null;
   try {
