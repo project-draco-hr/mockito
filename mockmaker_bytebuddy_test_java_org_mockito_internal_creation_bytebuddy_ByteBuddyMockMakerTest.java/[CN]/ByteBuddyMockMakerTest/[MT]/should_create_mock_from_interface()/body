@@ -1,0 +1,5 @@
+{
+  SomeInterface proxy=mockMaker.createMock(settingsFor(SomeInterface.class),dummyH());
+  Class superClass=proxy.getClass().getSuperclass();
+  assertThat(superClass).isEqualTo(Object.class);
+}

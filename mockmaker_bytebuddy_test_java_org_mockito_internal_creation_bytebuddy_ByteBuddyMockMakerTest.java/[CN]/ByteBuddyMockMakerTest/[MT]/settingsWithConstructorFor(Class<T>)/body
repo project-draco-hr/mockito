@@ -1,0 +1,5 @@
+{
+  MockSettingsImpl<T> mockSettings=new MockSettingsImpl<T>();
+  mockSettings.setTypeToMock(type);
+  return mockSettings;
+}
