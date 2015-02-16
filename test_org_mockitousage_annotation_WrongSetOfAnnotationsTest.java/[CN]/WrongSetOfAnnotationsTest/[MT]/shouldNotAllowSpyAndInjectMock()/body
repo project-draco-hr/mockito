@@ -1,6 +1,0 @@
-{
-  MockitoAnnotations.initMocks(new Object(){
-    @InjectMocks @Spy List mock;
-  }
-);
-}

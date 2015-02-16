@@ -1,0 +1,22 @@
+{
+  try {
+    MockitoAnnotations.initMocks(new Object(){
+      @InjectMocks @Spy List mock;
+    }
+);
+    fail();
+  }
+ catch (  MockitoException me) {
+    Assertions.assertThat(me.getMessage()).contains("'List' is an interface");
+  }
+  try {
+    MockitoAnnotations.initMocks(new Object(){
+      @Spy List mock;
+    }
+);
+    fail();
+  }
+ catch (  MockitoException me) {
+    Assertions.assertThat(me.getMessage()).contains("'List' is an interface");
+  }
+}
