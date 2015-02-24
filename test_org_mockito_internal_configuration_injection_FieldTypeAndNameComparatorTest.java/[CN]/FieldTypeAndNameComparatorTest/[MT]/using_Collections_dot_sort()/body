@@ -1,5 +1,5 @@
 {
   List<Field> unsortedFields=Arrays.asList(field("objectB"),field("integerB"),field("numberA"),field("numberB"),field("objectA"),field("integerA"));
-  Collections.sort(unsortedFields,cmp);
+  PropertyAndSetterInjection.sortSuperTypesLast(unsortedFields);
   assertThat(unsortedFields).containsSequence(field("integerA"),field("integerB"),field("numberA"),field("numberB"),field("objectA"),field("objectB"));
 }

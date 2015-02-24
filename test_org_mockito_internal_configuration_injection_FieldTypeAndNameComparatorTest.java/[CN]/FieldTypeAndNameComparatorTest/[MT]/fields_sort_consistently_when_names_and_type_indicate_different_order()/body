@@ -1,0 +1,3 @@
+{
+  assertSortConsistently(field("xNumber"),field("yIterable"),field("zInteger"));
+}
