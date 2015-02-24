@@ -1,4 +1,4 @@
 {
-  assertThat(new PropertyAndSetterInjection.FieldTypeAndNameComparator().compare(field("numberA"),field("objectB"))).isEqualTo(-1);
-  assertThat(new PropertyAndSetterInjection.FieldTypeAndNameComparator().compare(field("objectB"),field("numberA"))).isEqualTo(1);
+  assertThat(cmp.compare(field("numberA"),field("objectB"))).isEqualTo(-1);
+  assertThat(cmp.compare(field("objectB"),field("numberA"))).isEqualTo(1);
 }
