@@ -1,0 +1,8 @@
+{
+  Field[][] initialOrderings={{a,b,c},{a,c,b},{b,a,c},{b,c,a},{c,a,b},{c,b,a}};
+  Set<List<Field>> results=new HashSet<List<Field>>();
+  for (  Field[] o : initialOrderings) {
+    results.add(new SuperTypesLastSorter().sort(Arrays.asList(o)));
+  }
+  assertThat(results).hasSize(1);
+}
