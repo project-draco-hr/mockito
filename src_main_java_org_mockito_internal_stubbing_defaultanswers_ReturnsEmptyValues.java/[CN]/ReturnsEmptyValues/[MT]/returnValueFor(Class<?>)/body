@@ -47,5 +47,8 @@
  else   if (type == LinkedHashMap.class) {
     return new LinkedHashMap<Object,Object>();
   }
+ else   if ("java.util.Optional".equals(type.getName())) {
+    return JavaEightUtil.emptyOptional();
+  }
   return null;
 }

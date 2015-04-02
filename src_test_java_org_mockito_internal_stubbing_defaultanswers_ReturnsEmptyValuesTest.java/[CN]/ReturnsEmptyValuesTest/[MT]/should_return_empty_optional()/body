@@ -1,0 +1,16 @@
+{
+  Class<?> streamType;
+  try {
+    streamType=Class.forName("java.util.stream.Stream");
+  }
+ catch (  ClassNotFoundException e) {
+    return;
+  }
+  Object stream=mock(streamType);
+  Object optional=streamType.getMethod("findAny").invoke(stream);
+  assertNotNull(optional);
+  assertFalse((Boolean)Class.forName("java.util.Optional").getMethod("isPresent").invoke(optional));
+  Invocation findAny=this.getLastInvocation();
+  Object result=values.answer(findAny);
+  assertEquals(optional,result);
+}

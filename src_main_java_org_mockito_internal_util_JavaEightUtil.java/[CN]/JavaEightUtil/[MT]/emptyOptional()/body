@@ -1,0 +1,13 @@
+{
+  if (emptyOptional != null) {
+    return emptyOptional;
+  }
+  try {
+    final Class<?> optionalClass=Class.forName("java.util.Optional");
+    final Method emptyMethod=optionalClass.getMethod("empty");
+    return emptyOptional=emptyMethod.invoke(null);
+  }
+ catch (  Exception e) {
+    throw new InstantiationException("Could not create java.util.Optional#empty(): " + e,e);
+  }
+}
