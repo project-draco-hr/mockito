@@ -1,0 +1,3 @@
+{
+  ArgumentCaptor<List<Person>> argument=ArgumentCaptor.forClass(List.class);
+}
