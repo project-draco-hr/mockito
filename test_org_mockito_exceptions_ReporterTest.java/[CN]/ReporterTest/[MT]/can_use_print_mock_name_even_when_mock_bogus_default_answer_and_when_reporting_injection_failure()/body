@@ -1,0 +1,4 @@
+{
+  IMethods mock_with_bogus_default_answer=mock(IMethods.class,new Returns(false));
+  new Reporter().cannotInjectDependency(someField(),mock_with_bogus_default_answer,new Exception());
+}
