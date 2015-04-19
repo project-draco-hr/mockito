@@ -1,0 +1,3 @@
+{
+  validator.validateDefaultAnswerReturnedValue(new InvocationBuilder().method("toString").toInvocation(),null);
+}

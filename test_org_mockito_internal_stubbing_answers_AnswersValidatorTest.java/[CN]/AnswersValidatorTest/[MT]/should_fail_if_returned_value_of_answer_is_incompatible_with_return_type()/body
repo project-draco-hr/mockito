@@ -1,0 +1,9 @@
+{
+  try {
+    validator.validateDefaultAnswerReturnedValue(new InvocationBuilder().method("toString").toInvocation(),AWrongType.WRONG_TYPE);
+    fail();
+  }
+ catch (  WrongTypeOfReturnValue e) {
+    assertThat(e.getMessage()).containsIgnoringCase("Default answer returned a result with the wrong type").containsIgnoringCase("AWrongType cannot be returned by toString()").containsIgnoringCase("toString() should return String");
+  }
+}

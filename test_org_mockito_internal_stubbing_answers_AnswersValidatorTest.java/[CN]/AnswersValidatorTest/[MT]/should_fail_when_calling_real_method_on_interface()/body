@@ -4,6 +4,6 @@
     validator.validate(new CallsRealMethods(),invocationOnInterface);
     fail();
   }
- catch (  MockitoException e) {
+ catch (  MockitoException expected) {
   }
 }
