@@ -1,0 +1,3 @@
+{
+  stub_ordinary_invocation_with_invocation_matcher(handler,stubbedInvocationMatcher);
+}

@@ -1,0 +1,9 @@
+{
+  TestMock test=mock(TestMock.class,new Answer(){
+    public Object answer(    InvocationOnMock invocation) throws Throwable {
+      return false;
+    }
+  }
+);
+  test.toString();
+}

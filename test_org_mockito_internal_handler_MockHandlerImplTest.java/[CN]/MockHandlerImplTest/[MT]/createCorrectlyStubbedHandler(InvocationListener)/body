@@ -1,5 +1,0 @@
-{
-  MockHandlerImpl<?> handler=createHandlerWithListeners(throwingListener);
-  stubOrdinaryInvocationWithGivenReturnValue(handler);
-  return handler;
-}

@@ -1,0 +1,5 @@
+{
+  Invocation dumb_invocation=new InvocationBuilder().toInvocation();
+  IMethods mock_with_bogus_default_answer=mock(IMethods.class,new Returns(false));
+  new Reporter().delegatedMethodDoesNotExistOnDelegate(dumb_invocation.getMethod(),mock_with_bogus_default_answer,String.class);
+}

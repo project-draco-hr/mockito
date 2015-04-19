@@ -12,7 +12,7 @@
     handler.handle(invocation);
     fail();
   }
- catch (  InvalidUseOfMatchersException e) {
+ catch (  InvalidUseOfMatchersException ignored) {
   }
   assertNull(handler.mockingProgress.pullVerificationMode());
 }

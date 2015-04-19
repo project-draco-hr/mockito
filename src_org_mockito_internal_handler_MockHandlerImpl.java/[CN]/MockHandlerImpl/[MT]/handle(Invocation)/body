@@ -27,6 +27,7 @@
   }
  else {
     Object ret=mockSettings.getDefaultAnswer().answer(invocation);
+    new AnswersValidator().validateDefaultAnswerReturnedValue(invocation,ret);
     invocationContainerImpl.resetInvocationForPotentialStubbing(invocationMatcher);
     return ret;
   }

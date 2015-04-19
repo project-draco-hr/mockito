@@ -1,6 +1,6 @@
 {
   NoMoreInteractions n=new NoMoreInteractions();
-  String mock="a mock";
+  IMethods mock=mock(IMethods.class,"a mock");
   Invocation i=new InvocationBuilder().mock(mock).toInvocation();
   try {
     n.verifyInOrder(new VerificationDataInOrderImpl(context,asList(i),null));

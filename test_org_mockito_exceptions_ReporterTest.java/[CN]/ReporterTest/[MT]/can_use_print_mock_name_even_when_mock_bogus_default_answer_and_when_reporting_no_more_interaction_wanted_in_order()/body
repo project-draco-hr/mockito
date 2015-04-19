@@ -1,0 +1,4 @@
+{
+  Invocation invocation_with_bogus_default_answer=new InvocationBuilder().mock(mock(IMethods.class,new Returns(false))).toInvocation();
+  new Reporter().noMoreInteractionsWantedInOrder(invocation_with_bogus_default_answer);
+}
