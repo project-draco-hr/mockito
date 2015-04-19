@@ -1,0 +1,5 @@
+{
+  MockHandlerImpl<?> handler=create_handler_with_listeners(throwingListener);
+  stub_ordinary_invocation_with_given_return_value(handler);
+  return handler;
+}

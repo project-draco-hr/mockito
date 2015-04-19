@@ -1,6 +1,6 @@
 {
   InvocationListener throwingListener=mock(InvocationListener.class);
   doThrow(new Throwable()).when(throwingListener).reportInvocation(any(MethodInvocationReport.class));
-  MockHandlerImpl<?> handler=createCorrectlyStubbedHandler(throwingListener);
+  MockHandlerImpl<?> handler=create_correctly_stubbed_handler(throwingListener);
   handler.handle(invocation);
 }
