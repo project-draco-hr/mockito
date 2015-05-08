@@ -1,6 +1,5 @@
 {
   this.pollingPeriodMillis=pollingPeriodMillis;
-  this.durationMillis=durationMillis;
   this.delegate=delegate;
   this.returnOnSuccess=returnOnSuccess;
   this.timer=timer;

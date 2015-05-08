@@ -1,4 +1,4 @@
 long pollingPeriodMillis
-long millis
 VerificationMode delegate
+boolean returnOnSuccess
 Timer timer

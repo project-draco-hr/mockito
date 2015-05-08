@@ -3,5 +3,6 @@
     Thread.sleep(sleep);
   }
  catch (  InterruptedException ie) {
+    throw new RuntimeException("Thread sleep has been interrupted",ie);
   }
 }

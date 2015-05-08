@@ -1,3 +1,3 @@
 {
-  this(pollingPeriodMillis,durationMillis,delegate,returnOnSuccess,new Timer(durationMillis));
+  this(pollingPeriodMillis,delegate,returnOnSuccess,new Timer(durationMillis));
 }
