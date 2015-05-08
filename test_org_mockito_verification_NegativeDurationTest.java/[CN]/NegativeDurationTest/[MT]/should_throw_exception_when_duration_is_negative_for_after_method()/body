@@ -1,0 +1,9 @@
+{
+  try {
+    Mockito.after(-1);
+    Assert.fail("It is forbidden to invoke Mockito.after() with negative value.");
+  }
+ catch (  FriendlyReminderException e) {
+    Assert.assertTrue(true);
+  }
+}

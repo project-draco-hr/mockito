@@ -1,0 +1,6 @@
+{
+  Timer timer=new Timer(0);
+  timer.start();
+  oneMillisecondPasses();
+  assertThat(timer.isCounting(),is(false));
+}

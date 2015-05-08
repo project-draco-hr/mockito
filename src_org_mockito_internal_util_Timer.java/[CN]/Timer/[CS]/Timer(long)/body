@@ -1,3 +1,4 @@
 {
+  validateInput(durationMillis);
   this.durationMillis=durationMillis;
 }
