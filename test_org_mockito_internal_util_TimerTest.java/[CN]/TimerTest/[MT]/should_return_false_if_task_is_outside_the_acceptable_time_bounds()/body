@@ -1,6 +1,0 @@
-{
-  Timer timer=new Timer(-1);
-  timer.start();
-  boolean stillCounting=timer.isCounting();
-  assertThat(timer.isCounting(),is(false));
-}

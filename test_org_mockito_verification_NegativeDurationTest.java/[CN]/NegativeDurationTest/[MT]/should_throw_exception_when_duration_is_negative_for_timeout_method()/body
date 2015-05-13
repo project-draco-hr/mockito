@@ -1,0 +1,9 @@
+{
+  try {
+    Mockito.timeout(-1);
+    Assert.fail("It is forbidden to invoke Mockito.timeout() with negative value.");
+  }
+ catch (  FriendlyReminderException e) {
+    Assert.assertTrue(true);
+  }
+}

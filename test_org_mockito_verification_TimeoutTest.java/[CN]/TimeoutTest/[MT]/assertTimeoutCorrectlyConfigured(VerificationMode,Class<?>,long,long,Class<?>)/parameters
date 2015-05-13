@@ -1,5 +1,0 @@
-VerificationMode t
-Class<?> expectedType
-long expectedTimeout
-long expectedPollingPeriod
-Class<?> expectedDelegateType

@@ -1,5 +1,5 @@
 {
-  Timeout t=new Timeout(1,3,mode,timer);
+  Timeout t=new Timeout(1,mode,timer);
   when(timer.isCounting()).thenReturn(true);
   doNothing().when(mode).verify(data);
   t.verify(data);
