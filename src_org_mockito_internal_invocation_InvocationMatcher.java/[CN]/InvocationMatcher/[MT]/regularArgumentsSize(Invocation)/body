@@ -1,0 +1,3 @@
+{
+  return invocation.getMethod().isVarArgs() ? invocation.getRawArguments().length - 1 : matchers.size();
+}
