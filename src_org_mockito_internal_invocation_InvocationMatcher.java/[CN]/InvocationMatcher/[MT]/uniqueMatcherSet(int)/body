@@ -1,0 +1,13 @@
+{
+  HashSet<Matcher> set=new HashSet<Matcher>();
+  for (int position=indexOfVararg; position < matchers.size(); position++) {
+    Matcher matcher=matchers.get(position);
+    if (matcher instanceof MatcherDecorator) {
+      set.add(((MatcherDecorator)matcher).getActualMatcher());
+    }
+ else {
+      set.add(matcher);
+    }
+  }
+  return set;
+}

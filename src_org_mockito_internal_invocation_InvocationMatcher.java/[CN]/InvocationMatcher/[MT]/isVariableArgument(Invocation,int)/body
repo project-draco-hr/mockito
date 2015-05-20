@@ -1,3 +1,0 @@
-{
-  return invocation.getRawArguments().length - 1 == position && invocation.getRawArguments()[position] != null && invocation.getRawArguments()[position].getClass().isArray() && invocation.getMethod().isVarArgs();
-}
