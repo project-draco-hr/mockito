@@ -1,5 +1,4 @@
 {
-  IMethods mock=mock(IMethods.class);
   ArgumentCaptor<String> argumentCaptor=ArgumentCaptor.forClass(String.class);
   mock.simpleMethod("a",2);
   verify(mock).simpleMethod(argumentCaptor.capture(),eq(2));

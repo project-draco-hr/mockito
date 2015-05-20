@@ -1,6 +1,6 @@
 {
-  emailer.email(12);
   ArgumentCaptor<Person> argument=new ArgumentCaptor<Person>();
+  bulkEmailService.email(12);
   verify(emailService).sendEmailTo(argument.capture());
   assertEquals(12,argument.getValue().getAge());
 }

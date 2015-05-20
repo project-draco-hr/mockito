@@ -1,5 +1,4 @@
 {
-  IMethods mock=mock(IMethods.class);
   ArgumentCaptor<Byte> argumentCaptor=ArgumentCaptor.forClass(Byte.class);
   mock.varargsbyte((byte)1,(byte)2);
   verify(mock).varargsbyte(argumentCaptor.capture());
