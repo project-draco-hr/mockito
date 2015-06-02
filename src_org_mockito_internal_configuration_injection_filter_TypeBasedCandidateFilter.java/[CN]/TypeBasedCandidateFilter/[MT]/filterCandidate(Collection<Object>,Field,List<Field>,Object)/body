@@ -5,5 +5,5 @@
       mockTypeMatches.add(mock);
     }
   }
-  return next.filterCandidate(mockTypeMatches,field,fieldInstance);
+  return next.filterCandidate(mockTypeMatches,field,fields,fieldInstance);
 }

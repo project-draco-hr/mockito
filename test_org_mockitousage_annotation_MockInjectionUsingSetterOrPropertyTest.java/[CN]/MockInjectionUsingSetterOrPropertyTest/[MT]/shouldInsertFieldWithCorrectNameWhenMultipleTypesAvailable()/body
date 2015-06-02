@@ -1,0 +1,5 @@
+{
+  MockitoAnnotations.initMocks(this);
+  assertNull(otherSuperUnderTesting.candidate1);
+  assertNotNull(otherSuperUnderTesting.candidate2);
+}
