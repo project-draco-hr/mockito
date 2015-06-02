@@ -1,0 +1,8 @@
+{
+  if (this == other)   return true;
+  if (other == null || getClass() != other.getClass())   return false;
+  MockKey mockKey=(MockKey<?>)other;
+  if (!mockedType.equals(mockKey.mockedType))   return false;
+  if (!types.equals(mockKey.types))   return false;
+  return true;
+}

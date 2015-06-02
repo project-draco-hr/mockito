@@ -1,0 +1,4 @@
+{
+  OtherClass mock=mockMaker.createMock(settingsWithConstructorFor(OtherClass.class),dummyH());
+  assertThat(mock).isNotNull();
+}

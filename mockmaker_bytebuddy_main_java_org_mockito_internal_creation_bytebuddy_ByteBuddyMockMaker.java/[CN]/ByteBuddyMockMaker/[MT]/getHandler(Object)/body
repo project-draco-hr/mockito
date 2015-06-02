@@ -1,0 +1,6 @@
+{
+  if (!(mock instanceof MockMethodInterceptor.MockAccess)) {
+    return null;
+  }
+  return ((MockMethodInterceptor.MockAccess)mock).getMockitoInterceptor().getMockHandler();
+}

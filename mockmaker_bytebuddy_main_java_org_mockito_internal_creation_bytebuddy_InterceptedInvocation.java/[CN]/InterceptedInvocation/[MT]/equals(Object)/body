@@ -1,0 +1,7 @@
+{
+  if (o == null || !o.getClass().equals(this.getClass())) {
+    return false;
+  }
+  InterceptedInvocation other=(InterceptedInvocation)o;
+  return this.mock.equals(other.mock) && this.mockitoMethod.equals(other.mockitoMethod) && this.equalArguments(other.arguments);
+}

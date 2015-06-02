@@ -1,0 +1,4 @@
+{
+  byteBuddy=new ByteBuddy(ClassFileVersion.JAVA_V5).withDefaultMethodAttributeAppender(MethodAttributeAppender.ForInstrumentedMethod.INSTANCE).withAttribute(TypeAttributeAppender.ForSuperType.INSTANCE);
+  random=new Random();
+}

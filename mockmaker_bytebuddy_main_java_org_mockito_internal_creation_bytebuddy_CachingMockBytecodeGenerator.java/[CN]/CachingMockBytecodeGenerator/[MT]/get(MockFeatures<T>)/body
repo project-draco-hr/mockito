@@ -1,0 +1,10 @@
+{
+  avoidingClassLeakCacheLock.lock();
+  try {
+    Class generatedMockClass=mockCachePerClassLoaderOf(params.mockedType).getOrGenerateMockClass(params);
+    return generatedMockClass;
+  }
+  finally {
+    avoidingClassLeakCacheLock.unlock();
+  }
+}

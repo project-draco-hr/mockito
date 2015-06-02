@@ -1,0 +1,5 @@
+{
+  int result=mockedType.hashCode();
+  result=31 * result + types.hashCode();
+  return result;
+}

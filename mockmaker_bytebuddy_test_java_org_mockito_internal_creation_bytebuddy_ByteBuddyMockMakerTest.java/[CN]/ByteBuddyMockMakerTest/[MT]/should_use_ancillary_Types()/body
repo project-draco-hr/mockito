@@ -1,0 +1,4 @@
+{
+  SomeClass mock=mockMaker.createMock(settingsFor(SomeClass.class,SomeInterface.class),dummyH());
+  assertThat(mock).isInstanceOf(SomeInterface.class);
+}

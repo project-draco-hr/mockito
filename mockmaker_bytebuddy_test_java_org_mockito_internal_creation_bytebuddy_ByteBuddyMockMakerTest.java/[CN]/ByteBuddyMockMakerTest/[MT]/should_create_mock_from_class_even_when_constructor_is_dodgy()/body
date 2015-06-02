@@ -1,0 +1,10 @@
+{
+  try {
+    new ClassWithDodgyConstructor();
+    fail();
+  }
+ catch (  Exception expected) {
+  }
+  ClassWithDodgyConstructor mock=mockMaker.createMock(settingsFor(ClassWithDodgyConstructor.class),dummyH());
+  assertThat(mock).isNotNull();
+}
