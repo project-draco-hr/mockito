@@ -2,7 +2,7 @@
   if (tickets.isEmpty()) {
     return Collections.emptyList();
   }
-  ArrayList<Improvement> pagedImprovements=new ArrayList<>();
+  ArrayList<Improvement> pagedImprovements=new ArrayList<Improvement>();
   for (  JSONObject issue : issues) {
     long id=(Long)issue.get("number");
     if (tickets.remove(id)) {
