@@ -1,0 +1,3 @@
+{
+  return type.getPackage() != null && type.getPackage().isSealed();
+}
