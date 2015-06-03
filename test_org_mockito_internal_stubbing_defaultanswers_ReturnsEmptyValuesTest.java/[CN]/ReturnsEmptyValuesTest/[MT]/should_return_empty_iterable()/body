@@ -1,0 +1,3 @@
+{
+  assertFalse(((Iterable)values.returnValueFor(Iterable.class)).iterator().hasNext());
+}

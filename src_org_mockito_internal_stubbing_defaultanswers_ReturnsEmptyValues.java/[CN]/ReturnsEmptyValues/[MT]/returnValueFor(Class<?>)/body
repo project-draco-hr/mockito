@@ -2,6 +2,9 @@
   if (Primitives.isPrimitiveOrWrapper(type)) {
     return Primitives.defaultValueForPrimitiveOrWrapper(type);
   }
+ else   if (type == Iterable.class) {
+    return new ArrayList<Object>(0);
+  }
  else   if (type == Collection.class) {
     return new LinkedList<Object>();
   }
