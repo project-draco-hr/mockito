@@ -1,0 +1,4 @@
+{
+  InOrder inOrder=inOrder(mock);
+  then(mock).should(inOrder).booleanObjectReturningMethod();
+}
