@@ -1,7 +1,0 @@
-{
-  InOrder inOrder=inOrder(mock);
-  mock.booleanObjectReturningMethod();
-  mock.arrayReturningMethod();
-  then(mock).should(inOrder).booleanObjectReturningMethod();
-  then(mock).should(inOrder).arrayReturningMethod();
-}

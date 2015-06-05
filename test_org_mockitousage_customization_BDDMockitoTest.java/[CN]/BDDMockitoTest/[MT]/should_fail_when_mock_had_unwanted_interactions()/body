@@ -1,0 +1,9 @@
+{
+  mock.booleanObjectReturningMethod();
+  try {
+    then(mock).shouldHaveZeroInteractions();
+    fail("should have reported this interaction wasn't wanted");
+  }
+ catch (  NoInteractionsWanted expected) {
+  }
+}

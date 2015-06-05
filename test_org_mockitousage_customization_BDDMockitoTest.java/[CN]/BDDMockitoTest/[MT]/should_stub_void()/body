@@ -1,0 +1,9 @@
+{
+  willThrow(new SomethingWasWrong()).given(mock).voidMethod();
+  try {
+    mock.voidMethod();
+    fail();
+  }
+ catch (  SomethingWasWrong expected) {
+  }
+}

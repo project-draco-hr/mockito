@@ -1,0 +1,9 @@
+{
+  given(mock.simpleMethod("foo")).willThrow(new SomethingWasWrong());
+  try {
+    assertEquals("foo",mock.simpleMethod("foo"));
+    fail();
+  }
+ catch (  SomethingWasWrong expected) {
+  }
+}

@@ -1,9 +1,0 @@
-{
-  willThrow(new RuntimeException()).given(mock).voidMethod();
-  try {
-    mock.voidMethod();
-    fail();
-  }
- catch (  RuntimeException e) {
-  }
-}

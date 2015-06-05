@@ -2,10 +2,10 @@
   Car car=new Car();
   Person person=mock(Person.class);
   Police police=mock(Police.class);
-  InOrder inOrder=inOrder(person,police);
   person.drive(car);
   person.drive(car);
   police.chase(car);
+  InOrder inOrder=inOrder(person,police);
   then(person).should(inOrder,times(2)).drive(car);
   then(police).should(inOrder).chase(car);
 }

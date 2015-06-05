@@ -1,4 +1,0 @@
-{
-  mock.booleanObjectReturningMethod();
-  then(mock).shouldHaveZeroInteractions();
-}

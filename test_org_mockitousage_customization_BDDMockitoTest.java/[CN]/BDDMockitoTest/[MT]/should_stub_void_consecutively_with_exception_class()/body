@@ -1,0 +1,10 @@
+{
+  willDoNothing().willThrow(SomethingWasWrong.class).given(mock).voidMethod();
+  mock.voidMethod();
+  try {
+    mock.voidMethod();
+    fail();
+  }
+ catch (  SomethingWasWrong expected) {
+  }
+}
