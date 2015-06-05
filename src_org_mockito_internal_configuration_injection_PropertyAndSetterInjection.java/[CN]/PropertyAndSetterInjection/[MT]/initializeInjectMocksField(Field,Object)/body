@@ -1,7 +1,6 @@
 {
-  FieldInitializationReport report=null;
   try {
-    report=new FieldInitializer(fieldOwner,field).initialize();
+    return new FieldInitializer(fieldOwner,field).initialize();
   }
  catch (  MockitoException e) {
     if (e.getCause() instanceof InvocationTargetException) {
@@ -9,6 +8,6 @@
       new Reporter().fieldInitialisationThrewException(field,realCause);
     }
     new Reporter().cannotInitializeForInjectMocksAnnotation(field.getName(),e);
+    throw new IllegalStateException("never thrown");
   }
-  return report;
 }

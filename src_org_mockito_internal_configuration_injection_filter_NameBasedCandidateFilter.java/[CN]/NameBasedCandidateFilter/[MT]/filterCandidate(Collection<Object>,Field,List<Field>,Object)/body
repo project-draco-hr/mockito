@@ -1,0 +1,6 @@
+{
+  if (mocks.size() == 1 && anotherCandidateMatchesMockName(mocks,candidateFieldToBeInjected,allRemainingCandidateFields)) {
+    return OngoingInjector.nop;
+  }
+  return next.filterCandidate(tooMany(mocks) ? selectMatchingName(mocks,candidateFieldToBeInjected) : mocks,candidateFieldToBeInjected,allRemainingCandidateFields,injectee);
+}
