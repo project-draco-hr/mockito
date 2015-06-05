@@ -1,7 +1,7 @@
 {
-  for (Iterator<Field> it=orderedInstanceFields.iterator(); it.hasNext(); ) {
-    Field field=it.next();
-    Object injected=mockCandidateFilter.filterCandidate(mocks,field,orderedInstanceFields,instance).thenInject();
+  for (Iterator<Field> it=orderedCandidateInjecteeFields.iterator(); it.hasNext(); ) {
+    Field candidateField=it.next();
+    Object injected=mockCandidateFilter.filterCandidate(mocks,candidateField,orderedCandidateInjecteeFields,injectee).thenInject();
     if (injected != null) {
       injectionOccurred|=true;
       mocks.remove(injected);

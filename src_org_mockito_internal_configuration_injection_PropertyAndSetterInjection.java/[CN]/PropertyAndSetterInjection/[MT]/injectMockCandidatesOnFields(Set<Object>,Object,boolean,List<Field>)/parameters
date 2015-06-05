@@ -1,4 +1,4 @@
 Set<Object> mocks
-Object instance
+Object injectee
 boolean injectionOccurred
-List<Field> orderedInstanceFields
+List<Field> orderedCandidateInjecteeFields

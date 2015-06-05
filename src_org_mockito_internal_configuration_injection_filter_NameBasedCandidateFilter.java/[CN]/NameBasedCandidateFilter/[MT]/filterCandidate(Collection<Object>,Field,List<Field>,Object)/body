@@ -1,25 +1,6 @@
 {
-  List<Object> mockNameMatches=new ArrayList<Object>();
-  if (mocks.size() > 1) {
-    for (    Object mock : mocks) {
-      if (field.getName().equals(mockUtil.getMockName(mock).toString())) {
-        mockNameMatches.add(mock);
-      }
-    }
-    return next.filterCandidate(mockNameMatches,field,fields,fieldInstance);
+  if (mocks.size() == 1 && anotherCandidateMatchesMockName(mocks,candidateFieldToBeInjected,allRemainingCandidateFields)) {
+    return OngoingInjector.nop;
   }
- else   if (mocks.size() == 1) {
-    String mockName=mockUtil.getMockName(mocks.iterator().next()).toString();
-    for (    Field otherField : fields) {
-      if (!otherField.equals(field) && otherField.getType().equals(field.getType()) && otherField.getName().equals(mockName)) {
-        return new OngoingInjecter(){
-          public Object thenInject(){
-            return null;
-          }
-        }
-;
-      }
-    }
-  }
-  return next.filterCandidate(mocks,field,fields,fieldInstance);
+  return next.filterCandidate(tooMany(mocks) ? selectMatchingName(mocks,candidateFieldToBeInjected) : mocks,candidateFieldToBeInjected,allRemainingCandidateFields,injectee);
 }

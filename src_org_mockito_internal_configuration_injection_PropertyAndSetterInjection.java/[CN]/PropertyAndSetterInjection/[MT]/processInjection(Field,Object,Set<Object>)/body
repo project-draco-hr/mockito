@@ -4,7 +4,7 @@
   Class<?> fieldClass=report.fieldClass();
   Object fieldInstanceNeedingInjection=report.fieldInstance();
   while (fieldClass != Object.class) {
-    injectionOccurred|=injectMockCandidates(fieldClass,newMockSafeHashSet(mockCandidates),fieldInstanceNeedingInjection);
+    injectionOccurred|=injectMockCandidates(fieldClass,fieldInstanceNeedingInjection,newMockSafeHashSet(mockCandidates));
     fieldClass=fieldClass.getSuperclass();
   }
   return injectionOccurred;

@@ -1,0 +1,20 @@
+{
+  if (mocks.size() == 1) {
+    final Object matchingMock=mocks.iterator().next();
+    return new OngoingInjector(){
+      public Object thenInject(){
+        try {
+          if (!new BeanPropertySetter(injectee,candidateFieldToBeInjected).set(matchingMock)) {
+            new FieldSetter(injectee,candidateFieldToBeInjected).set(matchingMock);
+          }
+        }
+ catch (        RuntimeException e) {
+          new Reporter().cannotInjectDependency(candidateFieldToBeInjected,matchingMock,e);
+        }
+        return matchingMock;
+      }
+    }
+;
+  }
+  return OngoingInjector.nop;
+}
