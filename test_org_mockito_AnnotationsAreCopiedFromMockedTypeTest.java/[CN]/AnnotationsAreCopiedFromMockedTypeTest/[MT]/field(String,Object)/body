@@ -1,0 +1,8 @@
+{
+  for (  Field field : mock.getClass().getDeclaredFields()) {
+    if (fieldName.equals(field.getName())) {
+      return field;
+    }
+  }
+  throw new IllegalArgumentException("method name not found : " + fieldName);
+}

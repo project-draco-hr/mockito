@@ -1,0 +1,20 @@
+{
+  final Annotation[] firstParamAnnotations=method.getParameterAnnotations()[0];
+  return new AnnotatedElement(){
+    @Override @SuppressWarnings("unchecked") public <T extends Annotation>T getAnnotation(    Class<T> annotationClass){
+      for (      Annotation firstParamAnnotation : firstParamAnnotations) {
+        if (annotationClass.isAssignableFrom(firstParamAnnotation.getClass())) {
+          return (T)firstParamAnnotation;
+        }
+      }
+      return null;
+    }
+    @Override public Annotation[] getAnnotations(){
+      return firstParamAnnotations;
+    }
+    @Override public Annotation[] getDeclaredAnnotations(){
+      return firstParamAnnotations;
+    }
+  }
+;
+}

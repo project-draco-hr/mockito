@@ -1,0 +1,8 @@
+{
+  for (  Method method : mock.getClass().getDeclaredMethods()) {
+    if (methodName.equals(method.getName())) {
+      return method;
+    }
+  }
+  throw new IllegalArgumentException("method name not found : " + methodName);
+}
