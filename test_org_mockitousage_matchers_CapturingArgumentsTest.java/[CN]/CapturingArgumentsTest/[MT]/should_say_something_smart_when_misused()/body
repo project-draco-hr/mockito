@@ -4,6 +4,6 @@
     argument.getValue();
     fail();
   }
- catch (  MockitoException e) {
+ catch (  MockitoException expected) {
   }
 }

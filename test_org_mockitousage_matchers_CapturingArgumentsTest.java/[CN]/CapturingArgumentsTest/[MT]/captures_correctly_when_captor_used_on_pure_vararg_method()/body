@@ -1,0 +1,6 @@
+{
+  ArgumentCaptor<String> argumentCaptor=ArgumentCaptor.forClass(String.class);
+  mock.varargs(42,"capturedValue");
+  verify(mock).varargs(eq(42),argumentCaptor.capture());
+  Assertions.assertThat(argumentCaptor.getValue()).contains("capturedValue");
+}
