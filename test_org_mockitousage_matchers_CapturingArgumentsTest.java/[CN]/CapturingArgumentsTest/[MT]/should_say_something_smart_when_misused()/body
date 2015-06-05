@@ -4,7 +4,6 @@
     argument.getValue();
     fail();
   }
- catch (  MockitoException e) {
-    Assert.assertTrue(true);
+ catch (  MockitoException expected) {
   }
 }

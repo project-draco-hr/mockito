@@ -1,6 +1,4 @@
 {
-  captureArguments(invocation);
-  if (invocation.getMethod().isVarArgs()) {
-    captureVarargsPart(invocation);
-  }
+  captureRegularArguments(invocation);
+  captureVarargsPart(invocation);
 }

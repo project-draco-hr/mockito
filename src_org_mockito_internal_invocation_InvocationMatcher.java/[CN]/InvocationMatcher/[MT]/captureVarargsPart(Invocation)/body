@@ -1,4 +1,7 @@
 {
+  if (!invocation.getMethod().isVarArgs()) {
+    return;
+  }
   int indexOfVararg=invocation.getRawArguments().length - 1;
   for (  Matcher m : uniqueMatcherSet(indexOfVararg)) {
     if (m instanceof CapturesArguments) {
