@@ -1,0 +1,5 @@
+{
+  MockitoAnnotations.initMocks(this);
+  assertNull("not injected, no mock named 'candidate1'",hasTwoFieldsWithSameType.candidate1);
+  assertNotNull("injected, there's a mock named 'candidate2'",hasTwoFieldsWithSameType.candidate2);
+}
