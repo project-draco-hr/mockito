@@ -1,0 +1,6 @@
+{
+  assertEquals(true,mockingDetails(gork).isSpy());
+  assertEquals(false,mockingDetails(foo).isSpy());
+  assertEquals(false,mockingDetails(bar).isSpy());
+  assertEquals(false,mockingDetails("not a spy").isSpy());
+}

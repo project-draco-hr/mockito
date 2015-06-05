@@ -1,0 +1,6 @@
+{
+  assertEquals(true,mockingDetails(foo).isMock());
+  assertEquals(true,mockingDetails(bar).isMock());
+  assertEquals(true,mockingDetails(gork).isMock());
+  assertEquals(false,mockingDetails("no a mock").isMock());
+}
