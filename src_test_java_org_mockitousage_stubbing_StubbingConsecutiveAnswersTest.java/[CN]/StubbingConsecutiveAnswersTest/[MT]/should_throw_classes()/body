@@ -1,0 +1,15 @@
+{
+  when(mock.simpleMethod()).thenThrow(IllegalArgumentException.class);
+  try {
+    mock.simpleMethod();
+    fail();
+  }
+ catch (  IllegalArgumentException expected) {
+  }
+  try {
+    mock.simpleMethod();
+    fail();
+  }
+ catch (  IllegalArgumentException expected) {
+  }
+}

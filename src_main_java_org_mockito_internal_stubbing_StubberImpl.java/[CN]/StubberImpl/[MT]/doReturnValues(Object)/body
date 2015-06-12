@@ -1,0 +1,10 @@
+{
+  if (toBeReturned == null) {
+    answers.add(new Returns(null));
+    return this;
+  }
+  for (  Object r : toBeReturned) {
+    answers.add(new Returns(r));
+  }
+  return this;
+}

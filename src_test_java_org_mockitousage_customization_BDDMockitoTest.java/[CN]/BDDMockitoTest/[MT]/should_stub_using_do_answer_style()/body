@@ -5,5 +5,5 @@
     }
   }
 ).given(mock).simpleMethod(anyString());
-  assertEquals("foo",mock.simpleMethod("foo"));
+  Assertions.assertThat(mock.simpleMethod("foo")).isEqualTo("foo");
 }

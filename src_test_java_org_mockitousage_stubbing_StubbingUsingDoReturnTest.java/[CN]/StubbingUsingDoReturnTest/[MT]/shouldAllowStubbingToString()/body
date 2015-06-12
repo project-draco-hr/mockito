@@ -1,4 +1,0 @@
-{
-  doReturn("test").when(mock).toString();
-  assertEquals("test",mock.toString());
-}

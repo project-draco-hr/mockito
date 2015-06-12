@@ -1,0 +1,22 @@
+{
+  stubVoid(mock).toThrow(new IllegalArgumentException()).toReturn().toThrow(new NullPointerException()).on().voidMethod();
+  try {
+    mock.voidMethod();
+    fail();
+  }
+ catch (  IllegalArgumentException expected) {
+  }
+  mock.voidMethod();
+  try {
+    mock.voidMethod();
+    fail();
+  }
+ catch (  NullPointerException expected) {
+  }
+  try {
+    mock.voidMethod();
+    fail();
+  }
+ catch (  NullPointerException expected) {
+  }
+}

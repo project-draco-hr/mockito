@@ -1,0 +1,3 @@
+{
+  when(mock.add(null)).thenThrow((Exception)null);
+}

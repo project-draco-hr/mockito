@@ -1,0 +1,5 @@
+{
+  mockingProgress.stubbingStarted();
+  mockingProgress.resetOngoingStubbing();
+  return new StubberImpl();
+}

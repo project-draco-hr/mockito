@@ -1,0 +1,5 @@
+{
+  when(mock.simpleMethod()).thenReturn(null,null);
+  assertNull(mock.simpleMethod());
+  assertNull(mock.simpleMethod());
+}

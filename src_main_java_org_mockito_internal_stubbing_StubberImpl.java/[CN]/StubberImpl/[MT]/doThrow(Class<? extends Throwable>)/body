@@ -1,4 +1,3 @@
 {
-  answers.add(new ThrowsExceptionClass(toBeThrown));
-  return this;
+  return doThrowClasses(toBeThrown);
 }

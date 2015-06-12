@@ -1,5 +1,0 @@
-{
-  when(mock.simpleMethod()).thenReturn(null,(String[])null);
-  assertNull(mock.simpleMethod());
-  assertNull(mock.simpleMethod());
-}

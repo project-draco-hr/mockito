@@ -1,7 +1,7 @@
 {
   given(mock.simpleMethod("foo")).willThrow(new SomethingWasWrong());
   try {
-    assertEquals("foo",mock.simpleMethod("foo"));
+    Assertions.assertThat(mock.simpleMethod("foo")).isEqualTo("foo");
     fail();
   }
  catch (  SomethingWasWrong expected) {

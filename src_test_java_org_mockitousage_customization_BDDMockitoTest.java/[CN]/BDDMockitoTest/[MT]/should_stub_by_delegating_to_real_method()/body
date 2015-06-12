@@ -1,5 +1,5 @@
 {
   Dog dog=mock(Dog.class);
   willCallRealMethod().given(dog).bark();
-  assertEquals("woof",dog.bark());
+  Assertions.assertThat(dog.bark()).isEqualTo("woof");
 }

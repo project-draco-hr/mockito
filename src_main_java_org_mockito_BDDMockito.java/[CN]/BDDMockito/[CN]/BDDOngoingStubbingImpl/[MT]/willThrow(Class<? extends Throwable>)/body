@@ -1,3 +1,3 @@
 {
-  return new BDDOngoingStubbingImpl<T>(mockitoOngoingStubbing.thenThrow(throwableClasses));
+  return new BDDOngoingStubbingImpl<T>(mockitoOngoingStubbing.thenThrow(throwableType));
 }

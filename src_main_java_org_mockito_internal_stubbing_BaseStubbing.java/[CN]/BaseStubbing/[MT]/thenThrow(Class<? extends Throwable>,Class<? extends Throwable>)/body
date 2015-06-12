@@ -1,0 +1,10 @@
+{
+  if (nextToBeThrown == null) {
+    thenThrow((Throwable)null);
+  }
+  OngoingStubbing<T> stubbing=thenThrow(toBeThrown);
+  for (  Class<? extends Throwable> t : nextToBeThrown) {
+    stubbing=stubbing.thenThrow(t);
+  }
+  return stubbing;
+}
