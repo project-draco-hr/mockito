@@ -1,0 +1,4 @@
+{
+  this.verification=verification;
+  this.description=description;
+}
