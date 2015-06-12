@@ -1,0 +1,10 @@
+{
+  String failureMessage="Verification failed!";
+  try {
+    verify(mock,description(failureMessage)).clear();
+    fail("Should not have made it this far");
+  }
+ catch (  MockitoAssertionError e) {
+    assertTrue(e.getMessage().startsWith(failureMessage));
+  }
+}
