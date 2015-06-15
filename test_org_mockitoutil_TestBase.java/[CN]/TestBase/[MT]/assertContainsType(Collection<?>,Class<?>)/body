@@ -1,13 +1,8 @@
 {
-  Assertions.assertThat(list).satisfies(new Condition<Collection<?>>(){
-    @Override public boolean matches(    Collection<?> objects){
-      for (      Object object : objects) {
-        if (clazz.isAssignableFrom(object.getClass())) {
-          return true;
-        }
-      }
-      return false;
+  for (  Object o : list) {
+    if (clazz.isAssignableFrom(o.getClass())) {
+      return;
     }
   }
-);
+  throw new AssertionError("Input list does not contain any element of type: '" + clazz + "'. "+ "Inspected following elements: "+ list);
 }
