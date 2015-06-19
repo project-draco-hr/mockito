@@ -1,3 +1,3 @@
 {
-  return StringDescription.toString(m).equals(arg == null ? "null" : arg.toString());
+  return new MatchersPrinter().print(m).equals(arg == null ? "null" : arg.toString());
 }
