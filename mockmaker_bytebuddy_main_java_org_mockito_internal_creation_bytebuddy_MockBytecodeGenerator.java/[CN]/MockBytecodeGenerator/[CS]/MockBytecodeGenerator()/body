@@ -1,4 +1,5 @@
 {
   byteBuddy=new ByteBuddy(ClassFileVersion.JAVA_V5).withDefaultMethodAttributeAppender(MethodAttributeAppender.ForInstrumentedMethod.INSTANCE).withAttribute(TypeAttributeAppender.ForSuperType.INSTANCE);
+  delegation=MethodDelegation.to(InterceptionDispatcher.class).appendParameterBinder(FieldProxy.Binder.install(FieldGetter.class,FieldSetter.class));
   random=new Random();
 }
