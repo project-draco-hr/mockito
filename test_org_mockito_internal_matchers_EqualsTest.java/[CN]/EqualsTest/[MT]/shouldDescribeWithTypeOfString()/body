@@ -1,0 +1,4 @@
+{
+  String descStr=new Equals("x").getTypedDescription();
+  assertEquals("(String) \"x\"",descStr);
+}
