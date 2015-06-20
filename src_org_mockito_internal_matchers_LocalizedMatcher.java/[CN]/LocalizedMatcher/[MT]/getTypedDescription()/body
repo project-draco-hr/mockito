@@ -1,0 +1,8 @@
+{
+  if (actualMatcher instanceof ContainsTypedDescription) {
+    return ((ContainsTypedDescription)actualMatcher).getTypedDescription();
+  }
+ else {
+    return HamcrestPrinter.print(actualMatcher);
+  }
+}

@@ -1,5 +1,5 @@
 {
-  Description result=new StringDescription();
-  result.appendList("(\n    ",",\n    ","\n);",applyPrintSettings(matchers,printSettings));
-  return result.toString();
+  ValuePrinter printer=new ValuePrinter();
+  printer.appendList("(\n    ",",\n    ","\n);",applyPrintSettings(matchers,printSettings));
+  return printer.toString();
 }

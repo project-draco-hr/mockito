@@ -1,0 +1,7 @@
+{
+  append('"');
+  for (int i=0; i < unformatted.length(); i++) {
+    toJavaSyntax(unformatted.charAt(i));
+  }
+  append('"');
+}

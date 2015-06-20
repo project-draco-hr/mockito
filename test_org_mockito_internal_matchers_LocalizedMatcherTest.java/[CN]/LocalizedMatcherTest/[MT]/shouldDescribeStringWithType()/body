@@ -1,5 +1,5 @@
 {
-  ContainsExtraTypeInformation e=new Equals("x");
+  ContainsTypedDescription e=new Equals("x");
   LocalizedMatcher m=new LocalizedMatcher((Matcher)e);
-  assertEquals("\"(String) x\"",describe(m.withExtraTypeInfo()));
+  assertEquals("(String) \"x\"",m.getTypedDescription());
 }

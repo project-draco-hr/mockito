@@ -1,0 +1,9 @@
+{
+  if (array == null) {
+    throw new IllegalArgumentException("Expected array instance but got null");
+  }
+  if (!array.getClass().isArray()) {
+    throw new IllegalArgumentException("Expected array but got object of type: " + array.getClass() + ", the object: "+ array.toString());
+  }
+  this.array=array;
+}

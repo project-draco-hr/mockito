@@ -1,4 +1,4 @@
 {
-  ContainsExtraTypeInformation equals=new Equals(10);
+  ContainsTypedDescription equals=new Equals(10);
   assertFalse(equals.typeMatches(null));
 }

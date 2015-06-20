@@ -1,0 +1,18 @@
+{
+switch (ch) {
+case '"':
+    append("\\\"");
+  break;
+case '\n':
+append("\\n");
+break;
+case '\r':
+append("\\r");
+break;
+case '\t':
+append("\\t");
+break;
+default :
+append(ch);
+}
+}

@@ -1,4 +1,4 @@
 {
-  String descStr=describe(new Equals(100L).withExtraTypeInfo());
+  String descStr=new Equals(100L).getTypedDescription();
   assertEquals("(Long) 100",descStr);
 }

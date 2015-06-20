@@ -1,14 +1,21 @@
 {
-  List<SelfDescribing> withPrintSettings=new LinkedList<SelfDescribing>();
+  List out=new LinkedList();
   int i=0;
   for (  final Matcher matcher : matchers) {
-    if (matcher instanceof ContainsExtraTypeInformation && printSettings.extraTypeInfoFor(i)) {
-      withPrintSettings.add(((ContainsExtraTypeInformation)matcher).withExtraTypeInfo());
+    if (matcher instanceof ContainsTypedDescription && printSettings.extraTypeInfoFor(i)) {
+      SelfDescribing s=new SelfDescribing(){
+        public void describeTo(        Description description){
+          String d=((ContainsTypedDescription)matcher).getTypedDescription();
+          description.appendText(d);
+        }
+      }
+;
+      out.add(s);
     }
  else {
-      withPrintSettings.add(matcher);
+      out.add(matcher);
     }
     i++;
   }
-  return withPrintSettings;
+  return out.iterator();
 }

@@ -1,4 +1,4 @@
 {
   String line=printer.getArgumentsLine((List)Arrays.asList(new Equals(1L),new Equals("x")),PrintSettings.verboseMatchers(1));
-  assertEquals("(1, \"(String) x\");",line);
+  assertEquals("(1, (String) \"x\");",line);
 }
