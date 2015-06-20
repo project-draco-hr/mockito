@@ -4,7 +4,7 @@
   T mockInstance=null;
   try {
     mockInstance=instantiator.newInstance(mockedProxyType);
-    MockMethodInterceptor.MockAccess mockAccess=(MockMethodInterceptor.MockAccess)mockInstance;
+    MockAccess mockAccess=(MockAccess)mockInstance;
     mockAccess.setMockitoInterceptor(new MockMethodInterceptor(asInternalMockHandler(handler),settings));
     return ensureMockIsAssignableToMockedType(settings,mockInstance);
   }

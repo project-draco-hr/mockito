@@ -1,0 +1,4 @@
+Object mock
+FieldGetter<MockMethodInterceptor> fieldGetter
+Method invokedMethod
+Object[] arguments

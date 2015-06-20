@@ -1,13 +1,7 @@
 {
-  DynamicType.Builder<T> builder=byteBuddy.subclass(features.mockedType,ConstructorStrategy.Default.IMITATE_SUPER_TYPE).name(nameFor(features.mockedType)).implement(features.interfaces.toArray(new Class<?>[features.interfaces.size()])).method(any()).intercept(toInstanceField(MockMethodInterceptor.class,"mockitoInterceptor").filter(isDeclaredBy(MockMethodInterceptor.class))).implement(MockMethodInterceptor.MockAccess.class).intercept(ofBeanProperty()).method(isHashCode()).intercept(to(MockMethodInterceptor.ForHashCode.class)).method(isEquals()).intercept(to(MockMethodInterceptor.ForEquals.class)).defineField("serialVersionUID",long.class,STATIC,PRIVATE,FINAL).value(42L);
+  DynamicType.Builder<T> builder=byteBuddy.subclass(features.mockedType,ConstructorStrategy.Default.IMITATE_SUPER_TYPE).name(nameFor(features.mockedType)).implement(features.interfaces.toArray(new Class<?>[features.interfaces.size()])).method(any()).intercept(toDispatcher).defineField("mockitoInterceptor",MockMethodInterceptor.class,PRIVATE).implement(MockAccess.class).intercept(FieldAccessor.ofBeanProperty()).method(isHashCode()).intercept(to(MockMethodInterceptor.ForHashCode.class)).method(isEquals()).intercept(to(MockMethodInterceptor.ForEquals.class)).defineField("serialVersionUID",long.class,STATIC,PRIVATE,FINAL).value(42L);
   if (features.crossClassLoaderSerializable) {
     builder=builder.implement(CrossClassLoaderSerializableMock.class).intercept(to(MockMethodInterceptor.ForWriteReplace.class));
   }
-  Class<?>[] allMockedTypes=new Class<?>[features.interfaces.size() + 1];
-  allMockedTypes[0]=features.mockedType;
-  int index=1;
-  for (  Class<?> type : features.interfaces) {
-    allMockedTypes[index++]=type;
-  }
-  return builder.make().load(SearchingClassLoader.combineLoadersOf(allMockedTypes),ClassLoadingStrategy.Default.INJECTION).getLoaded();
+  return builder.make().load(SearchingClassLoader.combineLoadersOf(allMockedTypes(features)),ClassLoadingStrategy.Default.INJECTION).getLoaded();
 }
