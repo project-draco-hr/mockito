@@ -1,0 +1,7 @@
+{
+  HashSet<Class<?>> classes=new HashSet<Class<?>>();
+  classes.add(safeGetClass("net.sourceforge.cobertura.coveragedata.TouchCollector"));
+  classes.add(safeGetClass("org.slf4j.LoggerFactory"));
+  classes.remove(null);
+  return classes.toArray(new Class<?>[classes.size()]);
+}
