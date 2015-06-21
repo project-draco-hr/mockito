@@ -1,4 +1,4 @@
 {
   ValuedFields instance=new ValuedFields();
-  assertThat(Fields.declaredFieldsOf(instance).instanceFields()).containsOnly(new InstanceField(field("a",instance),instance),new InstanceField(field("b",instance),instance));
+  assertThat(Fields.declaredFieldsOf(instance).filter(syntheticField()).instanceFields()).containsOnly(new InstanceField(field("a",instance),instance),new InstanceField(field("b",instance),instance));
 }

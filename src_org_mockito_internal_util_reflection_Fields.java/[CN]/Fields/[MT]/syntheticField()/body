@@ -1,0 +1,8 @@
+{
+  return new Filter<InstanceField>(){
+    public boolean isOut(    InstanceField instanceField){
+      return instanceField.isSynthetic();
+    }
+  }
+;
+}
