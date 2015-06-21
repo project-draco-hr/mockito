@@ -1,7 +1,7 @@
 {
   StringBuilder sb=new StringBuilder("or(");
   for (Iterator<MockitoMatcher> it=matchers.iterator(); it.hasNext(); ) {
-    sb.append(it.next().describe());
+    sb.append(it.next().toString());
     if (it.hasNext()) {
       sb.append(", ");
     }

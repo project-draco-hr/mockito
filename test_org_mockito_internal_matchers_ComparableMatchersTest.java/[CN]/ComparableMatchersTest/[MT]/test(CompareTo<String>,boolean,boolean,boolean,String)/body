@@ -2,5 +2,5 @@
   assertEquals(lower,compareTo.matches("a"));
   assertEquals(equals,compareTo.matches("b"));
   assertEquals(higher,compareTo.matches("c"));
-  assertEquals(name + "(b)",compareTo.describe());
+  assertEquals(name + "(b)",compareTo.toString());
 }

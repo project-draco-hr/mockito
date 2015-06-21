@@ -2,5 +2,5 @@
   List<MockitoMatcher> matchers=new ArrayList<MockitoMatcher>();
   matchers.add(new Equals(1));
   matchers.add(new Equals(2));
-  assertEquals("and(1, 2)",new And(matchers).describe());
+  assertEquals("and(1, 2)",new And(matchers).toString());
 }

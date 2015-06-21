@@ -1,3 +1,3 @@
 {
-  assertEquals("isNull()",Null.NULL.describe());
+  assertEquals("isNull()",Null.NULL.toString());
 }

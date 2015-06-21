@@ -1,8 +1,0 @@
-{
-  if (actualMatcher instanceof ContainsTypedDescription) {
-    return ((ContainsTypedDescription)actualMatcher).getTypedDescription();
-  }
- else {
-    return actualMatcher.describe();
-  }
-}

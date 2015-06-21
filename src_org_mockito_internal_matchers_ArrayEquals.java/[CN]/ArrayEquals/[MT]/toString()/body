@@ -3,6 +3,6 @@
     return appendArray(createObjectArray(getWanted()));
   }
  else {
-    return super.describe();
+    return super.toString();
   }
 }

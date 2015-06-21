@@ -5,7 +5,7 @@
   List<Integer> suspicious=new LinkedList<Integer>();
   int i=0;
   for (  MockitoMatcher m : matchers) {
-    if (m instanceof ContainsTypedDescription && !safelyMatches(m,arguments[i]) && toStringEquals(m,arguments[i])&& !((ContainsTypedDescription)m).typeMatches(arguments[i])) {
+    if (m instanceof ContainsExtraTypeInfo && !safelyMatches(m,arguments[i]) && toStringEquals(m,arguments[i])&& !((ContainsExtraTypeInfo)m).typeMatches(arguments[i])) {
       suspicious.add(i);
     }
     i++;

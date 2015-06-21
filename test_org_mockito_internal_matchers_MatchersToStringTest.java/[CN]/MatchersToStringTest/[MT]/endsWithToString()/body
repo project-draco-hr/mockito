@@ -1,3 +1,3 @@
 {
-  assertEquals("endsWith(\"AB\")",new EndsWith("AB").describe());
+  assertEquals("endsWith(\"AB\")",new EndsWith("AB").toString());
 }

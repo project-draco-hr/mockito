@@ -5,5 +5,5 @@
     }
   }
 ;
-  assertEquals("X",new Equals(o).describe());
+  assertEquals("X",new Equals(o).toString());
 }

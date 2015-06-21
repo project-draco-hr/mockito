@@ -1,4 +1,4 @@
 {
-  String descStr=new Equals(null).describe();
+  String descStr=new Equals(null).toString();
   assertEquals("null",descStr);
 }

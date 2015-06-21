@@ -1,5 +1,5 @@
 {
-  ContainsTypedDescription equals10=new Equals(10);
+  ContainsExtraTypeInfo equals10=new Equals(10);
   LocalizedMatcher m=new LocalizedMatcher((MockitoMatcher)equals10);
-  assertEquals("(Integer) 10",m.getTypedDescription());
+  assertEquals("(Integer) 10",m.toStringWithType());
 }
