@@ -1,0 +1,12 @@
+{
+  StringBuilder out=new StringBuilder();
+  out.append("and(");
+  for (Iterator<MockitoMatcher> it=matchers.iterator(); it.hasNext(); ) {
+    out.append(it.next().describe());
+    if (it.hasNext()) {
+      out.append(", ");
+    }
+  }
+  out.append(")");
+  return out.toString();
+}

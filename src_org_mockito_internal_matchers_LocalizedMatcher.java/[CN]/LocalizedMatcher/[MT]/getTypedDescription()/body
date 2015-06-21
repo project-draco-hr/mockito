@@ -3,6 +3,6 @@
     return ((ContainsTypedDescription)actualMatcher).getTypedDescription();
   }
  else {
-    return HamcrestPrinter.print(actualMatcher);
+    return actualMatcher.describe();
   }
 }

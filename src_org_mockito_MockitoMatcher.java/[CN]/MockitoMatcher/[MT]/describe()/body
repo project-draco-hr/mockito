@@ -1,0 +1,4 @@
+{
+  String className=getClass().getSimpleName();
+  return Decamelizer.decamelizeMatcher(className);
+}

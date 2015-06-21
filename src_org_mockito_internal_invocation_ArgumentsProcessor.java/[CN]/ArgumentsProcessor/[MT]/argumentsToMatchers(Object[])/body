@@ -1,5 +1,5 @@
 {
-  List<Matcher> matchers=new ArrayList<Matcher>(arguments.length);
+  List<MockitoMatcher> matchers=new ArrayList<MockitoMatcher>(arguments.length);
   for (  Object arg : arguments) {
     if (arg != null && arg.getClass().isArray()) {
       matchers.add(new ArrayEquals(arg));

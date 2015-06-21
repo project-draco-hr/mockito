@@ -1,0 +1,10 @@
+{
+  StringBuilder sb=new StringBuilder("or(");
+  for (Iterator<MockitoMatcher> it=matchers.iterator(); it.hasNext(); ) {
+    sb.append(it.next().describe());
+    if (it.hasNext()) {
+      sb.append(", ");
+    }
+  }
+  return sb.append(")").toString();
+}

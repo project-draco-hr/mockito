@@ -1,3 +1,3 @@
 {
-  assertEquals("notNull()",describe(NotNull.NOT_NULL));
+  assertEquals("notNull()",NotNull.NOT_NULL.describe());
 }

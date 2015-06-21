@@ -1,5 +1,5 @@
 {
-  for (  Matcher matcher : matchers) {
+  for (  MockitoMatcher matcher : matchers) {
     if (!matcher.matches(actual)) {
       return false;
     }

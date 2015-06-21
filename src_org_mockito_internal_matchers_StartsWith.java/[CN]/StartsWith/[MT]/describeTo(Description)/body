@@ -1,3 +1,0 @@
-{
-  description.appendText("startsWith(\"" + prefix + "\")");
-}

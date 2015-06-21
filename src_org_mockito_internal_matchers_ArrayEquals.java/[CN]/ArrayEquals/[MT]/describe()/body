@@ -1,0 +1,8 @@
+{
+  if (getWanted() != null && getWanted().getClass().isArray()) {
+    return appendArray(createObjectArray(getWanted()));
+  }
+ else {
+    return super.describe();
+  }
+}

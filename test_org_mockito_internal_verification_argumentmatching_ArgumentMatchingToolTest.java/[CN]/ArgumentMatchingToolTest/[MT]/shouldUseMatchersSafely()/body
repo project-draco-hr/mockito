@@ -1,9 +1,7 @@
 {
-  List<Matcher> matchers=(List)Arrays.asList(new BaseMatcher(){
+  List<MockitoMatcher> matchers=(List)Arrays.asList(new MockitoMatcher(){
     public boolean matches(    Object item){
       throw new ClassCastException("nasty matcher");
-    }
-    public void describeTo(    Description description){
     }
   }
 );

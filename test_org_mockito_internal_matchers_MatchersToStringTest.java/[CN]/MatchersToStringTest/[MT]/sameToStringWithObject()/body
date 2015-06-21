@@ -5,5 +5,5 @@
     }
   }
 ;
-  assertEquals("same(X)",describe(new Same(o)));
+  assertEquals("same(X)",new Same(o).describe());
 }

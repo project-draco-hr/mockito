@@ -1,0 +1,3 @@
+{
+  return "<Capturing variable argument>";
+}

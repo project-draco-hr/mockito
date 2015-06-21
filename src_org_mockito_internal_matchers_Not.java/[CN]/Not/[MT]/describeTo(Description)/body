@@ -1,5 +1,0 @@
-{
-  description.appendText("not(");
-  first.describeTo(description);
-  description.appendText(")");
-}

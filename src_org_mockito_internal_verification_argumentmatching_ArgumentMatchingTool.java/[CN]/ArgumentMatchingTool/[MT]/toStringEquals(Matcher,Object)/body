@@ -1,3 +1,0 @@
-{
-  return HamcrestPrinter.print(m).equals(arg == null ? "null" : arg.toString());
-}

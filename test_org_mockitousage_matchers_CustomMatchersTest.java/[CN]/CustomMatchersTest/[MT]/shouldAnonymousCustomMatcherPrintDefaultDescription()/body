@@ -1,7 +1,7 @@
 {
   mock.simpleMethod("foo");
   try {
-    verify(mock).simpleMethod((String)argThat(new ArgumentMatcher<Object>(){
+    verify(mock).simpleMethod((String)argThat(new MockitoMatcher<Object>(){
       @Override public boolean matches(      Object argument){
         return false;
       }

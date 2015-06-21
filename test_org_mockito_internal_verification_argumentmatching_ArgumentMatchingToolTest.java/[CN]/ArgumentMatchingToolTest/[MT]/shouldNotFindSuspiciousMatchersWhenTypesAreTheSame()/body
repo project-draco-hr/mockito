@@ -1,7 +1,7 @@
 {
   Equals matcherWithBadDescription=new Equals(20){
-    public void describeTo(    Description desc){
-      desc.appendText("10");
+    public String describe(){
+      return "10";
     }
   }
 ;

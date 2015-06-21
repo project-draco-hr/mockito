@@ -1,4 +1,4 @@
 {
   LocalizedMatcher m=new LocalizedMatcher(Any.ANY);
-  assertEquals(describe(m),m.getTypedDescription());
+  assertEquals(m.describe(),m.getTypedDescription());
 }

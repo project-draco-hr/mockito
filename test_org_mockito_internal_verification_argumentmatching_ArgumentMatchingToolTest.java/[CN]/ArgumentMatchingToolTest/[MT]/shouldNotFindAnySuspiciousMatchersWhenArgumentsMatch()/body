@@ -1,5 +1,5 @@
 {
-  List<Matcher> matchers=(List)Arrays.asList(new Equals(10),new Equals(20));
+  List<MockitoMatcher> matchers=(List)Arrays.asList(new Equals(10),new Equals(20));
   Integer[] suspicious=tool.getSuspiciouslyNotMatchingArgsIndexes(matchers,new Object[]{10,20});
   assertEquals(0,suspicious.length);
 }

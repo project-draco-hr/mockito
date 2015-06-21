@@ -1,0 +1,14 @@
+{
+  List out=new LinkedList();
+  int i=0;
+  for (  final MockitoMatcher matcher : matchers) {
+    if (matcher instanceof ContainsTypedDescription && printSettings.extraTypeInfoFor(i)) {
+      out.add(new FormattedText(((ContainsTypedDescription)matcher).getTypedDescription()));
+    }
+ else {
+      out.add(new FormattedText(matcher.describe()));
+    }
+    i++;
+  }
+  return out.iterator();
+}

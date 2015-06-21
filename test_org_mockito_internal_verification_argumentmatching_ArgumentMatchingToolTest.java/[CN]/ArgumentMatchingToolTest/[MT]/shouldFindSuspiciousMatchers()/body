@@ -1,7 +1,7 @@
 {
   Equals matcherInt20=new Equals(20);
   Long longPretendingAnInt=new Long(20);
-  List<Matcher> matchers=(List)Arrays.asList(new Equals(10),matcherInt20);
+  List<MockitoMatcher> matchers=(List)Arrays.asList(new Equals(10),matcherInt20);
   Integer[] suspicious=tool.getSuspiciouslyNotMatchingArgsIndexes(matchers,new Object[]{10,longPretendingAnInt});
   assertEquals(1,suspicious.length);
   assertEquals(new Integer(1),suspicious[0]);

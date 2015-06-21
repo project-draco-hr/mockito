@@ -1,0 +1,3 @@
+{
+  return "same(" + new ValuePrinter().appendValue(wanted).toString() + ")";
+}

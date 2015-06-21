@@ -3,14 +3,14 @@
     return false;
   }
   Object[] rawArgs=actual.getRawArguments();
-  List<Matcher> matchers=invocationMatcher.getMatchers();
+  List<MockitoMatcher> matchers=invocationMatcher.getMatchers();
   if (rawArgs.length != matchers.size()) {
     return false;
   }
   for (int i=0; i < rawArgs.length; i++) {
-    Matcher m=matchers.get(i);
+    MockitoMatcher m=matchers.get(i);
     if (rawArgs[i] != null && rawArgs[i].getClass().isArray() && i == rawArgs.length - 1) {
-      Matcher actualMatcher;
+      MockitoMatcher actualMatcher;
       if (m instanceof MatcherDecorator) {
         actualMatcher=((MatcherDecorator)m).getActualMatcher();
       }
