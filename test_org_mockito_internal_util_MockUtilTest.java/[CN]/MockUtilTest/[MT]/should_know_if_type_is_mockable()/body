@@ -1,0 +1,6 @@
+{
+  assertFalse(mockUtil.typeMockabilityOf(FinalClass.class).mockable());
+  assertFalse(mockUtil.typeMockabilityOf(int.class).mockable());
+  assertTrue(mockUtil.typeMockabilityOf(SomeClass.class).mockable());
+  assertTrue(mockUtil.typeMockabilityOf(SomeInterface.class).mockable());
+}

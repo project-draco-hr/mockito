@@ -1,5 +1,6 @@
 {
-  if (!mockUtil.isTypeMockable(classToMock)) {
-    new Reporter().cannotMockFinalClass(classToMock);
+  TypeMockability typeMockability=mockUtil.typeMockabilityOf(classToMock);
+  if (!typeMockability.mockable()) {
+    new Reporter().cannotMockClass(classToMock,typeMockability.nonMockableReason());
   }
 }

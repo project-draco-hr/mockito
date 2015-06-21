@@ -1,3 +1,0 @@
-{
-  throw new MockitoException(join("Cannot mock/spy " + clazz.toString(),"Mockito cannot mock/spy following:","  - final classes","  - anonymous classes","  - primitive types"));
-}
