@@ -1,4 +1,4 @@
 {
-  this.actualMatcher=actualMatcher;
+  this.matcher=matcher;
   this.location=new LocationImpl();
 }

@@ -1,6 +1,0 @@
-{
-  ContainsExtraTypeInfo equals10=new Equals(10);
-  LocalizedMatcher m=new LocalizedMatcher((MockitoMatcher)equals10);
-  assertTrue(m.typeMatches(10));
-  assertFalse(m.typeMatches(10L));
-}

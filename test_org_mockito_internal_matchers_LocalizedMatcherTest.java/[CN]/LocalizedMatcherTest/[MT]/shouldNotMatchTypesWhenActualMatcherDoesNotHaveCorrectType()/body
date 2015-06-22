@@ -1,4 +1,0 @@
-{
-  LocalizedMatcher m=new LocalizedMatcher(Any.ANY);
-  assertFalse(m.typeMatches(10));
-}

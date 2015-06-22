@@ -1,6 +1,0 @@
-{
-  CapturingMatcher capturingMatcher=new CapturingMatcher();
-  LocalizedMatcher m=new LocalizedMatcher(capturingMatcher);
-  m.captureFrom("boo");
-  assertEquals("boo",capturingMatcher.getLastValue());
-}

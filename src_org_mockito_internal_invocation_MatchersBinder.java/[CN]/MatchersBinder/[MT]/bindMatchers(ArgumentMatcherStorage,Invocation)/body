@@ -1,6 +1,9 @@
 {
   List<LocalizedMatcher> lastMatchers=argumentMatcherStorage.pullLocalizedMatchers();
   validateMatchers(invocation,lastMatchers);
-  InvocationMatcher invocationWithMatchers=new InvocationMatcher(invocation,(List<MockitoMatcher>)(List)lastMatchers);
-  return invocationWithMatchers;
+  List<MockitoMatcher> matchers=new LinkedList<MockitoMatcher>();
+  for (  LocalizedMatcher m : lastMatchers) {
+    matchers.add(m.getMatcher());
+  }
+  return new InvocationMatcher(invocation,matchers);
 }

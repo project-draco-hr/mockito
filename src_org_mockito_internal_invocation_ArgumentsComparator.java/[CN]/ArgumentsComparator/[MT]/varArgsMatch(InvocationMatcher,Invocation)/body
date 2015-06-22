@@ -10,14 +10,7 @@
   for (int i=0; i < rawArgs.length; i++) {
     MockitoMatcher m=matchers.get(i);
     if (rawArgs[i] != null && rawArgs[i].getClass().isArray() && i == rawArgs.length - 1) {
-      MockitoMatcher actualMatcher;
-      if (m instanceof MatcherDecorator) {
-        actualMatcher=((MatcherDecorator)m).getActualMatcher();
-      }
- else {
-        actualMatcher=m;
-      }
-      if (!(actualMatcher instanceof VarargMatcher) || !actualMatcher.matches(rawArgs[i])) {
+      if (!(m instanceof VarargMatcher) || !m.matches(rawArgs[i])) {
         return false;
       }
     }

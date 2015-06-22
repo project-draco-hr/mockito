@@ -1,5 +1,0 @@
-{
-  ContainsExtraTypeInfo e=new Equals("x");
-  LocalizedMatcher m=new LocalizedMatcher((MockitoMatcher)e);
-  assertEquals("(String) \"x\"",m.toStringWithType());
-}
