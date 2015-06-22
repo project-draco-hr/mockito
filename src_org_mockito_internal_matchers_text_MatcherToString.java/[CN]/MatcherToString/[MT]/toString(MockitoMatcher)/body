@@ -1,0 +1,14 @@
+{
+  ObjectMethodsGuru guru=new ObjectMethodsGuru();
+  Class cls=matcher.getClass();
+  while (cls != Object.class) {
+    Method[] methods=cls.getDeclaredMethods();
+    for (    Method m : methods) {
+      if (guru.isToString(m)) {
+        return matcher.toString();
+      }
+    }
+    cls=cls.getSuperclass();
+  }
+  return Decamelizer.decamelizeMatcher(matcher.getClass().getSimpleName());
+}

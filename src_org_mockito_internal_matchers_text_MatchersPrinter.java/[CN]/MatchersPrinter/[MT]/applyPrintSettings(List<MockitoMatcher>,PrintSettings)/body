@@ -6,7 +6,7 @@
       out.add(new FormattedText(((ContainsExtraTypeInfo)matcher).toStringWithType()));
     }
  else {
-      out.add(new FormattedText(matcher.toString()));
+      out.add(new FormattedText(MatcherToString.toString(matcher)));
     }
     i++;
   }
