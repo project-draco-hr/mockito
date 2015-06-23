@@ -1,5 +1,4 @@
 {
-  MockMethodInterceptor interceptor=fieldGetter.getValue();
   if (interceptor == null) {
     return superCall.call();
   }
