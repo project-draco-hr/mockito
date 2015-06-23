@@ -1,0 +1,3 @@
+{
+  return (T)MOCKING_PROGRESS.getArgumentMatcherStorage().reportMatcher(new HamcrestArgumentMatcher(matcher)).returnNull();
+}
