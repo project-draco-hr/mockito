@@ -1,5 +1,5 @@
 {
-  List<MockitoMatcher> matchers=(List)Arrays.asList(new MockitoMatcher(){
+  List<ArgumentMatcher> matchers=(List)Arrays.asList(new ArgumentMatcher(){
     public boolean matches(    Object item){
       throw new ClassCastException("nasty matcher");
     }

@@ -1,0 +1,14 @@
+{
+  List out=new LinkedList();
+  int i=0;
+  for (  final ArgumentMatcher matcher : matchers) {
+    if (matcher instanceof ContainsExtraTypeInfo && printSettings.extraTypeInfoFor(i)) {
+      out.add(new FormattedText(((ContainsExtraTypeInfo)matcher).toStringWithType()));
+    }
+ else {
+      out.add(new FormattedText(MatcherToString.toString(matcher)));
+    }
+    i++;
+  }
+  return out.iterator();
+}

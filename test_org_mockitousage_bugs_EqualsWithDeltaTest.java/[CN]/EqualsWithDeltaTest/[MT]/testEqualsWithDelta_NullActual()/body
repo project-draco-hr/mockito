@@ -1,4 +1,4 @@
 {
-  MockitoMatcher<Number> matcher=equalsWithDelta(1.0);
+  ArgumentMatcher<Number> matcher=equalsWithDelta(1.0);
   assertThat(matcher.matches(null)).isFalse();
 }

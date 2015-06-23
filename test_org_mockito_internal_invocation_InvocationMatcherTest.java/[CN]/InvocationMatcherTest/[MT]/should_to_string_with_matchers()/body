@@ -1,7 +1,7 @@
 {
-  MockitoMatcher m=NotNull.NOT_NULL;
+  ArgumentMatcher m=NotNull.NOT_NULL;
   InvocationMatcher notNull=new InvocationMatcher(new InvocationBuilder().toInvocation(),asList(m));
-  MockitoMatcher mTwo=new Equals('x');
+  ArgumentMatcher mTwo=new Equals('x');
   InvocationMatcher equals=new InvocationMatcher(new InvocationBuilder().toInvocation(),asList(mTwo));
   assertContains("simpleMethod(notNull())",notNull.toString());
   assertContains("simpleMethod('x')",equals.toString());

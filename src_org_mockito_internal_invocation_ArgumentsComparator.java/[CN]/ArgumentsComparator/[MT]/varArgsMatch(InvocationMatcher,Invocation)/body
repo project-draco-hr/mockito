@@ -3,12 +3,12 @@
     return false;
   }
   Object[] rawArgs=actual.getRawArguments();
-  List<MockitoMatcher> matchers=invocationMatcher.getMatchers();
+  List<ArgumentMatcher> matchers=invocationMatcher.getMatchers();
   if (rawArgs.length != matchers.size()) {
     return false;
   }
   for (int i=0; i < rawArgs.length; i++) {
-    MockitoMatcher m=matchers.get(i);
+    ArgumentMatcher m=matchers.get(i);
     if (rawArgs[i] != null && rawArgs[i].getClass().isArray() && i == rawArgs.length - 1) {
       if (!(m instanceof VarargMatcher) || !m.matches(rawArgs[i])) {
         return false;

@@ -1,6 +1,6 @@
 {
   Double expected=1.0;
   Double actual=expected;
-  MockitoMatcher<Number> matcher=equalsWithDelta(expected);
+  ArgumentMatcher<Number> matcher=equalsWithDelta(expected);
   assertThat(matcher.matches(actual)).isTrue();
 }

@@ -1,7 +1,7 @@
 {
-  HashSet<MockitoMatcher> set=new HashSet<MockitoMatcher>();
+  HashSet<ArgumentMatcher> set=new HashSet<ArgumentMatcher>();
   for (int position=indexOfVararg; position < matchers.size(); position++) {
-    MockitoMatcher matcher=matchers.get(position);
+    ArgumentMatcher matcher=matchers.get(position);
     set.add(matcher);
   }
   return set;
