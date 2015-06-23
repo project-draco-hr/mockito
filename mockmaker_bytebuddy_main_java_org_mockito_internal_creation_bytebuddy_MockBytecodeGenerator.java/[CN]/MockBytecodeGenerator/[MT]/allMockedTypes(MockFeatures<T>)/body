@@ -1,6 +1,0 @@
-{
-  Class<?>[] allMockedTypes=new Class<?>[features.interfaces.size() + 1];
-  allMockedTypes[0]=features.mockedType;
-  System.arraycopy(features.interfaces.toArray(),0,(Object[])allMockedTypes,1,features.interfaces.size());
-  return allMockedTypes;
-}

@@ -1,2 +1,2 @@
-Class classToMock
+Class<?> classToMock
 Object spiedInstance

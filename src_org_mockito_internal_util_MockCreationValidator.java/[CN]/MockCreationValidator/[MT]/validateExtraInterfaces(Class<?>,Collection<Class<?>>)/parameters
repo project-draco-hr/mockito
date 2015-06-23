@@ -1,0 +1,2 @@
+Class<?> classToMock
+Collection<Class<?>> extraInterfaces

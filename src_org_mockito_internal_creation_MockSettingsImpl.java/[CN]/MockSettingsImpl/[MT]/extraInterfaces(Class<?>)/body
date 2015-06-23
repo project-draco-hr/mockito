@@ -2,7 +2,7 @@
   if (extraInterfaces == null || extraInterfaces.length == 0) {
     new Reporter().extraInterfacesRequiresAtLeastOneInterface();
   }
-  for (  Class i : extraInterfaces) {
+  for (  Class<?> i : extraInterfaces) {
     if (i == null) {
       new Reporter().extraInterfacesDoesNotAcceptNullParameters();
     }
