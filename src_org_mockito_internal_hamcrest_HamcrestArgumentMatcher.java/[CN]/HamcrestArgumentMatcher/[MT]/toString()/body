@@ -1,5 +1,3 @@
 {
-  StringDescription s=new StringDescription();
-  this.matcher.describeTo(s);
-  return s.toString();
+  return StringDescription.toString(matcher);
 }

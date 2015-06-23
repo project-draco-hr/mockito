@@ -1,3 +1,0 @@
-{
-  return StringDescription.toString(object);
-}
