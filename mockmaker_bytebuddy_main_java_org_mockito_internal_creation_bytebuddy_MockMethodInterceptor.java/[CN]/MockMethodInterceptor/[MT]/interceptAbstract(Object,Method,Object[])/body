@@ -1,3 +1,0 @@
-{
-  return doIntercept(mock,invokedMethod,arguments,InterceptedInvocation.SuperMethod.IsIllegal.INSTANCE);
-}

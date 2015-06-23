@@ -1,0 +1,5 @@
+Object mock
+MockMethodInterceptor interceptor
+Object stubValue
+Method invokedMethod
+Object[] arguments

@@ -1,7 +1,0 @@
-{
-  MockMethodInterceptor interceptor=fieldGetter.getValue();
-  if (interceptor == null) {
-    return superCall.call();
-  }
-  return interceptor.doIntercept(mock,invokedMethod,arguments,new InterceptedInvocation.SuperMethod.FromCallable(superCall));
-}

@@ -1,0 +1,15 @@
+{
+  if (extraInterfaces == null || extraInterfaces.length == 0) {
+    new Reporter().extraInterfacesRequiresAtLeastOneInterface();
+  }
+  for (  Class<?> i : extraInterfaces) {
+    if (i == null) {
+      new Reporter().extraInterfacesDoesNotAcceptNullParameters();
+    }
+ else     if (!i.isInterface()) {
+      new Reporter().extraInterfacesAcceptsOnlyInterfaces(i);
+    }
+  }
+  this.extraInterfaces=newSet(extraInterfaces);
+  return this;
+}

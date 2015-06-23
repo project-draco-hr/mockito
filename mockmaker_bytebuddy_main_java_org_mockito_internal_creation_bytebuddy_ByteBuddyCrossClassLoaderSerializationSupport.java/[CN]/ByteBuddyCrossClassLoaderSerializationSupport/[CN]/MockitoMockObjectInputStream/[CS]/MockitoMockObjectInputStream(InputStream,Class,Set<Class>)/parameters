@@ -1,3 +1,0 @@
-InputStream in
-Class typeToMock
-Set<Class> extraInterfaces

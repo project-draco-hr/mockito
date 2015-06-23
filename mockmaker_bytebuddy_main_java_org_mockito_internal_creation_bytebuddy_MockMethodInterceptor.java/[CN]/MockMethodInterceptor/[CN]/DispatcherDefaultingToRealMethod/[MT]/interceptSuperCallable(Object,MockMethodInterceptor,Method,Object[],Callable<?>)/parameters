@@ -1,0 +1,5 @@
+Object mock
+MockMethodInterceptor interceptor
+Method invokedMethod
+Object[] arguments
+Callable<?> superCall

@@ -1,7 +1,0 @@
-{
-  MockMethodInterceptor interceptor=fieldGetter.getValue();
-  if (interceptor == null) {
-    return null;
-  }
-  return interceptor.doIntercept(mock,invokedMethod,arguments,InterceptedInvocation.SuperMethod.IsIllegal.INSTANCE);
-}

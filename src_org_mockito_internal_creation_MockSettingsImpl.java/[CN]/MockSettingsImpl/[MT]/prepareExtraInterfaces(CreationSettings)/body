@@ -1,5 +1,5 @@
 {
-  Set<Class> interfaces=new HashSet<Class>(settings.getExtraInterfaces());
+  Set<Class<?>> interfaces=new HashSet<Class<?>>(settings.getExtraInterfaces());
   if (settings.isSerializable()) {
     interfaces.add(Serializable.class);
   }
