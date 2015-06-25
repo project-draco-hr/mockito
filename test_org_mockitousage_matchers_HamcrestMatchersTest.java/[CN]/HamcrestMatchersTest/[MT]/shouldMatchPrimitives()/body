@@ -1,4 +1,0 @@
-{
-  when(mock.intArgumentReturningInt(argThat(new PrimitiveMatcher()))).thenReturn(5);
-  assertEquals(5,mock.intArgumentReturningInt(10));
-}

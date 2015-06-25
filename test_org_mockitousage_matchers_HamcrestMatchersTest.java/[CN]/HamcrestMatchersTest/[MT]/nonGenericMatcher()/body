@@ -1,0 +1,4 @@
+{
+  argThat(new NonGenericMatcher());
+  return 0;
+}

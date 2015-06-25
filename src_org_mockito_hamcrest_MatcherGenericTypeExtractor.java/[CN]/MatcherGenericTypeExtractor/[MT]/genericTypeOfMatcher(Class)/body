@@ -1,0 +1,3 @@
+{
+  return genericTypeOf(matcherClass,BaseMatcher.class,Matcher.class);
+}
