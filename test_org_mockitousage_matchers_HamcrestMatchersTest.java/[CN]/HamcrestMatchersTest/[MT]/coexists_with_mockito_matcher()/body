@@ -1,0 +1,9 @@
+{
+  when(mock.simpleMethod(argThat(new ArgumentMatcher<String>(){
+    public boolean matches(    Object argument){
+      return true;
+    }
+  }
+))).thenReturn("x");
+  assertEquals("x",mock.simpleMethod("x"));
+}
