@@ -1,5 +1,4 @@
 {
-  ValuePrinter printer=new ValuePrinter();
-  printer.appendList("(\n    ",",\n    ","\n);",applyPrintSettings(matchers,printSettings));
-  return printer.toString();
+  Iterator args=applyPrintSettings(matchers,printSettings);
+  return ValuePrinter.printValues("(\n    ",",\n    ","\n);",args);
 }

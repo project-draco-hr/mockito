@@ -1,5 +1,4 @@
 {
-  ValuePrinter printer=new ValuePrinter();
-  printer.appendList("(",", ",");",applyPrintSettings(matchers,printSettings));
-  return printer.toString();
+  Iterator args=applyPrintSettings(matchers,printSettings);
+  return ValuePrinter.printValues("(",", ",");",args);
 }

@@ -1,3 +1,3 @@
 {
-  return new ValuePrinter().appendValue(object).toString();
+  return ValuePrinter.print(object);
 }

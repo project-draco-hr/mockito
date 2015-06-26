@@ -1,0 +1,18 @@
+{
+  if (value == null) {
+    return "null";
+  }
+ else   if (value instanceof String) {
+    return "\"" + value + "\"";
+  }
+ else   if (value instanceof Character) {
+    return printChar((Character)value);
+  }
+ else   if (value.getClass().isArray()) {
+    return printValues("[",", ","]",new org.mockito.internal.matchers.text.ArrayIterator(value));
+  }
+ else   if (value instanceof FormattedText) {
+    return (((FormattedText)value).getText());
+  }
+  return descriptionOf(value);
+}

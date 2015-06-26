@@ -1,0 +1,10 @@
+{
+  StringBuilder sb=new StringBuilder(start);
+  while (values.hasNext()) {
+    sb.append(print(values.next()));
+    if (values.hasNext()) {
+      sb.append(separator);
+    }
+  }
+  return sb.append(end).toString();
+}
