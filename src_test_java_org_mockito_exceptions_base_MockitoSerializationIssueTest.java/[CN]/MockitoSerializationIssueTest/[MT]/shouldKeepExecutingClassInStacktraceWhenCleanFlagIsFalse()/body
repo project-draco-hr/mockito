@@ -1,0 +1,6 @@
+{
+  ConfigurationAccess.getConfig().overrideCleansStackTrace(false);
+  MockitoSerializationIssue issue=new MockitoSerializationIssue("msg",new Exception("cause"));
+  assertContains("MockitoSerializationIssueTest",Arrays.toString(issue.getUnfilteredStackTrace()));
+  assertContains("MockitoSerializationIssueTest",Arrays.toString(issue.getStackTrace()));
+}
