@@ -1,6 +1,0 @@
-{
-  DummyClassForTests dummy=new DummyClassForTests();
-  Whitebox.setInternalState(dummy,"somePrivateField","cool!");
-  Object internalState=org.powermock.reflect.Whitebox.getInternalState(dummy,"somePrivateField");
-  assertEquals("cool!",internalState);
-}
