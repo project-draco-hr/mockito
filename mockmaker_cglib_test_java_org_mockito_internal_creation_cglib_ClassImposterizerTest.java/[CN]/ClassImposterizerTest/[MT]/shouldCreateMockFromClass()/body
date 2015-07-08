@@ -1,5 +1,0 @@
-{
-  ClassWithoutConstructor proxy=imposterizer.imposterise(new MethodInterceptorStub(),ClassWithoutConstructor.class);
-  Class superClass=proxy.getClass().getSuperclass();
-  assertEquals(ClassWithoutConstructor.class,superClass);
-}

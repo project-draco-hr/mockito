@@ -1,6 +1,0 @@
-{
-  MethodInterceptorFilter filter=new MethodInterceptorFilter(handler,(MockSettingsImpl)withSettings().serializable());
-  Method method=new InvocationBuilder().toInvocation().getMethod();
-  MockitoMethod mockitoMethod=filter.createMockitoMethod(method);
-  assertThat(mockitoMethod,instanceOf(SerializableMethod.class));
-}

@@ -1,9 +1,0 @@
-{
-  MethodProxy proxy=MethodProxy.create(String.class,Integer.class,"a","b","c");
-  SerializableMockitoMethodProxy serializableMockitoMethodProxy=new SerializableMockitoMethodProxy(proxy);
-  serializableMockitoMethodProxy.methodProxy=null;
-  MethodProxy methodProxy=(MethodProxy)Whitebox.invokeMethod(serializableMockitoMethodProxy,"getMethodProxy",new Object[0]);
-  assertEquals("a",methodProxy.getSignature().getDescriptor());
-  assertEquals("b",methodProxy.getSignature().getName());
-  assertEquals("c",methodProxy.getSuperName());
-}

@@ -1,7 +1,0 @@
-{
-  Class cglibMethodProxyClass=methodProxy.getClass();
-  while (cglibMethodProxyClass != MethodProxy.class) {
-    cglibMethodProxyClass=methodProxy.getClass().getSuperclass();
-  }
-  return cglibMethodProxyClass.getDeclaredField("createInfo");
-}

@@ -1,6 +1,0 @@
-{
-  if (!(handler instanceof InternalMockHandler)) {
-    throw new MockitoException("At the moment you cannot provide own implementations of MockHandler." + "\nPlease see the javadocs for the MockMaker interface.");
-  }
-  return (InternalMockHandler)handler;
-}

@@ -1,3 +1,0 @@
-{
-  return instance == null ? "null" : describeClass(instance.getClass());
-}

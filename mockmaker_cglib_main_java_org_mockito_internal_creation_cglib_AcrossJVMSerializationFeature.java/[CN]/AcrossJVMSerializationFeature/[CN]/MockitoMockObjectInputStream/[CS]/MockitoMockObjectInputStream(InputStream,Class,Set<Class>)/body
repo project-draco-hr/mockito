@@ -1,6 +1,0 @@
-{
-  super(in);
-  this.typeToMock=typeToMock;
-  this.extraInterfaces=extraInterfaces;
-  enableResolveObject(true);
-}

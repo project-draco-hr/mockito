@@ -1,6 +1,0 @@
-{
-  Observable observable=Mockito.mock(Observable.class,Mockito.withSettings().serializable());
-  observable.addObserver(null);
-  observable.countObservers();
-  serializeMock(observable,"mockito_mock.ser");
-}

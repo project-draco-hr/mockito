@@ -1,8 +1,0 @@
-{
-  int numberOfThreads=20;
-  long before=System.currentTimeMillis();
-  runInMultipleThreads(numberOfThreads);
-  long after=System.currentTimeMillis();
-  long executionTime=(after - before) / 1000;
-  System.out.println("Finished tests in " + numberOfThreads + " threads in "+ executionTime+ " seconds.");
-}

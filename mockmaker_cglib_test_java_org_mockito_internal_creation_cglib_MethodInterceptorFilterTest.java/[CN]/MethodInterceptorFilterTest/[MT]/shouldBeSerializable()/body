@@ -1,3 +1,0 @@
-{
-  new ObjectOutputStream(new ByteArrayOutputStream()).writeObject(new MethodInterceptorFilter(null,null));
-}

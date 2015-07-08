@@ -1,5 +1,0 @@
-{
-  Object ret=filter.intercept(new MethodsImpl(),MethodsImpl.class.getMethod("hashCode"),new Object[0],null);
-  assertTrue((Integer)ret != 0);
-  Mockito.verify(handler,never()).handle(any(InvocationImpl.class));
-}

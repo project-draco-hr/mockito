@@ -1,9 +1,0 @@
-{
-  MethodProxy proxy=MethodProxy.create(String.class,Integer.class,"","","");
-  SerializableMockitoMethodProxy serializableMockitoMethodProxy=new SerializableMockitoMethodProxy(proxy);
-  serializableMockitoMethodProxy.methodProxy=null;
-  Object methodProxy=Whitebox.invokeMethod(serializableMockitoMethodProxy,"getMethodProxy",new Object[0]);
-  Object info=Whitebox.getInternalState(methodProxy,"createInfo");
-  assertEquals(String.class,Whitebox.getInternalState(info,"c1"));
-  assertEquals(Integer.class,Whitebox.getInternalState(info,"c2"));
-}

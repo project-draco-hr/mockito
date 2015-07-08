@@ -1,7 +1,0 @@
-{
-  MethodProxy methodProxy=MethodProxy.create(String.class,Integer.class,"","","");
-  new CGLIBHacker().setMockitoNamingPolicy(methodProxy);
-  Object createInfo=Whitebox.getInternalState(methodProxy,"createInfo");
-  NamingPolicy namingPolicy=(NamingPolicy)Whitebox.getInternalState(createInfo,"namingPolicy");
-  assertEquals(MockitoNamingPolicy.INSTANCE,namingPolicy);
-}
