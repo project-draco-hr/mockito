@@ -1,9 +1,0 @@
-{
-  int size=0;
-  AnnotationWriter aw=this;
-  while (aw != null) {
-    size+=aw.bv.length;
-    aw=aw.next;
-  }
-  return size;
-}

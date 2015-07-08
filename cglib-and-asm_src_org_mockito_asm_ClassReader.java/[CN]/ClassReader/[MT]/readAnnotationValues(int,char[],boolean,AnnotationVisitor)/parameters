@@ -1,4 +1,0 @@
-int v
-char[] buf
-boolean named
-AnnotationVisitor av

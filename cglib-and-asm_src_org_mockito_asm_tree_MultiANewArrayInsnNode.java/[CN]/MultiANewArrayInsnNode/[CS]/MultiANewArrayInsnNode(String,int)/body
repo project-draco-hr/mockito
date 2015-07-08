@@ -1,5 +1,0 @@
-{
-  super(Opcodes.MULTIANEWARRAY);
-  this.desc=desc;
-  this.dims=dims;
-}

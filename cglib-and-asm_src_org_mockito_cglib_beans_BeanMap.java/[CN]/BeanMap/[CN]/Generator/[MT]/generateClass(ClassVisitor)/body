@@ -1,3 +1,0 @@
-{
-  new BeanMapEmitter(v,getClassName(),beanClass,require);
-}

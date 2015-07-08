@@ -1,9 +1,0 @@
-{
-  if (callbacks.size() == 0)   return new Class[0];
-  if (callbacks.get(0) instanceof Callback) {
-    return ReflectUtils.getClasses(getCallbacks());
-  }
- else {
-    return (Class[])callbacks.toArray(new Class[callbacks.size()]);
-  }
-}

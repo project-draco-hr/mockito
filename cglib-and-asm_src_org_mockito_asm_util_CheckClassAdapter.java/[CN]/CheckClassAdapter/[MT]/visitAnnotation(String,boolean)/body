@@ -1,5 +1,0 @@
-{
-  checkState();
-  CheckMethodAdapter.checkDesc(desc,false);
-  return new CheckAnnotationAdapter(cv.visitAnnotation(desc,visible));
-}

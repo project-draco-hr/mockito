@@ -1,6 +1,0 @@
-{
-  if (!(proxy instanceof ProxyImpl)) {
-    throw new IllegalArgumentException("Object is not a proxy");
-  }
-  return ((Proxy)proxy).h;
-}

@@ -1,7 +1,0 @@
-{
-  if (state != FORMAL && state != BOUND) {
-    throw new IllegalArgumentException();
-  }
-  SignatureVisitor v=sv == null ? null : sv.visitInterfaceBound();
-  return new CheckSignatureAdapter(TYPE_SIGNATURE,v);
-}

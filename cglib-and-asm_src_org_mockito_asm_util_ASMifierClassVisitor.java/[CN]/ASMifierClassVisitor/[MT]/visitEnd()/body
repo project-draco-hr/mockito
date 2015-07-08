@@ -1,8 +1,0 @@
-{
-  text.add("cw.visitEnd();\n\n");
-  text.add("return cw.toByteArray();\n");
-  text.add("}\n");
-  text.add("}\n");
-  printList(pw,text);
-  pw.flush();
-}

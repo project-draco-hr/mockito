@@ -1,3 +1,0 @@
-{
-  return cv.visitMethod(access,name,desc,signature,exceptions);
-}

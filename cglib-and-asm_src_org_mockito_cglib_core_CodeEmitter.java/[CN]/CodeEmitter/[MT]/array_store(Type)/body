@@ -1,3 +1,0 @@
-{
-  mv.visitInsn(type.getOpcode(Constants.IASTORE));
-}

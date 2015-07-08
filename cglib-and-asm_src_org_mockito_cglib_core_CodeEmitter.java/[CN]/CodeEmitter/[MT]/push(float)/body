@@ -1,8 +1,0 @@
-{
-  if (value == 0f || value == 1f || value == 2f) {
-    mv.visitInsn(TypeUtils.FCONST(value));
-  }
- else {
-    mv.visitLdcInsn(new Float(value));
-  }
-}

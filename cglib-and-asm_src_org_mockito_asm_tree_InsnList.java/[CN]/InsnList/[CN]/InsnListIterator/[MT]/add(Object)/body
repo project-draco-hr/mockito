@@ -1,4 +1,0 @@
-{
-  InsnList.this.insertBefore(next,(AbstractInsnNode)o);
-  prev=(AbstractInsnNode)o;
-}

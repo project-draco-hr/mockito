@@ -1,3 +1,0 @@
-{
-  instructions.add(new MethodInsnNode(opcode,owner,name,desc));
-}

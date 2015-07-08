@@ -1,3 +1,0 @@
-{
-  addProperties(gen,ReflectUtils.getBeanProperties(type));
-}

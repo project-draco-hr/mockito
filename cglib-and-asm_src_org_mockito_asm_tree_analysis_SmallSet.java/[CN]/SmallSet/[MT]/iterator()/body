@@ -1,3 +1,0 @@
-{
-  return new SmallSet(e1,e2);
-}

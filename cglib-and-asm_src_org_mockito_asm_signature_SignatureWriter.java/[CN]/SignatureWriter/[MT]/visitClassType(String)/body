@@ -1,5 +1,0 @@
-{
-  buf.append('L');
-  buf.append(name);
-  argumentStack*=2;
-}

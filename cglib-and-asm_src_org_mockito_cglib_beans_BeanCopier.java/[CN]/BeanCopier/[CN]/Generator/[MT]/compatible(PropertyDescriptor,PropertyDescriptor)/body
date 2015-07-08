@@ -1,3 +1,0 @@
-{
-  return setter.getPropertyType().isAssignableFrom(getter.getPropertyType());
-}

@@ -1,3 +1,0 @@
-{
-  load_local(state.argumentTypes[index],state.localOffset + skipArgs(index));
-}

@@ -1,3 +1,0 @@
-{
-  invoke_static(ce.getClassType(),sig);
-}

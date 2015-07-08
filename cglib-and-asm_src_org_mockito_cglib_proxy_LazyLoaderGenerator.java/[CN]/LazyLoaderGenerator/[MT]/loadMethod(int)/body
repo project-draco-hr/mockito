@@ -1,3 +1,0 @@
-{
-  return new Signature("CGLIB$LOAD_PRIVATE_" + index,Constants.TYPE_OBJECT,Constants.TYPES_EMPTY);
-}

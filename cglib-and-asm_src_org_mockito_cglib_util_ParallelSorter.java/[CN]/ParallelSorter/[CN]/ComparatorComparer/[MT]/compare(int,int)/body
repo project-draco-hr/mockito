@@ -1,3 +1,0 @@
-{
-  return cmp.compare(a[i],a[j]);
-}

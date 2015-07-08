@@ -1,5 +1,0 @@
-{
-  this.type=type;
-  this.state=EMPTY;
-  this.sv=sv;
-}

@@ -1,7 +1,0 @@
-{
-  FieldVisitor fv1=cv1.visitField(access,name,desc,signature,value);
-  FieldVisitor fv2=cv2.visitField(access,name,desc,signature,value);
-  if (fv1 == null)   return fv2;
-  if (fv2 == null)   return fv1;
-  return new FieldVisitorTee(fv1,fv2);
-}

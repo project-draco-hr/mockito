@@ -1,6 +1,0 @@
-{
-  if (TypeUtils.isStatic(state.access)) {
-    throw new IllegalStateException("no 'this' pointer within static method");
-  }
-  mv.visitVarInsn(Constants.ALOAD,0);
-}

@@ -1,6 +1,0 @@
-{
-  Type[] all=new Type[t1.length + t2.length];
-  System.arraycopy(t1,0,all,0,t1.length);
-  System.arraycopy(t2,0,all,t1.length,t2.length);
-  return all;
-}

@@ -1,3 +1,0 @@
-{
-  super((msg == null ? "Expected " : msg + ": expected ") + expected + ", but found "+ encountered);
-}

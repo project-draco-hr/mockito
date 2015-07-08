@@ -1,6 +1,0 @@
-Class target
-String[] getters
-String[] setters
-Class[] types
-Method[] getters_out
-Method[] setters_out

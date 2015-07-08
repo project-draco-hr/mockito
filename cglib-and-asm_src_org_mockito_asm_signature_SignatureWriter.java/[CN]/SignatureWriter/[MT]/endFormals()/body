@@ -1,6 +1,0 @@
-{
-  if (hasFormals) {
-    hasFormals=false;
-    buf.append('>');
-  }
-}

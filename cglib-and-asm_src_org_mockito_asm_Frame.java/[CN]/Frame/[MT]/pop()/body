@@ -1,8 +1,0 @@
-{
-  if (outputStackTop > 0) {
-    return outputStack[--outputStackTop];
-  }
- else {
-    return STACK | -(--owner.inputStackTop);
-  }
-}

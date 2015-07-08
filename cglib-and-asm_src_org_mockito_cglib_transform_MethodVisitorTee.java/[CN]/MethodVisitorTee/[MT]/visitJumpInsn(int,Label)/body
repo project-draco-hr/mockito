@@ -1,4 +1,0 @@
-{
-  mv1.visitJumpInsn(opcode,label);
-  mv2.visitJumpInsn(opcode,label);
-}

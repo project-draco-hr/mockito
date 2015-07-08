@@ -1,5 +1,0 @@
-{
-  pos=checkChar('T',signature,pos);
-  pos=checkIdentifier(signature,pos);
-  return checkChar(';',signature,pos);
-}

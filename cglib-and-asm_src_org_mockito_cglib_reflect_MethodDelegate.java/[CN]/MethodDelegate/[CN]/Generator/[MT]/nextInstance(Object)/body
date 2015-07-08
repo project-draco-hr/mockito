@@ -1,3 +1,0 @@
-{
-  return ((MethodDelegate)instance).newInstance(target);
-}

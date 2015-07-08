@@ -1,5 +1,0 @@
-{
-  super(cause.getMessage());
-  this.index=index;
-  this.cause=cause;
-}

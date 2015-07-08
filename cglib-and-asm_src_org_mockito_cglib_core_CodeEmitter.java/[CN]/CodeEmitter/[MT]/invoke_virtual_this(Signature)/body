@@ -1,3 +1,0 @@
-{
-  invoke_virtual(ce.getClassType(),sig);
-}

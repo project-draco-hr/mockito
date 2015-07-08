@@ -1,4 +1,0 @@
-{
-  super(parent,parent,filter);
-  this.t=t;
-}

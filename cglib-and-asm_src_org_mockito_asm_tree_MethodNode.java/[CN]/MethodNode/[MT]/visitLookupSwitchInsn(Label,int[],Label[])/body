@@ -1,3 +1,0 @@
-{
-  instructions.add(new LookupSwitchInsnNode(getLabelNode(dflt),keys,getLabelNodes(labels)));
-}

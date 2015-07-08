@@ -1,3 +1,0 @@
-{
-  return new SourceValue(type == null ? 1 : type.getSize());
-}

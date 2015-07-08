@@ -1,3 +1,0 @@
-{
-  localVariables.add(new LocalVariableNode(name,desc,signature,getLabelNode(start),getLabelNode(end),index));
-}

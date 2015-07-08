@@ -1,6 +1,0 @@
-ClassVisitor v
-String className
-Class target
-String[] getterNames
-String[] setterNames
-Class[] types

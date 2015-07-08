@@ -1,4 +1,0 @@
-{
-  endArguments();
-  buf.append(';');
-}

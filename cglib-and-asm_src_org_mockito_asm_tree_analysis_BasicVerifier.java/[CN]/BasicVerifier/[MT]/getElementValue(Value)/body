@@ -1,3 +1,0 @@
-{
-  return BasicValue.REFERENCE_VALUE;
-}

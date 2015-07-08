@@ -1,3 +1,0 @@
-{
-  begin_class(version,access,name.replace('/','.'),TypeUtils.fromInternalName(superName),TypeUtils.fromInternalNames(interfaces),null);
-}

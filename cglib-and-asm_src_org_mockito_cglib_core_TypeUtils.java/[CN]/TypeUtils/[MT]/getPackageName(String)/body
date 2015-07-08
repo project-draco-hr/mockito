@@ -1,4 +1,0 @@
-{
-  int idx=className.lastIndexOf('.');
-  return (idx < 0) ? "" : className.substring(0,idx);
-}

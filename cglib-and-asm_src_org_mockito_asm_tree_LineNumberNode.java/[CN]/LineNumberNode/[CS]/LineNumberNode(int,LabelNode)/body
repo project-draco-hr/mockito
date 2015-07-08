@@ -1,5 +1,0 @@
-{
-  super(-1);
-  this.line=line;
-  this.start=start;
-}

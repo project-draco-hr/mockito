@@ -1,8 +1,0 @@
-{
-  (new ProcessArrayCallback(){
-    public void processElement(    Type type){
-      not_equals_helper(e,type,notEquals,customizer,this);
-    }
-  }
-).processElement(type);
-}

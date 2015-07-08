@@ -1,3 +1,0 @@
-{
-  return fc.invoke(index,obj,args);
-}

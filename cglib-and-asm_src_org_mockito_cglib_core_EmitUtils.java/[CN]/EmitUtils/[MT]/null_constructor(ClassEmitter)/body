@@ -1,7 +1,0 @@
-{
-  CodeEmitter e=ce.begin_method(Constants.ACC_PUBLIC,CSTRUCT_NULL,null);
-  e.load_this();
-  e.super_invoke_constructor();
-  e.return_value();
-  e.end_method();
-}

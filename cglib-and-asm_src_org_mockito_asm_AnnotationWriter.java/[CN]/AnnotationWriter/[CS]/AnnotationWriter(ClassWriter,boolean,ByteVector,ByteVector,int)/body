@@ -1,7 +1,0 @@
-{
-  this.cw=cw;
-  this.named=named;
-  this.bv=bv;
-  this.parent=parent;
-  this.offset=offset;
-}

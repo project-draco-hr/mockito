@@ -1,3 +1,0 @@
-{
-  return newInstance(getIndex(Constants.EMPTY_CLASS_ARRAY),null);
-}

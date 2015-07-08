@@ -1,6 +1,0 @@
-{
-  if (!Modifier.isPublic(source.getModifiers())) {
-    setNamePrefix(source.getName());
-  }
-  this.source=source;
-}

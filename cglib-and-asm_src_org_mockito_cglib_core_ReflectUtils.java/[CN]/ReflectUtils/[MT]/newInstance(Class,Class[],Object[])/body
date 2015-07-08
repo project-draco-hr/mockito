@@ -1,3 +1,0 @@
-{
-  return newInstance(getConstructor(type,parameterTypes),args);
-}

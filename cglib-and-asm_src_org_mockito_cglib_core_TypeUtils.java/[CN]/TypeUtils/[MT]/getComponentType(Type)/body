@@ -1,6 +1,0 @@
-{
-  if (!isArray(type)) {
-    throw new IllegalArgumentException("Type " + type + " is not an array");
-  }
-  return Type.getType(type.getDescriptor().substring(1));
-}

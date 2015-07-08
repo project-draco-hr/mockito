@@ -1,3 +1,0 @@
-{
-  return checkMagic(file,CLASS_MAGIC);
-}

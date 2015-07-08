@@ -1,3 +1,0 @@
-{
-  return mv.visitParameterAnnotation(parameter,desc,visible);
-}

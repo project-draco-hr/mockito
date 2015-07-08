@@ -1,8 +1,0 @@
-{
-  if (type != TYPE_SIGNATURE || state != EMPTY) {
-    throw new IllegalStateException();
-  }
-  state=SIMPLE_TYPE;
-  SignatureVisitor v=sv == null ? null : sv.visitArrayType();
-  return new CheckSignatureAdapter(TYPE_SIGNATURE,v);
-}

@@ -1,6 +1,0 @@
-{
-  endFormals();
-  separator=" extends ";
-  startType();
-  return this;
-}

@@ -1,5 +1,0 @@
-{
-  checkEndMethod();
-  endMethod=true;
-  mv.visitEnd();
-}

@@ -1,7 +1,0 @@
-{
-  checkEnd();
-  if (attr == null) {
-    throw new IllegalArgumentException("Invalid attribute (must not be null)");
-  }
-  fv.visitAttribute(attr);
-}

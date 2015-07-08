@@ -1,7 +1,0 @@
-{
-  LabelNode[] clones=new LabelNode[labels.size()];
-  for (int i=0; i < clones.length; ++i) {
-    clones[i]=(LabelNode)map.get(labels.get(i));
-  }
-  return clones;
-}

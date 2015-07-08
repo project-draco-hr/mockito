@@ -1,6 +1,0 @@
-{
-  CodeEmitter e=super.begin_method(Constants.ACC_PUBLIC,PROVIDER_GET_TYPES,null);
-  e.getstatic(getClassType(),FIELD_TYPES,Constants.TYPE_CLASS_ARRAY);
-  e.return_value();
-  e.end_method();
-}

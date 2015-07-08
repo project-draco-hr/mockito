@@ -1,8 +1,0 @@
-{
-  Object key=ClassesKey.create(delegates);
-  Route route=(Route)ROUTE_CACHE.get(key);
-  if (route == null) {
-    ROUTE_CACHE.put(key,route=new Route(delegates));
-  }
-  return route;
-}

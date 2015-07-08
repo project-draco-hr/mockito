@@ -1,5 +1,0 @@
-{
-  Object[] values=new Object[getters.length];
-  getPropertyValues(bean,values);
-  return values;
-}

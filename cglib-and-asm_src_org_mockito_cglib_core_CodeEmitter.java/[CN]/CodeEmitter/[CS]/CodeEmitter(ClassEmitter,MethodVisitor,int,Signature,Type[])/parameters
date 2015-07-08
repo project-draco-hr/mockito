@@ -1,5 +1,0 @@
-ClassEmitter ce
-MethodVisitor mv
-int access
-Signature sig
-Type[] exceptionTypes

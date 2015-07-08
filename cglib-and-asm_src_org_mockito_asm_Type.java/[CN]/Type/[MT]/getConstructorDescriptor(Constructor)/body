@@ -1,9 +1,0 @@
-{
-  Class[] parameters=c.getParameterTypes();
-  StringBuffer buf=new StringBuffer();
-  buf.append('(');
-  for (int i=0; i < parameters.length; ++i) {
-    getDescriptor(buf,parameters[i]);
-  }
-  return buf.append(")V").toString();
-}

@@ -1,8 +1,0 @@
-{
-  if (!hasFormals) {
-    hasFormals=true;
-    buf.append('<');
-  }
-  buf.append(name);
-  buf.append(':');
-}

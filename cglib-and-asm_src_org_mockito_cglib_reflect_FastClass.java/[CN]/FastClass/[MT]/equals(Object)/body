@@ -1,6 +1,0 @@
-{
-  if (o == null || !(o instanceof FastClass)) {
-    return false;
-  }
-  return type.equals(((FastClass)o).type);
-}

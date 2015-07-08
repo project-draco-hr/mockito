@@ -1,7 +1,0 @@
-{
-  MulticastDelegate copy=newInstance();
-  copy.targets=new Object[targets.length + 1];
-  System.arraycopy(targets,0,copy.targets,0,targets.length);
-  copy.targets[targets.length]=target;
-  return copy;
-}

@@ -1,3 +1,0 @@
-{
-  return ReflectUtils.newInstance(type,OBJECT_CLASSES,new Object[]{bean});
-}

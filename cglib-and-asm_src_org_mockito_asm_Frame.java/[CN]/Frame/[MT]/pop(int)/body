@@ -1,9 +1,0 @@
-{
-  if (outputStackTop >= elements) {
-    outputStackTop-=elements;
-  }
- else {
-    owner.inputStackTop-=elements - outputStackTop;
-    outputStackTop=0;
-  }
-}

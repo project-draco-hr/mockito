@@ -1,7 +1,0 @@
-{
-  if (state != RETURN) {
-    throw new IllegalStateException();
-  }
-  SignatureVisitor v=sv == null ? null : sv.visitExceptionType();
-  return new CheckSignatureAdapter(TYPE_SIGNATURE,v);
-}

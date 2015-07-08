@@ -1,8 +1,0 @@
-{
-  checkStartCode();
-  checkEndCode();
-  endCode=true;
-  checkUnsignedShort(maxStack,"Invalid max stack");
-  checkUnsignedShort(maxLocals,"Invalid max locals");
-  mv.visitMaxs(maxStack,maxLocals);
-}

@@ -1,4 +1,0 @@
-{
-  declaration.append(name);
-  endType();
-}

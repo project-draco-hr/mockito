@@ -1,8 +1,0 @@
-{
-  if (label == null) {
-    throw new IllegalArgumentException("Invalid " + msg + " (must not be null)");
-  }
-  if (checkVisited && labels.get(label) == null) {
-    throw new IllegalArgumentException("Invalid " + msg + " (must be visited first)");
-  }
-}

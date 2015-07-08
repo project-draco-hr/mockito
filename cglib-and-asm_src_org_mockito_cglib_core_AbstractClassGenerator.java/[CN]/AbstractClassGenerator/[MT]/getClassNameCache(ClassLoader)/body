@@ -1,3 +1,0 @@
-{
-  return (Set)((Map)source.cache.get(loader)).get(NAME_KEY);
-}

@@ -1,5 +1,0 @@
-{
-  cv1.visitEnd();
-  cv2.visitEnd();
-  cv1=cv2=null;
-}

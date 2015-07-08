@@ -1,9 +1,0 @@
-{
-  CodeEmitter e=block.getCodeEmitter();
-  e.catch_exception(block,Constants.TYPE_THROWABLE);
-  e.new_instance(wrapper);
-  e.dup_x1();
-  e.swap();
-  e.invoke_constructor(wrapper,CSTRUCT_THROWABLE);
-  e.athrow();
-}

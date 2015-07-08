@@ -1,3 +1,0 @@
-{
-  return parseSignature("void <init>(" + sig + ")");
-}

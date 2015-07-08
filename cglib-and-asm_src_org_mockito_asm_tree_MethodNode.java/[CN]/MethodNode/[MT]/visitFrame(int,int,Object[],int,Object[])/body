@@ -1,3 +1,0 @@
-{
-  instructions.add(new FrameNode(type,nLocal,local == null ? null : getLabelNodes(local),nStack,stack == null ? null : getLabelNodes(stack)));
-}

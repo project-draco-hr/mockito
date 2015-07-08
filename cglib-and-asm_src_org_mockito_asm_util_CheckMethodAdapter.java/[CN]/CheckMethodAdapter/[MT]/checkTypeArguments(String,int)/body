@@ -1,8 +1,0 @@
-{
-  pos=checkChar('<',signature,pos);
-  pos=checkTypeArgument(signature,pos);
-  while (getChar(signature,pos) != '>') {
-    pos=checkTypeArgument(signature,pos);
-  }
-  return pos + 1;
-}

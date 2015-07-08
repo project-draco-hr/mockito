@@ -1,3 +1,0 @@
-{
-  return new LineNumberNode(line,clone(start,labels));
-}

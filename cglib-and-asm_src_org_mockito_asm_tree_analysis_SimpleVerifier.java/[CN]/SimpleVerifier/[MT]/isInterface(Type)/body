@@ -1,6 +1,0 @@
-{
-  if (currentClass != null && t.equals(currentClass)) {
-    return isInterface;
-  }
-  return getClass(t).isInterface();
-}

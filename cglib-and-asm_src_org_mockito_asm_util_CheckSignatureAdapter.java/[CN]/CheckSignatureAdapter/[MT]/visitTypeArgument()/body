@@ -1,8 +1,0 @@
-{
-  if (state != CLASS_TYPE) {
-    throw new IllegalStateException();
-  }
-  if (sv != null) {
-    sv.visitTypeArgument();
-  }
-}

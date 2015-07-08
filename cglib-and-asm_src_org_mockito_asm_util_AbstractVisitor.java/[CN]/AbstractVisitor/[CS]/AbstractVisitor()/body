@@ -1,4 +1,0 @@
-{
-  this.text=new ArrayList();
-  this.buf=new StringBuffer();
-}

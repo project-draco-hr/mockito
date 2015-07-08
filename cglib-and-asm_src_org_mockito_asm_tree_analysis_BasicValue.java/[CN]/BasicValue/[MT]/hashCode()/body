@@ -1,3 +1,0 @@
-{
-  return type == null ? 0 : type.hashCode();
-}

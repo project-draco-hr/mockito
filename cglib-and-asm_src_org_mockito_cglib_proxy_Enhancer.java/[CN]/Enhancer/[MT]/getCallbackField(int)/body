@@ -1,3 +1,0 @@
-{
-  return "CGLIB$CALLBACK_" + index;
-}

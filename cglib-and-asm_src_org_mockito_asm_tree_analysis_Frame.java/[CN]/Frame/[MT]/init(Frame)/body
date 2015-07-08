@@ -1,5 +1,0 @@
-{
-  System.arraycopy(src.values,0,values,0,values.length);
-  top=src.top;
-  return this;
-}

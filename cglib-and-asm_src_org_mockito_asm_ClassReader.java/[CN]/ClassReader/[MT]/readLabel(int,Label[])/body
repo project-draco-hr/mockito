@@ -1,6 +1,0 @@
-{
-  if (labels[offset] == null) {
-    labels[offset]=new Label();
-  }
-  return labels[offset];
-}

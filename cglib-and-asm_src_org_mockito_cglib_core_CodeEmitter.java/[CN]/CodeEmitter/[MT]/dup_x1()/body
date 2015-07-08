@@ -1,3 +1,0 @@
-{
-  mv.visitInsn(Constants.DUP_X1);
-}

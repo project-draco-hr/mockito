@@ -1,4 +1,0 @@
-{
-  super("cw");
-  this.pw=pw;
-}

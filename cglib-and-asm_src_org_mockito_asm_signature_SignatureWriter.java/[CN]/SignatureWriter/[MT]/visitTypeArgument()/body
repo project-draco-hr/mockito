@@ -1,7 +1,0 @@
-{
-  if (argumentStack % 2 == 0) {
-    ++argumentStack;
-    buf.append('<');
-  }
-  buf.append('*');
-}

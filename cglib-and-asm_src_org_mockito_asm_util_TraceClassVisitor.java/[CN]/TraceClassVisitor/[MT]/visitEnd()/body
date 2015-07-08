@@ -1,8 +1,0 @@
-{
-  text.add("}\n");
-  print(pw);
-  pw.flush();
-  if (cv != null) {
-    cv.visitEnd();
-  }
-}

@@ -1,7 +1,0 @@
-{
-  if (state != SUPER) {
-    throw new IllegalStateException();
-  }
-  SignatureVisitor v=sv == null ? null : sv.visitInterface();
-  return new CheckSignatureAdapter(TYPE_SIGNATURE,v);
-}

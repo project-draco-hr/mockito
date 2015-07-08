@@ -1,4 +1,0 @@
-{
-  mv1.visitMethodInsn(opcode,owner,name,desc);
-  mv2.visitMethodInsn(opcode,owner,name,desc);
-}

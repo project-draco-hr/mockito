@@ -1,3 +1,0 @@
-{
-  return getType(method.getReturnType());
-}

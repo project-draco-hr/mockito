@@ -1,5 +1,0 @@
-{
-  super(Opcodes.IINC);
-  this.var=var;
-  this.incr=incr;
-}

@@ -1,3 +1,0 @@
-{
-  return (type == Constants.TYPE_OBJECT) ? "Object" : TypeUtils.upperFirst(TypeUtils.getClassName(type));
-}

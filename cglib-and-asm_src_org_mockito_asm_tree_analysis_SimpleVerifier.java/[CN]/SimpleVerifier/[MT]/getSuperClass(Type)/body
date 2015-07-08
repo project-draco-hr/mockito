@@ -1,7 +1,0 @@
-{
-  if (currentClass != null && t.equals(currentClass)) {
-    return currentSuperClass;
-  }
-  Class c=getClass(t).getSuperclass();
-  return c == null ? null : Type.getType(c);
-}

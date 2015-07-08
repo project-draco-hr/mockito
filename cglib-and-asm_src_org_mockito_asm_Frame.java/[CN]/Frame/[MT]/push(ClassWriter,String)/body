@@ -1,9 +1,0 @@
-{
-  int type=type(cw,desc);
-  if (type != 0) {
-    push(type);
-    if (type == LONG || type == DOUBLE) {
-      push(TOP);
-    }
-  }
-}

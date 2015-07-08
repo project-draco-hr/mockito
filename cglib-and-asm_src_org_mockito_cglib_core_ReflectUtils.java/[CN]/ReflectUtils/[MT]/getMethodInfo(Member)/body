@@ -1,3 +1,0 @@
-{
-  return getMethodInfo(member,member.getModifiers());
-}

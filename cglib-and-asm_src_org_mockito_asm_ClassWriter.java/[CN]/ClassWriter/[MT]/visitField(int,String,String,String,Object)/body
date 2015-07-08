@@ -1,3 +1,0 @@
-{
-  return new FieldWriter(this,access,name,desc,signature,value);
-}

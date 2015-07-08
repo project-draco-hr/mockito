@@ -1,4 +1,0 @@
-{
-  declare_field(access,name,Type.getType(desc),value);
-  return null;
-}

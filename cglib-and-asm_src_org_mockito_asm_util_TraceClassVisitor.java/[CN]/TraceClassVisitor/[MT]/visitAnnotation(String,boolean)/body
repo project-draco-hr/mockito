@@ -1,8 +1,0 @@
-{
-  text.add("\n");
-  AnnotationVisitor tav=super.visitAnnotation(desc,visible);
-  if (cv != null) {
-    ((TraceAnnotationVisitor)tav).av=cv.visitAnnotation(desc,visible);
-  }
-  return tav;
-}

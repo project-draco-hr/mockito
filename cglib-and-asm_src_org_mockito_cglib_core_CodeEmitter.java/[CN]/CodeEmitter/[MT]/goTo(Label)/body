@@ -1,3 +1,0 @@
-{
-  mv.visitJumpInsn(Constants.GOTO,label);
-}

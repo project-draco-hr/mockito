@@ -1,3 +1,0 @@
-{
-  instructions.add(new IntInsnNode(opcode,operand));
-}

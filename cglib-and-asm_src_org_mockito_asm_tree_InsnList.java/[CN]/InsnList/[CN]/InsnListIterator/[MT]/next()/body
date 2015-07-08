@@ -1,9 +1,0 @@
-{
-  if (next == null) {
-    throw new NoSuchElementException();
-  }
-  AbstractInsnNode result=next;
-  prev=result;
-  next=result.next;
-  return result;
-}

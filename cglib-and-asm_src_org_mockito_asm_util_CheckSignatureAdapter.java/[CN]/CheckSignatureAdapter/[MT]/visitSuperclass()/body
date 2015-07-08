@@ -1,8 +1,0 @@
-{
-  if (type != CLASS_SIGNATURE || (state & (EMPTY | FORMAL | BOUND)) == 0) {
-    throw new IllegalArgumentException();
-  }
-  state=SUPER;
-  SignatureVisitor v=sv == null ? null : sv.visitSuperclass();
-  return new CheckSignatureAdapter(TYPE_SIGNATURE,v);
-}

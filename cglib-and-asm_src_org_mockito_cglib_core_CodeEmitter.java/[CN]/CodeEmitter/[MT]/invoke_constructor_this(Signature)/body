@@ -1,3 +1,0 @@
-{
-  invoke_constructor(ce.getClassType(),sig);
-}

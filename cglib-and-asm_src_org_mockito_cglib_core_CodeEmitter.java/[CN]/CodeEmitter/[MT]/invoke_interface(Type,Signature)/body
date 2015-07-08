@@ -1,3 +1,0 @@
-{
-  emit_invoke(Constants.INVOKEINTERFACE,owner,sig);
-}

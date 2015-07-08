@@ -1,8 +1,0 @@
-{
-  if (type != METHOD_SIGNATURE || (state & (EMPTY | FORMAL | BOUND| PARAM)) == 0) {
-    throw new IllegalArgumentException();
-  }
-  state=PARAM;
-  SignatureVisitor v=sv == null ? null : sv.visitParameterType();
-  return new CheckSignatureAdapter(TYPE_SIGNATURE,v);
-}

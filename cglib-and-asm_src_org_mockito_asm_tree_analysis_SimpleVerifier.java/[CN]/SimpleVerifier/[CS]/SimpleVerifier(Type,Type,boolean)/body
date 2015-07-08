@@ -1,3 +1,0 @@
-{
-  this(currentClass,currentSuperClass,null,isInterface);
-}

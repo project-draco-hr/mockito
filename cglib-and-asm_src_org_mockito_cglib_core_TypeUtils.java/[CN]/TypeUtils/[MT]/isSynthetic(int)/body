@@ -1,3 +1,0 @@
-{
-  return (Constants.ACC_SYNTHETIC & access) != 0;
-}

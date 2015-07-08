@@ -1,3 +1,0 @@
-{
-  mv.visitLookupSwitchInsn(dflt,keys,labels);
-}

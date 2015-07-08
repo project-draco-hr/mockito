@@ -1,4 +1,0 @@
-ClassWriter cw
-int access
-Type[] args
-int maxLocals

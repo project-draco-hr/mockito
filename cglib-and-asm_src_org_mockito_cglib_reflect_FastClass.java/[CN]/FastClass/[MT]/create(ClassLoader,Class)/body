@@ -1,6 +1,0 @@
-{
-  Generator gen=new Generator();
-  gen.setType(type);
-  gen.setClassLoader(loader);
-  return gen.create();
-}

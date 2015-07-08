@@ -1,3 +1,0 @@
-{
-  return method.getSignature().getName().equals(Constants.CONSTRUCTOR_NAME);
-}

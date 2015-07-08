@@ -1,3 +1,0 @@
-{
-  return AnnotationVisitorTee.getInstance(fv1.visitAnnotation(desc,visible),fv2.visitAnnotation(desc,visible));
-}

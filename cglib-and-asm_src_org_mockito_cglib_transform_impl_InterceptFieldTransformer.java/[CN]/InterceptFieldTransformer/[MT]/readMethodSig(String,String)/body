@@ -1,3 +1,0 @@
-{
-  return new Signature("$cglib_read_" + name,"()" + desc);
-}

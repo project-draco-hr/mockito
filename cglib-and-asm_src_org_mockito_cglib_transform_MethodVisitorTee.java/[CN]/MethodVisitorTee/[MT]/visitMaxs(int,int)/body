@@ -1,4 +1,0 @@
-{
-  mv1.visitMaxs(maxStack,maxLocals);
-  mv2.visitMaxs(maxStack,maxLocals);
-}

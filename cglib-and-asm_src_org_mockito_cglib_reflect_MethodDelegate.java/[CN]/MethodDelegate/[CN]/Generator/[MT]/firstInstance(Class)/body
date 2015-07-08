@@ -1,3 +1,0 @@
-{
-  return ((MethodDelegate)ReflectUtils.newInstance(type)).newInstance(target);
-}

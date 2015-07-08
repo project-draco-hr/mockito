@@ -1,6 +1,0 @@
-{
-  if (!Modifier.isPublic(target.getModifiers())) {
-    setNamePrefix(target.getName());
-  }
-  this.target=target;
-}

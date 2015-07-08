@@ -1,4 +1,0 @@
-{
-  fv1.visitAttribute(attr);
-  fv2.visitAttribute(attr);
-}

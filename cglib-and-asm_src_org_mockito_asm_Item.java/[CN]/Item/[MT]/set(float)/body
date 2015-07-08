@@ -1,5 +1,0 @@
-{
-  this.type=ClassWriter.FLOAT;
-  this.intVal=Float.floatToRawIntBits(floatVal);
-  this.hashCode=0x7FFFFFFF & (type + (int)floatVal);
-}

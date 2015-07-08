@@ -1,6 +1,0 @@
-{
-  if (o == null)   return false;
-  if (!(o instanceof Signature))   return false;
-  Signature other=(Signature)o;
-  return name.equals(other.name) && desc.equals(other.desc);
-}

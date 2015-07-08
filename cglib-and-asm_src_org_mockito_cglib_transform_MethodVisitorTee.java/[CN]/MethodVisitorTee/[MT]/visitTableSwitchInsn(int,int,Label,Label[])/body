@@ -1,4 +1,0 @@
-{
-  mv1.visitTableSwitchInsn(min,max,dflt,labels);
-  mv2.visitTableSwitchInsn(min,max,dflt,labels);
-}

@@ -1,4 +1,0 @@
-{
-  this.size=size;
-  this.insns=new SmallSet(insn,null);
-}

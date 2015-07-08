@@ -1,5 +1,0 @@
-{
-  if (end) {
-    throw new IllegalStateException("Cannot call a visit method after visitEnd has been called");
-  }
-}

@@ -1,6 +1,0 @@
-{
-  this.sort=sort;
-  this.buf=buf;
-  this.off=off;
-  this.len=len;
-}

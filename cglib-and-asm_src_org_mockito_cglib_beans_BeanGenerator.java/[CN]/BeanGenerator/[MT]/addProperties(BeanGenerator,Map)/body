@@ -1,6 +1,0 @@
-{
-  for (Iterator it=props.keySet().iterator(); it.hasNext(); ) {
-    String name=(String)it.next();
-    gen.addProperty(name,(Class)props.get(name));
-  }
-}

@@ -1,9 +1,0 @@
-{
-  if (prev == null) {
-    return -1;
-  }
-  if (cache == null) {
-    cache=toArray();
-  }
-  return prev.index;
-}

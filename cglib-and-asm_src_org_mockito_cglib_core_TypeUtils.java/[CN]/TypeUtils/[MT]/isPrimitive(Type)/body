@@ -1,9 +1,0 @@
-{
-switch (type.getSort()) {
-case Type.ARRAY:
-case Type.OBJECT:
-    return false;
-default :
-  return true;
-}
-}

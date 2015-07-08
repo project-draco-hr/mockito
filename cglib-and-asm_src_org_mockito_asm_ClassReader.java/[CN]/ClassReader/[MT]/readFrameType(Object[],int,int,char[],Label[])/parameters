@@ -1,5 +1,0 @@
-Object[] frame
-int index
-int v
-char[] buf
-Label[] labels

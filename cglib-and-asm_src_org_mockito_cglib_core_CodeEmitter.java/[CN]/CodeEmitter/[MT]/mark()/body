@@ -1,5 +1,0 @@
-{
-  Label label=make_label();
-  mv.visitLabel(label);
-  return label;
-}

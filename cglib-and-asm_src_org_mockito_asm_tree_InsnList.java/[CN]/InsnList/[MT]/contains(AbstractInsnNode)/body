@@ -1,7 +1,0 @@
-{
-  AbstractInsnNode i=first;
-  while (i != null && i != insn) {
-    i=i.next;
-  }
-  return i != null;
-}

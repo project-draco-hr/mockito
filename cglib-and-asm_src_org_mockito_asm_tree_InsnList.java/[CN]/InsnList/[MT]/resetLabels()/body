@@ -1,9 +1,0 @@
-{
-  AbstractInsnNode insn=first;
-  while (insn != null) {
-    if (insn instanceof LabelNode) {
-      ((LabelNode)insn).resetLabel();
-    }
-    insn=insn.next;
-  }
-}

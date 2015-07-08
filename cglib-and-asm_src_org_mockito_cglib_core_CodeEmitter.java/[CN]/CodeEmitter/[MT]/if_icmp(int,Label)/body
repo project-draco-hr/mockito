@@ -1,3 +1,0 @@
-{
-  if_cmp(Type.INT_TYPE,mode,label);
-}

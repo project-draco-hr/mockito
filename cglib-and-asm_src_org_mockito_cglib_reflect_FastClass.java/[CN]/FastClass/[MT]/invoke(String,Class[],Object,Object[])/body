@@ -1,3 +1,0 @@
-{
-  return invoke(getIndex(name,parameterTypes),obj,args);
-}

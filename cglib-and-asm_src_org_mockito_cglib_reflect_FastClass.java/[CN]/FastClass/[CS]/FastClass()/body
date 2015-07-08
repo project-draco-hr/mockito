@@ -1,3 +1,0 @@
-{
-  throw new Error("Using the FastClass empty constructor--please report to the cglib-devel mailing list");
-}

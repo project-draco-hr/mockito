@@ -1,9 +1,0 @@
-{
-  Iterator it=c.iterator();
-  while (it.hasNext()) {
-    if (!p.evaluate(it.next())) {
-      it.remove();
-    }
-  }
-  return c;
-}

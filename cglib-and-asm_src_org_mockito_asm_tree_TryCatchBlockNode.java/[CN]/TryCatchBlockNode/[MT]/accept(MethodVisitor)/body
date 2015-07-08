@@ -1,3 +1,0 @@
-{
-  mv.visitTryCatchBlock(start.getLabel(),end.getLabel(),handler == null ? null : handler.getLabel(),type);
-}

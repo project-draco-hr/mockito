@@ -1,4 +1,0 @@
-{
-  if (componentType.equals(Type.class))   return Class.class;
-  return componentType;
-}

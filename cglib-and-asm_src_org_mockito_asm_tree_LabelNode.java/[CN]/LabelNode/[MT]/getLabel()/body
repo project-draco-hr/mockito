@@ -1,6 +1,0 @@
-{
-  if (label == null) {
-    label=new Label();
-  }
-  return label;
-}

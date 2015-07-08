@@ -1,4 +1,0 @@
-{
-  ClassTransformer t2=(ClassTransformer)t.newInstance();
-  return new TransformingClassGenerator(super.getGenerator(r),t2);
-}

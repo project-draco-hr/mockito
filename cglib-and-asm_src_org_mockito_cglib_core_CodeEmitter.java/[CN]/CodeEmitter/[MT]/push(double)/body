@@ -1,8 +1,0 @@
-{
-  if (value == 0d || value == 1d) {
-    mv.visitInsn(TypeUtils.DCONST(value));
-  }
- else {
-    mv.visitLdcInsn(new Double(value));
-  }
-}

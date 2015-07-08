@@ -1,5 +1,0 @@
-{
-  long vi=a[i];
-  long vj=a[j];
-  return (vi == vj) ? 0 : (vi > vj) ? 1 : -1;
-}

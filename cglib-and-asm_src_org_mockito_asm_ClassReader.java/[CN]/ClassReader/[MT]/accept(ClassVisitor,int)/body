@@ -1,3 +1,0 @@
-{
-  accept(classVisitor,new Attribute[0],flags);
-}

@@ -1,5 +1,0 @@
-{
-  this.r=r;
-  this.attrs=(attrs != null) ? attrs : new Attribute[0];
-  this.flags=flags;
-}

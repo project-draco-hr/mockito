@@ -1,8 +1,0 @@
-{
-  if (superclass != null) {
-    return superclass.getClassLoader();
-  }
- else {
-    return null;
-  }
-}

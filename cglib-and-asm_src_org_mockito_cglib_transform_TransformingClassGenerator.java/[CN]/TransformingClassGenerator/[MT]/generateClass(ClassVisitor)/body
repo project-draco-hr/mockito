@@ -1,4 +1,0 @@
-{
-  t.setTarget(v);
-  gen.generateClass(t);
-}

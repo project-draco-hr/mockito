@@ -1,3 +1,0 @@
-{
-  return AnnotationVisitorTee.getInstance(mv1.visitAnnotationDefault(),mv2.visitAnnotationDefault());
-}

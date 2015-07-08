@@ -1,3 +1,0 @@
-{
-  return (LabelNode)labels.get(this);
-}

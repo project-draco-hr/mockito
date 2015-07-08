@@ -1,7 +1,0 @@
-{
-  if (!TypeUtils.isInterface(getAccess())) {
-    CodeEmitter e=getStaticHook();
-    EmitUtils.load_class_this(e);
-    e.invoke(info);
-  }
-}

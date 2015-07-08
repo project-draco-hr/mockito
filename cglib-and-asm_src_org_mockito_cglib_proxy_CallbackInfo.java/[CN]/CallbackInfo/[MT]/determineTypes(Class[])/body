@@ -1,7 +1,0 @@
-{
-  Type[] types=new Type[callbackTypes.length];
-  for (int i=0; i < types.length; i++) {
-    types[i]=determineType(callbackTypes[i]);
-  }
-  return types;
-}

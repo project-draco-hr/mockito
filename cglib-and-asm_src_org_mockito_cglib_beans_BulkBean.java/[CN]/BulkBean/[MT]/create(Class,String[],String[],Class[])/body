@@ -1,8 +1,0 @@
-{
-  Generator gen=new Generator();
-  gen.setTarget(target);
-  gen.setGetters(getters);
-  gen.setSetters(setters);
-  gen.setTypes(types);
-  return gen.create();
-}

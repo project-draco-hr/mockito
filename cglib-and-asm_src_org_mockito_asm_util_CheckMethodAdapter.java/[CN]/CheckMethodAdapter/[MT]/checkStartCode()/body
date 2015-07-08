@@ -1,5 +1,0 @@
-{
-  if (!startCode) {
-    throw new IllegalStateException("Cannot visit instructions before visitCode has been called.");
-  }
-}

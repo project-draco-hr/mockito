@@ -1,3 +1,0 @@
-{
-  return AnnotationVisitorTee.getInstance(cv1.visitAnnotation(desc,visible),cv2.visitAnnotation(desc,visible));
-}

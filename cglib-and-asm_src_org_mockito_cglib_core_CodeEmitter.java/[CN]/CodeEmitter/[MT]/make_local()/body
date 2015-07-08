@@ -1,3 +1,0 @@
-{
-  return make_local(Constants.TYPE_OBJECT);
-}

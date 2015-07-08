@@ -1,4 +1,0 @@
-{
-  super(opcode);
-  this.label=label;
-}

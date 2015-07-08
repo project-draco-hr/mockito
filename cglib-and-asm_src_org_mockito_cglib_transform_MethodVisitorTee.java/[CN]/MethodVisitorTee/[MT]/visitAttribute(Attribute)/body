@@ -1,4 +1,0 @@
-{
-  mv1.visitAttribute(attr);
-  mv2.visitAttribute(attr);
-}

@@ -1,6 +1,0 @@
-String name
-String desc
-String signature
-LabelNode start
-LabelNode end
-int index

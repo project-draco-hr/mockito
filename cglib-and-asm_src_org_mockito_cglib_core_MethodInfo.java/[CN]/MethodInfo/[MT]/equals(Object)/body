@@ -1,5 +1,0 @@
-{
-  if (o == null)   return false;
-  if (!(o instanceof MethodInfo))   return false;
-  return getSignature().equals(((MethodInfo)o).getSignature());
-}

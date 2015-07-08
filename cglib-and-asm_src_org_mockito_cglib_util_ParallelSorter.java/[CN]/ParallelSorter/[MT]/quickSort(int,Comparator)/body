@@ -1,3 +1,0 @@
-{
-  quickSort(index,0,len(),cmp);
-}

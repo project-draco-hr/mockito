@@ -1,3 +1,0 @@
-{
-  return e.begin_method(access,method.getSignature(),method.getExceptionTypes());
-}

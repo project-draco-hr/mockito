@@ -1,8 +1,0 @@
-{
-  String[] exceptions=new String[this.exceptions.size()];
-  this.exceptions.toArray(exceptions);
-  MethodVisitor mv=cv.visitMethod(access,name,desc,signature,exceptions);
-  if (mv != null) {
-    accept(mv);
-  }
-}

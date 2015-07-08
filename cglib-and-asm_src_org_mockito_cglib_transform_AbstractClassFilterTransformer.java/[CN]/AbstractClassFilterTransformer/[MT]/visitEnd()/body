@@ -1,4 +1,0 @@
-{
-  target.visitEnd();
-  target=null;
-}

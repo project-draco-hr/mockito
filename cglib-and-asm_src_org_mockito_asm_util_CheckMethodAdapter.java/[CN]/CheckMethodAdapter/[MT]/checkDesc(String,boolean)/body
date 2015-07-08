@@ -1,6 +1,0 @@
-{
-  int end=checkDesc(desc,0,canBeVoid);
-  if (end != desc.length()) {
-    throw new IllegalArgumentException("Invalid descriptor: " + desc);
-  }
-}

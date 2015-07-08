@@ -1,3 +1,0 @@
-{
-  invoke_constructor(type,CSTRUCT_NULL);
-}

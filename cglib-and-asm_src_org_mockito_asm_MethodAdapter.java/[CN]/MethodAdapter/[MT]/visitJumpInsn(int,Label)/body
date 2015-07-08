@@ -1,3 +1,0 @@
-{
-  mv.visitJumpInsn(opcode,label);
-}

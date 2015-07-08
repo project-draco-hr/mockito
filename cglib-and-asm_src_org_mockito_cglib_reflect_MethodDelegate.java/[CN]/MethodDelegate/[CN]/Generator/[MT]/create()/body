@@ -1,5 +1,0 @@
-{
-  setNamePrefix(targetClass.getName());
-  Object key=KEY_FACTORY.newInstance(targetClass,methodName,iface);
-  return (MethodDelegate)super.create(key);
-}

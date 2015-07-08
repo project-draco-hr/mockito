@@ -1,5 +1,0 @@
-{
-  StringBuffer buf=new StringBuffer();
-  getDescriptor(buf);
-  return buf.toString();
-}

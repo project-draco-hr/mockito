@@ -1,9 +1,0 @@
-{
-  CodeEmitter e=ce.begin_method(Constants.ACC_PUBLIC,sig,null);
-  e.new_instance_this();
-  e.dup();
-  e.load_args();
-  e.invoke_constructor_this(TypeUtils.parseConstructor(sig.getArgumentTypes()));
-  e.return_value();
-  e.end_method();
-}

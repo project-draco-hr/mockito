@@ -1,4 +1,0 @@
-{
-  cv1.visitOuterClass(owner,name,desc);
-  cv2.visitOuterClass(owner,name,desc);
-}

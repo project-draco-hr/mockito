@@ -1,3 +1,0 @@
-{
-  return ((Mixin)ReflectUtils.newInstance(type)).newInstance(delegates);
-}

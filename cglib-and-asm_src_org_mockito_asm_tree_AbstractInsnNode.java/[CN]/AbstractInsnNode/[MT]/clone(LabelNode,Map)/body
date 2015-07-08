@@ -1,3 +1,0 @@
-{
-  return (LabelNode)map.get(label);
-}

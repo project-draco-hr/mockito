@@ -1,4 +1,0 @@
-{
-  mv1.visitLabel(label);
-  mv2.visitLabel(label);
-}

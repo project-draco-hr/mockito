@@ -1,5 +1,0 @@
-{
-  if (o == null)   return false;
-  if (!(o instanceof CallbackHelper))   return false;
-  return methodMap.equals(((CallbackHelper)o).methodMap);
-}

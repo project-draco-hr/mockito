@@ -1,4 +1,0 @@
-{
-  this.values=new Value[nLocals + nStack];
-  this.locals=nLocals;
-}

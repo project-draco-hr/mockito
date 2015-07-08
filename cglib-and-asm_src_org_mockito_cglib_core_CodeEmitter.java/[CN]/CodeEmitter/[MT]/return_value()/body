@@ -1,3 +1,0 @@
-{
-  mv.visitInsn(state.sig.getReturnType().getOpcode(Constants.IRETURN));
-}

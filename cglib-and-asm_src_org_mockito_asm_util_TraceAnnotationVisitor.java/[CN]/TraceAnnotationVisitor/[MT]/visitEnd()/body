@@ -1,5 +1,0 @@
-{
-  if (av != null) {
-    av.visitEnd();
-  }
-}

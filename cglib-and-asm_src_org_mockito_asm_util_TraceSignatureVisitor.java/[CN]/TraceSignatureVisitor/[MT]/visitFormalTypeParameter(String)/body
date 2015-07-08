@@ -1,5 +1,0 @@
-{
-  declaration.append(seenFormalParameter ? ", " : "<").append(name);
-  seenFormalParameter=true;
-  seenInterfaceBound=false;
-}

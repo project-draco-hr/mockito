@@ -1,7 +1,0 @@
-Attribute[] attrs
-String type
-int off
-int len
-char[] buf
-int codeOff
-Label[] labels

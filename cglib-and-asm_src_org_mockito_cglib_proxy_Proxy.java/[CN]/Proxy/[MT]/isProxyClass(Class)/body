@@ -1,3 +1,0 @@
-{
-  return cl.getSuperclass().equals(ProxyImpl.class);
-}

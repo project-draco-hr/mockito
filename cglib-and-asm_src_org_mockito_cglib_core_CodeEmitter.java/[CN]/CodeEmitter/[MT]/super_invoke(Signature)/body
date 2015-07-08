@@ -1,3 +1,0 @@
-{
-  emit_invoke(Constants.INVOKESPECIAL,ce.getSuperType(),sig);
-}

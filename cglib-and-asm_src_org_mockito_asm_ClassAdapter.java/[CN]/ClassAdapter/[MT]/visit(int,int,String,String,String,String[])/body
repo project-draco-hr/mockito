@@ -1,3 +1,0 @@
-{
-  cv.visit(version,access,name,signature,superName,interfaces);
-}

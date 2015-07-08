@@ -1,5 +1,0 @@
-{
-  checkEndMethod();
-  checkDesc(desc,false);
-  return new CheckAnnotationAdapter(mv.visitAnnotation(desc,visible));
-}

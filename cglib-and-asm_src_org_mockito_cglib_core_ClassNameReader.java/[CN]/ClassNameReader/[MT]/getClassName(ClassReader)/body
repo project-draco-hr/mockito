@@ -1,3 +1,0 @@
-{
-  return getClassInfo(r)[0];
-}

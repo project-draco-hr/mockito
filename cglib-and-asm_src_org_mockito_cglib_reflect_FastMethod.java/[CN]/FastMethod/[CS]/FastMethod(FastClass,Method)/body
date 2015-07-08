@@ -1,3 +1,0 @@
-{
-  super(fc,method,helper(fc,method));
-}

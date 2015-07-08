@@ -1,4 +1,0 @@
-{
-  mv1.visitFrame(type,nLocal,local,nStack,stack);
-  mv2.visitFrame(type,nLocal,local,nStack,stack);
-}

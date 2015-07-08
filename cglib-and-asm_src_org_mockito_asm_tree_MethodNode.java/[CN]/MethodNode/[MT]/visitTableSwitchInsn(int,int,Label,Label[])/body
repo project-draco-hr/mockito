@@ -1,3 +1,0 @@
-{
-  instructions.add(new TableSwitchInsnNode(min,max,getLabelNode(dflt),getLabelNodes(labels)));
-}

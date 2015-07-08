@@ -1,5 +1,0 @@
-{
-  if (o == null)   return false;
-  if (!(o instanceof ClassInfo))   return false;
-  return getType().equals(((ClassInfo)o).getType());
-}

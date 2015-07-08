@@ -1,7 +1,0 @@
-{
-  this.access=access;
-  this.name=name;
-  this.desc=desc;
-  this.signature=signature;
-  this.value=value;
-}

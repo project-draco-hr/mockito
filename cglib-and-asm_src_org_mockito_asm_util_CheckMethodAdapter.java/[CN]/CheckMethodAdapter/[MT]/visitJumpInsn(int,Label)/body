@@ -1,7 +1,0 @@
-{
-  checkStartCode();
-  checkEndCode();
-  checkOpcode(opcode,6);
-  checkLabel(label,false,"label");
-  mv.visitJumpInsn(opcode,label);
-}

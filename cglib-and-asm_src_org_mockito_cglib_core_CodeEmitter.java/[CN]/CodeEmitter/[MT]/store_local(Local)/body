@@ -1,3 +1,0 @@
-{
-  store_local(local.getType(),local.getIndex());
-}

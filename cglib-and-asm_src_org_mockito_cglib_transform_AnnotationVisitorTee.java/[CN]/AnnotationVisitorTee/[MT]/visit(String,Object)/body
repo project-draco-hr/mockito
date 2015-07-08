@@ -1,4 +1,0 @@
-{
-  av2.visit(name,value);
-  av2.visit(name,value);
-}

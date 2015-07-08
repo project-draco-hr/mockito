@@ -1,5 +1,0 @@
-{
-  super(access,sig.getDescriptor(),mv);
-  this.ce=ce;
-  state=new State(ce.getClassInfo(),access,sig,exceptionTypes);
-}

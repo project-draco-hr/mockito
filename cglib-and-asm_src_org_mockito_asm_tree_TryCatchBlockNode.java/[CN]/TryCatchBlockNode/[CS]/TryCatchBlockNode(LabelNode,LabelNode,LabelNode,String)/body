@@ -1,6 +1,0 @@
-{
-  this.start=start;
-  this.end=end;
-  this.handler=handler;
-  this.type=type;
-}

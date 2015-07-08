@@ -1,4 +1,0 @@
-int opcode
-int arg
-ClassWriter cw
-Item item

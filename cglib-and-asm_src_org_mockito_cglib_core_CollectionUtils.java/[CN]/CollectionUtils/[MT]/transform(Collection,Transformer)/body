@@ -1,7 +1,0 @@
-{
-  List result=new ArrayList(c.size());
-  for (Iterator it=c.iterator(); it.hasNext(); ) {
-    result.add(t.transform(it.next()));
-  }
-  return result;
-}

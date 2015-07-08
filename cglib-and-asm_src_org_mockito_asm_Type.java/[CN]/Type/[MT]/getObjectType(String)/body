@@ -1,4 +1,0 @@
-{
-  char[] buf=internalName.toCharArray();
-  return new Type(buf[0] == '[' ? ARRAY : OBJECT,buf,0,buf.length);
-}

@@ -1,4 +1,0 @@
-{
-  cv1.visitAttribute(attrs);
-  cv2.visitAttribute(attrs);
-}

@@ -1,4 +1,0 @@
-{
-  this.opcode=opcode;
-  this.index=-1;
-}

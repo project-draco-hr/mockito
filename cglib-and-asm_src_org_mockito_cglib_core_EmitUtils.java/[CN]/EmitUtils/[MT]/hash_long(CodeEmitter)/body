@@ -1,7 +1,0 @@
-{
-  e.dup2();
-  e.push(32);
-  e.math(e.USHR,Type.LONG_TYPE);
-  e.math(e.XOR,Type.LONG_TYPE);
-  e.cast_numeric(Type.LONG_TYPE,Type.INT_TYPE);
-}

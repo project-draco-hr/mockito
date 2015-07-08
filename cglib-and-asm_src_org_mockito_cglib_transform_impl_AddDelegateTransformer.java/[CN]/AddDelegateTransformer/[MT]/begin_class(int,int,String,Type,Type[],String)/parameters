@@ -1,6 +1,0 @@
-int version
-int access
-String className
-Type superType
-Type[] interfaces
-String sourceFile

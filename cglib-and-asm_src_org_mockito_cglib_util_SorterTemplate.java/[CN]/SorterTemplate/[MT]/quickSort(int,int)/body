@@ -1,4 +1,0 @@
-{
-  quickSortHelper(lo,hi);
-  insertionSort(lo,hi);
-}

@@ -1,4 +1,0 @@
-{
-  this.labelNames=new HashMap();
-  this.mv=mv;
-}

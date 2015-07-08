@@ -1,3 +1,0 @@
-{
-  load_local(local.getType(),local.getIndex());
-}

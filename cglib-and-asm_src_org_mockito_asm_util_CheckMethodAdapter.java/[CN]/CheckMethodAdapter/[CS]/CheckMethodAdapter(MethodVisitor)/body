@@ -1,4 +1,0 @@
-{
-  super(cv);
-  this.labels=new HashMap();
-}

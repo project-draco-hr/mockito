@@ -1,5 +1,0 @@
-{
-  startType();
-  arrayStack|=1;
-  return this;
-}

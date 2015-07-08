@@ -1,8 +1,0 @@
-{
-  if (insn.getOpcode() == MULTIANEWARRAY) {
-    return newValue(Type.getType(((MultiANewArrayInsnNode)insn).desc));
-  }
- else {
-    return newValue(Type.getReturnType(((MethodInsnNode)insn).desc));
-  }
-}

@@ -1,7 +1,0 @@
-{
-  checkStartCode();
-  checkEndCode();
-  checkUnsignedShort(line,"Invalid line number");
-  checkLabel(start,true,"start label");
-  mv.visitLineNumber(line,start);
-}

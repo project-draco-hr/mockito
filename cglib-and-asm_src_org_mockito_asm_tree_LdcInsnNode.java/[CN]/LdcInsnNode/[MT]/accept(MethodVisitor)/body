@@ -1,3 +1,0 @@
-{
-  mv.visitLdcInsn(cst);
-}

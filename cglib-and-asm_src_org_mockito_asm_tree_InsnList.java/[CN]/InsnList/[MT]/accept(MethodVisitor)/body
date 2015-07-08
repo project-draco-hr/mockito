@@ -1,7 +1,0 @@
-{
-  AbstractInsnNode insn=first;
-  while (insn != null) {
-    insn.accept(mv);
-    insn=insn.next;
-  }
-}

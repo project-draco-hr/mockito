@@ -1,4 +1,0 @@
-{
-  classOnly=false;
-  return createHelper();
-}

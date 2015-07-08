@@ -1,3 +1,0 @@
-{
-  return new Signature("CGLIB$" + sig.getName() + "$"+ index,sig.getDescriptor());
-}

@@ -1,3 +1,0 @@
-{
-  return TABLESWITCH_INSN;
-}

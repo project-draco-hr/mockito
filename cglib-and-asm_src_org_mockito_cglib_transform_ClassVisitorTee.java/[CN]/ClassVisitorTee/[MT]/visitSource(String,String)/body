@@ -1,4 +1,0 @@
-{
-  cv1.visitSource(source,debug);
-  cv2.visitSource(source,debug);
-}

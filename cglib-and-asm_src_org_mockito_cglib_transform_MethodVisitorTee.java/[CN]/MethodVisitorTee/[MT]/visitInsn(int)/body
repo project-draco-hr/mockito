@@ -1,4 +1,0 @@
-{
-  mv1.visitInsn(opcode);
-  mv2.visitInsn(opcode);
-}

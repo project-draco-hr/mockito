@@ -1,9 +1,0 @@
-{
-  buf.setLength(0);
-  buf.append("cw.visitSource(");
-  appendConstant(file);
-  buf.append(", ");
-  appendConstant(debug);
-  buf.append(");\n\n");
-  text.add(buf.toString());
-}

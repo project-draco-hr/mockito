@@ -1,5 +1,0 @@
-ClassWriter cw
-boolean named
-ByteVector bv
-ByteVector parent
-int offset

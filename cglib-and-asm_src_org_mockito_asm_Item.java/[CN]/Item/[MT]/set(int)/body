@@ -1,5 +1,0 @@
-{
-  this.type=ClassWriter.INT;
-  this.intVal=intVal;
-  this.hashCode=0x7FFFFFFF & (type + intVal);
-}

@@ -1,3 +1,0 @@
-{
-  return new JumpInsnNode(opcode,clone(label,labels));
-}

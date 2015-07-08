@@ -1,4 +1,0 @@
-{
-  b[index]=(byte)(s >>> 8);
-  b[index + 1]=(byte)s;
-}

@@ -1,3 +1,0 @@
-{
-  return begin_method(e,method,method.getModifiers());
-}

@@ -1,4 +1,0 @@
-{
-  attr.next=attrs;
-  attrs=attr;
-}

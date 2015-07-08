@@ -1,4 +1,0 @@
-{
-  cv1.visitInnerClass(name,outerName,innerName,access);
-  cv2.visitInnerClass(name,outerName,innerName,access);
-}

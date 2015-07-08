@@ -1,7 +1,0 @@
-{
-  for (int i=0; i < names.length; i++) {
-    String fieldName="$cglib_prop_" + names[i];
-    ce.declare_field(Constants.ACC_PRIVATE,fieldName,types[i],null);
-    EmitUtils.add_property(ce,names[i],types[i],fieldName);
-  }
-}

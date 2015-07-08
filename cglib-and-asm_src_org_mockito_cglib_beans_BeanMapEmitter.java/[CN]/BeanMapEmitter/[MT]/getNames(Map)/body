@@ -1,3 +1,0 @@
-{
-  return (String[])propertyMap.keySet().toArray(new String[propertyMap.size()]);
-}

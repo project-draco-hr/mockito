@@ -1,6 +1,0 @@
-{
-  if (top + locals >= values.length) {
-    throw new IndexOutOfBoundsException("Insufficient maximum stack size.");
-  }
-  values[top++ + locals]=value;
-}

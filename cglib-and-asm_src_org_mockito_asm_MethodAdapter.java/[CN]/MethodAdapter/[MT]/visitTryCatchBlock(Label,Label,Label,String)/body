@@ -1,3 +1,0 @@
-{
-  mv.visitTryCatchBlock(start,end,handler,type);
-}

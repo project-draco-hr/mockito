@@ -1,3 +1,0 @@
-{
-  load_args(0,state.argumentTypes.length);
-}

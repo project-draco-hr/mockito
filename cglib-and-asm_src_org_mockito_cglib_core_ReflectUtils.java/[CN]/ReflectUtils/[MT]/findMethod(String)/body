@@ -1,3 +1,0 @@
-{
-  return findMethod(desc,defaultLoader);
-}

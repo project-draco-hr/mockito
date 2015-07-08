@@ -1,5 +1,0 @@
-{
-  Generator gen=new Generator();
-  gen.setBean(bean);
-  return gen.create();
-}

@@ -1,3 +1,0 @@
-{
-  return (((Member)arg).getModifiers() & rejectMask) == 0;
-}

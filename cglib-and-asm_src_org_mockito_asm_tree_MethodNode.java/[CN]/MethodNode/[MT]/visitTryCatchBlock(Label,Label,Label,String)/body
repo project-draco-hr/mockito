@@ -1,3 +1,0 @@
-{
-  tryCatchBlocks.add(new TryCatchBlockNode(getLabelNode(start),getLabelNode(end),getLabelNode(handler),type));
-}

@@ -1,5 +1,0 @@
-{
-  if (!TypeUtils.isAbstract(state.access)) {
-    mv.visitMaxs(0,0);
-  }
-}

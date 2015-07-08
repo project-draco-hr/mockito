@@ -1,6 +1,0 @@
-ClassReader cr
-int off
-int len
-char[] buf
-int codeOff
-Label[] labels

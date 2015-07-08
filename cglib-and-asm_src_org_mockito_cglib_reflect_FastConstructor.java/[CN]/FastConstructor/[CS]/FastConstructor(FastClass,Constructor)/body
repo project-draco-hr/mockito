@@ -1,3 +1,0 @@
-{
-  super(fc,constructor,fc.getIndex(constructor.getParameterTypes()));
-}

@@ -1,3 +1,0 @@
-{
-  appendConstant(buf,cst);
-}

@@ -1,3 +1,0 @@
-{
-  return (Constants.ACC_ABSTRACT & access) != 0;
-}

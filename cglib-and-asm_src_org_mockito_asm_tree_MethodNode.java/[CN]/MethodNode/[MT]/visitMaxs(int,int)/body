@@ -1,4 +1,0 @@
-{
-  this.maxStack=maxStack;
-  this.maxLocals=maxLocals;
-}

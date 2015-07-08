@@ -1,3 +1,0 @@
-{
-  instructions.add(new FieldInsnNode(opcode,owner,name,desc));
-}

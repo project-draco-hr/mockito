@@ -1,7 +1,0 @@
-{
-  Generator gen=new Generator();
-  gen.setStyle(STYLE_BEANS);
-  gen.setDelegates(beans);
-  gen.setClassLoader(loader);
-  return gen.create();
-}

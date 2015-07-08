@@ -1,4 +1,0 @@
-ClassWriter cw
-int t
-int[] types
-int index

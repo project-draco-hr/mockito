@@ -1,6 +1,0 @@
-{
-  checkStartCode();
-  checkEndCode();
-  checkOpcode(opcode,0);
-  mv.visitInsn(opcode);
-}

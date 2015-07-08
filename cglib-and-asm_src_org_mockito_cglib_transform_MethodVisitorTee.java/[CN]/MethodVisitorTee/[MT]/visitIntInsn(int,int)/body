@@ -1,4 +1,0 @@
-{
-  mv1.visitIntInsn(opcode,operand);
-  mv2.visitIntInsn(opcode,operand);
-}

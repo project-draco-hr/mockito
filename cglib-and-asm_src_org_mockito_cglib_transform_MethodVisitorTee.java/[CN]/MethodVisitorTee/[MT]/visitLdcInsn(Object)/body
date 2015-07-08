@@ -1,4 +1,0 @@
-{
-  mv1.visitLdcInsn(cst);
-  mv2.visitLdcInsn(cst);
-}

@@ -1,4 +1,0 @@
-{
-  super.setTarget(target);
-  pass.setTarget(target);
-}

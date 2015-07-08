@@ -1,3 +1,0 @@
-{
-  instructions.add(new LineNumberNode(line,getLabelNode(start)));
-}
