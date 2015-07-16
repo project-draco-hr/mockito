@@ -1,0 +1,3 @@
+{
+  return isDeclaredBy(named("groovy.lang.GroovyObjectSupport"));
+}
