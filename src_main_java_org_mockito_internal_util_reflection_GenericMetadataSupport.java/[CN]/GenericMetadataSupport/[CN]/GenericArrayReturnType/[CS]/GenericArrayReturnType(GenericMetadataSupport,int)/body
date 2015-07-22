@@ -1,0 +1,4 @@
+{
+  this.genericArrayType=genericArrayType;
+  this.arity=arity;
+}
