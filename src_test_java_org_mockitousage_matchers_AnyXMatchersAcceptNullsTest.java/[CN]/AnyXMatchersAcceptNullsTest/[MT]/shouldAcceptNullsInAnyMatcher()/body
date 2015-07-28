@@ -1,4 +1,4 @@
 {
-  when(mock.oneArg(any())).thenReturn("matched");
+  when(mock.oneArg((Object)any())).thenReturn("matched");
   assertEquals(null,mock.forObject(null));
 }
