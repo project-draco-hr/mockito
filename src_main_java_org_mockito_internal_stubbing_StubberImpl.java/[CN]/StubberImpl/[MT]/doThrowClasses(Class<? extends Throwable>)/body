@@ -1,0 +1,6 @@
+{
+  for (  Class<? extends Throwable> throwable : toBeThrown) {
+    answers.add(new ThrowsExceptionClass(throwable));
+  }
+  return this;
+}

@@ -1,0 +1,4 @@
+{
+  doReturn("test").when(mock).toString();
+  Assertions.assertThat(mock.toString()).isEqualTo("test");
+}

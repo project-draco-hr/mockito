@@ -1,0 +1,3 @@
+{
+  return doThrowClasses(toBeThrown).doThrowClasses(nextToBeThrown);
+}

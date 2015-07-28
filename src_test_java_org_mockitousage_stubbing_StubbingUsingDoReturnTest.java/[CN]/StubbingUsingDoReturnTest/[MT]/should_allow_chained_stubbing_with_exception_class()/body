@@ -1,0 +1,5 @@
+{
+  doReturn("whatever").doThrow(IllegalArgumentException.class).when(mock).simpleMethod();
+  Assertions.assertThat(mock.simpleMethod()).isEqualTo("whatever");
+  mock.simpleMethod();
+}

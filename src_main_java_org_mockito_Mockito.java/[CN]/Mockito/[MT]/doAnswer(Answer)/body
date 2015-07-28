@@ -1,3 +1,3 @@
 {
-  return MOCKITO_CORE.doAnswer(answer);
+  return MOCKITO_CORE.stubber().doAnswer(answer);
 }

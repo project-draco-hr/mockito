@@ -1,0 +1,3 @@
+{
+  return MOCKITO_CORE.stubber().doReturn(toBeReturned,toBeReturnedNext);
+}

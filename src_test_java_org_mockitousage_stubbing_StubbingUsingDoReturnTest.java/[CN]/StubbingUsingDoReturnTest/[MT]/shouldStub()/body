@@ -1,5 +1,0 @@
-{
-  doReturn("foo").when(mock).simpleMethod();
-  doReturn("bar").when(mock).simpleMethod();
-  assertEquals("bar",mock.simpleMethod());
-}

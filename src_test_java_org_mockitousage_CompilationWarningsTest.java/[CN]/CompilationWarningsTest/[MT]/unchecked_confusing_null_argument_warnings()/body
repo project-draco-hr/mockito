@@ -1,0 +1,10 @@
+{
+  doReturn(null,null).when(mock(IMethods.class)).objectReturningMethodNoArgs();
+  doAnswer(ignore()).doReturn(null,null).when(mock(IMethods.class)).objectReturningMethodNoArgs();
+  when(mock(IMethods.class).objectReturningMethodNoArgs()).thenReturn(null,null);
+  when(mock(IMethods.class).objectReturningMethodNoArgs()).then(ignore()).thenReturn(null,null);
+  willReturn(null,null).given(mock(IMethods.class)).objectReturningMethodNoArgs();
+  given(mock(IMethods.class).objectReturningMethodNoArgs()).willReturn(null,null);
+  willAnswer(ignore()).willReturn(null,null).given(mock(IMethods.class)).objectReturningMethodNoArgs();
+  given(mock(IMethods.class).objectReturningMethodNoArgs()).will(ignore()).willReturn(null,null);
+}

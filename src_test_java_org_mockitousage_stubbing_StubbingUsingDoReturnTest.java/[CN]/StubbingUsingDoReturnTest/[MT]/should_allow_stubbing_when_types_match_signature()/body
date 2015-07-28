@@ -1,0 +1,6 @@
+{
+  doReturn("foo").when(mock).objectReturningMethodNoArgs();
+  doReturn("foo").when(mock).simpleMethod();
+  doReturn(1).when(mock).intReturningMethod();
+  doReturn(2).when(mock).intReturningMethod();
+}

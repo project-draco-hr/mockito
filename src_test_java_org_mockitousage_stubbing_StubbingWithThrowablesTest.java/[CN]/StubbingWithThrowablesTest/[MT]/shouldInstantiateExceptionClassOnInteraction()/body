@@ -1,4 +1,4 @@
 {
-  when(mock.add(null)).thenThrow(IllegalArgumentException.class);
+  when(mock.add(null)).thenThrow(NaughtyException.class);
   mock.add(null);
 }

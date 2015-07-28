@@ -1,4 +1,10 @@
 {
-  answers.add(new ThrowsException(toBeThrown));
+  if (toBeThrown == null) {
+    answers.add(new ThrowsException(null));
+    return this;
+  }
+  for (  Throwable throwable : toBeThrown) {
+    answers.add(new ThrowsException(throwable));
+  }
   return this;
 }

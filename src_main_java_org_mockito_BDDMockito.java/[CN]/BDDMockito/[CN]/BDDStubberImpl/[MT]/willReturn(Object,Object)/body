@@ -1,0 +1,3 @@
+{
+  return new BDDStubberImpl(mockitoStubber.doReturn(toBeReturned).doReturn(nextToBeReturned));
+}

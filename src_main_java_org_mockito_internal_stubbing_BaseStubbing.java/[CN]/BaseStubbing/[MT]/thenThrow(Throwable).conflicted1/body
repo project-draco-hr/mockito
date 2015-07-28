@@ -1,6 +1,6 @@
 {
   if (throwables == null) {
-    thenThrow((Throwable)null);
+    return thenThrow((Throwable)null);
   }
   OngoingStubbing<T> stubbing=null;
   for (  Throwable t : throwables) {

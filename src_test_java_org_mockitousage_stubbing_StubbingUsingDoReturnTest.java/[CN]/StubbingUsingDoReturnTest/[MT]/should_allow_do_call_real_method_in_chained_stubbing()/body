@@ -1,0 +1,6 @@
+{
+  MethodsImpl methods=mock(MethodsImpl.class);
+  doReturn("A").doCallRealMethod().when(methods).simpleMethod();
+  Assertions.assertThat(methods.simpleMethod()).isEqualTo("A");
+  Assertions.assertThat(methods.simpleMethod()).isEqualTo(null);
+}

@@ -1,0 +1,8 @@
+{
+  doThrow(NullPointerException.class,IllegalArgumentException.class).when(mock(IMethods.class)).objectReturningMethodNoArgs();
+  when(mock(IMethods.class).objectReturningMethodNoArgs()).thenThrow(NullPointerException.class,IllegalArgumentException.class);
+  doAnswer(ignore()).doThrow(NullPointerException.class,IllegalArgumentException.class).when(mock(IMethods.class)).objectReturningMethodNoArgs();
+  willThrow(NullPointerException.class,IllegalArgumentException.class).given(mock(IMethods.class)).objectReturningMethodNoArgs();
+  given(mock(IMethods.class).objectReturningMethodNoArgs()).willThrow(NullPointerException.class,IllegalArgumentException.class);
+  willAnswer(ignore()).willThrow(NullPointerException.class,IllegalArgumentException.class).given(mock(IMethods.class)).objectReturningMethodNoArgs();
+}

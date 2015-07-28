@@ -1,0 +1,2 @@
+Class<? extends Throwable> throwableType
+Class<? extends Throwable> throwableTypes
