@@ -1,3 +1,3 @@
 {
-  return mockMaker.getHandler(mock) != null;
+  return mock != null && mockMaker.getHandler(mock) != null;
 }
