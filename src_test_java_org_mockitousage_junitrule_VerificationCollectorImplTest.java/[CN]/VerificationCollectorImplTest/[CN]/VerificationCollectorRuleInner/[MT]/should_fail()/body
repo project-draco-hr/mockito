@@ -1,0 +1,4 @@
+{
+  IMethods methods=mock(IMethods.class);
+  collector.verify(methods).simpleMethod();
+}

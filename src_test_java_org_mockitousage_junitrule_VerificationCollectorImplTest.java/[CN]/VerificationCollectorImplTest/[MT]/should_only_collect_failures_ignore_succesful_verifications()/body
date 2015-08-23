@@ -1,0 +1,7 @@
+{
+  VerificationCollector collector=MockitoJUnit.collector();
+  IMethods methods=mock(IMethods.class);
+  collector.verify(methods,never()).simpleMethod();
+  collector.verify(methods).byteReturningMethod();
+  this.assertAtLeastOneFailure(collector);
+}

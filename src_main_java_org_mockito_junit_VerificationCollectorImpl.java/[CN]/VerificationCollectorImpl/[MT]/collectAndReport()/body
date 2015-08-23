@@ -1,0 +1,7 @@
+{
+  if (this.numberOfFailures > 0) {
+    String error=this.builder.toString();
+    this.resetBuilder();
+    throw new MockitoAssertionError(error);
+  }
+}

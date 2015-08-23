@@ -1,0 +1,4 @@
+{
+  this.builder=new StringBuilder().append("There were multiple verification failures:");
+  this.numberOfFailures=0;
+}

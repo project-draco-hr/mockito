@@ -1,0 +1,7 @@
+{
+  VerificationCollector collector=MockitoJUnit.collector();
+  IMethods methods=mock(IMethods.class);
+  methods.simpleMethod();
+  collector.verify(methods).simpleMethod();
+  collector.collectAndReport();
+}
