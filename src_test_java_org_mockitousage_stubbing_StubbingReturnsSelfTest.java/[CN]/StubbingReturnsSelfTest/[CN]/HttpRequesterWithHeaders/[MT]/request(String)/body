@@ -1,0 +1,3 @@
+{
+  return builder.withUrl(uri).withHeader("Content-type: application/json").withHeader("Authorization: Bearer").request();
+}

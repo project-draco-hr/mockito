@@ -1,0 +1,4 @@
+{
+  Builder builder=mock(Builder.class,RETURNS_SELF);
+  assertThat(builder.returnInt()).isEqualTo(0);
+}

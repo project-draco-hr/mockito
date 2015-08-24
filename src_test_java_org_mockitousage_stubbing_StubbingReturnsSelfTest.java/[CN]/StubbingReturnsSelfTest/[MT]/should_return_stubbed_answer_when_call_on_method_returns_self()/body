@@ -1,0 +1,6 @@
+{
+  Builder builder=mock(Builder.class,RETURNS_SELF);
+  Builder anotherBuilder=mock(Builder.class,RETURNS_SELF);
+  when(builder.returnSelf()).thenReturn(anotherBuilder);
+  assertThat(builder.returnSelf().returnSelf()).isEqualTo(anotherBuilder);
+}

@@ -1,0 +1,9 @@
+{
+  Class<?> methodReturnType=invocation.getMethod().getReturnType();
+  Object mock=invocation.getMock();
+  Class<?> mockType=mockUtil.getMockHandler(mock).getMockSettings().getTypeToMock();
+  if (methodReturnType.isAssignableFrom(mockType)) {
+    return invocation.getMock();
+  }
+  return defaultReturn.returnValueFor(methodReturnType);
+}
