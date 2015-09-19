@@ -1,9 +1,0 @@
-{
-  try {
-    serializeAndBack(mock(NotSerializableAndNoDefaultConstructor.class,withSettings().serializable()));
-    fail("should have thrown an exception to say the object is not serializable");
-  }
- catch (  MockitoException e) {
-    Assertions.assertThat(e.getMessage()).contains(NotSerializableAndNoDefaultConstructor.class.getSimpleName()).contains("serializable()").contains("implement Serializable").contains("no-arg constructor");
-  }
-}
