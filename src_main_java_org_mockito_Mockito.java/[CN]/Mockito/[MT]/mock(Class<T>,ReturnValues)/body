@@ -1,3 +1,0 @@
-{
-  return mock(classToMock,withSettings().defaultAnswer(new AnswerReturnValuesAdapter(returnValues)));
-}
