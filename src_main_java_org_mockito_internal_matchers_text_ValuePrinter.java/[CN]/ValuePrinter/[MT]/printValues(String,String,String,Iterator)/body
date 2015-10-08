@@ -1,4 +1,16 @@
 {
+  if (start == null) {
+    start="(";
+  }
+  if (separator == null) {
+    separator=",";
+  }
+  if (end == null) {
+    end=")";
+  }
+  if (values == null) {
+    values=new ArrayIterator(new String[]{""});
+  }
   StringBuilder sb=new StringBuilder(start);
   while (values.hasNext()) {
     sb.append(print(values.next()));
