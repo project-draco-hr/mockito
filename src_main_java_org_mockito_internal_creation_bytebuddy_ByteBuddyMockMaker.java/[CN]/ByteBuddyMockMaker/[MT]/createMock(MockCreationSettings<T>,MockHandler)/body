@@ -1,6 +1,6 @@
 {
   Class<T> mockedProxyType=createProxyClass(mockWithFeaturesFrom(settings));
-  Instantiator instantiator=new InstantiatorProvider().getInstantiator(settings);
+  Instantiator instantiator=Plugins.getInstantiatorProvider().getInstantiator(settings);
   T mockInstance=null;
   try {
     mockInstance=instantiator.newInstance(mockedProxyType);
