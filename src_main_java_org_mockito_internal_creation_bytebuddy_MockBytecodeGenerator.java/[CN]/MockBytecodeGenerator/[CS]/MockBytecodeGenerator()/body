@@ -1,4 +1,4 @@
 {
-  byteBuddy=new ByteBuddy().withDefaultMethodAttributeAppender(new MethodAttributeAppender.ForInstrumentedMethod(AnnotationAppender.ValueFilter.AppendDefaults.INSTANCE)).withAttribute(new TypeAttributeAppender.ForSuperType(AnnotationAppender.ValueFilter.AppendDefaults.INSTANCE));
+  byteBuddy=new ByteBuddy().withDefaultMethodAttributeAppender(new MethodAttributeAppender.ForInstrumentedMethod(AnnotationAppender.ValueFilter.AppendDefaults.INSTANCE)).withAttribute(new TypeAttributeAppender.ForInstrumentedType(AnnotationAppender.ValueFilter.AppendDefaults.INSTANCE));
   random=new Random();
 }
