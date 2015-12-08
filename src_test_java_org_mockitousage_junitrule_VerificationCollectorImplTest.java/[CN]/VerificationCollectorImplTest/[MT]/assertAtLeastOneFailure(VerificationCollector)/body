@@ -1,0 +1,10 @@
+{
+  try {
+    collector.collectAndReport();
+    fail();
+  }
+ catch (  MockitoAssertionError error) {
+    assertThat(error).hasMessageContaining("1. Wanted but not invoked:");
+    assertThat(error.getMessage()).doesNotContain("2.");
+  }
+}

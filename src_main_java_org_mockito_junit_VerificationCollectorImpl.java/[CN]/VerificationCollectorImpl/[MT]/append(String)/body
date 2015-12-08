@@ -1,0 +1,4 @@
+{
+  this.numberOfFailures++;
+  this.builder.append('\n').append(this.numberOfFailures).append(". ").append(message.substring(1,message.length()));
+}

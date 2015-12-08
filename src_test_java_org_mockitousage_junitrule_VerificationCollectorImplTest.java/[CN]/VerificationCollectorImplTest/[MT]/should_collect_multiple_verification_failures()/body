@@ -1,0 +1,14 @@
+{
+  VerificationCollector collector=MockitoJUnit.collector();
+  IMethods methods=mock(IMethods.class);
+  collector.verify(methods).simpleMethod();
+  collector.verify(methods).byteReturningMethod();
+  try {
+    collector.collectAndReport();
+    fail();
+  }
+ catch (  MockitoAssertionError error) {
+    assertThat(error).hasMessageContaining("1. Wanted but not invoked:");
+    assertThat(error).hasMessageContaining("2. Wanted but not invoked:");
+  }
+}
