@@ -1,0 +1,6 @@
+{
+  methods.simpleMethod();
+  moarMethods.simpleMethod();
+  clearInvocations(methods,moarMethods);
+  verifyNoMoreInteractions(methods,moarMethods);
+}

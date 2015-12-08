@@ -1,0 +1,3 @@
+{
+  clearInvocations(new Object[]{null});
+}

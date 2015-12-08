@@ -1,0 +1,3 @@
+{
+  MOCKITO_CORE.clearInvocations(mocks);
+}
