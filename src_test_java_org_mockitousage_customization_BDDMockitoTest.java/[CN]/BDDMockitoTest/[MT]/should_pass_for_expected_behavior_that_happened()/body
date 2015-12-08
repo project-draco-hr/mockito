@@ -1,4 +1,5 @@
 {
   mock.booleanObjectReturningMethod();
   then(mock).should().booleanObjectReturningMethod();
+  then(mock).shouldHaveNoMoreInteractions();
 }
