@@ -1,0 +1,4 @@
+{
+  BuilderSubClass builder=mock(BuilderSubClass.class,RETURNS_SELF);
+  assertThat(builder.returnsSubClass()).isEqualTo(builder);
+}
