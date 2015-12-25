@@ -1,6 +1,0 @@
-{
-  notNull(file1,"zip/jar file to compare",file2,"zip/jar file to compare");
-  this.file1=file1;
-  this.file2=file2;
-  return this;
-}

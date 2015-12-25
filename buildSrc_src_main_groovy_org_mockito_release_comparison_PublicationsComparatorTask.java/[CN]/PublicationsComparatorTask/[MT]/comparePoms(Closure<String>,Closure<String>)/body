@@ -1,3 +1,0 @@
-{
-  pomComparator=new PomComparator(left,right);
-}
