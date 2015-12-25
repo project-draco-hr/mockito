@@ -1,3 +1,0 @@
-{
-  return pom.replaceFirst("<version>(.*)</version>","<version>foobar</version>");
-}

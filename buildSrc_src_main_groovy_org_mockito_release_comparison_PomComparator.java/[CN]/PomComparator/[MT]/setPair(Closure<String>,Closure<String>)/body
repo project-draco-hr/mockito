@@ -1,6 +1,0 @@
-{
-  notNull(left,"pom content to compare",right,"pom content to compare");
-  this.left=left;
-  this.right=right;
-  return this;
-}
