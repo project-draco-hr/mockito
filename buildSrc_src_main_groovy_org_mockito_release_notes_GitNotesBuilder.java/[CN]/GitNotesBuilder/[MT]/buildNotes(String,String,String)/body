@@ -1,6 +1,6 @@
 {
   LOG.info("Getting release notes between {} and {}",fromRevision,toRevision);
-  ContributionsProvider contributionsProvider=Vcs.getGitProvider(Exec.INSTANCE.getProcessRunner(workDir));
+  ContributionsProvider contributionsProvider=Vcs.getGitProvider(Exec.getProcessRunner(workDir));
   ContributionSet contributions=contributionsProvider.getContributionsBetween(fromRevision,toRevision);
   ImprovementsProvider improvementsProvider=Improvements.getGitHubProvider(authTokenEnvVar);
   ImprovementSet improvements=improvementsProvider.getImprovements(contributions);

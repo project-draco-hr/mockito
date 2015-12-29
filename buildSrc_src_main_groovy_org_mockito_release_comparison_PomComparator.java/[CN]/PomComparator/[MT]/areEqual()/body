@@ -1,0 +1,6 @@
+{
+  String left=this.left.call();
+  String right=this.right.call();
+  notNull(left,"pom content to compare",right,"pom content to compare");
+  return replaceVersion(left).equals(replaceVersion(right));
+}
