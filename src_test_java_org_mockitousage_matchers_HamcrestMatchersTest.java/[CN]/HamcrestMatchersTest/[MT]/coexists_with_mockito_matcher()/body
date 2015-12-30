@@ -1,5 +1,5 @@
 {
-  when(mock.simpleMethod(argThat(new ArgumentMatcher<String>(){
+  when(mock.simpleMethod(Mockito.argThat(new ArgumentMatcher<String>(){
     public boolean matches(    Object argument){
       return true;
     }
