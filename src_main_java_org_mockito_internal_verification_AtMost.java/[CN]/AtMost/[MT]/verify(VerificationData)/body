@@ -7,5 +7,6 @@
   if (foundSize > maxNumberOfInvocations) {
     new Reporter().wantedAtMostX(maxNumberOfInvocations,foundSize);
   }
+  removeAlreadyVerified(found);
   invocationMarker.markVerified(found,wanted);
 }
