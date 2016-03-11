@@ -1,4 +1,4 @@
 {
   validateIndexWithinInvocationRange(invocation);
-  return invocation.getArguments()[actualArgumentPosition(invocation)];
+  return invocation.getArgument(actualArgumentPosition(invocation));
 }

@@ -10,7 +10,7 @@
     }
   }
  else   if (methodsGuru.isCompareToMethod(invocation.getMethod())) {
-    return invocation.getMock() == invocation.getArguments()[0] ? 0 : 1;
+    return invocation.getMock() == invocation.getArgument(0) ? 0 : 1;
   }
   Class<?> returnType=invocation.getMethod().getReturnType();
   return returnValueFor(returnType);
