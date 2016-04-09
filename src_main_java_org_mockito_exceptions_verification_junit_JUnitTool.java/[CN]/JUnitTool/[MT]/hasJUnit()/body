@@ -1,3 +1,0 @@
-{
-  return org.mockito.internal.junit.JUnitTool.hasJUnit();
-}
