@@ -1,4 +1,0 @@
-{
-  list.add("test");
-  verify(list).add("test");
-}
