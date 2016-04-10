@@ -1,8 +1,14 @@
 {
   return new Statement(){
     @Override public void evaluate() throws Throwable {
-      base.evaluate();
-      VerificationCollectorImpl.this.collectAndReport();
+      try {
+        VerificationCollectorImpl.this.assertLazily();
+        base.evaluate();
+        VerificationCollectorImpl.this.collectAndReport();
+      }
+  finally {
+        mockingProgress.setVerificationStrategy(MockingProgressImpl.getDefaultVerificationStrategy());
+      }
     }
   }
 ;
