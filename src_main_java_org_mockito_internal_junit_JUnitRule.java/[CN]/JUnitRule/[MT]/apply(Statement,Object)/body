@@ -1,8 +1,15 @@
 {
   return new Statement(){
     @Override public void evaluate() throws Throwable {
+      WarningsCollector c=new WarningsCollector();
       MockitoAnnotations.initMocks(target);
-      base.evaluate();
+      try {
+        base.evaluate();
+      }
+ catch (      Throwable t) {
+        logger.log(c.getWarnings());
+        throw t;
+      }
       Mockito.validateMockitoUsage();
     }
   }

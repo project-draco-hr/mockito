@@ -1,0 +1,17 @@
+{
+  try {
+    jUnitRule.apply(new Statement(){
+      public void evaluate() throws Throwable {
+        IMethods mock=Mockito.mock(IMethods.class);
+        Mockito.when(mock.simpleMethod("foo")).thenReturn("bar");
+        throw new AssertionError("x");
+      }
+    }
+,injectTestCase).evaluate();
+    fail();
+  }
+ catch (  AssertionError e) {
+    assertEquals("x",e.getMessage());
+    assertTrue(logger.getLoggedInfo().startsWith("This stubbing was never used"));
+  }
+}
