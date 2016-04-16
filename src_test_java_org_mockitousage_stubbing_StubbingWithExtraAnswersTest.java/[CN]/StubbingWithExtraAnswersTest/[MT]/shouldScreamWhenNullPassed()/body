@@ -1,6 +1,6 @@
 {
   try {
-    new ReturnsElementsOf(null);
+    AdditionalAnswers.returnsElementsOf(null);
     fail();
   }
  catch (  MockitoException e) {
