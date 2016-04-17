@@ -1,0 +1,6 @@
+{
+  LoggingListener listener=new LoggingListener(false);
+  listener.foundStubCalledWithDifferentArgs(invocationAt("at com.FooTest:20"),invocationMatcherAt("at com.Foo:100"));
+  listener.foundStubCalledWithDifferentArgs(invocationAt("at com.FooTest:21"),invocationMatcherAt("at com.Foo:120"));
+  assertEquals("[Mockito] Additional stubbing information (see javadoc for StubbingInfo class):\n" + "[Mockito]\n" + "[Mockito] Unused stubbing due to argument mismatch (is stubbing correct in the test?):\n"+ "[Mockito]\n"+ "[Mockito] stubbed with those args here   at com.FooTest:20\n"+ "[Mockito] BUT called with different args at com.Foo:100\n"+ "[Mockito] stubbed with those args here   at com.FooTest:21\n"+ "[Mockito] BUT called with different args at com.Foo:120",listener.getStubbingInfo());
+}

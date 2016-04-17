@@ -1,5 +1,5 @@
 {
   if (warnAboutUnstubbed) {
-    logger.log(join("This method was not stubbed ",unstubbed,unstubbed.getInvocation().getLocation(),""));
+    unstubbedCalls.add("[Mockito] unstubbed method " + unstubbed.getInvocation().getLocation());
   }
 }

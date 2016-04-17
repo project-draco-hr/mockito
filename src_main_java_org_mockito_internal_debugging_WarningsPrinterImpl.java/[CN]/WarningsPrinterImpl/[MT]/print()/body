@@ -1,5 +1,5 @@
 {
-  SimpleMockitoLogger logger=new SimpleMockitoLogger();
-  this.print(logger);
-  return logger.getLoggedInfo();
+  LoggingListener listener=new LoggingListener(warnAboutUnstubbed);
+  finder.find(listener);
+  return listener.getStubbingInfo();
 }

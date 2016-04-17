@@ -1,5 +1,0 @@
-{
-  LoggingListener listener=new LoggingListener(false,logger);
-  listener.foundUnstubbed(new InvocationBuilder().toInvocationMatcher());
-  verify(logger,never()).log(notNull());
-}

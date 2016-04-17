@@ -1,4 +1,3 @@
 {
   this.warnAboutUnstubbed=warnAboutUnstubbed;
-  this.logger=logger;
 }

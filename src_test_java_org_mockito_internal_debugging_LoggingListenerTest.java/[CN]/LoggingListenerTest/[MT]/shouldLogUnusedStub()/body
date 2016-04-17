@@ -1,5 +1,0 @@
-{
-  LoggingListener listener=new LoggingListener(false,logger);
-  listener.foundUnusedStub(new InvocationBuilder().toInvocation());
-  verify(logger).log(notNull());
-}

@@ -1,0 +1,6 @@
+{
+  LoggingListener listener=new LoggingListener(false);
+  listener.foundUnusedStub(invocationAt("at com.FooTest:30"));
+  listener.foundUnusedStub(invocationAt("at com.FooTest:32"));
+  assertEquals("[Mockito] Additional stubbing information (see javadoc for StubbingInfo class):\n" + "[Mockito]\n" + "[Mockito] Unused stubbing (perhaps can be removed from the test?):\n"+ "[Mockito]\n"+ "[Mockito] This stubbing was never used   at com.FooTest:30\n"+ "[Mockito] This stubbing was never used   at com.FooTest:32",listener.getStubbingInfo());
+}

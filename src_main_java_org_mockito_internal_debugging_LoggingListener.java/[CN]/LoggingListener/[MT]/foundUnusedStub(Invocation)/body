@@ -1,3 +1,3 @@
 {
-  logger.log("This stubbing was never used   " + unused.getLocation() + "\n");
+  unusedStubs.add("[Mockito] This stubbing was never used   " + unused.getLocation());
 }

@@ -1,3 +1,4 @@
 {
-  logger.log(join(" *** Stubbing warnings from Mockito: *** ","","stubbed with those args here   " + unused.getLocation(),"BUT called with different args " + unstubbed.getInvocation().getLocation(),""));
+  argMismatchStubs.add("[Mockito] stubbed with those args here   " + unused.getLocation());
+  argMismatchStubs.add("[Mockito] BUT called with different args " + unstubbed.getInvocation().getLocation());
 }

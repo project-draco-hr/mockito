@@ -1,0 +1,4 @@
+{
+  LoggingListener listener=new LoggingListener(true);
+  assertEquals("",listener.getStubbingInfo());
+}
