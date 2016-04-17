@@ -1,5 +1,5 @@
 {
-  StringBuilder out=new StringBuilder("\n");
+  StringBuilder out=new StringBuilder(start);
   for (  Object line : lines) {
     out.append(line.toString()).append("\n");
   }
