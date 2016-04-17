@@ -1,5 +1,6 @@
 {
-  for (  Object line : linesToBreak) {
+  StringBuilder out=new StringBuilder("\n");
+  for (  Object line : lines) {
     out.append(line.toString()).append("\n");
   }
   int lastBreak=out.lastIndexOf("\n");
