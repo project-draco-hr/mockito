@@ -3,3 +3,4 @@ MockitoMethod mockitoMethod
 Object[] args
 int sequenceNumber
 RealMethod realMethod
+Location location

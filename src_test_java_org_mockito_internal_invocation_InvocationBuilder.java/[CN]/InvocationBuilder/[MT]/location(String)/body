@@ -1,0 +1,9 @@
+{
+  this.location=new Location(){
+    public String toString(){
+      return location;
+    }
+  }
+;
+  return this;
+}

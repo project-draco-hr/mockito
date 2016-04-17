@@ -3,5 +3,5 @@
   for (int i=0; i < args.length; i++) {
     types[i]=args[i].getClass();
   }
-  return new InvocationImpl(mock(type),new SerializableMethod(type.getMethod(methodName,types)),args,1,null);
+  return new InvocationImpl(mock(type),new SerializableMethod(type.getMethod(methodName,types)),args,1,null,new LocationImpl());
 }
