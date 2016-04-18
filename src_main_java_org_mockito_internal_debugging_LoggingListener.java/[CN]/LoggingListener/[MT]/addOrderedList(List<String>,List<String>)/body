@@ -1,0 +1,5 @@
+{
+  for (  String a : additions) {
+    target.add("[Mockito] " + a);
+  }
+}

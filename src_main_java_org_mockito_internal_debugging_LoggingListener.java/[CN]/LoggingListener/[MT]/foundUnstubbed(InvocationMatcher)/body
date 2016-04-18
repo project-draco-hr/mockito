@@ -1,5 +1,5 @@
 {
   if (warnAboutUnstubbed) {
-    unstubbedCalls.add("[Mockito] unstubbed method " + unstubbed.getInvocation().getLocation());
+    unstubbedCalls.add((unstubbedCalls.size() + 1) + ". " + unstubbed.getInvocation().getLocation());
   }
 }

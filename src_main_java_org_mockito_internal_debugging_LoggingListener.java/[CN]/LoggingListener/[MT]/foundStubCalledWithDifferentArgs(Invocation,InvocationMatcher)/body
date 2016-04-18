@@ -1,4 +1,6 @@
 {
-  argMismatchStubs.add("[Mockito] stubbed with those args here   " + unused.getLocation());
-  argMismatchStubs.add("[Mockito] BUT called with different args " + unstubbed.getInvocation().getLocation());
+  String index=Integer.toString(indexOfNextPair(argMismatchStubs.size()));
+  String padding=index.replaceAll("\\d"," ");
+  argMismatchStubs.add(index + ". Stubbed " + unused.getLocation());
+  argMismatchStubs.add(padding + "  Invoked " + unstubbed.getInvocation().getLocation());
 }

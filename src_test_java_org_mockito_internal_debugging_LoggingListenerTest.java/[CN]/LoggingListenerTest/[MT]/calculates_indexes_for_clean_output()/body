@@ -1,0 +1,6 @@
+{
+  assertEquals(1,LoggingListener.indexOfNextPair(0));
+  assertEquals(2,LoggingListener.indexOfNextPair(2));
+  assertEquals(3,LoggingListener.indexOfNextPair(4));
+  assertEquals(4,LoggingListener.indexOfNextPair(6));
+}

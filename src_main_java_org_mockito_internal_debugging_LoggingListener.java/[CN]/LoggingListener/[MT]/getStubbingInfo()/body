@@ -6,27 +6,21 @@
   lines.add("[Mockito] Additional stubbing information (see javadoc for StubbingInfo class):");
   if (!argMismatchStubs.isEmpty()) {
     lines.add("[Mockito]");
-    lines.add("[Mockito] Unused stubbing due to argument mismatch (is stubbing correct in the test?):");
+    lines.add("[Mockito] Argument mismatch between stubbing and actual invocation (is stubbing correct in the test?):");
     lines.add("[Mockito]");
-    for (    String info : argMismatchStubs) {
-      lines.add(info);
-    }
+    addOrderedList(lines,argMismatchStubs);
   }
   if (!unusedStubs.isEmpty()) {
     lines.add("[Mockito]");
     lines.add("[Mockito] Unused stubbing (perhaps can be removed from the test?):");
     lines.add("[Mockito]");
-    for (    String info : unusedStubs) {
-      lines.add(info);
-    }
+    addOrderedList(lines,unusedStubs);
   }
   if (!unstubbedCalls.isEmpty()) {
     lines.add("[Mockito]");
-    lines.add("[Mockito] Unstubbed method calls (perhaps missing stubbing in the test?):");
+    lines.add("[Mockito] Unstubbed method invocations (perhaps missing stubbing in the test?):");
     lines.add("[Mockito]");
-    for (    String info : unstubbedCalls) {
-      lines.add(info);
-    }
+    addOrderedList(lines,unstubbedCalls);
   }
   return join("",lines);
 }

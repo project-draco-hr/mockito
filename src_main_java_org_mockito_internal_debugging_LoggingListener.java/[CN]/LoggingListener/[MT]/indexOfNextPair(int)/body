@@ -1,0 +1,3 @@
+{
+  return (collectionSize / 2) + 1;
+}
