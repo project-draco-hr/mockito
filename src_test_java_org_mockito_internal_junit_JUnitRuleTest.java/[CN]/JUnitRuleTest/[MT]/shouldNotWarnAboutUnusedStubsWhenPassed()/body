@@ -2,7 +2,7 @@
   jUnitRule.apply(new Statement(){
     public void evaluate() throws Throwable {
       IMethods mock=Mockito.mock(IMethods.class);
-      Mockito.when(mock.simpleMethod("foo")).thenReturn("bar");
+      declareUnusedStub(mock);
     }
   }
 ,injectTestCase).evaluate();

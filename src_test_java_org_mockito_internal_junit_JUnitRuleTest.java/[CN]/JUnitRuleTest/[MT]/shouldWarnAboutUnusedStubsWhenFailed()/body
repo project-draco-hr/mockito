@@ -3,7 +3,7 @@
     jUnitRule.apply(new Statement(){
       public void evaluate() throws Throwable {
         IMethods mock=Mockito.mock(IMethods.class);
-        Mockito.when(mock.simpleMethod("foo")).thenReturn("bar");
+        declareUnusedStub(mock);
         throw new AssertionError("x");
       }
     }
@@ -12,6 +12,6 @@
   }
  catch (  AssertionError e) {
     assertEquals("x",e.getMessage());
-    assertTrue(logger.getLoggedInfo().contains("This stubbing was never used"));
+    assertTrue(logger.getLoggedInfo().contains("declareUnusedStub"));
   }
 }
