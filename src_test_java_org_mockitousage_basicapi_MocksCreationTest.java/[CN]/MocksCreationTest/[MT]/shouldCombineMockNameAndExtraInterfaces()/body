@@ -2,5 +2,5 @@
   IMethods mock=mock(IMethods.class,withSettings().extraInterfaces(List.class).name("great mockie"));
   String name=mock.toString();
   assertContains("great mockie",name);
-  assertThat(mock,is(List.class));
+  assertTrue(mock instanceof List);
 }

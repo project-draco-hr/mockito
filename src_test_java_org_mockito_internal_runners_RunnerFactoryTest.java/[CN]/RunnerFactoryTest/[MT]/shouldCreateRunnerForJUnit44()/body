@@ -7,5 +7,5 @@
 ;
   RunnerFactory factory=new RunnerFactory(provider);
   RunnerImpl runner=factory.create(RunnerFactoryTest.class);
-  assertThat(runner,is(JUnit44RunnerImpl.class));
+  assertTrue(runner instanceof JUnit44RunnerImpl);
 }
