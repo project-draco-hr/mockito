@@ -1,7 +1,7 @@
 {
   willAnswer(new Answer<String>(){
     public String answer(    InvocationOnMock invocation) throws Throwable {
-      return (String)invocation.getArguments()[0];
+      return invocation.getArgument(0);
     }
   }
 ).given(mock).simpleMethod(anyString());
