@@ -1,0 +1,3 @@
+{
+  mock=when(mock(IMethods.class).simpleMethod(1)).thenReturn("1").getMock();
+}
