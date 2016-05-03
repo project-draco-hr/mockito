@@ -1,0 +1,3 @@
+{
+  threadSafely().setStubbingListener(stubbingListener);
+}

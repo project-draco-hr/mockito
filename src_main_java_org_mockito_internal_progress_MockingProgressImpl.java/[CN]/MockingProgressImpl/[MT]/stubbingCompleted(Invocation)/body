@@ -1,3 +1,4 @@
 {
   stubbingInProgress=null;
+  getStubbingListener().newStubbing(invocation);
 }
