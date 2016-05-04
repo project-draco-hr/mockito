@@ -1,5 +1,5 @@
 {
   JUnitCore runner=new JUnitCore();
   Result result=runner.run(StubbingInConstructorUsed.class,StubbingInBeforeUsed.class,StubbingInTestUsed.class);
-  assertTrue(result.wasSuccessful());
+  assertThat(result).isSuccessful();
 }

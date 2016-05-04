@@ -1,4 +1,32 @@
 {
-  notifier.addListener(new FrameworkUsageValidator(notifier));
-  runner.run(notifier);
+  final Map<String,Invocation> stubbings=new HashMap<String,Invocation>();
+  final Set<String> used=new HashSet<String>();
+  MockitoFramework.setStubbingListener(new StubbingListener(){
+    public void newStubbing(    Invocation stubbing){
+      stubbings.put(stubbing.getLocation().toString(),stubbing);
+    }
+    public void usedStubbing(    Invocation stubbing,    Invocation actual){
+      String location=stubbing.getLocation().toString();
+      used.add(location);
+      stubbings.remove(location);
+    }
+  }
+);
+  try {
+    notifier.addListener(new FrameworkUsageValidator(notifier));
+    runner.run(notifier);
+  }
+  finally {
+    MockitoFramework.setStubbingListener(null);
+  }
+  if (stubbings.isEmpty()) {
+    return;
+  }
+  for (  String u : used) {
+    stubbings.remove(u);
+  }
+  if (stubbings.isEmpty()) {
+    return;
+  }
+  notifier.fireTestFailure(new Failure(Description.createSuiteDescription(testClass),new UnnecessaryStubbingException("Unnecessary stubbings: \n" + stubbings)));
 }
