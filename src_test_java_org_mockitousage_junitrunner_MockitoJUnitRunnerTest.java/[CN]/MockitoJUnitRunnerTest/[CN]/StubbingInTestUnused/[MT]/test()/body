@@ -1,3 +1,5 @@
 {
-  when(mock(IMethods.class).simpleMethod(1)).thenReturn("1");
+  IMethods mock=mock(IMethods.class);
+  when(mock.simpleMethod(1)).thenReturn("1");
+  mock.simpleMethod(2);
 }
