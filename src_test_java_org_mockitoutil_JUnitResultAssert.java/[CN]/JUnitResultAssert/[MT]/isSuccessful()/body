@@ -1,0 +1,11 @@
+{
+  if (result.wasSuccessful()) {
+    return;
+  }
+  StringBuilder sb=new StringBuilder("There were " + result.getFailures().size() + " test failures:\n");
+  int count=0;
+  for (  Failure f : result.getFailures()) {
+    sb.append("  <-----> ").append(++count).append(". ").append(f.getTrace()).append("\n");
+  }
+  throw new AssertionError(sb.toString());
+}
