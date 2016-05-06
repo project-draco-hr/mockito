@@ -9,5 +9,5 @@
     return;
   }
   Description unnecessaryStubbings=Description.createTestDescription(testClass,"unnecessary Mockito stubbings");
-  notifier.fireTestFailure(new Failure(unnecessaryStubbings,new Reporter().formatUnncessaryStubbingException(testClass,stubbings.values())));
+  notifier.fireTestFailure(new Failure(unnecessaryStubbings,Reporter.formatUnncessaryStubbingException(testClass,stubbings.values())));
 }
