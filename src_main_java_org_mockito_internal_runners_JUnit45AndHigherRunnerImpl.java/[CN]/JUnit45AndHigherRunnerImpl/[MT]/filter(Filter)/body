@@ -1,3 +1,4 @@
 {
+  filterRequested=true;
   runner.filter(filter);
 }

@@ -1,0 +1,13 @@
+{
+  if (stubbings.isEmpty()) {
+    return;
+  }
+  for (  String u : used) {
+    stubbings.remove(u);
+  }
+  if (stubbings.isEmpty()) {
+    return;
+  }
+  Description unnecessaryStubbings=Description.createTestDescription(testClass,"unnecessary Mockito stubbings");
+  notifier.fireTestFailure(new Failure(unnecessaryStubbings,new Reporter().formatUnncessaryStubbingException(testClass,stubbings.values())));
+}

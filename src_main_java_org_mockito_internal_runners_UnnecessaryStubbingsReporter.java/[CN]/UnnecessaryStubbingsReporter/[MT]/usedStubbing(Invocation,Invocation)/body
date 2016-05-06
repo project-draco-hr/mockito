@@ -1,0 +1,5 @@
+{
+  String location=stubbing.getLocation().toString();
+  used.add(location);
+  stubbings.remove(location);
+}
