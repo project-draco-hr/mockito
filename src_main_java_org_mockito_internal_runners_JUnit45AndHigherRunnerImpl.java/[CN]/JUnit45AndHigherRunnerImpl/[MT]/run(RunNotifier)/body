@@ -28,5 +28,5 @@
   if (stubbings.isEmpty()) {
     return;
   }
-  notifier.fireTestFailure(new Failure(Description.createSuiteDescription(testClass),new UnnecessaryStubbingException("Unnecessary stubbings: \n" + stubbings)));
+  notifier.fireTestFailure(new Failure(Description.createSuiteDescription(testClass),new Reporter().formatUnncessaryStubbingException(testClass,stubbings.values())));
 }
