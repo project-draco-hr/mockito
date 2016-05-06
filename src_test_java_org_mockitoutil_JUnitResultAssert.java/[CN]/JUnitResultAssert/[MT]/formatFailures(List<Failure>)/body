@@ -1,0 +1,11 @@
+{
+  if (failures.isEmpty()) {
+    return "";
+  }
+  int count=1;
+  StringBuilder out=new StringBuilder("Failures:");
+  for (  Failure f : failures) {
+    out.append(count++).append(". ").append(f.getTrace());
+  }
+  return out.toString();
+}

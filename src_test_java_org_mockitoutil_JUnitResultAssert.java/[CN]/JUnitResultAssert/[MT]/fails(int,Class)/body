@@ -1,0 +1,10 @@
+{
+  if (result.getFailures().size() != expectedFailureCount) {
+    throw new AssertionError("Wrong number of failures, expected: " + expectedFailureCount + ", actual: "+ expectedFailureCount+ "\n"+ formatFailures(result.getFailures()));
+  }
+  for (  Failure f : result.getFailures()) {
+    if (!expectedException.isInstance(f.getException())) {
+      throw new AssertionError("Incorrect failure type, expected: " + expectedException + ", actual: "+ f.getException().getClass().getSimpleName()+ "\n"+ formatFailures(result.getFailures()));
+    }
+  }
+}
