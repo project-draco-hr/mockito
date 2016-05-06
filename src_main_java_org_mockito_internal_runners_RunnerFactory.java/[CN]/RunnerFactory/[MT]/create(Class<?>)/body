@@ -1,6 +1,6 @@
 {
   try {
-    return runnerProvider.newInstance("org.mockito.internal.runners.JUnit45AndHigherRunnerImpl",klass);
+    return new RunnerProvider().newInstance("org.mockito.internal.runners.JUnit45AndHigherRunnerImpl",klass);
   }
  catch (  InvocationTargetException e) {
     if (!new TestMethodsFinder().hasTestMethods(klass)) {
