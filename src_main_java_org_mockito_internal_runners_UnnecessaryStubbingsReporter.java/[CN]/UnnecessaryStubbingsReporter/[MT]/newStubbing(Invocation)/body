@@ -1,0 +1,3 @@
+{
+  stubbings.put(stubbing.getLocation().toString(),stubbing);
+}
