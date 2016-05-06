@@ -2,6 +2,5 @@
   JUnitCore runner=new JUnitCore();
   Class[] tests={StubbingInConstructorUnused.class,StubbingInBeforeUnused.class,StubbingInTestUnused.class};
   Result result=runner.run(tests);
-  System.out.println(result.getFailures());
-  assertEquals(tests.length,result.getFailureCount());
+  assertThat(result).fails(3,UnnecessaryStubbingException.class);
 }
