@@ -1,0 +1,3 @@
+{
+  when(mock2.simpleMethod("unused stubbing")).thenReturn("");
+}

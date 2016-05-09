@@ -1,0 +1,4 @@
+{
+  super.testFailure(failure);
+  failed=true;
+}

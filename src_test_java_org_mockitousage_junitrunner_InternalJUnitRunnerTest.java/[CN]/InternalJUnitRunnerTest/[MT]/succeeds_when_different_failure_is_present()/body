@@ -1,0 +1,4 @@
+{
+  Result result=runner.run(WithUnrelatedAssertionFailure.class);
+  assertThat(result).fails(1,MyAssertionError.class);
+}
