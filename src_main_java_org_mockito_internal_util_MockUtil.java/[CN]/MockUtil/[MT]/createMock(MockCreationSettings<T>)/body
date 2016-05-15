@@ -1,5 +1,5 @@
 {
-  MockHandler mockHandler=new MockHandlerFactory().create(settings);
+  MockHandler mockHandler=createMockHandler(settings);
   T mock=mockMaker.createMock(settings,mockHandler);
   Object spiedInstance=settings.getSpiedInstance();
   if (spiedInstance != null) {

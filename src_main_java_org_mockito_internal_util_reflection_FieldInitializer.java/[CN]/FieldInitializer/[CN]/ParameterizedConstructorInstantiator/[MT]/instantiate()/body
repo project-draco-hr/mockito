@@ -6,7 +6,7 @@
     changer.enableAccess(constructor);
     final Object[] args=argResolver.resolveTypeInstances(constructor.getParameterTypes());
     Object newFieldInstance=constructor.newInstance(args);
-    new FieldSetter(testClass,field).set(newFieldInstance);
+    setField(testClass,field,newFieldInstance);
     return new FieldInitializationReport(field.get(testClass),false,true);
   }
  catch (  IllegalArgumentException e) {

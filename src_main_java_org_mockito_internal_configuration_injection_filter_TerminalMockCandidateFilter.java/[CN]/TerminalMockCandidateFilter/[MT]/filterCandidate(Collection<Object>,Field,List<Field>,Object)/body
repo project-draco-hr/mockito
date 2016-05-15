@@ -5,7 +5,7 @@
       public Object thenInject(){
         try {
           if (!new BeanPropertySetter(injectee,candidateFieldToBeInjected).set(matchingMock)) {
-            new FieldSetter(injectee,candidateFieldToBeInjected).set(matchingMock);
+            setField(injectee,candidateFieldToBeInjected,matchingMock);
           }
         }
  catch (        RuntimeException e) {

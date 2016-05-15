@@ -8,7 +8,7 @@
         throwIfAlreadyAssigned(field,alreadyAssigned);
         alreadyAssigned=true;
         try {
-          new FieldSetter(testInstance,field).set(mock);
+          setField(testInstance,field,mock);
         }
  catch (        Exception e) {
           throw new MockitoException("Problems setting field " + field.getName() + " annotated with "+ annotation,e);
