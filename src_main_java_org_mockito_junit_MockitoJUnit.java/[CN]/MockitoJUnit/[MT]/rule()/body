@@ -1,3 +1,3 @@
 {
-  return new MockitoJUnitRule();
+  return new JUnitRule(new ConsoleMockitoLogger());
 }

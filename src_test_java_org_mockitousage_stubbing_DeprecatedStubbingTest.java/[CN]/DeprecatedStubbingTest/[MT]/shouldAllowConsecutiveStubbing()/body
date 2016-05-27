@@ -1,5 +1,0 @@
-{
-  stub(mock.simpleMethod()).toReturn("100").toReturn("200");
-  assertEquals("100",mock.simpleMethod());
-  assertEquals("200",mock.simpleMethod());
-}

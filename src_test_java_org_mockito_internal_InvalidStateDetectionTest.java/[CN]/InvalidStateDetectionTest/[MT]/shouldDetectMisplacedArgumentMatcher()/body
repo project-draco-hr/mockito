@@ -1,7 +1,5 @@
 {
   anyObject();
-  detectsAndCleansUp(new OnStubVoid(),InvalidUseOfMatchersException.class);
-  anyObject();
   detectsAndCleansUp(new OnVerify(),InvalidUseOfMatchersException.class);
   anyObject();
   detectsAndCleansUp(new OnVerifyInOrder(),InvalidUseOfMatchersException.class);

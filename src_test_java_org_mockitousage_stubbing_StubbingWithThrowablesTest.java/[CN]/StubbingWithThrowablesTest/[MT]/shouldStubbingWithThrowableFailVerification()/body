@@ -1,6 +1,6 @@
 {
   when(mock.size()).thenThrow(new RuntimeException());
-  stubVoid(mock).toThrow(new RuntimeException()).on().clone();
+  doThrow(new RuntimeException()).when(mock).clone();
   verifyZeroInteractions(mock);
   mock.add("test");
   try {

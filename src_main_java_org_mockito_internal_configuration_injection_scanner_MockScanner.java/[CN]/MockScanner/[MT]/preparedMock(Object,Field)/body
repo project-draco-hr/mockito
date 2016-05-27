@@ -2,7 +2,7 @@
   if (isAnnotatedByMockOrSpy(field)) {
     return instance;
   }
- else   if (isMockOrSpy(instance)) {
+  if (isMockOrSpy(instance)) {
     mockUtil.maybeRedefineMockName(instance,field.getName());
     return instance;
   }

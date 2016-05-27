@@ -2,8 +2,6 @@
   verify(mock);
   detectsAndCleansUp(new OnStub(),UnfinishedVerificationException.class);
   verify(mock);
-  detectsAndCleansUp(new OnStubVoid(),UnfinishedVerificationException.class);
-  verify(mock);
   detectsAndCleansUp(new OnVerify(),UnfinishedVerificationException.class);
   verify(mock);
   detectsAndCleansUp(new OnVerifyInOrder(),UnfinishedVerificationException.class);

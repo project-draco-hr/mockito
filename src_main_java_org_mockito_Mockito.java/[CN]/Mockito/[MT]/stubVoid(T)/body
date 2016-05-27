@@ -1,3 +1,0 @@
-{
-  return MOCKITO_CORE.stubVoid(mock);
-}

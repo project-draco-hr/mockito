@@ -1,8 +1,0 @@
-{
-  try {
-    verify(mock,timeout(30000).atMost(1)).simpleMethod();
-    fail();
-  }
- catch (  FriendlyReminderException e) {
-  }
-}

@@ -4,8 +4,6 @@
   when(mock.simpleMethod());
   detectsAndCleansUp(new OnStub(),UnfinishedStubbingException.class);
   when(mock.simpleMethod());
-  detectsAndCleansUp(new OnStubVoid(),UnfinishedStubbingException.class);
-  when(mock.simpleMethod());
   detectsAndCleansUp(new OnVerify(),UnfinishedStubbingException.class);
   when(mock.simpleMethod());
   detectsAndCleansUp(new OnVerifyInOrder(),UnfinishedStubbingException.class);

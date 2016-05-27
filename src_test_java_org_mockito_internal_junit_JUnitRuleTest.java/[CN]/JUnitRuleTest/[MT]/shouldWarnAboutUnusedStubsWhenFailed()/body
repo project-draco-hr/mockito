@@ -7,7 +7,7 @@
         throw new AssertionError("x");
       }
     }
-,injectTestCase).evaluate();
+,null,injectTestCase).evaluate();
     fail();
   }
  catch (  AssertionError e) {

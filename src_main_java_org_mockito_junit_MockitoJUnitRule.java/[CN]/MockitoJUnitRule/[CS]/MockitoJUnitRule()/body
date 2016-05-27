@@ -1,3 +1,0 @@
-{
-  this.jUnitRule=new JUnitRule(new ConsoleMockitoLogger());
-}

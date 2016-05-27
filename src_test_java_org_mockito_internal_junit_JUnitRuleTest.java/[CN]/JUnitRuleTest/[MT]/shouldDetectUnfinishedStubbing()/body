@@ -1,6 +1,6 @@
 {
   try {
-    jUnitRule.apply(new UnfinishedStubbingStatement(),injectTestCase).evaluate();
+    jUnitRule.apply(new UnfinishedStubbingStatement(),null,injectTestCase).evaluate();
     fail("Should detect invalid Mockito usage");
   }
  catch (  UnfinishedStubbingException e) {

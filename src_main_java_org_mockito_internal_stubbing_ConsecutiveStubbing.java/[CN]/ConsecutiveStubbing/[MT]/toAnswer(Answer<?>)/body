@@ -1,4 +1,0 @@
-{
-  invocationContainerImpl.addConsecutiveAnswer(answer);
-  return this;
-}

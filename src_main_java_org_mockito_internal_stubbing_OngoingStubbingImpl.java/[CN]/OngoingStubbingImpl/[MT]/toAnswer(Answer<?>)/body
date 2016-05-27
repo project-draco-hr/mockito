@@ -1,4 +1,0 @@
-{
-  invocationContainerImpl.addAnswer(answer);
-  return new ConsecutiveStubbing<T>(invocationContainerImpl);
-}

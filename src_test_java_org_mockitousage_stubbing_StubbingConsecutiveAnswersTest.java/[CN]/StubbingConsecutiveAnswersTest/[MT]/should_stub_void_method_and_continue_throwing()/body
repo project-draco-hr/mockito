@@ -1,5 +1,5 @@
 {
-  stubVoid(mock).toThrow(new IllegalArgumentException()).toReturn().toThrow(new NullPointerException()).on().voidMethod();
+  doThrow(new IllegalArgumentException()).doNothing().doThrow(new NullPointerException()).when(mock).voidMethod();
   try {
     mock.voidMethod();
     fail();

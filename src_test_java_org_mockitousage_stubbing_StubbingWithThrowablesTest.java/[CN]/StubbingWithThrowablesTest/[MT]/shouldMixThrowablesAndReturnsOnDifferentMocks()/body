@@ -1,8 +1,8 @@
 {
   when(mock.add("ExceptionOne")).thenThrow(new ExceptionOne());
   when(mock.getLast()).thenReturn("last");
-  stubVoid(mock).toThrow(new ExceptionTwo()).on().clear();
-  stubVoid(mockTwo).toThrow(new ExceptionThree()).on().clear();
+  doThrow(new ExceptionTwo()).when(mock).clear();
+  doThrow(new ExceptionThree()).when(mockTwo).clear();
   when(mockTwo.containsValue("ExceptionFour")).thenThrow(new ExceptionFour());
   when(mockTwo.get("Are you there?")).thenReturn("Yes!");
   assertNull(mockTwo.get("foo"));

@@ -1,5 +1,5 @@
 {
-  stubVoid(mock).toReturn().toThrow(new NullPointerException()).toReturn().on().voidMethod();
+  doNothing().doThrow(new NullPointerException()).doNothing().when(mock).voidMethod();
   mock.voidMethod();
   try {
     mock.voidMethod();

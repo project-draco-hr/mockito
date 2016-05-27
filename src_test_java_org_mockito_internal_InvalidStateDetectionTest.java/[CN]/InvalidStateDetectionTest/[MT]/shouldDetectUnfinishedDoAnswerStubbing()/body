@@ -4,8 +4,6 @@
   doAnswer(null);
   detectsAndCleansUp(new OnStub(),UnfinishedStubbingException.class);
   doAnswer(null);
-  detectsAndCleansUp(new OnStubVoid(),UnfinishedStubbingException.class);
-  doAnswer(null);
   detectsAndCleansUp(new OnVerify(),UnfinishedStubbingException.class);
   doAnswer(null);
   detectsAndCleansUp(new OnVerifyInOrder(),UnfinishedStubbingException.class);

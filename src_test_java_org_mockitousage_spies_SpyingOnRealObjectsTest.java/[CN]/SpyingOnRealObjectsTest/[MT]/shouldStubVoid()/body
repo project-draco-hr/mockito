@@ -1,5 +1,5 @@
 {
-  stubVoid(spy).toReturn().toThrow(new RuntimeException()).on().clear();
+  doNothing().doThrow(new RuntimeException()).when(spy).clear();
   spy.add("one");
   spy.clear();
   try {

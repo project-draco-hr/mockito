@@ -1,5 +1,0 @@
-{
-  stub(mock.simpleMethod("one")).toThrow(new RuntimeException());
-  stubVoid(mock).toThrow(new RuntimeException()).on().simpleMethod("two");
-  verifyZeroInteractions(mock);
-}

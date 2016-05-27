@@ -5,6 +5,6 @@
       declareUnusedStub(mock);
     }
   }
-,injectTestCase).evaluate();
+,null,injectTestCase).evaluate();
   assertEquals("",logger.getLoggedInfo());
 }
