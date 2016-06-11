@@ -6,7 +6,7 @@
     changer.enableAccess(constructor);
     final Object[] noArg=new Object[0];
     Object newFieldInstance=constructor.newInstance(noArg);
-    new FieldSetter(testClass,field).set(newFieldInstance);
+    setField(testClass,field,newFieldInstance);
     return new FieldInitializationReport(field.get(testClass),true,false);
   }
  catch (  NoSuchMethodException e) {

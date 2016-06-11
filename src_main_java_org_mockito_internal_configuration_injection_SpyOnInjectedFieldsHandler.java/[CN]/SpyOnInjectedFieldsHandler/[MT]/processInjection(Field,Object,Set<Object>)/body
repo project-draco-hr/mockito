@@ -7,7 +7,8 @@
         Mockito.reset(instance);
       }
  else {
-        new FieldSetter(fieldOwner,field).set(Mockito.mock(instance.getClass(),withSettings().spiedInstance(instance).defaultAnswer(Mockito.CALLS_REAL_METHODS).name(field.getName())));
+        Object mock=Mockito.mock(instance.getClass(),withSettings().spiedInstance(instance).defaultAnswer(Mockito.CALLS_REAL_METHODS).name(field.getName()));
+        setField(fieldOwner,field,mock);
       }
     }
  catch (    Exception e) {

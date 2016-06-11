@@ -3,7 +3,7 @@
     int recordedMatchersSize=lastMatchers.size();
     int expectedMatchersSize=invocation.getArguments().length;
     if (expectedMatchersSize != recordedMatchersSize) {
-      new Reporter().invalidUseOfMatchers(expectedMatchersSize,lastMatchers);
+      throw invalidUseOfMatchers(expectedMatchersSize,lastMatchers);
     }
   }
 }

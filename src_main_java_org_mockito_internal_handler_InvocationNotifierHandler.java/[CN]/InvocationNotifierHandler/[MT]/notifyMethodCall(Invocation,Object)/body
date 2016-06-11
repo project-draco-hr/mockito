@@ -4,7 +4,7 @@
       listener.reportInvocation(new NotifiedMethodInvocationReport(invocation,returnValue));
     }
  catch (    Throwable listenerThrowable) {
-      new Reporter().invocationListenerThrewException(listener,listenerThrowable);
+      throw invocationListenerThrewException(listener,listenerThrowable);
     }
   }
 }

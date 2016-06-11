@@ -1,13 +1,13 @@
 {
   if (extraInterfaces == null || extraInterfaces.length == 0) {
-    new Reporter().extraInterfacesRequiresAtLeastOneInterface();
+    throw extraInterfacesRequiresAtLeastOneInterface();
   }
   for (  Class<?> i : extraInterfaces) {
     if (i == null) {
-      new Reporter().extraInterfacesDoesNotAcceptNullParameters();
+      throw extraInterfacesDoesNotAcceptNullParameters();
     }
  else     if (!i.isInterface()) {
-      new Reporter().extraInterfacesAcceptsOnlyInterfaces(i);
+      throw extraInterfacesAcceptsOnlyInterfaces(i);
     }
   }
   this.extraInterfaces=newSet(extraInterfaces);

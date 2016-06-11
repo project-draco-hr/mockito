@@ -1,7 +1,3 @@
 {
-  reporterStub=new ReporterStub();
-  finderStub=new InvocationsFinderStub();
-  checker=new MissingInvocationChecker(finderStub,reporterStub);
-  wanted=new InvocationBuilder().toInvocationMatcher();
-  invocations=asList(new InvocationBuilder().toInvocation());
+  checker=new MissingInvocationChecker();
 }

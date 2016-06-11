@@ -3,6 +3,6 @@
   if (stubbingInProgress != null) {
     Location temp=stubbingInProgress;
     stubbingInProgress=null;
-    reporter.unfinishedStubbing(temp);
+    throw unfinishedStubbing(temp);
   }
 }

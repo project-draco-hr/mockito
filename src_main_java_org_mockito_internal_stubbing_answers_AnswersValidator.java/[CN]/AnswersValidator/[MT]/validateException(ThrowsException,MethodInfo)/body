@@ -1,12 +1,12 @@
 {
   Throwable throwable=answer.getThrowable();
   if (throwable == null) {
-    reporter.cannotStubWithNullThrowable();
+    throw cannotStubWithNullThrowable();
   }
   if (throwable instanceof RuntimeException || throwable instanceof Error) {
     return;
   }
   if (!methodInfo.isValidException(throwable)) {
-    reporter.checkedExceptionInvalid(throwable);
+    throw checkedExceptionInvalid(throwable);
   }
 }

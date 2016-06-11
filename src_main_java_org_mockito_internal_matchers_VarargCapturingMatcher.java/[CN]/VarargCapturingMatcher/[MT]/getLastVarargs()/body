@@ -1,9 +1,6 @@
 {
   if (arguments.isEmpty()) {
-    new Reporter().noArgumentValueWasCaptured();
-    return null;
+    throw noArgumentValueWasCaptured();
   }
- else {
-    return arguments.getLast();
-  }
+  return arguments.getLast();
 }

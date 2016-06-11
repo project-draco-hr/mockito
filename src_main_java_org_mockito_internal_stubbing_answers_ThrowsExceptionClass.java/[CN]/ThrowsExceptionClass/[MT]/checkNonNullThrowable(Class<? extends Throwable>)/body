@@ -1,6 +1,6 @@
 {
   if (throwableClass == null || !Throwable.class.isAssignableFrom(throwableClass)) {
-    new Reporter().notAnException();
+    throw notAnException();
   }
   return throwableClass;
 }

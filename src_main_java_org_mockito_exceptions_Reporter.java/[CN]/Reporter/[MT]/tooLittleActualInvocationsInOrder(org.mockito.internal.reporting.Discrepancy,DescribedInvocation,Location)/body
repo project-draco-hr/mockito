@@ -1,4 +1,4 @@
 {
   String message=createTooLittleInvocationsMessage(discrepancy,wanted,lastActualLocation);
-  throw new VerificationInOrderFailure(join("Verification in order failure:" + message));
+  return new VerificationInOrderFailure(join("Verification in order failure:" + message));
 }

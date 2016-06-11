@@ -3,7 +3,7 @@
   OngoingStubbing<T> stubbing=mockingProgress.pullOngoingStubbing();
   if (stubbing == null) {
     mockingProgress.reset();
-    reporter.missingMethodInvocation();
+    throw missingMethodInvocation();
   }
   return stubbing;
 }

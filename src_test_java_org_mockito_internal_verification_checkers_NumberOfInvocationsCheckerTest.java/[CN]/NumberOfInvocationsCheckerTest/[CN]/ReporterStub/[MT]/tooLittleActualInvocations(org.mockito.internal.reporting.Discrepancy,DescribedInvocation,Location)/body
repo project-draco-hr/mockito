@@ -1,6 +1,0 @@
-{
-  this.wantedCount=discrepancy.getWantedCount();
-  this.actualCount=discrepancy.getActualCount();
-  this.wanted=wanted;
-  this.location=lastActualLocation;
-}

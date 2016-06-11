@@ -1,6 +1,6 @@
 {
   if (matcherStack.isEmpty()) {
     matcherStack.clear();
-    new Reporter().reportNoSubMatchersFound(additionalMatcherName);
+    throw reportNoSubMatchersFound(additionalMatcherName);
   }
 }

@@ -1,5 +1,0 @@
-{
-  finderStub.actualToReturn.add(new InvocationBuilder().toInvocation());
-  checker.check(invocations,wanted);
-  assertSame(invocations,finderStub.invocations);
-}

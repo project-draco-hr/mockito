@@ -1,6 +1,6 @@
 {
   InternalMockHandler oldHandler=(InternalMockHandler)getMockHandler(mock);
   MockCreationSettings settings=oldHandler.getMockSettings();
-  MockHandler newHandler=new MockHandlerFactory().create(settings);
+  MockHandler newHandler=createMockHandler(settings);
   mockMaker.resetMock(mock,newHandler,settings);
 }

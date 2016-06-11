@@ -1,6 +1,6 @@
 {
   if (!superMethod.isInvokable()) {
-    new Reporter().cannotCallAbstractRealMethod();
+    throw cannotCallAbstractRealMethod();
   }
   return superMethod.invoke();
 }

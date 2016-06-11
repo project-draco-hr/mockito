@@ -1,5 +1,5 @@
 {
   if (alreadyAssigned) {
-    new Reporter().moreThanOneAnnotationNotAllowed(field.getName());
+    throw moreThanOneAnnotationNotAllowed(field.getName());
   }
 }

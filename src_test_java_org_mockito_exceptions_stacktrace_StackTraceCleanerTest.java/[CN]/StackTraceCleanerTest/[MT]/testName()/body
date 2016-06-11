@@ -1,0 +1,11 @@
+{
+  assertAccepted("my.custom.Type");
+  assertRejected("org.mockito.foo.Bar");
+  assertAccepted("org.mockito.internal.junit.JUnitRule");
+  assertAccepted("org.mockito.runners.AllTypesOfThisPackage");
+  assertAccepted("org.mockito.runners.subpackage.AllTypesOfThisPackage");
+  assertAccepted("org.mockito.internal.runners.AllTypesOfThisPackage");
+  assertAccepted("org.mockito.internal.runners.subpackage.AllTypesOfThisPackage");
+  assertRejected("my.custom.Type$$EnhancerByMockitoWithCGLIB$$Foo");
+  assertRejected("my.custom.Type$MockitoMock$Foo");
+}

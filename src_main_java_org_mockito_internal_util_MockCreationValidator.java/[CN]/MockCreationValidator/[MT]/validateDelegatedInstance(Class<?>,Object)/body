@@ -3,6 +3,6 @@
     return;
   }
   if (delegatedInstance.getClass().isAssignableFrom(classToMock)) {
-    new Reporter().mockedTypeIsInconsistentWithDelegatedInstanceType(classToMock,delegatedInstance);
+    throw mockedTypeIsInconsistentWithDelegatedInstanceType(classToMock,delegatedInstance);
   }
 }

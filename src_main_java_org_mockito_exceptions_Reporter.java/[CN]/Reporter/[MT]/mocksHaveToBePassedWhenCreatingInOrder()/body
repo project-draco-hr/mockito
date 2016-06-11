@@ -1,3 +1,3 @@
 {
-  throw new MockitoException(join("Method requires argument(s)!","Pass mocks that require verification in order.","For example:","    InOrder inOrder = inOrder(mockOne, mockTwo);"));
+  return new MockitoException(join("Method requires argument(s)!","Pass mocks that require verification in order.","For example:","    InOrder inOrder = inOrder(mockOne, mockTwo);"));
 }

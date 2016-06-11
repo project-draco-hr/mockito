@@ -3,11 +3,11 @@
   int actualCount=chunk.size();
   if (wantedCount > actualCount) {
     Location lastInvocation=finder.getLastLocation(chunk);
-    reporter.tooLittleActualInvocationsInOrder(new Discrepancy(wantedCount,actualCount),wanted,lastInvocation);
+    throw tooLittleActualInvocationsInOrder(new Discrepancy(wantedCount,actualCount),wanted,lastInvocation);
   }
- else   if (wantedCount < actualCount) {
+  if (wantedCount < actualCount) {
     Location firstUndesired=chunk.get(wantedCount).getLocation();
-    reporter.tooManyActualInvocationsInOrder(wantedCount,actualCount,wanted,firstUndesired);
+    throw tooManyActualInvocationsInOrder(wantedCount,actualCount,wanted,firstUndesired);
   }
   invocationMarker.markVerifiedInOrder(chunk,wanted,context);
 }

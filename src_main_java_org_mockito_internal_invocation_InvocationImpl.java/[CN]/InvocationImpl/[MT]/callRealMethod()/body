@@ -1,6 +1,6 @@
 {
   if (method.isAbstract()) {
-    new Reporter().cannotCallAbstractRealMethod();
+    throw cannotCallAbstractRealMethod();
   }
   return realMethod.invoke(mock,rawArguments);
 }

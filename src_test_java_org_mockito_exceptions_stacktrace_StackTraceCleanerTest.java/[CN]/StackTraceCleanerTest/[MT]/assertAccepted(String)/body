@@ -1,0 +1,3 @@
+{
+  assertThat(cleaner.apply(type(className))).describedAs("Must be accepted %s",className).isTrue();
+}
