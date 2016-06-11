@@ -2,6 +2,6 @@
   if (matcherStack.size() < count) {
     ArrayList<LocalizedMatcher> lastMatchers=new ArrayList<LocalizedMatcher>(matcherStack);
     matcherStack.clear();
-    new Reporter().incorrectUseOfAdditionalMatchers(additionalMatcherName,count,lastMatchers);
+    throw incorrectUseOfAdditionalMatchers(additionalMatcherName,count,lastMatchers);
   }
 }

@@ -9,7 +9,7 @@
           }
         }
  catch (        RuntimeException e) {
-          new Reporter().cannotInjectDependency(candidateFieldToBeInjected,matchingMock,e);
+          throw cannotInjectDependency(candidateFieldToBeInjected,matchingMock,e);
         }
         return matchingMock;
       }

@@ -1,6 +1,6 @@
 {
   if (mockSettings.isStubOnly()) {
-    new Reporter().stubPassedToVerify();
+    throw stubPassedToVerify();
   }
   return new VerificationDataImpl(invocationContainerImpl,invocationMatcher);
 }

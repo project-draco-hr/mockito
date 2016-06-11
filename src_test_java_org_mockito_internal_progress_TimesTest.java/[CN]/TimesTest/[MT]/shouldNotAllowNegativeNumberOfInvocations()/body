@@ -1,9 +1,5 @@
 {
-  try {
-    VerificationModeFactory.times(-50);
-    fail();
-  }
- catch (  MockitoException e) {
-    assertEquals("Negative value is not allowed here",e.getMessage());
-  }
+  exception.expect(MockitoException.class);
+  exception.expectMessage("Negative value is not allowed here");
+  VerificationModeFactory.times(-50);
 }

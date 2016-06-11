@@ -1,8 +1,10 @@
 {
-  Invocation first=new InvocationBuilder().toInvocation();
-  Invocation second=new InvocationBuilder().toInvocation();
-  Invocation third=new InvocationBuilder().toInvocation();
-  finderStub.actualToReturn.addAll(asList(first,second,third));
+  Invocation first=buildSimpleMethod().toInvocation();
+  Invocation second=buildSimpleMethod().toInvocation();
+  Invocation third=buildSimpleMethod().toInvocation();
+  invocations=asList(first,second,third);
+  wanted=buildSimpleMethod().toInvocationMatcher();
+  exception.expect(TooManyActualInvocations.class);
+  exception.expectMessage("" + third.getLocation());
   checker.check(invocations,wanted,2);
-  assertSame(third.getLocation(),reporterStub.location);
 }

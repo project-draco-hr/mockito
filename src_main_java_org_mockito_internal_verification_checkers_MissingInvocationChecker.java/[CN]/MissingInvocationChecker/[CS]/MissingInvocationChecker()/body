@@ -1,3 +1,3 @@
 {
-  this(new InvocationsFinder(),new Reporter());
+  this(new InvocationsFinder());
 }

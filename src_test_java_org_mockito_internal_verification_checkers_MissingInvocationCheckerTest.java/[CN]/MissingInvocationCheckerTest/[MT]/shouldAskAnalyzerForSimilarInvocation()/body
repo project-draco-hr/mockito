@@ -1,4 +1,0 @@
-{
-  checker.check(invocations,wanted);
-  assertSame(invocations,finderStub.invocations);
-}

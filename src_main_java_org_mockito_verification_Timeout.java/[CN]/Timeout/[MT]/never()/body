@@ -1,4 +1,3 @@
 {
-  new Reporter().atMostAndNeverShouldNotBeUsedWithTimeout();
-  return null;
+  throw atMostAndNeverShouldNotBeUsedWithTimeout();
 }

@@ -3,6 +3,6 @@
     return;
   }
   if (!classToMock.equals(spiedInstance.getClass())) {
-    new Reporter().mockedTypeIsInconsistentWithSpiedInstanceType(classToMock,spiedInstance);
+    throw mockedTypeIsInconsistentWithSpiedInstanceType(classToMock,spiedInstance);
   }
 }

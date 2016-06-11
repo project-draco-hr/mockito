@@ -1,10 +1,10 @@
 {
   if (listeners == null || listeners.length == 0) {
-    new Reporter().invocationListenersRequiresAtLeastOneListener();
+    throw invocationListenersRequiresAtLeastOneListener();
   }
   for (  InvocationListener listener : listeners) {
     if (listener == null) {
-      new Reporter().invocationListenerDoesNotAcceptNullParameters();
+      throw invocationListenerDoesNotAcceptNullParameters();
     }
     this.invocationListeners.add(listener);
   }

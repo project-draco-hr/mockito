@@ -1,4 +1,4 @@
 {
   String message=createTooManyInvocationsMessage(wantedCount,actualCount,wanted,firstUndesired);
-  throw new TooManyActualInvocations(message);
+  return new TooManyActualInvocations(message);
 }

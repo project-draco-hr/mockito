@@ -4,6 +4,6 @@
   }
   ObjectMethodsGuru o=new ObjectMethodsGuru();
   if (o.isToString(wanted.getMethod())) {
-    new Reporter().cannotVerifyToString();
+    throw cannotVerifyToString();
   }
 }

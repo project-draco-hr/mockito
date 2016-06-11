@@ -3,7 +3,7 @@
   if (verificationMode != null) {
     Location location=verificationMode.getLocation();
     verificationMode=null;
-    reporter.unfinishedVerificationException(location);
+    throw unfinishedVerificationException(location);
   }
   getArgumentMatcherStorage().validateState();
 }

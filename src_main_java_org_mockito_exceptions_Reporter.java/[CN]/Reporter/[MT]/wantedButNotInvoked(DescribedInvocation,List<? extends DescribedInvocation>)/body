@@ -11,5 +11,5 @@
     allInvocations=sb.toString();
   }
   String message=createWantedButNotInvokedMessage(wanted);
-  throw new WantedButNotInvoked(message + allInvocations);
+  return new WantedButNotInvoked(message + allInvocations);
 }

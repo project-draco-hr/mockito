@@ -1,5 +1,9 @@
 {
-  assertTrue(finderStub.actualToReturn.isEmpty());
+  invocations=emptyList();
+  wanted=buildSimpleMethod().toInvocationMatcher();
+  exception.expect(TooLittleActualInvocations.class);
+  exception.expectMessage("mock.simpleMethod()");
+  exception.expectMessage("Wanted 100 times:");
+  exception.expectMessage("-> at " + getClass().getName() + "."+ testName.getMethodName());
   checker.check(invocations,wanted,100);
-  assertNull(reporterStub.location);
 }

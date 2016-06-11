@@ -1,7 +1,10 @@
 {
-  Invocation invocation=new InvocationBuilder().toInvocation();
-  finderStub.actualToReturn.add(invocation);
+  Invocation first=buildSimpleMethod().toInvocation();
+  invocations=asList(first);
+  wanted=buildSimpleMethod().toInvocationMatcher();
+  exception.expect(NeverWantedButInvoked.class);
+  exception.expectMessage("Never wanted here");
+  exception.expectMessage("But invoked here");
+  exception.expectMessage("" + first.getLocation());
   checker.check(invocations,wanted,0);
-  assertEquals(wanted,reporterStub.wanted);
-  assertEquals(invocation.getLocation(),reporterStub.location);
 }

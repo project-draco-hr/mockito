@@ -1,6 +1,6 @@
 {
   MethodInfo methodInfo=new MethodInfo(invocation);
   if (returnedValue != null && !methodInfo.isValidReturnType(returnedValue.getClass())) {
-    reporter.wrongTypeReturnedByDefaultAnswer(invocation.getMock(),methodInfo.printMethodReturnType(),returnedValue.getClass().getSimpleName(),methodInfo.getMethodName());
+    throw wrongTypeReturnedByDefaultAnswer(invocation.getMock(),methodInfo.printMethodReturnType(),returnedValue.getClass().getSimpleName(),methodInfo.getMethodName());
   }
 }

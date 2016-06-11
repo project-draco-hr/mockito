@@ -1,7 +1,9 @@
 {
-  Invocation first=new InvocationBuilder().toInvocation();
-  Invocation second=new InvocationBuilder().toInvocation();
-  finderStub.actualToReturn.addAll(asList(first,second));
+  wanted=buildSimpleMethod().toInvocationMatcher();
+  invocations=asList(buildSimpleMethod().toInvocation(),buildSimpleMethod().toInvocation());
+  exception.expect(TooLittleActualInvocations.class);
+  exception.expectMessage("mock.simpleMethod()");
+  exception.expectMessage("Wanted 100 times");
+  exception.expectMessage("But was 2 times");
   checker.check(invocations,wanted,100);
-  assertSame(second.getLocation(),reporterStub.location);
 }

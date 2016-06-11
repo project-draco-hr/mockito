@@ -1,5 +1,5 @@
 {
   if (!methodInfo.isVoid()) {
-    reporter.onlyVoidMethodsCanBeSetToDoNothing();
+    throw onlyVoidMethodsCanBeSetToDoNothing();
   }
 }

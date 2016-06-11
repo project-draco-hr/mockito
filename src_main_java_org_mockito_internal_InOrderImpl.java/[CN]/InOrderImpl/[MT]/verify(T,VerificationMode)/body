@@ -1,8 +1,8 @@
 {
   if (!mocksToBeVerifiedInOrder.contains(mock)) {
-    reporter.inOrderRequiresFamiliarMock();
+    throw inOrderRequiresFamiliarMock();
   }
- else   if (!(mode instanceof VerificationInOrderMode)) {
+  if (!(mode instanceof VerificationInOrderMode)) {
     throw new MockitoException(mode.getClass().getSimpleName() + " is not implemented to work with InOrder");
   }
   return mockitoCore.verify(mock,new InOrderWrapper((VerificationInOrderMode)mode,this));

@@ -1,9 +1,9 @@
 {
   if (mock == null) {
-    reporter.nullPassedToVerify();
+    throw nullPassedToVerify();
   }
- else   if (!mockUtil.isMock(mock)) {
-    reporter.notAMockPassedToVerify(mock.getClass());
+  if (!mockUtil.isMock(mock)) {
+    throw notAMockPassedToVerify(mock.getClass());
   }
   mockingProgress.verificationStarted(new MockAwareVerificationMode(mock,mode));
   return mock;

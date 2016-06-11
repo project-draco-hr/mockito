@@ -1,5 +1,0 @@
-{
-  this.finder=finder;
-  this.reporter=reporter;
-  this.marker=marker;
-}

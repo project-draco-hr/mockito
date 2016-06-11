@@ -1,4 +1,4 @@
 {
   UnfinishedVerificationException exception=new UnfinishedVerificationException(join("Missing method call for verify(mock) here:",location,"","Example of correct verification:","    verify(mock).doSomething()","","Also, this error might show up because you verify either of: final/private/equals()/hashCode() methods.","Those methods *cannot* be stubbed/verified.",MockitoLimitations.NON_PUBLIC_PARENT,""));
-  throw exception;
+  return exception;
 }

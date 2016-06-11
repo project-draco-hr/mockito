@@ -2,6 +2,6 @@
   returnsArgumentAt.validateIndexWithinInvocationRange(invocation);
   MethodInfo methodInfo=new MethodInfo(invocation);
   if (!methodInfo.isValidReturnType(returnsArgumentAt.returnedTypeOnSignature(invocation))) {
-    new Reporter().wrongTypeOfArgumentToReturn(invocation,methodInfo.printMethodReturnType(),returnsArgumentAt.returnedTypeOnSignature(invocation),returnsArgumentAt.wantedArgumentPosition());
+    throw wrongTypeOfArgumentToReturn(invocation,methodInfo.printMethodReturnType(),returnsArgumentAt.returnedTypeOnSignature(invocation),returnsArgumentAt.wantedArgumentPosition());
   }
 }

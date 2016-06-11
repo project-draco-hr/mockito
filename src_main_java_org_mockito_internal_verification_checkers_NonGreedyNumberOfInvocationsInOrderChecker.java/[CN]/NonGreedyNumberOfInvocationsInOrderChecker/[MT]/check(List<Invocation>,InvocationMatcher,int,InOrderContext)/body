@@ -4,7 +4,7 @@
   while (actualCount < wantedCount) {
     Invocation next=finder.findFirstMatchingUnverifiedInvocation(invocations,wanted,context);
     if (next == null) {
-      reporter.tooLittleActualInvocationsInOrder(new Discrepancy(wantedCount,actualCount),wanted,lastLocation);
+      throw tooLittleActualInvocationsInOrder(new Discrepancy(wantedCount,actualCount),wanted,lastLocation);
     }
     marker.markVerified(next,wanted);
     context.markVerified(next);

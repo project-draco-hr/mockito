@@ -1,0 +1,11 @@
+{
+  String className=candidate.getClassName();
+  if (isFromMockitoRunner(className))   return true;
+  if (isFromMockitoRule(className))   return true;
+  if (isFromMockito(className)) {
+    if (isTest(className))     return true;
+    return false;
+  }
+  if (isMock(className))   return false;
+  return true;
+}

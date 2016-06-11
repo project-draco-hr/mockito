@@ -1,5 +1,5 @@
 {
   Invocation dumb_invocation=new InvocationBuilder().toInvocation();
   IMethods mock_with_bogus_default_answer=mock(IMethods.class,new Returns(false));
-  new Reporter().delegatedMethodHasWrongReturnType(dumb_invocation.getMethod(),dumb_invocation.getMethod(),mock_with_bogus_default_answer,String.class);
+  throw Reporter.delegatedMethodHasWrongReturnType(dumb_invocation.getMethod(),dumb_invocation.getMethod(),mock_with_bogus_default_answer,String.class);
 }

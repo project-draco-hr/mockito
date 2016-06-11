@@ -2,6 +2,6 @@
   if (!matcherStack.isEmpty()) {
     ArrayList lastMatchers=new ArrayList<LocalizedMatcher>(matcherStack);
     matcherStack.clear();
-    new Reporter().misplacedArgumentMatcher(lastMatchers);
+    throw misplacedArgumentMatcher(lastMatchers);
   }
 }

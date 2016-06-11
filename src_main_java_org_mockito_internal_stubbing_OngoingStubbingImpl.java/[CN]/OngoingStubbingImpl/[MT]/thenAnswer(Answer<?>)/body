@@ -1,6 +1,6 @@
 {
   if (!invocationContainerImpl.hasInvocationForPotentialStubbing()) {
-    new Reporter().incorrectUseOfApi();
+    throw incorrectUseOfApi();
   }
   invocationContainerImpl.addAnswer(answer);
   return new ConsecutiveStubbing<T>(invocationContainerImpl);

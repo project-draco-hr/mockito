@@ -1,5 +1,8 @@
 {
-  assertTrue(finderStub.allMatchingUnverifiedChunksToReturn.isEmpty());
+  invocations=asList(buildDifferentMethod().toInvocation());
+  wanted=buildSimpleMethod().toInvocationMatcher();
+  exception.expect(WantedButNotInvoked.class);
+  exception.expectMessage("Wanted but not invoked:");
+  exception.expectMessage("mock.simpleMethod()");
   checker.check(invocations,wanted,new VerificationModeBuilder().inOrder(),context);
-  assertEquals(wanted,reporterStub.wanted);
 }

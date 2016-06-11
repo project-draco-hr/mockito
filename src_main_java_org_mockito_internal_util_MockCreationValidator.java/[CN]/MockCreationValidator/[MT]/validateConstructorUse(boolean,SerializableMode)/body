@@ -1,5 +1,5 @@
 {
   if (usingConstructor && mode == SerializableMode.ACROSS_CLASSLOADERS) {
-    new Reporter().usingConstructorWithFancySerializable(mode);
+    throw usingConstructorWithFancySerializable(mode);
   }
 }

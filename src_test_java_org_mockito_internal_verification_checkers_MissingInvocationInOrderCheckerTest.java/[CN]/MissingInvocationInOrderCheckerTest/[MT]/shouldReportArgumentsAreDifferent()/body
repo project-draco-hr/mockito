@@ -1,9 +1,10 @@
 {
-  assertTrue(finderStub.findInvocations(invocations,wanted).isEmpty());
-  finderStub.similarToReturn=new InvocationBuilder().toInvocation();
+  invocations=asList(buildIntArgMethod().arg(1111).toInvocation());
+  wanted=buildIntArgMethod().arg(2222).toInvocationMatcher();
+  exception.expect(ArgumentsAreDifferent.class);
+  exception.expectMessage("Argument(s) are different! Wanted:");
+  exception.expectMessage("mock.intArgumentMethod(2222);");
+  exception.expectMessage("Actual invocation has different arguments:");
+  exception.expectMessage("mock.intArgumentMethod(1111);");
   checker.check(invocations,wanted,new VerificationModeBuilder().inOrder(),context);
-  SmartPrinter printer=new SmartPrinter(wanted,finderStub.similarToReturn,0);
-  assertEquals(printer.getWanted(),reporterStub.wantedString);
-  assertEquals(printer.getActual(),reporterStub.actual);
-  assertEquals(finderStub.similarToReturn.getLocation(),reporterStub.actualLocation);
 }

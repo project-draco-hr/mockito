@@ -5,7 +5,7 @@
   List<Invocation> found=finder.findInvocations(invocations,wanted);
   int foundSize=found.size();
   if (foundSize > maxNumberOfInvocations) {
-    new Reporter().wantedAtMostX(maxNumberOfInvocations,foundSize);
+    throw wantedAtMostX(maxNumberOfInvocations,foundSize);
   }
   removeAlreadyVerified(found);
   invocationMarker.markVerified(found,wanted);

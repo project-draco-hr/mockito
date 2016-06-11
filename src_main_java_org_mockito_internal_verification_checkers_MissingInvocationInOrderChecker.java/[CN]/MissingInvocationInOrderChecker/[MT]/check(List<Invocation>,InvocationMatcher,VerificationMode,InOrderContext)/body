@@ -11,14 +11,12 @@
       if (similar != null) {
         Integer[] indicesOfSimilarMatchingArguments=new ArgumentMatchingTool().getSuspiciouslyNotMatchingArgsIndexes(wanted.getMatchers(),similar.getArguments());
         SmartPrinter smartPrinter=new SmartPrinter(wanted,similar,indicesOfSimilarMatchingArguments);
-        reporter.argumentsAreDifferent(smartPrinter.getWanted(),smartPrinter.getActual(),similar.getLocation());
+        throw argumentsAreDifferent(smartPrinter.getWanted(),smartPrinter.getActual(),similar.getLocation());
       }
- else {
-        reporter.wantedButNotInvoked(wanted);
-      }
+      throw wantedButNotInvoked(wanted);
     }
   }
  else {
-    reporter.wantedButNotInvokedInOrder(wanted,previousInOrder);
+    throw wantedButNotInvokedInOrder(wanted,previousInOrder);
   }
 }
