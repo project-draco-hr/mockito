@@ -1,10 +1,10 @@
 {
   return new StackTraceCleaner(){
-    @Override public boolean apply(    StackTraceElement candidate){
+    @Override public boolean isOut(    StackTraceElement candidate){
       if (ENABLED && candidate.getMethodName().contains("excludeMe")) {
         return false;
       }
-      return defaultCleaner.apply(candidate);
+      return defaultCleaner.isOut(candidate);
     }
   }
 ;
