@@ -1,6 +1,0 @@
-{
-  AnnotationWithDefaultValue onClassDefaultValue=field("field",mock(OnField.class)).getAnnotation(AnnotationWithDefaultValue.class);
-  AnnotationWithCustomValue onClassCustomValue=field("field",mock(OnField.class)).getAnnotation(AnnotationWithCustomValue.class);
-  Assertions.assertThat(onClassDefaultValue.value()).isEqualTo("yup");
-  Assertions.assertThat(onClassCustomValue.value()).isEqualTo("yay");
-}

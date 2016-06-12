@@ -3,7 +3,8 @@
   wanted=buildSimpleMethod().toInvocationMatcher();
   exception.expect(TooLittleActualInvocations.class);
   exception.expectMessage("mock.simpleMethod()");
-  exception.expectMessage("Wanted 100 times:");
-  exception.expectMessage("-> at " + getClass().getName() + "."+ testName.getMethodName());
+  exception.expectMessage("Wanted 100 times");
+  exception.expectMessage("But was 0 times");
+  exception.expectMessage(containsTimes("-> at",1));
   checker.check(invocations,wanted,100);
 }

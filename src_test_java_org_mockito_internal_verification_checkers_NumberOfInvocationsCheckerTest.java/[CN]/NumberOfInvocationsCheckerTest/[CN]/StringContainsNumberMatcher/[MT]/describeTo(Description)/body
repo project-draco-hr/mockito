@@ -1,0 +1,3 @@
+{
+  description.appendText("containing '" + expected + "' exactly "+ amount+ " times");
+}

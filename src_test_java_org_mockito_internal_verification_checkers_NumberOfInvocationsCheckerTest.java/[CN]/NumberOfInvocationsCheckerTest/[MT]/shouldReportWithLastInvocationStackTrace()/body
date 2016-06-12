@@ -5,5 +5,6 @@
   exception.expectMessage("mock.simpleMethod()");
   exception.expectMessage("Wanted 100 times");
   exception.expectMessage("But was 2 times");
+  exception.expectMessage(containsTimes("-> at",2));
   checker.check(invocations,wanted,100);
 }
