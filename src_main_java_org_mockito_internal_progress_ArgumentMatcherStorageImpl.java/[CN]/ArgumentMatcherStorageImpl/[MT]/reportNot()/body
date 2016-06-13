@@ -2,5 +2,4 @@
   assertStateFor("Not(?)",ONE_SUB_MATCHER);
   Not not=new Not(popLastArgumentMatchers(ONE_SUB_MATCHER).get(0));
   matcherStack.push(new LocalizedMatcher(not));
-  return new HandyReturnValues();
 }

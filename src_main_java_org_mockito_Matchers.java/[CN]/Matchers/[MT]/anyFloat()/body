@@ -1,3 +1,4 @@
 {
-  return reportMatcher(new InstanceOf(Float.class)).returnZero();
+  reportMatcher(new InstanceOf(Float.class));
+  return 0;
 }

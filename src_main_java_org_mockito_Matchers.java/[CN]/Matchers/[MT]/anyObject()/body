@@ -1,3 +1,4 @@
 {
-  return (T)reportMatcher(Any.ANY).returnNull();
+  reportMatcher(Any.ANY);
+  return null;
 }

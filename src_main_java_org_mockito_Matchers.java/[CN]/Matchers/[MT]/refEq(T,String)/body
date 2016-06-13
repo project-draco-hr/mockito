@@ -1,3 +1,4 @@
 {
-  return reportMatcher(new ReflectionEquals(value,excludeFields)).<T>returnNull();
+  reportMatcher(new ReflectionEquals(value,excludeFields));
+  return null;
 }

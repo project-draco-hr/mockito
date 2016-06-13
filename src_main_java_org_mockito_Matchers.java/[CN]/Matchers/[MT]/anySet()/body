@@ -1,3 +1,4 @@
 {
-  return reportMatcher(new InstanceOf(Set.class)).returnSet();
+  reportMatcher(new InstanceOf(Set.class));
+  return new HashSet();
 }

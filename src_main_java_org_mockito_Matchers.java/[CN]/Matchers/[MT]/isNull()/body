@@ -1,3 +1,4 @@
 {
-  return reportMatcher(Null.NULL).returnNull();
+  reportMatcher(Null.NULL);
+  return null;
 }

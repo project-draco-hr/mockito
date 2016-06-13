@@ -1,3 +1,4 @@
 {
-  return reportMatcher(new InstanceOf(Integer.class)).returnZero();
+  reportMatcher(new InstanceOf(Integer.class));
+  return 0;
 }

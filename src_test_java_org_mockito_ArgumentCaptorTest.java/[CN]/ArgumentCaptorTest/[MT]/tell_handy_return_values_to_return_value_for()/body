@@ -1,7 +1,4 @@
 {
-  final Object expected=new Object();
-  ArgumentCaptor<Object> argumentCaptor=ArgumentCaptor.forClass(Object.class);
-  argumentCaptor.handyReturnValues=will_return(expected);
-  Object returned=argumentCaptor.capture();
-  assertEquals(expected,returned);
+  ArgumentCaptor<Object> captor=ArgumentCaptor.forClass(Object.class);
+  assertThat(captor.capture()).isNull();
 }

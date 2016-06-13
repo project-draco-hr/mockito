@@ -1,3 +1,4 @@
 {
-  return (T)reportMatcher(matcher).returnFor(MatcherGenericTypeExtractor.genericTypeOfMatcher(matcher.getClass()));
+  reportMatcher(matcher);
+  return (T)defaultValue(genericTypeOfMatcher(matcher.getClass()));
 }

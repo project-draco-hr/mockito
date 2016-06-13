@@ -1,3 +1,4 @@
 {
-  return reportMatcher(new InstanceOf(Character.class)).returnChar();
+  reportMatcher(new InstanceOf(Character.class));
+  return 0;
 }

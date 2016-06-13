@@ -1,3 +1,4 @@
 {
-  return reportMatcher(new InstanceOf(clazz)).<T>returnFor(clazz);
+  reportMatcher(new InstanceOf(type));
+  return defaultValue(type);
 }

@@ -1,3 +1,4 @@
 {
-  return reportMatcher(new LessThan<T>(value)).<T>returnNull();
+  reportMatcher(new LessThan<T>(value));
+  return null;
 }

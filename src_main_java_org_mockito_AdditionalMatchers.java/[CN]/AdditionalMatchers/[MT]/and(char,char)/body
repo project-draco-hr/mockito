@@ -1,3 +1,4 @@
 {
-  return MOCKING_PROGRESS.getArgumentMatcherStorage().reportAnd().returnChar();
+  MOCKING_PROGRESS.getArgumentMatcherStorage().reportAnd();
+  return 0;
 }

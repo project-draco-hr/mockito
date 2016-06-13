@@ -1,3 +1,4 @@
 {
-  return reportMatcher(new Contains(substring)).returnString();
+  reportMatcher(new Contains(substring));
+  return "";
 }

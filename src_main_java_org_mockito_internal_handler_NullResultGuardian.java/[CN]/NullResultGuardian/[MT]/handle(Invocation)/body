@@ -2,9 +2,7 @@
   Object result=delegate.handle(invocation);
   Class<?> returnType=invocation.getMethod().getReturnType();
   if (result == null && returnType.isPrimitive()) {
-    return new HandyReturnValues().returnFor(returnType);
+    return defaultValue(returnType);
   }
- else {
-    return result;
-  }
+  return result;
 }

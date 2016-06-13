@@ -1,3 +1,0 @@
-{
-  return instance == null ? null : (T)returnFor(instance.getClass());
-}

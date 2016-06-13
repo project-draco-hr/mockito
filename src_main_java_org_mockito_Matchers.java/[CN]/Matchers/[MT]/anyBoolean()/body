@@ -1,3 +1,4 @@
 {
-  return reportMatcher(new InstanceOf(Boolean.class)).returnFalse();
+  reportMatcher(new InstanceOf(Boolean.class));
+  return false;
 }

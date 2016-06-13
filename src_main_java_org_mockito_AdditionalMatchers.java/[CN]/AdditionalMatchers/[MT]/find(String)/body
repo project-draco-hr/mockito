@@ -1,3 +1,4 @@
 {
-  return reportMatcher(new Find(regex)).returnNull();
+  reportMatcher(new Find(regex));
+  return null;
 }

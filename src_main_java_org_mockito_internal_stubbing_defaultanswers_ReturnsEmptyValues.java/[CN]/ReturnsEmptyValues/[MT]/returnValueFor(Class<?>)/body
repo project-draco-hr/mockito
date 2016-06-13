@@ -1,6 +1,6 @@
 {
   if (Primitives.isPrimitiveOrWrapper(type)) {
-    return Primitives.defaultValueForPrimitiveOrWrapper(type);
+    return Primitives.defaultValue(type);
   }
  else   if (type == Iterable.class) {
     return new ArrayList<Object>(0);

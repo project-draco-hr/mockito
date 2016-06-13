@@ -1,3 +1,4 @@
 {
-  return reportMatcher(new EndsWith(suffix)).returnString();
+  reportMatcher(new EndsWith(suffix));
+  return "";
 }
