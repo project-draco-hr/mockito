@@ -1,0 +1,6 @@
+{
+  Class<?> streamType=getClassOrSkipTest("java.util.stream.Stream");
+  Object stream=values.returnValueFor(streamType);
+  long count=(Long)streamType.getMethod("count").invoke(stream);
+  assertEquals("count of empty Stream",0L,count);
+}

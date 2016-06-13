@@ -1,0 +1,10 @@
+{
+  try {
+    final Class<?> optionalClass=Class.forName("java.util.stream.Stream");
+    final Method emptyMethod=optionalClass.getMethod("empty");
+    return emptyMethod.invoke(null);
+  }
+ catch (  Exception e) {
+    throw new InstantiationException("Could not create java.util.stream.Stream#empty(): " + e,e);
+  }
+}
