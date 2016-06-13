@@ -1,11 +1,5 @@
 {
-  Class<?> streamType;
-  try {
-    streamType=Class.forName("java.util.stream.Stream");
-  }
- catch (  ClassNotFoundException e) {
-    return;
-  }
+  Class<?> streamType=getClassOrSkipTest("java.util.stream.Stream");
   Object stream=mock(streamType);
   Object optional=streamType.getMethod("findAny").invoke(stream);
   assertNotNull(optional);

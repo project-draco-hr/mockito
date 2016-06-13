@@ -1,0 +1,9 @@
+{
+  try {
+    return Class.forName(className);
+  }
+ catch (  ClassNotFoundException e) {
+    Assume.assumeNoException("JVM does not support " + className,e);
+    return null;
+  }
+}
