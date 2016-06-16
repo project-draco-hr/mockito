@@ -9,5 +9,5 @@
   if (invocations.size() != 1 || chunk.size() == 0) {
     throw wantedButNotInvoked(wantedMatcher);
   }
-  marker.markVerified(chunk.get(0),wantedMatcher);
+  markVerified(chunk.get(0),wantedMatcher);
 }

@@ -6,7 +6,7 @@
     if (next == null) {
       throw tooLittleActualInvocationsInOrder(new Discrepancy(wantedCount,actualCount),wanted,lastLocation);
     }
-    marker.markVerified(next,wanted);
+    markVerified(next,wanted);
     context.markVerified(next);
     lastLocation=next.getLocation();
     actualCount++;

@@ -9,5 +9,5 @@
     Location firstUndesired=chunk.get(wantedCount).getLocation();
     throw tooManyActualInvocationsInOrder(wantedCount,actualCount,wanted,firstUndesired);
   }
-  invocationMarker.markVerifiedInOrder(chunk,wanted,context);
+  markVerifiedInOrder(chunk,wanted,context);
 }

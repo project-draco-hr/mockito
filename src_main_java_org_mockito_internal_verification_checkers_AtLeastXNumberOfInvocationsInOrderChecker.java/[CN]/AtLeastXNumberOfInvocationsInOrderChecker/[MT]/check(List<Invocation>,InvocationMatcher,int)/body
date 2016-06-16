@@ -5,5 +5,5 @@
     Location lastLocation=finder.getLastLocation(chunk);
     throw tooLittleActualInvocationsInOrder(new AtLeastDiscrepancy(wantedCount,actualCount),wanted,lastLocation);
   }
-  invocationMarker.markVerifiedInOrder(chunk,wanted,orderingContext);
+  markVerifiedInOrder(chunk,wanted,orderingContext);
 }

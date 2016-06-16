@@ -1,5 +1,4 @@
 {
-  InvocationMarker marker=new InvocationMarker();
   Invocation i=new InvocationBuilder().toInvocation();
   final ObjectBox box=new ObjectBox();
   CapturesArgumentsFromInvocation c=new CapturesArgumentsFromInvocation(){
@@ -8,6 +7,6 @@
     }
   }
 ;
-  marker.markVerified(Arrays.asList(i),c);
+  InvocationMarker.markVerified(Arrays.asList(i),c);
   assertEquals(i,box.getObject());
 }

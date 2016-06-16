@@ -1,4 +1,3 @@
 {
   this.finder=finder;
-  this.marker=marker;
 }

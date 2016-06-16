@@ -8,5 +8,5 @@
     throw wantedAtMostX(maxNumberOfInvocations,foundSize);
   }
   removeAlreadyVerified(found);
-  invocationMarker.markVerified(found,wanted);
+  markVerified(found,wanted);
 }
