@@ -1,0 +1,4 @@
+{
+  ForwardsInvocations forwardsInvocations=new ForwardsInvocations(new FooImpl());
+  assertEquals(4,forwardsInvocations.answer(invocationOf(Foo.class,"bar","b",new Object[]{12,"3",4.5})));
+}

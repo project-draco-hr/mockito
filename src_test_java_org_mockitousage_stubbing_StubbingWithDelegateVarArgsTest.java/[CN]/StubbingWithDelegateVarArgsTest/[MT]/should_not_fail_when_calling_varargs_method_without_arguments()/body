@@ -1,0 +1,5 @@
+{
+  Foo foo=mock(Foo.class,withSettings().defaultAnswer(delegatesTo(new FooImpl())));
+  assertThat(foo.bar("baz")).isEqualTo(0);
+  assertThat(foo.bar("baz",new Object[0])).isEqualTo(0);
+}
