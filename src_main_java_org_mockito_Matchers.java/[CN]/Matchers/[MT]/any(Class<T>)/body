@@ -1,3 +1,4 @@
 {
-  return (T)reportMatcher(Any.ANY).returnFor(clazz);
+  reportMatcher(Any.ANY);
+  return defaultValue(clazz);
 }

@@ -1,0 +1,5 @@
+{
+  assertNull(Primitives.defaultValue(Object.class));
+  assertNull(Primitives.defaultValue(String.class));
+  assertNull(Primitives.defaultValue(null));
+}

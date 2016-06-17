@@ -1,3 +1,4 @@
 {
-  return reportMatcher(new LessOrEqual<Byte>(value)).returnZero();
+  reportMatcher(new LessOrEqual<Byte>(value));
+  return 0;
 }

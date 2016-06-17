@@ -1,3 +1,4 @@
 {
-  return reportMatcher(new LessThan<Double>(value)).returnZero();
+  reportMatcher(new LessThan<Double>(value));
+  return 0;
 }

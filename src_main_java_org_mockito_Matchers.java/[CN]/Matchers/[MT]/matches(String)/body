@@ -1,3 +1,4 @@
 {
-  return reportMatcher(new Matches(regex)).returnString();
+  reportMatcher(new Matches(regex));
+  return "";
 }

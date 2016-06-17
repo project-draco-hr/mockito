@@ -1,3 +1,4 @@
 {
-  return reportMatcher(new StartsWith(prefix)).returnString();
+  reportMatcher(new StartsWith(prefix));
+  return "";
 }

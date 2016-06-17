@@ -1,3 +1,4 @@
 {
-  return reportMatcher(matcher).returnFalse();
+  reportMatcher(matcher);
+  return false;
 }

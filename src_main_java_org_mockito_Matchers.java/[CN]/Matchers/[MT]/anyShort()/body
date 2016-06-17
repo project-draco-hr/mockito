@@ -1,3 +1,4 @@
 {
-  return reportMatcher(new InstanceOf(Short.class)).returnZero();
+  reportMatcher(new InstanceOf(Short.class));
+  return 0;
 }

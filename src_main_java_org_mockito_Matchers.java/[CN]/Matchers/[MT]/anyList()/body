@@ -1,3 +1,4 @@
 {
-  return reportMatcher(new InstanceOf(List.class)).returnList();
+  reportMatcher(new InstanceOf(List.class));
+  return new LinkedList();
 }

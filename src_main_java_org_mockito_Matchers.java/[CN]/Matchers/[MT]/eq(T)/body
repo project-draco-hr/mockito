@@ -1,3 +1,5 @@
 {
-  return (T)reportMatcher(new Equals(value)).<T>returnFor(value);
+  reportMatcher(new Equals(value));
+  if (value == null)   return null;
+  return (T)Primitives.defaultValue(value.getClass());
 }

@@ -1,3 +1,4 @@
 {
-  return reportMatcher(new GreaterOrEqual<Long>(value)).returnZero();
+  reportMatcher(new GreaterOrEqual<Long>(value));
+  return 0;
 }

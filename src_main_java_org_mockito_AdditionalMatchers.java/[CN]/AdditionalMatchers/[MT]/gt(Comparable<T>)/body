@@ -1,3 +1,4 @@
 {
-  return reportMatcher(new GreaterThan<T>(value)).<T>returnNull();
+  reportMatcher(new GreaterThan<T>(value));
+  return null;
 }

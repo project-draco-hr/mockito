@@ -1,3 +1,4 @@
 {
-  return reportMatcher(new EqualsWithDelta(value,delta)).returnZero();
+  reportMatcher(new EqualsWithDelta(value,delta));
+  return 0;
 }

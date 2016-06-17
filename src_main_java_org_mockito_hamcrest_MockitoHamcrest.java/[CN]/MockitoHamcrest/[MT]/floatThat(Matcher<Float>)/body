@@ -1,3 +1,4 @@
 {
-  return reportMatcher(matcher).returnZero();
+  reportMatcher(matcher);
+  return 0;
 }

@@ -1,3 +1,4 @@
 {
-  return reportMatcher(new GreaterOrEqual<T>(value)).<T>returnNull();
+  reportMatcher(new GreaterOrEqual<T>(value));
+  return null;
 }

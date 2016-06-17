@@ -1,3 +1,4 @@
 {
-  return reportMatcher(new InstanceOf(Byte.class)).returnZero();
+  reportMatcher(new InstanceOf(Byte.class));
+  return 0;
 }

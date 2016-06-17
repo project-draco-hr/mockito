@@ -1,3 +1,4 @@
 {
-  return reportMatcher(matcher).<T>returnNull();
+  reportMatcher(matcher);
+  return null;
 }

@@ -1,3 +1,4 @@
 {
-  return reportMatcher(new CompareEqual<T>(value)).<T>returnNull();
+  reportMatcher(new CompareEqual<T>(value));
+  return null;
 }

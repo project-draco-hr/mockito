@@ -1,5 +1,5 @@
 {
   List mock=Mockito.mock(List.class);
   Mockito.when(mock.add("test")).thenReturn(true);
-  assertNull(new ThreadSafeMockingProgress().pullOngoingStubbing());
+  assertThat(new ThreadSafeMockingProgress().pullOngoingStubbing()).isNull();
 }

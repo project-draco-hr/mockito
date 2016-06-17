@@ -2,5 +2,4 @@
   assertStateFor("And(?)",TWO_SUB_MATCHERS);
   And and=new And(popLastArgumentMatchers(TWO_SUB_MATCHERS));
   matcherStack.push(new LocalizedMatcher(and));
-  return new HandyReturnValues();
 }
