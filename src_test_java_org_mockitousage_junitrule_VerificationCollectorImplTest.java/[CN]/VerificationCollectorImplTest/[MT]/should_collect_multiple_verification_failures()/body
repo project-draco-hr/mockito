@@ -1,8 +1,8 @@
 {
-  VerificationCollector collector=MockitoJUnit.collector();
+  VerificationCollector collector=MockitoJUnit.collector().assertLazily();
   IMethods methods=mock(IMethods.class);
-  collector.verify(methods).simpleMethod();
-  collector.verify(methods).byteReturningMethod();
+  verify(methods).simpleMethod();
+  verify(methods).byteReturningMethod();
   try {
     collector.collectAndReport();
     fail();

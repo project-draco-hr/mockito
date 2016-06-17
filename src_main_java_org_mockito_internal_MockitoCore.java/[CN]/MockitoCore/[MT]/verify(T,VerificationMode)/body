@@ -5,6 +5,7 @@
   if (!mockUtil.isMock(mock)) {
     throw notAMockPassedToVerify(mock.getClass());
   }
-  mockingProgress.verificationStarted(new MockAwareVerificationMode(mock,mode));
+  VerificationMode actualMode=this.mockingProgress.maybeVerifyLazily(mode);
+  mockingProgress.verificationStarted(new MockAwareVerificationMode(mock,actualMode));
   return mock;
 }

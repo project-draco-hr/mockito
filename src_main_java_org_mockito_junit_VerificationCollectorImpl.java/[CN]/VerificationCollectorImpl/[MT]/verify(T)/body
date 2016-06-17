@@ -1,3 +1,0 @@
-{
-  return MOCKITO_CORE.verify(mock,new VerificationWrapper(times(1)));
-}

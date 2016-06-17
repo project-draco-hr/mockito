@@ -1,0 +1,8 @@
+{
+  return new VerificationStrategy(){
+    public VerificationMode maybeVerifyLazily(    VerificationMode mode){
+      return mode;
+    }
+  }
+;
+}
