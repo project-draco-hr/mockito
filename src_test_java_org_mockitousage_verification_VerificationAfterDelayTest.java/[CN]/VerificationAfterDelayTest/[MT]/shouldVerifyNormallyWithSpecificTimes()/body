@@ -1,5 +1,5 @@
 {
   Thread t=waitAndExerciseMock(20);
   t.start();
-  verify(mock,after(50).times(1)).clear();
+  verify(mock,after(500).times(1)).clear();
 }
