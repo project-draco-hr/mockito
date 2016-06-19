@@ -3,5 +3,5 @@
   t1.start();
   mock.add("foo");
   verify(mock,never()).clear();
-  verify(mock,timeout(50).only()).clear();
+  verify(mock,timeout(500).only()).clear();
 }
