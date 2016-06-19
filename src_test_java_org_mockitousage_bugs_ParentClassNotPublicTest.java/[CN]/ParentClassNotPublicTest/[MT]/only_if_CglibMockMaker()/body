@@ -1,3 +1,0 @@
-{
-  Assume.assumeTrue("CglibMockMaker".equals(Plugins.getMockMaker().getClass().getSimpleName()));
-}
