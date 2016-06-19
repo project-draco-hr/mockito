@@ -1,0 +1,9 @@
+{
+  return new Answer<Void>(){
+    @SuppressWarnings("unchecked") public Void answer(    InvocationOnMock invocation) throws Throwable {
+      answer.answer((A)invocation.getArgument(0),(B)invocation.getArgument(1),(C)invocation.getArgument(2),(D)invocation.getArgument(3),(E)invocation.getArgument(4));
+      return null;
+    }
+  }
+;
+}

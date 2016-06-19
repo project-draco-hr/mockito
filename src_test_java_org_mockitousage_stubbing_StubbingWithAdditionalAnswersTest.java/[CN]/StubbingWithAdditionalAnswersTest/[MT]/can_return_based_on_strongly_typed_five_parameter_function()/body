@@ -1,0 +1,12 @@
+{
+  final IMethods target=mock(IMethods.class);
+  given(iMethods.simpleMethod(anyString(),anyInt(),anyInt(),anyInt(),anyInt())).will(answer(new AnswerFunctionalInterfaces.Answer5<String,String,Integer,Integer,Integer,Integer>(){
+    public String answer(    String s1,    Integer i1,    Integer i2,    Integer i3,    Integer i4){
+      target.simpleMethod(s1,i1,i2,i3,i4);
+      return "answered";
+    }
+  }
+));
+  assertThat(iMethods.simpleMethod("hello",1,2,3,4)).isEqualTo("answered");
+  verify(target,times(1)).simpleMethod("hello",1,2,3,4);
+}

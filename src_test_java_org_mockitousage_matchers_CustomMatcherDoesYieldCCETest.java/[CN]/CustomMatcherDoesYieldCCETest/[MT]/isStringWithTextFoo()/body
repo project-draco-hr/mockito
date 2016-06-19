@@ -1,6 +1,6 @@
 {
   return new ArgumentMatcher<String>(){
-    public boolean matches(    Object argument){
+    public boolean matches(    String argument){
       String str=(String)argument;
       return str.equals("foo");
     }

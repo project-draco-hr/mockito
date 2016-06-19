@@ -1,4 +1,0 @@
-{
-  Character character=(Character)arg;
-  return character.equals('s') || character.equals('z');
-}
