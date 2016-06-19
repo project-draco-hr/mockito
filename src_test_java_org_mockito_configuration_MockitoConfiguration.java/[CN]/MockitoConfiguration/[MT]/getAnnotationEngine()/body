@@ -3,12 +3,17 @@
     return this.overriddenEngine;
   }
   return new InjectingAnnotationEngine(){
-    @Override public Object createMockFor(    Annotation annotation,    Field field){
-      if (annotation instanceof SmartMock) {
-        return Mockito.mock(field.getType(),Mockito.RETURNS_SMART_NULLS);
-      }
- else {
-        return super.createMockFor(annotation,field);
+    @Override protected void onInjection(    Object testClassInstance,    Class<?> clazz,    Set<Field> mockDependentFields,    Set<Object> mocks){
+      for (      Field field : clazz.getDeclaredFields()) {
+        if (field.isAnnotationPresent(SmartMock.class)) {
+          field.setAccessible(true);
+          try {
+            field.set(Modifier.isStatic(field.getModifiers()) ? null : testClassInstance,Mockito.mock(field.getType(),Mockito.RETURNS_SMART_NULLS));
+          }
+ catch (          Exception exception) {
+            throw new AssertionError(exception.getMessage());
+          }
+        }
       }
     }
   }

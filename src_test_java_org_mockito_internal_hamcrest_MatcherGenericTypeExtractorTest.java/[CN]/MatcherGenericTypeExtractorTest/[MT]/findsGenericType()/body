@@ -15,7 +15,7 @@
     }
   }
 .getClass()));
-  assertEquals(Integer.class,genericTypeOfMatcher(new Matcher<Integer>(){
+  assertEquals(Integer.class,genericTypeOfMatcher(new BaseMatcher<Integer>(){
     public void describeTo(    Description description){
     }
     public boolean matches(    Object o){
@@ -23,13 +23,11 @@
     }
     public void describeMismatch(    Object item,    Description mismatchDescription){
     }
-    public void _dont_implement_Matcher___instead_extend_BaseMatcher_(){
-    }
   }
 .getClass()));
   assertEquals(Object.class,genericTypeOfMatcher(Object.class));
   assertEquals(Object.class,genericTypeOfMatcher(String.class));
-  assertEquals(Object.class,genericTypeOfMatcher(new HashMap<String,String>().getClass()));
+  assertEquals(Object.class,genericTypeOfMatcher(HashMap.class));
   assertEquals(Object.class,genericTypeOfMatcher(new HashMap<String,String>(){
   }
 .getClass()));

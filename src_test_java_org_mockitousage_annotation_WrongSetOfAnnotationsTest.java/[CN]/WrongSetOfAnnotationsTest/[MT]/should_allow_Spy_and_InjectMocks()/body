@@ -1,0 +1,6 @@
+{
+  MockitoAnnotations.initMocks(new Object(){
+    @InjectMocks @Spy WithDependency mock;
+  }
+);
+}

@@ -1,5 +1,5 @@
 {
-  Map<String,String> map=mock(Map.class);
+  @SuppressWarnings("unchecked") Map<String,String> map=mock(Map.class);
   OngoingStubbing<String> mapOngoingStubbing=when(map.get(anyString()));
   mapOngoingStubbing.thenReturn("first stubbing");
   try {

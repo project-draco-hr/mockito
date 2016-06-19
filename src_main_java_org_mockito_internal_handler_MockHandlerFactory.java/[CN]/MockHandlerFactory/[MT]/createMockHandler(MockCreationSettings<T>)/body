@@ -1,0 +1,5 @@
+{
+  InternalMockHandler<T> handler=new MockHandlerImpl<T>(settings);
+  InternalMockHandler<T> nullResultGuardian=new NullResultGuardian<T>(handler);
+  return new InvocationNotifierHandler<T>(nullResultGuardian,settings);
+}

@@ -1,4 +1,4 @@
 {
-  ArgumentCaptor<List<Person>> argument=ArgumentCaptor.forClass(List.class);
+  @SuppressWarnings("unchecked") ArgumentCaptor<List<Person>> argument=ArgumentCaptor.forClass(List.class);
   assertNotNull(argument);
 }

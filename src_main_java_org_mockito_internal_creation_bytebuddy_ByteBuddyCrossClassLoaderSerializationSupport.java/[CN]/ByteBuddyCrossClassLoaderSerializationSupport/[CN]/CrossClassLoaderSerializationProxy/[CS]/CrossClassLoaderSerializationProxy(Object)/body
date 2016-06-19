@@ -4,7 +4,7 @@
   objectOutputStream.writeObject(mockitoMock);
   objectOutputStream.close();
   out.close();
-  MockCreationSettings mockSettings=new MockUtil().getMockSettings(mockitoMock);
+  MockCreationSettings<?> mockSettings=new MockUtil().getMockSettings(mockitoMock);
   this.serializedMock=out.toByteArray();
   this.typeToMock=mockSettings.getTypeToMock();
   this.extraInterfaces=mockSettings.getExtraInterfaces();

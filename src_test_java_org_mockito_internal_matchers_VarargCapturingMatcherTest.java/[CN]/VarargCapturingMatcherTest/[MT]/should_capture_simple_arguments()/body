@@ -1,6 +1,6 @@
 {
-  VarargCapturingMatcher m=new VarargCapturingMatcher();
+  VarargCapturingMatcher<String> m=new VarargCapturingMatcher<String>();
   m.captureFrom("foo");
   m.captureFrom("bar");
-  assertThat(m.getAllVarargs()).containsSequence(asList("foo"),asList("bar"));
+  assertThat(m.getAllVarargs()).containsSequence(singletonList("foo"),singletonList("bar"));
 }

@@ -7,7 +7,7 @@
     }
   }
 ;
-  List<String> mockedList=(List<String>)mock(List.class);
+  @SuppressWarnings("unchecked") List<String> mockedList=(List<String>)mock(List.class);
   mockedList.add("one");
   mockedList.remove(0);
   mockedList.clear();

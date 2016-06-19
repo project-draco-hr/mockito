@@ -1,0 +1,4 @@
+Object testClassInstance
+Class<?> clazz
+Set<Field> mockDependentFields
+Set<Object> mocks

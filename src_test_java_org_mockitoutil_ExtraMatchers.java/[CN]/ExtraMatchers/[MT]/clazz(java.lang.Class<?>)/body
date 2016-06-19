@@ -1,3 +1,0 @@
-{
-  return CoreMatchers.is((Class)type);
-}

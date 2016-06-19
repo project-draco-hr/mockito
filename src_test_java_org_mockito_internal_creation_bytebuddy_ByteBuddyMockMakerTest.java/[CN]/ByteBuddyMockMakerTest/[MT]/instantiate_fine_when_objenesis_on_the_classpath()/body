@@ -1,6 +1,5 @@
 {
   ClassLoader classpath_with_objenesis=ClassLoaders.excludingClassLoader().withCodeSourceUrlOf(Mockito.class,ByteBuddy.class,ObjenesisStd.class).withCodeSourceUrlOf(coverageTool()).build();
-  boolean initialize_class=true;
-  Class<?> mock_maker_class_loaded_fine_until=Class.forName("org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker",initialize_class,classpath_with_objenesis);
+  Class<?> mock_maker_class_loaded_fine_until=Class.forName("org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker",true,classpath_with_objenesis);
   mock_maker_class_loaded_fine_until.newInstance();
 }

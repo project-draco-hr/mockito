@@ -1,7 +1,7 @@
 {
   when(switcher.isEnabled(anyString())).thenThrow(new RuntimeException("Boo!"));
   try {
-    finder.findPluginClass((Iterable)asList(new File("xxx").toURI().toURL()));
+    finder.findPluginClass(asList(new File("xxx").toURI().toURL()));
     fail();
   }
  catch (  Exception e) {

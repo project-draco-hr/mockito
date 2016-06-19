@@ -1,5 +1,5 @@
 {
   Object readObject=new ObjectInputStream(unserialize).readObject();
-  Assert.assertNotNull(readObject);
+  assertNotNull(readObject);
   return type.cast(readObject);
 }

@@ -1,3 +1,3 @@
 {
-  assertNull(finder.findPluginClass((Iterable)asList()));
+  assertNull(finder.findPluginClass(Collections.<URL>emptyList()));
 }

@@ -1,6 +1,6 @@
 {
   RecordCall recordCall=new RecordCall();
-  Set mockedSet=when(mock(Set.class).isEmpty()).then(recordCall).getMock();
+  Set<?> mockedSet=(Set<?>)when(mock(Set.class).isEmpty()).then(recordCall).getMock();
   mockedSet.isEmpty();
   assertTrue(recordCall.isCalled());
 }

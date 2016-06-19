@@ -1,0 +1,3 @@
+{
+  return CoreMatchers.instanceOf(type);
+}

@@ -5,6 +5,7 @@
   while (clazz != Object.class) {
     new InjectMocksScanner(clazz).addTo(mockDependentFields);
     new MockScanner(testClassInstance,clazz).addPreparedMocks(mocks);
+    onInjection(testClassInstance,clazz,mockDependentFields,mocks);
     clazz=clazz.getSuperclass();
   }
   new DefaultInjectionEngine().injectMocksOnFields(mockDependentFields,mocks,testClassInstance);

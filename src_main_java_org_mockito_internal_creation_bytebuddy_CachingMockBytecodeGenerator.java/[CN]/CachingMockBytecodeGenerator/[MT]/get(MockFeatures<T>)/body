@@ -1,8 +1,8 @@
 {
   avoidingClassLeakCacheLock.lock();
   try {
-    Class generatedMockClass=mockCachePerClassLoaderOf(params.mockedType).getOrGenerateMockClass(params);
-    return generatedMockClass;
+    Class<?> generatedMockClass=mockCachePerClassLoaderOf(params.mockedType).getOrGenerateMockClass(params);
+    return (Class<T>)generatedMockClass;
   }
   finally {
     avoidingClassLeakCacheLock.unlock();

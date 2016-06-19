@@ -1,5 +1,0 @@
-{
-  if (alreadyAssigned) {
-    throw moreThanOneAnnotationNotAllowed(field.getName());
-  }
-}

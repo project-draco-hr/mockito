@@ -1,5 +1,5 @@
 {
-  Thread t=new Thread(){
+  return new Thread(){
     @Override public void run(){
       try {
         Thread.sleep(sleep);
@@ -12,5 +12,4 @@
     }
   }
 ;
-  return t;
 }

@@ -4,5 +4,5 @@
   when(switcher.isEnabled("Bar")).thenReturn(true);
   IOUtil.writeText("Foo",f1);
   IOUtil.writeText("Bar",f2);
-  assertEquals("Bar",finder.findPluginClass((Iterable)asList(f1.toURI().toURL(),f2.toURI().toURL())));
+  assertEquals("Bar",finder.findPluginClass(asList(f1.toURI().toURL(),f2.toURI().toURL())));
 }

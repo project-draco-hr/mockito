@@ -1,5 +1,4 @@
 {
-  T oldValue=value;
   this.value=value;
-  return oldValue;
+  return value;
 }

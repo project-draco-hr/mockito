@@ -1,5 +1,5 @@
 {
-  InOrderImpl impl=new InOrderImpl((List)asList(mock));
+  InOrderImpl impl=new InOrderImpl(singletonList(mock));
   Invocation i=new InvocationBuilder().toInvocation();
   assertFalse(impl.isVerified(i));
   impl.markVerified(i);

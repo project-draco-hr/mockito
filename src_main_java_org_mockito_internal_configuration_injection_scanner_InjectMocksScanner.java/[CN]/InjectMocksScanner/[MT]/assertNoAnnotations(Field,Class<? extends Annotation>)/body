@@ -1,0 +1,7 @@
+{
+  for (  Class<? extends Annotation> annotation : annotations) {
+    if (field.isAnnotationPresent(annotation)) {
+      throw unsupportedCombinationOfAnnotations(annotation.getSimpleName(),InjectMocks.class.getSimpleName());
+    }
+  }
+}
