@@ -1,4 +1,5 @@
 {
+  assumeFalse(System.getProperty("java.version").startsWith("1.6"));
   IMethods iMethods=mock(IMethods.class,withSettings().serializable().defaultAnswer(RETURNS_DEEP_STUBS));
   when(iMethods.iMethodsReturningMethod().linkedListReturningMethod().contains(anyString())).thenReturn(false);
   serializeAndBack(iMethods);
