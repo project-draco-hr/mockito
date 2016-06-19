@@ -1,6 +1,0 @@
-Object lhs
-Object rhs
-Class clazz
-EqualsBuilder builder
-boolean useTransients
-String[] excludeFields

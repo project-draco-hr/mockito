@@ -1,7 +1,7 @@
 {
-  Class configClass;
+  Class<?> configClass;
   try {
-    configClass=(Class)Class.forName(MOCKITO_CONFIGURATION_CLASS_NAME);
+    configClass=Class.forName(MOCKITO_CONFIGURATION_CLASS_NAME);
   }
  catch (  ClassNotFoundException e) {
     return null;

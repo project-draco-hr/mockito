@@ -1,13 +1,13 @@
 {
-  MockKey mockKey=MockKey.of(features.mockedType,features.interfaces);
-  Class generatedMockClass=null;
-  WeakReference<Class> classWeakReference=generatedClassCache.get(mockKey);
+  MockKey<?> mockKey=MockKey.of(features.mockedType,features.interfaces);
+  Class<?> generatedMockClass=null;
+  WeakReference<Class<?>> classWeakReference=generatedClassCache.get(mockKey);
   if (classWeakReference != null) {
     generatedMockClass=classWeakReference.get();
   }
   if (generatedMockClass == null) {
     generatedMockClass=generate(features);
   }
-  generatedClassCache.put(mockKey,new WeakReference<Class>(generatedMockClass));
+  generatedClassCache.put(mockKey,new WeakReference<Class<?>>(generatedMockClass));
   return generatedMockClass;
 }

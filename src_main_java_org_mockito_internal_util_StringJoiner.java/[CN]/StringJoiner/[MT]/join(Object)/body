@@ -1,3 +1,3 @@
 {
-  return join("\n",(Iterable<String>)(Object)asList(linesToBreak));
+  return join("\n",asList(linesToBreak));
 }

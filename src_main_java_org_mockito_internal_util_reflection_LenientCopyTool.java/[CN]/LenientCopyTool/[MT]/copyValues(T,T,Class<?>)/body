@@ -1,0 +1,18 @@
+{
+  Field[] fields=classFrom.getDeclaredFields();
+  for (  Field field : fields) {
+    if (Modifier.isStatic(field.getModifiers())) {
+      continue;
+    }
+    AccessibilityChanger accessibilityChanger=new AccessibilityChanger();
+    try {
+      accessibilityChanger.enableAccess(field);
+      fieldCopier.copyValue(from,mock,field);
+    }
+ catch (    Throwable t) {
+    }
+ finally {
+      accessibilityChanger.safelyDisableAccess(field);
+    }
+  }
+}

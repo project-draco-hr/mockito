@@ -9,7 +9,7 @@
     this.setEquals(false);
     return this;
   }
-  Class lhsClass=lhs.getClass();
+  Class<?> lhsClass=lhs.getClass();
   if (!lhsClass.isArray()) {
     if (lhs instanceof java.math.BigDecimal && rhs instanceof java.math.BigDecimal) {
       isEquals=(((java.math.BigDecimal)lhs).compareTo((java.math.BigDecimal)rhs) == 0);
