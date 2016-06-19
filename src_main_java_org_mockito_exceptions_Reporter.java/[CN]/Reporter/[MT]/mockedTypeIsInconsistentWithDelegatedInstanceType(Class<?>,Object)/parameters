@@ -1,2 +1,2 @@
-Class mockedType
+Class<?> mockedType
 Object delegatedInstance

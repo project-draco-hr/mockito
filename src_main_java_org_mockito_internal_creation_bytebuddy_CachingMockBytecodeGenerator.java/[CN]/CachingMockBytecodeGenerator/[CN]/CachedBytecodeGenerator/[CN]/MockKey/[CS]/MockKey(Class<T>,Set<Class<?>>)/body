@@ -1,6 +1,6 @@
 {
   this.mockedType=mockedType.getName();
-  for (  Class anInterface : interfaces) {
+  for (  Class<?> anInterface : interfaces) {
     types.add(anInterface.getName());
   }
   types.add(this.mockedType);

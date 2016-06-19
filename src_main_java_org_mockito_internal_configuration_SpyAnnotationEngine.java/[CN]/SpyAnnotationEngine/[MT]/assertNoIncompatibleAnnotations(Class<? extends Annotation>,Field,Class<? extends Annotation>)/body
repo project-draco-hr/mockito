@@ -1,5 +1,5 @@
 {
-  for (  Class u : undesiredAnnotations) {
+  for (  Class<? extends Annotation> u : undesiredAnnotations) {
     if (field.isAnnotationPresent(u)) {
       throw unsupportedCombinationOfAnnotations(annotation.getSimpleName(),annotation.getClass().getSimpleName());
     }

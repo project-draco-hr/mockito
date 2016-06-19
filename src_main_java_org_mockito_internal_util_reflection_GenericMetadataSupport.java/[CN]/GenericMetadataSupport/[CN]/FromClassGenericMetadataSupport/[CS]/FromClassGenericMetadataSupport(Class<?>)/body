@@ -1,6 +1,6 @@
 {
   this.clazz=clazz;
-  for (Class currentExploredClass=clazz; currentExploredClass != null && currentExploredClass != Object.class; currentExploredClass=superClassOf(currentExploredClass)) {
+  for (Class<?> currentExploredClass=clazz; currentExploredClass != null && currentExploredClass != Object.class; currentExploredClass=superClassOf(currentExploredClass)) {
     readActualTypeParametersOnDeclaringClass(currentExploredClass);
   }
 }

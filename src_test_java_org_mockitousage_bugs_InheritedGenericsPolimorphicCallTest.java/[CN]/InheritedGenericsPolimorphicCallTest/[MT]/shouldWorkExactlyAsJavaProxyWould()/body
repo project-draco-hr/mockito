@@ -7,7 +7,7 @@
     }
   }
 ;
-  iterable=(MyIterable)Proxy.newProxyInstance(this.getClass().getClassLoader(),new Class[]{MyIterable.class},handler);
+  iterable=(MyIterable)Proxy.newProxyInstance(this.getClass().getClassLoader(),new Class<?>[]{MyIterable.class},handler);
   iterable.iterator();
   ((Iterable)iterable).iterator();
   assertEquals(2,methods.size());
