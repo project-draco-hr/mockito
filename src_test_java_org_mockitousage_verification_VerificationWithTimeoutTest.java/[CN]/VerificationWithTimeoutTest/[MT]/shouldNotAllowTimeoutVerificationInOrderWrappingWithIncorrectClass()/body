@@ -1,0 +1,5 @@
+{
+  Thread t1=waitAndExerciseMock(20);
+  t1.start();
+  inOrder(mock).verify(mock,Mockito.after(10));
+}

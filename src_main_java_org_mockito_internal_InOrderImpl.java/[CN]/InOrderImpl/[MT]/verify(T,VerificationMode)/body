@@ -2,7 +2,10 @@
   if (!mocksToBeVerifiedInOrder.contains(mock)) {
     throw inOrderRequiresFamiliarMock();
   }
-  if (!(mode instanceof VerificationInOrderMode)) {
+  if (mode instanceof VerificationWrapper) {
+    return mockitoCore.verify(mock,new VerificationWrapperInOrderWrapper((VerificationWrapper)mode,this));
+  }
+ else   if (!(mode instanceof VerificationInOrderMode)) {
     throw new MockitoException(mode.getClass().getSimpleName() + " is not implemented to work with InOrder");
   }
   return mockitoCore.verify(mock,new InOrderWrapper((VerificationInOrderMode)mode,this));

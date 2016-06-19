@@ -1,0 +1,5 @@
+{
+  VerificationMode verificationMode=verificationWrapper.wrappedVerification;
+  VerificationMode inOrderWrappedVerificationMode=wrapInOrder(verificationWrapper,verificationMode,inOrder);
+  delegate=verificationWrapper.copySelfWithNewVerificationMode(inOrderWrappedVerificationMode);
+}

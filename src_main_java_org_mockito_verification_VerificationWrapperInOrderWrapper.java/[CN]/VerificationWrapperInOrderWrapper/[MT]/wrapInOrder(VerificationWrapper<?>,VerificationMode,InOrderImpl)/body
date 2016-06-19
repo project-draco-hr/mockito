@@ -1,0 +1,13 @@
+{
+  if (verificationMode instanceof VerificationInOrderMode) {
+    final VerificationInOrderMode verificationInOrderMode=(VerificationInOrderMode)verificationMode;
+    return new InOrderWrapper(verificationInOrderMode,inOrder);
+  }
+  if (verificationMode instanceof VerificationOverTimeImpl) {
+    final VerificationOverTimeImpl verificationOverTime=(VerificationOverTimeImpl)verificationMode;
+    if (verificationOverTime.isReturnOnSuccess()) {
+      return new VerificationOverTimeImpl(verificationOverTime.getPollingPeriodMillis(),verificationOverTime.getTimer().duration(),wrapInOrder(verificationWrapper,verificationOverTime.getDelegate(),inOrder),verificationOverTime.isReturnOnSuccess());
+    }
+  }
+  throw new MockitoException(verificationMode.getClass().getSimpleName() + " is not implemented to work with InOrder wrapped inside a " + verificationWrapper.getClass().getSimpleName());
+}
