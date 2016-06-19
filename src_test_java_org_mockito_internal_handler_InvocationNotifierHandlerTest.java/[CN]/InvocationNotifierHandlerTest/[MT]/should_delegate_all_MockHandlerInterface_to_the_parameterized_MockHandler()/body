@@ -1,10 +1,8 @@
 {
   notifier.getInvocationContainer();
   notifier.getMockSettings();
-  notifier.voidMethodStubbable(mock(IMethods.class));
   notifier.setAnswersForStubbing(new ArrayList<Answer>());
   verify(mockHandler).getInvocationContainer();
   verify(mockHandler).getMockSettings();
-  verify(mockHandler).voidMethodStubbable(any());
   verify(mockHandler).setAnswersForStubbing(anyList());
 }

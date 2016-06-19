@@ -1,4 +1,0 @@
-{
-  invocationContainerImpl.addAnswerForVoidMethod(new ThrowsException(throwable));
-  return this;
-}

@@ -1,4 +1,0 @@
-{
-  invocationContainerImpl.addAnswerForVoidMethod(new DoesNothing());
-  return this;
-}
