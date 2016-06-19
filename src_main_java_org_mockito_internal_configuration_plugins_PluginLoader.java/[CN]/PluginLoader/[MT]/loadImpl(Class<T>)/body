@@ -8,7 +8,7 @@
     resources=loader.getResources("mockito-extensions/" + service.getName());
   }
  catch (  IOException e) {
-    throw new MockitoException("Failed to load " + service,e);
+    throw new IllegalStateException("Failed to load " + service,e);
   }
   try {
     String foundPluginClass=new PluginFinder(pluginSwitch).findPluginClass(Iterables.toIterable(resources));
@@ -20,6 +20,6 @@
     return null;
   }
  catch (  Exception e) {
-    throw new MockitoConfigurationException("Failed to load " + service + " implementation declared in "+ resources,e);
+    throw new IllegalStateException("Failed to load " + service + " implementation declared in "+ resources,e);
   }
 }
