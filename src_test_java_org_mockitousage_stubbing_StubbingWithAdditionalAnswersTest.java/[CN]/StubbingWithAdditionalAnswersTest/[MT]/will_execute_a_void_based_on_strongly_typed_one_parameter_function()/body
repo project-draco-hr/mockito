@@ -1,0 +1,11 @@
+{
+  final IMethods target=mock(IMethods.class);
+  given(iMethods.simpleMethod(anyString())).will(answerVoid(new AnswerFunctionalInterfaces.VoidAnswer1<String>(){
+    public void answer(    String s){
+      target.simpleMethod(s);
+    }
+  }
+));
+  iMethods.simpleMethod("string");
+  verify(target,times(1)).simpleMethod("string");
+}

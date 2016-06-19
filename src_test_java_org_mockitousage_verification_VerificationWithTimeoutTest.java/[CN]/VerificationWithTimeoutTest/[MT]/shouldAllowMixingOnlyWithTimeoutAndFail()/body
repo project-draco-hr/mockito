@@ -3,10 +3,5 @@
   t1.start();
   mock.add("foo");
   verify(mock,never()).clear();
-  try {
-    verify(mock,timeout(40).only()).clear();
-    fail();
-  }
- catch (  NoInteractionsWanted e) {
-  }
+  verify(mock,timeout(50).only()).clear();
 }

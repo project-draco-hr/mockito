@@ -1,6 +1,6 @@
 {
   when(mock.simpleMethod(Mockito.argThat(new ArgumentMatcher<String>(){
-    public boolean matches(    Object argument){
+    public boolean matches(    String argument){
       return true;
     }
   }

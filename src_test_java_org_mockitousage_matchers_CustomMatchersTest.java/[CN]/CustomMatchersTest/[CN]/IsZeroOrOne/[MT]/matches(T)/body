@@ -1,0 +1,6 @@
+{
+  if (number.intValue() == 0 || number.intValue() == 1) {
+    return true;
+  }
+  return false;
+}

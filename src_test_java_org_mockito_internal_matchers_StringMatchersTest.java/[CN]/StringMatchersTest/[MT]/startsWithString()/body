@@ -1,0 +1,3 @@
+{
+  assertTrue(new StartsWith("mockito").matches("mockito is here"));
+}

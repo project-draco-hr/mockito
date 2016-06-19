@@ -1,0 +1,11 @@
+{
+  if (isFromMockitoRunner(e.getClassName()) || isFromMockitoRule(e.getClassName())) {
+    return true;
+  }
+ else   if (isMockDispatcher(e.getClassName()) || isFromMockito(e.getClassName())) {
+    return false;
+  }
+ else {
+    return true;
+  }
+}

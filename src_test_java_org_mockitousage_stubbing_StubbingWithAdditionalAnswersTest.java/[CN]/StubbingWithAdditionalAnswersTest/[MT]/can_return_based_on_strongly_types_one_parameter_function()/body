@@ -1,0 +1,9 @@
+{
+  given(iMethods.simpleMethod(anyString())).will(answer(new AnswerFunctionalInterfaces.Answer1<String,String>(){
+    public String answer(    String s){
+      return s;
+    }
+  }
+));
+  assertThat(iMethods.simpleMethod("string")).isEqualTo("string");
+}

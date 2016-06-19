@@ -1,6 +1,0 @@
-{
-  if (!(actual instanceof Comparable)) {
-    return false;
-  }
-  return matchResult(((Comparable)actual).compareTo(wanted));
-}

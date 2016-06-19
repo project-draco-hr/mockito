@@ -1,0 +1,11 @@
+{
+  final IMethods target=mock(IMethods.class);
+  given(iMethods.threeArgumentMethodWithStrings(anyInt(),anyString(),anyString())).will(answerVoid(new AnswerFunctionalInterfaces.VoidAnswer3<Integer,String,String>(){
+    public void answer(    Integer i,    String s1,    String s2){
+      target.threeArgumentMethodWithStrings(i,s1,s2);
+    }
+  }
+));
+  iMethods.threeArgumentMethodWithStrings(1,"string1","string2");
+  verify(target,times(1)).threeArgumentMethodWithStrings(1,"string1","string2");
+}
