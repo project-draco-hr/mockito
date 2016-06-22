@@ -1,6 +1,6 @@
 {
   if (!matcherStack.isEmpty()) {
-    ArrayList lastMatchers=new ArrayList<LocalizedMatcher>(matcherStack);
+    ArrayList<LocalizedMatcher> lastMatchers=new ArrayList<LocalizedMatcher>(matcherStack);
     matcherStack.clear();
     throw misplacedArgumentMatcher(lastMatchers);
   }

@@ -1,9 +1,9 @@
 {
   return new Assertor<Object>(){
     public void assertValue(    Object o){
-      Class clazz=null;
+      Class<?> clazz=null;
       if (o instanceof Class) {
-        clazz=(Class)o;
+        clazz=(Class<?>)o;
       }
  else {
         clazz=o.getClass();

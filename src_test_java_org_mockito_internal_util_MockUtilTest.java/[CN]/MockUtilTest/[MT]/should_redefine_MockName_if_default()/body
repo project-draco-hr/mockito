@@ -1,5 +1,5 @@
 {
-  List mock=Mockito.mock(List.class);
+  List<?> mock=Mockito.mock(List.class);
   mockUtil.maybeRedefineMockName(mock,"newName");
   Assertions.assertThat(mockUtil.getMockName(mock).toString()).isEqualTo("newName");
 }
