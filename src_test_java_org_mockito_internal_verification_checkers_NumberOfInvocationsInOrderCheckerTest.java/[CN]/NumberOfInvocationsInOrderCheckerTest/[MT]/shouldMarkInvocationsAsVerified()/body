@@ -1,0 +1,8 @@
+{
+  Invocation invocation=buildSimpleMethod().toInvocation();
+  Assertions.assertThat(invocation.isVerified()).isFalse();
+  invocations=asList(invocation);
+  wanted=buildSimpleMethod().toInvocationMatcher();
+  checker.check(invocations,wanted,1,context);
+  assertThat(invocation.isVerified()).isTrue();
+}

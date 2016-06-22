@@ -1,7 +1,7 @@
 {
-  List<Invocation> actualInvocations=finder.findInvocations(invocations,wanted);
+  List<Invocation> actualInvocations=findInvocations(invocations,wanted);
   if (actualInvocations.isEmpty()) {
-    Invocation similar=finder.findSimilarInvocation(invocations,wanted);
+    Invocation similar=findSimilarInvocation(invocations,wanted);
     if (similar != null) {
       ArgumentMatchingTool argumentMatchingTool=new ArgumentMatchingTool();
       Integer[] indexesOfSuspiciousArgs=argumentMatchingTool.getSuspiciouslyNotMatchingArgsIndexes(wanted.getMatchers(),similar.getArguments());

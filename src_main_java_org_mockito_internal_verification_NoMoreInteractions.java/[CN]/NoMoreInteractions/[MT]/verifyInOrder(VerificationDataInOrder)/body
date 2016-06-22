@@ -1,6 +1,6 @@
 {
   List<Invocation> invocations=data.getAllInvocations();
-  Invocation unverified=new InvocationsFinder().findFirstUnverifiedInOrder(data.getOrderingContext(),invocations);
+  Invocation unverified=findFirstUnverifiedInOrder(data.getOrderingContext(),invocations);
   if (unverified != null) {
     throw noMoreInteractionsWantedInOrder(unverified);
   }

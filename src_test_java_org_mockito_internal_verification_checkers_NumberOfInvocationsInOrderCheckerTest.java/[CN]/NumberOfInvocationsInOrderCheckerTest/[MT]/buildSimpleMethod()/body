@@ -1,0 +1,3 @@
+{
+  return new InvocationBuilder().mock(mock).simpleMethod();
+}

@@ -1,6 +1,6 @@
 {
-  List<Invocation> actual=finder.findInvocations(invocations,new InvocationMatcher(simpleMethodInvocation));
+  List<Invocation> actual=InvocationsFinder.findInvocations(invocations,new InvocationMatcher(simpleMethodInvocation));
   assertThat(actual,hasExactlyInOrder(simpleMethodInvocation,simpleMethodInvocationTwo));
-  actual=finder.findInvocations(invocations,new InvocationMatcher(differentMethodInvocation));
+  actual=InvocationsFinder.findInvocations(invocations,new InvocationMatcher(differentMethodInvocation));
   assertThat(actual,hasExactlyInOrder(differentMethodInvocation));
 }

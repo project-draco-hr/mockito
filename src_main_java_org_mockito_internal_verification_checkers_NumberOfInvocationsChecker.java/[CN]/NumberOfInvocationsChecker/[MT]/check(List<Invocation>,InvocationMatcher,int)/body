@@ -1,8 +1,8 @@
 {
-  List<Invocation> actualInvocations=finder.findInvocations(invocations,wanted);
+  List<Invocation> actualInvocations=findInvocations(invocations,wanted);
   int actualCount=actualInvocations.size();
   if (wantedCount > actualCount) {
-    Location lastInvocation=finder.getLastLocation(actualInvocations);
+    Location lastInvocation=getLastLocation(actualInvocations);
     throw tooLittleActualInvocations(new Discrepancy(wantedCount,actualCount),wanted,lastInvocation);
   }
   if (wantedCount == 0 && actualCount > 0) {

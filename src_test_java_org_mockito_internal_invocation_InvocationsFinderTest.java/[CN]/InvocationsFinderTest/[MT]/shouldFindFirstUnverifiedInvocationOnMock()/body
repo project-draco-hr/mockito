@@ -1,4 +1,4 @@
 {
-  assertSame(simpleMethodInvocation,finder.findFirstUnverified(invocations,simpleMethodInvocation.getMock()));
-  assertNull(finder.findFirstUnverified(invocations,"different mock"));
+  assertSame(simpleMethodInvocation,InvocationsFinder.findFirstUnverified(invocations,simpleMethodInvocation.getMock()));
+  assertNull(InvocationsFinder.findFirstUnverified(invocations,"different mock"));
 }

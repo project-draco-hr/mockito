@@ -1,0 +1,4 @@
+{
+  this.expected=expected;
+  this.amount=amount;
+}

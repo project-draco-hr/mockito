@@ -1,9 +1,9 @@
 {
   InvocationMatcher wantedMatcher=data.getWanted();
   List<Invocation> invocations=data.getAllInvocations();
-  List<Invocation> chunk=finder.findInvocations(invocations,wantedMatcher);
+  List<Invocation> chunk=findInvocations(invocations,wantedMatcher);
   if (invocations.size() != 1 && chunk.size() > 0) {
-    Invocation unverified=finder.findFirstUnverified(invocations);
+    Invocation unverified=findFirstUnverified(invocations);
     throw noMoreInteractionsWanted(unverified,(List)invocations);
   }
   if (invocations.size() != 1 || chunk.size() == 0) {

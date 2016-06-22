@@ -1,6 +1,5 @@
 {
-  finderStub=new InvocationsFinderStub();
-  checker=new NumberOfInvocationsInOrderChecker(finderStub);
-  wanted=new InvocationBuilder().toInvocationMatcher();
-  invocations=new LinkedList<Invocation>(asList(new InvocationBuilder().toInvocation()));
+  checker=new NumberOfInvocationsInOrderChecker();
+  context=new InOrderContextImpl();
+  mock=mock(IMethods.class,"mock");
 }

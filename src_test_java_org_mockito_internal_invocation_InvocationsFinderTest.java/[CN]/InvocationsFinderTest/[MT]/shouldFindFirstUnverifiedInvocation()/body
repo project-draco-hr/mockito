@@ -1,8 +1,8 @@
 {
-  assertSame(simpleMethodInvocation,finder.findFirstUnverified(invocations));
+  assertSame(simpleMethodInvocation,InvocationsFinder.findFirstUnverified(invocations));
   simpleMethodInvocationTwo.markVerified();
   simpleMethodInvocation.markVerified();
-  assertSame(differentMethodInvocation,finder.findFirstUnverified(invocations));
+  assertSame(differentMethodInvocation,InvocationsFinder.findFirstUnverified(invocations));
   differentMethodInvocation.markVerified();
-  assertNull(finder.findFirstUnverified(invocations));
+  assertNull(InvocationsFinder.findFirstUnverified(invocations));
 }
