@@ -1,0 +1,5 @@
+{
+  long elapsedNanos=elapsedNanos();
+  long expectedNanos=unit.toNanos(expected);
+  if (elapsedNanos <= expectedNanos)   fail("Expected that more than %dms elapsed! But was: %dms",expectedNanos,elapsedNanos);
+}

@@ -1,4 +1,0 @@
-{
-  assertTrue(exceptions.isEmpty());
-  exceptions.clear();
-}

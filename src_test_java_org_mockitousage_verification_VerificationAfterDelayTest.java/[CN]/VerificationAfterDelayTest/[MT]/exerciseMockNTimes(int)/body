@@ -1,5 +1,5 @@
 {
   for (int i=0; i < n; i++) {
-    mock.add(String.valueOf(i));
+    mock.oneArg((char)('0' + i));
   }
 }

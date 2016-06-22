@@ -1,7 +1,7 @@
 {
-  Thread t1=waitAndExerciseMock(20);
-  t1.start();
-  mock.add("foo");
-  verify(mock,never()).clear();
-  verify(mock,timeout(500).only()).clear();
+  callAsyncWithDelay(mock,'c',20,MILLISECONDS);
+  mock.oneArg('x');
+  verify(mock,never()).oneArg('c');
+  exception.expect(NoInteractionsWanted.class);
+  verify(mock,timeout(40).only()).oneArg('c');
 }

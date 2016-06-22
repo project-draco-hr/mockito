@@ -1,7 +1,6 @@
 {
-  Thread t=waitAndExerciseMock(20);
-  t.start();
-  verify(mock,times(0)).clear();
-  expected.expect(MockitoAssertionError.class);
-  verify(mock,after(50).times(2)).clear();
+  callAsyncWithDelay(mock,'1',20,MILLISECONDS);
+  verify(mock,times(0)).oneArg('1');
+  exception.expect(MockitoAssertionError.class);
+  verify(mock,after(50).times(2)).oneArg('1');
 }

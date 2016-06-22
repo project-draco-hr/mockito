@@ -1,9 +1,8 @@
 {
-  Thread t=waitAndExerciseMock(20);
-  t.start();
-  verify(mock,timeout(100)).clear();
-  verify(mock,timeout(100).atLeastOnce()).clear();
-  verify(mock,timeout(100).times(1)).clear();
-  verify(mock).clear();
-  verify(mock,times(1)).clear();
+  callAsyncWithDelay(mock,'c',20,MILLISECONDS);
+  verify(mock,timeout(100)).oneArg('c');
+  verify(mock,timeout(100).atLeastOnce()).oneArg('c');
+  verify(mock,timeout(100).times(1)).oneArg('c');
+  verify(mock).oneArg('c');
+  verify(mock,times(1)).oneArg('c');
 }

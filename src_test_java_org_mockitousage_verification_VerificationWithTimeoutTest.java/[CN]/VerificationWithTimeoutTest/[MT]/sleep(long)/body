@@ -1,7 +1,0 @@
-{
-  try {
-    Thread.sleep(milliseconds);
-  }
- catch (  InterruptedException ignored) {
-  }
-}

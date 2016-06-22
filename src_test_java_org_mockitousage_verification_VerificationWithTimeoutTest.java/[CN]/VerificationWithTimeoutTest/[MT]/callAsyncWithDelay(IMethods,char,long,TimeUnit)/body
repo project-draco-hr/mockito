@@ -1,0 +1,9 @@
+{
+  Runnable task=new Runnable(){
+    @Override public void run(){
+      mock.oneArg(value);
+    }
+  }
+;
+  executor.schedule(task,delay,unit);
+}

@@ -1,9 +1,8 @@
 {
-  Thread t1=waitAndExerciseMock(20);
-  t1.start();
-  mock.add("foo");
+  callAsyncWithDelay(mock,'1',30,MILLISECONDS);
+  mock.oneArg('x');
   InOrder inOrder=inOrder(mock);
-  inOrder.verify(mock).add(anyString());
-  inOrder.verify(mock,never()).clear();
-  inOrder.verify(mock,timeout(500)).clear();
+  inOrder.verify(mock).oneArg('x');
+  inOrder.verify(mock,never()).oneArg('1');
+  inOrder.verify(mock,timeout(40)).oneArg('1');
 }

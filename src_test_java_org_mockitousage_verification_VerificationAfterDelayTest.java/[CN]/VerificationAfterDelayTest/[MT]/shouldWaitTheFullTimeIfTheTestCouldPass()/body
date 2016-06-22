@@ -1,12 +1,10 @@
 {
-  Thread t=waitAndExerciseMock(50);
-  t.start();
-  long startTime=System.currentTimeMillis();
+  callAsyncWithDelay(mock,'1',20,MILLISECONDS);
+  stopWatch.start();
   try {
-    verify(mock,after(100).atLeast(2)).clear();
-    fail();
+    verify(mock,after(100).atLeast(2)).oneArg('1');
   }
- catch (  MockitoAssertionError e) {
+ catch (  MockitoAssertionError ignored) {
   }
-  assertTrue(System.currentTimeMillis() - startTime >= 100);
+  stopWatch.assertElapsedTimeIsMoreThan(100,MILLISECONDS);
 }

@@ -1,0 +1,4 @@
+{
+  if (startNanos != null)   throw new IllegalStateException("This stop watch is already started!");
+  startNanos=nanoTime();
+}

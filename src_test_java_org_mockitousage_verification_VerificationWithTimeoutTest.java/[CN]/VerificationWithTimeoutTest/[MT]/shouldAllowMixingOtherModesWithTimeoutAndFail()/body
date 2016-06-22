@@ -1,13 +1,7 @@
 {
-  Thread t1=waitAndExerciseMock(30);
-  Thread t2=waitAndExerciseMock(30);
-  t1.start();
-  t2.start();
-  verify(mock,timeout(500).atLeast(1)).clear();
-  try {
-    verify(mock,timeout(100).times(3)).clear();
-    fail();
-  }
- catch (  TooLittleActualInvocations e) {
-  }
+  callAsyncWithDelay(mock,'c',20,MILLISECONDS);
+  callAsyncWithDelay(mock,'c',20,MILLISECONDS);
+  verify(mock,timeout(40).atLeast(1)).oneArg('c');
+  exception.expect(TooLittleActualInvocations.class);
+  verify(mock,timeout(50).times(3)).oneArg('c');
 }
