@@ -4,7 +4,7 @@
   final ExecutorService executorService=Executors.newFixedThreadPool(threadingFactor);
   final IMethods iMethods_that_store_invocations=mock(IMethods.class,withSettings().serializable());
   for (int i=0; i <= iterations; i++) {
-    List<Future> futures=new ArrayList<Future>(threadingFactor);
+    List<Future<?>> futures=new ArrayList<Future<?>>(threadingFactor);
     final CyclicBarrier barrier_that_will_wait_until_threads_are_ready=new CyclicBarrier(threadingFactor);
     for (int j=0; j < threadingFactor; j++) {
       futures.add(executorService.submit(new Callable<Object>(){
@@ -23,7 +23,7 @@
       }
 );
     }
-    for (    Future future : futures) {
+    for (    Future<?> future : futures) {
       future.get();
     }
   }

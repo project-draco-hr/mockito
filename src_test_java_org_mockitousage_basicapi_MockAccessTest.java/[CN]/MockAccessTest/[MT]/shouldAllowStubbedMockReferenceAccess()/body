@@ -1,5 +1,5 @@
 {
-  Set expectedMock=mock(Set.class);
-  Set returnedMock=when(expectedMock.isEmpty()).thenReturn(false).getMock();
+  Set<?> expectedMock=mock(Set.class);
+  Set<?> returnedMock=when(expectedMock.isEmpty()).thenReturn(false).getMock();
   assertEquals(expectedMock,returnedMock);
 }
