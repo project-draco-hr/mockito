@@ -1,5 +1,5 @@
 {
-  ArrayList mock=mock(ArrayList.class);
+  ArrayList<?> mock=mock(ArrayList.class);
   mock.clear();
   Invocation invocationOnClass=new MockitoCore().getLastInvocation();
   validator.validate(new CallsRealMethods(),invocationOnClass);

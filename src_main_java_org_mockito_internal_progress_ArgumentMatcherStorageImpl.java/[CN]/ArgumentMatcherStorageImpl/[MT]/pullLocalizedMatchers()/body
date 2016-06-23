@@ -4,5 +4,5 @@
   }
   List<LocalizedMatcher> matchers=new ArrayList<LocalizedMatcher>(matcherStack);
   matcherStack.clear();
-  return (List)matchers;
+  return matchers;
 }
