@@ -1,5 +1,5 @@
 {
-  CapturingMatcher m=new CapturingMatcher();
+  CapturingMatcher<String> m=new CapturingMatcher<String>();
   m.captureFrom("foo");
   m.captureFrom("bar");
   assertEquals("bar",m.getLastValue());

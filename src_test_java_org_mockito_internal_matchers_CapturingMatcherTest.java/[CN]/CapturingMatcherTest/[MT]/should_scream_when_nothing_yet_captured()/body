@@ -1,5 +1,5 @@
 {
-  CapturingMatcher m=new CapturingMatcher();
+  CapturingMatcher<String> m=new CapturingMatcher<String>();
   try {
     m.getLastValue();
     fail();
