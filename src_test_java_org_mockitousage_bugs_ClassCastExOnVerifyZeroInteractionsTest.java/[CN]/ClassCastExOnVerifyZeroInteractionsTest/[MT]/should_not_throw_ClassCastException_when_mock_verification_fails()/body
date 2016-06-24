@@ -1,5 +1,5 @@
 {
-  TestMock test=mock(TestMock.class,new Answer(){
+  TestMock test=mock(TestMock.class,new Answer<Object>(){
     public Object answer(    InvocationOnMock invocation) throws Throwable {
       return false;
     }

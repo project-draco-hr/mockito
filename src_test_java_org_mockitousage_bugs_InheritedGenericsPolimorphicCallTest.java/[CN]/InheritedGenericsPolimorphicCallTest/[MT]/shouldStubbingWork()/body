@@ -1,5 +1,5 @@
 {
   Mockito.when(iterable.iterator()).thenReturn(myIterator);
-  Assert.assertNotNull(((Iterable)iterable).iterator());
+  Assert.assertNotNull(((Iterable<String>)iterable).iterator());
   Assert.assertNotNull(iterable.iterator());
 }

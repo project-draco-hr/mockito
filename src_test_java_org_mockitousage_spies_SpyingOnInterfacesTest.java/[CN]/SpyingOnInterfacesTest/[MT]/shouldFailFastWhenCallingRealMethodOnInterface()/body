@@ -1,5 +1,5 @@
 {
-  List list=mock(List.class);
+  List<?> list=mock(List.class);
   try {
     when(list.get(0)).thenCallRealMethod();
     fail();

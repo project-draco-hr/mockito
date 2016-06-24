@@ -1,6 +1,6 @@
 {
-  List list=mock(List.class);
-  when(list.get(0)).thenAnswer(new Answer(){
+  List<Object> list=mock(List.class);
+  when(list.get(0)).thenAnswer(new Answer<Object>(){
     public Object answer(    InvocationOnMock invocation) throws Throwable {
       return invocation.callRealMethod();
     }
