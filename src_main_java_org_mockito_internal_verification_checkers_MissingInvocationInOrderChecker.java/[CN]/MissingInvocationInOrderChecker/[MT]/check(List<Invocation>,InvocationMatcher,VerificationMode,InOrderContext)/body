@@ -7,14 +7,5 @@
   if (previousInOrder != null) {
     throw wantedButNotInvokedInOrder(wanted,previousInOrder);
   }
-  List<Invocation> actualInvocations=findInvocations(invocations,wanted);
-  if (actualInvocations == null || actualInvocations.isEmpty()) {
-    Invocation similar=findSimilarInvocation(invocations,wanted);
-    if (similar != null) {
-      Integer[] indicesOfSimilarMatchingArguments=new ArgumentMatchingTool().getSuspiciouslyNotMatchingArgsIndexes(wanted.getMatchers(),similar.getArguments());
-      SmartPrinter smartPrinter=new SmartPrinter(wanted,similar,indicesOfSimilarMatchingArguments);
-      throw argumentsAreDifferent(smartPrinter.getWanted(),smartPrinter.getActual(),similar.getLocation());
-    }
-    throw wantedButNotInvoked(wanted);
-  }
+  new MissingInvocationChecker().check(invocations,wanted);
 }
