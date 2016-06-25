@@ -1,5 +1,5 @@
 {
-  ConstructorInjection.SimpleArgumentResolver resolver=new ConstructorInjection.SimpleArgumentResolver(newSetOf(new HashSet(),new ByteArrayOutputStream(),new HashMap()));
+  ConstructorInjection.SimpleArgumentResolver resolver=new ConstructorInjection.SimpleArgumentResolver(newSetOf(new HashSet<Long>(),new ByteArrayOutputStream(),new HashMap<String,String>()));
   Object[] resolvedInstance=resolver.resolveTypeInstances(Set.class,Map.class,OutputStream.class);
   assertEquals(3,resolvedInstance.length);
   assertTrue(resolvedInstance[0] instanceof Set);

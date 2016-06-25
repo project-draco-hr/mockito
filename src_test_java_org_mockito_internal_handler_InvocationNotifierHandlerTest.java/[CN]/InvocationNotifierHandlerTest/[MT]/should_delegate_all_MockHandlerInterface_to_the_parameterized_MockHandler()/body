@@ -1,7 +1,7 @@
 {
   notifier.getInvocationContainer();
   notifier.getMockSettings();
-  notifier.setAnswersForStubbing(new ArrayList<Answer>());
+  notifier.setAnswersForStubbing(new ArrayList<Answer<?>>());
   verify(mockHandler).getInvocationContainer();
   verify(mockHandler).getMockSettings();
   verify(mockHandler).setAnswersForStubbing(anyList());
