@@ -1,5 +1,5 @@
 {
-  List list=new LinkedList();
-  List filtered=ListUtil.filter(list,null);
+  List<Object> list=new LinkedList<Object>();
+  List<Object> filtered=ListUtil.filter(list,null);
   assertTrue(filtered.isEmpty());
 }

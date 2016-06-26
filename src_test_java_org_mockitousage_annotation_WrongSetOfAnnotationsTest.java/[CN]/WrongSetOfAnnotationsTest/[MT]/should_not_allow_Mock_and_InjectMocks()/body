@@ -1,6 +1,6 @@
 {
   MockitoAnnotations.initMocks(new Object(){
-    @InjectMocks @Mock List mock;
+    @InjectMocks @Mock List<?> mock;
   }
 );
 }

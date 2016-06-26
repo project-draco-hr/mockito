@@ -1,7 +1,7 @@
 {
-  List list=mock(List.class);
-  Map map=mock(Map.class);
-  Set set=mock(Set.class);
+  List<String> list=mock(List.class);
+  Map<Object,Integer> map=mock(Map.class);
+  Set<?> set=mock(Set.class);
   list.add("one");
   list.add("one");
   list.add("two");

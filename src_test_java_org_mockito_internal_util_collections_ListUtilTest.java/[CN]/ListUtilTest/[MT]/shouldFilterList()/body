@@ -1,7 +1,7 @@
 {
-  List list=asList("one","x","two","x","three");
-  List filtered=ListUtil.filter(list,new Filter(){
-    public boolean isOut(    Object object){
+  List<String> list=asList("one","x","two","x","three");
+  List<String> filtered=ListUtil.filter(list,new Filter<String>(){
+    public boolean isOut(    String object){
       return object == "x";
     }
   }

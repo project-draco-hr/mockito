@@ -1,5 +1,5 @@
 {
-  List list=Mockito.mock(List.class);
+  List<Object> list=Mockito.mock(List.class);
   list.add("test");
   list.contains(new Object[]{"1"});
   Mockito.verify(list).contains(new Object[]{"1","2","3"});

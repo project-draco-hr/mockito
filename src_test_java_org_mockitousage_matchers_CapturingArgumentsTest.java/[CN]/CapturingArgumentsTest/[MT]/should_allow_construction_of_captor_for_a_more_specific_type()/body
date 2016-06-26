@@ -1,4 +1,4 @@
 {
-  ArgumentCaptor<List> argument=ArgumentCaptor.forClass(ArrayList.class);
+  ArgumentCaptor<List<?>> argument=ArgumentCaptor.forClass(ArrayList.class);
   assertNotNull(argument);
 }

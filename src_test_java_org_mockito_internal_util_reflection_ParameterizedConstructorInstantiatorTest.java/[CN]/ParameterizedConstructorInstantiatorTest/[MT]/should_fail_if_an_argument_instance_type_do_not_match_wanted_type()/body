@@ -1,6 +1,6 @@
 {
   Observer observer=mock(Observer.class);
-  Set wrongArg=mock(Set.class);
+  Set<?> wrongArg=mock(Set.class);
   given(resolver.resolveTypeInstances(Matchers.<Class<?>[]>anyVararg())).willReturn(new Object[]{observer,wrongArg});
   try {
     new ParameterizedConstructorInstantiator(this,field("withMultipleConstructor"),resolver).instantiate();

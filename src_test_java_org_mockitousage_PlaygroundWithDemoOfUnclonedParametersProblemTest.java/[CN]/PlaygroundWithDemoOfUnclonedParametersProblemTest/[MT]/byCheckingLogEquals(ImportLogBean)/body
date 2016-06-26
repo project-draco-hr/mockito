@@ -1,5 +1,5 @@
 {
-  return new Answer(){
+  return new Answer<Object>(){
     public Object answer(    InvocationOnMock invocation) throws Throwable {
       ImportLogBean bean=invocation.getArgument(0);
       assertEquals(status,bean);

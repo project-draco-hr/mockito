@@ -1,6 +1,6 @@
 {
   MockitoAnnotations.initMocks(new Object(){
-    @Mock @Captor ArgumentCaptor captor;
+    @Mock @Captor ArgumentCaptor<?> captor;
   }
 );
 }
