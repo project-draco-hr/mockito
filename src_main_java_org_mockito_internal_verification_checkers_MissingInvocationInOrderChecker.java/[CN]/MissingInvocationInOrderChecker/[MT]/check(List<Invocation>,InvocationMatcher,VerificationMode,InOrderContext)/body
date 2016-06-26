@@ -1,22 +1,11 @@
 {
-  List<Invocation> chunk=finder.findAllMatchingUnverifiedChunks(invocations,wanted,context);
+  List<Invocation> chunk=findAllMatchingUnverifiedChunks(invocations,wanted,context);
   if (!chunk.isEmpty()) {
     return;
   }
-  Invocation previousInOrder=finder.findPreviousVerifiedInOrder(invocations,context);
-  if (previousInOrder == null) {
-    List<Invocation> actualInvocations=finder.findInvocations(invocations,wanted);
-    if (actualInvocations == null || actualInvocations.isEmpty()) {
-      Invocation similar=finder.findSimilarInvocation(invocations,wanted);
-      if (similar != null) {
-        Integer[] indicesOfSimilarMatchingArguments=new ArgumentMatchingTool().getSuspiciouslyNotMatchingArgsIndexes(wanted.getMatchers(),similar.getArguments());
-        SmartPrinter smartPrinter=new SmartPrinter(wanted,similar,indicesOfSimilarMatchingArguments);
-        throw argumentsAreDifferent(smartPrinter.getWanted(),smartPrinter.getActual(),similar.getLocation());
-      }
-      throw wantedButNotInvoked(wanted);
-    }
-  }
- else {
+  Invocation previousInOrder=findPreviousVerifiedInOrder(invocations,context);
+  if (previousInOrder != null) {
     throw wantedButNotInvokedInOrder(wanted,previousInOrder);
   }
+  new MissingInvocationChecker().check(invocations,wanted);
 }

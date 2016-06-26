@@ -1,13 +1,11 @@
 {
-  Invocation first=new InvocationBuilder().toInvocation();
-  Invocation second=new InvocationBuilder().toInvocation();
-  finderStub.validMatchingChunkToReturn.addAll(asList(first,second));
-  try {
-    checker.check(invocations,wanted,4,context);
-    fail();
-  }
- catch (  VerificationInOrderFailure e) {
-    assertContains("Wanted 4 times",e.getMessage());
-    assertContains("But was 2 times",e.getMessage());
-  }
+  Invocation first=buildSimpleMethod().toInvocation();
+  Invocation second=buildSimpleMethod().toInvocation();
+  wanted=buildSimpleMethod().toInvocationMatcher();
+  invocations=asList(first,second);
+  exception.expect(VerificationInOrderFailure.class);
+  exception.expectMessage("mock.simpleMethod()");
+  exception.expectMessage("Wanted 4 times");
+  exception.expectMessage("But was 2 times");
+  checker.check(invocations,wanted,4,context);
 }

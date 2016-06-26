@@ -1,5 +1,5 @@
 {
-  Invocation unverified=new InvocationsFinder().findFirstUnverified(data.getAllInvocations());
+  Invocation unverified=findFirstUnverified(data.getAllInvocations());
   if (unverified != null) {
     throw noMoreInteractionsWanted(unverified,(List)data.getAllInvocations());
   }

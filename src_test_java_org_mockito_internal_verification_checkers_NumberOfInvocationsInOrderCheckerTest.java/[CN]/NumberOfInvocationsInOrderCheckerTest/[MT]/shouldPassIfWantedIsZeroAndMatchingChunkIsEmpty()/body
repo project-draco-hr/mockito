@@ -1,4 +1,5 @@
 {
-  assertTrue(finderStub.validMatchingChunkToReturn.isEmpty());
+  wanted=buildSimpleMethod().toInvocationMatcher();
+  invocations=emptyList();
   checker.check(invocations,wanted,0,context);
 }

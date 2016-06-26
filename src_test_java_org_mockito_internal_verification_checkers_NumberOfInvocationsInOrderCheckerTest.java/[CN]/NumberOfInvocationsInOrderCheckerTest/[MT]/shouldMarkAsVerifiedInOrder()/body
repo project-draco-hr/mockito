@@ -1,7 +1,8 @@
 {
-  Invocation invocation=new InvocationBuilder().toInvocation();
-  assertFalse(context.isVerified(invocation));
-  finderStub.validMatchingChunkToReturn.addAll(asList(invocation));
+  Invocation invocation=buildSimpleMethod().toInvocation();
+  invocations=asList(invocation);
+  wanted=buildSimpleMethod().toInvocationMatcher();
+  assertThat(context.isVerified(invocation)).isFalse();
   checker.check(invocations,wanted,1,context);
-  assertTrue(context.isVerified(invocation));
+  assertThat(context.isVerified(invocation)).isTrue();
 }

@@ -1,8 +1,7 @@
 {
   List<Invocation> invocations=data.getAllInvocations();
   InvocationMatcher wanted=data.getWanted();
-  InvocationsFinder finder=new InvocationsFinder();
-  List<Invocation> found=finder.findInvocations(invocations,wanted);
+  List<Invocation> found=findInvocations(invocations,wanted);
   int foundSize=found.size();
   if (foundSize > maxNumberOfInvocations) {
     throw wantedAtMostX(maxNumberOfInvocations,foundSize);

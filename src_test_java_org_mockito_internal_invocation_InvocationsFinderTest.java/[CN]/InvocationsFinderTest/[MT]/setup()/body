@@ -3,5 +3,4 @@
   simpleMethodInvocationTwo=new InvocationBuilder().mock(mock).simpleMethod().seq(2).toInvocation();
   differentMethodInvocation=new InvocationBuilder().mock(mock).differentMethod().seq(3).toInvocation();
   invocations.addAll(Arrays.asList(simpleMethodInvocation,simpleMethodInvocationTwo,differentMethodInvocation));
-  finder=new InvocationsFinder();
 }

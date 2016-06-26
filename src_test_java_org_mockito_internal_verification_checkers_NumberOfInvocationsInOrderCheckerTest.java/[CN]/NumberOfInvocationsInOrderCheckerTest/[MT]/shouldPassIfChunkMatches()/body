@@ -1,4 +1,5 @@
 {
-  finderStub.validMatchingChunkToReturn.add(wanted.getInvocation());
+  wanted=buildSimpleMethod().toInvocationMatcher();
+  invocations=asList(buildSimpleMethod().toInvocation());
   checker.check(invocations,wanted,1,context);
 }

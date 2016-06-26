@@ -1,8 +1,8 @@
 {
-  List<Invocation> chunk=finder.findAllMatchingUnverifiedChunks(invocations,wanted,orderingContext);
+  List<Invocation> chunk=findAllMatchingUnverifiedChunks(invocations,wanted,orderingContext);
   int actualCount=chunk.size();
   if (wantedCount > actualCount) {
-    Location lastLocation=finder.getLastLocation(chunk);
+    Location lastLocation=getLastLocation(chunk);
     throw tooLittleActualInvocationsInOrder(new AtLeastDiscrepancy(wantedCount,actualCount),wanted,lastLocation);
   }
   markVerifiedInOrder(chunk,wanted,orderingContext);
