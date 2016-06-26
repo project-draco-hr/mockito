@@ -1,0 +1,6 @@
+{
+  Reference<?> reference;
+  while ((reference=poll()) != null) {
+    avoidingClassLeakageCache.remove(reference);
+  }
+}
