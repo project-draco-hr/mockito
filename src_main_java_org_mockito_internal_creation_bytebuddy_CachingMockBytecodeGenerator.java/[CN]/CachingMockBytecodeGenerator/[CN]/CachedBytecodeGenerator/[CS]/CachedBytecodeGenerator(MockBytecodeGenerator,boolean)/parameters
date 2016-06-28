@@ -1,1 +1,2 @@
 MockBytecodeGenerator generator
+boolean weak

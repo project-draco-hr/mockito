@@ -1,0 +1,5 @@
+{
+  if (this == object)   return true;
+  if (!(object instanceof Key))   return false;
+  return get() == ((Key)object).get();
+}

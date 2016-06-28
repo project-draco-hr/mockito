@@ -1,10 +1,4 @@
 {
-  avoidingClassLeakCacheLock.lock();
-  try {
-    Class<?> generatedMockClass=mockCachePerClassLoaderOf(params.mockedType).getOrGenerateMockClass(params);
-    return (Class<T>)generatedMockClass;
-  }
-  finally {
-    avoidingClassLeakCacheLock.unlock();
-  }
+  cleanUpCachesForObsoleteClassLoaders();
+  return (Class<T>)mockCachePerClassLoaderOf(params.mockedType.getClassLoader()).getOrGenerateMockClass(params);
 }

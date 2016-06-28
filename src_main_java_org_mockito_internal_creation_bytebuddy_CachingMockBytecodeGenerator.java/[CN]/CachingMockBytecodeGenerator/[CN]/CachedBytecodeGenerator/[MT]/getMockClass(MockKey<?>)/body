@@ -1,0 +1,9 @@
+{
+  Reference<Class<?>> classReference=generatedClassCache.get(mockKey);
+  if (classReference != null) {
+    return classReference.get();
+  }
+ else {
+    return null;
+  }
+}
