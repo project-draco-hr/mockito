@@ -7,7 +7,7 @@
         VerificationCollectorImpl.this.collectAndReport();
       }
   finally {
-        mockingProgress.setVerificationStrategy(MockingProgressImpl.getDefaultVerificationStrategy());
+        mockingProgress().setVerificationStrategy(MockingProgressImpl.getDefaultVerificationStrategy());
       }
     }
   }

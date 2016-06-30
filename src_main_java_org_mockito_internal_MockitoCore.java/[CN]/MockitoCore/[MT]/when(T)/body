@@ -1,4 +1,5 @@
 {
+  MockingProgress mockingProgress=mockingProgress();
   mockingProgress.stubbingStarted();
   @SuppressWarnings("unchecked") OngoingStubbing<T> stubbing=(OngoingStubbing<T>)mockingProgress.pullOngoingStubbing();
   if (stubbing == null) {

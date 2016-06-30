@@ -1,3 +1,0 @@
-{
-  threadSafely().verificationStarted(verify);
-}

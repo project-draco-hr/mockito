@@ -1,4 +1,3 @@
 {
-  this.mockingProgress=mockingProgress;
   this.registeredInvocations=createRegisteredInvocations(mockSettings);
 }

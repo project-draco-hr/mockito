@@ -1,5 +1,5 @@
 {
-  mockingProgress.setVerificationStrategy(new VerificationStrategy(){
+  mockingProgress().setVerificationStrategy(new VerificationStrategy(){
     public VerificationMode maybeVerifyLazily(    VerificationMode mode){
       return new VerificationWrapper(mode);
     }

@@ -1,5 +1,5 @@
 {
-  mockingProgress.setVerificationStrategy(MockingProgressImpl.getDefaultVerificationStrategy());
+  mockingProgress().setVerificationStrategy(MockingProgressImpl.getDefaultVerificationStrategy());
   if (this.numberOfFailures > 0) {
     String error=this.builder.toString();
     this.resetBuilder();

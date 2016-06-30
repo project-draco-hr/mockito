@@ -1,6 +1,6 @@
 {
   Invocation invocation=invocationForStubbing.getInvocation();
-  mockingProgress.stubbingCompleted(invocation);
+  mockingProgress().stubbingCompleted(invocation);
   AnswersValidator answersValidator=new AnswersValidator();
   answersValidator.validate(answer,invocation);
 synchronized (stubbed) {

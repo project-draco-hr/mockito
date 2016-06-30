@@ -1,3 +1,3 @@
 {
-  MOCKING_PROGRESS.getArgumentMatcherStorage().reportMatcher(new HamcrestArgumentMatcher<T>(matcher));
+  mockingProgress().getArgumentMatcherStorage().reportMatcher(new HamcrestArgumentMatcher<T>(matcher));
 }

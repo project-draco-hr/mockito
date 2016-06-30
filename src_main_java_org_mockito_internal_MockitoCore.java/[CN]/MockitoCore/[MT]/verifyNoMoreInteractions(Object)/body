@@ -1,6 +1,6 @@
 {
   assertMocksNotEmpty(mocks);
-  mockingProgress.validateState();
+  mockingProgress().validateState();
   for (  Object mock : mocks) {
     try {
       if (mock == null) {

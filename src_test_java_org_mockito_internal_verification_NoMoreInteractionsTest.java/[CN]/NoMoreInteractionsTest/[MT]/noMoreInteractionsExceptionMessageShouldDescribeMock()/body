@@ -2,7 +2,7 @@
   NoMoreInteractions n=new NoMoreInteractions();
   IMethods mock=mock(IMethods.class,"a mock");
   InvocationMatcher i=new InvocationBuilder().mock(mock).toInvocationMatcher();
-  InvocationContainerImpl invocations=new InvocationContainerImpl(new ThreadSafeMockingProgress(),new MockSettingsImpl());
+  InvocationContainerImpl invocations=new InvocationContainerImpl(new MockSettingsImpl());
   invocations.setInvocationForPotentialStubbing(i);
   try {
     n.verify(new VerificationDataImpl(invocations,null));
