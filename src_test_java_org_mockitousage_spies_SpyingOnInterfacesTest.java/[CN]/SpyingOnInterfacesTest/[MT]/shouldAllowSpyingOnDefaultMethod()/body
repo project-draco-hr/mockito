@@ -1,0 +1,8 @@
+{
+  assumeTrue(ClassFileVersion.forCurrentJavaVersion().isAtLeast(ClassFileVersion.JAVA_V8));
+  Class<?> iFace=new ByteBuddy().makeInterface().modifiers(Visibility.PUBLIC,TypeManifestation.INTERFACE).defineMethod("foo",String.class,Visibility.PUBLIC).intercept(FixedValue.value("bar")).make().load(getClass().getClassLoader(),ClassLoadingStrategy.Default.WRAPPER).getLoaded();
+  Class<?> impl=new ByteBuddy().subclass(iFace).make().load(iFace.getClassLoader(),ClassLoadingStrategy.Default.WRAPPER).getLoaded();
+  Object object=spy(impl.newInstance());
+  assertThat(impl.getMethod("foo").invoke(object),is((Object)"bar"));
+  impl.getMethod("foo").invoke(verify(object));
+}
