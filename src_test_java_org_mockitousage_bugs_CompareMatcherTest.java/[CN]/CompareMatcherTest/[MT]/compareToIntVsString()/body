@@ -1,0 +1,4 @@
+{
+  when(mock.forObject(leq(5))).thenReturn("");
+  mock.forObject("abc");
+}

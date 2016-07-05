@@ -1,0 +1,4 @@
+{
+  when(mock.forInteger(leq((Integer)null))).thenReturn("");
+  assertThat(mock.forInteger(null)).isNull();
+}

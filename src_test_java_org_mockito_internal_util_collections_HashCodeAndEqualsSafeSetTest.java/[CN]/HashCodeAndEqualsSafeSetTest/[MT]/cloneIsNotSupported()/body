@@ -1,0 +1,3 @@
+{
+  HashCodeAndEqualsSafeSet.of().clone();
+}

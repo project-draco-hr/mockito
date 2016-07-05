@@ -1,0 +1,4 @@
+{
+  HashCodeAndEqualsSafeSet set=HashCodeAndEqualsSafeSet.of(mock1);
+  assertThat(set.toString()).isNotEmpty();
+}

@@ -1,5 +1,5 @@
 {
-  HashCodeAndEqualsSafeSet mocks=HashCodeAndEqualsSafeSet.of(mock(UnmockableHashCodeAndEquals.class),mock(Observer.class));
+  HashCodeAndEqualsSafeSet mocks=HashCodeAndEqualsSafeSet.of(mock1,mock(Observer.class));
   LinkedList<Object> accumulator=new LinkedList<Object>();
   for (  Object mock : mocks) {
     accumulator.add(mock);

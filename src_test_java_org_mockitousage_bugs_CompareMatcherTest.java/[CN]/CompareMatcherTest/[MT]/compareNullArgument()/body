@@ -1,0 +1,5 @@
+{
+  final IMethods mock=mock(IMethods.class);
+  when(mock.forInteger(leq(5))).thenReturn("");
+  assertThat(mock.forInteger(null)).isNull();
+}

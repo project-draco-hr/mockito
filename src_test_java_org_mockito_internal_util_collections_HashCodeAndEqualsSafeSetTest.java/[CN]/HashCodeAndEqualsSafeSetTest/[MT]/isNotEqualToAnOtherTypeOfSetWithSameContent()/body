@@ -1,0 +1,4 @@
+{
+  HashCodeAndEqualsSafeSet set=HashCodeAndEqualsSafeSet.of();
+  assertThat(set).isNotEqualTo(new HashSet<Object>());
+}

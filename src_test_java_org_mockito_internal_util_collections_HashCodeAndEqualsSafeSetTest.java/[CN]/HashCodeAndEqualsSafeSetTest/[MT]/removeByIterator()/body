@@ -1,0 +1,7 @@
+{
+  HashCodeAndEqualsSafeSet set=HashCodeAndEqualsSafeSet.of(mock1);
+  Iterator<Object> iterator=set.iterator();
+  iterator.next();
+  iterator.remove();
+  assertThat(set).isEmpty();
+}

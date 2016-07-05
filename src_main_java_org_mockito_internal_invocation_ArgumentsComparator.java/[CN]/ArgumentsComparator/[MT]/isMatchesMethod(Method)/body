@@ -1,0 +1,9 @@
+{
+  if (method.getParameterTypes().length != 1) {
+    return false;
+  }
+  if (method.isBridge()) {
+    return false;
+  }
+  return method.getName().equals("matches");
+}

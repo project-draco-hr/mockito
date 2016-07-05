@@ -1,0 +1,4 @@
+{
+  when(mock.forObject(startsWith("Hello"))).thenReturn("");
+  assertThat(mock.forObject(123)).isNull();
+}

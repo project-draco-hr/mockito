@@ -1,0 +1,5 @@
+{
+  if (argument == null)   return true;
+  Class<?> expectedArgumentType=getArgumentType(argumentMatcher);
+  return expectedArgumentType.isInstance(argument);
+}
