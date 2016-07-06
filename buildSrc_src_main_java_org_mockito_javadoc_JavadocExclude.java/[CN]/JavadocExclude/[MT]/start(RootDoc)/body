@@ -1,0 +1,4 @@
+{
+  Class clz=root.getClass();
+  return HtmlDoclet.start((RootDoc)Proxy.newProxyInstance(clz.getClassLoader(),clz.getInterfaces(),new ExcludeHandler(root)));
+}
