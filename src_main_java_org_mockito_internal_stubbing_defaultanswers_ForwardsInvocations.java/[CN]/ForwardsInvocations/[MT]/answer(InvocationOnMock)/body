@@ -1,13 +1,12 @@
 {
   Method mockMethod=invocation.getMethod();
-  Object result=null;
   try {
     Method delegateMethod=getDelegateMethod(mockMethod);
     if (!compatibleReturnTypes(mockMethod.getReturnType(),delegateMethod.getReturnType())) {
       throw delegatedMethodHasWrongReturnType(mockMethod,delegateMethod,invocation.getMock(),delegatedObject);
     }
     Object[] rawArguments=((Invocation)invocation).getRawArguments();
-    result=delegateMethod.invoke(delegatedObject,rawArguments);
+    return delegateMethod.invoke(delegatedObject,rawArguments);
   }
  catch (  NoSuchMethodException e) {
     throw delegatedMethodDoesNotExistOnDelegate(mockMethod,invocation.getMock(),delegatedObject);
@@ -15,5 +14,4 @@
 catch (  InvocationTargetException e) {
     throw e.getCause();
   }
-  return result;
 }

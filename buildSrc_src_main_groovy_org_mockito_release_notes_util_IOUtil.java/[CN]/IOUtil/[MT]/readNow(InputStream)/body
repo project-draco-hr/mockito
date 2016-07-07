@@ -1,5 +1,5 @@
 {
-  java.util.Scanner s=new java.util.Scanner(is).useDelimiter("\\A");
+  Scanner s=new Scanner(is).useDelimiter("\\A");
   try {
     return s.hasNext() ? s.next() : "";
   }

@@ -1,5 +1,5 @@
 {
-  Throwable throwable=(Throwable)ObjenesisHelper.newInstance(throwableClass);
+  Throwable throwable=ObjenesisHelper.newInstance(throwableClass);
   throwable.fillInStackTrace();
   filter.filter(throwable);
   throw throwable;
