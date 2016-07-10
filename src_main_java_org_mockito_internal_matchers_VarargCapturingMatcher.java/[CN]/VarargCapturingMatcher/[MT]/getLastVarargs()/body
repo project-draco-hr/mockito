@@ -1,6 +1,0 @@
-{
-  if (arguments.isEmpty()) {
-    throw noArgumentValueWasCaptured();
-  }
-  return arguments.getLast();
-}

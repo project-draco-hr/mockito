@@ -1,9 +1,0 @@
-{
-  VarargCapturingMatcher<Object> m=new VarargCapturingMatcher<Object>();
-  try {
-    m.getLastVarargs();
-    fail();
-  }
- catch (  MockitoException e) {
-  }
-}

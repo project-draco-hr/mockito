@@ -1,4 +1,4 @@
 {
-  reportMatcher(AnyVararg.ANY_VARARG);
+  any();
   return null;
 }

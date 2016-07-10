@@ -1,4 +1,0 @@
-{
-  List<T> vararg=unpackAsList(varArgArray);
-  this.arguments.add(vararg);
-}
