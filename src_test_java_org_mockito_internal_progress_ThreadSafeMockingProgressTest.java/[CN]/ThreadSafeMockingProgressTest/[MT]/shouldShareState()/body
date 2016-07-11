@@ -1,6 +1,6 @@
 {
-  ThreadSafeMockingProgress p=new ThreadSafeMockingProgress();
+  MockingProgress p=mockingProgress();
   p.verificationStarted(new DummyVerificationMode());
-  p=new ThreadSafeMockingProgress();
+  p=mockingProgress();
   assertNotNull(p.pullVerificationMode());
 }

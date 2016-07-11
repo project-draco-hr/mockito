@@ -1,5 +1,5 @@
 {
   verify(mock(List.class));
-  ThreadSafeMockingProgress p=new ThreadSafeMockingProgress();
+  MockingProgress p=mockingProgress();
   assertNotNull(p.pullVerificationMode());
 }

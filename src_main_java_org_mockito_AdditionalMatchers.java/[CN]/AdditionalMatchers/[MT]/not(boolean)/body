@@ -1,4 +1,4 @@
 {
-  MOCKING_PROGRESS.getArgumentMatcherStorage().reportNot();
+  mockingProgress().getArgumentMatcherStorage().reportNot();
   return false;
 }

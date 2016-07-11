@@ -1,5 +1,5 @@
 {
-  mockingProgress.validateState();
+  mockingProgress().validateState();
   VerifiableInvocationsFinder finder=new VerifiableInvocationsFinder();
   VerificationDataInOrder data=new VerificationDataInOrderImpl(inOrderContext,finder.find(mocks),null);
   VerificationModeFactory.noMoreInteractions().verifyInOrder(data);

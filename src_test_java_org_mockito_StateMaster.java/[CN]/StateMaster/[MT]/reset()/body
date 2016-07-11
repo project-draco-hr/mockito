@@ -1,4 +1,4 @@
 {
-  mockingProgress.reset();
-  mockingProgress.resetOngoingStubbing();
+  mockingProgress().reset();
+  mockingProgress().resetOngoingStubbing();
 }
