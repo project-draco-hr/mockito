@@ -1,4 +1,4 @@
 List<Invocation> invocations
 InvocationMatcher wanted
-VerificationMode mode
-InOrderContext context
+int wantedCount
+InOrderContext orderingContext

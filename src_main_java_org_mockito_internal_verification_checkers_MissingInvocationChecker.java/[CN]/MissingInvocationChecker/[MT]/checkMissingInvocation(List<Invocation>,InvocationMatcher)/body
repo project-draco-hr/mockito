@@ -1,0 +1,14 @@
+{
+  List<Invocation> actualInvocations=findInvocations(invocations,wanted);
+  if (!actualInvocations.isEmpty()) {
+    return;
+  }
+  Invocation similar=findSimilarInvocation(invocations,wanted);
+  if (similar == null) {
+    throw wantedButNotInvoked(wanted,invocations);
+  }
+  ArgumentMatchingTool argumentMatchingTool=new ArgumentMatchingTool();
+  Integer[] indexesOfSuspiciousArgs=argumentMatchingTool.getSuspiciouslyNotMatchingArgsIndexes(wanted.getMatchers(),similar.getArguments());
+  SmartPrinter smartPrinter=new SmartPrinter(wanted,similar,indexesOfSuspiciousArgs);
+  throw argumentsAreDifferent(smartPrinter.getWanted(),smartPrinter.getActual(),similar.getLocation());
+}

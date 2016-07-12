@@ -10,5 +10,5 @@
   exception.expectMessage("mock.intArgumentMethod(2222);");
   exception.expectMessage("Wanted anywhere AFTER following interaction:");
   exception.expectMessage("mock.intArgumentMethod(2222);");
-  checker.check(invocations,wanted,new VerificationModeBuilder().inOrder(),context);
+  checkMissingInvocation(invocations,wanted,context);
 }

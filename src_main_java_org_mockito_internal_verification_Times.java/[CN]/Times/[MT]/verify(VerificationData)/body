@@ -1,7 +1,6 @@
 {
   if (wantedCount > 0) {
-    MissingInvocationChecker missingInvocation=new MissingInvocationChecker();
-    missingInvocation.check(data.getAllInvocations(),data.getWanted());
+    checkMissingInvocation(data.getAllInvocations(),data.getWanted());
   }
   NumberOfInvocationsChecker numberOfInvocations=new NumberOfInvocationsChecker();
   numberOfInvocations.check(data.getAllInvocations(),data.getWanted(),wantedCount);

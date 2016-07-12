@@ -6,5 +6,5 @@
   exception.expectMessage("mock.simpleMethod()");
   exception.expectMessage("However, there were other interactions with this mock:");
   exception.expectMessage("mock.differentMethod();");
-  checker.check(invocations,wanted);
+  MissingInvocationChecker.checkMissingInvocation(invocations,wanted);
 }

@@ -1,5 +1,5 @@
 {
   invocations=asList(buildSimpleMethod().toInvocation());
   wanted=buildSimpleMethod().toInvocationMatcher();
-  checker.check(invocations,wanted,new VerificationModeBuilder().inOrder(),context);
+  checkMissingInvocation(invocations,wanted,context);
 }
