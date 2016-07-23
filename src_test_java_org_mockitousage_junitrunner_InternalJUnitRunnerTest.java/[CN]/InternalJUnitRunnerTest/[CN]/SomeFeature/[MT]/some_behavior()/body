@@ -1,0 +1,4 @@
+{
+  when(list.get(0)).thenReturn("0");
+  assertEquals("0",list.get(0));
+}

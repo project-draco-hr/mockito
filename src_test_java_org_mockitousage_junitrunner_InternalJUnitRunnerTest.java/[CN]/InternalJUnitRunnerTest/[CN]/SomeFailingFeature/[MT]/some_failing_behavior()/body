@@ -1,0 +1,4 @@
+{
+  list.clear();
+  verify(list,times(2)).clear();
+}
