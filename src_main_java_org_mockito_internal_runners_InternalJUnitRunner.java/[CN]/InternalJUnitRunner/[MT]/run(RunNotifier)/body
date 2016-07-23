@@ -1,15 +1,3 @@
 {
-  UnnecessaryStubbingsReporter reporter=new UnnecessaryStubbingsReporter();
-  MockitoJUnitListener listener=new MockitoJUnitListener(notifier);
-  MockitoFramework.setStubbingListener(reporter);
-  try {
-    notifier.addListener(listener);
-    runner.run(notifier);
-  }
-  finally {
-    MockitoFramework.setStubbingListener(null);
-  }
-  if (!filterRequested && listener.isSussessful()) {
-    reporter.report(testClass,notifier);
-  }
+  runner.run(notifier);
 }

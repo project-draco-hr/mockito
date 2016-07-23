@@ -1,0 +1,4 @@
+{
+  Result result=runner.run(SomeFeature.class);
+  assertThat(result).isSuccessful();
+}

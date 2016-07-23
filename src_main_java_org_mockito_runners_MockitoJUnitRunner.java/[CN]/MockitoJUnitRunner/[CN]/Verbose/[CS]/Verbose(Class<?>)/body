@@ -1,0 +1,3 @@
+{
+  super(new VerboseRunner(new RunnerFactory().create(klass)));
+}

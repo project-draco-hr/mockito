@@ -1,0 +1,3 @@
+{
+  super(new StrictRunner(new RunnerFactory().create(klass),klass));
+}

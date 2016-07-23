@@ -1,0 +1,4 @@
+{
+  this.runner=runner;
+  this.testClass=testClass;
+}
