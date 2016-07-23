@@ -1,0 +1,3 @@
+{
+  return stackTrace.replaceAll("(\\((\\w+\\.java):(\\d)+\\))","($2:0)");
+}

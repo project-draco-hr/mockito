@@ -1,4 +1,0 @@
-{
-  String name=this.getClass().getSimpleName();
-  return text.replaceAll(name + "\\.java:(\\d)+",name + ".java:100");
-}

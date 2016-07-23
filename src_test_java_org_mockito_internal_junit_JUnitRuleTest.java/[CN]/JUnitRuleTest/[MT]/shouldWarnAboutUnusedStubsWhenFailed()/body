@@ -12,6 +12,6 @@
   }
  catch (  AssertionError e) {
     assertEquals("x",e.getMessage());
-    assertEquals(removeLineNo(logger.getLoggedInfo()),removeLineNo("[Mockito] Additional stubbing information (see javadoc for StubbingInfo class):\n" + "[Mockito]\n" + "[Mockito] Unused stubbing (perhaps can be removed from the test?):\n"+ "[Mockito]\n"+ "[Mockito] 1. -> at org.mockito.internal.junit.JUnitRuleTest.declareUnusedStub(JUnitRuleTest.java:82)"));
+    assertEquals(filterLineNo(logger.getLoggedInfo()),"[Mockito] Additional stubbing information (see javadoc for StubbingInfo class):\n" + "[Mockito]\n" + "[Mockito] Unused stubbing (perhaps can be removed from the test?):\n"+ "[Mockito]\n"+ "[Mockito] 1. -> at org.mockito.internal.junit.JUnitRuleTest.declareUnusedStub(JUnitRuleTest.java:0)");
   }
 }
