@@ -1,0 +1,5 @@
+{
+  FrameworkUsageValidator listener=new FrameworkUsageValidator(notifier);
+  notifier.addListener(listener);
+  runner.run(notifier);
+}

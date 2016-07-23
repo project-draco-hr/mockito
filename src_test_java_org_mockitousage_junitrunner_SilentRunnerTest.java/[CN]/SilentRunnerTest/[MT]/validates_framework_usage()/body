@@ -1,0 +1,4 @@
+{
+  Result result=runner.run(UsesFrameworkIncorrectly.class);
+  assertThat(result).fails(1,UnfinishedStubbingException.class);
+}

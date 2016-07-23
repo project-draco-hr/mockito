@@ -1,6 +1,6 @@
 {
   UnnecessaryStubbingsReporter reporter=new UnnecessaryStubbingsReporter();
-  MockitoJUnitListener listener=new MockitoJUnitListener(notifier);
+  FailureDetecter listener=new FailureDetecter();
   MockitoFramework.setStubbingListener(reporter);
   try {
     notifier.addListener(listener);
