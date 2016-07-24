@@ -1,2 +1,2 @@
 InternalMockHandler<T> mockHandler
-MockCreationSettings<?> settings
+MockCreationSettings<T> settings
