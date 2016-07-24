@@ -2,6 +2,6 @@
   mock.mixedVarargs(null,null,"2");
   Invocation invocation=getLastInvocation();
   InvocationMatcher invocationMatcher=new InvocationMatcher(invocation,(List)asList(new Equals(null),ANY));
-  boolean match=comparator.argumentsMatch(invocationMatcher,invocation);
+  boolean match=argumentsMatch(invocationMatcher,invocation);
   assertTrue(match);
 }
