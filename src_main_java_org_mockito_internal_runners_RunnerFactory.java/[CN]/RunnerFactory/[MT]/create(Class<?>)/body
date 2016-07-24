@@ -3,7 +3,7 @@
     return new RunnerProvider().newInstance("org.mockito.internal.runners.SilentJUnitRunner",klass);
   }
  catch (  InvocationTargetException e) {
-    if (!new TestMethodsFinder().hasTestMethods(klass)) {
+    if (!hasTestMethods(klass)) {
       throw new MockitoException("\n" + "\n" + "No tests found in " + klass.getSimpleName() + "\n"+ "Haven't you forgot @Test annotation?\n",e);
     }
     throw e;
