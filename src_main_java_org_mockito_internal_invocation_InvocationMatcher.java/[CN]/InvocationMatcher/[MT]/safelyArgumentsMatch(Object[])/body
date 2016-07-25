@@ -1,6 +1,6 @@
 {
   try {
-    return new ArgumentsComparator().argumentsMatch(this,actualArgs);
+    return argumentsMatch(this,actualArgs);
   }
  catch (  Throwable t) {
     return false;
