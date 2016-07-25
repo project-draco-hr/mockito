@@ -4,7 +4,7 @@
     allInvocations="Actually, there were zero interactions with this mock.\n";
   }
  else {
-    StringBuilder sb=new StringBuilder("\nHowever, there were other interactions with this mock:\n");
+    StringBuilder sb=new StringBuilder("\nHowever, there " + were_exactly_x_interactions(invocations.size()) + " with this mock:\n");
     for (    DescribedInvocation i : invocations) {
       sb.append(i.toString()).append("\n").append(i.getLocation()).append("\n\n");
     }
