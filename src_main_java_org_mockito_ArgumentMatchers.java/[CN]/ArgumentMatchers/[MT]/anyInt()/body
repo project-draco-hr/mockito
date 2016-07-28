@@ -1,4 +1,4 @@
 {
-  reportMatcher(new InstanceOf(Integer.class));
+  reportMatcher(new InstanceOf(Integer.class,"<any integer>"));
   return 0;
 }

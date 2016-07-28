@@ -1,4 +1,4 @@
 {
-  reportMatcher(new InstanceOf(Short.class));
+  reportMatcher(new InstanceOf(Short.class,"<any short>"));
   return 0;
 }

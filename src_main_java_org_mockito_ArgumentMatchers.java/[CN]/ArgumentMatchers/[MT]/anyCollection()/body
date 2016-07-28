@@ -1,4 +1,4 @@
 {
-  reportMatcher(new InstanceOf(Collection.class));
+  reportMatcher(new InstanceOf(Collection.class,"<any collection>"));
   return new ArrayList(0);
 }
