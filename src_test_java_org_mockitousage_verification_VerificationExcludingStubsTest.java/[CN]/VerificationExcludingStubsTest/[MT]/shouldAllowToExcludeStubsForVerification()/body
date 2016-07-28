@@ -9,7 +9,6 @@
   }
  catch (  NoInteractionsWanted e) {
   }
-  ;
   ignoreStubs(mock);
   verifyNoMoreInteractions(mock);
 }
