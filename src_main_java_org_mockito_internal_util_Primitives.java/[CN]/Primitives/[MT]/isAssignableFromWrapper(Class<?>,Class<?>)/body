@@ -1,0 +1,6 @@
+{
+  if (isPrimitiveOrWrapper(valueClass) && isPrimitiveOrWrapper(referenceType)) {
+    return Primitives.primitiveTypeOf(valueClass).isAssignableFrom(referenceType);
+  }
+  return false;
+}

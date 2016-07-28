@@ -1,0 +1,5 @@
+{
+  assertThat(new InstanceOf(Object.class).toString()).contains("isA").contains("Object");
+  assertThat(new InstanceOf(Object[].class).toString()).contains("isA").contains("Object[]");
+  assertThat(new InstanceOf(Object.class,"matches something").toString()).isEqualTo("matches something");
+}

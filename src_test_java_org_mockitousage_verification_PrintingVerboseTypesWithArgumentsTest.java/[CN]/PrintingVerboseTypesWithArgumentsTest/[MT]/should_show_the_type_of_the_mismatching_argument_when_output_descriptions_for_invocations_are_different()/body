@@ -6,7 +6,6 @@
     fail();
   }
  catch (  ArgumentsAreDifferent e) {
-    assertContains("withLongAndInt((Long) 100, 200)",e.getMessage());
-    assertContains("withLongAndInt((Integer) 100, <any>",e.getMessage());
+    Assertions.assertThat(e.getMessage()).contains("withLongAndInt(\n" + "    (Long) 100,\n" + "    200\n"+ ")").contains("withLongAndInt(\n" + "    (Integer) 100,\n" + "    <any java.lang.Integer>\n"+ ")");
   }
 }

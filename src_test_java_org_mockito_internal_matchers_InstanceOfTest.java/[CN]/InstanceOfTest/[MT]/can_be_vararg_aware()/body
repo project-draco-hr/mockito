@@ -1,0 +1,6 @@
+{
+  assertThat(new InstanceOf.VarArgAware(Number[].class)).isInstanceOf(VarargMatcher.class);
+  assertThat(new InstanceOf.VarArgAware(Number[].class).matches(new Integer[0])).isTrue();
+  assertThat(new InstanceOf.VarArgAware(Number[].class).matches(new Number[0])).isTrue();
+  assertThat(new InstanceOf.VarArgAware(Number[].class).matches(new Object[0])).isFalse();
+}
