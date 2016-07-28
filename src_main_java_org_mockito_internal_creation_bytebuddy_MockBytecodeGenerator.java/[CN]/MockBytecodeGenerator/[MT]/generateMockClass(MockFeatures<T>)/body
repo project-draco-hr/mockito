@@ -3,5 +3,5 @@
   if (features.crossClassLoaderSerializable) {
     builder=builder.implement(CrossClassLoaderSerializableMock.class).intercept(to(MockMethodInterceptor.ForWriteReplace.class));
   }
-  return builder.make().load(new MultipleParentClassLoader.Builder().append(features.mockedType).append(features.interfaces).append(Thread.currentThread().getContextClassLoader()).append(MockAccess.class,DispatcherDefaultingToRealMethod.class).append(MockMethodInterceptor.class,MockMethodInterceptor.ForHashCode.class,MockMethodInterceptor.ForEquals.class).build(),ClassLoadingStrategy.Default.INJECTION).getLoaded();
+  return builder.make().load(new MultipleParentClassLoader.Builder().append(features.mockedType).append(features.interfaces).append(Thread.currentThread().getContextClassLoader()).append(MockAccess.class,DispatcherDefaultingToRealMethod.class).append(MockMethodInterceptor.class,MockMethodInterceptor.ForHashCode.class,MockMethodInterceptor.ForEquals.class).build(),ClassLoadingStrategy.Default.INJECTION.with(features.mockedType.getProtectionDomain())).getLoaded();
 }
