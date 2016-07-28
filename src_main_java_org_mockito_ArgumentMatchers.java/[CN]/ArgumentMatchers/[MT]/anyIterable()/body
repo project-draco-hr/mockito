@@ -1,0 +1,4 @@
+{
+  reportMatcher(new InstanceOf(Iterable.class));
+  return new ArrayList(0);
+}

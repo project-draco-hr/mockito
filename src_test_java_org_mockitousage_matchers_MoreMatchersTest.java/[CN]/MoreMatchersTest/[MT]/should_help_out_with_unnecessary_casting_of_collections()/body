@@ -1,5 +1,5 @@
 {
-  when(mock.collectionArgMethod(anyCollectionOf(String.class))).thenReturn("col");
-  assertEquals("col",mock.collectionArgMethod(new ArrayList<String>()));
-  assertEquals("col",mock.collectionArgMethod(Collections.<String>emptyList()));
+  when(mock.collectionArgMethod(anyCollectionOf(String.class))).thenReturn("collection");
+  assertEquals("collection",mock.collectionArgMethod(new ArrayList<String>()));
+  assertEquals("collection",mock.collectionArgMethod(Collections.<String>emptyList()));
 }
