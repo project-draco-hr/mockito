@@ -4,6 +4,6 @@
     fail();
   }
  catch (  WantedButNotInvoked e) {
-    assertThat(e,hasFirstMethodInStackTrace("shouldFilterStackTraceOnVerify"));
+    Assertions.assertThat(e).has(firstMethodInStackTrace("shouldFilterStackTraceOnVerify"));
   }
 }

@@ -1,5 +1,5 @@
 {
   JUnitCore runner=new JUnitCore();
   Result result=runner.run(HasUnnecessaryStubs.class);
-  assertThat(result).isSuccessful();
+  JUnitResultAssert.assertThat(result).isSuccessful();
 }

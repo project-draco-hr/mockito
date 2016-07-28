@@ -5,6 +5,6 @@
     fail();
   }
  catch (  NoInteractionsWanted e) {
-    assertThat(e,hasFirstMethodInStackTrace("shouldFilterStackTraceOnVerifyNoMoreInteractions"));
+    Assertions.assertThat(e).has(firstMethodInStackTrace("shouldFilterStackTraceOnVerifyNoMoreInteractions"));
   }
 }

@@ -1,6 +1,6 @@
 {
   List<Invocation> actual=InvocationsFinder.findInvocations(invocations,new InvocationMatcher(simpleMethodInvocation));
-  assertThat(actual,hasExactlyInOrder(simpleMethodInvocation,simpleMethodInvocationTwo));
+  Assertions.assertThat(actual).containsSequence(simpleMethodInvocation,simpleMethodInvocationTwo);
   actual=InvocationsFinder.findInvocations(invocations,new InvocationMatcher(differentMethodInvocation));
-  assertThat(actual,hasExactlyInOrder(differentMethodInvocation));
+  Assertions.assertThat(actual).containsSequence(differentMethodInvocation);
 }

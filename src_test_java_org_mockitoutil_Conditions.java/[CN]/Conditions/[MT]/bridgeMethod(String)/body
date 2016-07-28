@@ -1,6 +1,6 @@
 {
-  return new Assertor<Object>(){
-    public void assertValue(    Object o){
+  return new Condition<Object>(){
+    public boolean matches(    Object o){
       Class<?> clazz=null;
       if (o instanceof Class) {
         clazz=(Class<?>)o;
@@ -10,10 +10,11 @@
       }
       for (      Method m : clazz.getMethods()) {
         if (m.isBridge() && m.getName().equals(methodName)) {
-          return;
+          return true;
         }
       }
-      fail("Bridge method [" + methodName + "]\nnot found in:\n"+ o);
+      Assertions.fail("Bridge method [" + methodName + "]\nnot found in:\n"+ o);
+      return false;
     }
   }
 ;

@@ -1,4 +1,4 @@
 {
   invocation=new InvocationBuilder().args("veeeeery long string that makes it ugly in one line",1).toInvocation();
-  assertThat(invocation.toString(),endsWith("simpleMethod(" + "\n" + "    \"veeeeery long string that makes it ugly in one line\","+ "\n"+ "    1"+ "\n"+ ");"));
+  Assertions.assertThat(invocation.toString()).endsWith("simpleMethod(" + "\n" + "    \"veeeeery long string that makes it ugly in one line\","+ "\n"+ "    1"+ "\n"+ ");");
 }

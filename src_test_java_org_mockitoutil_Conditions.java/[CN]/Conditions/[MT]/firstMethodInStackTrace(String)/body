@@ -1,0 +1,3 @@
+{
+  return methodInStackTraceAt(0,method);
+}

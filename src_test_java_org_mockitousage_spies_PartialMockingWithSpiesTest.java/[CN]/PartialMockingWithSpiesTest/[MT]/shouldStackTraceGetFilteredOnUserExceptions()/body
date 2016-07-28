@@ -4,6 +4,6 @@
     fail();
   }
  catch (  Throwable t) {
-    assertThat(t,ExtraMatchers.hasMethodsInStackTrace("throwSomeException","getNameButDelegateToMethodThatThrows","shouldStackTraceGetFilteredOnUserExceptions"));
+    Assertions.assertThat(t).has(methodsInStackTrace("throwSomeException","getNameButDelegateToMethodThatThrows","shouldStackTraceGetFilteredOnUserExceptions"));
   }
 }

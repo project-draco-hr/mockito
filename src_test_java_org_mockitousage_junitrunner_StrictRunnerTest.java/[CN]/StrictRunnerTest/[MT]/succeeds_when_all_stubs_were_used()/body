@@ -1,4 +1,4 @@
 {
   Result result=runner.run(StubbingInConstructorUsed.class,StubbingInBeforeUsed.class,StubbingInTestUsed.class);
-  assertThat(result).isSuccessful();
+  JUnitResultAssert.assertThat(result).isSuccessful();
 }

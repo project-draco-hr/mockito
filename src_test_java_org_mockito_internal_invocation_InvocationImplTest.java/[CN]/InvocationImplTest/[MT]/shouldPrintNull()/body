@@ -1,4 +1,4 @@
 {
   invocation=new InvocationBuilder().args((String)null).toInvocation();
-  assertThat(invocation.toString(),endsWith("simpleMethod(null);"));
+  Assertions.assertThat(invocation.toString()).endsWith("simpleMethod(null);");
 }

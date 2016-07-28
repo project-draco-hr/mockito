@@ -1,4 +1,4 @@
 {
   Result result=runner.run(SomeFailingFeature.class);
-  assertThat(result).fails(1,TooLittleActualInvocations.class);
+  JUnitResultAssert.assertThat(result).fails(1,TooLittleActualInvocations.class);
 }
