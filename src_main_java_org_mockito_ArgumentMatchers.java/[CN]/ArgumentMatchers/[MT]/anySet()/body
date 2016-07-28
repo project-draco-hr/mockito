@@ -1,4 +1,4 @@
 {
   reportMatcher(new InstanceOf(Set.class));
-  return new HashSet();
+  return new HashSet(0);
 }
