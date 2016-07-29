@@ -1,3 +1,0 @@
-{
-  assertFalse("\n" + "This substring:" + sub + "\n"+ "should NOT be inside of:"+ string+ "\n",string.contains(sub));
-}
