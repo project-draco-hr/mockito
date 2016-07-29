@@ -1,4 +1,3 @@
 {
-  reportMatcher(NotNull.NOT_NULL);
-  return null;
+  return notNull();
 }
