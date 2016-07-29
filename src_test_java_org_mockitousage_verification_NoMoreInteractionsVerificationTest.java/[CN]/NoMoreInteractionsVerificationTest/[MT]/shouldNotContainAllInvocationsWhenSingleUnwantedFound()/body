@@ -5,6 +5,6 @@
     fail();
   }
  catch (  NoInteractionsWanted e) {
-    assertNotContains("list of all invocations",e.getMessage());
+    assertThat(e.getMessage()).doesNotContain("list of all invocations");
   }
 }

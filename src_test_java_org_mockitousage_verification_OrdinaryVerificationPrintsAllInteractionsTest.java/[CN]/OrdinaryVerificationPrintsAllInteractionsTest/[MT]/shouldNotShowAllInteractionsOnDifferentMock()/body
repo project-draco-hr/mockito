@@ -6,7 +6,6 @@
     fail();
   }
  catch (  WantedButNotInvoked e) {
-    assertContains("firstInteraction(",e.getMessage());
-    assertNotContains("differentMockInteraction(",e.getMessage());
+    assertThat(e.getMessage()).contains("firstInteraction(").doesNotContain("differentMockInteraction(");
   }
 }

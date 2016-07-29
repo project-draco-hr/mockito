@@ -1,5 +1,5 @@
 {
   SmartPrinter printer=new SmartPrinter(shortie,shortie.getInvocation());
-  assertNotContains("\n",printer.getWanted().toString());
-  assertNotContains("\n",printer.getActual().toString());
+  assertThat(printer.getWanted().toString()).doesNotContain("\n");
+  assertThat(printer.getActual().toString()).doesNotContain("\n");
 }
