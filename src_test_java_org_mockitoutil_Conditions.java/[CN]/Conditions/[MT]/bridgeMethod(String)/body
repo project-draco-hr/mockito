@@ -1,0 +1,21 @@
+{
+  return new Condition<Object>(){
+    public boolean matches(    Object o){
+      Class<?> clazz=null;
+      if (o instanceof Class) {
+        clazz=(Class<?>)o;
+      }
+ else {
+        clazz=o.getClass();
+      }
+      for (      Method m : clazz.getMethods()) {
+        if (m.isBridge() && m.getName().equals(methodName)) {
+          return true;
+        }
+      }
+      Assertions.fail("Bridge method [" + methodName + "]\nnot found in:\n"+ o);
+      return false;
+    }
+  }
+;
+}

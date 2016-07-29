@@ -1,4 +1,4 @@
 {
-  reportMatcher(new InstanceOf(Map.class));
-  return new HashMap();
+  reportMatcher(new InstanceOf(Map.class,"<any map>"));
+  return new HashMap(0);
 }

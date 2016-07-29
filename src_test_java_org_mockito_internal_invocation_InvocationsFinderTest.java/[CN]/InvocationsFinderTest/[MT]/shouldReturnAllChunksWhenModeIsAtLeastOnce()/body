@@ -2,5 +2,5 @@
   Invocation simpleMethodInvocationThree=new InvocationBuilder().mock(mock).toInvocation();
   invocations.add(simpleMethodInvocationThree);
   List<Invocation> chunk=InvocationsFinder.findMatchingChunk(invocations,new InvocationMatcher(simpleMethodInvocation),1,context);
-  assertThat(chunk,hasExactlyInOrder(simpleMethodInvocation,simpleMethodInvocationTwo,simpleMethodInvocationThree));
+  Assertions.assertThat(chunk).containsSequence(simpleMethodInvocation,simpleMethodInvocationTwo,simpleMethodInvocationThree);
 }

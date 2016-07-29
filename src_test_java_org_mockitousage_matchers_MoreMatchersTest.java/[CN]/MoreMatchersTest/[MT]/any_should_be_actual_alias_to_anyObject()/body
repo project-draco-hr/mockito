@@ -1,0 +1,5 @@
+{
+  mock.simpleMethod((Object)null);
+  verify(mock).simpleMethod(any());
+  verify(mock).simpleMethod(anyObject());
+}

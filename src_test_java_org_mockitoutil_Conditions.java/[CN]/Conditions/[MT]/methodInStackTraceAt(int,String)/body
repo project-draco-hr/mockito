@@ -1,0 +1,13 @@
+{
+  return new Condition<Throwable>(){
+    private String actualMethodAtIndex;
+    @Override public boolean matches(    Throwable throwable){
+      actualMethodAtIndex=throwable.getStackTrace()[stackTraceIndex].getMethodName();
+      return actualMethodAtIndex.equals(method);
+    }
+    @Override public Description description(){
+      return new TextDescription("Method at index: %d\nexpected to be: %s\nbut is: %s",stackTraceIndex,method,actualMethodAtIndex);
+    }
+  }
+;
+}

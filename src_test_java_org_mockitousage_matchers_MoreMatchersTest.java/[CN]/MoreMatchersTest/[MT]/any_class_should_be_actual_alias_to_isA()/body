@@ -1,0 +1,18 @@
+{
+  mock.simpleMethod(new ArrayList());
+  verify(mock).simpleMethod(isA(List.class));
+  verify(mock).simpleMethod(any(List.class));
+  mock.simpleMethod((String)null);
+  try {
+    verify(mock).simpleMethod(isA(String.class));
+    fail();
+  }
+ catch (  AssertionError ignored) {
+  }
+  try {
+    verify(mock).simpleMethod(any(String.class));
+    fail();
+  }
+ catch (  AssertionError ignored) {
+  }
+}

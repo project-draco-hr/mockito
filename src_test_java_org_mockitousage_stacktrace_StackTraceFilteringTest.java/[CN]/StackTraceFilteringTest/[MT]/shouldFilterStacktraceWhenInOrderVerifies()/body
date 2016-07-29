@@ -5,6 +5,6 @@
     fail();
   }
  catch (  MockitoException expected) {
-    assertThat(expected,hasFirstMethodInStackTrace("shouldFilterStacktraceWhenInOrderVerifies"));
+    Assertions.assertThat(expected).has(firstMethodInStackTrace("shouldFilterStacktraceWhenInOrderVerifies"));
   }
 }

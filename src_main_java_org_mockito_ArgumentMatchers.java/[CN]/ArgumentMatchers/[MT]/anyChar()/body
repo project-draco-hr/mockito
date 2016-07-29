@@ -1,4 +1,4 @@
 {
-  reportMatcher(new InstanceOf(Character.class));
+  reportMatcher(new InstanceOf(Character.class,"<any char>"));
   return 0;
 }

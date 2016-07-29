@@ -1,0 +1,13 @@
+{
+  return new Condition<Throwable>(){
+    @Override public boolean matches(    Throwable traceElements){
+      StackTraceElement[] trace=traceElements.getStackTrace();
+      Assertions.assertThat(trace.length).describedAs("Number of classes does not match.\nExpected: %s\nGot: %s",Arrays.toString(classes),Arrays.toString(traceElements.getStackTrace())).isEqualTo(classes.length);
+      for (int i=0; i < trace.length; i++) {
+        Assertions.assertThat(trace[i].getClassName()).isEqualTo(classes[i]);
+      }
+      return true;
+    }
+  }
+;
+}

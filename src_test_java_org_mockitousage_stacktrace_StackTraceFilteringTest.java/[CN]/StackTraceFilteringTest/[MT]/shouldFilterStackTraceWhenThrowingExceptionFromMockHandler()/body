@@ -4,6 +4,6 @@
     fail();
   }
  catch (  MockitoException expected) {
-    assertThat(expected,hasFirstMethodInStackTrace("shouldFilterStackTraceWhenThrowingExceptionFromMockHandler"));
+    Assertions.assertThat(expected).has(firstMethodInStackTrace("shouldFilterStackTraceWhenThrowingExceptionFromMockHandler"));
   }
 }

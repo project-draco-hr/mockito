@@ -6,5 +6,5 @@
     }
   }
 );
-  assertThat(filtered,hasExactlyInOrder("one","two","three"));
+  Assertions.assertThat(filtered).containsSequence("one","two","three");
 }

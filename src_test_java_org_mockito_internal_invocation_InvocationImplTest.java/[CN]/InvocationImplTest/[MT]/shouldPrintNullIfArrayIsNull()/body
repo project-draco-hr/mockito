@@ -1,5 +1,5 @@
 {
   Method m=IMethods.class.getMethod("oneArray",Object[].class);
   invocation=new InvocationBuilder().method(m).args((Object)null).toInvocation();
-  assertThat(invocation.toString(),endsWith("oneArray(null);"));
+  Assertions.assertThat(invocation.toString()).endsWith("oneArray(null);");
 }

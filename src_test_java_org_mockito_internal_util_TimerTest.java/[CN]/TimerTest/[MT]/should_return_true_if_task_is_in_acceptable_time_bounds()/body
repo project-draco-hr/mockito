@@ -2,5 +2,5 @@
   long duration=10000L;
   Timer timer=new Timer(duration);
   timer.start();
-  assertThat(timer.isCounting(),is(true));
+  Assertions.assertThat(timer.isCounting()).isTrue();
 }

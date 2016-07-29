@@ -5,6 +5,6 @@
     fail();
   }
  catch (  RuntimeException e) {
-    assertThat(e,hasFirstMethodInStackTrace("shouldShowProperExceptionStackTrace"));
+    Assertions.assertThat(e).has(firstMethodInStackTrace("shouldShowProperExceptionStackTrace"));
   }
 }

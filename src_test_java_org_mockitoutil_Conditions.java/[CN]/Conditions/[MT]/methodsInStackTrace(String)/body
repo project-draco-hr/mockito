@@ -1,0 +1,12 @@
+{
+  return new Condition<Throwable>(){
+    public boolean matches(    Throwable value){
+      StackTraceElement[] trace=value.getStackTrace();
+      for (int i=0; i < methods.length; i++) {
+        Assertions.assertThat(trace[i].getMethodName()).describedAs("Expected methods[%d] to be in the stack trace.",i).isEqualTo(methods[i]);
+      }
+      return true;
+    }
+  }
+;
+}

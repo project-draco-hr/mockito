@@ -1,0 +1,11 @@
+{
+  Boo boo=mock(Boo.class);
+  boo.withLongAndInt(100,200);
+  try {
+    verify(boo).withLongAndInt(eq(100),any(Integer.class));
+    fail();
+  }
+ catch (  ArgumentsAreDifferent e) {
+    Assertions.assertThat(e.getMessage()).contains("withLongAndInt(\n" + "    (Long) 100,\n" + "    200\n"+ ")").contains("withLongAndInt(\n" + "    (Integer) 100,\n" + "    <any java.lang.Integer>\n"+ ")");
+  }
+}

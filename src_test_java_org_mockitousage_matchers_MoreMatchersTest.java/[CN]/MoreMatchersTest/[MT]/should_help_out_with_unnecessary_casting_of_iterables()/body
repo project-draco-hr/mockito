@@ -1,0 +1,5 @@
+{
+  when(mock.iterableArgMethod(anyIterableOf(String.class))).thenReturn("iterable");
+  assertEquals("iterable",mock.iterableArgMethod(new ArrayList<String>()));
+  assertEquals("iterable",mock.iterableArgMethod(Collections.<String>emptyList()));
+}

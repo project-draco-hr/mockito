@@ -1,3 +1,0 @@
-{
-  return hasMethodInStackTraceAt(0,method);
-}

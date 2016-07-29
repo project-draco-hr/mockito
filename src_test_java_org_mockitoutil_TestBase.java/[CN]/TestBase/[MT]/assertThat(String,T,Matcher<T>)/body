@@ -1,3 +1,0 @@
-{
-  org.junit.Assert.assertThat(message,actual,m);
-}

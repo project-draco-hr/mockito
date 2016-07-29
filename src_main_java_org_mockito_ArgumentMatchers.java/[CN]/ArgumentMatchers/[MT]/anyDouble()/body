@@ -1,4 +1,4 @@
 {
-  reportMatcher(new InstanceOf(Double.class));
+  reportMatcher(new InstanceOf(Double.class,"<any double>"));
   return 0;
 }

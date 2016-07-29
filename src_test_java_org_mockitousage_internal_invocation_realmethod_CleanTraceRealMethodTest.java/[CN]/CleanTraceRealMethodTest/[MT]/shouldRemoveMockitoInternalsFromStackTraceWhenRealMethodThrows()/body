@@ -10,8 +10,8 @@
     fail();
   }
  catch (  Exception e) {
-    assertThat(e,hasMethodInStackTraceAt(0,"throwSomething"));
-    assertThat(e,hasMethodInStackTraceAt(1,"invoke"));
-    assertThat(e,hasMethodInStackTraceAt(2,"shouldRemoveMockitoInternalsFromStackTraceWhenRealMethodThrows"));
+    Assertions.assertThat(e).has(methodInStackTraceAt(0,"throwSomething"));
+    Assertions.assertThat(e).has(methodInStackTraceAt(1,"invoke"));
+    Assertions.assertThat(e).has(methodInStackTraceAt(2,"shouldRemoveMockitoInternalsFromStackTraceWhenRealMethodThrows"));
   }
 }
