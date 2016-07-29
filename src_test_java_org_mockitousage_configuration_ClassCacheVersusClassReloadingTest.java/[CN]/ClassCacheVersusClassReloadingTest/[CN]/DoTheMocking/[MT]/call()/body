@@ -1,4 +1,4 @@
 {
-  Class clazz=this.getClass().getClassLoader().loadClass("org.mockitousage.configuration.ClassToBeMocked");
+  Class<?> clazz=this.getClass().getClassLoader().loadClass("org.mockitousage.configuration.ClassToBeMocked");
   return mock(clazz);
 }
