@@ -2,5 +2,5 @@
   given(mock.giveMeSomeString("different arg")).willReturn("foo");
   mock.giveMeSomeString("arg");
   String log=NewMockito.debug().printInvocations(mock,mockTwo);
-  assertContainsIgnoringCase("unused",log);
+  assertThat(log).containsIgnoringCase("unused");
 }

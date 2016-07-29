@@ -1,3 +1,0 @@
-{
-  assertTrue("\n" + "This substring:" + sub + "\n"+ "should be inside of:"+ string+ "\n",containsIgnoringCase(string,sub));
-}
