@@ -1,0 +1,8 @@
+{
+  for (Iterator<Invocation> iterator=invocations.iterator(); iterator.hasNext(); ) {
+    Invocation i=iterator.next();
+    if (i.isVerified()) {
+      iterator.remove();
+    }
+  }
+}

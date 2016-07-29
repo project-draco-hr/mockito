@@ -13,5 +13,6 @@
     Location firstUndesired=actualInvocations.get(wantedCount).getLocation();
     throw tooManyActualInvocations(wantedCount,actualCount,wanted,firstUndesired);
   }
+  removeAlreadyVerified(actualInvocations);
   markVerified(actualInvocations,wanted);
 }
