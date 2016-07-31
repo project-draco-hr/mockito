@@ -3,7 +3,7 @@
   if (!fieldReader.isNull() && field.isAnnotationPresent(Spy.class)) {
     try {
       Object instance=fieldReader.read();
-      if (new MockUtil().isMock(instance)) {
+      if (MockUtil.isMock(instance)) {
         Mockito.reset(instance);
       }
  else {

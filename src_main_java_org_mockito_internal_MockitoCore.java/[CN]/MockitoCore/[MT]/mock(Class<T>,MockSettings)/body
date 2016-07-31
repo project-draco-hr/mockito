@@ -4,7 +4,7 @@
   }
   MockSettingsImpl impl=MockSettingsImpl.class.cast(settings);
   MockCreationSettings<T> creationSettings=impl.confirm(typeToMock);
-  T mock=mockUtil.createMock(creationSettings);
+  T mock=createMock(creationSettings);
   mockingProgress().mockingStarted(mock,typeToMock);
   return mock;
 }

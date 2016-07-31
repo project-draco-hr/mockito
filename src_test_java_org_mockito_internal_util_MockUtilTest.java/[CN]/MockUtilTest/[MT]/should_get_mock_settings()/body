@@ -1,4 +1,4 @@
 {
   List<?> mock=Mockito.mock(List.class);
-  assertNotNull(mockUtil.getMockSettings(mock));
+  assertNotNull(MockUtil.getMockSettings(mock));
 }

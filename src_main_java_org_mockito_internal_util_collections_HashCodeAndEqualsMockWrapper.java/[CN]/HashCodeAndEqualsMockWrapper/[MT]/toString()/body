@@ -1,4 +1,3 @@
 {
-  MockUtil mockUtil=new MockUtil();
-  return "HashCodeAndEqualsMockWrapper{" + "mockInstance=" + (mockUtil.isMock(mockInstance) ? mockUtil.getMockName(mockInstance) : typeInstanceString()) + '}';
+  return "HashCodeAndEqualsMockWrapper{" + "mockInstance=" + (MockUtil.isMock(mockInstance) ? MockUtil.getMockName(mockInstance) : typeInstanceString()) + '}';
 }

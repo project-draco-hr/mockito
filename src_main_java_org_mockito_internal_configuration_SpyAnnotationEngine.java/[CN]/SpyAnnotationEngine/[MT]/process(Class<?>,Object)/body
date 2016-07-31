@@ -8,7 +8,7 @@
       try {
         instance=field.get(testInstance);
         assertNotInterface(instance,field.getType());
-        if (new MockUtil().isMock(instance)) {
+        if (MockUtil.isMock(instance)) {
           Mockito.reset(instance);
         }
  else         if (instance != null) {

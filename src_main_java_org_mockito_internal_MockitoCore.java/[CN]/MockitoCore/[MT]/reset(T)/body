@@ -4,6 +4,6 @@
   mockingProgress.reset();
   mockingProgress.resetOngoingStubbing();
   for (  T m : mocks) {
-    mockUtil.resetMock(m);
+    resetMock(m);
   }
 }

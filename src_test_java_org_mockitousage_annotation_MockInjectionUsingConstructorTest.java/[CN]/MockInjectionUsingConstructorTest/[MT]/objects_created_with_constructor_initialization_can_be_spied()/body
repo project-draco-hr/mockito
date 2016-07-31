@@ -1,4 +1,4 @@
 {
-  assertFalse(mockUtil.isMock(articleManager));
-  assertTrue(mockUtil.isMock(spiedArticleManager));
+  assertFalse(MockUtil.isMock(articleManager));
+  assertTrue(MockUtil.isMock(spiedArticleManager));
 }

@@ -3,7 +3,7 @@
     return instance;
   }
   if (isMockOrSpy(instance)) {
-    mockUtil.maybeRedefineMockName(instance,field.getName());
+    MockUtil.maybeRedefineMockName(instance,field.getName());
     return instance;
   }
   return null;

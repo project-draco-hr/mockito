@@ -1,5 +1,5 @@
 {
-  TypeMockability typeMockability=mockUtil.typeMockabilityOf(classToMock);
+  TypeMockability typeMockability=MockUtil.typeMockabilityOf(classToMock);
   if (!typeMockability.mockable()) {
     throw cannotMockClass(classToMock,typeMockability.nonMockableReason());
   }

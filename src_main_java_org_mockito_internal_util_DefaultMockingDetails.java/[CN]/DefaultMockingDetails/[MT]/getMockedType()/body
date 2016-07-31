@@ -1,3 +1,3 @@
 {
-  return delegate.getMockHandler(toInspect).getMockSettings().getTypeToMock();
+  return getMockHandler(toInspect).getMockSettings().getTypeToMock();
 }

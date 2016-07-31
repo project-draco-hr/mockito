@@ -1,6 +1,6 @@
 {
   for (  Object m : mocks) {
-    InvocationContainer invocationContainer=new MockUtil().getMockHandler(m).getInvocationContainer();
+    InvocationContainer invocationContainer=getMockHandler(m).getInvocationContainer();
     List<Invocation> ins=invocationContainer.getInvocations();
     for (    Invocation in : ins) {
       if (in.stubInfo() != null) {

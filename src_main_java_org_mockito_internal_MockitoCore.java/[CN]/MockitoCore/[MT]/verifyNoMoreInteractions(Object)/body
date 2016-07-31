@@ -6,7 +6,7 @@
       if (mock == null) {
         throw nullPassedToVerifyNoMoreInteractions();
       }
-      InvocationContainer invocations=mockUtil.getMockHandler(mock).getInvocationContainer();
+      InvocationContainer invocations=getMockHandler(mock).getInvocationContainer();
       VerificationDataImpl data=new VerificationDataImpl(invocations,null);
       noMoreInteractions().verify(data);
     }

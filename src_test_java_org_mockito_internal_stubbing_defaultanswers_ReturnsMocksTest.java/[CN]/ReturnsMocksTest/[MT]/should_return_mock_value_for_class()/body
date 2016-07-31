@@ -1,4 +1,4 @@
 {
   Object classMock=values.returnValueFor(BarClass.class);
-  assertTrue(new MockUtil().isMock(classMock));
+  assertTrue(MockUtil.isMock(classMock));
 }

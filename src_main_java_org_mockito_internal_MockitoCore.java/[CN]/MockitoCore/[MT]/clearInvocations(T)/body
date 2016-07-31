@@ -4,6 +4,6 @@
   mockingProgress.reset();
   mockingProgress.resetOngoingStubbing();
   for (  T m : mocks) {
-    mockUtil.getMockHandler(m).getInvocationContainer().clearInvocations();
+    getMockHandler(m).getInvocationContainer().clearInvocations();
   }
 }

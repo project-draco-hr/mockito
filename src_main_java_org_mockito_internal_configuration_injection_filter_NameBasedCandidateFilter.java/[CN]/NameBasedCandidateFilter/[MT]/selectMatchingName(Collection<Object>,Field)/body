@@ -1,7 +1,7 @@
 {
   List<Object> mockNameMatches=new ArrayList<Object>();
   for (  Object mock : mocks) {
-    if (candidateFieldToBeInjected.getName().equals(mockUtil.getMockName(mock).toString())) {
+    if (candidateFieldToBeInjected.getName().equals(getMockName(mock).toString())) {
       mockNameMatches.add(mock);
     }
   }

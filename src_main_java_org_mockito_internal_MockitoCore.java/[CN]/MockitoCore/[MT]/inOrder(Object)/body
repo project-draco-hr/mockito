@@ -6,7 +6,7 @@
     if (mock == null) {
       throw nullPassedWhenCreatingInOrder();
     }
-    if (!mockUtil.isMock(mock)) {
+    if (!isMock(mock)) {
       throw notAMockPassedWhenCreatingInOrder();
     }
   }
