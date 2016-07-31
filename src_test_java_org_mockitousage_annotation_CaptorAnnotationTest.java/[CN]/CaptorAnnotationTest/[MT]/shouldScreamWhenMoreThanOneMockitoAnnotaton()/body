@@ -4,7 +4,6 @@
     fail();
   }
  catch (  MockitoException e) {
-    assertContains("missingGenericsField",e.getMessage());
-    assertContains("multiple Mockito annotations",e.getMessage());
+    assertThat(e).hasMessageContaining("missingGenericsField").hasMessageContaining("multiple Mockito annotations");
   }
 }

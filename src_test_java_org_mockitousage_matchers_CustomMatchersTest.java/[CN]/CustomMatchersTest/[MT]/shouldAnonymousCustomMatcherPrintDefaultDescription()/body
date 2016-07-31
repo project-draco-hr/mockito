@@ -10,7 +10,6 @@
     fail();
   }
  catch (  AssertionError e) {
-    assertContains("<custom argument matcher>",e.getMessage());
-    assertContains("foo",e.getMessage());
+    assertThat(e).hasMessageContaining("<custom argument matcher>").hasMessageContaining("foo");
   }
 }

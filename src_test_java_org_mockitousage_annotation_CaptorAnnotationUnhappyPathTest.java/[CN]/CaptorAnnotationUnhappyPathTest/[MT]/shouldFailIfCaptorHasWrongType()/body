@@ -4,7 +4,6 @@
     fail();
   }
  catch (  MockitoException e) {
-    assertContains("notACaptorField",e.getMessage());
-    assertContains("wrong type",e.getMessage());
+    assertThat(e).hasMessageContaining("notACaptorField").hasMessageContaining("wrong type");
   }
 }

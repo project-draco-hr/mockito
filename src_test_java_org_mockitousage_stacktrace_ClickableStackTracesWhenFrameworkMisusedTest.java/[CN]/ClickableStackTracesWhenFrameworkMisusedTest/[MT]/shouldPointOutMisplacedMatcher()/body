@@ -5,7 +5,6 @@
     fail();
   }
  catch (  InvalidUseOfMatchersException e) {
-    assertContains("-> at ",e.getMessage());
-    assertContains("misplacedArgumentMatcherHere(",e.getMessage());
+    assertThat(e).hasMessageContaining("-> at ").hasMessageContaining("misplacedArgumentMatcherHere(");
   }
 }

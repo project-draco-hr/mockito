@@ -5,6 +5,6 @@
     fail();
   }
  catch (  VerificationInOrderFailure e) {
-    assertContains("Wanted but not invoked",e.getMessage());
+    assertThat(e).hasMessageContaining("Wanted but not invoked");
   }
 }

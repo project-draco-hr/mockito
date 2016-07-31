@@ -4,7 +4,6 @@
     fail();
   }
  catch (  MockitoException e) {
-    assertContains("void method",e.getMessage());
-    assertContains("cannot",e.getMessage());
+    assertThat(e).hasMessageContaining("void method").hasMessageContaining("cannot");
   }
 }

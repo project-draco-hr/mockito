@@ -5,6 +5,6 @@
     fail();
   }
  catch (  VerificationInOrderFailure e) {
-    assertContains("second(",e.getMessage());
+    assertThat(e).hasMessageContaining("second(");
   }
 }

@@ -6,7 +6,6 @@
     fail();
   }
  catch (  SmartNullPointerException e) {
-    assertContains("oompa",e.getMessage());
-    assertContains("lumpa",e.getMessage());
+    assertThat(e).hasMessageContaining("oompa").hasMessageContaining("lumpa");
   }
 }

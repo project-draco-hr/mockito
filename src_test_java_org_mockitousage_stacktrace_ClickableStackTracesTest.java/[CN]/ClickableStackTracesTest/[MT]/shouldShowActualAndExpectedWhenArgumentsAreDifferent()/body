@@ -5,7 +5,6 @@
     fail();
   }
  catch (  ArgumentsAreDifferent e) {
-    assertContains("callMethodOnMock(",e.getMessage());
-    assertContains("verifyTheMock(",e.getMessage());
+    assertThat(e).hasMessageContaining("callMethodOnMock(").hasMessageContaining("verifyTheMock(");
   }
 }

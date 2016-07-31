@@ -5,6 +5,6 @@
     fail();
   }
  catch (  InvalidUseOfMatchersException e) {
-    assertContains("Misplaced argument matcher",e.getMessage());
+    assertThat(e).hasMessageContaining("Misplaced argument matcher");
   }
 }

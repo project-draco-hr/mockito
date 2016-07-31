@@ -4,6 +4,6 @@
     fail();
   }
  catch (  NeverWantedButInvoked e) {
-    assertContains("first(",e.getMessage());
+    assertThat(e).hasMessageContaining("first(");
   }
 }

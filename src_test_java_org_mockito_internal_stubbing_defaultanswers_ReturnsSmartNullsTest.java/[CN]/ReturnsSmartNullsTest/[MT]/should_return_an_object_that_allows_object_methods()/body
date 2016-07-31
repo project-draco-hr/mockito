@@ -1,6 +1,5 @@
 {
   Answer<Object> answer=new ReturnsSmartNulls();
   Foo smartNull=(Foo)answer.answer(invocationOf(Foo.class,"get"));
-  assertContains("SmartNull returned by",smartNull + "");
-  assertContains("foo.get()",smartNull + "");
+  assertThat(smartNull.toString()).contains("SmartNull returned by").contains("foo.get()");
 }

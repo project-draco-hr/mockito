@@ -4,6 +4,6 @@
     fail();
   }
  catch (  Exception e) {
-    assertContains("null cannot be returned by intReturningMethod",e.getMessage());
+    assertThat(e).hasMessageContaining("null cannot be returned by intReturningMethod");
   }
 }

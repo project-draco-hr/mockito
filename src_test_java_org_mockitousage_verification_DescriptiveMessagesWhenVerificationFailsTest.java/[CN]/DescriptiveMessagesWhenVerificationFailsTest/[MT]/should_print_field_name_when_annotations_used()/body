@@ -5,7 +5,6 @@
     fail();
   }
  catch (  ArgumentsAreDifferent e) {
-    assertContains("iHavefunkyName.simpleMethod(20)",e.getMessage());
-    assertContains("iHavefunkyName.simpleMethod(10)",e.getMessage());
+    assertThat(e).hasMessageContaining("iHavefunkyName.simpleMethod(20)").hasMessageContaining("iHavefunkyName.simpleMethod(10)");
   }
 }

@@ -4,6 +4,6 @@
     fail();
   }
  catch (  MockitoException e) {
-    assertContains("Only void methods can doNothing()",e.getMessage());
+    assertThat(e).hasMessageContaining("Only void methods can doNothing()");
   }
 }

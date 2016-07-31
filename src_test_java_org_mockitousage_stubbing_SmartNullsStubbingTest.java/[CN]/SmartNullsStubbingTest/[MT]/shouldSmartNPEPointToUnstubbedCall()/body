@@ -5,6 +5,6 @@
     fail();
   }
  catch (  SmartNullPointerException e) {
-    assertContains("unstubbedMethodInvokedHere(",e.getMessage());
+    assertThat(e).hasMessageContaining("unstubbedMethodInvokedHere(");
   }
 }

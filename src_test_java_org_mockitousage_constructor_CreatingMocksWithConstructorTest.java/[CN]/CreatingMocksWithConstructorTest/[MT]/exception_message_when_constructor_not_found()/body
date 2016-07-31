@@ -4,7 +4,7 @@
     fail();
   }
  catch (  MockitoException e) {
-    assertEquals("Unable to create mock instance of type 'HasConstructor'",e.getMessage());
-    assertContains("0-arg constructor",e.getCause().getMessage());
+    assertThat(e).hasMessage("Unable to create mock instance of type 'HasConstructor'");
+    assertThat(e.getCause()).hasMessageContaining("0-arg constructor");
   }
 }

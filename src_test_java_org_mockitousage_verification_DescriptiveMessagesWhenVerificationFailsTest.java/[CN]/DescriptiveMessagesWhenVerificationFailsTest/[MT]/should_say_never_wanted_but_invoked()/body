@@ -6,7 +6,6 @@
     fail();
   }
  catch (  NeverWantedButInvoked e) {
-    assertContains("Never wanted here:",e.getMessage());
-    assertContains("But invoked here:",e.getMessage());
+    assertThat(e).hasMessageContaining("Never wanted here:").hasMessageContaining("But invoked here:");
   }
 }

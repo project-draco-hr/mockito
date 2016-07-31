@@ -1,8 +1,8 @@
 {
   Object mock=Mockito.mock(ObjectMethodsOverriddenSubclass.class);
   Object otherMock=Mockito.mock(ObjectMethodsOverriddenSubclass.class);
-  Assertions.assertThat(mock).isEqualTo(mock);
-  Assertions.assertThat(mock).isNotEqualTo(otherMock);
-  Assertions.assertThat(mock.hashCode()).isNotEqualTo(otherMock.hashCode());
-  assertContains("Mock for ObjectMethodsOverriddenSubclass",mock.toString());
+  assertThat(mock).isEqualTo(mock);
+  assertThat(mock).isNotEqualTo(otherMock);
+  assertThat(mock.hashCode()).isNotEqualTo(otherMock.hashCode());
+  assertThat(mock.toString()).contains("Mock for ObjectMethodsOverriddenSubclass");
 }

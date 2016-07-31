@@ -5,6 +5,6 @@
     fail();
   }
  catch (  WantedButNotInvoked e) {
-    assertContains("<Capturing argument>",e.getMessage());
+    assertThat(e).hasMessageContaining("<Capturing argument>");
   }
 }

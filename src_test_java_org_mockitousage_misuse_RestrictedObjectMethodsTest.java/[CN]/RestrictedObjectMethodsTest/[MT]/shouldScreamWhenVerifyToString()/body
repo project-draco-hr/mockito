@@ -4,6 +4,6 @@
     fail();
   }
  catch (  MockitoException e) {
-    assertContains("cannot verify",e.getMessage());
+    assertThat(e).hasMessageContaining("cannot verify");
   }
 }

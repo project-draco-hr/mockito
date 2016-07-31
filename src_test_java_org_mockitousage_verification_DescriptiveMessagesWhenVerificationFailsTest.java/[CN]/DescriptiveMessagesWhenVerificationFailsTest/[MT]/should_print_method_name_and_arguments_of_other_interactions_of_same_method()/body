@@ -6,9 +6,6 @@
     fail();
   }
  catch (  WantedButNotInvoked e) {
-    System.out.println(e);
-    assertContains("iMethods.forByte(42)",e.getMessage());
-    assertContains("iMethods.forByte(25)",e.getMessage());
-    assertContains("iMethods.forByte(12)",e.getMessage());
+    assertThat(e).hasMessageContaining("iMethods.forByte(42)").hasMessageContaining("iMethods.forByte(25)").hasMessageContaining("iMethods.forByte(12)");
   }
 }

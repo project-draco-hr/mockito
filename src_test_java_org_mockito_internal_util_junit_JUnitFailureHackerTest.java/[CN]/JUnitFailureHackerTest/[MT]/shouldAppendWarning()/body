@@ -1,5 +1,5 @@
 {
   Failure failure=new Failure(Description.EMPTY,new RuntimeException("foo"));
   hacker.appendWarnings(failure,"unused stubbing blah");
-  assertContains("unused stubbing blah",failure.getException().getMessage());
+  assertThat(failure.getException()).hasMessageContaining("unused stubbing blah");
 }

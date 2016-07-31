@@ -4,6 +4,6 @@
     fail();
   }
  catch (  WantedButNotInvoked e) {
-    assertContains("eq(1.0, 0.1)",e.getMessage());
+    assertThat(e).hasMessageContaining("eq(1.0, 0.1)");
   }
 }

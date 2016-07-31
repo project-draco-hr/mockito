@@ -5,7 +5,7 @@
     fail();
   }
  catch (  Exception e) {
-    assertContains("xxx",e.getMessage());
+    assertThat(e).hasMessageContaining("xxx");
     e.getCause().getMessage().equals("Boo!");
   }
 }

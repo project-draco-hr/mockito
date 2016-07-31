@@ -5,6 +5,6 @@
     fail();
   }
  catch (  MockitoException e) {
-    assertContains("Most likely it is a private class that is not visible by Mockito",e.getMessage());
+    assertThat(e).hasMessageContaining("Most likely it is a private class that is not visible by Mockito");
   }
 }

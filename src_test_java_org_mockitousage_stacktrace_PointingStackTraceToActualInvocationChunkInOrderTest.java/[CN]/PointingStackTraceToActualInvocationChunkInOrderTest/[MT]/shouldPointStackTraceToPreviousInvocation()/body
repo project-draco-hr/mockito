@@ -6,6 +6,6 @@
     fail();
   }
  catch (  VerificationInOrderFailure e) {
-    assertContains("secondChunk(",e.getMessage());
+    assertThat(e).hasMessageContaining("secondChunk(");
   }
 }

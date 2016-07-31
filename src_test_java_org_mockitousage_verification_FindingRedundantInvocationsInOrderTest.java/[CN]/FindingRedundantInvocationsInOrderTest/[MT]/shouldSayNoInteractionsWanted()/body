@@ -6,6 +6,6 @@
     fail();
   }
  catch (  VerificationInOrderFailure e) {
-    assertContains("No interactions wanted",e.getMessage());
+    assertThat(e).hasMessageContaining("No interactions wanted");
   }
 }

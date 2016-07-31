@@ -8,6 +8,6 @@
     fail();
   }
  catch (  NoInteractionsWanted e) {
-    assertContains("undesiredInteraction(",e.getMessage());
+    assertThat(e).hasMessageContaining("undesiredInteraction(");
   }
 }

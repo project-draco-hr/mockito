@@ -4,6 +4,6 @@
     fail();
   }
  catch (  org.mockito.exceptions.verification.junit.ArgumentsAreDifferent e) {
-    assertContains("has different arguments",e.getMessage());
+    assertThat(e).hasMessageContaining("has different arguments");
   }
 }

@@ -8,10 +8,9 @@
     fail();
   }
  catch (  VerificationInOrderFailure e) {
-    String actualMessage=e.getMessage();
     String expectedMessage="\n" + "Verification in order failure:" + "\n"+ "iMethods.simpleMethod(2);"+ "\n"+ "Wanted 2 times:"+ "\n"+ "-> at";
-    assertContains(expectedMessage,actualMessage);
+    assertThat(e).hasMessageContaining(expectedMessage);
     String expectedCause="\n" + "But was 1 time:" + "\n"+ "-> at";
-    assertContains(expectedCause,e.getMessage());
+    assertThat(e).hasMessageContaining(expectedCause);
   }
 }

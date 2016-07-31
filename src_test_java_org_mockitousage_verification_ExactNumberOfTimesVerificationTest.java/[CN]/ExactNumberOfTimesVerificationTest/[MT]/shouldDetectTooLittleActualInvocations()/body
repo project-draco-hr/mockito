@@ -7,7 +7,6 @@
     fail();
   }
  catch (  TooLittleActualInvocations e) {
-    assertContains("Wanted 100 times",e.getMessage());
-    assertContains("was 2",e.getMessage());
+    assertThat(e).hasMessageContaining("Wanted 100 times").hasMessageContaining("was 2");
   }
 }

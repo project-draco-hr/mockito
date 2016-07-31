@@ -5,6 +5,6 @@
     fail();
   }
  catch (  AssertionError e) {
-    assertContains("<String that contains xxx>",e.getMessage());
+    assertThat(e).hasMessageContaining("<String that contains xxx>");
   }
 }

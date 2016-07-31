@@ -7,7 +7,6 @@
     fail();
   }
  catch (  TooManyActualInvocations e) {
-    assertContains("Wanted 1 time",e.getMessage());
-    assertContains("was 2 times",e.getMessage());
+    assertThat(e).hasMessageContaining("Wanted 1 time").hasMessageContaining("was 2 times");
   }
 }

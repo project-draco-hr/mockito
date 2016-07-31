@@ -5,6 +5,6 @@
   }
  catch (  WantedButNotInvoked e) {
     String expected="\n" + "Wanted but not invoked:" + "\n"+ "iMethods.differentMethod();"+ "\n"+ "-> at";
-    assertContains(expected,e.getMessage());
+    assertThat(e).hasMessageContaining(expected);
   }
 }

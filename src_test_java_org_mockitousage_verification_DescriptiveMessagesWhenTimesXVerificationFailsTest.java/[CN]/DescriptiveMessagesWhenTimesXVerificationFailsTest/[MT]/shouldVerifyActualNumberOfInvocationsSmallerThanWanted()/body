@@ -8,8 +8,6 @@
     fail();
   }
  catch (  TooLittleActualInvocations e) {
-    assertContains("mock.clear();",e.getMessage());
-    assertContains("Wanted 100 times",e.getMessage());
-    assertContains("was 3",e.getMessage());
+    assertThat(e).hasMessageContaining("mock.clear();").hasMessageContaining("Wanted 100 times").hasMessageContaining("was 3");
   }
 }

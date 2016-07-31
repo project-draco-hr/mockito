@@ -5,7 +5,6 @@
     fail();
   }
  catch (  ArgumentsAreDifferent e) {
-    assertContains("matches(\"burrito from Exmouth\")",e.getMessage());
-    assertContains("\"foo\"",e.getMessage());
+    assertThat(e).hasMessageContaining("matches(\"burrito from Exmouth\")").hasMessageContaining("\"foo\"");
   }
 }

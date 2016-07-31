@@ -6,6 +6,6 @@
     fail();
   }
  catch (  Exception e) {
-    assertContains("yes sir",e.getMessage());
+    assertThat(e).hasMessageContaining("yes sir");
   }
 }

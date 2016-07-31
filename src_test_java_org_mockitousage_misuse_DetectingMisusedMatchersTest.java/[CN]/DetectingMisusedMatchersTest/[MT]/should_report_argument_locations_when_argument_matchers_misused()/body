@@ -9,8 +9,6 @@
     fail();
   }
  catch (  InvalidUseOfMatchersException e) {
-    assertContains("DetectingMisusedMatchersTest.misplaced_anyInt_argument_matcher",e.getMessage());
-    assertContains("DetectingMisusedMatchersTest.misplaced_anyObject_argument_matcher",e.getMessage());
-    assertContains("DetectingMisusedMatchersTest.misplaced_anyBoolean_argument_matcher",e.getMessage());
+    assertThat(e).hasMessageContaining("DetectingMisusedMatchersTest.misplaced_anyInt_argument_matcher").hasMessageContaining("DetectingMisusedMatchersTest.misplaced_anyObject_argument_matcher").hasMessageContaining("DetectingMisusedMatchersTest.misplaced_anyBoolean_argument_matcher");
   }
 }

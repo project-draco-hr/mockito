@@ -7,8 +7,8 @@
   }
  catch (  VerificationInOrderFailure e) {
     String expected="\n" + "Verification in order failure" + "\n"+ "Wanted but not invoked:"+ "\n"+ "iMethods.simpleMethod(11);"+ "\n"+ "-> at ";
-    assertContains(expected,e.getMessage());
+    assertThat(e).hasMessageContaining(expected);
     String expectedCause="\n" + "Wanted anywhere AFTER following interaction:" + "\n"+ "iMethods.simpleMethod(2);"+ "\n"+ "-> at ";
-    assertContains(expectedCause,e.getMessage());
+    assertThat(e).hasMessageContaining(expectedCause);
   }
 }

@@ -7,6 +7,6 @@
     fail();
   }
  catch (  Exception e) {
-    assertContains("Lorem Ipsum",e.getMessage());
+    assertThat(e).hasMessageContaining("Lorem Ipsum");
   }
 }

@@ -6,8 +6,8 @@
   }
  catch (  ArgumentsAreDifferent e) {
     String wanted="\n" + "Argument(s) are different! Wanted:" + "\n"+ "iMethods.varargs(1, 1000);";
-    assertContains(wanted,e.getMessage());
+    assertThat(e).hasMessageContaining(wanted);
     String actual="\n" + "Actual invocation has different arguments:" + "\n"+ "iMethods.varargs(1, 2);";
-    assertContains(actual,e.getMessage());
+    assertThat(e).hasMessageContaining(actual);
   }
 }

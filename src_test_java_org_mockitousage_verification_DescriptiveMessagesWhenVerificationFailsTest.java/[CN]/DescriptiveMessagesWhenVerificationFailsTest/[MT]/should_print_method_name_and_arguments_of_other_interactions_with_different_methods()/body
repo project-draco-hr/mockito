@@ -6,9 +6,6 @@
     fail();
   }
  catch (  WantedButNotInvoked e) {
-    System.out.println(e);
-    assertContains("iMethods.threeArgumentMethod(12, foo, \"xx\")",e.getMessage());
-    assertContains("iMethods.arrayMethod([\"a\", \"b\", \"c\"])",e.getMessage());
-    assertContains("iMethods.forByte(25)",e.getMessage());
+    assertThat(e).hasMessageContaining("iMethods.threeArgumentMethod(12, foo, \"xx\")").hasMessageContaining("iMethods.arrayMethod([\"a\", \"b\", \"c\"])").hasMessageContaining("iMethods.forByte(25)");
   }
 }

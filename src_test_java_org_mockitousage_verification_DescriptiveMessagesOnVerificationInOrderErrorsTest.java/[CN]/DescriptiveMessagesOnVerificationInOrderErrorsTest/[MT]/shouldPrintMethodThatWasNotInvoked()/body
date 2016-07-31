@@ -8,8 +8,7 @@
     fail();
   }
  catch (  VerificationInOrderFailure e) {
-    String actualMessage=e.getMessage();
     String expectedMessage="\n" + "Verification in order failure" + "\n"+ "Wanted but not invoked:"+ "\n"+ "iMethods.simpleMethod(999);";
-    assertContains(expectedMessage,actualMessage);
+    assertThat(e).hasMessageContaining(expectedMessage);
   }
 }

@@ -11,6 +11,6 @@ class WithSpy {
     fail();
   }
  catch (  MockitoException e) {
-    assertContains("@Spy annotation can only initialize inner classes",e.getMessage());
+    assertThat(e).hasMessageContaining("@Spy annotation can only initialize inner classes");
   }
 }

@@ -6,7 +6,6 @@
     fail();
   }
  catch (  ArgumentsAreDifferent e) {
-    assertContains("bar",e.getMessage());
-    assertContains("foo",e.getMessage());
+    assertThat(e).hasMessageContaining("bar").hasMessageContaining("foo");
   }
 }
