@@ -6,7 +6,6 @@
   }
  catch (  WantedButNotInvoked e) {
     String trace=getStackTrace(e);
-    assertContains("verifyMock_x",trace);
-    assertNotContains("verify_excludeMe_x",trace);
+    assertThat(trace).contains("verifyMock_x").doesNotContain("verify_excludeMe_x");
   }
 }
