@@ -1,4 +1,4 @@
 {
-  List<Invocation> invocations=new AllInvocationsFinder().find(mocks);
+  List<Invocation> invocations=AllInvocationsFinder.find(mocks);
   return ListUtil.filter(invocations,new RemoveIgnoredForVerification());
 }
