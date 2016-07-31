@@ -1,0 +1,5 @@
+{
+  Sub mock=Mockito.mock(Sub.class);
+  Mockito.when(mock.getFoo()).thenReturn("Hello");
+  assertThat(mock.getFoo()).isEqualTo("Hello");
+}
