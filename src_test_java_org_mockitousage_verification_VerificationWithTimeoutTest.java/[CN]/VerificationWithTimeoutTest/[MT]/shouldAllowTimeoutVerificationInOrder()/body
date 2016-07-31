@@ -4,5 +4,5 @@
   InOrder inOrder=inOrder(mock);
   inOrder.verify(mock).oneArg('x');
   inOrder.verify(mock,never()).oneArg('1');
-  inOrder.verify(mock,timeout(40)).oneArg('1');
+  inOrder.verify(mock,timeout(100)).oneArg('1');
 }

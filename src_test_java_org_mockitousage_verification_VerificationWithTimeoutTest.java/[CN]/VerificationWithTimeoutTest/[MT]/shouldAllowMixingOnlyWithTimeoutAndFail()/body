@@ -3,5 +3,5 @@
   mock.oneArg('x');
   verify(mock,never()).oneArg('c');
   exception.expect(NoInteractionsWanted.class);
-  verify(mock,timeout(40).only()).oneArg('c');
+  verify(mock,timeout(100).only()).oneArg('c');
 }
