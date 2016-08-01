@@ -1,5 +1,5 @@
 {
-  assumeTrue(ClassFileVersion.forCurrentJavaVersion().isAtLeast(ClassFileVersion.JAVA_V8));
+  assumeTrue(ClassFileVersion.forThisVm().isAtLeast(ClassFileVersion.JAVA_V8));
   Class<?> type=new ByteBuddy().makeInterface().modifiers(Visibility.PUBLIC,TypeManifestation.INTERFACE).defineMethod("foo",String.class,Visibility.PUBLIC).intercept(FixedValue.value("bar")).make().load(getClass().getClassLoader(),ClassLoadingStrategy.Default.WRAPPER).getLoaded();
   Object object=mock(type);
   when(type.getMethod("foo").invoke(object)).thenCallRealMethod();
