@@ -4,5 +4,5 @@
   notifier.setAnswersForStubbing(new ArrayList<Answer<?>>());
   verify(mockHandler).getInvocationContainer();
   verify(mockHandler).getMockSettings();
-  verify(mockHandler).setAnswersForStubbing(anyList());
+  verify(mockHandler).setAnswersForStubbing(ArgumentMatchers.<Answer<?>>anyList());
 }

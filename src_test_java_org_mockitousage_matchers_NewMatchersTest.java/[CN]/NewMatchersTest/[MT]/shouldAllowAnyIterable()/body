@@ -1,6 +1,6 @@
 {
-  when(mock.forIterable(anyIterable())).thenReturn("matched");
+  when(mock.forIterable(anyIterableOf(String.class))).thenReturn("matched");
   assertEquals("matched",mock.forIterable(new HashSet<String>()));
   assertEquals(null,mock.forIterable(null));
-  verify(mock,times(1)).forIterable(anyIterable());
+  verify(mock,times(1)).forIterable(anyIterableOf(String.class));
 }
