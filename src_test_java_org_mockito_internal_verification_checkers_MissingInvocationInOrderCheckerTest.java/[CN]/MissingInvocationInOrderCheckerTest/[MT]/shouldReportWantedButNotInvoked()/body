@@ -4,5 +4,5 @@
   exception.expect(WantedButNotInvoked.class);
   exception.expectMessage("Wanted but not invoked:");
   exception.expectMessage("mock.simpleMethod()");
-  checker.check(invocations,wanted,new VerificationModeBuilder().inOrder(),context);
+  checkMissingInvocation(invocations,wanted,context);
 }

@@ -7,5 +7,5 @@
   if (previousInOrder != null) {
     throw wantedButNotInvokedInOrder(wanted,previousInOrder);
   }
-  new MissingInvocationChecker().check(invocations,wanted);
+  checkMissingInvocation(invocations,wanted);
 }

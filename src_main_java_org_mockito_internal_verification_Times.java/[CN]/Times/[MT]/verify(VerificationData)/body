@@ -2,8 +2,7 @@
   List<Invocation> invocations=data.getAllInvocations();
   InvocationMatcher wanted=data.getWanted();
   if (wantedCount > 0) {
-    MissingInvocationChecker missingInvocation=new MissingInvocationChecker();
-    missingInvocation.check(invocations,wanted);
+    checkMissingInvocation(data.getAllInvocations(),data.getWanted());
   }
   NumberOfInvocationsChecker numberOfInvocations=new NumberOfInvocationsChecker();
   numberOfInvocations.check(invocations,wanted,wantedCount);

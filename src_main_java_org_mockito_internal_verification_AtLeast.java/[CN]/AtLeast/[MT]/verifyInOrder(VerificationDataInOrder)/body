@@ -1,10 +1,6 @@
 {
-  List<Invocation> allInvocations=data.getAllInvocations();
-  InvocationMatcher wanted=data.getWanted();
-  MissingInvocationInOrderChecker missingInvocation=new MissingInvocationInOrderChecker();
-  AtLeastXNumberOfInvocationsInOrderChecker numberOfCalls=new AtLeastXNumberOfInvocationsInOrderChecker(data.getOrderingContext());
   if (wantedCount == 1) {
-    missingInvocation.check(allInvocations,wanted,this,data.getOrderingContext());
+    checkMissingInvocation(data.getAllInvocations(),data.getWanted(),data.getOrderingContext());
   }
-  numberOfCalls.check(allInvocations,wanted,wantedCount);
+  checkAtLeastNumberOfInvocations(data.getAllInvocations(),data.getWanted(),wantedCount,data.getOrderingContext());
 }
