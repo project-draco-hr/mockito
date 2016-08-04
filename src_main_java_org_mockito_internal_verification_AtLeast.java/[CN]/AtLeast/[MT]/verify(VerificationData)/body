@@ -1,8 +1,6 @@
 {
-  MissingInvocationChecker missingInvocation=new MissingInvocationChecker();
-  AtLeastXNumberOfInvocationsChecker numberOfInvocations=new AtLeastXNumberOfInvocationsChecker();
   if (wantedCount == 1) {
-    missingInvocation.check(data.getAllInvocations(),data.getWanted());
+    checkMissingInvocation(data.getAllInvocations(),data.getWanted());
   }
-  numberOfInvocations.check(data.getAllInvocations(),data.getWanted(),wantedCount);
+  checkAtLeastNumberOfInvocations(data.getAllInvocations(),data.getWanted(),wantedCount);
 }

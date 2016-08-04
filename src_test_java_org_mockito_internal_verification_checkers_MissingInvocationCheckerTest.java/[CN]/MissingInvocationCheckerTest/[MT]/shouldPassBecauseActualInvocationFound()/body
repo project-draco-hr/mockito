@@ -1,5 +1,5 @@
 {
   wanted=buildSimpleMethod().toInvocationMatcher();
   invocations=asList(buildSimpleMethod().toInvocation());
-  checker.check(invocations,wanted);
+  MissingInvocationChecker.checkMissingInvocation(invocations,wanted);
 }

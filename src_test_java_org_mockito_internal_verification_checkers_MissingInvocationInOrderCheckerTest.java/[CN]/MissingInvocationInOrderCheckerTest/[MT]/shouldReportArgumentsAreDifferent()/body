@@ -6,5 +6,5 @@
   exception.expectMessage("mock.intArgumentMethod(2222);");
   exception.expectMessage("Actual invocation has different arguments:");
   exception.expectMessage("mock.intArgumentMethod(1111);");
-  checker.check(invocations,wanted,new VerificationModeBuilder().inOrder(),context);
+  checkMissingInvocation(invocations,wanted,context);
 }
