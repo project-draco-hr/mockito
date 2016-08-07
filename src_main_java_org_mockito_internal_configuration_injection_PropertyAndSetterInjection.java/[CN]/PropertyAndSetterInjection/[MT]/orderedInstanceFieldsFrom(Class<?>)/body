@@ -1,5 +1,5 @@
 {
   List<Field> declaredFields=Arrays.asList(awaitingInjectionClazz.getDeclaredFields());
   declaredFields=ListUtil.filter(declaredFields,notFinalOrStatic);
-  return new SuperTypesLastSorter().sort(declaredFields);
+  return sortSuperTypesLast(declaredFields);
 }
