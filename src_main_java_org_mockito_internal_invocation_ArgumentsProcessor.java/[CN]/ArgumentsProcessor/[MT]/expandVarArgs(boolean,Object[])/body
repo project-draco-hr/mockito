@@ -1,5 +1,5 @@
 {
-  if (!isVarArgs || new ArrayUtils().isEmpty(args) || args[args.length - 1] != null && !args[args.length - 1].getClass().isArray()) {
+  if (!isVarArgs || isNullOrEmpty(args) || args[args.length - 1] != null && !args[args.length - 1].getClass().isArray()) {
     return args == null ? new Object[0] : args;
   }
   final int nonVarArgsCount=args.length - 1;
