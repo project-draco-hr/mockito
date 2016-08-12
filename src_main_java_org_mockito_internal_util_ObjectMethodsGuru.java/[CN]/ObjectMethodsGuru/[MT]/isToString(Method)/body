@@ -1,3 +1,0 @@
-{
-  return isToString(new DelegatingMethod(method));
-}

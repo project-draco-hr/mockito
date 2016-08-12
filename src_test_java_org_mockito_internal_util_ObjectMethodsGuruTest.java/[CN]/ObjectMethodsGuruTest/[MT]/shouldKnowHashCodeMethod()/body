@@ -1,5 +1,0 @@
-{
-  assertFalse(guru.isHashCodeMethod(IMethods.class.getMethod("toString")));
-  assertFalse(guru.isHashCodeMethod(IMethods.class.getMethod("hashCode",String.class)));
-  assertTrue(guru.isHashCodeMethod(Object.class.getDeclaredMethod("hashCode")));
-}

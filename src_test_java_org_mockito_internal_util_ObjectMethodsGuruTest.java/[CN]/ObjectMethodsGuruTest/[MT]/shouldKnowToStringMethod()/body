@@ -1,5 +1,5 @@
 {
-  assertFalse(guru.isToString(Object.class.getMethod("equals",Object.class)));
-  assertFalse(guru.isToString(IMethods.class.getMethod("toString",String.class)));
-  assertTrue(guru.isToString(IMethods.class.getMethod("toString")));
+  assertFalse(ObjectMethodsGuru.isToStringMethod(Object.class.getMethod("equals",Object.class)));
+  assertFalse(ObjectMethodsGuru.isToStringMethod(IMethods.class.getMethod("toString",String.class)));
+  assertTrue(ObjectMethodsGuru.isToStringMethod(IMethods.class.getMethod("toString")));
 }

@@ -1,10 +1,9 @@
 {
-  ObjectMethodsGuru guru=new ObjectMethodsGuru();
   Class<?> cls=matcher.getClass();
   while (cls != Object.class) {
     Method[] methods=cls.getDeclaredMethods();
     for (    Method m : methods) {
-      if (guru.isToString(m)) {
+      if (isToStringMethod(m)) {
         return matcher.toString();
       }
     }
