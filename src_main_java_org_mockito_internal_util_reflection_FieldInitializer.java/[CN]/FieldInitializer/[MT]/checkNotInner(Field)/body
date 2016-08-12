@@ -1,5 +1,6 @@
 {
-  if (field.getType().isMemberClass() && !Modifier.isStatic(field.getType().getModifiers())) {
-    throw new MockitoException("the type '" + field.getType().getSimpleName() + "' is an inner class.");
+  Class<?> type=field.getType();
+  if (type.isMemberClass() && !isStatic(type.getModifiers())) {
+    throw new MockitoException("the type '" + type.getSimpleName() + "' is an inner non static class.");
   }
 }
