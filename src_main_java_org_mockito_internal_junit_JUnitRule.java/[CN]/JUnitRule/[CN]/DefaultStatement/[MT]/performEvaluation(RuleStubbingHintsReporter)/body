@@ -1,0 +1,12 @@
+{
+  MockitoAnnotations.initMocks(target);
+  try {
+    base.evaluate();
+  }
+ catch (  Throwable t) {
+    reporter.getStubbingArgMismatches().format(testName,logger);
+    throw t;
+  }
+  reporter.getUnusedStubbings().format(testName,logger);
+  Mockito.validateMockitoUsage();
+}

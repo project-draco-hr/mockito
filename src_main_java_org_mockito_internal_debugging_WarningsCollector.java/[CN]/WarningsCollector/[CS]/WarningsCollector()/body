@@ -1,4 +1,3 @@
 {
   createdMocks=new LinkedList<Object>();
-  mockingProgress().setListener(new CollectCreatedMocks(createdMocks));
 }

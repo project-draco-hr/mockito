@@ -1,0 +1,16 @@
+{
+  try {
+    jUnitRule.apply(new Statement(){
+      public void evaluate() throws Throwable {
+        IMethods mock=mock(IMethods.class);
+        Mockito.when(mock.simpleMethod());
+        throw new RuntimeException("Boo!");
+      }
+    }
+,dummy,injectTestCase).evaluate();
+    fail();
+  }
+ catch (  RuntimeException e) {
+    assertEquals("Boo!",e.getMessage());
+  }
+}

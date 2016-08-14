@@ -8,6 +8,7 @@ synchronized (stubbed) {
         return s;
       }
     }
+    mockingProgress().getStubbingListener().stubbingNotFound(invocation);
   }
   return null;
 }

@@ -1,0 +1,4 @@
+{
+  assertNotNull(listener);
+  mockingProgress().removeListener(listener);
+}

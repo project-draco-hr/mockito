@@ -1,0 +1,5 @@
+{
+  UnusedStubbings stubbings=new UnusedStubbings((List)asList(new StubbedInvocationMatcher(new InvocationBuilder().toInvocationMatcher(),new DoesNothing()),new StubbedInvocationMatcher(new InvocationBuilder().toInvocationMatcher(),new DoesNothing())));
+  stubbings.format("MyTest.myTestMethod",logger);
+  assertEquals("[MockitoHint] MyTest.myTestMethod (see javadoc for MockitoHint):\n" + "[MockitoHint] 1. Unused -> at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n" + "[MockitoHint] 2. Unused -> at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n",filterLineNo(logger.getLoggedInfo()));
+}

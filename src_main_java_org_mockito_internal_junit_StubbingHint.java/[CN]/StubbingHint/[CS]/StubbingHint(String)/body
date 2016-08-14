@@ -1,0 +1,3 @@
+{
+  hint=new StringBuilder("[MockitoHint] ").append(testName).append(" (see javadoc for MockitoHint):");
+}

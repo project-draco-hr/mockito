@@ -1,0 +1,11 @@
+{
+  jUnitRule.apply(new Statement(){
+    public void evaluate() throws Throwable {
+      IMethods mock=mock(IMethods.class);
+      declareStubbingWithArg(mock,"a");
+      useStubbingWithArg(mock,"a");
+    }
+  }
+,dummy,new DummyTestCase()).evaluate();
+  assertTrue(logger.isEmpty());
+}

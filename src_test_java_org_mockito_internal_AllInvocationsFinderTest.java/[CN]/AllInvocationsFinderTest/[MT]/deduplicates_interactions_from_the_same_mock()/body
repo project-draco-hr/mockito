@@ -1,0 +1,5 @@
+{
+  mockOne.simpleMethod(100);
+  List<Invocation> invocations=find(asList(mockOne,mockOne,mockOne));
+  assertEquals(1,invocations.size());
+}

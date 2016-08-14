@@ -1,0 +1,14 @@
+{
+  if (mismatches.isEmpty()) {
+    return;
+  }
+  StubbingHint hint=new StubbingHint(testName);
+  int x=1;
+  for (  Map.Entry<Invocation,Set<Invocation>> m : mismatches.entrySet()) {
+    hint.appendLine(x++,". Unused... ",m.getKey().getLocation());
+    for (    Invocation invocation : m.getValue()) {
+      hint.appendLine(" ...args ok? ",invocation.getLocation());
+    }
+  }
+  logger.log(hint.toString());
+}

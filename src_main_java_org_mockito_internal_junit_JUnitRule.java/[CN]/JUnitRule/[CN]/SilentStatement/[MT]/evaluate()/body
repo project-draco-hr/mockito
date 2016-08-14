@@ -1,0 +1,5 @@
+{
+  MockitoAnnotations.initMocks(target);
+  base.evaluate();
+  Mockito.validateMockitoUsage();
+}

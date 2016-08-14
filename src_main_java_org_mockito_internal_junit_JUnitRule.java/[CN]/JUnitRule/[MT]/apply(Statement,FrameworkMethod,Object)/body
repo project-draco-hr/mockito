@@ -1,17 +1,9 @@
 {
-  return new Statement(){
-    @Override public void evaluate() throws Throwable {
-      WarningsCollector c=new WarningsCollector();
-      MockitoAnnotations.initMocks(target);
-      try {
-        base.evaluate();
-      }
- catch (      Throwable t) {
-        logger.log(c.getWarnings());
-        throw t;
-      }
-      Mockito.validateMockitoUsage();
-    }
+  if (silent) {
+    return new SilentStatement(target,base);
   }
-;
+ else {
+    String testName=target.getClass().getSimpleName() + "." + method.getName();
+    return new DefaultStatement(target,testName,base);
+  }
 }
