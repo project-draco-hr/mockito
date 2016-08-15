@@ -1,0 +1,16 @@
+{
+  Queue<Type> typesToRegister=new LinkedList<Type>();
+  Set<Type> registeredTypes=new HashSet<Type>();
+  typesToRegister.add(classType);
+  while (!typesToRegister.isEmpty()) {
+    Type typeToRegister=typesToRegister.poll();
+    if (typeToRegister == null || registeredTypes.contains(typeToRegister)) {
+      continue;
+    }
+    registerTypeVariablesOn(typeToRegister);
+    registeredTypes.add(typeToRegister);
+    Class<?> rawType=extractRawTypeOf(typeToRegister);
+    typesToRegister.add(rawType.getGenericSuperclass());
+    typesToRegister.addAll(Arrays.asList(rawType.getGenericInterfaces()));
+  }
+}

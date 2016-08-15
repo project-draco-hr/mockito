@@ -1,4 +1,3 @@
 {
-  registerTypeVariablesOn(parameterizedType.getRawType());
-  registerTypeVariablesOn(parameterizedType);
+  registerAllTypeVariables(parameterizedType);
 }
