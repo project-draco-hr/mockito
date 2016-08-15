@@ -3,6 +3,7 @@
     checkNotLocal(field);
     checkNotInner(field);
     checkNotInterface(field);
+    checkNotEnum(field);
     checkNotAbstract(field);
   }
   this.fieldOwner=fieldOwner;

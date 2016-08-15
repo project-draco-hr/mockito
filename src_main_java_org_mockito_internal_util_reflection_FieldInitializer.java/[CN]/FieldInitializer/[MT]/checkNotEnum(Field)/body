@@ -1,0 +1,5 @@
+{
+  if (field.getType().isEnum()) {
+    throw new MockitoException("the type '" + field.getType().getSimpleName() + "' is an enum.");
+  }
+}
