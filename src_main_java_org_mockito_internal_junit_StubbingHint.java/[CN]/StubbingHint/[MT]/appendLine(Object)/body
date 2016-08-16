@@ -1,0 +1,6 @@
+{
+  hint.append("\n[MockitoHint] ");
+  for (  Object e : elements) {
+    hint.append(e);
+  }
+}

@@ -1,0 +1,5 @@
+{
+  Thread t=new Thread(r);
+  t.start();
+  t.join();
+}

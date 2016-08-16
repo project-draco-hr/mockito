@@ -1,0 +1,10 @@
+{
+  Collection<Stubbing> stubbings=(Collection)AllInvocationsFinder.findStubbings(mocks);
+  LinkedList<Stubbing> unused=ListUtil.filter(stubbings,new ListUtil.Filter<Stubbing>(){
+    public boolean isOut(    Stubbing s){
+      return s.wasUsed();
+    }
+  }
+);
+  return new UnusedStubbings(unused);
+}

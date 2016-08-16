@@ -1,0 +1,4 @@
+{
+  assertTrue(find(asList(mockOne,mockTwo)).isEmpty());
+  assertTrue(findStubbings(asList(mockOne,mockTwo)).isEmpty());
+}

@@ -1,0 +1,5 @@
+{
+  UnusedStubbings stubbings=new UnusedStubbings((List)asList());
+  stubbings.format("MyTest.myTestMethod",logger);
+  assertEquals("",logger.getLoggedInfo());
+}

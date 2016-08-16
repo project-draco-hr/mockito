@@ -1,0 +1,17 @@
+{
+  try {
+    jUnitRule.apply(new Statement(){
+      public void evaluate() throws Throwable {
+        IMethods mock=mock(IMethods.class);
+        declareStubbing(mock);
+        throw new AssertionError("x");
+      }
+    }
+,dummy,new DummyTestCase()).evaluate();
+    fail();
+  }
+ catch (  AssertionError e) {
+    assertEquals("x",e.getMessage());
+    assertTrue(logger.getLoggedInfo().isEmpty());
+  }
+}

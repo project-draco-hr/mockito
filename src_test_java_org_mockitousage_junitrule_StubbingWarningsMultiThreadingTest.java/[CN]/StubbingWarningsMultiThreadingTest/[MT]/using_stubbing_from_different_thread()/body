@@ -1,0 +1,16 @@
+{
+  rule.apply(new Statement(){
+    public void evaluate() throws Throwable {
+      final IMethods mock=mock(IMethods.class);
+      when(mock.simpleMethod()).thenReturn("1");
+      inThread(new Runnable(){
+        public void run(){
+          mock.simpleMethod();
+        }
+      }
+);
+    }
+  }
+,dummy,this).evaluate();
+  assertEquals("",logger.getLoggedInfo());
+}

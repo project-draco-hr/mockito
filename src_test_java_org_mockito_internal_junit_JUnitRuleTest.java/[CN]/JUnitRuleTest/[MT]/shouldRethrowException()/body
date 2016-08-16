@@ -1,9 +1,0 @@
-{
-  try {
-    jUnitRule.apply(new ExceptionStatement(),null,injectTestCase).evaluate();
-    fail("Should throw exception");
-  }
- catch (  RuntimeException e) {
-    assertEquals("Correct message","Statement exception",e.getMessage());
-  }
-}

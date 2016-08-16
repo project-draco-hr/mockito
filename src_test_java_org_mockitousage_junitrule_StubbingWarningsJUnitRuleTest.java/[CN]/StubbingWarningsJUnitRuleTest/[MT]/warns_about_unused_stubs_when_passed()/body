@@ -1,0 +1,10 @@
+{
+  jUnitRule.apply(new Statement(){
+    public void evaluate() throws Throwable {
+      IMethods mock=mock(IMethods.class);
+      declareStubbing(mock);
+    }
+  }
+,dummy,new DummyTestCase()).evaluate();
+  assertEquals("[MockitoHint] DummyTestCase.null (see javadoc for MockitoHint):\n" + "[MockitoHint] 1. Unused -> at org.mockitousage.junitrule.StubbingWarningsJUnitRuleTest.declareStubbing(StubbingWarningsJUnitRuleTest.java:0)\n",filterLineNo(logger.getLoggedInfo()));
+}

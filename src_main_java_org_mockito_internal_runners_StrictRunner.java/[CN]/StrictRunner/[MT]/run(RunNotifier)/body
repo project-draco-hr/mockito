@@ -10,6 +10,6 @@
     Mockito.framework().setStubbingListener(null);
   }
   if (!filterRequested && listener.isSussessful()) {
-    reporter.report(testClass,notifier);
+    reporter.validateUnusedStubs(testClass,notifier);
   }
 }

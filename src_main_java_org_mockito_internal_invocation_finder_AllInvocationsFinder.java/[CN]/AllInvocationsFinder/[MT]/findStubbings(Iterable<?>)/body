@@ -1,0 +1,9 @@
+{
+  Set<StubbedInvocationMatcher> stubbings=new TreeSet<StubbedInvocationMatcher>(new SequenceNumberComparator2());
+  for (  Object mock : mocks) {
+    InternalMockHandler<Object> handler=MockUtil.getMockHandler(mock);
+    List<StubbedInvocationMatcher> fromSingleMock=handler.getInvocationContainer().getStubbedInvocations();
+    stubbings.addAll(fromSingleMock);
+  }
+  return stubbings;
+}

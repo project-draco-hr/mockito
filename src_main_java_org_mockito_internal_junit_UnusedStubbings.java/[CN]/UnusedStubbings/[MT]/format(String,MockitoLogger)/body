@@ -1,0 +1,13 @@
+{
+  if (unused.isEmpty()) {
+    return;
+  }
+  StubbingHint hint=new StubbingHint(testName);
+  int x=1;
+  for (  Stubbing candidate : unused) {
+    if (!candidate.wasUsed()) {
+      hint.appendLine(x++,". Unused ",candidate.getInvocation().getLocation());
+    }
+  }
+  logger.log(hint.toString());
+}

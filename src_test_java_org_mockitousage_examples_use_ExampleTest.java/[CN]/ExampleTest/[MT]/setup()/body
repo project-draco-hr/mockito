@@ -1,3 +1,0 @@
-{
-  articleManager=new ArticleManager(mockCalculator,mockDatabase);
-}

@@ -1,0 +1,8 @@
+{
+  Set<Invocation> matchingInvocations=mismatches.get(stubbing);
+  if (matchingInvocations == null) {
+    matchingInvocations=new LinkedHashSet<Invocation>();
+    mismatches.put(stubbing,matchingInvocations);
+  }
+  matchingInvocations.add(invocation);
+}

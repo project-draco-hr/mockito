@@ -1,0 +1,10 @@
+{
+  RuleStubbingHintsReporter reporter=new RuleStubbingHintsReporter();
+  Mockito.framework().addListener(reporter);
+  try {
+    performEvaluation(reporter);
+  }
+  finally {
+    Mockito.framework().removeListener(reporter);
+  }
+}

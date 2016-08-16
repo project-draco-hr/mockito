@@ -1,0 +1,8 @@
+{
+  for (  MockitoListener listener : listeners) {
+    if (listener instanceof MockCreationListener) {
+      ((MockCreationListener)listener).onMockCreated(mock,settings);
+    }
+  }
+  validateMostStuff();
+}
