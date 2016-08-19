@@ -1,4 +1,3 @@
 {
-  assertIsMock(toInspect);
-  return getMockHandler(toInspect).getInvocationContainer().getInvocations();
+  return mockHandler().getInvocationContainer().getInvocations();
 }

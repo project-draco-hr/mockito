@@ -1,0 +1,4 @@
+{
+  assertGoodMock();
+  return getMockHandler(toInspect);
+}

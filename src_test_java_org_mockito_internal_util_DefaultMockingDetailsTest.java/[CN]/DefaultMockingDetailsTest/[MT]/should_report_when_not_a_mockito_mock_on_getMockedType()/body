@@ -1,3 +1,0 @@
-{
-  mockingDetails("not a mock").getMockedType();
-}
