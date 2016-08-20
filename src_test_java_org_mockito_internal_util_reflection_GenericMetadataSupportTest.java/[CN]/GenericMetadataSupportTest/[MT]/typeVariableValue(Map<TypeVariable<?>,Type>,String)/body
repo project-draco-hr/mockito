@@ -1,5 +1,5 @@
 {
-  for (  Map.Entry<TypeVariable,Type> typeVariableTypeEntry : typeVariables.entrySet()) {
+  for (  Map.Entry<TypeVariable<?>,Type> typeVariableTypeEntry : typeVariables.entrySet()) {
     if (typeVariableTypeEntry.getKey().getName().equals(typeVariableName)) {
       return typeVariableTypeEntry.getValue();
     }
