@@ -1,6 +1,6 @@
 {
   assertEquals(100,from.finalField);
-  assertNotEquals(100,to.finalField);
+  assertThat(to.finalField).isNotEqualTo(100);
   tool.copyToMock(from,to);
   assertEquals(100,to.finalField);
 }

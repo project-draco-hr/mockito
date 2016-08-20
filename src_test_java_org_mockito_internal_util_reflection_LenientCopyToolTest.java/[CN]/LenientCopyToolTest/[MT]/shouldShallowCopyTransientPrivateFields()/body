@@ -1,6 +1,6 @@
 {
   from.privateTransientField=1000;
-  assertNotEquals(1000,to.privateTransientField);
+  assertThat(to.privateTransientField).isNotEqualTo(1000);
   tool.copyToMock(from,to);
   assertEquals(1000,to.privateTransientField);
 }
