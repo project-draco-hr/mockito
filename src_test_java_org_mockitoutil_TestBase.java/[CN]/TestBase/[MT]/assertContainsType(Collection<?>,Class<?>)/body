@@ -1,8 +1,0 @@
-{
-  for (  Object o : list) {
-    if (clazz.isAssignableFrom(o.getClass())) {
-      return;
-    }
-  }
-  throw new AssertionError("Input list does not contain any element of type: '" + clazz + "'. "+ "Inspected following elements: "+ list);
-}
