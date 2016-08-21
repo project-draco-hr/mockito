@@ -1,0 +1,4 @@
+{
+  assertEquals(0,finder.getUnusedStubbings((List)asList(mock1,mock2)).size());
+  assertEquals(0,finder.getUnusedStubbingsByLocation((List)asList(mock1,mock2)).size());
+}

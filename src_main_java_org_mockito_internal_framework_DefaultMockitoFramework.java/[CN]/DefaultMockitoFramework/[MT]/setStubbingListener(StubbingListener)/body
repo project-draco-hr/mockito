@@ -1,9 +1,0 @@
-{
-  MockingProgress p=mockingProgress();
-  if (listener == null) {
-    p.setStubbingListener(null);
-  }
- else {
-    p.setStubbingListener(new ThreadSafeStubbingListener(listener));
-  }
-}

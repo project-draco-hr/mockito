@@ -1,0 +1,18 @@
+{
+  Collection<Stubbing> stubbings=(Collection)AllInvocationsFinder.findStubbings(mocks);
+  Set<String> locationsOfUsedStubbings=new HashSet<String>();
+  for (  Stubbing s : stubbings) {
+    if (s.wasUsed()) {
+      String location=s.getInvocation().getLocation().toString();
+      locationsOfUsedStubbings.add(location);
+    }
+  }
+  Map<String,Invocation> out=new LinkedHashMap<String,Invocation>();
+  for (  Stubbing s : stubbings) {
+    String location=s.getInvocation().getLocation().toString();
+    if (!locationsOfUsedStubbings.contains(location)) {
+      out.put(location,s.getInvocation());
+    }
+  }
+  return out.values();
+}

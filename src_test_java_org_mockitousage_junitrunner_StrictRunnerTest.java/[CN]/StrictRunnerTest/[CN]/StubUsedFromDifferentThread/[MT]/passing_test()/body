@@ -1,0 +1,11 @@
+{
+  when(mock.simpleMethod(1)).thenReturn("1");
+  Thread t=new Thread(){
+    public void run(){
+      mock.simpleMethod(1);
+    }
+  }
+;
+  t.start();
+  t.join();
+}

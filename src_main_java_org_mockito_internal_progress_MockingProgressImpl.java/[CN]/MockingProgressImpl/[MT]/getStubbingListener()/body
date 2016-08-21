@@ -1,6 +1,0 @@
-{
-  if (this.stubbingListener == null) {
-    return NoOpStubbingListener.INSTANCE;
-  }
-  return this.stubbingListener;
-}

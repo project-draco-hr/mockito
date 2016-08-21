@@ -1,0 +1,8 @@
+{
+  Collection<Invocation> unused=new UnusedStubbingsFinder().getUnusedStubbingsByLocation(mocks);
+  if (unused.size() == 0) {
+    return;
+  }
+  Description unnecessaryStubbings=Description.createTestDescription(testClass,"unnecessary Mockito stubbings");
+  notifier.fireTestFailure(new Failure(unnecessaryStubbings,Reporter.formatUnncessaryStubbingException(testClass,unused)));
+}

@@ -1,5 +1,0 @@
-{
-  when(mock1.simpleMethod()).thenReturn("1");
-  UnusedStubbings stubbings=finder.getUnusedStubbings((List)asList(mock1,mock2));
-  assertEquals(1,stubbings.size());
-}
