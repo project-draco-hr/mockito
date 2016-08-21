@@ -1,3 +1,0 @@
-{
-  assertEquals(Bar.class,mockingDetails(bar).getMockedType());
-}
