@@ -3,10 +3,10 @@
   if (generic instanceof ParameterizedType) {
     Type actual=((ParameterizedType)generic).getActualTypeArguments()[0];
     if (actual instanceof Class) {
-      return (Class)actual;
+      return (Class<?>)actual;
     }
  else     if (actual instanceof ParameterizedType) {
-      return (Class)((ParameterizedType)actual).getRawType();
+      return (Class<?>)((ParameterizedType)actual).getRawType();
     }
   }
   return Object.class;

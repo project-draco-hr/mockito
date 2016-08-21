@@ -1,5 +1,5 @@
 {
-  List out=new LinkedList();
+  List<FormattedText> out=new LinkedList<FormattedText>();
   int i=0;
   for (  final ArgumentMatcher matcher : matchers) {
     if (matcher instanceof ContainsExtraTypeInfo && printSettings.extraTypeInfoFor(i)) {
