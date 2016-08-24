@@ -6,6 +6,6 @@
   }
 ;
   Integer argument=10;
-  Integer[] suspicious=tool.getSuspiciouslyNotMatchingArgsIndexes((List)Arrays.asList(matcherWithBadDescription),new Object[]{argument});
+  Integer[] suspicious=ArgumentMatchingTool.getSuspiciouslyNotMatchingArgsIndexes((List)Arrays.asList(matcherWithBadDescription),new Object[]{argument});
   assertEquals(0,suspicious.length);
 }

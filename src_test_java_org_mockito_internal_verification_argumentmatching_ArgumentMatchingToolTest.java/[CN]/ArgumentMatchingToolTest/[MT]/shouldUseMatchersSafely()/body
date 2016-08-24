@@ -1,10 +1,21 @@
 {
-  List<ArgumentMatcher> matchers=(List)Arrays.asList(new ArgumentMatcher(){
-    public boolean matches(    Object item){
-      throw new ClassCastException("nasty matcher");
+  /** 
+ * This matcher is evil cause typeMatches(Object) returns true for every passed type but matches(T) 
+ * method accepts only Strings. When a Integer is passed (thru the matches(Object) bridge method )  a 
+ * ClassCastException will be thrown. 
+ */
+class StringMatcher implements ArgumentMatcher<String>, ContainsExtraTypeInfo {
+    @Override public boolean matches(    String item){
+      return true;
+    }
+    @Override public String toStringWithType(){
+      return "";
+    }
+    @Override public boolean typeMatches(    Object target){
+      return true;
     }
   }
-);
-  Integer[] suspicious=tool.getSuspiciouslyNotMatchingArgsIndexes(matchers,new Object[]{10});
+  List<ArgumentMatcher> matchers=(List)singletonList(new StringMatcher());
+  Integer[] suspicious=ArgumentMatchingTool.getSuspiciouslyNotMatchingArgsIndexes(matchers,new Object[]{10});
   assertEquals(0,suspicious.length);
 }
