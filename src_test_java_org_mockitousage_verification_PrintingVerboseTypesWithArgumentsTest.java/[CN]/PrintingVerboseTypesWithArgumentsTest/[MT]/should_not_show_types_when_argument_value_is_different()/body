@@ -6,6 +6,6 @@
     fail();
   }
  catch (  ArgumentsAreDifferent e) {
-    assertThat(e).hasMessageContaining("withLongAndInt(100, 200)").hasMessageContaining("withLongAndInt(100, 230)");
+    assertThat(e).hasMessageContaining("withLongAndInt(100L, 200)").hasMessageContaining("withLongAndInt(100L, 230)");
   }
 }
