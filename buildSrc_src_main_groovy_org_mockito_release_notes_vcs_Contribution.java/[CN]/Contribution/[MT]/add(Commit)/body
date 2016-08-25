@@ -1,2 +1,4 @@
 {
+  commits.add(commit);
+  return this;
 }

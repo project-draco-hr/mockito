@@ -1,3 +1,0 @@
-{
-  return o1.getValue().compareTo(o2.getValue());
-}
