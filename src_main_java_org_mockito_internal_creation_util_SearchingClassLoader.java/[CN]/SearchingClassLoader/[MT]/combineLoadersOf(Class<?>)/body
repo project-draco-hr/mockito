@@ -1,3 +1,0 @@
-{
-  return combineLoadersOf(classes[0],classes);
-}

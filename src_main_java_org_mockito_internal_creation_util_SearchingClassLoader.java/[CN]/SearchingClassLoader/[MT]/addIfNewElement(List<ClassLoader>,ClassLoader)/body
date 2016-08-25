@@ -1,5 +1,0 @@
-{
-  if (c != null && !loaders.contains(c)) {
-    loaders.add(c);
-  }
-}
