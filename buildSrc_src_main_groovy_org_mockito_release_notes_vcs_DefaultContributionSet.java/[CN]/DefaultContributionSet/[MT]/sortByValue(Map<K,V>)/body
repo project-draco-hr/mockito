@@ -1,5 +1,0 @@
-{
-  List<Map.Entry<K,V>> entries=new ArrayList<Map.Entry<K,V>>(map.entrySet());
-  Collections.sort(entries,new ByValue<K,V>());
-  return entries;
-}

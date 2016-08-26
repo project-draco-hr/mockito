@@ -1,3 +1,7 @@
 {
-  return Integer.valueOf(other.getCommits().size()).compareTo(commits.size());
+  int byCommitCount=Integer.valueOf(other.getCommits().size()).compareTo(commits.size());
+  if (byCommitCount != 0) {
+    return byCommitCount;
+  }
+  return this.authorName.toUpperCase().compareTo(other.authorName.toUpperCase());
 }

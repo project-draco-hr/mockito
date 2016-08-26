@@ -4,11 +4,11 @@
   }
   commits.add(commit);
   tickets.addAll(commit.getTickets());
-  Contribution c=contributions.get(commit.getAuthorId());
-  if (c == null) {
-    contributions.put(commit.getAuthorId(),new Contribution(commit));
+  Contribution existing=findContribution(commit,contributions);
+  if (existing != null) {
+    existing.add(commit);
   }
  else {
-    c.add(commit);
+    contributions.add(new Contribution(commit));
   }
 }

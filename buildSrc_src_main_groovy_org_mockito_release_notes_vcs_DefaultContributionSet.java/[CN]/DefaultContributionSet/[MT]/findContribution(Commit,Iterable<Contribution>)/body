@@ -1,0 +1,8 @@
+{
+  for (  Contribution c : contributions) {
+    if (c.authorEmail.equals(commit.getAuthorEmail()) || c.authorName.equals(commit.getAuthorName())) {
+      return c;
+    }
+  }
+  return null;
+}
