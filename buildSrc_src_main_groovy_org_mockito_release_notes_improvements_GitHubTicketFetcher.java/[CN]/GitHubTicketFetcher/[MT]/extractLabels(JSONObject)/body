@@ -1,0 +1,9 @@
+{
+  Set<String> out=new HashSet<String>();
+  JSONArray labels=(JSONArray)issue.get("labels");
+  for (  Object o : labels.toArray()) {
+    JSONObject label=(JSONObject)o;
+    out.add((String)label.get("name"));
+  }
+  return out;
+}
