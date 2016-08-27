@@ -1,7 +1,7 @@
 {
-  Collection<Stubbing> stubbings=(Collection)AllInvocationsFinder.findStubbings(mocks);
-  LinkedList<Stubbing> unused=ListUtil.filter(stubbings,new ListUtil.Filter<Stubbing>(){
-    public boolean isOut(    Stubbing s){
+  Set<StubbedInvocationMatcher> stubbings=AllInvocationsFinder.findStubbings(mocks);
+  List<StubbedInvocationMatcher> unused=filter(stubbings,new Filter<StubbedInvocationMatcher>(){
+    public boolean isOut(    StubbedInvocationMatcher s){
       return s.wasUsed();
     }
   }

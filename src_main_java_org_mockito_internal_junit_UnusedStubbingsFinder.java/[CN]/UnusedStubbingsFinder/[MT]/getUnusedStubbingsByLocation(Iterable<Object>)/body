@@ -1,5 +1,5 @@
 {
-  Collection<Stubbing> stubbings=(Collection)AllInvocationsFinder.findStubbings(mocks);
+  Set<StubbedInvocationMatcher> stubbings=AllInvocationsFinder.findStubbings(mocks);
   Set<String> locationsOfUsedStubbings=new HashSet<String>();
   for (  Stubbing s : stubbings) {
     if (s.wasUsed()) {
