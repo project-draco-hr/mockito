@@ -1,0 +1,8 @@
+{
+  Collection<V> elements=get(key);
+  if (elements == null) {
+    elements=new LinkedHashSet<V>();
+  }
+  elements.add(value);
+  data.put(key,elements);
+}

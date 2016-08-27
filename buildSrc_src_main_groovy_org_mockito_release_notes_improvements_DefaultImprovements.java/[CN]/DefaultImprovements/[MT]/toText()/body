@@ -3,8 +3,36 @@
     return "* No notable improvements. See the commits for detailed changes.";
   }
   StringBuilder sb=new StringBuilder("* Improvements: ").append(improvements.size());
-  for (  Improvement i : improvements) {
-    sb.append("\n  * ").append(i.toText());
+  MultiMap<String,Improvement> byLabel=new MultiMap<String,Improvement>();
+  Set<Improvement> remainingImprovements=new LinkedHashSet<Improvement>(improvements);
+  for (  String label : labels.keySet()) {
+    for (    Improvement i : improvements) {
+      if (i.labels.contains(label) && remainingImprovements.contains(i)) {
+        remainingImprovements.remove(i);
+        byLabel.put(label,i);
+      }
+    }
+  }
+  for (  String label : byLabel.keySet()) {
+    String labelCaption=labels.get(label);
+    Collection<Improvement> labelImprovements=byLabel.get(label);
+    sb.append("\n  * ").append(labelCaption).append(": ").append(labelImprovements.size());
+    for (    Improvement i : labelImprovements) {
+      sb.append("\n    * ").append(i.toText());
+    }
+  }
+  if (!remainingImprovements.isEmpty()) {
+    String indent;
+    if (byLabel.size() > 0) {
+      indent="  ";
+      sb.append("\n  * Remaining changes: ").append(remainingImprovements.size());
+    }
+ else {
+      indent="";
+    }
+    for (    Improvement i : remainingImprovements) {
+      sb.append("\n").append(indent).append("  * ").append(i.toText());
+    }
   }
   return sb.toString();
 }

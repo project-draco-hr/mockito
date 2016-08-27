@@ -1,6 +1,6 @@
 {
   LOGGER.info("Parsing {} commits with {} tickets",contributions.getAllCommits().size(),contributions.getAllTickets().size());
-  DefaultImprovements out=new DefaultImprovements();
+  DefaultImprovements out=new DefaultImprovements(labels);
   new GitHubTicketFetcher().fetchTickets(authToken,contributions.getAllTickets(),out);
   return out;
 }
