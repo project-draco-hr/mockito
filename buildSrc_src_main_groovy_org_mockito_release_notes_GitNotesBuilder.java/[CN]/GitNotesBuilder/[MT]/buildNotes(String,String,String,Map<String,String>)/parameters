@@ -1,3 +1,4 @@
 String version
 String fromRevision
 String toRevision
+Map<String,String> labels

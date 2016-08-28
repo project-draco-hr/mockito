@@ -1,3 +1,4 @@
 {
   improvements.add(improvement);
+  return this;
 }

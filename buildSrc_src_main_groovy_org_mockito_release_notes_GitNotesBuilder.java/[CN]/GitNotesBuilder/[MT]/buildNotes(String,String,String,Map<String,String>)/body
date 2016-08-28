@@ -3,6 +3,6 @@
   ContributionsProvider contributionsProvider=Vcs.getGitProvider(Exec.getProcessRunner(workDir));
   ContributionSet contributions=contributionsProvider.getContributionsBetween(fromRevision,toRevision);
   ImprovementsProvider improvementsProvider=Improvements.getGitHubProvider(authTokenEnvVar);
-  ImprovementSet improvements=improvementsProvider.getImprovements(contributions);
+  ImprovementSet improvements=improvementsProvider.getImprovements(contributions,labels);
   return new NotesPrinter().printNotes(version,new Date(),contributions,improvements);
 }
