@@ -1,0 +1,5 @@
+{
+  returnType=(Class<?>)genericReturnType;
+  this.contextualActualTypeParameters=source.contextualActualTypeParameters;
+  registerAllTypeVariables(returnType);
+}
