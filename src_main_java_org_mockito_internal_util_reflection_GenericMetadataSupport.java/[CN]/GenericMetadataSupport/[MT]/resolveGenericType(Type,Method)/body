@@ -1,6 +1,6 @@
 {
   if (type instanceof Class) {
-    return new NotGenericReturnTypeSupport(type);
+    return new NotGenericReturnTypeSupport(this,type);
   }
   if (type instanceof ParameterizedType) {
     return new ParameterizedReturnType(this,method.getTypeParameters(),(ParameterizedType)type);
