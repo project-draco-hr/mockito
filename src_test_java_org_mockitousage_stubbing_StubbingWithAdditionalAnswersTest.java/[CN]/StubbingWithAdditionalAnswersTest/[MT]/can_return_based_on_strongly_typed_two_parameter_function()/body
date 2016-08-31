@@ -1,5 +1,5 @@
 {
-  given(iMethods.simpleMethod(anyString(),anyInt())).will(answer(new AnswerFunctionalInterfaces.Answer2<String,String,Integer>(){
+  given(iMethods.simpleMethod(anyString(),anyInt())).will(answer(new Answer2<String,String,Integer>(){
     public String answer(    String s,    Integer i){
       return s + "-" + i;
     }

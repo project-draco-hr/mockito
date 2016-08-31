@@ -1,6 +1,6 @@
 {
   final IMethods target=mock(IMethods.class);
-  given(iMethods.threeArgumentMethodWithStrings(anyInt(),anyString(),anyString())).will(answer(new AnswerFunctionalInterfaces.Answer3<String,Integer,String,String>(){
+  given(iMethods.threeArgumentMethodWithStrings(anyInt(),anyString(),anyString())).will(answer(new Answer3<String,Integer,String,String>(){
     public String answer(    Integer i,    String s1,    String s2){
       target.threeArgumentMethodWithStrings(i,s1,s2);
       return "answered";
