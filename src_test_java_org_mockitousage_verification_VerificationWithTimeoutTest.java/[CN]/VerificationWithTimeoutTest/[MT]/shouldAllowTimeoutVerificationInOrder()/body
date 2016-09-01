@@ -1,5 +1,7 @@
 {
-  callAsyncWithDelay(mock,'1',30,MILLISECONDS);
+  DelayedExecution delayedExecution=new DelayedExecution(executor,mock,30);
+  delayedExecution.recordAsyncCall('1');
+  delayedExecution.allAsyncCallsStarted();
   mock.oneArg('x');
   InOrder inOrder=inOrder(mock);
   inOrder.verify(mock).oneArg('x');

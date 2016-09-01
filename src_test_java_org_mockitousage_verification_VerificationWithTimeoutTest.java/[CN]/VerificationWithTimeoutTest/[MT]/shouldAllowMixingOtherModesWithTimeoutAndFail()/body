@@ -1,6 +1,8 @@
 {
-  callAsyncWithDelay(mock,'c',20,MILLISECONDS);
-  callAsyncWithDelay(mock,'c',20,MILLISECONDS);
+  DelayedExecution delayedExecution=new DelayedExecution(executor,mock,20);
+  delayedExecution.recordAsyncCall('c');
+  delayedExecution.recordAsyncCall('c');
+  delayedExecution.allAsyncCallsStarted();
   verify(mock,timeout(100).atLeast(1)).oneArg('c');
   exception.expect(TooLittleActualInvocations.class);
   verify(mock,timeout(100).times(3)).oneArg('c');
