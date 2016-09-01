@@ -1,5 +1,5 @@
 {
-  DelayedExecution delayedExecution=new DelayedExecution(executor,mock,20);
+  DelayedExecution delayedExecution=new DelayedExecution(executor,mock,20,MILLISECONDS);
   delayedExecution.recordAsyncCall('c');
   delayedExecution.recordAsyncCall('c');
   delayedExecution.allAsyncCallsStarted();

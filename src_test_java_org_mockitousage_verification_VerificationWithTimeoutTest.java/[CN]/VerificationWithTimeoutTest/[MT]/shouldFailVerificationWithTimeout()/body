@@ -1,5 +1,5 @@
 {
-  DelayedExecution delayedExecution=new DelayedExecution(executor,mock,30);
+  DelayedExecution delayedExecution=new DelayedExecution(executor,mock,30,MILLISECONDS);
   delayedExecution.recordAsyncCall('c');
   delayedExecution.allAsyncCallsStarted();
   verify(mock,never()).oneArg('c');

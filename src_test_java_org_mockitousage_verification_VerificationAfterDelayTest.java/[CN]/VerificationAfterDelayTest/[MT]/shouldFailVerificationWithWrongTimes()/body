@@ -1,5 +1,7 @@
 {
-  callAsyncWithDelay(mock,'1',20,MILLISECONDS);
+  DelayedExecution delayedExecution=new DelayedExecution(executor,mock,20,MILLISECONDS);
+  delayedExecution.recordAsyncCall('1');
+  delayedExecution.allAsyncCallsStarted();
   verify(mock,times(0)).oneArg('1');
   exception.expect(MockitoAssertionError.class);
   verify(mock,after(100).times(2)).oneArg('1');

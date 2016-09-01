@@ -1,6 +1,6 @@
 {
   try {
-    Thread.sleep(delay);
+    timeUnit.sleep(delay);
   }
  catch (  InterruptedException e) {
     throw new RuntimeException(e);

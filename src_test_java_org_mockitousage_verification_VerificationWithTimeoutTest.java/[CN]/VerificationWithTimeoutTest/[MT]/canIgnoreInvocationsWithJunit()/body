@@ -1,10 +1,8 @@
 {
-  DelayedExecution delayedExecution=new DelayedExecution(executor,mock,0);
-  delayedExecution.recordAsyncCall('0');
-  delayedExecution.recordAsyncCall('1');
-  delayedExecution.recordAsyncCall('2');
+  DelayedExecution delayedExecution=createZeroMillisDelayedExecution();
+  DelayedExecution twentyMillisDelayedExecution=createTwentyMillisDelayedExecution();
   delayedExecution.allAsyncCallsStarted();
-  verify(mock,timeout(50)).oneArg('0');
+  twentyMillisDelayedExecution.allAsyncCallsStarted();
   verify(mock,timeout(50)).oneArg('1');
   verify(mock,timeout(50)).oneArg('2');
 }
