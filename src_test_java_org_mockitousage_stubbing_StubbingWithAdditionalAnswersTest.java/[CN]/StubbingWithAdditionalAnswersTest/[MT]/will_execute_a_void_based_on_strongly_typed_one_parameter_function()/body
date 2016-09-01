@@ -1,6 +1,6 @@
 {
   final IMethods target=mock(IMethods.class);
-  given(iMethods.simpleMethod(anyString())).will(answerVoid(new AnswerFunctionalInterfaces.VoidAnswer1<String>(){
+  given(iMethods.simpleMethod(anyString())).will(answerVoid(new VoidAnswer1<String>(){
     public void answer(    String s){
       target.simpleMethod(s);
     }
