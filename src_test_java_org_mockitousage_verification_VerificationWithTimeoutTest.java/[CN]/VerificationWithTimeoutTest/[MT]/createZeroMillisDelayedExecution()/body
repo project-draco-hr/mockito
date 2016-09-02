@@ -1,0 +1,6 @@
+{
+  DelayedExecution delayedExecution=new DelayedExecution(executor,mock,0,MILLISECONDS);
+  delayedExecution.recordAsyncCall('0');
+  delayedExecution.recordAsyncCall('1');
+  return delayedExecution;
+}

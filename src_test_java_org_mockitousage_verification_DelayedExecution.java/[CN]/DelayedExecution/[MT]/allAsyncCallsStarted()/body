@@ -1,0 +1,7 @@
+{
+  final CountDownLatch countDownLatch=new CountDownLatch(invocations.size());
+  for (  final Character invocation : invocations) {
+    executor.execute(runnable(countDownLatch,invocation));
+  }
+  countDownLatch.await();
+}

@@ -1,0 +1,10 @@
+{
+  return new Runnable(){
+    @Override public void run(){
+      countDownLatch.countDown();
+      sleep();
+      mock.oneArg(invocation.charValue());
+    }
+  }
+;
+}

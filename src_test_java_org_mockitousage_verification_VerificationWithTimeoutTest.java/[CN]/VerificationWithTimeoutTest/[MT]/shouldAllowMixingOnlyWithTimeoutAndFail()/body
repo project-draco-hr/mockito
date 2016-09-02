@@ -1,5 +1,7 @@
 {
-  callAsyncWithDelay(mock,'c',20,MILLISECONDS);
+  DelayedExecution delayedExecution=new DelayedExecution(executor,mock,20,MILLISECONDS);
+  delayedExecution.recordAsyncCall('c');
+  delayedExecution.allAsyncCallsStarted();
   mock.oneArg('x');
   verify(mock,never()).oneArg('c');
   exception.expect(NoInteractionsWanted.class);

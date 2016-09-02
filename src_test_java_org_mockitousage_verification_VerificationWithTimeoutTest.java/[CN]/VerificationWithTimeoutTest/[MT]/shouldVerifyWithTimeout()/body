@@ -1,5 +1,7 @@
 {
-  callAsyncWithDelay(mock,'c',20,MILLISECONDS);
+  DelayedExecution delayedExecution=new DelayedExecution(executor,mock,20,MILLISECONDS);
+  delayedExecution.recordAsyncCall('c');
+  delayedExecution.allAsyncCallsStarted();
   verify(mock,timeout(100)).oneArg('c');
   verify(mock,timeout(100).atLeastOnce()).oneArg('c');
   verify(mock,timeout(100).times(1)).oneArg('c');

@@ -1,7 +1,8 @@
 {
-  callAsyncWithDelay(mock,'0',0,MILLISECONDS);
-  callAsyncWithDelay(mock,'1',0,MILLISECONDS);
-  callAsyncWithDelay(mock,'2',20,MILLISECONDS);
+  DelayedExecution delayedExecution=createZeroMillisDelayedExecution();
+  DelayedExecution twentyMillisDelayedExecution=createTwentyMillisDelayedExecution();
+  delayedExecution.allAsyncCallsStarted();
   verify(mock,timeout(50)).oneArg('1');
+  twentyMillisDelayedExecution.allAsyncCallsStarted();
   verify(mock,timeout(50)).oneArg('2');
 }
