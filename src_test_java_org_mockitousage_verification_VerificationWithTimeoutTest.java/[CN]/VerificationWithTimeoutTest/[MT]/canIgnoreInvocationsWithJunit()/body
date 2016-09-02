@@ -2,7 +2,7 @@
   DelayedExecution delayedExecution=createZeroMillisDelayedExecution();
   DelayedExecution twentyMillisDelayedExecution=createTwentyMillisDelayedExecution();
   delayedExecution.allAsyncCallsStarted();
-  twentyMillisDelayedExecution.allAsyncCallsStarted();
   verify(mock,timeout(50)).oneArg('1');
+  twentyMillisDelayedExecution.allAsyncCallsStarted();
   verify(mock,timeout(50)).oneArg('2');
 }
