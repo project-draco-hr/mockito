@@ -1,0 +1,5 @@
+{
+  this.mockedType=mockedType;
+  this.interfaces=Collections.unmodifiableSet(interfaces);
+  this.serializableMode=serializableMode;
+}

@@ -1,4 +1,0 @@
-{
-  byteBuddy=new ByteBuddy().with(TypeValidation.DISABLED);
-  random=new Random();
-}

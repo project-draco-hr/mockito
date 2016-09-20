@@ -1,0 +1,2 @@
+WeakConcurrentMap<Object,MockMethodInterceptor> interceptors
+String identifier

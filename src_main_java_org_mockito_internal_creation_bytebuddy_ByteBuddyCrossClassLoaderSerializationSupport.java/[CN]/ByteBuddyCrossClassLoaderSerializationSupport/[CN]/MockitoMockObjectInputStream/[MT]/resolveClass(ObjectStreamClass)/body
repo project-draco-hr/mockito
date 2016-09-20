@@ -2,7 +2,7 @@
   if (notMarkedAsAMockitoMock(readObject())) {
     return super.resolveClass(desc);
   }
-  Class<?> proxyClass=((ByteBuddyMockMaker)Plugins.getMockMaker()).createProxyClass(withMockFeatures(typeToMock,extraInterfaces,true));
+  Class<?> proxyClass=Plugins.getMockMaker().createMockType(typeToMock,extraInterfaces,SerializableMode.ACROSS_CLASSLOADERS);
   hackClassNameToMatchNewlyCreatedClass(desc,proxyClass);
   return proxyClass;
 }

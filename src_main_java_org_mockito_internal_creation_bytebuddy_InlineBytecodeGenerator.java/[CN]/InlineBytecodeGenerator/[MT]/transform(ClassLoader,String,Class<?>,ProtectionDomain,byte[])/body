@@ -1,0 +1,13 @@
+{
+  if (classBeingRedefined == null || !mocked.contains(classBeingRedefined) || EXCLUDES.contains(classBeingRedefined)) {
+    return null;
+  }
+ else {
+    try {
+      return byteBuddy.redefine(classBeingRedefined,ClassFileLocator.Simple.of(classBeingRedefined.getName(),classfileBuffer)).visit(Advice.withCustomMapping().bind(MockMethodAdvice.Identifier.class,identifier).to(MockMethodAdvice.class).on(isVirtual().and(not(isBridge().or(isHashCode()).or(isEquals()).or(isDefaultFinalizer()))).and(not(isDeclaredBy(nameStartsWith("java.")).<MethodDescription>and(isPackagePrivate()))))).visit(Advice.withCustomMapping().bind(MockMethodAdvice.Identifier.class,identifier).to(MockMethodAdvice.ForHashCode.class).on(isHashCode())).visit(Advice.withCustomMapping().bind(MockMethodAdvice.Identifier.class,identifier).to(MockMethodAdvice.ForEquals.class).on(isEquals())).make().getBytes();
+    }
+ catch (    Throwable throwable) {
+      return null;
+    }
+  }
+}

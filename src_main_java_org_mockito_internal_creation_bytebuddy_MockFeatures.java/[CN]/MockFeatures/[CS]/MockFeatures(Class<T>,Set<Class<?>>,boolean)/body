@@ -1,5 +1,0 @@
-{
-  this.mockedType=mockedType;
-  this.interfaces=Collections.unmodifiableSet(interfaces);
-  this.crossClassLoaderSerializable=crossClassLoaderSerializable;
-}

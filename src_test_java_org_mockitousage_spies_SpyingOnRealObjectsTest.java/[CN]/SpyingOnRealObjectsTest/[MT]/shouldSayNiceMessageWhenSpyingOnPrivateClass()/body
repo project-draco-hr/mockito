@@ -1,7 +1,8 @@
 {
   List<String> real=Arrays.asList("first","second");
   try {
-    spy(real);
+    List<String> spy=spy(real);
+    assumeTrue("Using inline mocks, it is possible to spy on private types",spy.getClass() != real.getClass());
     fail();
   }
  catch (  MockitoException e) {

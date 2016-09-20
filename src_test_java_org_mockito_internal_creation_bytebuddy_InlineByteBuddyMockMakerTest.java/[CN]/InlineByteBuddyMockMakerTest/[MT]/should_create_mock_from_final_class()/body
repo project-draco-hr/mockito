@@ -1,0 +1,5 @@
+{
+  MockCreationSettings<FinalClass> settings=settingsFor(FinalClass.class);
+  FinalClass proxy=mockMaker.createMock(settings,new MockHandlerImpl<FinalClass>(settings));
+  assertThat(proxy.foo()).isEqualTo("bar");
+}

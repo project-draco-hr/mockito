@@ -1,3 +1,0 @@
-{
-  return new MockFeatures<T>(mockedType,interfaces,crossClassLoaderSerializable);
-}

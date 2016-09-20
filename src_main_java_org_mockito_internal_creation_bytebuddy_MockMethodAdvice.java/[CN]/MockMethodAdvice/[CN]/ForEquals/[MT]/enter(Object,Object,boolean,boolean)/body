@@ -1,0 +1,5 @@
+{
+  if (skipped) {
+    equals=self == other;
+  }
+}

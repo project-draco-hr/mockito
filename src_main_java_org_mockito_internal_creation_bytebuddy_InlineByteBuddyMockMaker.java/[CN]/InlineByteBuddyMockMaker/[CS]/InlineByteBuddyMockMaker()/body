@@ -1,0 +1,24 @@
+{
+  try {
+    instrumentation=ByteBuddyAgent.install();
+    if (!instrumentation.isRetransformClassesSupported()) {
+      throw new MockitoException("Current VM does not supprt retransformation");
+    }
+    File boot=File.createTempFile("mockitoboot","jar");
+    boot.deleteOnExit();
+    JarOutputStream outputStream=new JarOutputStream(new FileOutputStream(boot));
+    try {
+      outputStream.putNextEntry(new JarEntry("org/mockito/internal/creation/bytebuddy/MockMethodDispatcher.class"));
+      outputStream.write(ClassFileLocator.ForClassLoader.of(InlineByteBuddyMockMaker.class.getClassLoader()).locate("org.mockito.internal.creation.bytebuddy.MockMethodDispatcher").resolve());
+      outputStream.closeEntry();
+    }
+  finally {
+      outputStream.close();
+    }
+    instrumentation.appendToBootstrapClassLoaderSearch(new JarFile(boot));
+    bytecodeGenerator=new TypeCachingBytecodeGenerator(new InlineBytecodeGenerator(instrumentation,mocks),true);
+  }
+ catch (  IOException exception) {
+    throw new MockitoException("Cannot apply self-instrumentation on current VM",exception);
+  }
+}

@@ -1,0 +1,6 @@
+{
+  if (getHandler(mock) == null) {
+    return null;
+  }
+  return mock.getClass().getAnnotation(MockedType.class).type();
+}

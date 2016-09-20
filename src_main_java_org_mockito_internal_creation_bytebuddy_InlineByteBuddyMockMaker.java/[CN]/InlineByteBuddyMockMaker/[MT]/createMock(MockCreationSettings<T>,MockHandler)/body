@@ -1,0 +1,16 @@
+{
+  Class<? extends T> type=bytecodeGenerator.mockClass(mockWithFeaturesFrom(settings));
+  Instantiator instantiator=Plugins.getInstantiatorProvider().getInstantiator(settings);
+  try {
+    T instance=instantiator.newInstance(type);
+    MockMethodInterceptor mockMethodInterceptor=new MockMethodInterceptor(asInternalMockHandler(handler),settings);
+    mocks.put(instance,mockMethodInterceptor);
+    if (instance instanceof MockAccess) {
+      ((MockAccess)instance).setMockitoInterceptor(mockMethodInterceptor);
+    }
+    return instance;
+  }
+ catch (  org.mockito.internal.creation.instance.InstantiationException e) {
+    throw new MockitoException("Unable to create mock instance of type '" + type.getSimpleName() + "'",e);
+  }
+}

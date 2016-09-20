@@ -1,0 +1,7 @@
+{
+  MockSettingsImpl<T> mockSettings=new MockSettingsImpl<T>();
+  mockSettings.setTypeToMock(type);
+  mockSettings.defaultAnswer(new Returns("bar"));
+  if (extraInterfaces.length > 0)   mockSettings.extraInterfaces(extraInterfaces);
+  return mockSettings;
+}

@@ -1,0 +1,10 @@
+{
+  this.instrumentation=instrumentation;
+  byteBuddy=new ByteBuddy().with(TypeValidation.DISABLED).with(Implementation.Context.Disabled.Factory.INSTANCE);
+  mocked=new WeakConcurrentSet<Class<?>>(WeakConcurrentSet.Cleaner.INLINE);
+  identifier=RandomString.make();
+  advice=new MockMethodAdvice(mocks,identifier);
+  subclassEngine=new TypeCachingBytecodeGenerator(new SubclassBytecodeGenerator(to(MockMethodAdvice.ForReadObject.class).appendParameterBinder(of(MockMethodAdvice.Identifier.class,identifier)),isAbstract().or(isNative())),false);
+  MockMethodDispatcher.set(identifier,advice);
+  instrumentation.addTransformer(this,true);
+}

@@ -1,0 +1,6 @@
+{
+  if (Modifier.isPrivate(mockFeatures.mockedType.getModifiers())) {
+    throw new MockitoException(join("Mockito cannot mock this class: " + mockFeatures.mockedType + ".","Most likely it is a private class that is not visible by Mockito","","You might be able to avoid this problem when using inline mocks.","You can learn about inline mocks and their limitations under item #39 of the Mockito class javadoc.",""),generationFailed);
+  }
+  throw new MockitoException(join("Mockito cannot mock this class: " + mockFeatures.mockedType,"","Unless you explicitly enable inline mocks, Mockito can only mock visible & non-final classes.","You can learn about inline mocks and their limitations under item #39 of the Mockito class javadoc.","If you're not sure why you're getting this error, please report to the mailing list.","","Underlying exception : " + generationFailed),generationFailed);
+}

@@ -1,4 +1,0 @@
-{
-  this.generator=generator;
-  this.weak=weak;
-}

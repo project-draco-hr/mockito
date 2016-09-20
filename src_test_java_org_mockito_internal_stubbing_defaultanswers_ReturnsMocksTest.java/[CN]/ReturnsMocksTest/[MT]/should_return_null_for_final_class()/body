@@ -1,3 +1,0 @@
-{
-  assertNull(values.returnValueFor(Baz.class));
-}

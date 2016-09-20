@@ -1,0 +1,3 @@
+{
+  return MockFeatures.withMockFeatures(settings.getTypeToMock(),settings.getExtraInterfaces(),settings.getSerializableMode());
+}

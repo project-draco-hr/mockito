@@ -1,0 +1,9 @@
+{
+  MockMethodDispatcher dispatcher=MockMethodDispatcher.get(identifier,mock);
+  if (dispatcher == null || !dispatcher.isMocked(mock)) {
+    return null;
+  }
+ else {
+    return dispatcher.handle(mock,origin,arguments);
+  }
+}
