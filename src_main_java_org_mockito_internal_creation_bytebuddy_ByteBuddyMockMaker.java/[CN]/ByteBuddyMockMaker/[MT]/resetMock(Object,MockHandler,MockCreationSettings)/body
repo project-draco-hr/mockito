@@ -1,0 +1,3 @@
+{
+  defaultByteBuddyMockMaker.resetMock(mock,newHandler,settings);
+}

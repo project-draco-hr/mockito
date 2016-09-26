@@ -1,0 +1,3 @@
+{
+  return defaultByteBuddyMockMaker.getMockedType(mock);
+}

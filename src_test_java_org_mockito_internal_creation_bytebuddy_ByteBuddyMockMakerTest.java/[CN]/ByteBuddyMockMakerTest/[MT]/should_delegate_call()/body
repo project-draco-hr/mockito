@@ -1,0 +1,16 @@
+{
+  CreationSettings<Object> creationSettings=new CreationSettings<Object>();
+  MockHandlerImpl<Object> handler=new MockHandlerImpl<Object>(creationSettings);
+  mockMaker.createMockType(getClass(),Collections.<Class<?>>emptySet(),SerializableMode.ACROSS_CLASSLOADERS);
+  mockMaker.createMock(creationSettings,handler);
+  mockMaker.getMockedType(this);
+  mockMaker.getHandler(this);
+  mockMaker.isTypeMockable(Object.class);
+  mockMaker.resetMock(this,handler,creationSettings);
+  verify(delegate).createMockType(getClass(),Collections.<Class<?>>emptySet(),SerializableMode.ACROSS_CLASSLOADERS);
+  verify(delegate).createMock(creationSettings,handler);
+  verify(delegate).getMockedType(this);
+  verify(delegate).getHandler(this);
+  verify(delegate).isTypeMockable(Object.class);
+  verify(delegate).resetMock(this,handler,creationSettings);
+}
