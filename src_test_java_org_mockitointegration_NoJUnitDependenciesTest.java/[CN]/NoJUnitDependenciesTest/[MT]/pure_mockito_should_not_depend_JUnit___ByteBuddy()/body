@@ -1,6 +1,6 @@
 {
   Assume.assumeTrue("ByteBuddyMockMaker".equals(Plugins.getMockMaker().getClass().getSimpleName()));
-  ClassLoader classLoader_without_JUnit=ClassLoaders.excludingClassLoader().withCodeSourceUrlOf(Mockito.class,Matcher.class,ByteBuddy.class,Objenesis.class,WeakConcurrentMap.class).withCodeSourceUrlOf(coverageTool()).without("junit","org.junit").build();
+  ClassLoader classLoader_without_JUnit=ClassLoaders.excludingClassLoader().withCodeSourceUrlOf(Mockito.class,Matcher.class,ByteBuddy.class,Objenesis.class).withCodeSourceUrlOf(coverageTool()).without("junit","org.junit").build();
   Set<String> pureMockitoAPIClasses=ClassLoaders.in(classLoader_without_JUnit).omit("runners","junit","JUnit").listOwnedClasses();
   for (  String pureMockitoAPIClass : pureMockitoAPIClasses) {
     checkDependency(classLoader_without_JUnit,pureMockitoAPIClass);

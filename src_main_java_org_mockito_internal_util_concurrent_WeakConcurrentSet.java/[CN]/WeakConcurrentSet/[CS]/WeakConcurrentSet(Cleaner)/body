@@ -1,0 +1,13 @@
+{
+switch (cleaner) {
+case INLINE:
+    target=new WeakConcurrentMap.WithInlinedExpunction<V,Boolean>();
+  break;
+case THREAD:
+case MANUAL:
+target=new WeakConcurrentMap<V,Boolean>(cleaner == Cleaner.THREAD);
+break;
+default :
+throw new AssertionError();
+}
+}

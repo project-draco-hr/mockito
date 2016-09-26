@@ -1,0 +1,7 @@
+{
+  T value=map.get(thread);
+  if (value != null) {
+    set(inheritValue(value));
+  }
+  return value;
+}

@@ -1,0 +1,13 @@
+{
+  target=new ConcurrentHashMap<WeakKey<K>,V>();
+  if (cleanerThread) {
+    thread=new Thread(this);
+    thread.setName("weak-ref-cleaner-" + ID.getAndIncrement());
+    thread.setPriority(Thread.MIN_PRIORITY);
+    thread.setDaemon(true);
+    thread.start();
+  }
+ else {
+    thread=null;
+  }
+}

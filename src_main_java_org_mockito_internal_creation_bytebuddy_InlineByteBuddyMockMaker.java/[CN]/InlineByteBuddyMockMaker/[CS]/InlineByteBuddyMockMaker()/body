@@ -2,7 +2,7 @@
   try {
     instrumentation=ByteBuddyAgent.install();
     if (!instrumentation.isRetransformClassesSupported()) {
-      throw new MockitoException("Current VM does not supprt retransformation");
+      throw new MockitoException("Current VM does not support retransformation");
     }
     File boot=File.createTempFile("mockitoboot","jar");
     boot.deleteOnExit();
