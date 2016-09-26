@@ -1,3 +1,0 @@
-{
-  return cachingMockBytecodeGenerator.mockClass(MockFeatures.withMockFeatures(mockedType,interfaces,serializableMode));
-}

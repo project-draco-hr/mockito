@@ -1,3 +1,0 @@
-{
-  return defaultByteBuddyMockMaker.createMockType(mockedType,interfaces,serializableMode);
-}

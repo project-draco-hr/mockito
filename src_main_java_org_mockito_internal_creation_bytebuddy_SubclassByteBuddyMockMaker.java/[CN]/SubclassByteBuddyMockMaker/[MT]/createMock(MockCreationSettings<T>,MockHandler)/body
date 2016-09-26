@@ -1,5 +1,5 @@
 {
-  Class<? extends T> mockedProxyType=createProxyClass(mockWithFeaturesFrom(settings));
+  Class<? extends T> mockedProxyType=createMockType(settings);
   Instantiator instantiator=Plugins.getInstantiatorProvider().getInstantiator(settings);
   T mockInstance=null;
   try {

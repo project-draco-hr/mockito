@@ -1,5 +1,5 @@
 {
-  Class<? extends T> type=bytecodeGenerator.mockClass(mockWithFeaturesFrom(settings));
+  Class<? extends T> type=createMockType(settings);
   Instantiator instantiator=Plugins.getInstantiatorProvider().getInstantiator(settings);
   try {
     T instance=instantiator.newInstance(type);
