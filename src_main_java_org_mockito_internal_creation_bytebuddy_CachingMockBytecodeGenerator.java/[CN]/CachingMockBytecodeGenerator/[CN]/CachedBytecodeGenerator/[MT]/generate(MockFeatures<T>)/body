@@ -1,8 +1,0 @@
-{
-  try {
-    return generator.generateMockClass(mockFeatures);
-  }
- catch (  Exception bytecodeGenerationFailed) {
-    throw prettifyFailure(mockFeatures,bytecodeGenerationFailed);
-  }
-}

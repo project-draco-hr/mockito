@@ -1,0 +1,17 @@
+{
+  Matcher matcher=JAVA_8_RELEASE_VERSION_SCHEME.matcher(jvmVersion);
+  if (matcher.matches()) {
+    int update=Integer.parseInt(matcher.group(1));
+    return update < 45;
+  }
+  matcher=JAVA_8_DEV_VERSION_SCHEME.matcher(jvmVersion);
+  if (matcher.matches()) {
+    int update=Integer.parseInt(matcher.group(1));
+    return update < 45;
+  }
+  matcher=Pattern.compile("1\\.8\\.0-b\\d+").matcher(jvmVersion);
+  if (matcher.matches()) {
+    return true;
+  }
+  return false;
+}

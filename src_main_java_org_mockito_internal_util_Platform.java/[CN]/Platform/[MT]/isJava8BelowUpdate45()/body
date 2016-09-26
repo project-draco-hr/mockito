@@ -1,0 +1,3 @@
+{
+  return isJava8BelowUpdate45(JVM_VERSION);
+}
