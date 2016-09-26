@@ -2,7 +2,7 @@
   if (notMarkedAsAMockitoMock(readObject())) {
     return super.resolveClass(desc);
   }
-  Class<?> proxyClass=Plugins.getMockMaker().createMockType(new CreationSettings().setTypeToMock(typeToMock).setExtraInterfaces(extraInterfaces).setSerializableMode(SerializableMode.ACROSS_CLASSLOADERS));
+  @SuppressWarnings("unchecked") Class<?> proxyClass=Plugins.getMockMaker().createMockType(new CreationSettings().setTypeToMock(typeToMock).setExtraInterfaces(extraInterfaces).setSerializableMode(SerializableMode.ACROSS_CLASSLOADERS));
   hackClassNameToMatchNewlyCreatedClass(desc,proxyClass);
   return proxyClass;
 }

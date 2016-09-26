@@ -4,7 +4,7 @@
     @Override public void testStarted(    Description description) throws Exception {
       warningsCollector=new WarningsCollector();
     }
-    @Override public void testFailure(    final Failure failure) throws Exception {
+    @Override @SuppressWarnings("deprecation") public void testFailure(    final Failure failure) throws Exception {
       String warnings=warningsCollector.getWarnings();
       new JUnitFailureHacker().appendWarnings(failure,warnings);
     }
