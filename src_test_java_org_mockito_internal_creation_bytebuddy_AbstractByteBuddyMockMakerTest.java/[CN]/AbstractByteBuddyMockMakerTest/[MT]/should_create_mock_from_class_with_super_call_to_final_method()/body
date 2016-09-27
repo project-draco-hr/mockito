@@ -1,0 +1,5 @@
+{
+  MockCreationSettings<CallingSuperMethodClass> settings=settingsWithSuperCall(CallingSuperMethodClass.class);
+  SampleClass proxy=mockMaker.createMock(settings,new MockHandlerImpl<CallingSuperMethodClass>(settings));
+  assertThat(proxy.foo()).isEqualTo("foo");
+}

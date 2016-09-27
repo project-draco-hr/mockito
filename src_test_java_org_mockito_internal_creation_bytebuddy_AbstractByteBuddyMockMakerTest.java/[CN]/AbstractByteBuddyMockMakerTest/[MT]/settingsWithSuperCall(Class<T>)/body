@@ -1,0 +1,6 @@
+{
+  MockSettingsImpl<T> mockSettings=new MockSettingsImpl<T>();
+  mockSettings.setTypeToMock(type);
+  mockSettings.defaultAnswer(new CallsRealMethods());
+  return mockSettings;
+}

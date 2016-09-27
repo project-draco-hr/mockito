@@ -1,3 +1,0 @@
-{
-  return selfCallInfo.checkSuperCall(instance) && isMock(instance);
-}
