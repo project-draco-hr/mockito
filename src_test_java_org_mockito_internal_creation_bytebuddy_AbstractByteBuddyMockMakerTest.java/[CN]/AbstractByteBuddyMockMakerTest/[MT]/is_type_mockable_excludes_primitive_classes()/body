@@ -1,0 +1,4 @@
+{
+  MockMaker.TypeMockability mockable=mockMaker.isTypeMockable(Integer.class);
+  assertThat(mockable.mockable()).isFalse();
+}

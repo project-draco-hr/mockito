@@ -1,0 +1,14 @@
+{
+  int[] array=new int[5];
+  MockCreationSettings<? extends int[]> settings=settingsFor(array.getClass());
+  expectedException.expect(MockitoException.class);
+  expectedException.expectMessage(new BaseMatcher<String>(){
+    @Override public boolean matches(    Object item){
+      return ((String)item).contains("Could not modify all classes");
+    }
+    @Override public void describeTo(    Description description){
+    }
+  }
+);
+  mockMaker.createMock(settings,new MockHandlerImpl(settings));
+}
