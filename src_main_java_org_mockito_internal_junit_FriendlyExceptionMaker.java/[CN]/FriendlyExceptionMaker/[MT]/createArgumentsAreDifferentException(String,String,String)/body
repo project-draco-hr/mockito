@@ -1,5 +1,5 @@
 {
-  if (!detecter.hasJUnit()) {
+  if (!detector.hasJUnit()) {
     return new ArgumentsAreDifferent(message);
   }
   try {
