@@ -1,1 +1,1 @@
-AbstractByteBuddyMockMakerTest
+AbstractByteBuddyMockMakerTest<SubclassByteBuddyMockMaker>

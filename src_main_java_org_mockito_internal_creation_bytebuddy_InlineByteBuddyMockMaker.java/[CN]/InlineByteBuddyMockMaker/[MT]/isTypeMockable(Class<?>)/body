@@ -4,6 +4,9 @@
       return instrumentation.isModifiableClass(type) && !EXCLUDES.contains(type);
     }
     @Override public String nonMockableReason(){
+      if (mockable()) {
+        return "";
+      }
       if (type.isPrimitive()) {
         return "primitive type";
       }

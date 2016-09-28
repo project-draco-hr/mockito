@@ -1,14 +1,11 @@
 {
-  int[] array=new int[5];
-  MockCreationSettings<? extends int[]> settings=settingsFor(array.getClass());
-  expectedException.expect(MockitoException.class);
-  expectedException.expectMessage(new BaseMatcher<String>(){
-    @Override public boolean matches(    Object item){
-      return ((String)item).contains("Could not modify all classes");
-    }
-    @Override public void describeTo(    Description description){
-    }
+  MockCreationSettings settings=settingsFor(int.class);
+  try {
+    mockMaker.createMock(settings,new MockHandlerImpl(settings));
+    fail("Expected a MockitoException");
   }
-);
-  mockMaker.createMock(settings,new MockHandlerImpl(settings));
+ catch (  MockitoException e) {
+    e.printStackTrace();
+    assertThat(e).hasMessageContaining("Could not modify all classes");
+  }
 }

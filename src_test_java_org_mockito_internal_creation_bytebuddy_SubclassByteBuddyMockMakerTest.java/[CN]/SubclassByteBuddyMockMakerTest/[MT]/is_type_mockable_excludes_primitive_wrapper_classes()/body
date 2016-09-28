@@ -1,4 +1,5 @@
 {
   MockMaker.TypeMockability mockable=mockMaker.isTypeMockable(Integer.class);
   assertThat(mockable.mockable()).isFalse();
+  assertThat(mockable.nonMockableReason()).contains("final");
 }

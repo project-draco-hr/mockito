@@ -1,4 +1,7 @@
 {
+  if (mockFeatures.getTypeToMock().isArray()) {
+    throw new MockitoException(join("Mockito cannot mock arrays: " + mockFeatures.getTypeToMock() + ".",""),generationFailed);
+  }
   if (Modifier.isPrivate(mockFeatures.getTypeToMock().getModifiers())) {
     throw new MockitoException(join("Mockito cannot mock this class: " + mockFeatures.getTypeToMock() + ".","Most likely it is a private class that is not visible by Mockito",""),generationFailed);
   }

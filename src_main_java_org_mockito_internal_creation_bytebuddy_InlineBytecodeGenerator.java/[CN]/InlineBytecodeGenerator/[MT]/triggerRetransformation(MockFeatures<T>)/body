@@ -1,0 +1,23 @@
+{
+  Set<Class<?>> types=new HashSet<Class<?>>();
+  Class<?> type=features.mockedType;
+  do {
+    if (mocked.add(type)) {
+      types.add(type);
+      addInterfaces(types,type.getInterfaces());
+    }
+    type=type.getSuperclass();
+  }
+ while (type != null);
+  if (!types.isEmpty()) {
+    try {
+      instrumentation.retransformClasses(types.toArray(new Class<?>[types.size()]));
+    }
+ catch (    UnmodifiableClassException exception) {
+      for (      Class<?> failed : types) {
+        mocked.remove(failed);
+      }
+      throw new MockitoException("Could not modify all classes " + types,exception);
+    }
+  }
+}

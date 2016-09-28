@@ -1,0 +1,5 @@
+{
+  MockMaker.TypeMockability mockable=mockMaker.isTypeMockable(Pattern.class);
+  assertThat(mockable.mockable()).isTrue();
+  assertThat(mockable.nonMockableReason()).isEqualTo("");
+}

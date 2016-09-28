@@ -1,3 +1,4 @@
 {
+  assumeVmArgPresent("-ea");
   new AccessibilityChanger().safelyDisableAccess(field("whatever"));
 }
