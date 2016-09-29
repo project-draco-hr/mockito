@@ -1,0 +1,14 @@
+{
+  if (key == null)   throw new NullPointerException();
+  V value=target.get(new LatentKey<K>(key));
+  if (value == null) {
+    value=defaultValue(key);
+    if (value != null) {
+      V previousValue=target.putIfAbsent(new WeakKey<K>(key,this),value);
+      if (previousValue != null) {
+        value=previousValue;
+      }
+    }
+  }
+  return value;
+}

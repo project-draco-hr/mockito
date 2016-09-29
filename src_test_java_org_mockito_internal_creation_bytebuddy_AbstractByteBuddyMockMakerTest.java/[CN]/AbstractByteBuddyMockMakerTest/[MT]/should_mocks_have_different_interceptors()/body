@@ -1,0 +1,7 @@
+{
+  SomeClass mockOne=mockMaker.createMock(settingsFor(SomeClass.class),dummyH());
+  SomeClass mockTwo=mockMaker.createMock(settingsFor(SomeClass.class),dummyH());
+  MockHandler handlerOne=mockMaker.getHandler(mockOne);
+  MockHandler handlerTwo=mockMaker.getHandler(mockTwo);
+  assertThat(handlerOne).isNotSameAs(handlerTwo);
+}

@@ -1,0 +1,4 @@
+SelfCallInfo selfCallInfo
+Method origin
+Object instance
+Object[] arguments

@@ -1,0 +1,7 @@
+{
+  objectInputStream.defaultReadObject();
+  MockMethodAdvice mockMethodAdvice=(MockMethodAdvice)MockMethodDispatcher.get(identifier,thiz);
+  if (mockMethodAdvice != null) {
+    mockMethodAdvice.interceptors.put(thiz,thiz.getMockitoInterceptor());
+  }
+}

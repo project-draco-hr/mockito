@@ -1,0 +1,10 @@
+{
+  try {
+    while (true) {
+      target.remove(remove());
+    }
+  }
+ catch (  InterruptedException ignored) {
+    clear();
+  }
+}

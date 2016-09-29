@@ -1,7 +1,0 @@
-{
-  SomeClass mockOne=mockMaker.createMock(settingsFor(SomeClass.class),dummyH());
-  SomeClass mockTwo=mockMaker.createMock(settingsFor(SomeClass.class),dummyH());
-  MockAccess interceptorOne=(MockAccess)mockOne;
-  MockAccess interceptorTwo=(MockAccess)mockTwo;
-  assertThat(interceptorOne.getMockitoInterceptor()).isNotSameAs(interceptorTwo.getMockitoInterceptor());
-}

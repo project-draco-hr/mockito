@@ -1,3 +1,0 @@
-{
-  cachingMockBytecodeGenerator=new CachingMockBytecodeGenerator(false);
-}

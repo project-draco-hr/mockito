@@ -1,5 +1,5 @@
 {
-  withFinal=mock(WithFinal.class);
+  assumeTrue("Does not apply for inline mocks",withFinal.getClass() != WithFinal.class);
   verify(withFinal).foo();
   try {
     verify(withFinal).foo();

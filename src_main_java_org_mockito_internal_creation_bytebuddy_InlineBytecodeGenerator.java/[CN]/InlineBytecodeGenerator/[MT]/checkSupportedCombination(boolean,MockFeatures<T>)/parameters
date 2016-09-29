@@ -1,0 +1,2 @@
+boolean subclassingRequired
+MockFeatures<T> features

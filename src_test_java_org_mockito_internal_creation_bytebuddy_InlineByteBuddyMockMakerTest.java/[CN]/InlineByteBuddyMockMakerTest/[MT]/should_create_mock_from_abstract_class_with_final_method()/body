@@ -1,0 +1,6 @@
+{
+  MockCreationSettings<FinalMethodAbstractType> settings=settingsFor(FinalMethodAbstractType.class);
+  FinalMethodAbstractType proxy=mockMaker.createMock(settings,new MockHandlerImpl<FinalMethodAbstractType>(settings));
+  assertThat(proxy.foo()).isEqualTo("bar");
+  assertThat(proxy.bar()).isEqualTo("bar");
+}

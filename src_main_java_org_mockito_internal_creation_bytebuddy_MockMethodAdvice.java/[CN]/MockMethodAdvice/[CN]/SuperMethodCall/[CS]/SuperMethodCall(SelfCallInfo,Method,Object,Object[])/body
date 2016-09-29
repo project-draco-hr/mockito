@@ -1,0 +1,6 @@
+{
+  this.selfCallInfo=selfCallInfo;
+  this.origin=origin;
+  this.instance=instance;
+  this.arguments=arguments;
+}

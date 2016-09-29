@@ -1,0 +1,5 @@
+{
+  Throwable throwable=new Throwable();
+  throwable.setStackTrace(new StackTraceElement[0]);
+  assertThat(MockMethodAdvice.hideRecursiveCall(throwable,0,SampleInterface.class)).isSameAs(throwable);
+}

@@ -6,10 +6,10 @@
   for (  Thread t : threads) {
     t.start();
   }
-  boolean failed=false;
+  Set<Class<?>> failed=new HashSet<Class<?>>();
   for (  AllTestsRunner t : threads) {
     t.join();
-    failed|=t.isFailed();
+    failed.addAll(t.getFailed());
   }
   return failed;
 }

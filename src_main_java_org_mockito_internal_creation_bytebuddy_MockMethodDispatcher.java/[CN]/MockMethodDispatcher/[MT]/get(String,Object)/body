@@ -1,0 +1,8 @@
+{
+  if (mock == INSTANCE) {
+    return null;
+  }
+ else {
+    return INSTANCE.get(identifier);
+  }
+}

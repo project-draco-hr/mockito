@@ -1,0 +1,9 @@
+{
+  if (mockFeatures.getTypeToMock().isArray()) {
+    throw new MockitoException(join("Mockito cannot mock arrays: " + mockFeatures.getTypeToMock() + ".",""),generationFailed);
+  }
+  if (Modifier.isPrivate(mockFeatures.getTypeToMock().getModifiers())) {
+    throw new MockitoException(join("Mockito cannot mock this class: " + mockFeatures.getTypeToMock() + ".","Most likely it is due to mocking a private class that is not visible to Mockito",""),generationFailed);
+  }
+  throw new MockitoException(join("Mockito cannot mock this class: " + mockFeatures.getTypeToMock() + ".","","Mockito can only non-private & non-final classes.","If you're not sure why you're getting this error, please report to the mailing list.","",Platform.isJava8BelowUpdate45() ? "Java 8 early builds have bugs that were addressed in Java 1.8.0_45, please update your JDK!\n" : "",Platform.describe(),"","Underlying exception : " + generationFailed),generationFailed);
+}

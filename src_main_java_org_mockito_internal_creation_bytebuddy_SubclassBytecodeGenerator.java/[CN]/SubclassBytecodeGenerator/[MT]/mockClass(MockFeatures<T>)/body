@@ -1,0 +1,10 @@
+{
+  DynamicType.Builder<T> builder=byteBuddy.subclass(features.mockedType).name(nameFor(features.mockedType)).ignoreAlso(isGroovyMethod()).annotateType(features.mockedType.getAnnotations()).implement(new ArrayList<Type>(features.interfaces)).method(matcher).intercept(to(DispatcherDefaultingToRealMethod.class)).transform(withModifiers(SynchronizationState.PLAIN)).attribute(INCLUDING_RECEIVER).method(isHashCode()).intercept(to(MockMethodInterceptor.ForHashCode.class)).method(isEquals()).intercept(to(MockMethodInterceptor.ForEquals.class)).serialVersionUid(42L).defineField("mockitoInterceptor",MockMethodInterceptor.class,PRIVATE).implement(MockAccess.class).intercept(FieldAccessor.ofBeanProperty());
+  if (features.serializableMode == SerializableMode.ACROSS_CLASSLOADERS) {
+    builder=builder.implement(CrossClassLoaderSerializableMock.class).intercept(to(MockMethodInterceptor.ForWriteReplace.class));
+  }
+  if (readReplace != null) {
+    builder=builder.defineMethod("readObject",void.class,Visibility.PRIVATE).withParameters(ObjectInputStream.class).throwing(ClassNotFoundException.class,IOException.class).intercept(readReplace);
+  }
+  return builder.make().load(new MultipleParentClassLoader.Builder().append(features.mockedType).append(features.interfaces).append(currentThread().getContextClassLoader()).append(MockAccess.class,DispatcherDefaultingToRealMethod.class).append(MockMethodInterceptor.class,MockMethodInterceptor.ForHashCode.class,MockMethodInterceptor.ForEquals.class).build(),ClassLoadingStrategy.Default.INJECTION.with(features.mockedType.getProtectionDomain())).getLoaded();
+}

@@ -1,7 +1,0 @@
-{
-  DynamicType.Builder<T> builder=byteBuddy.subclass(features.mockedType).name(nameFor(features.mockedType)).ignoreAlso(isGroovyMethod()).annotateType(features.mockedType.getAnnotations()).implement(new ArrayList<Type>(features.interfaces)).method(any()).intercept(MethodDelegation.to(DispatcherDefaultingToRealMethod.class)).transform(Transformer.ForMethod.withModifiers(SynchronizationState.PLAIN)).attribute(MethodAttributeAppender.ForInstrumentedMethod.INCLUDING_RECEIVER).serialVersionUid(42L).defineField("mockitoInterceptor",MockMethodInterceptor.class,PRIVATE).implement(MockAccess.class).intercept(FieldAccessor.ofBeanProperty()).method(isHashCode()).intercept(to(MockMethodInterceptor.ForHashCode.class)).method(isEquals()).intercept(to(MockMethodInterceptor.ForEquals.class));
-  if (features.crossClassLoaderSerializable) {
-    builder=builder.implement(CrossClassLoaderSerializableMock.class).intercept(to(MockMethodInterceptor.ForWriteReplace.class));
-  }
-  return builder.make().load(new MultipleParentClassLoader.Builder().append(features.mockedType).append(features.interfaces).append(Thread.currentThread().getContextClassLoader()).append(MockAccess.class,DispatcherDefaultingToRealMethod.class).append(MockMethodInterceptor.class,MockMethodInterceptor.ForHashCode.class,MockMethodInterceptor.ForEquals.class).build(),ClassLoadingStrategy.Default.INJECTION.with(features.mockedType.getProtectionDomain())).getLoaded();
-}

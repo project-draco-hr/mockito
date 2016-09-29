@@ -1,0 +1,7 @@
+{
+  if (!Modifier.isPublic(origin.getDeclaringClass().getModifiers() & origin.getModifiers())) {
+    origin.setAccessible(true);
+  }
+  selfCallInfo.set(instance);
+  return tryInvoke(origin,instance,arguments);
+}

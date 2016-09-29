@@ -1,0 +1,7 @@
+{
+  T value=get();
+  if (value != null) {
+    map.put(thread,inheritValue(value));
+  }
+  return value;
+}

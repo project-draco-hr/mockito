@@ -1,0 +1,8 @@
+{
+  SerializableClass proxy=mockMaker.createMock(serializableSettingsFor(SerializableClass.class,SerializableMode.BASIC),dummyH());
+  SerializableClass serialized=SimpleSerializationUtil.serializeAndBack(proxy);
+  assertThat(serialized).isNotNull();
+  MockHandler handlerOne=mockMaker.getHandler(proxy);
+  MockHandler handlerTwo=mockMaker.getHandler(serialized);
+  assertThat(handlerOne).isNotSameAs(handlerTwo);
+}

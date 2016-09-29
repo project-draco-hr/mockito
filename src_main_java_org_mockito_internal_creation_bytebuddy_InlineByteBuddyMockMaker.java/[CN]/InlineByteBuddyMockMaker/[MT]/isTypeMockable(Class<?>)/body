@@ -1,0 +1,20 @@
+{
+  return new TypeMockability(){
+    @Override public boolean mockable(){
+      return instrumentation.isModifiableClass(type) && !EXCLUDES.contains(type);
+    }
+    @Override public String nonMockableReason(){
+      if (mockable()) {
+        return "";
+      }
+      if (type.isPrimitive()) {
+        return "primitive type";
+      }
+      if (EXCLUDES.contains(type)) {
+        return "Cannot mock wrapper types, String.class or Class.class";
+      }
+      return "VM does not not support modification of given type";
+    }
+  }
+;
+}

@@ -1,0 +1,6 @@
+{
+  this.origin=new SerializableMethod(origin);
+  this.identifier=identifier;
+  this.instance=instance;
+  this.arguments=arguments;
+}

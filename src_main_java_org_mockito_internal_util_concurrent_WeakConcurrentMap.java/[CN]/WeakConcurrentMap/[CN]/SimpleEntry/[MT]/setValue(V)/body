@@ -1,0 +1,4 @@
+{
+  if (value == null)   throw new NullPointerException();
+  return entry.setValue(value);
+}

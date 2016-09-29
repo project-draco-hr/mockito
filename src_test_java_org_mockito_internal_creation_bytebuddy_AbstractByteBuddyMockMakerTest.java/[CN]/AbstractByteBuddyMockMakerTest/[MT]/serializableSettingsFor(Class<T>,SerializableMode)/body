@@ -1,0 +1,6 @@
+{
+  MockSettingsImpl<T> mockSettings=new MockSettingsImpl<T>();
+  mockSettings.serializable(serializableMode);
+  mockSettings.setTypeToMock(type);
+  return mockSettings;
+}

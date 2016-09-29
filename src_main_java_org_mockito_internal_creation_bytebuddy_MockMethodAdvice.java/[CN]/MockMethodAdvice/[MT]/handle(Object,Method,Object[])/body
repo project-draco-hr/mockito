@@ -1,0 +1,14 @@
+{
+  MockMethodInterceptor interceptor=interceptors.get(instance);
+  if (interceptor == null) {
+    return null;
+  }
+  InterceptedInvocation.SuperMethod superMethod;
+  if (instance instanceof Serializable) {
+    superMethod=new SerializableSuperMethodCall(identifier,origin,instance,arguments);
+  }
+ else {
+    superMethod=new SuperMethodCall(selfCallInfo,origin,instance,arguments);
+  }
+  return new ReturnValueWrapper(interceptor.doIntercept(instance,origin,arguments,superMethod));
+}

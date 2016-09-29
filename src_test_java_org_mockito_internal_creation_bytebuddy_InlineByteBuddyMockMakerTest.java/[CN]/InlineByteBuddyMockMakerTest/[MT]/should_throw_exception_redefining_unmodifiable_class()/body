@@ -1,0 +1,11 @@
+{
+  MockCreationSettings settings=settingsFor(int.class);
+  try {
+    mockMaker.createMock(settings,new MockHandlerImpl(settings));
+    fail("Expected a MockitoException");
+  }
+ catch (  MockitoException e) {
+    e.printStackTrace();
+    assertThat(e).hasMessageContaining("Could not modify all classes");
+  }
+}

@@ -1,0 +1,4 @@
+{
+  alias.put(name,type);
+  return this;
+}

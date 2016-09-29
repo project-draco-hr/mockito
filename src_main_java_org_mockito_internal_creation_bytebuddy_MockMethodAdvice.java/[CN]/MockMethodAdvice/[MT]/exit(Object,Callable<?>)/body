@@ -1,0 +1,5 @@
+{
+  if (mocked != null) {
+    returned=mocked.call();
+  }
+}

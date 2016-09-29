@@ -1,0 +1,6 @@
+{
+  this.readReplace=readReplace;
+  this.matcher=matcher;
+  byteBuddy=new ByteBuddy().with(TypeValidation.DISABLED);
+  random=new Random();
+}

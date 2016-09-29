@@ -1,0 +1,9 @@
+{
+  MockMethodInterceptor interceptor=mocks.get(mock);
+  if (interceptor == null) {
+    return null;
+  }
+ else {
+    return interceptor.handler;
+  }
+}
