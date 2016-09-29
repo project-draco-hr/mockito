@@ -2,7 +2,7 @@
   try {
     instrumentation=ByteBuddyAgent.install();
     if (!instrumentation.isRetransformClassesSupported()) {
-      throw new MockitoException("Current VM does not support retransformation");
+      throw new MockitoException(join("Byte Buddy requires retransformation for creating inline mocks. This feature is unavailable on the current VM.","","You cannot use this mock maker on this VM:",Platform.describe()));
     }
     File boot=File.createTempFile("mockitoboot","jar");
     boot.deleteOnExit();
@@ -16,9 +16,18 @@
       outputStream.close();
     }
     instrumentation.appendToBootstrapClassLoaderSearch(new JarFile(boot));
+    try {
+      Class<?> dispatcher=Class.forName("org.mockito.internal.creation.bytebuddy.MockMethodDispatcher");
+      if (dispatcher.getClassLoader() != null) {
+        throw new MockitoException(join("The MockMethodDispatcher must not be loaded manually but must be injected into the bootstrap class loader.","","The dispatcher class was already loaded by: " + dispatcher.getClassLoader()));
+      }
+    }
+ catch (    ClassNotFoundException cnfe) {
+      throw new MockitoException(join("Mockito failed to inject the MockMethodDispatcher class into the bootstrap class loader","","It seems like your current VM does not support the instrumentation API correctly:",Platform.describe()),cnfe);
+    }
     bytecodeGenerator=new TypeCachingBytecodeGenerator(new InlineBytecodeGenerator(instrumentation,mocks),true);
   }
- catch (  IOException exception) {
-    throw new MockitoException("Cannot apply self-instrumentation on current VM",exception);
+ catch (  IOException ioe) {
+    throw new MockitoException(join("Mockito could not self-attach a Java agent to the current VM. This feature is required for inline mocking.","This error occured due to an I/O error during the creation of this agent: " + ioe,"","Potentially, the current VM does not support the instrumentation API correctly:",Platform.describe()),ioe);
   }
 }
