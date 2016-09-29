@@ -1,0 +1,12 @@
+{
+  Method method=origin.getJavaMethod();
+  if (!Modifier.isPublic(method.getDeclaringClass().getModifiers() & method.getModifiers())) {
+    method.setAccessible(true);
+  }
+  MockMethodDispatcher mockMethodDispatcher=MockMethodDispatcher.get(identifier,instance);
+  if (!(mockMethodDispatcher instanceof MockMethodAdvice)) {
+    throw new MockitoException("Unexpected dispatcher for advice-based super call");
+  }
+  ((MockMethodAdvice)mockMethodDispatcher).selfCallInfo.set(instance);
+  return tryInvoke(method,instance,arguments);
+}

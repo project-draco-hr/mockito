@@ -1,0 +1,11 @@
+{
+  if (nextKey == null) {
+    throw new NoSuchElementException();
+  }
+  try {
+    return new SimpleEntry(nextKey,nextEntry);
+  }
+  finally {
+    findNext();
+  }
+}

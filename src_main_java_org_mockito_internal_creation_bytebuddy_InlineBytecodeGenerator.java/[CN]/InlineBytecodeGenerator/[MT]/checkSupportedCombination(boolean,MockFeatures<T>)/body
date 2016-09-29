@@ -1,0 +1,5 @@
+{
+  if (subclassingRequired && !features.mockedType.isArray() && !features.mockedType.isPrimitive()&& Modifier.isFinal(features.mockedType.getModifiers())) {
+    throw new MockitoException("Unsupported settings with this type '" + features.mockedType.getName() + "'");
+  }
+}

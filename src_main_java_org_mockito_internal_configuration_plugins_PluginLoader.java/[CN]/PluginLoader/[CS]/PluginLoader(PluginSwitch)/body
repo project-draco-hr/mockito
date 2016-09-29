@@ -1,3 +1,4 @@
 {
   this.pluginSwitch=pluginSwitch;
+  this.alias=new HashMap<String,String>();
 }

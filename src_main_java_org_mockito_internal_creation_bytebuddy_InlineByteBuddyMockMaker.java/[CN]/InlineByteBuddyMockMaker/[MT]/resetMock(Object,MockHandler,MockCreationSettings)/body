@@ -1,0 +1,7 @@
+{
+  MockMethodInterceptor mockMethodInterceptor=new MockMethodInterceptor(asInternalMockHandler(newHandler),settings);
+  mocks.put(mock,mockMethodInterceptor);
+  if (mock instanceof MockAccess) {
+    ((MockAccess)mock).setMockitoInterceptor(mockMethodInterceptor);
+  }
+}

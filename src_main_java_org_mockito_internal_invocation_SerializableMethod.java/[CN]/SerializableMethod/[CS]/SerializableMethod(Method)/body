@@ -1,4 +1,5 @@
 {
+  this.method=method;
   declaringClass=method.getDeclaringClass();
   methodName=method.getName();
   parameterTypes=method.getParameterTypes();

@@ -1,0 +1,5 @@
+{
+  for (  Map.Entry<String,Boolean> version : versions.entrySet()) {
+    assertThat(Platform.isJava8BelowUpdate45(version.getKey())).describedAs(version.getKey()).isEqualTo(version.getValue());
+  }
+}

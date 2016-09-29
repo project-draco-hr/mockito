@@ -1,0 +1,8 @@
+{
+  for (  Class<?> type : interfaces) {
+    if (mocked.add(type)) {
+      types.add(type);
+      addInterfaces(types,type.getInterfaces());
+    }
+  }
+}

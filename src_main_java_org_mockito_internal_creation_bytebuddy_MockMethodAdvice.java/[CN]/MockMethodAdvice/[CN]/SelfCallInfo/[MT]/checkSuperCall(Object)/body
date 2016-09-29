@@ -1,0 +1,10 @@
+{
+  Object current=get();
+  if (current == value) {
+    set(null);
+    return false;
+  }
+ else {
+    return true;
+  }
+}

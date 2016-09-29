@@ -1,0 +1,8 @@
+{
+  if (other instanceof LatentKey<?>) {
+    return ((LatentKey<?>)other).key == key;
+  }
+ else {
+    return ((WeakKey<?>)other).get() == key;
+  }
+}

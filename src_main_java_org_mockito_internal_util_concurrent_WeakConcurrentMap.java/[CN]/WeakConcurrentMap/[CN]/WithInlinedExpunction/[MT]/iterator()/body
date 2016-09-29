@@ -1,0 +1,4 @@
+{
+  expungeStaleEntries();
+  return super.iterator();
+}

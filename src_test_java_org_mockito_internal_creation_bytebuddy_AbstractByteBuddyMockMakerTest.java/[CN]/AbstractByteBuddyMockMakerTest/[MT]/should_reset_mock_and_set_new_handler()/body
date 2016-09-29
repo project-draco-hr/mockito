@@ -1,0 +1,7 @@
+{
+  MockCreationSettings<SampleClass> settings=settingsWithSuperCall(SampleClass.class);
+  SampleClass proxy=mockMaker.createMock(settings,new MockHandlerImpl<SampleClass>(settings));
+  MockHandler handler=new MockHandlerImpl<SampleClass>(settings);
+  mockMaker.resetMock(proxy,handler,settings);
+  assertThat(mockMaker.getHandler(proxy)).isSameAs(handler);
+}

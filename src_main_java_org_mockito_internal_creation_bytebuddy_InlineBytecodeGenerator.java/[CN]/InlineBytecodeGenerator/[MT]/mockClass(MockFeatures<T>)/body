@@ -1,0 +1,8 @@
+{
+  boolean subclassingRequired=!features.interfaces.isEmpty() || features.serializableMode != SerializableMode.NONE || Modifier.isAbstract(features.mockedType.getModifiers());
+  checkSupportedCombination(subclassingRequired,features);
+synchronized (this) {
+    triggerRetransformation(features);
+  }
+  return subclassingRequired ? subclassEngine.mockClass(features) : features.mockedType;
+}

@@ -1,0 +1,20 @@
+{
+  try {
+    StackTraceElement[] stack=throwable.getStackTrace();
+    int skip=0;
+    StackTraceElement next;
+    do {
+      next=stack[stack.length - current - ++skip];
+    }
+ while (!next.getClassName().equals(targetType.getName()));
+    int top=stack.length - current - skip;
+    StackTraceElement[] cleared=new StackTraceElement[stack.length - skip];
+    System.arraycopy(stack,0,cleared,0,top);
+    System.arraycopy(stack,top + skip,cleared,top,current);
+    throwable.setStackTrace(cleared);
+    return throwable;
+  }
+ catch (  RuntimeException ignored) {
+    return throwable;
+  }
+}

@@ -1,0 +1,12 @@
+{
+  classLoader=classLoader == null ? BOOT_LOADER : classLoader;
+  CachedBytecodeGenerator generator=avoidingClassLeakageCache.get(new LookupKey(classLoader));
+  if (generator == null) {
+    CachedBytecodeGenerator newGenerator=new CachedBytecodeGenerator(bytecodeGenerator,weak);
+    generator=avoidingClassLeakageCache.putIfAbsent(new WeakKey(classLoader,this),newGenerator);
+    if (generator == null) {
+      generator=newGenerator;
+    }
+  }
+  return generator;
+}

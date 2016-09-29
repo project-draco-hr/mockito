@@ -1,0 +1,4 @@
+{
+  this.bytecodeGenerator=bytecodeGenerator;
+  this.weak=weak;
+}

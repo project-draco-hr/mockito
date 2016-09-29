@@ -1,0 +1,12 @@
+{
+  ClassLoader classloader_with_life_shorter_than_cache=inMemoryClassLoader().withClassDefinition("foo.Bar",makeMarkerInterface("foo.Bar")).build();
+  TypeCachingBytecodeGenerator cachingMockBytecodeGenerator=new TypeCachingBytecodeGenerator(new SubclassBytecodeGenerator(),true);
+  Class<?> the_mock_type=cachingMockBytecodeGenerator.mockClass(withMockFeatures(classloader_with_life_shorter_than_cache.loadClass("foo.Bar"),Collections.<Class<?>>emptySet(),SerializableMode.NONE));
+  assertThat(cachingMockBytecodeGenerator.avoidingClassLeakageCache).hasSize(1);
+  classloader_with_life_shorter_than_cache=is_no_more_referenced();
+  the_mock_type=is_no_more_referenced();
+  System.gc();
+  ensure_gc_happened();
+  cachingMockBytecodeGenerator.cleanUpCachesForObsoleteClassLoaders();
+  assertThat(cachingMockBytecodeGenerator.avoidingClassLeakageCache).isEmpty();
+}

@@ -1,0 +1,5 @@
+{
+  MockCreationSettings<EnumClass> settings=settingsFor(EnumClass.class);
+  EnumClass proxy=mockMaker.createMock(settings,new MockHandlerImpl<EnumClass>(settings));
+  assertThat(proxy.foo()).isEqualTo("bar");
+}

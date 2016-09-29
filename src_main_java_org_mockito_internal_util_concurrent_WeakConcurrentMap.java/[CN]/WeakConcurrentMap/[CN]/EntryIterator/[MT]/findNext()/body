@@ -1,0 +1,11 @@
+{
+  while (iterator.hasNext()) {
+    nextEntry=iterator.next();
+    nextKey=nextEntry.getKey().get();
+    if (nextKey != null) {
+      return;
+    }
+  }
+  nextEntry=null;
+  nextKey=null;
+}

@@ -1,0 +1,5 @@
+{
+  MockCreationSettings<Pattern> settings=settingsFor(Pattern.class);
+  Pattern proxy=mockMaker.createMock(settings,new MockHandlerImpl<Pattern>(settings));
+  assertThat(proxy.pattern()).isEqualTo("bar");
+}

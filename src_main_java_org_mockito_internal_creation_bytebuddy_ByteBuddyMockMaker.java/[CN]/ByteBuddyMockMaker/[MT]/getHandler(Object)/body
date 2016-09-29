@@ -1,6 +1,3 @@
 {
-  if (!(mock instanceof MockAccess)) {
-    return null;
-  }
-  return ((MockAccess)mock).getMockitoInterceptor().getMockHandler();
+  return defaultByteBuddyMockMaker.getHandler(mock);
 }

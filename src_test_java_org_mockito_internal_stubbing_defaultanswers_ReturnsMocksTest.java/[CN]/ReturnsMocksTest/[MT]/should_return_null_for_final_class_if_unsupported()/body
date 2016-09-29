@@ -1,0 +1,4 @@
+{
+  assumeFalse(Plugins.getMockMaker().isTypeMockable(Baz.class).mockable());
+  assertNull(values.returnValueFor(Baz.class));
+}

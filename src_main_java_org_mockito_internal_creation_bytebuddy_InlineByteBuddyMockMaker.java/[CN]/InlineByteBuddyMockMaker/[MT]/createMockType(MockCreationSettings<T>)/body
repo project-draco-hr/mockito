@@ -1,0 +1,8 @@
+{
+  try {
+    return bytecodeGenerator.mockClass(MockFeatures.withMockFeatures(settings.getTypeToMock(),settings.getExtraInterfaces(),settings.getSerializableMode()));
+  }
+ catch (  Exception bytecodeGenerationFailed) {
+    throw prettifyFailure(settings,bytecodeGenerationFailed);
+  }
+}

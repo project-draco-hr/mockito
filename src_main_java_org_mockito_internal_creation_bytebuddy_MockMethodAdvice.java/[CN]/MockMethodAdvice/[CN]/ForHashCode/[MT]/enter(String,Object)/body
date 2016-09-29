@@ -1,0 +1,4 @@
+{
+  MockMethodDispatcher dispatcher=MockMethodDispatcher.get(id,self);
+  return dispatcher != null && dispatcher.isMock(self);
+}

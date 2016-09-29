@@ -1,0 +1,4 @@
+Object self
+Object other
+boolean equals
+boolean skipped

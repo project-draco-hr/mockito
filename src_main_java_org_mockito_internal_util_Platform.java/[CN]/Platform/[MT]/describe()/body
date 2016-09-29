@@ -1,0 +1,3 @@
+{
+  return String.format("Java               : %s\n" + "JVM vendor name    : %s\n" + "JVM vendor version : %s\n"+ "JVM name           : %s\n"+ "JVM version        : %s\n"+ "JVM info           : %s\n"+ "OS name            : %s\n"+ "OS version         : %s\n",JAVA_VERSION,JVM_VENDOR,JVM_VENDOR_VERSION,JVM_NAME,JVM_VERSION,JVM_INFO,OS_NAME,OS_VERSION);
+}

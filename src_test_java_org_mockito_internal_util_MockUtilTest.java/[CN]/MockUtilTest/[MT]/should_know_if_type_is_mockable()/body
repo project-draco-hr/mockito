@@ -1,5 +1,5 @@
 {
-  assertFalse(MockUtil.typeMockabilityOf(FinalClass.class).mockable());
+  Assertions.assertThat(MockUtil.typeMockabilityOf(FinalClass.class).mockable()).isEqualTo(Plugins.getMockMaker().isTypeMockable(FinalClass.class).mockable());
   assertFalse(MockUtil.typeMockabilityOf(int.class).mockable());
   assertTrue(MockUtil.typeMockabilityOf(SomeClass.class).mockable());
   assertTrue(MockUtil.typeMockabilityOf(SomeInterface.class).mockable());

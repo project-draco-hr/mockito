@@ -1,0 +1,5 @@
+{
+  ClassWithoutConstructor proxy=mockMaker.createMock(settingsFor(ClassWithoutConstructor.class),dummyH());
+  Class<?> superClass=mockTypeOf(proxy.getClass());
+  assertThat(superClass).isEqualTo(ClassWithoutConstructor.class);
+}
